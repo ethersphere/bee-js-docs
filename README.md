@@ -36,8 +36,4 @@ Don't forget to find and replace the version number for the whole of the docs fo
 
 **NOTE: when this is done, the docs will have to be rebuilt.**
 
-1. Get the OpenAPI YAML source files from which the documentation is generated. They can be found in the [openapi folder of bee repo](https://github.com/ethersphere/bee/tree/master/openapi).
-2. Generate the `index.html` file for the API docs via : `npx redoc-cli bundle Swarm.yaml -o ./SwarmAPIRedoc/index.html --disableGoogleFont --options.expandDefaultServerVariables "true"`
-3. Generate the `index.html` file for the Debug API via: `npx redoc-cli bundle SwarmDebug.yaml -o ./SwarmDebugAPIRedoc/index.html --disableGoogleFont --options.expandDefaultServerVariables "true"`
-4. Put the generated files into appropriate subfolders (`static/api/` and `static/debug-api/`)
-5. Rebuild and redeploy docs.
+...
