@@ -8,7 +8,7 @@ module.exports = {
   onBrokenLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Swarm', // Usually your GitHub org/user name.
-  projectName: 'bee', // Usually your repo name.
+  projectName: 'bee-js.github.io', // Usually your repo name.
   themeConfig: {
     colourMode: {
       defaultMode: 'dark'
