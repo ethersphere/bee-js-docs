@@ -110,18 +110,16 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'introduction',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/docs.github.io/blob/master',
+            'https://github.com/ethersphere/bee-js.github.io/blob/master',
         },
         blog: {
           showReadingTime: false,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/docs.github.io',
+            'https://github.com/ethersphere/bee-js.github.io',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
