@@ -1,6 +1,11 @@
 # Bee JS Documentation Website
 
-Documentation for the [Swarm Bee-js javascript library](https://github.com/ethersphere/bee-js). View at [bee-js.ethswarm.org](https://bee-js.ethswarm.org).
+[![Dependency Status](https://david-dm.org/ethersphere/bee-js.github.io.svg?style=flat-square)](https://david-dm.org/ethersphere/bee-js.github.io)
+[![](https://img.shields.io/badge/made%20by-Swarm-blue.svg?style=flat-square)](https://swarm.ethereum.org/)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+
+> Documentation for the [Swarm Bee-js javascript library](https://github.com/ethersphere/bee-js). View at [bee-js.ethswarm.org](https://bee-js.ethswarm.org).
 
 ### Node Version
 
