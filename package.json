@@ -1,7 +1,23 @@
 {
-  "name": "bee-docusaurus-v-2",
+  "name": "bee-js-docs",
   "version": "0.0.0",
   "private": true,
+  "description": "Documentation for bee-js library",
+  "keywords": [
+    "Bee",
+    "Swarm",
+    "Decentralised Storage",
+    "Documentation"
+  ],
+  "homepage": "https://github.com/ethersphere/bee-js.github.io",
+  "bugs": {
+    "url": "https://github.com/ethersphere/bee-js.github.io/issues/"
+  },
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethersphere/bee-js.github.io.git"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -30,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }
