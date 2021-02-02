@@ -39,7 +39,7 @@ module.exports = {
         //   position: 'left',
         // },
         {
-          to: 'docs/api-reference/api-reference',
+          to: 'docs/api-reference',
           activeBasePath: 'docs',
           label: 'API Reference',
           position: 'left',
