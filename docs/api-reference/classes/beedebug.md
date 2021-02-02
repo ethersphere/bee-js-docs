@@ -42,7 +42,7 @@ Name | Type |
 
 **Returns:** [*BeeDebug*](beedebug)
 
-Defined in: [index.ts:342](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L342)
+Defined in: [index.ts:342](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L342)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Defined in: [index.ts:342](https://github.com/ethersphere/bee-js/blob/54b2270/sr
 
 **Returns:** *Promise*<*string*\>
 
-Defined in: [index.ts:345](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L345)
+Defined in: [index.ts:345](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L345)
 
 ___
 
@@ -68,4 +68,4 @@ ___
 
 **Returns:** *Promise*<*string*\>
 
-Defined in: [index.ts:351](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L351)
+Defined in: [index.ts:351](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L351)

@@ -11,7 +11,7 @@ The Bee class provides a way of interacting with the Bee APIs based on the provi
 
 ## Hierarchy
 
-* **Bee**
+- **Bee**
 
 ## Table of contents
 
@@ -51,209 +51,209 @@ The Bee class provides a way of interacting with the Bee APIs based on the provi
 
 ### constructor
 
-\+ **new Bee**(`url`: *string*): [*Bee*](bee)
+\+ **new Bee**(`url`: _string_): [_Bee_](bee)
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`url` | *string* |
+| Name  | Type     |
+| ----- | -------- |
+| `url` | _string_ |
 
-**Returns:** [*Bee*](bee)
+**Returns:** [_Bee_](bee)
 
-Defined in: [index.ts:29](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L29)
+Defined in: [index.ts:29](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L29)
 
 ## Properties
 
 ### url
 
-• `Readonly` **url**: *string*
+• `Readonly` **url**: _string_
 
 ## Methods
 
 ### createTag
 
-▸ **createTag**(): *Promise*<Tag\>
+▸ **createTag**(): _Promise_<Tag\>
 
 Create new tag
 
-**Returns:** *Promise*<Tag\>
+**Returns:** _Promise_<Tag\>
 
-Defined in: [index.ts:161](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L161)
+Defined in: [index.ts:161](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L161)
 
-___
+---
 
 ### downloadData
 
-▸ **downloadData**(`reference`: *string*): *Promise*<*Uint8Array*\>
+▸ **downloadData**(`reference`: _string_): _Promise_<_Uint8Array_\>
 
 Download data as a byte array
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee data reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee data reference |
 
-**Returns:** *Promise*<*Uint8Array*\>
+**Returns:** _Promise_<_Uint8Array_\>
 
-Defined in: [index.ts:49](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L49)
+Defined in: [index.ts:49](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L49)
 
-___
+---
 
 ### downloadFile
 
-▸ **downloadFile**(`reference`: *string*): *Promise*<*FileData*<*Uint8Array*\>\>
+▸ **downloadFile**(`reference`: _string_): _Promise_<_FileData_<_Uint8Array_\>\>
 
 Download single file as a byte array
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee file reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee file reference |
 
-**Returns:** *Promise*<*FileData*<*Uint8Array*\>\>
+**Returns:** _Promise_<_FileData_<_Uint8Array_\>\>
 
-Defined in: [index.ts:84](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L84)
+Defined in: [index.ts:84](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L84)
 
-___
+---
 
 ### downloadFileFromCollection
 
-▸ **downloadFileFromCollection**(`reference`: *string*, `path?`: *string*): *Promise*<*FileData*<*Uint8Array*\>\>
+▸ **downloadFileFromCollection**(`reference`: _string_, `path?`: _string_): _Promise_<_FileData_<_Uint8Array_\>\>
 
 Download single file as a byte array from collection given using the path
 
 #### Parameters:
 
-Name | Type | Default value | Description |
------- | ------ | ------ | ------ |
-`reference` | *string* | - | Bee collection reference   |
-`path` | *string* | '' | Path of the requested file in the collection    |
+| Name        | Type     | Default value | Description                                  |
+| ----------- | -------- | ------------- | -------------------------------------------- |
+| `reference` | _string_ | -             | Bee collection reference                     |
+| `path`      | _string_ | ''            | Path of the requested file in the collection |
 
-**Returns:** *Promise*<*FileData*<*Uint8Array*\>\>
+**Returns:** _Promise_<_FileData_<_Uint8Array_\>\>
 
 file in byte array with metadata
 
-Defined in: [index.ts:142](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L142)
+Defined in: [index.ts:142](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L142)
 
-___
+---
 
 ### downloadReadableData
 
-▸ **downloadReadableData**(`reference`: *string*): *Promise*<*Readable*\>
+▸ **downloadReadableData**(`reference`: _string_): _Promise_<_Readable_\>
 
 Download data as a readable stream
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee data reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee data reference |
 
-**Returns:** *Promise*<*Readable*\>
+**Returns:** _Promise_<_Readable_\>
 
-Defined in: [index.ts:58](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L58)
+Defined in: [index.ts:58](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L58)
 
-___
+---
 
 ### downloadReadableFile
 
-▸ **downloadReadableFile**(`reference`: *string*): *Promise*<*FileData*<*Readable*\>\>
+▸ **downloadReadableFile**(`reference`: _string_): _Promise_<_FileData_<_Readable_\>\>
 
 Download single file as a readable stream
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee file reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee file reference |
 
-**Returns:** *Promise*<*FileData*<*Readable*\>\>
+**Returns:** _Promise_<_FileData_<_Readable_\>\>
 
-Defined in: [index.ts:93](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L93)
+Defined in: [index.ts:93](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L93)
 
-___
+---
 
 ### downloadReadableFileFromCollection
 
-▸ **downloadReadableFileFromCollection**(`reference`: *string*, `path?`: *string*): *Promise*<*FileData*<*Readable*\>\>
+▸ **downloadReadableFileFromCollection**(`reference`: _string_, `path?`: _string_): _Promise_<_FileData_<_Readable_\>\>
 
 Download single file as a readable stream from collection given using the path
 
 #### Parameters:
 
-Name | Type | Default value | Description |
------- | ------ | ------ | ------ |
-`reference` | *string* | - | Bee collection reference   |
-`path` | *string* | '' | Path of the requested file in the collection    |
+| Name        | Type     | Default value | Description                                  |
+| ----------- | -------- | ------------- | -------------------------------------------- |
+| `reference` | _string_ | -             | Bee collection reference                     |
+| `path`      | _string_ | ''            | Path of the requested file in the collection |
 
-**Returns:** *Promise*<*FileData*<*Readable*\>\>
+**Returns:** _Promise_<_FileData_<_Readable_\>\>
 
 file in readable stream with metadata
 
-Defined in: [index.ts:154](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L154)
+Defined in: [index.ts:154](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L154)
 
-___
+---
 
 ### pinCollection
 
-▸ **pinCollection**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **pinCollection**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Pin collection with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee collection reference    |
+| Name        | Type     | Description              |
+| ----------- | -------- | ------------------------ |
+| `reference` | _string_ | Bee collection reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:197](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L197)
+Defined in: [index.ts:197](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L197)
 
-___
+---
 
 ### pinData
 
-▸ **pinData**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **pinData**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Pin data with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee data reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee data reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:215](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L215)
+Defined in: [index.ts:215](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L215)
 
-___
+---
 
 ### pinFile
 
-▸ **pinFile**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **pinFile**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Pin file with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee file reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee file reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:179](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L179)
+Defined in: [index.ts:179](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L179)
 
-___
+---
 
 ### pssReceive
 
-▸ **pssReceive**(`topic`: *string*, `timeoutMsec?`: *number*): *Promise*<*Uint8Array*\>
+▸ **pssReceive**(`topic`: _string_, `timeoutMsec?`: _number_): _Promise_<_Uint8Array_\>
 
 Receive message with Postal Service for Swarm
 
@@ -269,179 +269,179 @@ an error will be thrown.
 
 #### Parameters:
 
-Name | Type | Default value | Description |
------- | ------ | ------ | ------ |
-`topic` | *string* | - | Topic name   |
-`timeoutMsec` | *number* | 0 | Timeout in milliseconds    |
+| Name          | Type     | Default value | Description             |
+| ------------- | -------- | ------------- | ----------------------- |
+| `topic`       | _string_ | -             | Topic name              |
+| `timeoutMsec` | _number_ | 0             | Timeout in milliseconds |
 
-**Returns:** *Promise*<*Uint8Array*\>
+**Returns:** _Promise_<_Uint8Array_\>
 
 Message in byte array
 
-Defined in: [index.ts:309](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L309)
+Defined in: [index.ts:309](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L309)
 
-___
+---
 
 ### pssSend
 
-▸ **pssSend**(`topic`: *string*, `target`: *string*, `data`: *string* \| *Uint8Array*, `recipient?`: *string*): *Promise*<BeeResponse\>
+▸ **pssSend**(`topic`: _string_, `target`: _string_, `data`: _string_ \| _Uint8Array_, `recipient?`: _string_): _Promise_<BeeResponse\>
 
 Send to recipient or target with Postal Service for Swarm
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`topic` | *string* | Topic name   |
-`target` | *string* | Target message address prefix   |
-`data` | *string* \| *Uint8Array* | Message to be sent   |
-`recipient?` | *string* | Recipient public key     |
+| Name         | Type                     | Description                   |
+| ------------ | ------------------------ | ----------------------------- |
+| `topic`      | _string_                 | Topic name                    |
+| `target`     | _string_                 | Target message address prefix |
+| `data`       | _string_ \| _Uint8Array_ | Message to be sent            |
+| `recipient?` | _string_                 | Recipient public key          |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:237](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L237)
+Defined in: [index.ts:237](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L237)
 
-___
+---
 
 ### pssSubscribe
 
-▸ **pssSubscribe**(`topic`: *string*, `handler`: PssMessageHandler): PssSubscription
+▸ **pssSubscribe**(`topic`: _string_, `handler`: PssMessageHandler): PssSubscription
 
 Subscribe to messages with Postal Service for Swarm
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`topic` | *string* | Topic name   |
-`handler` | PssMessageHandler | Message handler interface    |
+| Name      | Type              | Description               |
+| --------- | ----------------- | ------------------------- |
+| `topic`   | _string_          | Topic name                |
+| `handler` | PssMessageHandler | Message handler interface |
 
 **Returns:** PssSubscription
 
 Subscription to a given topic
 
-Defined in: [index.ts:254](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L254)
+Defined in: [index.ts:254](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L254)
 
-___
+---
 
 ### retrieveTag
 
-▸ **retrieveTag**(`tagUid`: *number* \| Tag): *Promise*<Tag\>
+▸ **retrieveTag**(`tagUid`: _number_ \| Tag): _Promise_<Tag\>
 
 Retrieve tag information from Bee node
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`tagUid` | *number* \| Tag |
+| Name     | Type            |
+| -------- | --------------- |
+| `tagUid` | _number_ \| Tag |
 
-**Returns:** *Promise*<Tag\>
+**Returns:** _Promise_<Tag\>
 
-Defined in: [index.ts:170](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L170)
+Defined in: [index.ts:170](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L170)
 
-___
+---
 
 ### unpinCollection
 
-▸ **unpinCollection**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **unpinCollection**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Unpin collection with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee collection reference    |
+| Name        | Type     | Description              |
+| ----------- | -------- | ------------------------ |
+| `reference` | _string_ | Bee collection reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:206](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L206)
+Defined in: [index.ts:206](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L206)
 
-___
+---
 
 ### unpinData
 
-▸ **unpinData**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **unpinData**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Unpin data with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee data reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee data reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:224](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L224)
+Defined in: [index.ts:224](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L224)
 
-___
+---
 
 ### unpinFile
 
-▸ **unpinFile**(`reference`: *string*): *Promise*<BeeResponse\>
+▸ **unpinFile**(`reference`: _string_): _Promise_<BeeResponse\>
 
 Unpin file with given reference
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`reference` | *string* | Bee file reference    |
+| Name        | Type     | Description        |
+| ----------- | -------- | ------------------ |
+| `reference` | _string_ | Bee file reference |
 
-**Returns:** *Promise*<BeeResponse\>
+**Returns:** _Promise_<BeeResponse\>
 
-Defined in: [index.ts:188](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L188)
+Defined in: [index.ts:188](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L188)
 
-___
+---
 
 ### uploadData
 
-▸ **uploadData**(`data`: *string* \| *Uint8Array*, `options?`: UploadOptions): *Promise*<*string*\>
+▸ **uploadData**(`data`: _string_ \| _Uint8Array_, `options?`: UploadOptions): _Promise_<_string_\>
 
 Upload data to a Bee node
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`data` | *string* \| *Uint8Array* | Data to be uploaded   |
-`options?` | UploadOptions | Aditional options like tag, encryption, pinning, content-type    |
+| Name       | Type                     | Description                                                   |
+| ---------- | ------------------------ | ------------------------------------------------------------- |
+| `data`     | _string_ \| _Uint8Array_ | Data to be uploaded                                           |
+| `options?` | UploadOptions            | Aditional options like tag, encryption, pinning, content-type |
 
-**Returns:** *Promise*<*string*\>
+**Returns:** _Promise_<_string_\>
 
 reference is a content hash of the data
 
-Defined in: [index.ts:40](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L40)
+Defined in: [index.ts:40](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L40)
 
-___
+---
 
 ### uploadFile
 
-▸ **uploadFile**(`data`: *string* \| *Uint8Array* \| *Readable*, `name?`: *string*, `options?`: FileUploadOptions): *Promise*<*string*\>
+▸ **uploadFile**(`data`: _string_ \| _Uint8Array_ \| _Readable_, `name?`: _string_, `options?`: FileUploadOptions): _Promise_<_string_\>
 
 Upload single file to a Bee node
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`data` | *string* \| *Uint8Array* \| *Readable* | Data to be uploaded   |
-`name?` | *string* | Name of the uploaded file   |
-`options?` | FileUploadOptions | Aditional options like tag, encryption, pinning, content-type    |
+| Name       | Type                                   | Description                                                   |
+| ---------- | -------------------------------------- | ------------------------------------------------------------- |
+| `data`     | _string_ \| _Uint8Array_ \| _Readable_ | Data to be uploaded                                           |
+| `name?`    | _string_                               | Name of the uploaded file                                     |
+| `options?` | FileUploadOptions                      | Aditional options like tag, encryption, pinning, content-type |
 
-**Returns:** *Promise*<*string*\>
+**Returns:** _Promise_<_string_\>
 
 reference is a content hash of the file
 
-Defined in: [index.ts:71](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L71)
+Defined in: [index.ts:71](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L71)
 
-___
+---
 
 ### uploadFiles
 
-▸ **uploadFiles**(`fileList`: FileList \| File[], `options?`: CollectionUploadOptions): *Promise*<*string*\>
+▸ **uploadFiles**(`fileList`: FileList \| File[], `options?`: CollectionUploadOptions): _Promise_<_string_\>
 
 Upload collection of files to a Bee node
 
@@ -449,22 +449,22 @@ Uses the FileList API from the browser.
 
 #### Parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`fileList` | FileList \| File[] | list of files to be uploaded   |
-`options?` | CollectionUploadOptions | Additional options like tag, encryption, pinning    |
+| Name       | Type                    | Description                                      |
+| ---------- | ----------------------- | ------------------------------------------------ |
+| `fileList` | FileList \| File[]      | list of files to be uploaded                     |
+| `options?` | CollectionUploadOptions | Additional options like tag, encryption, pinning |
 
-**Returns:** *Promise*<*string*\>
+**Returns:** _Promise_<_string_\>
 
 reference of the collection of files
 
-Defined in: [index.ts:107](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L107)
+Defined in: [index.ts:107](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L107)
 
-___
+---
 
 ### uploadFilesFromDirectory
 
-▸ **uploadFilesFromDirectory**(`dir`: *string*, `recursive?`: *boolean*, `options?`: CollectionUploadOptions): *Promise*<*string*\>
+▸ **uploadFilesFromDirectory**(`dir`: _string_, `recursive?`: _boolean_, `options?`: CollectionUploadOptions): _Promise_<_string_\>
 
 Upload collection of files to a Bee node
 
@@ -472,14 +472,14 @@ Uses the `fs` module of Node.js
 
 #### Parameters:
 
-Name | Type | Default value | Description |
------- | ------ | ------ | ------ |
-`dir` | *string* | - | the path of the files to be uploaded   |
-`recursive` | *boolean* | true | specifies if the directory should be recursively uploaded   |
-`options?` | CollectionUploadOptions | - | Additional options like tag, encryption, pinning    |
+| Name        | Type                    | Default value | Description                                               |
+| ----------- | ----------------------- | ------------- | --------------------------------------------------------- |
+| `dir`       | _string_                | -             | the path of the files to be uploaded                      |
+| `recursive` | _boolean_               | true          | specifies if the directory should be recursively uploaded |
+| `options?`  | CollectionUploadOptions | -             | Additional options like tag, encryption, pinning          |
 
-**Returns:** *Promise*<*string*\>
+**Returns:** _Promise_<_string_\>
 
 reference of the collection of files
 
-Defined in: [index.ts:124](https://github.com/ethersphere/bee-js/blob/54b2270/src/index.ts#L124)
+Defined in: [index.ts:124](https://github.com/ethersphere/bee-js/blob/2fef9c4/src/index.ts#L124)
