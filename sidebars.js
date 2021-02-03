@@ -21,8 +21,15 @@ module.exports = {
       type: 'category',
       label: 'API Reference',
       items: [
-        'api-reference/api-reference'
+        'api-reference/api-reference',
+        {
+          Classes: [
+            'api-reference/classes/bee',
+            'api-reference/classes/beedebug',
+          ],
+        },
       ],
-    }
+      collapsed: false
+    },
   ]
 };
