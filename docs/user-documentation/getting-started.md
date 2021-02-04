@@ -62,7 +62,7 @@ const bee = new Bee('http://localhost:1633')
   <TabItem value="js">
 
 ```js
-import Bee from "@ethersphere/bee-js";
+import { Bee } from "@ethersphere/bee-js";
 
 const bee = new Bee('http://localhost:1633')
 ```
