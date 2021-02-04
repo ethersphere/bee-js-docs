@@ -10,6 +10,7 @@ import TabItem from '@theme/TabItem';
 First you need to get bee-js into your project. This can be done using your favourite package management tool or directly:
 
 <Tabs
+  groupId="pcgmng_preferrence"
   defaultValue="npm"
   values={[
     {label: 'npm', value: 'npm'},
@@ -43,6 +44,7 @@ After that you need to import the Bee class and create a bee instance.
 
 
 <Tabs
+  groupId="lang_preferrence"
   defaultValue="ts"
   values={[
     {label: 'TypeScript', value: 'ts'},
