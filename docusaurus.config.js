@@ -8,7 +8,7 @@ module.exports = {
   onBrokenLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Swarm', // Usually your GitHub org/user name.
-  projectName: 'bee-js.github.io', // Usually your repo name.
+  projectName: 'bee-js-docs', // Usually your repo name.
   themeConfig: {
     colourMode: {
       defaultMode: 'dark'
@@ -113,13 +113,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/bee-js.github.io/blob/master',
+            'https://github.com/ethersphere/bee-js-docs/blob/master',
         },
         blog: {
           showReadingTime: false,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/bee-js.github.io',
+            'https://github.com/ethersphere/bee-js-docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

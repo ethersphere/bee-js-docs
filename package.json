@@ -9,14 +9,14 @@
     "Decentralised Storage",
     "Documentation"
   ],
-  "homepage": "https://github.com/ethersphere/bee-js.github.io",
+  "homepage": "https://github.com/ethersphere/bee-js-docs",
   "bugs": {
-    "url": "https://github.com/ethersphere/bee-js.github.io/issues/"
+    "url": "https://github.com/ethersphere/bee-js-docs/issues/"
   },
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethersphere/bee-js.github.io.git"
+    "url": "https://github.com/ethersphere/bee-js-docs.git"
   },
   "scripts": {
     "docusaurus": "docusaurus",
