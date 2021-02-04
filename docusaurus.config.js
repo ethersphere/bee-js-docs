@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Bee JS Library',
   tagline: 'Welcome to the Swarm',
-  url: 'https://bee-js.ethswarm.org',
   // note! we use SED to change this during automated builds, see ./.github/workflows/gh-pages.yml
+  url: 'https://bee-js.ethswarm.org',
   baseUrl: '/',
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'warn',
@@ -46,7 +46,7 @@ module.exports = {
         },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/ethersphere/bee',
+          href: 'https://github.com/ethersphere/bee-js',
           label: 'GitHub',
           position: 'right',
         },
@@ -90,7 +90,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/ethersphere/bee',
+              href: 'https://github.com/ethersphere/bee-js',
             },
           ],
         },
