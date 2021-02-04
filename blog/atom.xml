@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bee-js.ethswarm.org/blog</id>
+    <title>Bee JS Library Blog</title>
+    <updated>2015-10-25T23:29:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bee-js.ethswarm.org/blog"/>
+    <subtitle>Bee JS Library Blog</subtitle>
+    <icon>https://bee-js.ethswarm.org/img/favicon.ico</icon>
+</feed>
