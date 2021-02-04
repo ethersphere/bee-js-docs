@@ -8,7 +8,7 @@ module.exports = {
   onBrokenLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Swarm', // Usually your GitHub org/user name.
-  projectName: 'bee', // Usually your repo name.
+  projectName: 'bee-js-docs', // Usually your repo name.
   themeConfig: {
     colourMode: {
       defaultMode: 'dark'
@@ -110,8 +110,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'introduction',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:

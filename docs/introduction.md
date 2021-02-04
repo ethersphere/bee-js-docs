@@ -1,5 +1,6 @@
 ---
 id: introduction
+slug: /
 title: Welcome!
 ---
 
