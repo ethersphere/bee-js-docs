@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Bee JS Library',
   tagline: 'Welcome to the Swarm',
-  url: 'https://swarm-gateways.net',
   // note! we use SED to change this during automated builds, see ./.github/workflows/gh-pages.yml
+  url: 'https://bee-js.ethswarm.org',
   baseUrl: '/',
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'warn',
@@ -46,7 +46,7 @@ module.exports = {
         },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/ethersphere/bee',
+          href: 'https://github.com/ethersphere/bee-js',
           label: 'GitHub',
           position: 'right',
         },
@@ -90,7 +90,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/ethersphere/bee',
+              href: 'https://github.com/ethersphere/bee-js',
             },
           ],
         },
@@ -115,13 +115,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/docs.github.io/blob/master',
+            'https://github.com/ethersphere/bee-js-docs/blob/master',
         },
         blog: {
           showReadingTime: false,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/ethersphere/docs.github.io',
+            'https://github.com/ethersphere/bee-js-docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
