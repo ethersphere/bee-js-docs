@@ -9,9 +9,9 @@ Here are the links to our auto-generated API documentation.
 
 ### Classes
 
-- [Bee](./classes/bee)
-- [BeeDebug](./classes/beedebug)
+- [Bee](./api-reference/classes/bee)
+- [BeeDebug](./api-reference/classes/beedebug)
 
 ### default
 
-Renames and exports: [Bee](./classes/bee)
+Renames and exports: [Bee](./api-reference/classes/bee)
