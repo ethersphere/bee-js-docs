@@ -6,7 +6,9 @@ module.exports = {
       label: 'User Documentation',
       items: [
         'user-documentation/getting-started',
-        'user-documentation/upload-download-data',
+        'user-documentation/upload-download',
+        'user-documentation/track-upload',
+        // 'user-documentation/pss',
       ],
       collapsed: false
     },
