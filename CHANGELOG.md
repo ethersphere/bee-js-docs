@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.2.0...v0.3.0) (2021-02-09)
+
+
+### Features
+
+* update api reference to v0.5.0 ([#17](https://www.github.com/ethersphere/bee-js-docs/issues/17)) ([2e5e8de](https://www.github.com/ethersphere/bee-js-docs/commit/2e5e8de3ab7a27157a4017a445874d84e8c844fc))
+
+
+### Bug Fixes
+
+* updated tag reference to bee-js v0.5.0 ([#19](https://www.github.com/ethersphere/bee-js-docs/issues/19)) ([3026872](https://www.github.com/ethersphere/bee-js-docs/commit/302687274a3bca3a46eaf5ac93d8a6e2f23876f0))
+
 ## [0.2.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.1.0...v0.2.0) (2021-02-09)
 
 
