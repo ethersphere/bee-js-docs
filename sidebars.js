@@ -3,19 +3,14 @@ module.exports = {
     'introduction',
     {
       type: 'category',
-      label: 'Installation',
+      label: 'User Documentation',
       items: [
-        'installation/quick-start'
+        'user-documentation/getting-started',
+        'user-documentation/upload-download',
+        'user-documentation/track-upload',
+        // 'user-documentation/pss',
       ],
       collapsed: false
-    },
-    {
-      type: 'category',
-      label: 'Basic Usage',
-      items: [
-        'getting-started/upload-your-data',
-      ],
-      collapsed: false,
     },
     {
       type: 'category',
