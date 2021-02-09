@@ -23,15 +23,11 @@ The status of your upload can be followed by using `tags`. A `tag` is a label gi
 
 ```ts
 interface Tag {
-  total: number  // total number of chunks belonging to a tag
-  split: number  // number of chunks already processed by splitter for hashing
-  seen: number   // number of chunks already seen
-  stored: number // number of chunks already stored locally
-  sent: number   // number of chunks sent for push syncing
-  synced: number // number of chunks synced with proof
+  total: number     // the total number of chunks for upload(s) related with this tag
+  processed: number // the total number of chunks stored and queued for sending
+  synced: number    // the total number of chunks that are synced with the network 
 
   uid: number       // a unique identifier for this tag
-  address: string   // the associated swarm hash for this tag
   startedAt: string // when the tag was first used
 }
 ```
