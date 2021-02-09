@@ -28,7 +28,6 @@ module.exports = {
           ],
           Interfaces: [
             "api-reference/interfaces/beeresponse",
-            "api-reference/interfaces/beeresponse",
             "api-reference/interfaces/collectionentry",
             "api-reference/interfaces/collectionuploadoptions",
             "api-reference/interfaces/dictionary",
