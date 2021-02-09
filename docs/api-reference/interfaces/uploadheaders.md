@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / UploadHeaders
+---
+hide_title: true
+title: UploadHeaders
+---
 
 # Interface: UploadHeaders
 

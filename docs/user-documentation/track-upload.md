@@ -104,7 +104,7 @@ await bee.uploadFilesToCollection("./", true, { tag })
 
 ## Retrieve tag
 
-Each time you want to check the upload status, you can use the `retrieveTag` function
+Each time you want to check the upload status, you can use the `retrieveTag` function.
 
 
 <Tabs

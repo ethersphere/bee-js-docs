@@ -1,8 +1,9 @@
-[@ethersphere/bee-js](../README.md) / [Utils](utils.md) / Data
+---
+hide_title: true
+title: Utils.Data
+---
 
-# Namespace: Data
-
-[Utils](utils.md).Data
+# Namespace: Utils.Data
 
 ## Table of contents
 

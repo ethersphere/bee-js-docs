@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / FileHeaders
+---
+hide_title: true
+title: FileHeaders
+---
 
 # Interface: FileHeaders
 

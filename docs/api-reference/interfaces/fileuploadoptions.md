@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / FileUploadOptions
+---
+hide_title: true
+title: FileUploadOptions
+---
 
 # Interface: FileUploadOptions
 

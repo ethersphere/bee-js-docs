@@ -1,8 +1,9 @@
-[@ethersphere/bee-js](../README.md) / [Utils](utils.md) / Hex
+---
+hide_title: true
+title: Utils.Hex
+---
 
-# Namespace: Hex
-
-[Utils](utils.md).Hex
+# Namespace: Utils.Hex
 
 ## Table of contents
 
@@ -22,7 +23,7 @@
 
 ### HexString
 
-Ƭ **HexString**: [*BrandedString*](../README.md#brandedstring)<*HexString*\>
+Ƭ **HexString**: [*BrandedString*](../typealiases/typealiases.md#brandedstring)<*HexString*\>
 
 Nominal type to represent hex strings
 

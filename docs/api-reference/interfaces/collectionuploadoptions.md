@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / CollectionUploadOptions
+---
+hide_title: true
+title: CollectionUploadOptions
+---
 
 # Interface: CollectionUploadOptions
 

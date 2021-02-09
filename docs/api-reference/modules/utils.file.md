@@ -1,8 +1,9 @@
-[@ethersphere/bee-js](../README.md) / [Utils](utils.md) / File
+---
+hide_title: true
+title: Utils.File
+---
 
-# Namespace: File
-
-[Utils](utils.md).File
+# Namespace: Utils.File
 
 ## Table of contents
 

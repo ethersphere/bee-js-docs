@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / [Utils](../modules/utils.md) / [Bytes](../modules/utils.bytes.md) / FlexBytes
+---
+hide_title: true
+title: Utils.Bytes.FlexBytes
+---
 
 # Interface: FlexBytes<Min, Max\>
 

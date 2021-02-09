@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / BeeResponse
+---
+hide_title: true
+title: BeeResponse
+---
 
 # Interface: BeeResponse
 

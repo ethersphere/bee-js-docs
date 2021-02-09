@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / BeeDebug
+---
+hide_title: true
+title: BeeDebug
+---
 
 # Class: BeeDebug
 

@@ -1,4 +1,5 @@
 ---
+hide_title: true
 title: Type Aliases
 ---
 
@@ -55,7 +56,7 @@ ___
 
 ### Collection
 
-Ƭ **Collection**<T\>: [*CollectionEntry*](interfaces/collectionentry.md)<T\>[]
+Ƭ **Collection**<T\>: [*CollectionEntry*](../interfaces/collectionentry.md)<T\>[]
 
 Represents Collections
 

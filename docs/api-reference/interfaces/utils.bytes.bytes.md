@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / [Utils](../modules/utils.md) / [Bytes](../modules/utils.bytes.md) / Bytes
+---
+hide_title: true
+title: Utils.Bytes.Bytes
+---
 
 # Interface: Bytes<Length\>
 

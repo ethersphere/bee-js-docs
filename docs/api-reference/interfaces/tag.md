@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / Tag
+---
+hide_title: true
+title: Tag
+---
 
 # Interface: Tag
 

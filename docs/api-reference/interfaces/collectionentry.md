@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / CollectionEntry
+---
+hide_title: true
+title: CollectionEntry
+---
 
 # Interface: CollectionEntry<T\>
 

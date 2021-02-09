@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / PssMessageHandler
+---
+hide_title: true
+title: PssMessageHandler
+---
 
 # Interface: PssMessageHandler
 

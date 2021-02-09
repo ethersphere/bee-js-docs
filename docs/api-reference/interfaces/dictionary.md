@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / Dictionary
+---
+hide_title: true
+title: Dictionary
+---
 
 # Interface: Dictionary<T\>
 

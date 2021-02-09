@@ -9,7 +9,11 @@ Here are the links to our auto-generated API documentation.
 
 ### Namespaces
 
-- [Utils](./modules/utils.md)
+- [Utils.Bytes](./modules/utils.bytes.md)
+- [Utils.Data](./modules/utils.data.md)
+- [Utils.Files](./modules/utils.file.md)
+- [Utils.Hex](./modules/utils.hex.md)
+- [Utils.Tar](./modules/utils.tar.md)
 
 ### Classes
 

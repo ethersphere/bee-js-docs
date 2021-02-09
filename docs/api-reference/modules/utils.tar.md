@@ -1,8 +1,9 @@
-[@ethersphere/bee-js](../README.md) / [Utils](utils.md) / Tar
+---
+hide_title: true
+title: Utils.Tar
+---
 
-# Namespace: Tar
-
-[Utils](utils.md).Tar
+# Namespace: Utils.Tar
 
 ## Table of contents
 
@@ -14,13 +15,13 @@
 
 ### makeTar
 
-▸ **makeTar**(`data`: [*Collection*](../README.md#collection)<Uint8Array\>): Uint8Array
+▸ **makeTar**(`data`: [*Collection*](../typealiases/typealiases.md#collection)<Uint8Array\>): Uint8Array
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
-`data` | [*Collection*](../README.md#collection)<Uint8Array\> |
+`data` | [*Collection*](../typealiases/typealiases.md#collection)<Uint8Array\> |
 
 **Returns:** Uint8Array
 

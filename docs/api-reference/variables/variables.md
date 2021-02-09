@@ -1,4 +1,5 @@
 ---
+hide_title: true
 title: Variables
 ---
 

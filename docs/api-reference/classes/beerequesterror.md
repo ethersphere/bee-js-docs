@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / BeeRequestError
+---
+hide_title: true
+title: BeeRequestError
+---
 
 # Class: BeeRequestError
 

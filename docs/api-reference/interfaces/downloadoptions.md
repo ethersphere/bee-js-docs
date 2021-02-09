@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / DownloadOptions
+---
+hide_title: true
+title: DownloadOptions
+---
 
 # Interface: DownloadOptions
 

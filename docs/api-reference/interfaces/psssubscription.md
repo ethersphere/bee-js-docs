@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / PssSubscription
+---
+hide_title: true
+title: PssSubscription
+---
 
 # Interface: PssSubscription
 

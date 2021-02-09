@@ -1,4 +1,7 @@
-[@ethersphere/bee-js](../README.md) / FileData
+---
+hide_title: true
+title: FileData
+---
 
 # Interface: FileData<T\>
 
