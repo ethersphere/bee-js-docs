@@ -8,7 +8,8 @@ module.exports = {
         'user-documentation/getting-started',
         'user-documentation/upload-download',
         'user-documentation/track-upload',
-        // 'user-documentation/pss',
+        'user-documentation/pss',
+        // 'user-documentation/feeds',
       ],
       collapsed: false
     },
