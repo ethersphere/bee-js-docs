@@ -115,8 +115,7 @@ Now let's edit the main App file.
   ]}>
   <TabItem value="ts">
 
-`./src/App.tsx`
-```ts
+```ts title="src/App.tsx"
 import React, { useState } from 'react'
 import './App.css'
 import { Bee } from '@ethersphere/bee-js'
@@ -165,8 +164,7 @@ export default App
   </TabItem>
   <TabItem value="js">
 
-`./src/App.jsx`
-```js
+```js title="src/App.jsx"
 import React, { useState } from 'react'
 import './App.css'
 import { Bee } from '@ethersphere/bee-js'
