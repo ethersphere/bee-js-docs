@@ -115,7 +115,7 @@ Now let's edit the main App file.
   ]}>
   <TabItem value="ts">
 
-```ts title="src/App.tsx"
+```tsx title="src/App.tsx"
 import React, { useState } from 'react'
 import './App.css'
 import { Bee } from '@ethersphere/bee-js'
@@ -164,7 +164,7 @@ export default App
   </TabItem>
   <TabItem value="js">
 
-```js title="src/App.jsx"
+```jsx title="src/App.jsx"
 import React, { useState } from 'react'
 import './App.css'
 import { Bee } from '@ethersphere/bee-js'
@@ -257,7 +257,7 @@ At the bottom of the `App` function there is a JSX code with a header, simple fo
   ]}>
   <TabItem value="ts">
 
-```ts
+```tsx
 function App() {
   const [ file, setFile ] = useState<File | null>(null)
   const [ link, setLink ] = useState<string | null>(null)
@@ -282,7 +282,7 @@ function App() {
   </TabItem>
   <TabItem value="js">
 
-```js
+```jsx
 function App() {
   const [ file, setFile ] = useState(null)
   const [ link, setLink ] = useState(null)
