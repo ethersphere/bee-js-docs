@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.3.1](https://www.github.com/ethersphere/bee-js-docs/compare/v0.3.0...v0.3.1) (2021-02-18)
+
+
+### Bug Fixes
+
+* code hightlighting and other markdown features ([#26](https://www.github.com/ethersphere/bee-js-docs/issues/26)) ([a8b33ab](https://www.github.com/ethersphere/bee-js-docs/commit/a8b33ab9c9f54b008cbece68db81ca1ee94ef1e7))
+* duplicate in sidebar ([#20](https://www.github.com/ethersphere/bee-js-docs/issues/20)) ([e886693](https://www.github.com/ethersphere/bee-js-docs/commit/e886693ef0ec02b0acc54aae5d74544d9af1efb6))
+
 ## [0.3.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.2.0...v0.3.0) (2021-02-09)
 
 
