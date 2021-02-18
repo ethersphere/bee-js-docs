@@ -5,7 +5,7 @@ title: Utils.Bytes.FlexBytes
 
 # Interface: FlexBytes<Min, Max\>
 
-[Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).FlexBytes
+Utils.[Bytes](../modules/utils.bytes.md).FlexBytes
 
 Helper type for dealing with flexible sized byte arrays.
 
