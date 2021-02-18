@@ -5,7 +5,9 @@ module.exports = {
   url: 'https://bee-js.ethswarm.org',
   baseUrl: '/',
   plugins: [require.resolve('docusaurus-lunr-search')],
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'error',
+  onBrokenMarkdownLinks: 'error',
+  onDuplicateRoutes: 'error',
   favicon: 'img/favicon.ico',
   organizationName: 'Swarm', // Usually your GitHub org/user name.
   projectName: 'bee-js-docs', // Usually your repo name.
