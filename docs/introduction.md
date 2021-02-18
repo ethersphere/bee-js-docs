@@ -15,9 +15,9 @@ We'd love you to join us! Are you up to the challenge of helping us to create be
 ## Community
 There is a vibrant and buzzing community behind Swarm, get involved in one of our group channels.
 
-- [Swarm](http://swarm.ethereum.org).
+- [official Swarm webside](http://swarm.ethereum.org).
+- [Discord room](https://discord.gg/ykCupZMuww).
 - [Beehive Chat on Mattermost](https://beehive.ethswarm.org/).
-- [Orange Lounge](https://t.me/joinchat/GoVG8RHYjUpD_-bEnLC4EQ).
 - [Twitter @ethswarm](https://twitter.com/ethswarm).
 - [reddit channel](https://www.reddit.com/r/ethswarm/).
 
