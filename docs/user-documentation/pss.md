@@ -8,11 +8,11 @@ sidebar_label: Postal Service over Swarm
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-Swarm provides the ability to send messages that appear to be normal Swarm traffic, but are in fact messages that may be received and decrypted to reveal their content only by the specific nodes they were intended to be received by.
+Swarm provides the ability to send messages that appear to be normal Swarm traffic, but are in fact messages that may be received and decrypted to reveal their content only to specific nodes that were intended to receive them.
 
 PSS provides a pub-sub facility that can be used for a variety of tasks. Nodes are able to listen to messages received for a specific topic in their nearest neighbourhood and create messages destined for another neighbourhood which are sent over the network using Swarm's usual data dissemination protocols.
 
-The intended use of PSS is to send one of encrypted or public communication with a publicly known identity (to for example initiate further communication directly). Due to the cost of mining the trojan chunks, it is not recommended to use as and instant messaging system. For the same reason, the API is disabled on public gateways.
+The intended use of PSS is to communicate privately with a publicly known identity (to for example initiate further communication directly). Due to the cost of mining the trojan chunks, it is not recommended to use as an instant messaging system.
 
 ## Getting the relevant data
 When you start `bee`, you may find all the necessary information in the log:
