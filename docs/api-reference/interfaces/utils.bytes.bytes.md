@@ -5,7 +5,7 @@ title: Utils.Bytes.Bytes
 
 # Interface: Bytes<Length\>
 
-[Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).Bytes
+Utils.[Bytes](../modules/utils.bytes.md).Bytes
 
 Helper type for dealing with fixed size byte arrays.
 
