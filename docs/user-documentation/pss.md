@@ -107,7 +107,7 @@ bee.pssSend(
 </Tabs>
 
 ## Retrieving message
-As a recipient, you have two ways how to recieve the message. If you are expecting one off message (which is the intended PSS usecase to exchange credentials for further direct communication), you can use the `pssReceive` method.
+As a recipient, you have two ways how to receive the message. If you are expecting one off message (which is the intended PSS use case to exchange credentials for further direct communication), you can use the `pssReceive` method.
 
 <Tabs
   groupId="lang_preferrence"
