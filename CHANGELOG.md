@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.3.0...v0.4.0) (2021-02-18)
+
+
+### Features
+
+* documentation for PSS ([#23](https://www.github.com/ethersphere/bee-js-docs/issues/23)) ([5004db5](https://www.github.com/ethersphere/bee-js-docs/commit/5004db5daf2439546018eb551d0ef9a5c497f2d4))
+* tutorial create dapp in react ([#24](https://www.github.com/ethersphere/bee-js-docs/issues/24)) ([de7cbe0](https://www.github.com/ethersphere/bee-js-docs/commit/de7cbe0671805ae0ce522514c96e58f8ebd48462))
+
+
+### Bug Fixes
+
+* broken links in API docs for bytes interface, replaced community link ([#30](https://www.github.com/ethersphere/bee-js-docs/issues/30)) ([bad1478](https://www.github.com/ethersphere/bee-js-docs/commit/bad1478a1ce54108fc066d53211eb77e5a53304a))
+* code hightlighting and other markdown features ([#26](https://www.github.com/ethersphere/bee-js-docs/issues/26)) ([a8b33ab](https://www.github.com/ethersphere/bee-js-docs/commit/a8b33ab9c9f54b008cbece68db81ca1ee94ef1e7))
+* duplicate in sidebar ([#20](https://www.github.com/ethersphere/bee-js-docs/issues/20)) ([e886693](https://www.github.com/ethersphere/bee-js-docs/commit/e886693ef0ec02b0acc54aae5d74544d9af1efb6))
+* properly mark jsx and tsx code blocks ([#31](https://www.github.com/ethersphere/bee-js-docs/issues/31)) ([385cded](https://www.github.com/ethersphere/bee-js-docs/commit/385cded26a4ceae2f93e99c00b5f58b421816c22))
+
 ## [0.3.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.2.0...v0.3.0) (2021-02-09)
 
 
