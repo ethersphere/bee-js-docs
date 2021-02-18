@@ -15,6 +15,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Tutorials',
+      items: [
+        'tutorials/create-dapp',
+      ],
+      collapsed: false
+    },
+    {
+      type: 'category',
       label: 'API Reference',
       items: [
         'api-reference/api-reference',
@@ -28,7 +36,6 @@ module.exports = {
             'api-reference/classes/beeresponseerror',
           ],
           Interfaces: [
-            "api-reference/interfaces/beeresponse",
             "api-reference/interfaces/beeresponse",
             "api-reference/interfaces/collectionentry",
             "api-reference/interfaces/collectionuploadoptions",

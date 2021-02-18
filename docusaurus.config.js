@@ -5,7 +5,9 @@ module.exports = {
   url: 'https://bee-js.ethswarm.org',
   baseUrl: '/',
   plugins: [require.resolve('docusaurus-lunr-search')],
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'error',
+  onBrokenMarkdownLinks: 'error',
+  onDuplicateRoutes: 'error',
   favicon: 'img/favicon.ico',
   organizationName: 'Swarm', // Usually your GitHub org/user name.
   projectName: 'bee-js-docs', // Usually your repo name.
@@ -26,25 +28,12 @@ module.exports = {
           label: 'Get Started',
           position: 'left',
         },
-        // {
-        //   to: 'docs/installation/quick-start',
-        //   activeBasePath: 'docs',
-        //   label: 'Installation',
-        //   position: 'left',
-        // },
-        // {
-        //   to: 'docs/getting-started/start-your-node',
-        //   activeBasePath: 'docs',
-        //   label: 'Start Your Node',
-        //   position: 'left',
-        // },
         {
           to: 'docs/api-reference',
           activeBasePath: 'docs',
           label: 'API Reference',
           position: 'left',
         },
-        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/ethersphere/bee-js',
           label: 'GitHub',

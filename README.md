@@ -37,3 +37,8 @@ Don't forget to find and replace the version number for the whole of the docs fo
 **NOTE: when this is done, the docs will have to be rebuilt.**
 
 ...
+
+## Maintainers
+
+- [nugaon](https://github.com/nugaon)
+- [vojtechsimetka](https://github.com/vojtechsimetka)
