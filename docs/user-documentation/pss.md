@@ -35,6 +35,9 @@ This section will need a lot of love and testing, probably should be in some adv
 ## Sending message
 
 To send data simply define a topic, prefix of the recipient's swarm network address (we recommend 4-6 character prefix length) and the data to be send.
+:::caution Your communication privacy may be at risk
+When sending PSS messages without encryption key, any Bee node through which the trojan chunk passes would be able to read the message.
+:::
 
 <Tabs
   groupId="lang_preferrence"
@@ -71,7 +74,7 @@ bee.pssSend('topic', '9e2e', 'Hello!')
   </TabItem>
 </Tabs>
 
-Optionally, if you want to encrypt the message, you may provide the recipient's PSS public key.
+If you want to encrypt the message, you may provide the recipient's PSS public key.
 
 <Tabs
   groupId="lang_preferrence"
