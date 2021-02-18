@@ -14,6 +14,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Tutorials',
+      items: [
+        'tutorials/create-dapp',
+      ],
+      collapsed: false
+    },
+    {
+      type: 'category',
       label: 'API Reference',
       items: [
         'api-reference/api-reference',
