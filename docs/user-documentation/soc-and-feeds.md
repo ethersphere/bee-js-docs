@@ -68,11 +68,13 @@ const response = await socWriter.upload(identifier, data)
 
 Feeds are an abstraction built on top of SOCs to provide mutable resources on the otherwise immutable data types that Swarm supports.
 
+One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website on Swarm, we may want its address stored in ENS but we don't want to pay for changing the reference every time the site is updated.
+
 A feed is defined by its `owner` (see above), a `topic` (which is 32 bytes arbitrary data, usually expected as a hex string or in a `Uint8Array` type) and a `type`. `type` defines how the updates and lookup of the feed index are made (currently only the `sequence` type is supported).
 
 Publishers are the single owners of feed chunks and are the only ones able to post updates to their feed. Posting an update requires (1) constructing the identifier from the topic and the correct index, and (2) signing it concatenated together with the hash of the arbitrary content of the update.
 
-Conversely, users can consume a feed by retrieving the chunk by its address. Retrieving an update requires the consumer to construct the address from the owner’s public key and the identifier. To calculate the identifier they need the topic and the appropriate index. For this they need to know the indexing scheme.
+Conversely, users can consume a feed by retrieving the chunk by its address. Retrieving an update requires the consumer to construct the address from the owner’s address and the identifier. To calculate the identifier they need the topic and the appropriate index. For this they need to know the indexing scheme.
 
 Feeds enable Swarm users to represent a sequence of content updates. The content of the update is the payload that the feed owner signs against the identifier. The payload can be a swarm reference from which the user can retrieve the associated data.
 
@@ -111,7 +113,7 @@ const response = await feedWriter.upload(reference)
 
 ### Using feed manifest
 
-One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website to Swarm, we may want its address stored in ENS but we don't want to pay for changing the reference every time the site is updated.
+One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website on Swarm, we may want its address stored in ENS but we don't want to pay for changing the reference every time the site is updated.
 
 For this Swarm provides a feature called `feed manifests`. It is a content addressed chunk which stores the definition of a feed (the `type`, the `topic` and the `owner`) and when it is looked up on the `bzz` endpoint, Swarm recognizes that it refers to a feed and continues the lookup according to the parameters of the feed.
 
