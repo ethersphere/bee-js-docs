@@ -4,7 +4,10 @@ module.exports = {
   // note! we use SED to change this during automated builds, see ./.github/workflows/gh-pages.yml
   url: 'https://bee-js.ethswarm.org',
   baseUrl: '/',
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    // 'docusaurus-plugin-typedoc',
+  ],
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',
   onDuplicateRoutes: 'error',

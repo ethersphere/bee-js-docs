@@ -1,0 +1,10 @@
+{
+  "readme": "none",
+  "logLevel": "Verbose",
+  "excludePrivate": true,
+  "docsRoot": "docs",
+  "out": "api",
+  "allReflectionsHaveOwnDocument": true,
+  "entryPoints": ["./bee-js/src/index.ts"],
+  "tsconfig": "./bee-js/tsconfig.typedoc.json"
+}
