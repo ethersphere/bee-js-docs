@@ -9,7 +9,7 @@ module.exports = {
         'user-documentation/upload-download',
         'user-documentation/track-upload',
         'user-documentation/pss',
-        // 'user-documentation/feeds',
+        'user-documentation/soc-and-feeds',
       ],
       collapsed: false
     },
