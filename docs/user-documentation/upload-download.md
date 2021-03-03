@@ -15,7 +15,7 @@ Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can 
 
 ### Data
 
-You can upload and retrieve any `string` or `Uint8Array` data with [`uploadData`](./api-reference/classes/bee#uploaddata) and [`downloadData`](./api-reference/classes/bee#downloaddata) functions.
+You can upload and retrieve any `string` or `Uint8Array` data with [`uploadData`](./api/classes/bee#uploaddata) and [`downloadData`](./api/classes/bee#downloaddata) functions.
 <Tabs
   groupId="lang_preferrence"
   defaultValue="ts"
@@ -96,7 +96,7 @@ console.log(new TextDecoder("utf-8").decode(retrievedFile.data)) // prints 'Bee 
   </TabItem>
 </Tabs>
 
-In browsers, you can upload directly `File` type. The filename is taken from the file object itself, but can be overwritten through the second argument of the `uploadFile` function (see the [API docs](./api-reference/classes/bee#uploadfile))
+In browsers, you can upload directly `File` type. The filename is taken from the file object itself, but can be overwritten through the second argument of the `uploadFile` function (see the [API docs](./api/classes/bee#uploadfile))
 
 <Tabs
   groupId="lang_preferrence"
