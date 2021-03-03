@@ -55,7 +55,7 @@ export type Signer = {
 ```
 
 :::warning Your communication privacy may be at risk
-We suggest using either ephemeral private keys (e.g., randomly generated) or the `Signer` interface when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications really) directly because you may lose your funds stored on it.
+We suggest using either ephemeral private keys (e.g. randomly generated) or the `Signer` interface when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications really) directly because you may lose your funds stored on it.
 :::
 
 Using the writer interface is similar to using the reader:
@@ -76,7 +76,7 @@ One of the most common use cases for feeds is to store mutable data in an immuta
 
 A feed is defined by its `owner` (see above), a `topic` (32 bytes arbitrary data as a hex string or `Uint8Array`), and a `type`. `type` defines how the updates and lookup of the feed index are made (currently only the `sequence` type is supported).
 
-The publisher is the owner of the feed, and only he can post updates to the feed. Posting an update requires (1) constructing the identifier from the topic and the correct index and (2) signing it concatenated together with the hash of the arbitrary content of the update.
+The publisher is the owner of the feed, and only they can post updates to the feed. Posting an update requires (1) constructing the identifier from the topic and the correct index and (2) signing it concatenated together with the hash of the arbitrary content of the update.
 
 Conversely, users can consume a feed by retrieving the chunk by its address. Retrieving an update requires the consumer to construct the address from the owner’s address and the identifier. To calculate the identifier, they need the topic and the appropriate index. For this, they need to know the indexing scheme.
 
