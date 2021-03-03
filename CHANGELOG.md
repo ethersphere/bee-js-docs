@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.1](https://www.github.com/ethersphere/bee-js-docs/compare/v0.6.0...v0.6.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* **soc and feeds:** grammer improvements from PR [#41](https://www.github.com/ethersphere/bee-js-docs/issues/41) ([#42](https://www.github.com/ethersphere/bee-js-docs/issues/42)) ([ce75954](https://www.github.com/ethersphere/bee-js-docs/commit/ce759543d478212d4364611cc6cc9c4581028341))
+
 ## [0.6.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.5.0...v0.6.0) (2021-03-03)
 
 
