@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.5.0...v0.6.0) (2021-03-03)
+
+
+### Features
+
+* soc and feeds documentation ([#37](https://www.github.com/ethersphere/bee-js-docs/issues/37)) ([1e4adb2](https://www.github.com/ethersphere/bee-js-docs/commit/1e4adb2d3070374d65bde89a20831ff73297a32c))
+
+
+### Bug Fixes
+
+* api reference url change ([#39](https://www.github.com/ethersphere/bee-js-docs/issues/39)) ([93f6145](https://www.github.com/ethersphere/bee-js-docs/commit/93f61454ad7081da8c1d5f8e6adc9f2d5ce7b147))
+
 ## [0.5.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.4.0...v0.5.0) (2021-03-02)
 
 
