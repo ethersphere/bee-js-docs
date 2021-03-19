@@ -16,6 +16,13 @@ Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can 
 ### Data
 
 You can upload and retrieve any `string` or `Uint8Array` data with [`uploadData`](./api/classes/bee#uploaddata) and [`downloadData`](./api/classes/bee#downloaddata) functions.
+
+When you download data the return type is [`Data`](./api/types/data) interface which extends `Uint8Array` with convenience functions like:
+
+ - `text()` that converts the bytes into UTF-8 decoded string
+ - `hex()` that converts the bytes into **non-prefixed** hex string
+ - `json()` that converts the bytes into JSON object
+
 <Tabs
   groupId="lang_preferrence"
   defaultValue="ts"
@@ -34,7 +41,7 @@ console.log(hash)
 
 const retrievedData = await bee.downloadData(hash)
 
-console.log(new TextDecoder("utf-8").decode(retrievedData)) // prints 'Bee is awesome!'
+console.log(retrievedData.text()) // prints 'Bee is awesome!'
 ```
 
   </TabItem>
@@ -49,7 +56,7 @@ console.log(hash)
 
 const retrievedData = await bee.downloadData(hash)
 
-console.log(new TextDecoder("utf-8").decode(retrievedData)) // prints 'Bee is awesome!'
+console.log(retrievedData.text()) // prints 'Bee is awesome!'
 ```
 
   </TabItem>
@@ -78,7 +85,7 @@ const retrievedFile = await bee.downloadFile(hash)
 
 console.log(retrievedFile.name) // prints 'textfile.txt'
 console.log(retrievedFile.contentType) // prints 'application/octet-stream'
-console.log(new TextDecoder("utf-8").decode(retrievedFile.data)) // prints 'Bee is awesome!'
+console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
 ```
 
   </TabItem>
@@ -90,7 +97,7 @@ const retrievedFile = await bee.downloadFile(hash)
 
 console.log(retrievedFile.name) // prints 'textfile.txt'
 console.log(retrievedFile.contentType) // prints 'application/octet-stream'
-console.log(new TextDecoder("utf-8").decode(retrievedFile.data)) // prints 'Bee is awesome!'
+console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
 ```
 
   </TabItem>
@@ -115,7 +122,7 @@ const retrievedFile = await bee.downloadFile(hash)
 
 console.log(retrievedFile.name) // prints 'foo.txt'
 console.log(retrievedFile.contentType) // prints 'text/plain'
-console.log(new TextDecoder("utf-8").decode(retrievedFile.data)) // prints 'foo'
+console.log(retrievedFile.data.text()) // prints 'foo'
 ```
 
   </TabItem>
@@ -129,7 +136,7 @@ const retrievedFile = await bee.downloadFile(hash)
 
 console.log(retrievedFile.name) // prints 'foo.txt'
 console.log(retrievedFile.contentType) // prints 'text/plain'
-console.log(new TextDecoder("utf-8").decode(retrievedFile.data)) // prints 'foo'
+console.log(retrievedFile.data.text()) // prints 'foo'
 ```
 
   </TabItem>
@@ -157,8 +164,8 @@ const hash = await bee.uploadFiles([ foo, bar ]) // upload
 const rFoo = await bee.downloadFileFromCollection(hash, './foo.txt') // download foo
 const rBar = await bee.downloadFileFromCollection(hash, './bar.txt') // download bar
 
-console.log(new TextDecoder("utf-8").decode(rFoo.data)) // prints 'foo'
-console.log(new TextDecoder("utf-8").decode(rBar.data)) // prints 'bar'
+console.log(rFoo.data.text()) // prints 'foo'
+console.log(rBar.data.text()) // prints 'bar'
 ```
 
   </TabItem>
@@ -173,8 +180,8 @@ const hash = await bee.uploadFiles([ foo, bar ]) // upload
 const rFoo = await bee.downloadFileFromCollection(hash, './foo.txt') // download foo
 const rBar = await bee.downloadFileFromCollection(hash, './bar.txt') // download bar
 
-console.log(new TextDecoder("utf-8").decode(rFoo.data)) // prints 'foo'
-console.log(new TextDecoder("utf-8").decode(rBar.data)) // prints 'bar'
+console.log(rFoo.data.text()) // prints 'foo'
+console.log(rBar.data.text()) // prints 'bar'
 ```
 
   </TabItem>
@@ -204,8 +211,8 @@ const hash = await bee.uploadFilesFromDirectory('./', true) // upload recursivel
 const rFoo = await bee.downloadFileFromCollection(hash, './foo.txt') // download foo
 const rBar = await bee.downloadFileFromCollection(hash, './dir/bar.txt') // download bar
 
-console.log(new TextDecoder("utf-8").decode(rFoo.data)) // prints 'foo'
-console.log(new TextDecoder("utf-8").decode(rBar.data)) // prints 'bar'
+console.log(rFoo.data.text()) // prints 'foo'
+console.log(rBar.data.text()) // prints 'bar'
 ```
 
   </TabItem>
@@ -217,8 +224,8 @@ const hash = await bee.uploadFilesFromDirectory('./', true) // upload recursivel
 const rFoo = await bee.downloadFileFromCollection(hash, './foo.txt') // download foo
 const rBar = await bee.downloadFileFromCollection(hash, './dir/bar.txt') // download bar
 
-console.log(new TextDecoder("utf-8").decode(rFoo.data)) // prints 'foo'
-console.log(new TextDecoder("utf-8").decode(rBar.data)) // prints 'bar'
+console.log(rFoo.data.text()) // prints 'foo'
+console.log(rBar.data.text()) // prints 'bar'
 ```
 
   </TabItem>
