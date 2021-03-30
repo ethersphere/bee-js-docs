@@ -19,7 +19,7 @@ You can upload and retrieve any `string` or `Uint8Array` data with [`uploadData`
 
 When you download data the return type is [`Data`](./api/types/data) interface which extends `Uint8Array` with convenience functions like:
 
- - `text()` that converts the bytes into UTF-8 decoded string
+ - `text()` that converts the bytes into UTF-8 encoded string
  - `hex()` that converts the bytes into **non-prefixed** hex string
  - `json()` that converts the bytes into JSON object
 
