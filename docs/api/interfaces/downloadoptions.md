@@ -14,4 +14,4 @@ hide_title: true
 
 • `Optional` **timeout**: *undefined* \| *number*
 
-Defined in: [bee-js/src/types/index.ts:37](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L37)
+Defined in: [bee-js/src/types/index.ts:50](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L50)

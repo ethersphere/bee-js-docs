@@ -28,3 +28,4 @@ hide_title: true
 - [verifyBytes](../functions/utils.bytes.verifybytes.md)
 - [verifyBytesAtOffset](../functions/utils.bytes.verifybytesatoffset.md)
 - [verifyFlexBytes](../functions/utils.bytes.verifyflexbytes.md)
+- [wrapBytesWithHelpers](../functions/utils.bytes.wrapbyteswithhelpers.md)

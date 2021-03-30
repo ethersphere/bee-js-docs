@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **AddressPrefix**: [*Address*](address.md)
 
-Defined in: [bee-js/src/types/index.ts:13](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L13)
+Defined in: [bee-js/src/types/index.ts:25](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L25)

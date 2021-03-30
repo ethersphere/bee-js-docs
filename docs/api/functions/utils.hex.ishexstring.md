@@ -10,16 +10,26 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).isHexString
 
-▸ **isHexString**(`s`: *string*): s is BrandedType<string, "HexString"\>
+▸ **isHexString**<Length\>(`s`: *unknown*, `len?`: *number*): s is FlavoredType<string & object, "HexString"\>
 
-Type guard for HexStrings
+Type guard for HexStrings.
+Requires no 0x prefix!
+
+TODO: Make Length mandatory: https://github.com/ethersphere/bee-js/issues/208
+
+#### Type parameters:
+
+Name | Type | Default |
+:------ | :------ | :------ |
+`Length` | *number* | *number* |
 
 #### Parameters:
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`s` | *string* | string input    |
+`s` | *unknown* | string input   |
+`len?` | *number* | expected length of the HexString    |
 
-**Returns:** s is BrandedType<string, "HexString"\>
+**Returns:** s is FlavoredType<string & object, "HexString"\>
 
-Defined in: [bee-js/src/utils/hex.ts:74](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/hex.ts#L74)
+Defined in: [bee-js/src/utils/hex.ts:134](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L134)

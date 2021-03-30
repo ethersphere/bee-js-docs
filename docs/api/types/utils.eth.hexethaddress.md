@@ -10,6 +10,6 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Eth](../modules/utils.eth.md).HexEthAddress
 
-Ƭ **HexEthAddress**: [*BrandedString*](brandedstring.md)<*HexEthAddress*\>
+Ƭ **HexEthAddress**: [*HexString*](utils.hex.hexstring.md)<*40*\>
 
-Defined in: [bee-js/src/utils/eth.ts:4](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/eth.ts#L4)
+Defined in: [bee-js/src/utils/eth.ts:8](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L8)

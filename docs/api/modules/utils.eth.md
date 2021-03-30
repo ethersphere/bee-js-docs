@@ -12,8 +12,13 @@ hide_title: true
 
 ## Table of contents
 
+### Interfaces
+
+- [JsonRPC](../interfaces/utils.eth.jsonrpc.md)
+
 ### Type aliases
 
+- [EthAddress](../types/utils.eth.ethaddress.md)
 - [HexEthAddress](../types/utils.eth.hexethaddress.md)
 - [OverlayAddress](../types/utils.eth.overlayaddress.md)
 
@@ -21,5 +26,8 @@ hide_title: true
 
 - [ethToSwarmAddress](../functions/utils.eth.ethtoswarmaddress.md)
 - [fromLittleEndian](../functions/utils.eth.fromlittleendian.md)
-- [isEthAddress](../functions/utils.eth.isethaddress.md)
+- [isHexEthAddress](../functions/utils.eth.ishexethaddress.md)
+- [makeEthAddress](../functions/utils.eth.makeethaddress.md)
+- [makeEthereumWalletSigner](../functions/utils.eth.makeethereumwalletsigner.md)
+- [makeHexEthAddress](../functions/utils.eth.makehexethaddress.md)
 - [toLittleEndian](../functions/utils.eth.tolittleendian.md)

@@ -10,35 +10,56 @@ hide_title: true
 
 The Bee class provides a way of interacting with the Bee APIs based on the provided url
 
-**`param`** URL of a running Bee node
-
 ## Constructors
 
 ### constructor
 
-\+ **new Bee**(`url`: *string*): [*Bee*](bee.md)
+\+ **new Bee**(`url`: *string*, `options?`: [*BeeOptions*](../interfaces/beeoptions.md)): [*Bee*](bee.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`url` | *string* |
+Name | Type | Description |
+:------ | :------ | :------ |
+`url` | *string* | URL of a running Bee node   |
+`options?` | [*BeeOptions*](../interfaces/beeoptions.md) |  |
 
 **Returns:** [*Bee*](bee.md)
 
-Defined in: [bee-js/src/bee.ts:40](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L40)
+Defined in: [bee-js/src/bee.ts:50](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L50)
 
 ## Properties
+
+### signer
+
+• `Optional` `Readonly` **signer**: *undefined* \| [*Signer*](../types/signer.md)
+
+Defined in: [bee-js/src/bee.ts:50](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L50)
+
+___
 
 ### url
 
 • `Readonly` **url**: *string*
 
+Defined in: [bee-js/src/bee.ts:49](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L49)
+
 ## Methods
+
+### checkConnection
+
+▸ **checkConnection**(): *Promise*<void\>
+
+Ping the base bee URL. If connection was not successful throw error
+
+**Returns:** *Promise*<void\>
+
+Defined in: [bee-js/src/bee.ts:514](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L514)
+
+___
 
 ### createFeedManifest
 
-▸ **createFeedManifest**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| Topic, `owner`: *string* \| *Uint8Array* \| EthAddress): *Promise*<string\>
+▸ **createFeedManifest**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\>, `owner`: *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Create feed manifest chunk and return the reference to it
 
@@ -47,12 +68,12 @@ Create feed manifest chunk and return the reference to it
 Name | Type | Description |
 :------ | :------ | :------ |
 `type` | *sequence* \| *epoch* | The type of the feed, can be 'epoch' or 'sequence'   |
-`topic` | *string* \| *Uint8Array* \| Topic | Topic in hex or bytes   |
-`owner` | *string* \| *Uint8Array* \| EthAddress | Owner's ethereum address in hex or bytes    |
+`topic` | *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> | Topic in hex or bytes   |
+`owner` | *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md) | Owner's ethereum address in hex or bytes    |
 
-**Returns:** *Promise*<string\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
-Defined in: [bee-js/src/bee.ts:365](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L365)
+Defined in: [bee-js/src/bee.ts:418](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L418)
 
 ___
 
@@ -64,13 +85,13 @@ Create new tag
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:183](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L183)
+Defined in: [bee-js/src/bee.ts:222](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L222)
 
 ___
 
 ### downloadData
 
-▸ **downloadData**(`reference`: *string*): *Promise*<Uint8Array\>
+▸ **downloadData**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*Data*](../interfaces/data.md)\>
 
 Download data as a byte array
 
@@ -78,17 +99,17 @@ Download data as a byte array
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee data reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee data reference    |
 
-**Returns:** *Promise*<Uint8Array\>
+**Returns:** *Promise*<[*Data*](../interfaces/data.md)\>
 
-Defined in: [bee-js/src/bee.ts:60](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L60)
+Defined in: [bee-js/src/bee.ts:87](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L87)
 
 ___
 
 ### downloadFile
 
-▸ **downloadFile**(`reference`: *string*): *Promise*<[*FileData*](../interfaces/filedata.md)<Uint8Array\>\>
+▸ **downloadFile**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
 Download single file as a byte array
 
@@ -96,17 +117,17 @@ Download single file as a byte array
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee file reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee file reference    |
 
-**Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<Uint8Array\>\>
+**Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
-Defined in: [bee-js/src/bee.ts:105](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L105)
+Defined in: [bee-js/src/bee.ts:136](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L136)
 
 ___
 
 ### downloadFileFromCollection
 
-▸ **downloadFileFromCollection**(`reference`: *string*, `path?`: *string*): *Promise*<[*FileData*](../interfaces/filedata.md)<Uint8Array\>\>
+▸ **downloadFileFromCollection**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>, `path?`: *string*): *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
 Download single file as a byte array from collection given using the path
 
@@ -114,20 +135,20 @@ Download single file as a byte array from collection given using the path
 
 Name | Type | Default value | Description |
 :------ | :------ | :------ | :------ |
-`reference` | *string* | - | Bee collection reference   |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | - | Bee collection reference   |
 `path` | *string* | '' | Path of the requested file in the collection    |
 
-**Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<Uint8Array\>\>
+**Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
 file in byte array with metadata
 
-Defined in: [bee-js/src/bee.ts:159](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L159)
+Defined in: [bee-js/src/bee.ts:194](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L194)
 
 ___
 
 ### downloadReadableData
 
-▸ **downloadReadableData**(`reference`: *string*, `axiosOptions?`: AxiosRequestConfig): *Promise*<Readable\>
+▸ **downloadReadableData**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>, `axiosOptions?`: AxiosRequestConfig): *Promise*<Readable\>
 
 Download data as a readable stream
 
@@ -135,18 +156,18 @@ Download data as a readable stream
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee data reference   |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee data reference   |
 `axiosOptions?` | AxiosRequestConfig | optional - alter default options of axios HTTP client    |
 
 **Returns:** *Promise*<Readable\>
 
-Defined in: [bee-js/src/bee.ts:70](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L70)
+Defined in: [bee-js/src/bee.ts:99](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L99)
 
 ___
 
 ### downloadReadableFile
 
-▸ **downloadReadableFile**(`reference`: *string*): *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
+▸ **downloadReadableFile**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
 
 Download single file as a readable stream
 
@@ -154,17 +175,17 @@ Download single file as a readable stream
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee file reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee file reference    |
 
 **Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
 
-Defined in: [bee-js/src/bee.ts:114](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L114)
+Defined in: [bee-js/src/bee.ts:147](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L147)
 
 ___
 
 ### downloadReadableFileFromCollection
 
-▸ **downloadReadableFileFromCollection**(`reference`: *string*, `path?`: *string*, `axiosOptions?`: AxiosRequestConfig): *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
+▸ **downloadReadableFileFromCollection**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>, `path?`: *string*, `axiosOptions?`: AxiosRequestConfig): *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
 
 Download single file as a readable stream from collection given using the path
 
@@ -172,7 +193,7 @@ Download single file as a readable stream from collection given using the path
 
 Name | Type | Default value | Description |
 :------ | :------ | :------ | :------ |
-`reference` | *string* | - | Bee collection reference   |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | - | Bee collection reference   |
 `path` | *string* | '' | Path of the requested file in the collection   |
 `axiosOptions?` | AxiosRequestConfig | - | optional - alter default options of axios HTTP client    |
 
@@ -180,13 +201,27 @@ Name | Type | Default value | Description |
 
 file in readable stream with metadata
 
-Defined in: [bee-js/src/bee.ts:172](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L172)
+Defined in: [bee-js/src/bee.ts:209](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L209)
+
+___
+
+### isConnected
+
+▸ **isConnected**(): *Promise*<boolean\>
+
+Ping the base bee URL.
+
+**Returns:** *Promise*<boolean\>
+
+true if succesfull, false on error
+
+Defined in: [bee-js/src/bee.ts:523](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L523)
 
 ___
 
 ### makeFeedReader
 
-▸ **makeFeedReader**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| Topic, `owner`: *string* \| *Uint8Array* \| EthAddress): FeedReader
+▸ **makeFeedReader**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\>, `owner`: *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md)): [*FeedReader*](../interfaces/feedreader.md)
 
 Make a new feed reader for downloading feed updates
 
@@ -195,18 +230,18 @@ Make a new feed reader for downloading feed updates
 Name | Type | Description |
 :------ | :------ | :------ |
 `type` | *sequence* \| *epoch* | The type of the feed, can be 'epoch' or 'sequence'   |
-`topic` | *string* \| *Uint8Array* \| Topic | Topic in hex or bytes   |
-`owner` | *string* \| *Uint8Array* \| EthAddress | Owner's ethereum address in hex or bytes    |
+`topic` | *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> | Topic in hex or bytes   |
+`owner` | *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md) | Owner's ethereum address in hex or bytes    |
 
-**Returns:** FeedReader
+**Returns:** [*FeedReader*](../interfaces/feedreader.md)
 
-Defined in: [bee-js/src/bee.ts:385](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L385)
+Defined in: [bee-js/src/bee.ts:438](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L438)
 
 ___
 
 ### makeFeedTopic
 
-▸ **makeFeedTopic**(`topic`: *string*): Topic
+▸ **makeFeedTopic**(`topic`: *string*): [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\>
 
 Make a new feed topic from a string
 
@@ -219,15 +254,15 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `topic` | *string* | The input string    |
 
-**Returns:** Topic
+**Returns:** [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\>
 
-Defined in: [bee-js/src/bee.ts:422](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L422)
+Defined in: [bee-js/src/bee.ts:479](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L479)
 
 ___
 
 ### makeFeedWriter
 
-▸ **makeFeedWriter**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| Topic, `signer`: *string* \| *Uint8Array* \| Signer): FeedWriter
+▸ **makeFeedWriter**(`type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\>, `signer?`: *string* \| *Uint8Array* \| [*Signer*](../types/signer.md)): [*FeedWriter*](../interfaces/feedwriter.md)
 
 Make a new feed writer for updating feeds
 
@@ -236,18 +271,18 @@ Make a new feed writer for updating feeds
 Name | Type | Description |
 :------ | :------ | :------ |
 `type` | *sequence* \| *epoch* | The type of the feed, can be 'epoch' or 'sequence'   |
-`topic` | *string* \| *Uint8Array* \| Topic | Topic in hex or bytes   |
-`signer` | *string* \| *Uint8Array* \| Signer | The signer's private key or a Signer instance that can sign data    |
+`topic` | *string* \| *Uint8Array* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> | Topic in hex or bytes   |
+`signer?` | *string* \| *Uint8Array* \| [*Signer*](../types/signer.md) | The signer's private key or a Signer instance that can sign data    |
 
-**Returns:** FeedWriter
+**Returns:** [*FeedWriter*](../interfaces/feedwriter.md)
 
-Defined in: [bee-js/src/bee.ts:405](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L405)
+Defined in: [bee-js/src/bee.ts:458](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L458)
 
 ___
 
 ### makeSOCReader
 
-▸ **makeSOCReader**(`ownerAddress`: *string* \| *Uint8Array* \| EthAddress): SOCReader
+▸ **makeSOCReader**(`ownerAddress`: *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md)): [*SOCReader*](../interfaces/socreader.md)
 
 Returns an object for reading single owner chunks
 
@@ -255,17 +290,17 @@ Returns an object for reading single owner chunks
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`ownerAddress` | *string* \| *Uint8Array* \| EthAddress | The ethereum address of the owner    |
+`ownerAddress` | *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md) | The ethereum address of the owner    |
 
-**Returns:** SOCReader
+**Returns:** [*SOCReader*](../interfaces/socreader.md)
 
-Defined in: [bee-js/src/bee.ts:431](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L431)
+Defined in: [bee-js/src/bee.ts:488](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L488)
 
 ___
 
 ### makeSOCWriter
 
-▸ **makeSOCWriter**(`signer`: *string* \| *Uint8Array* \| Signer): SOCWriter
+▸ **makeSOCWriter**(`signer?`: *string* \| *Uint8Array* \| [*Signer*](../types/signer.md)): [*SOCWriter*](../interfaces/socwriter.md)
 
 Returns an object for reading and writing single owner chunks
 
@@ -273,17 +308,17 @@ Returns an object for reading and writing single owner chunks
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`signer` | *string* \| *Uint8Array* \| Signer | The signer's private key or a Signer instance that can sign data    |
+`signer?` | *string* \| *Uint8Array* \| [*Signer*](../types/signer.md) | The signer's private key or a Signer instance that can sign data    |
 
-**Returns:** SOCWriter
+**Returns:** [*SOCWriter*](../interfaces/socwriter.md)
 
-Defined in: [bee-js/src/bee.ts:444](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L444)
+Defined in: [bee-js/src/bee.ts:501](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L501)
 
 ___
 
 ### pinCollection
 
-▸ **pinCollection**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **pinCollection**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Pin collection with given reference
 
@@ -291,17 +326,17 @@ Pin collection with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee collection reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee collection reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:219](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L219)
+Defined in: [bee-js/src/bee.ts:262](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L262)
 
 ___
 
 ### pinData
 
-▸ **pinData**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **pinData**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Pin data with given reference
 
@@ -309,17 +344,17 @@ Pin data with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee data reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee data reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:237](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L237)
+Defined in: [bee-js/src/bee.ts:284](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L284)
 
 ___
 
 ### pinFile
 
-▸ **pinFile**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **pinFile**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Pin file with given reference
 
@@ -327,17 +362,17 @@ Pin file with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee file reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee file reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:201](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L201)
+Defined in: [bee-js/src/bee.ts:240](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L240)
 
 ___
 
 ### pssReceive
 
-▸ **pssReceive**(`topic`: *string*, `timeoutMsec?`: *number*): *Promise*<Uint8Array\>
+▸ **pssReceive**(`topic`: *string*, `timeoutMsec?`: *number*): *Promise*<[*Data*](../interfaces/data.md)\>
 
 Receive message with Postal Service for Swarm
 
@@ -358,11 +393,11 @@ Name | Type | Default value | Description |
 `topic` | *string* | - | Topic name   |
 `timeoutMsec` | *number* | 0 | Timeout in milliseconds    |
 
-**Returns:** *Promise*<Uint8Array\>
+**Returns:** *Promise*<[*Data*](../interfaces/data.md)\>
 
 Message in byte array
 
-Defined in: [bee-js/src/bee.ts:331](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L331)
+Defined in: [bee-js/src/bee.ts:384](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L384)
 
 ___
 
@@ -383,7 +418,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:259](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L259)
+Defined in: [bee-js/src/bee.ts:310](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L310)
 
 ___
 
@@ -404,7 +439,7 @@ Name | Type | Description |
 
 Subscription to a given topic
 
-Defined in: [bee-js/src/bee.ts:276](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L276)
+Defined in: [bee-js/src/bee.ts:327](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L327)
 
 ___
 
@@ -422,13 +457,13 @@ Name | Type |
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:192](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L192)
+Defined in: [bee-js/src/bee.ts:231](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L231)
 
 ___
 
 ### unpinCollection
 
-▸ **unpinCollection**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **unpinCollection**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Unpin collection with given reference
 
@@ -436,17 +471,17 @@ Unpin collection with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee collection reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee collection reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:228](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L228)
+Defined in: [bee-js/src/bee.ts:273](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L273)
 
 ___
 
 ### unpinData
 
-▸ **unpinData**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **unpinData**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Unpin data with given reference
 
@@ -454,17 +489,17 @@ Unpin data with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee data reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee data reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:246](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L246)
+Defined in: [bee-js/src/bee.ts:295](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L295)
 
 ___
 
 ### unpinFile
 
-▸ **unpinFile**(`reference`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **unpinFile**(`reference`: *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
 Unpin file with given reference
 
@@ -472,17 +507,17 @@ Unpin file with given reference
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`reference` | *string* | Bee file reference    |
+`reference` | *string* \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *64*  }, *HexString*\> \| [*FlavoredType*](../types/flavoredtype.md)<*string* & { `length`: *128*  }, *HexString*\> | Bee file reference    |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:210](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L210)
+Defined in: [bee-js/src/bee.ts:251](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L251)
 
 ___
 
 ### uploadData
 
-▸ **uploadData**(`data`: *string* \| *Uint8Array*, `options?`: [*UploadOptions*](../interfaces/uploadoptions.md)): *Promise*<string\>
+▸ **uploadData**(`data`: *string* \| *Uint8Array*, `options?`: [*UploadOptions*](../interfaces/uploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload data to a Bee node
 
@@ -491,19 +526,19 @@ Upload data to a Bee node
 Name | Type | Description |
 :------ | :------ | :------ |
 `data` | *string* \| *Uint8Array* | Data to be uploaded   |
-`options?` | [*UploadOptions*](../interfaces/uploadoptions.md) | Aditional options like tag, encryption, pinning, content-type    |
+`options?` | [*UploadOptions*](../interfaces/uploadoptions.md) | Additional options like tag, encryption, pinning, content-type    |
 
-**Returns:** *Promise*<string\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
 reference is a content hash of the data
 
-Defined in: [bee-js/src/bee.ts:51](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L51)
+Defined in: [bee-js/src/bee.ts:78](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L78)
 
 ___
 
 ### uploadFile
 
-▸ **uploadFile**(`data`: *string* \| *Uint8Array* \| *Readable* \| File, `name?`: *string*, `options?`: [*FileUploadOptions*](../interfaces/fileuploadoptions.md)): *Promise*<string\>
+▸ **uploadFile**(`data`: *string* \| *Uint8Array* \| *Readable* \| File, `name?`: *string*, `options?`: [*FileUploadOptions*](../interfaces/fileuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload single file to a Bee node
 
@@ -515,17 +550,17 @@ Name | Type | Description |
 `name?` | *string* | Name of the uploaded file (optional)   |
 `options?` | [*FileUploadOptions*](../interfaces/fileuploadoptions.md) | Aditional options like tag, encryption, pinning, content-type    |
 
-**Returns:** *Promise*<string\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
 reference is a content hash of the file
 
-Defined in: [bee-js/src/bee.ts:83](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L83)
+Defined in: [bee-js/src/bee.ts:114](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L114)
 
 ___
 
 ### uploadFiles
 
-▸ **uploadFiles**(`fileList`: FileList \| File[], `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<string\>
+▸ **uploadFiles**(`fileList`: FileList \| File[], `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload collection of files to a Bee node
 
@@ -538,17 +573,17 @@ Name | Type | Description |
 `fileList` | FileList \| File[] | list of files to be uploaded   |
 `options?` | [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning    |
 
-**Returns:** *Promise*<string\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:128](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L128)
+Defined in: [bee-js/src/bee.ts:163](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L163)
 
 ___
 
 ### uploadFilesFromDirectory
 
-▸ **uploadFilesFromDirectory**(`dir`: *string*, `recursive?`: *boolean*, `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<string\>
+▸ **uploadFilesFromDirectory**(`dir`: *string*, `recursive?`: *boolean*, `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload collection of files to a Bee node
 
@@ -562,8 +597,8 @@ Name | Type | Default value | Description |
 `recursive` | *boolean* | true | specifies if the directory should be recursively uploaded   |
 `options?` | [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md) | - | Additional options like tag, encryption, pinning    |
 
-**Returns:** *Promise*<string\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:145](https://github.com/ethersphere/bee-js/blob/7dfd556/src/bee.ts#L145)
+Defined in: [bee-js/src/bee.ts:180](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee.ts#L180)

@@ -6,5 +6,5 @@
   "out": "api",
   "allReflectionsHaveOwnDocument": true,
   "entryPoints": ["./bee-js/src/index.ts"],
-  "tsconfig": "./bee-js/tsconfig.typedoc.json"
+  "tsconfig": "./bee-js/tsconfig.json"
 }

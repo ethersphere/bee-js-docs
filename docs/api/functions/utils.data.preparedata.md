@@ -10,14 +10,16 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Data](../modules/utils.data.md).prepareData
 
-▸ **prepareData**(`data`: *string* \| ArrayBuffer \| Uint8Array \| Readable): Uint8Array \| Readable
+▸ **prepareData**(`data`: *string* \| ArrayBuffer \| Uint8Array \| Readable): Uint8Array \| Readable \| *never*
+
+Validates input and converts to Uint8Array or Readable
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *string* \| ArrayBuffer \| Uint8Array \| Readable |
+Name | Type | Description |
+:------ | :------ | :------ |
+`data` | *string* \| ArrayBuffer \| Uint8Array \| Readable | any string, ArrayBuffer, Uint8Array or Readable    |
 
-**Returns:** Uint8Array \| Readable
+**Returns:** Uint8Array \| Readable \| *never*
 
-Defined in: [bee-js/src/utils/data.ts:4](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/data.ts#L4)
+Defined in: [bee-js/src/utils/data.ts:9](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/data.ts#L9)

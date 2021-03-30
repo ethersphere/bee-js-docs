@@ -10,19 +10,25 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).intToHex
 
-▸ **intToHex**(`int`: *number*, `withPrefix?`: *boolean*): [*HexString*](../types/utils.hex.hexstring.md)
+▸ **intToHex**<Length\>(`int`: *number*, `len?`: Length): [*HexString*](../types/utils.hex.hexstring.md)<Length\>
 
-Converst integer number to hex string.
+Converts integer number to hex string.
 
 Optionally provides '0x' prefix or padding
 
+#### Type parameters:
+
+Name | Type | Default |
+:------ | :------ | :------ |
+`Length` | *number* | *number* |
+
 #### Parameters:
 
-Name | Type | Default value | Description |
-:------ | :------ | :------ | :------ |
-`int` | *number* | - | The positive integer to be converted   |
-`withPrefix` | *boolean* | false | Provides '0x' prefix when true (default: false)    |
+Name | Type | Description |
+:------ | :------ | :------ |
+`int` | *number* | The positive integer to be converted   |
+`len?` | Length | The length of the non prefixed HexString    |
 
-**Returns:** [*HexString*](../types/utils.hex.hexstring.md)
+**Returns:** [*HexString*](../types/utils.hex.hexstring.md)<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:57](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/hex.ts#L57)
+Defined in: [bee-js/src/utils/hex.ts:109](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L109)

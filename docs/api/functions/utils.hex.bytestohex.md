@@ -10,19 +10,23 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).bytesToHex
 
-▸ **bytesToHex**(`bytes`: Uint8Array, `withPrefix?`: *boolean*): [*HexString*](../types/utils.hex.hexstring.md)
+▸ **bytesToHex**<Length\>(`bytes`: Uint8Array, `len?`: Length): [*HexString*](../types/utils.hex.hexstring.md)<Length\>
 
-Converts array of number or Uint8Array to hex string.
+Converts array of number or Uint8Array to HexString without prefix.
 
-Optionally provides '0x' prefix.
+#### Type parameters:
+
+Name | Type | Default |
+:------ | :------ | :------ |
+`Length` | *number* | *number* |
 
 #### Parameters:
 
-Name | Type | Default value | Description |
-:------ | :------ | :------ | :------ |
-`bytes` | Uint8Array | - | The input array   |
-`withPrefix` | *boolean* | false | Provides '0x' prefix when true (default: false)    |
+Name | Type | Description |
+:------ | :------ | :------ |
+`bytes` | Uint8Array | The input array   |
+`len?` | Length | The length of the non prefixed HexString    |
 
-**Returns:** [*HexString*](../types/utils.hex.hexstring.md)
+**Returns:** [*HexString*](../types/utils.hex.hexstring.md)<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:41](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/hex.ts#L41)
+Defined in: [bee-js/src/utils/hex.ts:89](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L89)

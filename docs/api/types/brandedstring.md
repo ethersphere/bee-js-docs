@@ -1,19 +1,19 @@
 ---
 id: "brandedstring"
-title: "Type alias: BrandedString<N>"
+title: "Type alias: BrandedString<Name>"
 sidebar_label: "BrandedString"
 custom_edit_url: null
 hide_title: true
 ---
 
-# Type alias: BrandedString<N\>
+# Type alias: BrandedString<Name\>
 
-Ƭ **BrandedString**<N\>: [*BrandedType*](brandedtype.md)<string, N\>
+Ƭ **BrandedString**<Name\>: [*BrandedType*](brandedtype.md)<string, Name\>
 
 #### Type parameters:
 
 Name |
 :------ |
-`N` |
+`Name` |
 
-Defined in: [bee-js/src/types/index.ts:107](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L107)
+Defined in: [bee-js/src/types/index.ts:242](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L242)

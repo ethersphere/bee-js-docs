@@ -12,4 +12,4 @@ hide_title: true
 
 Ƭ **OverlayAddress**: [*BrandedString*](brandedstring.md)<*OverlayAddress*\>
 
-Defined in: [bee-js/src/utils/eth.ts:5](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/eth.ts#L5)
+Defined in: [bee-js/src/utils/eth.ts:6](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L6)
