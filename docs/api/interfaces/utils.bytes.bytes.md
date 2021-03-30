@@ -10,12 +10,6 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).Bytes
 
-Helper type for dealing with fixed size byte arrays.
-
-It changes the type of `length` property of `Uint8Array` to the
-generic `Length` type parameter which is runtime compatible with
-the original, because it extends from the `number` type.
-
 ## Type parameters
 
 Name | Type |
@@ -82,7 +76,7 @@ ___
 
 • `Readonly` **length**: Length
 
-Defined in: [bee-js/src/utils/bytes.ts:9](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/bytes.ts#L9)
+Defined in: [bee-js/src/utils/bytes.ts:12](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L12)
 
 ## Methods
 

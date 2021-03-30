@@ -27,29 +27,29 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/types/index.ts:88](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L88)
+Defined in: [bee-js/src/types/index.ts:114](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L114)
 
-Defined in: [bee-js/src/types/index.ts:88](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L88)
+Defined in: [bee-js/src/types/index.ts:114](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L114)
 
 ___
 
 ### onMessage
 
-• **onMessage**: (`message`: *Uint8Array*, `subscription`: [*PssSubscription*](psssubscription.md)) =\> *void*
+• **onMessage**: (`message`: [*Data*](data.md), `subscription`: [*PssSubscription*](psssubscription.md)) =\> *void*
 
 #### Type declaration:
 
-▸ (`message`: *Uint8Array*, `subscription`: [*PssSubscription*](psssubscription.md)): *void*
+▸ (`message`: [*Data*](data.md), `subscription`: [*PssSubscription*](psssubscription.md)): *void*
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`message` | *Uint8Array* |
+`message` | [*Data*](data.md) |
 `subscription` | [*PssSubscription*](psssubscription.md) |
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L87)
+Defined in: [bee-js/src/types/index.ts:113](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L113)
 
-Defined in: [bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L87)
+Defined in: [bee-js/src/types/index.ts:113](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L113)

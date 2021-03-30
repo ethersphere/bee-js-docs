@@ -12,6 +12,6 @@ hide_title: true
 
 ### reference
 
-• **reference**: *string*
+• **reference**: [*Reference*](../types/reference.md)
 
-Defined in: [bee-js/src/types/index.ts:97](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L97)
+Defined in: [bee-js/src/types/index.ts:123](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L123)

@@ -26,4 +26,4 @@ Name | Type | Default value | Description |
 
 little-endian encoded hexstring
 
-Defined in: [bee-js/src/utils/eth.ts:67](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/eth.ts#L67)
+Defined in: [bee-js/src/utils/eth.ts:103](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L103)

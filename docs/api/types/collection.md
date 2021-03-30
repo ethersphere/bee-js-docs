@@ -18,4 +18,4 @@ Name |
 :------ |
 `T` |
 
-Defined in: [bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L79)
+Defined in: [bee-js/src/types/index.ts:105](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L105)

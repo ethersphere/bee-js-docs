@@ -1,20 +1,20 @@
 ---
 id: "flavoredtype"
-title: "Type alias: FlavoredType<T, N>"
+title: "Type alias: FlavoredType<Type, Name>"
 sidebar_label: "FlavoredType"
 custom_edit_url: null
 hide_title: true
 ---
 
-# Type alias: FlavoredType<T, N\>
+# Type alias: FlavoredType<Type, Name\>
 
-Ƭ **FlavoredType**<T, N\>: T & { `__tag__?`: N  }
+Ƭ **FlavoredType**<Type, Name\>: Type & { `__tag__?`: Name  }
 
 #### Type parameters:
 
 Name |
 :------ |
-`T` |
-`N` |
+`Type` |
+`Name` |
 
-Defined in: [bee-js/src/types/index.ts:109](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L109)
+Defined in: [bee-js/src/types/index.ts:244](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L244)

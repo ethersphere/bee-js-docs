@@ -55,7 +55,7 @@ ___
 
 • `Readonly` **\_\_max\_\_**: Max
 
-Defined in: [bee-js/src/utils/bytes.ts:22](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/bytes.ts#L22)
+Defined in: [bee-js/src/utils/bytes.ts:25](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L25)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • `Readonly` **\_\_min\_\_**: Min
 
-Defined in: [bee-js/src/utils/bytes.ts:21](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/bytes.ts#L21)
+Defined in: [bee-js/src/utils/bytes.ts:24](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L24)
 
 ___
 

@@ -10,16 +10,23 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).hexToBytes
 
-▸ **hexToBytes**(`hex`: [*HexString*](../types/utils.hex.hexstring.md)): Uint8Array
+▸ **hexToBytes**<Length, LengthHex\>(`hex`: [*HexString*](../types/utils.hex.hexstring.md)<LengthHex\>): [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
 Converts a hex string to Uint8Array
+
+#### Type parameters:
+
+Name | Type | Default |
+:------ | :------ | :------ |
+`Length` | *number* | - |
+`LengthHex` | *number* | *number* |
 
 #### Parameters:
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`hex` | [*HexString*](../types/utils.hex.hexstring.md) | string input    |
+`hex` | [*HexString*](../types/utils.hex.hexstring.md)<LengthHex\> | string input without 0x prefix!    |
 
-**Returns:** Uint8Array
+**Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:22](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/hex.ts#L22)
+Defined in: [bee-js/src/utils/hex.ts:69](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L69)

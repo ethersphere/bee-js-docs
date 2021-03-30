@@ -10,14 +10,14 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Data](../modules/utils.data.md).prepareWebsocketData
 
-▸ **prepareWebsocketData**(`data`: Data): Uint8Array
+▸ **prepareWebsocketData**(`data`: Data \| Blob): *Promise*<Uint8Array\> \| *never*
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`data` | Data |
+`data` | Data \| Blob |
 
-**Returns:** Uint8Array
+**Returns:** *Promise*<Uint8Array\> \| *never*
 
-Defined in: [bee-js/src/utils/data.ts:14](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/data.ts#L14)
+Defined in: [bee-js/src/utils/data.ts:23](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/data.ts#L23)

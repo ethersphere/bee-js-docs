@@ -14,4 +14,4 @@ hide_title: true
 
 • **address**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:22](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/debug.ts#L22)
+Defined in: [bee-js/src/types/debug.ts:22](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/debug.ts#L22)

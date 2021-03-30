@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **Address**: *string*
 
-Defined in: [bee-js/src/types/index.ts:12](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/index.ts#L12)
+Defined in: [bee-js/src/types/index.ts:24](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L24)

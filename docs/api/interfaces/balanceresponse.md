@@ -14,4 +14,4 @@ hide_title: true
 
 • **balances**: [*PeerBalance*](peerbalance.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:83](https://github.com/ethersphere/bee-js/blob/7dfd556/src/types/debug.ts#L83)
+Defined in: [bee-js/src/types/debug.ts:83](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/debug.ts#L83)

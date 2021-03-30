@@ -28,4 +28,4 @@ Name | Type | Description |
 
 **Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
-Defined in: [bee-js/src/utils/bytes.ts:124](https://github.com/ethersphere/bee-js/blob/7dfd556/src/utils/bytes.ts#L124)
+Defined in: [bee-js/src/utils/bytes.ts:127](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L127)
