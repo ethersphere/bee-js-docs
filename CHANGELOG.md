@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.6.1...v0.7.0) (2021-03-30)
+
+
+### Features
+
+* data helpers usage ([#46](https://www.github.com/ethersphere/bee-js-docs/issues/46)) ([2e88ff3](https://www.github.com/ethersphere/bee-js-docs/commit/2e88ff3f8dda006d8831f8f4a3c310d5c2842262))
+* updated api docs to bee-js v0.7.0 ([#49](https://www.github.com/ethersphere/bee-js-docs/issues/49)) ([dc43c12](https://www.github.com/ethersphere/bee-js-docs/commit/dc43c12df4b7857f08f62631047259319d00973e))
+
 ### [0.6.1](https://www.github.com/ethersphere/bee-js-docs/compare/v0.6.0...v0.6.1) (2021-03-03)
 
 
