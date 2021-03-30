@@ -124,7 +124,7 @@ As a recipient, you have two ways how to receive the message. If you are expecti
 ```ts
 const message = await bee.pssReceive('topic')
 
-console.log(new TextDecoder("utf-8").decode(message)) // prints the received message
+console.log(message.text()) // prints the received message
 ```
 
   </TabItem>
@@ -133,7 +133,7 @@ console.log(new TextDecoder("utf-8").decode(message)) // prints the received mes
 ```js
 const message = await bee.pssReceive('topic')
 
-console.log(new TextDecoder("utf-8").decode(message)) // prints the received message
+console.log(message.text()) // prints the received message
 ```
 
   </TabItem>
@@ -153,7 +153,7 @@ If you want to subscribe to multiple messagees, use the `pssSubscribe` method.
 
 ```ts
 const handler = {
-  onMessage: (message: Uint8Array) => {console.log(new TextDecoder("utf-8").decode(message))},
+  onMessage: (message: Data) => {console.log(message.text())},
   onError: (error: BeeError) => {console.log(error)}
 }
 
@@ -169,7 +169,7 @@ subscription.cancel()
 
 ```js
 const handler = {
-  onMessage: (message: Uint8Array) => {console.log(new TextDecoder("utf-8").decode(message))},
+  onMessage: (message: Data) => {console.log(message.text())},
   onError: (error: BeeError) => {console.log(error)}
 }
 
