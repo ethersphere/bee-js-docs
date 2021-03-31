@@ -34,7 +34,7 @@ yarn add @ethersphere/bee-js --save
   <TabItem value="script">
 
 ```html
-<script src="https://unpkg.com/@ethersphere/bee-js/dist/index.js"></script>
+<script src="https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js"></script>
 ```
 
   </TabItem>
@@ -75,4 +75,17 @@ That’s it! now you can use the `bee` object.
 
 :::info Run your own Bee node
 You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
+:::
+
+:::tip Using `<script>` import
+
+If you include `bee-js` using the `unpkg.com` script link then all the exported components will be available to you
+under global namespace `BeeJs`:
+
+```html
+<script src="https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js"></script>
+<script>
+  const bee = new BeeJs.Bee('...')
+</script>
+```
 :::

@@ -36,11 +36,32 @@ const data = soc.payload()
 
 ### Writing SOCs
 
-When writing a SOC, first, we need to make a writer object. Because we need to sign the chunk, we need to pass in a `signer` object. The `signer` object can be either an Ethereum private key (as a hex string or `Uint8Array`) or an instance of the `Signer` interface. The `Signer` interface can be used for integration with 3rd party Ethereum wallet applications because Swarm uses the same format for signing chunks that Ethereum uses for signing transactions.
+When writing a SOC, first, we need to make a writer object. Because we need to sign the chunk, we need to pass in a `signer` object. The `signer` object can be either an Ethereum private key (as a hex string or `Uint8Array`) or an instance of the [`Signer`](../api/types/signer.md) interface. The `Signer` interface can be used for integration with 3rd party Ethereum wallet applications because Swarm uses the same format for signing chunks that Ethereum uses for signing transactions.
+
+:::info Default `signer`
+
+When you are instantiating `Bee` class you can pass it a default signer that will be used if you won't specify it 
+directly for the `makeSOCWriter`. See [`Bee` constructor](../api/classes/bee.md#constructor) for more info.
+
+:::
+
+:::tip Ethereum Wallet signers
+
+If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/utils.eth.makeethereumwalletsigner.md)  that we ship with bee-js
+which creates a [`Signer`](../api/types/signer.md) object out of given EIP-1193 compatible provider.
+
+```js
+import { utils } from '@ethersphere/bee-js'
+
+const signer = utils.Eth.makeEthereumWalletSigner(window.ethereum)
+...
+```
+:::
+
 
 ```ts
-type SyncSigner = (digest: Uint8Array) => Signature
-type AsyncSigner = (digest: Uint8Array) => Promise<Signature>
+type SyncSigner = (digest: Data) => Signature | string
+type AsyncSigner = (digest: Data) => Promise<Signature | string>
 
 /**
  * Interface for implementing Ethereum compatible signing.
