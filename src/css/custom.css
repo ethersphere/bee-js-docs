@@ -118,7 +118,8 @@ h1{
   background: #2CAA5F;
 }
 
-.alert--tip{
+/* a.k.a as Tip admonition*/
+.alert--success{
   background: #4AA8DF;
 }
 
