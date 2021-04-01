@@ -50,6 +50,8 @@ directly for the `makeSOCWriter`. See [`Bee` constructor](../api/classes/bee.md#
 If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/utils.eth.makeethereumwalletsigner.md)  that we ship with bee-js
 which creates a [`Signer`](../api/types/signer.md) object out of given EIP-1193 compatible provider.
 
+See it used in our example [here](https://github.com/ethersphere/examples-js/tree/master/eth-wallet-signing).
+
 ```js
 import { utils } from '@ethersphere/bee-js'
 
