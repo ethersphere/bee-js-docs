@@ -103,7 +103,7 @@ console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
   </TabItem>
 </Tabs>
 
-In browsers, you can upload directly `File` type. The filename is taken from the file object itself, but can be overwritten through the second argument of the `uploadFile` function (see the [API docs](../api/classes/bee#uploadfile))
+In browsers, you can upload directly `File` type. The filename is taken from the file object itself, but can be overwritten through the second argument of the `uploadFile` function (see the [API docs](../api/classes/bee.md#uploadfile))
 
 <Tabs
   groupId="lang_preferrence"
