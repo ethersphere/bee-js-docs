@@ -71,24 +71,8 @@ SyntaxError: ./bee-js-docs/docs/api/functions/utils.bytes.isbytes.md: Expected c
 Client bundle compiled with errors therefore further build is impossible.
 ```
 
-3. Fix the issues - use the following bash script
-```sh
-# Escape all unescaped '>' characters except for the lines starting with "title:"
-for file in `find ./docs/api`; do 
-    if [ -f "$file" ]; then 
-        mv "$file" "$file.back"
-        sed -e '/^title:/n;s/\([^\\]\)\>/\1\\\>/g' "$file.back" &> "$file"
-        if [ $? -eq 0 ]; then
-            rm "$file.back"
-            echo "fixed: $file"
-        else
-            mv "$file.back" "$file"
-            echo "error: $file"
-        fi
-    fi 
-done
-```
-
+3. Fix the issues - run the `escape-chars.bash` script
+   
 4. In the `docusaurus.config.js` and comment the line 9 with `'docusaurus-plugin-typedoc'` in the plugins array so that the building no longer runs typedoc on `bee-js`. Test the page with `npm run start` or `npm run build` and create PR with this updated API reference.
 
 ## Maintainers
