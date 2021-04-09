@@ -22,4 +22,4 @@ Name | Type | Default |
 :------ | :------ | :------ |
 `Length` | *number* | *number* |
 
-Defined in: [bee-js/src/utils/hex.ts:9](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L9)
+Defined in: [bee-js/src/utils/hex.ts:9](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/hex.ts#L9)

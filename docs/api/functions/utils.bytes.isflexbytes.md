@@ -31,4 +31,4 @@ Name | Type | Description |
 
 **Returns:** b is FlexBytes<Min, Max\>
 
-Defined in: [bee-js/src/utils/bytes.ts:58](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L58)
+Defined in: [bee-js/src/utils/bytes.ts:58](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L58)

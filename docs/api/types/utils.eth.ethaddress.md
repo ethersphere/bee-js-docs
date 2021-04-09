@@ -12,4 +12,4 @@ hide_title: true
 
 Ƭ **EthAddress**: [*Bytes*](../interfaces/utils.bytes.bytes.md)<*20*\>
 
-Defined in: [bee-js/src/utils/eth.ts:7](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L7)
+Defined in: [bee-js/src/utils/eth.ts:7](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/eth.ts#L7)

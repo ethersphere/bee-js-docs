@@ -22,7 +22,7 @@ Name |
 
 • **data**: T
 
-Defined in: [bee-js/src/types/index.ts:94](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L94)
+Defined in: [bee-js/src/types/index.ts:94](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L94)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **path**: *string*
 
-Defined in: [bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L99)
+Defined in: [bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L99)

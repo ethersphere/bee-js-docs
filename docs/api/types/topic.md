@@ -12,4 +12,4 @@ hide_title: true
 
 Hex string of length 64 chars without prefix that specifies topics for feed.
 
-Defined in: [bee-js/src/types/index.ts:136](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L136)
+Defined in: [bee-js/src/types/index.ts:136](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L136)

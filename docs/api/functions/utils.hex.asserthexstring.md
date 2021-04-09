@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).assertHexString
 
-▸ **assertHexString**<Length\>(`s`: *unknown*, `len?`: *number*): asserts s is FlavoredType<string & object, "HexString"\>
+▸ **assertHexString**<Length\>(`s`: *unknown*, `len?`: *number*): asserts s is HexString<Length\>
 
 Verifies if the provided input is a HexString.
 
@@ -29,8 +29,8 @@ Name | Type | Description |
 `s` | *unknown* | string input   |
 `len?` | *number* | expected length of the HexString   |
 
-**Returns:** asserts s is FlavoredType<string & object, "HexString"\>
+**Returns:** asserts s is HexString<Length\>
 
 HexString or throws error
 
-Defined in: [bee-js/src/utils/hex.ts:157](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L157)
+Defined in: [bee-js/src/utils/hex.ts:157](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/hex.ts#L157)

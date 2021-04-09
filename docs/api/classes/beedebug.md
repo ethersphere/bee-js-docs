@@ -26,7 +26,7 @@ Name | Type |
 
 **Returns:** [*BeeDebug*](beedebug.md)
 
-Defined in: [bee-js/src/bee-debug.ts:36](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L36)
+Defined in: [bee-js/src/bee-debug.ts:36](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L36)
 
 ## Properties
 
@@ -34,7 +34,7 @@ Defined in: [bee-js/src/bee-debug.ts:36](https://github.com/ethersphere/bee-js/b
 
 • `Readonly` **url**: *string*
 
-Defined in: [bee-js/src/bee-debug.ts:36](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L36)
+Defined in: [bee-js/src/bee-debug.ts:36](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L36)
 
 ## Methods
 
@@ -52,7 +52,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*CashoutResponse*](../interfaces/cashoutresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:161](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L161)
+Defined in: [bee-js/src/bee-debug.ts:161](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L161)
 
 ___
 
@@ -70,7 +70,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*DepositTokensResponse*](../interfaces/deposittokensresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:170](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L170)
+Defined in: [bee-js/src/bee-debug.ts:170](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L170)
 
 ___
 
@@ -82,7 +82,7 @@ Get the balances with all known peers including prepaid services
 
 **Returns:** *Promise*<[*BalanceResponse*](../interfaces/balanceresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:81](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L81)
+Defined in: [bee-js/src/bee-debug.ts:81](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L81)
 
 ___
 
@@ -94,7 +94,7 @@ Get settlements with all known peers and total amount sent or received
 
 **Returns:** *Promise*<[*AllSettlements*](../interfaces/allsettlements.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:207](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L207)
+Defined in: [bee-js/src/bee-debug.ts:207](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L207)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 **Returns:** *Promise*<[*Peer*](../interfaces/peer.md)[]\>
 
-Defined in: [bee-js/src/bee-debug.ts:51](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L51)
+Defined in: [bee-js/src/bee-debug.ts:51](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L51)
 
 ___
 
@@ -119,7 +119,7 @@ https://github.com/ethersphere/bee/issues/1443
 
 **Returns:** *Promise*<[*ChequebookAddressResponse*](../interfaces/chequebookaddressresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:120](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L120)
+Defined in: [bee-js/src/bee-debug.ts:120](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L120)
 
 ___
 
@@ -131,7 +131,7 @@ Get the balance of the chequebook
 
 **Returns:** *Promise*<[*ChequebookBalanceResponse*](../interfaces/chequebookbalanceresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:127](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L127)
+Defined in: [bee-js/src/bee-debug.ts:127](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L127)
 
 ___
 
@@ -143,7 +143,7 @@ Get health of node
 
 **Returns:** *Promise*<[*Health*](../interfaces/health.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:214](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L214)
+Defined in: [bee-js/src/bee-debug.ts:214](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L214)
 
 ___
 
@@ -161,7 +161,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*LastCashoutActionResponse*](../interfaces/lastcashoutactionresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:152](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L152)
+Defined in: [bee-js/src/bee-debug.ts:152](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L152)
 
 ___
 
@@ -173,7 +173,7 @@ Get last cheques for all peers
 
 **Returns:** *Promise*<[*LastChequesResponse*](../interfaces/lastchequesresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:134](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L134)
+Defined in: [bee-js/src/bee-debug.ts:134](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L134)
 
 ___
 
@@ -191,7 +191,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*LastChequesForPeerResponse*](../interfaces/lastchequesforpeerresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:143](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L143)
+Defined in: [bee-js/src/bee-debug.ts:143](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L143)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 **Returns:** *Promise*<[*NodeAddresses*](../interfaces/nodeaddresses.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:47](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L47)
+Defined in: [bee-js/src/bee-debug.ts:47](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L47)
 
 ___
 
@@ -213,7 +213,7 @@ Get the past due consumption balances with all known peers
 
 **Returns:** *Promise*<[*BalanceResponse*](../interfaces/balanceresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:97](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L97)
+Defined in: [bee-js/src/bee-debug.ts:97](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L97)
 
 ___
 
@@ -231,7 +231,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*PeerBalance*](../interfaces/peerbalance.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:106](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L106)
+Defined in: [bee-js/src/bee-debug.ts:106](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L106)
 
 ___
 
@@ -249,7 +249,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*PeerBalance*](../interfaces/peerbalance.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:90](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L90)
+Defined in: [bee-js/src/bee-debug.ts:90](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L90)
 
 ___
 
@@ -261,7 +261,7 @@ Get list of peers for this node
 
 **Returns:** *Promise*<[*Peer*](../interfaces/peer.md)[]\>
 
-Defined in: [bee-js/src/bee-debug.ts:58](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L58)
+Defined in: [bee-js/src/bee-debug.ts:58](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L58)
 
 ___
 
@@ -279,7 +279,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Settlements*](../interfaces/settlements.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:200](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L200)
+Defined in: [bee-js/src/bee-debug.ts:200](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L200)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 **Returns:** *Promise*<[*Topology*](../interfaces/topology.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:66](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L66)
+Defined in: [bee-js/src/bee-debug.ts:66](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L66)
 
 ___
 
@@ -303,7 +303,7 @@ Connnects to a node and checks if it is a supported Bee version by the bee-js
 
 true if the Bee node version is supported
 
-Defined in: [bee-js/src/bee-debug.ts:223](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L223)
+Defined in: [bee-js/src/bee-debug.ts:223](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L223)
 
 ___
 
@@ -319,7 +319,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*PingResponse*](../interfaces/pingresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:70](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L70)
+Defined in: [bee-js/src/bee-debug.ts:70](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L70)
 
 ___
 
@@ -335,7 +335,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*RemovePeerResponse*](../interfaces/removepeerresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:62](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L62)
+Defined in: [bee-js/src/bee-debug.ts:62](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L62)
 
 ___
 
@@ -353,4 +353,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*WithdrawTokensResponse*](../interfaces/withdrawtokensresponse.md)\>
 
-Defined in: [bee-js/src/bee-debug.ts:183](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/bee-debug.ts#L183)
+Defined in: [bee-js/src/bee-debug.ts:183](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee-debug.ts#L183)

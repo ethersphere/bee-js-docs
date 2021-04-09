@@ -24,7 +24,7 @@ Name | Type |
 
 **Returns:** *Promise*<unknown\>
 
-Defined in: [bee-js/src/utils/eth.ts:178](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L178)
+Defined in: [bee-js/src/utils/eth.ts:178](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/eth.ts#L178)
 
 ___
 
@@ -40,4 +40,4 @@ Name | Type |
 
 **Returns:** *Promise*<unknown\>
 
-Defined in: [bee-js/src/utils/eth.ts:179](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L179)
+Defined in: [bee-js/src/utils/eth.ts:179](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/eth.ts#L179)

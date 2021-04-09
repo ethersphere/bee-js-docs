@@ -12,4 +12,4 @@ hide_title: true
 
 Writers and Readers interfaces
 
-Defined in: [bee-js/src/types/index.ts:130](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L130)
+Defined in: [bee-js/src/types/index.ts:130](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L130)

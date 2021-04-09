@@ -26,4 +26,4 @@ Name | Type | Default value | Description |
 
 big-endian encoded hexstring
 
-Defined in: [bee-js/src/utils/eth.ts:136](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L136)
+Defined in: [bee-js/src/utils/eth.ts:136](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/eth.ts#L136)
