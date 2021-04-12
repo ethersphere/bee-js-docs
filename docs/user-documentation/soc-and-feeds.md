@@ -115,7 +115,11 @@ const topic = bee.makeFeedTopic('my-dapp.eth/outbox')
 
 ### High level JSON API
 
-High level JSON API is a convenience API that is bound to JSON data types. It allows easily setting and getting of a value to/from feed.
+Many applications are storing or manipulating data in JSON. bee-js has convenience high level API to use feeds with JSON objects.
+It consists of two methods:
+
+ - [`setJsonFeed`](../api/classes/bee.md#setjsonfeed) method to set JSON compatible data to feed
+ - [`getJsonFeed`](../api/classes/bee.md#getjsonfeed) method to get JSON compatible data (and parse them) from feed
 
 :::info Bee's instance signer
 You can pass a [`Signer`](../api/types/signer.md) (or compatible data) into [`Bee` class constructor](../api/classes/bee.md#constructor), which then
@@ -126,12 +130,12 @@ will be used as default `Signer`.
 await bee.setJsonFeed(
   'some cool arbitraty topic', 
   { some: ['cool', { json: 'compatible' }, 'object']}, 
-  { signer: 'some private key or Signer object' }
+  { signer: '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' }
 )
 
 const data = await bee.getJsonFeed(
   'some cool arbitraty topic', 
-  { signer: 'some private key or Signer object' }
+  { signer: '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' }
 )
 
 console.log(data)
