@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **Signature**: [*Bytes*](../interfaces/utils.bytes.bytes.md)<*typeof* [*SIGNATURE\_BYTES\_LENGTH*](../variables/signature_bytes_length.md)\>
 
-Defined in: [bee-js/src/types/index.ts:199](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L199)
+Defined in: [bee-js/src/types/index.ts:199](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L199)

@@ -20,4 +20,4 @@ Name | Type |
 
 **Returns:** *Promise*<Uint8Array\> \| *never*
 
-Defined in: [bee-js/src/utils/data.ts:23](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/data.ts#L23)
+Defined in: [bee-js/src/utils/data.ts:23](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/data.ts#L23)

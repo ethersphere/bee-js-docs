@@ -39,7 +39,7 @@ Name | Type |
 
 The size in bytes of each element in the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2030
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2042
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • `Readonly` **\_\_max\_\_**: Max
 
-Defined in: [bee-js/src/utils/bytes.ts:25](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L25)
+Defined in: [bee-js/src/utils/bytes.ts:25](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L25)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • `Readonly` **\_\_min\_\_**: Min
 
-Defined in: [bee-js/src/utils/bytes.ts:24](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L24)
+Defined in: [bee-js/src/utils/bytes.ts:24](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L24)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 The ArrayBuffer instance referenced by the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2035
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2047
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 The length in bytes of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2040
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2052
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 The offset in bytes of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2045
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2057
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 The length of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2144
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2156
 
 ## Methods
 
@@ -134,7 +134,7 @@ Name | Type | Description |
 
 **Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2056
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2068
 
 ___
 
@@ -165,7 +165,7 @@ Name | Type | Description |
 
 **Returns:** *boolean*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2066
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2078
 
 ___
 
@@ -185,7 +185,7 @@ Name | Type | Description |
 
 **Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2076
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2088
 
 ___
 
@@ -204,7 +204,7 @@ Name | Type | Description |
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2085
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2097
 
 ___
 
@@ -224,7 +224,7 @@ Name | Type | Description |
 
 **Returns:** *undefined* \| *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2096
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2108
 
 ___
 
@@ -244,7 +244,7 @@ Name | Type | Description |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2107
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2119
 
 ___
 
@@ -263,7 +263,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2116
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2128
 
 ___
 
@@ -301,7 +301,7 @@ Name | Type | Description |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2124
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2136
 
 ___
 
@@ -319,7 +319,7 @@ Name | Type | Description |
 
 **Returns:** *string*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2131
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2143
 
 ___
 
@@ -350,7 +350,7 @@ Name | Type | Description |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2139
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2151
 
 ___
 
@@ -370,7 +370,7 @@ Name | Type | Description |
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2154
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2166
 
 ___
 
@@ -390,7 +390,7 @@ Name | Type | Description |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2166
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2178
 
 ▸ **reduce**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*, `initialValue`: *number*): *number*
 
@@ -403,7 +403,7 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2167
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2179
 
 ▸ **reduce**<U\>(`callbackfn`: (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U, `initialValue`: U): U
 
@@ -426,7 +426,7 @@ Name | Type | Description |
 
 **Returns:** U
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2179
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2191
 
 ___
 
@@ -446,7 +446,7 @@ Name | Type | Description |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2191
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2203
 
 ▸ **reduceRight**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*, `initialValue`: *number*): *number*
 
@@ -459,7 +459,7 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2192
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2204
 
 ▸ **reduceRight**<U\>(`callbackfn`: (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U, `initialValue`: U): U
 
@@ -482,7 +482,7 @@ Name | Type | Description |
 
 **Returns:** U
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2204
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2216
 
 ___
 
@@ -494,7 +494,7 @@ Reverses the elements in an Array.
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2209
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2221
 
 ___
 
@@ -513,7 +513,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2216
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2228
 
 ___
 
@@ -532,7 +532,7 @@ Name | Type | Description |
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2223
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2235
 
 ___
 
@@ -551,7 +551,7 @@ Name | Type | Description |
 
 **Returns:** *boolean*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2233
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2245
 
 ___
 
@@ -569,7 +569,7 @@ Name | Type | Description |
 
 **Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2244
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2256
 
 ___
 
@@ -589,7 +589,7 @@ Name | Type | Description |
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2252
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2264
 
 ___
 
@@ -601,7 +601,7 @@ Converts a number to a string by using the current locale.
 
 **Returns:** *string*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2257
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2269
 
 ___
 
@@ -613,7 +613,7 @@ Returns a string representation of an array.
 
 **Returns:** *string*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2262
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2274
 
 ___
 
@@ -625,7 +625,7 @@ Returns the primitive value of the specified object.
 
 **Returns:** *Uint8Array*
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2265
+Defined in: node_modules/typescript/lib/lib.es5.d.ts:2277
 
 ___
 

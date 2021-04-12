@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).isPrefixedHexString
 
-▸ **isPrefixedHexString**(`s`: *unknown*): s is BrandedType<string, "PrefixedHexString"\>
+▸ **isPrefixedHexString**(`s`: *unknown*): s is PrefixedHexString
 
 Type guard for PrefixedHexStrings.
 Does enforce presence of 0x prefix!
@@ -21,6 +21,6 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `s` | *unknown* | string input    |
 
-**Returns:** s is BrandedType<string, "PrefixedHexString"\>
+**Returns:** s is PrefixedHexString
 
-Defined in: [bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L144)
+Defined in: [bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/hex.ts#L144)

@@ -16,4 +16,4 @@ Name |
 :------ |
 `Name` |
 
-Defined in: [bee-js/src/types/index.ts:242](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L242)
+Defined in: [bee-js/src/types/index.ts:242](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L242)

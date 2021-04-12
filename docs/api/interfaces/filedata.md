@@ -28,7 +28,7 @@ Name |
 
 Inherited from: [FileHeaders](fileheaders.md).[contentType](fileheaders.md#contenttype)
 
-Defined in: [bee-js/src/types/index.ts:70](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L70)
+Defined in: [bee-js/src/types/index.ts:70](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L70)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **data**: T
 
-Defined in: [bee-js/src/types/index.ts:74](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L74)
+Defined in: [bee-js/src/types/index.ts:74](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L74)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 Inherited from: [FileHeaders](fileheaders.md).[name](fileheaders.md#name)
 
-Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L68)
+Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L68)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 Inherited from: [FileHeaders](fileheaders.md).[tagUid](fileheaders.md#taguid)
 
-Defined in: [bee-js/src/types/index.ts:69](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L69)
+Defined in: [bee-js/src/types/index.ts:69](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L69)

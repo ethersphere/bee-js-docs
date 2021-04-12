@@ -32,4 +32,4 @@ Name | Type | Description |
 
 **Returns:** [*FlexBytes*](../interfaces/utils.bytes.flexbytes.md)<Min, Max\>
 
-Defined in: [bee-js/src/utils/bytes.ts:103](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L103)
+Defined in: [bee-js/src/utils/bytes.ts:103](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L103)

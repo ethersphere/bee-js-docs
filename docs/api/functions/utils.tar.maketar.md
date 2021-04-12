@@ -20,4 +20,4 @@ Name | Type |
 
 **Returns:** Uint8Array
 
-Defined in: [bee-js/src/utils/tar.ts:22](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/tar.ts#L22)
+Defined in: [bee-js/src/utils/tar.ts:22](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/tar.ts#L22)

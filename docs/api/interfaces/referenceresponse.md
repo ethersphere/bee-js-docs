@@ -14,4 +14,4 @@ hide_title: true
 
 • **reference**: [*Reference*](../types/reference.md)
 
-Defined in: [bee-js/src/types/index.ts:123](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/types/index.ts#L123)
+Defined in: [bee-js/src/types/index.ts:123](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L123)

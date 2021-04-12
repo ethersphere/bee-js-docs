@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Eth](../modules/utils.eth.md).isHexEthAddress
 
-▸ **isHexEthAddress**(`address`: *string* \| [*HexString*](../types/utils.hex.hexstring.md) \| [*HexEthAddress*](../types/utils.eth.hexethaddress.md)): address is FlavoredType<string & object, "HexString"\>
+▸ **isHexEthAddress**(`address`: *string* \| [*HexString*](../types/utils.hex.hexstring.md) \| [*HexEthAddress*](../types/utils.eth.hexethaddress.md)): address is HexEthAddress
 
 Check if is valid ethereum address
 
@@ -23,8 +23,8 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `address` | *string* \| [*HexString*](../types/utils.hex.hexstring.md) \| [*HexEthAddress*](../types/utils.eth.hexethaddress.md) | Ethereum address as hex string    |
 
-**Returns:** address is FlavoredType<string & object, "HexString"\>
+**Returns:** address is HexEthAddress
 
 True if is valid eth address
 
-Defined in: [bee-js/src/utils/eth.ts:90](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/eth.ts#L90)
+Defined in: [bee-js/src/utils/eth.ts:90](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/eth.ts#L90)

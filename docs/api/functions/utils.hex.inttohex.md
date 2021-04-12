@@ -31,4 +31,4 @@ Name | Type | Description |
 
 **Returns:** [*HexString*](../types/utils.hex.hexstring.md)<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:109](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/hex.ts#L109)
+Defined in: [bee-js/src/utils/hex.ts:109](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/hex.ts#L109)

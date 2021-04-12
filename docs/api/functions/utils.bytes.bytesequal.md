@@ -23,4 +23,4 @@ Name | Type | Description |
 
 **Returns:** *boolean*
 
-Defined in: [bee-js/src/utils/bytes.ts:118](https://github.com/ethersphere/bee-js/blob/0ac3a7d/src/utils/bytes.ts#L118)
+Defined in: [bee-js/src/utils/bytes.ts:118](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L118)
