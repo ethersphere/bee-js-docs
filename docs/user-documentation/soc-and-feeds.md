@@ -113,7 +113,36 @@ In Swarm, `topic` is a 32-byte long arbitrary byte array. It's possible to choos
 const topic = bee.makeFeedTopic('my-dapp.eth/outbox')
 ```
 
-### Reading feeds
+### High level JSON API
+
+High level JSON API is a convenience API that is bound to JSON data types. It allows easily setting and getting of a value to/from feed.
+
+:::info Bee's instance signer
+You can pass a [`Signer`](../api/types/signer.md) (or compatible data) into [`Bee` class constructor](../api/classes/bee.md#constructor), which then
+will be used as default `Signer`.
+:::
+
+```js
+await bee.setJsonFeed(
+  'some cool arbitraty topic', 
+  { some: ['cool', { json: 'compatible' }, 'object']}, 
+  { signer: 'some private key or Signer object' }
+)
+
+const data = await bee.getJsonFeed(
+  'some cool arbitraty topic', 
+  { signer: 'some private key or Signer object' }
+)
+
+console.log(data)
+// Prints: { some: ['cool', { json: 'compatible' }, 'object']}
+```
+
+### Low level API
+
+Low level API is an API that is more flexible in its usage, but requires better understanding and mainly more API calls.
+
+#### Reading feeds
 
 To read data from a feed, we need to make a reader object for a specific `type`, `topic` and `owner`, then we can download the latest update containing a reference.
 
@@ -125,7 +154,7 @@ const feedUpdate = await feedReader.download()
 console.log(feedUpdate.reference) // prints the latest reference stored in the feed
 ```
 
-### Writing feeds
+#### Writing feeds
 
 When writing a feed, typically an immutable content is uploaded first, and then its reference is updated in the feed. The `signer` here is the same as with [writing the SOCs](#writing-socs) (with the same caveats!).
 
@@ -142,7 +171,7 @@ const response = await feedWriter.upload(reference)
 
 One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website on Swarm, we may want its address stored in ENS, but we don't want to pay for changing the reference every time the site is updated.
 
-Swarm provides a feature called `feed manifests` for this use case. It is a content-addressed chunk that stores a feed's definition (the `type`, the `topic`, and the `owner`). When it is looked up using the `bzz` endpoint, Swarm recognizes that it refers to a feed and continues the lookup according to the feed parameters.
+Swarm provides a feature called "feed manifests" for this use case. It is a content-addressed chunk that stores a feed's definition (the `type`, the `topic`, and the `owner`). When it is looked up using the `bzz` endpoint, Swarm recognizes that it refers to a feed and continues the lookup according to the feed parameters.
 
 ```js
 const topic = '0000000000000000000000000000000000000000000000000000000000000000'
