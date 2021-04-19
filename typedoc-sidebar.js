@@ -54,6 +54,8 @@ module.exports = [
       "api/interfaces/fileheaders",
       "api/interfaces/fileuploadoptions",
       "api/interfaces/health",
+      "api/interfaces/jsonfeed",
+      "api/interfaces/jsonfeedoptions",
       "api/interfaces/lastcashoutactionresponse",
       "api/interfaces/lastchequesforpeerresponse",
       "api/interfaces/lastchequesresponse",
@@ -86,6 +88,7 @@ module.exports = [
       "api/types/utils.hex.prefixedhexstring",
       "api/types/address",
       "api/types/addressprefix",
+      "api/types/anyjson",
       "api/types/brandedstring",
       "api/types/brandedtype",
       "api/types/collection",
@@ -119,15 +122,14 @@ module.exports = [
     "type": "category",
     "label": "Functions",
     "items": [
+      "api/functions/utils.bytes.assertbytes",
+      "api/functions/utils.bytes.assertflexbytes",
       "api/functions/utils.bytes.bytesatoffset",
       "api/functions/utils.bytes.bytesequal",
       "api/functions/utils.bytes.flexbytesatoffset",
       "api/functions/utils.bytes.isbytes",
       "api/functions/utils.bytes.isflexbytes",
       "api/functions/utils.bytes.makebytes",
-      "api/functions/utils.bytes.verifybytes",
-      "api/functions/utils.bytes.verifybytesatoffset",
-      "api/functions/utils.bytes.verifyflexbytes",
       "api/functions/utils.bytes.wrapbyteswithhelpers",
       "api/functions/utils.data.preparedata",
       "api/functions/utils.data.preparewebsocketdata",
@@ -148,7 +150,8 @@ module.exports = [
       "api/functions/utils.hex.ishexstring",
       "api/functions/utils.hex.isprefixedhexstring",
       "api/functions/utils.hex.makehexstring",
-      "api/functions/utils.tar.maketar"
+      "api/functions/utils.tar.maketar",
+      "api/functions/utils.setdefaultheaders"
     ]
   }
 ];

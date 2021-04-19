@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).isFlexBytes
 
-▸ **isFlexBytes**<Min, Max\>(`min`: Min, `max`: Max, `b`: Uint8Array): b is FlexBytes<Min, Max\>
+▸ **isFlexBytes**<Min, Max\>(`b`: *unknown*, `min`: Min, `max`: Max): b is FlexBytes<Min, Max\>
 
 Type guard for FlexBytes<Min,Max\> type
 
@@ -25,10 +25,10 @@ Name | Type | Default |
 
 Name | Type | Description |
 :------ | :------ | :------ |
+`b` | *unknown* | The byte array   |
 `min` | Min | Minimum size of the array   |
-`max` | Max | Maximum size of the array   |
-`b` | Uint8Array | The byte array    |
+`max` | Max | Maximum size of the array    |
 
 **Returns:** b is FlexBytes<Min, Max\>
 
-Defined in: [bee-js/src/utils/bytes.ts:58](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L58)
+Defined in: [bee-js/src/utils/bytes.ts:57](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/bytes.ts#L57)

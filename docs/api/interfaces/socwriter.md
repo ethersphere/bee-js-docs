@@ -38,11 +38,11 @@ Name | Type |
 
 **Returns:** *Promise*<SingleOwnerChunk\>
 
-Defined in: [bee-js/src/types/index.ts:175](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L175)
+Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L191)
 
 Inherited from: [SOCReader](socreader.md).[download](socreader.md#download)
 
-Defined in: [bee-js/src/types/index.ts:175](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L175)
+Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L191)
 
 ___
 
@@ -72,6 +72,6 @@ Name | Type |
 
 **Returns:** *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
 
-Defined in: [bee-js/src/types/index.ts:189](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L189)
+Defined in: [bee-js/src/types/index.ts:205](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L205)
 
-Defined in: [bee-js/src/types/index.ts:189](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L189)
+Defined in: [bee-js/src/types/index.ts:205](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L205)

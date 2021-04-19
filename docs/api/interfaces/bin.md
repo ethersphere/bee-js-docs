@@ -14,7 +14,7 @@ hide_title: true
 
 • **connected**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L98)
+Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L98)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **connectedPeers**: *null* \| [*Peer*](peer.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:100](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L100)
+Defined in: [bee-js/src/types/debug.ts:100](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L100)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **disconnectedPeers**: *null* \| [*Peer*](peer.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L99)
+Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L99)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **population**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:97](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L97)
+Defined in: [bee-js/src/types/debug.ts:97](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L97)

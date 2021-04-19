@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).isBytes
 
-▸ **isBytes**<Length\>(`length`: Length, `b`: Uint8Array): b is Bytes<Length\>
+▸ **isBytes**<Length\>(`b`: *unknown*, `length`: Length): b is Bytes<Length\>
 
 Type guard for Bytes<T\> type
 
@@ -24,9 +24,9 @@ Name | Type |
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`length` | Length | The length of the byte array   |
-`b` | Uint8Array | The byte array    |
+`b` | *unknown* | The byte array   |
+`length` | Length | The length of the byte array    |
 
 **Returns:** b is Bytes<Length\>
 
-Defined in: [bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L34)
+Defined in: [bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/bytes.ts#L34)

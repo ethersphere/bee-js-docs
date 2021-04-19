@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **ENCRYPTED\_REFERENCE\_HEX\_LENGTH**: *128*= 128
 
-Defined in: [bee-js/src/types/index.ts:17](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L17)
+Defined in: [bee-js/src/types/index.ts:17](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L17)
