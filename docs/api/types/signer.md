@@ -35,4 +35,4 @@ Name | Type |
 `address` | [*EthAddress*](utils.eth.ethaddress.md) |
 `sign` | SyncSigner \| AsyncSigner |
 
-Defined in: [bee-js/src/types/index.ts:230](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L230)
+Defined in: [bee-js/src/types/index.ts:246](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L246)

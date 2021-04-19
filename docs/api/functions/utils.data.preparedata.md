@@ -22,4 +22,4 @@ Name | Type | Description |
 
 **Returns:** Uint8Array \| Readable \| *never*
 
-Defined in: [bee-js/src/utils/data.ts:9](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/data.ts#L9)
+Defined in: [bee-js/src/utils/data.ts:9](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/data.ts#L9)

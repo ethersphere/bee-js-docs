@@ -30,7 +30,7 @@ Name | Type |
 
 Inherited from: [BeeError](beeerror.md)
 
-Defined in: [bee-js/src/utils/error.ts:13](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/error.ts#L13)
+Defined in: [bee-js/src/utils/error.ts:13](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/error.ts#L13)
 
 ## Properties
 
@@ -60,7 +60,7 @@ ___
 
 Optional override for formatting stack traces
 
-**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 Defined in: bee-js/node_modules/@types/node/globals.d.ts:11
 

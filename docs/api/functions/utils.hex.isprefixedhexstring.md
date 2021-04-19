@@ -23,4 +23,4 @@ Name | Type | Description |
 
 **Returns:** s is PrefixedHexString
 
-Defined in: [bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/hex.ts#L144)
+Defined in: [bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/hex.ts#L144)

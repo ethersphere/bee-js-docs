@@ -22,7 +22,7 @@ FeedReader is an interface for downloading feed updates
 
 • `Readonly` **owner**: [*HexEthAddress*](../types/utils.eth.hexethaddress.md)
 
-Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L143)
+Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L143)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • `Readonly` **topic**: [*Topic*](../types/topic.md)
 
-Defined in: [bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L144)
+Defined in: [bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L144)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • `Readonly` **type**: *sequence* \| *epoch*
 
-Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L142)
+Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L142)
 
 ## Methods
 
@@ -56,4 +56,4 @@ Name | Type |
 
 **Returns:** *Promise*<FetchFeedUpdateResponse\>
 
-Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L148)
+Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L148)

@@ -18,3 +18,7 @@ hide_title: true
 - [File](utils.file.md)
 - [Hex](utils.hex.md)
 - [Tar](utils.tar.md)
+
+### Functions
+
+- [setDefaultHeaders](../functions/utils.setdefaultheaders.md)

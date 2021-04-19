@@ -14,7 +14,7 @@ hide_title: true
 
 • **beneficiary**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:45](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L45)
+Defined in: [bee-js/src/types/debug.ts:45](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L45)
 
 ___
 
@@ -22,15 +22,15 @@ ___
 
 • **chequebook**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L43)
+Defined in: [bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L43)
 
 ___
 
 ### cumulativePayout
 
-• **cumulativePayout**: *number*
+• **cumulativePayout**: BigInt
 
-Defined in: [bee-js/src/types/debug.ts:44](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L44)
+Defined in: [bee-js/src/types/debug.ts:44](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L44)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:42](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L42)
+Defined in: [bee-js/src/types/debug.ts:42](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L42)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **result**: [*CashoutResult*](cashoutresult.md)
 
-Defined in: [bee-js/src/types/debug.ts:47](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L47)
+Defined in: [bee-js/src/types/debug.ts:47](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L47)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **transactionHash**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:46](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/debug.ts#L46)
+Defined in: [bee-js/src/types/debug.ts:46](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L46)

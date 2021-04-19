@@ -17,4 +17,4 @@ Name |
 `Type` |
 `Name` |
 
-Defined in: [bee-js/src/types/index.ts:244](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/types/index.ts#L244)
+Defined in: [bee-js/src/types/index.ts:260](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L260)

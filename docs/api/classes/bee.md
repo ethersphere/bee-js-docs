@@ -25,7 +25,7 @@ Name | Type | Description |
 
 **Returns:** [*Bee*](bee.md)
 
-Defined in: [bee-js/src/bee.ts:50](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L50)
+Defined in: [bee-js/src/bee.ts:54](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L54)
 
 ## Properties
 
@@ -33,7 +33,7 @@ Defined in: [bee-js/src/bee.ts:50](https://github.com/ethersphere/bee-js/blob/ce
 
 • `Optional` `Readonly` **signer**: *undefined* \| [*Signer*](../types/signer.md)
 
-Defined in: [bee-js/src/bee.ts:50](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L50)
+Defined in: [bee-js/src/bee.ts:54](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L54)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • `Readonly` **url**: *string*
 
-Defined in: [bee-js/src/bee.ts:49](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L49)
+Defined in: [bee-js/src/bee.ts:53](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L53)
 
 ## Methods
 
@@ -53,7 +53,7 @@ Ping the base bee URL. If connection was not successful throw error
 
 **Returns:** *Promise*<void\>
 
-Defined in: [bee-js/src/bee.ts:514](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L514)
+Defined in: [bee-js/src/bee.ts:609](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L609)
 
 ___
 
@@ -73,7 +73,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
-Defined in: [bee-js/src/bee.ts:418](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L418)
+Defined in: [bee-js/src/bee.ts:476](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L476)
 
 ___
 
@@ -85,7 +85,7 @@ Create new tag
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:222](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L222)
+Defined in: [bee-js/src/bee.ts:226](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L226)
 
 ___
 
@@ -103,7 +103,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Data*](../interfaces/data.md)\>
 
-Defined in: [bee-js/src/bee.ts:87](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L87)
+Defined in: [bee-js/src/bee.ts:91](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L91)
 
 ___
 
@@ -121,7 +121,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
-Defined in: [bee-js/src/bee.ts:136](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L136)
+Defined in: [bee-js/src/bee.ts:140](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L140)
 
 ___
 
@@ -142,7 +142,7 @@ Name | Type | Default value | Description |
 
 file in byte array with metadata
 
-Defined in: [bee-js/src/bee.ts:194](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L194)
+Defined in: [bee-js/src/bee.ts:198](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L198)
 
 ___
 
@@ -161,7 +161,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<Readable\>
 
-Defined in: [bee-js/src/bee.ts:99](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L99)
+Defined in: [bee-js/src/bee.ts:103](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L103)
 
 ___
 
@@ -179,7 +179,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
 
-Defined in: [bee-js/src/bee.ts:147](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L147)
+Defined in: [bee-js/src/bee.ts:151](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L151)
 
 ___
 
@@ -201,7 +201,69 @@ Name | Type | Default value | Description |
 
 file in readable stream with metadata
 
-Defined in: [bee-js/src/bee.ts:209](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L209)
+Defined in: [bee-js/src/bee.ts:213](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L213)
+
+___
+
+### getChunkPinningStatus
+
+▸ **getChunkPinningStatus**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<PinningStatus\>
+
+Get pinning status of chunk with given reference
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference    |
+
+**Returns:** *Promise*<PinningStatus\>
+
+Defined in: [bee-js/src/bee.ts:341](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L341)
+
+___
+
+### getJsonFeed
+
+▸ **getJsonFeed**<T\>(`topic`: *string*, `options?`: [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md)): *Promise*<T\>
+
+High-level function that allows you to easily get data from feed.
+Returned data are parsed using JSON.parse().
+
+#### Type parameters:
+
+Name | Type |
+:------ | :------ |
+`T` | [*AnyJson*](../types/anyjson.md) |
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`topic` | *string* | Human readable string, that is internally hashed so there are no constrains there.   |
+`options?` | [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md) |  |
+
+**Returns:** *Promise*<T\>
+
+Defined in: [bee-js/src/bee.ts:557](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L557)
+
+___
+
+### getPinnedChunks
+
+▸ **getPinnedChunks**(`options?`: PinnedChunksOptions): *Promise*<PinnedChunks\>
+
+Get list of pinned chunks
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`options?` | PinnedChunksOptions | Optional offset and limit of listing    |
+
+**Returns:** *Promise*<PinnedChunks\>
+
+Defined in: [bee-js/src/bee.ts:332](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L332)
 
 ___
 
@@ -215,7 +277,7 @@ Ping the base bee URL.
 
 true if succesfull, false on error
 
-Defined in: [bee-js/src/bee.ts:523](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L523)
+Defined in: [bee-js/src/bee.ts:618](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L618)
 
 ___
 
@@ -235,7 +297,7 @@ Name | Type | Description |
 
 **Returns:** [*FeedReader*](../interfaces/feedreader.md)
 
-Defined in: [bee-js/src/bee.ts:438](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L438)
+Defined in: [bee-js/src/bee.ts:496](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L496)
 
 ___
 
@@ -256,7 +318,7 @@ Name | Type | Description |
 
 **Returns:** [*Topic*](../types/topic.md)
 
-Defined in: [bee-js/src/bee.ts:479](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L479)
+Defined in: [bee-js/src/bee.ts:574](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L574)
 
 ___
 
@@ -276,7 +338,7 @@ Name | Type | Description |
 
 **Returns:** [*FeedWriter*](../interfaces/feedwriter.md)
 
-Defined in: [bee-js/src/bee.ts:458](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L458)
+Defined in: [bee-js/src/bee.ts:516](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L516)
 
 ___
 
@@ -294,7 +356,7 @@ Name | Type | Description |
 
 **Returns:** [*SOCReader*](../interfaces/socreader.md)
 
-Defined in: [bee-js/src/bee.ts:488](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L488)
+Defined in: [bee-js/src/bee.ts:583](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L583)
 
 ___
 
@@ -312,7 +374,25 @@ Name | Type | Description |
 
 **Returns:** [*SOCWriter*](../interfaces/socwriter.md)
 
-Defined in: [bee-js/src/bee.ts:501](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L501)
+Defined in: [bee-js/src/bee.ts:596](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L596)
+
+___
+
+### pinChunk
+
+▸ **pinChunk**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+
+Pin data with given reference
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference    |
+
+**Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+
+Defined in: [bee-js/src/bee.ts:310](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L310)
 
 ___
 
@@ -330,7 +410,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:262](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L262)
+Defined in: [bee-js/src/bee.ts:266](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L266)
 
 ___
 
@@ -348,7 +428,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:284](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L284)
+Defined in: [bee-js/src/bee.ts:288](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L288)
 
 ___
 
@@ -366,7 +446,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:240](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L240)
+Defined in: [bee-js/src/bee.ts:244](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L244)
 
 ___
 
@@ -397,7 +477,7 @@ Name | Type | Default value | Description |
 
 Message in byte array
 
-Defined in: [bee-js/src/bee.ts:384](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L384)
+Defined in: [bee-js/src/bee.ts:442](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L442)
 
 ___
 
@@ -418,7 +498,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:310](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L310)
+Defined in: [bee-js/src/bee.ts:368](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L368)
 
 ___
 
@@ -439,7 +519,7 @@ Name | Type | Description |
 
 Subscription to a given topic
 
-Defined in: [bee-js/src/bee.ts:327](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L327)
+Defined in: [bee-js/src/bee.ts:385](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L385)
 
 ___
 
@@ -457,7 +537,52 @@ Name | Type |
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:231](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L231)
+Defined in: [bee-js/src/bee.ts:235](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L235)
+
+___
+
+### setJsonFeed
+
+▸ **setJsonFeed**<T\>(`topic`: *string*, `data`: T, `options?`: [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md)): *Promise*<[*ReferenceResponse*](../interfaces/referenceresponse.md)\>
+
+High-level function that allows you to easily set JSON data to feed.
+JSON-like data types are supported.
+
+#### Type parameters:
+
+Name | Type |
+:------ | :------ |
+`T` | [*AnyJson*](../types/anyjson.md) |
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`topic` | *string* | Human readable string, that is internally hashed so there are no constrains there.   |
+`data` | T | JSON compatible data   |
+`options?` | [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md) |  |
+
+**Returns:** *Promise*<[*ReferenceResponse*](../interfaces/referenceresponse.md)\>
+
+Defined in: [bee-js/src/bee.ts:539](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L539)
+
+___
+
+### unpinChunk
+
+▸ **unpinChunk**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+
+Unpin data with given reference
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference    |
+
+**Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+
+Defined in: [bee-js/src/bee.ts:321](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L321)
 
 ___
 
@@ -475,7 +600,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:273](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L273)
+Defined in: [bee-js/src/bee.ts:277](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L277)
 
 ___
 
@@ -493,7 +618,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:295](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L295)
+Defined in: [bee-js/src/bee.ts:299](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L299)
 
 ___
 
@@ -511,7 +636,26 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
 
-Defined in: [bee-js/src/bee.ts:251](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L251)
+Defined in: [bee-js/src/bee.ts:255](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L255)
+
+___
+
+### updateChunkPinCounter
+
+▸ **updateChunkPinCounter**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>, `pinCounter`: *number*): *Promise*<PinningStatus\>
+
+Update pin counter of chunk with given reference
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference   |
+`pinCounter` | *number* | New value of the pin counter    |
+
+**Returns:** *Promise*<PinningStatus\>
+
+Defined in: [bee-js/src/bee.ts:353](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L353)
 
 ___
 
@@ -532,7 +676,7 @@ Name | Type | Description |
 
 reference is a content hash of the data
 
-Defined in: [bee-js/src/bee.ts:78](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L78)
+Defined in: [bee-js/src/bee.ts:82](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L82)
 
 ___
 
@@ -554,7 +698,7 @@ Name | Type | Description |
 
 reference is a content hash of the file
 
-Defined in: [bee-js/src/bee.ts:114](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L114)
+Defined in: [bee-js/src/bee.ts:118](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L118)
 
 ___
 
@@ -577,7 +721,7 @@ Name | Type | Description |
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:163](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L163)
+Defined in: [bee-js/src/bee.ts:167](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L167)
 
 ___
 
@@ -601,4 +745,4 @@ Name | Type | Default value | Description |
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:180](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/bee.ts#L180)
+Defined in: [bee-js/src/bee.ts:184](https://github.com/ethersphere/bee-js/blob/8087a81/src/bee.ts#L184)

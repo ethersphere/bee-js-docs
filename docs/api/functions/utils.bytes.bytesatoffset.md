@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).bytesAtOffset
 
-▸ **bytesAtOffset**<Length\>(`offset`: *number*, `length`: Length, `data`: Uint8Array): [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
+▸ **bytesAtOffset**<Length\>(`data`: Uint8Array, `offset`: *number*, `length`: Length): [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
 Return `length` bytes starting from `offset`
 
@@ -24,10 +24,10 @@ Name | Type |
 
 Name | Type | Description |
 :------ | :------ | :------ |
+`data` | Uint8Array | The original data   |
 `offset` | *number* | The offset to start from   |
-`length` | Length | The length of data to be returned   |
-`data` | Uint8Array | The original data    |
+`length` | Length | The length of data to be returned    |
 
 **Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
-Defined in: [bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/ce4d3fa/src/utils/bytes.ts#L91)
+Defined in: [bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/bytes.ts#L91)
