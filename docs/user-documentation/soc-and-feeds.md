@@ -144,7 +144,7 @@ console.log(data)
 
 ### Low level API
 
-Low level API is an API that is more flexible in its usage, but requires better understanding and mainly more API calls.
+Low level API is an API that is more flexible in its usage, but requires better understanding and mainly more method calls.
 
 #### Reading feeds
 
