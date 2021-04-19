@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.8.0...v0.9.0) (2021-04-19)
+
+
+### Features
+
+* high level feeds api documentation ([#55](https://www.github.com/ethersphere/bee-js-docs/issues/55)) ([218ec04](https://www.github.com/ethersphere/bee-js-docs/commit/218ec0428fc5aa82970588f376691dd3b4868d3a))
+* v0.8.0 api reference ([#57](https://www.github.com/ethersphere/bee-js-docs/issues/57)) ([4980b71](https://www.github.com/ethersphere/bee-js-docs/commit/4980b716e062b9a5b3fb14b48d62974dadb2dcdf))
+
 ## [0.8.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.7.0...v0.8.0) (2021-04-12)
 
 
