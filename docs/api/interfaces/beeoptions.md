@@ -14,4 +14,4 @@ hide_title: true
 
 • `Optional` **signer**: *undefined* \| *string* \| *Uint8Array* \| [*Signer*](../types/signer.md)
 
-Defined in: [bee-js/src/types/index.ts:28](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L28)
+Defined in: [bee-js/src/types/index.ts:28](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L28)

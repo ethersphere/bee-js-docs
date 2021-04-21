@@ -14,4 +14,4 @@ hide_title: true
 
 • **transactionHash**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:51](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L51)
+Defined in: [bee-js/src/types/debug.ts:51](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L51)

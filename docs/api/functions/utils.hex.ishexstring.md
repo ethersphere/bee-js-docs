@@ -32,4 +32,4 @@ Name | Type | Description |
 
 **Returns:** s is HexString<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:134](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/hex.ts#L134)
+Defined in: [bee-js/src/utils/hex.ts:134](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hex.ts#L134)

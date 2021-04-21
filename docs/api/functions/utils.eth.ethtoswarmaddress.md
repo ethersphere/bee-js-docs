@@ -25,4 +25,4 @@ Name | Type | Default value | Description |
 
 Swarm overlay address
 
-Defined in: [bee-js/src/utils/eth.ts:162](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/eth.ts#L162)
+Defined in: [bee-js/src/utils/eth.ts:162](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/eth.ts#L162)

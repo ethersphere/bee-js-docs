@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **REFERENCE\_HEX\_LENGTH**: *64*= 64
 
-Defined in: [bee-js/src/types/index.ts:16](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L16)
+Defined in: [bee-js/src/types/index.ts:16](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L16)

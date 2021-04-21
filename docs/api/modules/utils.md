@@ -21,4 +21,5 @@ hide_title: true
 
 ### Functions
 
+- [keccak256Hash](../functions/utils.keccak256hash.md)
 - [setDefaultHeaders](../functions/utils.setdefaultheaders.md)
