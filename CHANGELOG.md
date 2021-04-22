@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.9.0...v0.10.0) (2021-04-22)
+
+
+### Features
+
+* bee-js 0.8.1 api reference ([#58](https://www.github.com/ethersphere/bee-js-docs/issues/58)) ([326d7f7](https://www.github.com/ethersphere/bee-js-docs/commit/326d7f77f39800d448b600ac272a97323ad0bddc))
+
 ## [0.9.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.8.0...v0.9.0) (2021-04-19)
 
 
