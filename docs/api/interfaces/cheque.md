@@ -14,7 +14,7 @@ hide_title: true
 
 • **beneficiary**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:55](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L55)
+Defined in: [bee-js/src/types/debug.ts:55](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L55)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **chequebook**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:56](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L56)
+Defined in: [bee-js/src/types/debug.ts:56](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L56)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **payout**: BigInt
 
-Defined in: [bee-js/src/types/debug.ts:57](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L57)
+Defined in: [bee-js/src/types/debug.ts:57](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L57)

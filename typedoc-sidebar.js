@@ -54,7 +54,6 @@ module.exports = [
       "api/interfaces/fileheaders",
       "api/interfaces/fileuploadoptions",
       "api/interfaces/health",
-      "api/interfaces/jsonfeed",
       "api/interfaces/jsonfeedoptions",
       "api/interfaces/lastcashoutactionresponse",
       "api/interfaces/lastchequesforpeerresponse",
@@ -151,6 +150,7 @@ module.exports = [
       "api/functions/utils.hex.isprefixedhexstring",
       "api/functions/utils.hex.makehexstring",
       "api/functions/utils.tar.maketar",
+      "api/functions/utils.keccak256hash",
       "api/functions/utils.setdefaultheaders"
     ]
   }

@@ -48,7 +48,6 @@ hide_title: true
 - [FileHeaders](interfaces/fileheaders.md)
 - [FileUploadOptions](interfaces/fileuploadoptions.md)
 - [Health](interfaces/health.md)
-- [JsonFeed](interfaces/jsonfeed.md)
 - [JsonFeedOptions](interfaces/jsonfeedoptions.md)
 - [LastCashoutActionResponse](interfaces/lastcashoutactionresponse.md)
 - [LastChequesForPeerResponse](interfaces/lastchequesforpeerresponse.md)

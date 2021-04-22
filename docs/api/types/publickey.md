@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **PublicKey**: *string*
 
-Defined in: [bee-js/src/types/index.ts:22](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L22)
+Defined in: [bee-js/src/types/index.ts:22](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L22)

@@ -33,4 +33,4 @@ Name | Type | Description |
 
 HexString or throws error
 
-Defined in: [bee-js/src/utils/hex.ts:157](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/hex.ts#L157)
+Defined in: [bee-js/src/utils/hex.ts:157](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hex.ts#L157)

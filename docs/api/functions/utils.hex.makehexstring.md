@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).makeHexString
 
-▸ **makeHexString**<L\>(`input`: *string* \| *number* \| Uint8Array, `len?`: L): [*HexString*](../types/utils.hex.hexstring.md)<L\>
+▸ **makeHexString**<L\>(`input`: *string* \| *number* \| Uint8Array \| *unknown*, `len?`: L): [*HexString*](../types/utils.hex.hexstring.md)<L\>
 
 Creates unprefixed hex string from wide range of data.
 
@@ -26,9 +26,9 @@ Name | Type |
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`input` | *string* \| *number* \| Uint8Array |  |
+`input` | *string* \| *number* \| Uint8Array \| *unknown* |  |
 `len?` | L | of the resulting HexString WITHOUT prefix!    |
 
 **Returns:** [*HexString*](../types/utils.hex.hexstring.md)<L\>
 
-Defined in: [bee-js/src/utils/hex.ts:33](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/hex.ts#L33)
+Defined in: [bee-js/src/utils/hex.ts:33](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hex.ts#L33)

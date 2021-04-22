@@ -14,7 +14,7 @@ hide_title: true
 
 • **bounced**: *boolean*
 
-Defined in: [bee-js/src/types/debug.ts:38](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L38)
+Defined in: [bee-js/src/types/debug.ts:38](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L38)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **lastPayout**: BigInt
 
-Defined in: [bee-js/src/types/debug.ts:37](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L37)
+Defined in: [bee-js/src/types/debug.ts:37](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L37)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **recipient**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:36](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/debug.ts#L36)
+Defined in: [bee-js/src/types/debug.ts:36](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L36)

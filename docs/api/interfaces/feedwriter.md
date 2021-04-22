@@ -24,7 +24,7 @@ FeedWriter is an interface for updating feeds
 
 Inherited from: [FeedReader](feedreader.md).[owner](feedreader.md#owner)
 
-Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L143)
+Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L143)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Inherited from: [FeedReader](feedreader.md).[topic](feedreader.md#topic)
 
-Defined in: [bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L144)
+Defined in: [bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L144)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 Inherited from: [FeedReader](feedreader.md).[type](feedreader.md#type)
 
-Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L142)
+Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L142)
 
 ## Methods
 
@@ -64,7 +64,7 @@ Name | Type |
 
 Inherited from: [FeedReader](feedreader.md)
 
-Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L148)
+Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L148)
 
 ___
 
@@ -85,4 +85,4 @@ Name | Type | Description |
 
 Reference that points at Single Owner Chunk that contains the new update and pointer to the updated chunk reference.
 
-Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L179)
+Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L179)

@@ -31,4 +31,4 @@ Name | Type | Description |
 
 **Returns:** asserts b is FlexBytes<Min, Max\>
 
-Defined in: [bee-js/src/utils/bytes.ts:72](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/bytes.ts#L72)
+Defined in: [bee-js/src/utils/bytes.ts:72](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/bytes.ts#L72)

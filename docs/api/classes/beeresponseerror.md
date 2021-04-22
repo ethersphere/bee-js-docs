@@ -31,7 +31,7 @@ Name | Type |
 
 Inherited from: [BeeError](beeerror.md)
 
-Defined in: [bee-js/src/utils/error.ts:19](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/error.ts#L19)
+Defined in: [bee-js/src/utils/error.ts:19](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/error.ts#L19)
 
 ## Properties
 

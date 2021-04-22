@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **AnyJson**: *boolean* \| *number* \| *string* \| *null* \| JsonArray \| JsonMap
 
-Defined in: [bee-js/src/types/index.ts:264](https://github.com/ethersphere/bee-js/blob/8087a81/src/types/index.ts#L264)
+Defined in: [bee-js/src/types/index.ts:264](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L264)

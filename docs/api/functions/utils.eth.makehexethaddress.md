@@ -10,14 +10,14 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Eth](../modules/utils.eth.md).makeHexEthAddress
 
-▸ **makeHexEthAddress**(`address`: [*EthAddress*](../types/utils.eth.ethaddress.md) \| Uint8Array \| *string*): [*HexEthAddress*](../types/utils.eth.hexethaddress.md)
+▸ **makeHexEthAddress**(`address`: [*EthAddress*](../types/utils.eth.ethaddress.md) \| Uint8Array \| *string* \| *unknown*): [*HexEthAddress*](../types/utils.eth.hexethaddress.md)
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`address` | [*EthAddress*](../types/utils.eth.ethaddress.md) \| Uint8Array \| *string* |
+`address` | [*EthAddress*](../types/utils.eth.ethaddress.md) \| Uint8Array \| *string* \| *unknown* |
 
 **Returns:** [*HexEthAddress*](../types/utils.eth.hexethaddress.md)
 
-Defined in: [bee-js/src/utils/eth.ts:27](https://github.com/ethersphere/bee-js/blob/8087a81/src/utils/eth.ts#L27)
+Defined in: [bee-js/src/utils/eth.ts:27](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/eth.ts#L27)
