@@ -10,27 +10,11 @@ hide_title: true
 
 ## Properties
 
-### beneficiary
+### lastCashedCheque
 
-• **beneficiary**: *string*
+• **lastCashedCheque**: *null* \| [*Cheque*](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:45](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L45)
-
-___
-
-### chequebook
-
-• **chequebook**: *string*
-
-Defined in: [bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L43)
-
-___
-
-### cumulativePayout
-
-• **cumulativePayout**: BigInt
-
-Defined in: [bee-js/src/types/debug.ts:44](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L44)
+Defined in: [bee-js/src/types/debug.ts:44](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L44)
 
 ___
 
@@ -38,20 +22,28 @@ ___
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:42](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L42)
+Defined in: [bee-js/src/types/debug.ts:41](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L41)
 
 ___
 
 ### result
 
-• **result**: [*CashoutResult*](cashoutresult.md)
+• **result**: *null* \| [*CashoutResult*](cashoutresult.md)
 
-Defined in: [bee-js/src/types/debug.ts:47](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L47)
+Defined in: [bee-js/src/types/debug.ts:45](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L45)
 
 ___
 
 ### transactionHash
 
-• **transactionHash**: *string*
+• **transactionHash**: *null* \| *string*
 
-Defined in: [bee-js/src/types/debug.ts:46](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L46)
+Defined in: [bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L43)
+
+___
+
+### uncashedAmount
+
+• **uncashedAmount**: *bigint*
+
+Defined in: [bee-js/src/types/debug.ts:42](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L42)

@@ -12,14 +12,14 @@ hide_title: true
 
 ### availableBalance
 
-• **availableBalance**: BigInt
+• **availableBalance**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:32](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L32)
+Defined in: [bee-js/src/types/debug.ts:31](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L31)
 
 ___
 
 ### totalBalance
 
-• **totalBalance**: BigInt
+• **totalBalance**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:31](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L31)
+Defined in: [bee-js/src/types/debug.ts:30](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L30)

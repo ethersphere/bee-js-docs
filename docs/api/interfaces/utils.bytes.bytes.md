@@ -76,7 +76,7 @@ ___
 
 • `Readonly` **length**: Length
 
-Defined in: [bee-js/src/utils/bytes.ts:12](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/bytes.ts#L12)
+Defined in: [bee-js/src/utils/bytes.ts:12](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/bytes.ts#L12)
 
 ## Methods
 

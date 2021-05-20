@@ -24,7 +24,7 @@ FeedWriter is an interface for updating feeds
 
 Inherited from: [FeedReader](feedreader.md).[owner](feedreader.md#owner)
 
-Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L143)
+Defined in: [bee-js/src/types/index.ts:154](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L154)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Inherited from: [FeedReader](feedreader.md).[topic](feedreader.md#topic)
 
-Defined in: [bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L144)
+Defined in: [bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L155)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 Inherited from: [FeedReader](feedreader.md).[type](feedreader.md#type)
 
-Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L142)
+Defined in: [bee-js/src/types/index.ts:153](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L153)
 
 ## Methods
 
@@ -64,13 +64,13 @@ Name | Type |
 
 Inherited from: [FeedReader](feedreader.md)
 
-Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L148)
+Defined in: [bee-js/src/types/index.ts:159](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L159)
 
 ___
 
 ### upload
 
-▸ **upload**(`reference`: [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> \| PlainChunkReference \| EncryptedChunkReference, `options?`: FeedUploadOptions): *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+▸ **upload**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `reference`: [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> \| PlainChunkReference \| EncryptedChunkReference, `options?`: FeedUploadOptions): *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
 
 Upload a new feed update
 
@@ -78,6 +78,7 @@ Upload a new feed update
 
 Name | Type | Description |
 :------ | :------ | :------ |
+`postageBatchId` | *string* \| [*Address*](../types/address.md) | - |
 `reference` | [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> \| PlainChunkReference \| EncryptedChunkReference | The reference to be stored in the new update   |
 `options?` | FeedUploadOptions | Additional options like `at`    |
 
@@ -85,4 +86,4 @@ Name | Type | Description |
 
 Reference that points at Single Owner Chunk that contains the new update and pointer to the updated chunk reference.
 
-Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L179)
+Defined in: [bee-js/src/types/index.ts:190](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L190)

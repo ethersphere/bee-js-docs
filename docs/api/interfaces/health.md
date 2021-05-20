@@ -14,7 +14,7 @@ hide_title: true
 
 • **status**: *ok*
 
-Defined in: [bee-js/src/types/debug.ts:87](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L87)
+Defined in: [bee-js/src/types/debug.ts:85](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L85)
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **version**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:88](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L88)
+Defined in: [bee-js/src/types/debug.ts:86](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L86)

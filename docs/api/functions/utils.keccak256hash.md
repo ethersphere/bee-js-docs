@@ -23,4 +23,4 @@ Name | Type | Description |
 
 **Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<*32*\>
 
-Defined in: [bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hash.ts#L10)
+Defined in: [bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/hash.ts#L10)

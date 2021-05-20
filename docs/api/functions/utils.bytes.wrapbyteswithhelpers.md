@@ -20,4 +20,4 @@ Name | Type |
 
 **Returns:** [*Data*](../interfaces/data.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:136](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/bytes.ts#L136)
+Defined in: [bee-js/src/utils/bytes.ts:136](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/bytes.ts#L136)

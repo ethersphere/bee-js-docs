@@ -29,4 +29,4 @@ Name | Type | Description |
 
 **Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
 
-Defined in: [bee-js/src/utils/hex.ts:69](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hex.ts#L69)
+Defined in: [bee-js/src/utils/hex.ts:69](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/hex.ts#L69)

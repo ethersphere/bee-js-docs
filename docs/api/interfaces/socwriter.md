@@ -38,17 +38,17 @@ Name | Type |
 
 **Returns:** *Promise*<SingleOwnerChunk\>
 
-Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L191)
+Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)
 
 Inherited from: [SOCReader](socreader.md).[download](socreader.md#download)
 
-Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L191)
+Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)
 
 ___
 
 ### upload
 
-• **upload**: (`identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)) =\> *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+• **upload**: (`postageBatchId`: *string* \| [*Address*](../types/address.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)) =\> *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
 
 Uploads a single owner chunk
 
@@ -60,18 +60,19 @@ Uploads a single owner chunk
 
 #### Type declaration:
 
-▸ (`identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)): *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+▸ (`postageBatchId`: *string* \| [*Address*](../types/address.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)): *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
+`postageBatchId` | *string* \| [*Address*](../types/address.md) |
 `identifier` | Identifier |
 `data` | *Uint8Array* |
 `options?` | [*UploadOptions*](uploadoptions.md) |
 
 **Returns:** *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
 
-Defined in: [bee-js/src/types/index.ts:205](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L205)
+Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L220)
 
-Defined in: [bee-js/src/types/index.ts:205](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L205)
+Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L220)

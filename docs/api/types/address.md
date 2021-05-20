@@ -8,6 +8,6 @@ hide_title: true
 
 # Type alias: Address
 
-Ƭ **Address**: *string*
+Ƭ **Address**: [*HexString*](utils.hex.hexstring.md)<*typeof* [*ADDRESS\_HEX\_LENGTH*](../variables/address_hex_length.md)\>
 
-Defined in: [bee-js/src/types/index.ts:24](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L24)
+Defined in: [bee-js/src/types/index.ts:25](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L25)
