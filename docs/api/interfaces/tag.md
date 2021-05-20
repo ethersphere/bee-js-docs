@@ -14,7 +14,7 @@ hide_title: true
 
 • **processed**: *number*
 
-Defined in: [bee-js/src/types/index.ts:61](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L61)
+Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L68)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **startedAt**: *string*
 
-Defined in: [bee-js/src/types/index.ts:64](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L64)
+Defined in: [bee-js/src/types/index.ts:71](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L71)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **synced**: *number*
 
-Defined in: [bee-js/src/types/index.ts:62](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L62)
+Defined in: [bee-js/src/types/index.ts:69](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L69)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **total**: *number*
 
-Defined in: [bee-js/src/types/index.ts:60](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L60)
+Defined in: [bee-js/src/types/index.ts:67](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L67)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 • **uid**: *number*
 
-Defined in: [bee-js/src/types/index.ts:63](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L63)
+Defined in: [bee-js/src/types/index.ts:70](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L70)

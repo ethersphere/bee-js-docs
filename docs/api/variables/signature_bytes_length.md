@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **SIGNATURE\_BYTES\_LENGTH**: *65*= 65
 
-Defined in: [bee-js/src/types/index.ts:213](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L213)
+Defined in: [bee-js/src/types/index.ts:249](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L249)

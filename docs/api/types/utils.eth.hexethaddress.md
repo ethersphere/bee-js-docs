@@ -12,4 +12,4 @@ hide_title: true
 
 Ƭ **HexEthAddress**: [*HexString*](utils.hex.hexstring.md)<*40*\>
 
-Defined in: [bee-js/src/utils/eth.ts:8](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/eth.ts#L8)
+Defined in: [bee-js/src/utils/eth.ts:8](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/eth.ts#L8)

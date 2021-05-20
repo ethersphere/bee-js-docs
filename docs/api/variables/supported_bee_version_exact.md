@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **SUPPORTED\_BEE\_VERSION\_EXACT**: *string*
 
-Defined in: [bee-js/src/modules/debug/status.ts:4](https://github.com/ethersphere/bee-js/blob/9a547fe/src/modules/debug/status.ts#L4)
+Defined in: [bee-js/src/modules/debug/status.ts:4](https://github.com/ethersphere/bee-js/blob/7260ee1/src/modules/debug/status.ts#L4)

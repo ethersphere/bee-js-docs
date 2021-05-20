@@ -14,7 +14,7 @@ hide_title: true
 
 • **ethereum**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:16](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L16)
+Defined in: [bee-js/src/types/debug.ts:16](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L16)
 
 ___
 
@@ -22,23 +22,23 @@ ___
 
 • **overlay**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:14](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L14)
+Defined in: [bee-js/src/types/debug.ts:14](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L14)
 
 ___
 
-### pss\_public\_key
+### pssPublicKey
 
-• **pss\_public\_key**: *string*
+• **pssPublicKey**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:18](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L18)
+Defined in: [bee-js/src/types/debug.ts:18](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L18)
 
 ___
 
-### public\_key
+### publicKey
 
-• **public\_key**: *string*
+• **publicKey**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:17](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L17)
+Defined in: [bee-js/src/types/debug.ts:17](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L17)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 • **underlay**: *string*[]
 
-Defined in: [bee-js/src/types/debug.ts:15](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L15)
+Defined in: [bee-js/src/types/debug.ts:15](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L15)

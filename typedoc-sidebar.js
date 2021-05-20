@@ -61,7 +61,10 @@ module.exports = [
       "api/interfaces/nodeaddresses",
       "api/interfaces/peer",
       "api/interfaces/peerbalance",
+      "api/interfaces/pin",
       "api/interfaces/pingresponse",
+      "api/interfaces/postagebatch",
+      "api/interfaces/postagebatchoptions",
       "api/interfaces/pssmessagehandler",
       "api/interfaces/psssubscription",
       "api/interfaces/referenceresponse",
@@ -105,6 +108,7 @@ module.exports = [
     "type": "category",
     "label": "Variables",
     "items": [
+      "api/variables/address_hex_length",
       "api/variables/encrypted_reference_bytes_length",
       "api/variables/encrypted_reference_hex_length",
       "api/variables/reference_bytes_length",

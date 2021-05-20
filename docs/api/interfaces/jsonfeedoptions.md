@@ -17,7 +17,7 @@ hide_title: true
 Valid only for `get` action, where either this `address` or `signer` has
 to be specified.
 
-Defined in: [bee-js/src/types/index.ts:156](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L156)
+Defined in: [bee-js/src/types/index.ts:167](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L167)
 
 ___
 
@@ -29,7 +29,7 @@ Custom Signer object or private key in either binary or hex form.
 This required for `set` action, and optional for `get` although
 if not specified for `get` then `address` option has to be specified.
 
-Defined in: [bee-js/src/types/index.ts:163](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L163)
+Defined in: [bee-js/src/types/index.ts:174](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L174)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 • `Optional` **type**: *undefined* \| *sequence* \| *epoch*
 
-Defined in: [bee-js/src/types/index.ts:164](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L164)
+Defined in: [bee-js/src/types/index.ts:175](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L175)

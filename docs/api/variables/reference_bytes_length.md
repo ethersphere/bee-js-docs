@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **REFERENCE\_BYTES\_LENGTH**: *32*= 32
 
-Defined in: [bee-js/src/types/index.ts:18](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L18)
+Defined in: [bee-js/src/types/index.ts:19](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L19)

@@ -14,7 +14,7 @@ hide_title: true
 
 • **lastreceived**: [*Cheque*](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:62](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L62)
+Defined in: [bee-js/src/types/debug.ts:60](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L60)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **lastsent**: [*Cheque*](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:63](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L63)
+Defined in: [bee-js/src/types/debug.ts:61](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L61)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:61](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L61)
+Defined in: [bee-js/src/types/debug.ts:59](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L59)

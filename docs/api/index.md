@@ -55,7 +55,10 @@ hide_title: true
 - [NodeAddresses](interfaces/nodeaddresses.md)
 - [Peer](interfaces/peer.md)
 - [PeerBalance](interfaces/peerbalance.md)
+- [Pin](interfaces/pin.md)
 - [PingResponse](interfaces/pingresponse.md)
+- [PostageBatch](interfaces/postagebatch.md)
+- [PostageBatchOptions](interfaces/postagebatchoptions.md)
 - [PssMessageHandler](interfaces/pssmessagehandler.md)
 - [PssSubscription](interfaces/psssubscription.md)
 - [ReferenceResponse](interfaces/referenceresponse.md)
@@ -88,6 +91,7 @@ hide_title: true
 
 ### Variables
 
+- [ADDRESS\_HEX\_LENGTH](variables/address_hex_length.md)
 - [ENCRYPTED\_REFERENCE\_BYTES\_LENGTH](variables/encrypted_reference_bytes_length.md)
 - [ENCRYPTED\_REFERENCE\_HEX\_LENGTH](variables/encrypted_reference_hex_length.md)
 - [REFERENCE\_BYTES\_LENGTH](variables/reference_bytes_length.md)

@@ -24,4 +24,4 @@ Name | Type | Description |
 
 HexString or throws error
 
-Defined in: [bee-js/src/utils/hex.ts:179](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/hex.ts#L179)
+Defined in: [bee-js/src/utils/hex.ts:179](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/hex.ts#L179)

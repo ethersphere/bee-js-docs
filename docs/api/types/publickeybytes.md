@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **PublicKeyBytes**: [*Bytes*](../interfaces/utils.bytes.bytes.md)<*32*\> \| [*Bytes*](../interfaces/utils.bytes.bytes.md)<*64*\>
 
-Defined in: [bee-js/src/types/index.ts:217](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L217)
+Defined in: [bee-js/src/types/index.ts:253](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L253)

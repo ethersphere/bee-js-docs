@@ -14,7 +14,7 @@ hide_title: true
 
 • `Optional` **swarm-encrypt**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L54)
+Defined in: [bee-js/src/types/index.ts:60](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L60)
 
 ___
 
@@ -22,7 +22,15 @@ ___
 
 • `Optional` **swarm-pin**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L53)
+Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L59)
+
+___
+
+### swarm-postage-batch-id
+
+• `Optional` **swarm-postage-batch-id**: *undefined* \| *string*
+
+Defined in: [bee-js/src/types/index.ts:62](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L62)
 
 ___
 
@@ -30,4 +38,4 @@ ___
 
 • `Optional` **swarm-tag**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L55)
+Defined in: [bee-js/src/types/index.ts:61](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L61)

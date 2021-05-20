@@ -24,7 +24,7 @@ alter default options of axios HTTP client
 
 Inherited from: [UploadOptions](uploadoptions.md).[axiosOptions](uploadoptions.md#axiosoptions)
 
-Defined in: [bee-js/src/types/index.ts:36](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L36)
+Defined in: [bee-js/src/types/index.ts:42](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L42)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • `Optional` **contentType**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:41](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L41)
+Defined in: [bee-js/src/types/index.ts:47](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L47)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[encrypt](uploadoptions.md#encrypt)
 
-Defined in: [bee-js/src/types/index.ts:33](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L33)
+Defined in: [bee-js/src/types/index.ts:39](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L39)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[pin](uploadoptions.md#pin)
 
-Defined in: [bee-js/src/types/index.ts:32](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L32)
+Defined in: [bee-js/src/types/index.ts:38](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L38)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • `Optional` **size**: *undefined* \| *number*
 
-Defined in: [bee-js/src/types/index.ts:40](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L40)
+Defined in: [bee-js/src/types/index.ts:46](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L46)
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[tag](uploadoptions.md#tag)
 
-Defined in: [bee-js/src/types/index.ts:34](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L34)
+Defined in: [bee-js/src/types/index.ts:40](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L40)

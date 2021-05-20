@@ -14,20 +14,20 @@ hide_title: true
 
 • **settlements**: [*Settlements*](settlements.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:10](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L10)
+Defined in: [bee-js/src/types/debug.ts:10](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L10)
 
 ___
 
-### totalreceived
+### totalReceived
 
-• **totalreceived**: BigInt
+• **totalReceived**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:8](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L8)
+Defined in: [bee-js/src/types/debug.ts:8](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L8)
 
 ___
 
-### totalsent
+### totalSent
 
-• **totalsent**: BigInt
+• **totalSent**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:9](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L9)
+Defined in: [bee-js/src/types/debug.ts:9](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L9)

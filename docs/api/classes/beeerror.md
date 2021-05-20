@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** [*BeeError*](beeerror.md)
 
-Defined in: [bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/error.ts#L1)
+Defined in: [bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/error.ts#L1)
 
 ## Properties
 

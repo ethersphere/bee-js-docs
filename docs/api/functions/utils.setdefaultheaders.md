@@ -22,4 +22,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/utils/safeAxios.ts:14](https://github.com/ethersphere/bee-js/blob/9a547fe/src/utils/safeAxios.ts#L14)
+Defined in: [bee-js/src/utils/safeAxios.ts:14](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/safeAxios.ts#L14)

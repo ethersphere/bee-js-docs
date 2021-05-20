@@ -38,6 +38,6 @@ Name | Type |
 
 **Returns:** *Promise*<SingleOwnerChunk\>
 
-Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L191)
+Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)
 
-Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/index.ts#L191)
+Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)

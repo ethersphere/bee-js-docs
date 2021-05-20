@@ -10,8 +10,8 @@ hide_title: true
 
 ## Properties
 
-### chequebookaddress
+### chequebookAddress
 
-• **chequebookaddress**: *string*
+• **chequebookAddress**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:27](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L27)
+Defined in: [bee-js/src/types/debug.ts:26](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L26)

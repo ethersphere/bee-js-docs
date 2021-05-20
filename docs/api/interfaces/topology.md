@@ -14,7 +14,7 @@ hide_title: true
 
 • **baseAddr**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:104](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L104)
+Defined in: [bee-js/src/types/debug.ts:102](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L102)
 
 ___
 
@@ -43,7 +43,7 @@ Name | Type |
 `bin_8` | [*Bin*](bin.md) |
 `bin_9` | [*Bin*](bin.md) |
 
-Defined in: [bee-js/src/types/debug.ts:110](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L110)
+Defined in: [bee-js/src/types/debug.ts:108](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L108)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **connected**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:106](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L106)
+Defined in: [bee-js/src/types/debug.ts:104](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L104)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **depth**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:109](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L109)
+Defined in: [bee-js/src/types/debug.ts:107](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L107)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **nnLowWatermark**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:108](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L108)
+Defined in: [bee-js/src/types/debug.ts:106](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L106)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 • **population**: *number*
 
-Defined in: [bee-js/src/types/debug.ts:105](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L105)
+Defined in: [bee-js/src/types/debug.ts:103](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L103)
 
 ___
 
@@ -83,4 +83,4 @@ ___
 
 • **timestamp**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:107](https://github.com/ethersphere/bee-js/blob/9a547fe/src/types/debug.ts#L107)
+Defined in: [bee-js/src/types/debug.ts:105](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L105)
