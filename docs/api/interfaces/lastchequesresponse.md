@@ -14,4 +14,4 @@ hide_title: true
 
 • **lastcheques**: [*LastChequesForPeerResponse*](lastchequesforpeerresponse.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:65](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L65)
+Defined in: [bee-js/src/types/debug.ts:80](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L80)

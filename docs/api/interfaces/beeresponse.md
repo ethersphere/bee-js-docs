@@ -14,7 +14,7 @@ hide_title: true
 
 • **code**: *number*
 
-Defined in: [bee-js/src/types/index.ts:130](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L130)
+Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L143)
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **message**: *string*
 
-Defined in: [bee-js/src/types/index.ts:129](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L129)
+Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L142)

@@ -12,4 +12,4 @@ hide_title: true
 
 Ethereum compatible signing interfaces and definitions
 
-Defined in: [bee-js/src/types/index.ts:248](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L248)
+Defined in: [bee-js/src/types/index.ts:262](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L262)

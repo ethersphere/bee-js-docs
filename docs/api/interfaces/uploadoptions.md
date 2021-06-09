@@ -24,7 +24,7 @@ hide_title: true
 
 alter default options of axios HTTP client
 
-Defined in: [bee-js/src/types/index.ts:42](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L42)
+Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L59)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • `Optional` **encrypt**: *undefined* \| *boolean*
 
-Defined in: [bee-js/src/types/index.ts:39](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L39)
+Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L56)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • `Optional` **pin**: *undefined* \| *boolean*
 
-Defined in: [bee-js/src/types/index.ts:38](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L38)
+Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L55)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 • `Optional` **tag**: *undefined* \| *number*
 
-Defined in: [bee-js/src/types/index.ts:40](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L40)
+Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L57)

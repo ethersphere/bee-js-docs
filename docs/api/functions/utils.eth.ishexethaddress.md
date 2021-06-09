@@ -27,4 +27,4 @@ Name | Type | Description |
 
 True if is valid eth address
 
-Defined in: [bee-js/src/utils/eth.ts:93](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/eth.ts#L93)
+Defined in: [bee-js/src/utils/eth.ts:93](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/eth.ts#L93)

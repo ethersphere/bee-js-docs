@@ -14,4 +14,4 @@ hide_title: true
 
 • **chequebookAddress**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:26](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L26)
+Defined in: [bee-js/src/types/debug.ts:29](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L29)

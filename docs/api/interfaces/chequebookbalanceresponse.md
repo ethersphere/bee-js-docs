@@ -14,7 +14,7 @@ hide_title: true
 
 • **availableBalance**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:31](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L31)
+Defined in: [bee-js/src/types/debug.ts:34](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L34)
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **totalBalance**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:30](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L30)
+Defined in: [bee-js/src/types/debug.ts:33](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L33)

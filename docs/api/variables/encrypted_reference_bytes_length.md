@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **ENCRYPTED\_REFERENCE\_BYTES\_LENGTH**: *64*= 64
 
-Defined in: [bee-js/src/types/index.ts:20](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L20)
+Defined in: [bee-js/src/types/index.ts:22](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L22)

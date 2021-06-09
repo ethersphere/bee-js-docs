@@ -20,7 +20,7 @@ hide_title: true
 
 • `Optional` **contentType**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:77](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L77)
+Defined in: [bee-js/src/types/index.ts:90](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L90)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • `Optional` **name**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:75](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L75)
+Defined in: [bee-js/src/types/index.ts:88](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L88)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • `Optional` **tagUid**: *undefined* \| *number*
 
-Defined in: [bee-js/src/types/index.ts:76](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L76)
+Defined in: [bee-js/src/types/index.ts:89](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L89)

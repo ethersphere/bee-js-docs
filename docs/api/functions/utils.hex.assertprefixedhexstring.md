@@ -10,18 +10,19 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).assertPrefixedHexString
 
-▸ **assertPrefixedHexString**(`s`: *string*): asserts s is PrefixedHexString
+▸ **assertPrefixedHexString**(`s`: *string*, `name?`: *string*): asserts s is PrefixedHexString
 
 Verifies if the provided input is a PrefixedHexString.
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`s` | *string* | string input   |
+Name | Type | Default value | Description |
+:------ | :------ | :------ | :------ |
+`s` | *string* | - | string input   |
+`name` | *string* | 'value' | optional name for the asserted value   |
 
 **Returns:** asserts s is PrefixedHexString
 
 HexString or throws error
 
-Defined in: [bee-js/src/utils/hex.ts:179](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/hex.ts#L179)
+Defined in: [bee-js/src/utils/hex.ts:182](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/hex.ts#L182)

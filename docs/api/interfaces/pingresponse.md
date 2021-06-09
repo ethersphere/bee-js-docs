@@ -14,4 +14,4 @@ hide_title: true
 
 • **rtt**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:129](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L129)
+Defined in: [bee-js/src/types/debug.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L137)

@@ -29,4 +29,4 @@ Name | Type | Description |
 
 **Returns:** b is Bytes<Length\>
 
-Defined in: [bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/bytes.ts#L34)
+Defined in: [bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/bytes.ts#L34)

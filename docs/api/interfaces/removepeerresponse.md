@@ -14,7 +14,7 @@ hide_title: true
 
 • **code**: *0*
 
-Defined in: [bee-js/src/types/debug.ts:91](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L91)
+Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L99)
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **message**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:90](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L90)
+Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L98)

@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **Address**: [*HexString*](utils.hex.hexstring.md)<*typeof* [*ADDRESS\_HEX\_LENGTH*](../variables/address_hex_length.md)\>
 
-Defined in: [bee-js/src/types/index.ts:25](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L25)
+Defined in: [bee-js/src/types/index.ts:37](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L37)

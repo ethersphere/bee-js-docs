@@ -14,9 +14,9 @@ Options for creation of postage batch
 
 ### gasPrice
 
-• `Optional` **gasPrice**: *undefined* \| *number* \| *bigint*
+• `Optional` **gasPrice**: *undefined* \| *bigint*
 
-Defined in: [bee-js/src/types/index.ts:241](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L241)
+Defined in: [bee-js/src/types/index.ts:255](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L255)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 • `Optional` **label**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:240](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L240)
+Defined in: [bee-js/src/types/index.ts:254](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L254)

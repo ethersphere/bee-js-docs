@@ -14,7 +14,7 @@ hide_title: true
 
 • **lastCashedCheque**: *null* \| [*Cheque*](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:44](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L44)
+Defined in: [bee-js/src/types/debug.ts:59](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L59)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:41](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L41)
+Defined in: [bee-js/src/types/debug.ts:56](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L56)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **result**: *null* \| [*CashoutResult*](cashoutresult.md)
 
-Defined in: [bee-js/src/types/debug.ts:45](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L45)
+Defined in: [bee-js/src/types/debug.ts:60](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L60)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **transactionHash**: *null* \| *string*
 
-Defined in: [bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L43)
+Defined in: [bee-js/src/types/debug.ts:58](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L58)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 • **uncashedAmount**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:42](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L42)
+Defined in: [bee-js/src/types/debug.ts:57](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L57)

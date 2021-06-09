@@ -14,9 +14,9 @@ Interface representing Postage stamp batch.
 
 ### batchID
 
-• **batchID**: [*Address*](../types/address.md)
+• **batchID**: [*BatchId*](../types/batchid.md)
 
-Defined in: [bee-js/src/types/index.ts:232](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L232)
+Defined in: [bee-js/src/types/index.ts:246](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L246)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 • **utilization**: *number*
 
-Defined in: [bee-js/src/types/index.ts:233](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L233)
+Defined in: [bee-js/src/types/index.ts:247](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L247)

@@ -246,7 +246,7 @@ ___
 
 **Returns:** [*HexString*](../types/utils.hex.hexstring.md)<number\>
 
-Defined in: [bee-js/src/types/index.ts:97](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L97)
+Defined in: [bee-js/src/types/index.ts:110](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L110)
 
 ___
 
@@ -308,11 +308,11 @@ ___
 
 ### json
 
-▸ **json**(): *Record*<string, any\>
+▸ **json**(): *Record*<string, unknown\>
 
-**Returns:** *Record*<string, any\>
+**Returns:** *Record*<string, unknown\>
 
-Defined in: [bee-js/src/types/index.ts:98](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L98)
+Defined in: [bee-js/src/types/index.ts:111](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L111)
 
 ___
 
@@ -592,7 +592,7 @@ ___
 
 **Returns:** *string*
 
-Defined in: [bee-js/src/types/index.ts:96](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L96)
+Defined in: [bee-js/src/types/index.ts:109](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L109)
 
 ___
 
