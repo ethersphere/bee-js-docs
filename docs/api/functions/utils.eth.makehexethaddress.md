@@ -20,4 +20,4 @@ Name | Type |
 
 **Returns:** [*HexEthAddress*](../types/utils.eth.hexethaddress.md)
 
-Defined in: [bee-js/src/utils/eth.ts:27](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/eth.ts#L27)
+Defined in: [bee-js/src/utils/eth.ts:27](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/eth.ts#L27)

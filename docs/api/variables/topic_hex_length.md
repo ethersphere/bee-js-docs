@@ -10,4 +10,4 @@ hide_title: true
 
 • `Const` **TOPIC\_HEX\_LENGTH**: *64*= 64
 
-Defined in: [bee-js/src/types/index.ts:142](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L142)
+Defined in: [bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L155)

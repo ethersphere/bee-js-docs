@@ -38,17 +38,17 @@ Name | Type |
 
 **Returns:** *Promise*<SingleOwnerChunk\>
 
-Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)
+Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
 
 Inherited from: [SOCReader](socreader.md).[download](socreader.md#download)
 
-Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L206)
+Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
 
 ___
 
 ### upload
 
-• **upload**: (`postageBatchId`: *string* \| [*Address*](../types/address.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)) =\> *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+• **upload**: (`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)) =\> *Promise*<[*Reference*](../types/reference.md)\>
 
 Uploads a single owner chunk
 
@@ -60,19 +60,19 @@ Uploads a single owner chunk
 
 #### Type declaration:
 
-▸ (`postageBatchId`: *string* \| [*Address*](../types/address.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)): *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+▸ (`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) |
 `identifier` | Identifier |
 `data` | *Uint8Array* |
 `options?` | [*UploadOptions*](uploadoptions.md) |
 
-**Returns:** *Promise*<[*ReferenceResponse*](referenceresponse.md)\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L220)
+Defined in: [bee-js/src/types/index.ts:234](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L234)
 
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L220)
+Defined in: [bee-js/src/types/index.ts:234](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L234)

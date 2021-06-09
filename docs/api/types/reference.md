@@ -10,4 +10,4 @@ hide_title: true
 
 Ƭ **Reference**: [*HexString*](utils.hex.hexstring.md)<*typeof* [*REFERENCE\_HEX\_LENGTH*](../variables/reference_hex_length.md)\> \| [*HexString*](utils.hex.hexstring.md)<*typeof* [*ENCRYPTED\_REFERENCE\_HEX\_LENGTH*](../variables/encrypted_reference_hex_length.md)\>
 
-Defined in: [bee-js/src/types/index.ts:22](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L22)
+Defined in: [bee-js/src/types/index.ts:34](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L34)

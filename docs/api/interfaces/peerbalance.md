@@ -14,7 +14,7 @@ hide_title: true
 
 • **balance**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:77](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L77)
+Defined in: [bee-js/src/types/debug.ts:85](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L85)
 
 ___
 
@@ -22,4 +22,4 @@ ___
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:76](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L76)
+Defined in: [bee-js/src/types/debug.ts:84](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L84)

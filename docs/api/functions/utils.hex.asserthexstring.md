@@ -10,7 +10,7 @@ hide_title: true
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).assertHexString
 
-▸ **assertHexString**<Length\>(`s`: *unknown*, `len?`: *number*): asserts s is HexString<Length\>
+▸ **assertHexString**<Length\>(`s`: *unknown*, `len?`: *number*, `name?`: *string*): asserts s is HexString<Length\>
 
 Verifies if the provided input is a HexString.
 
@@ -24,13 +24,14 @@ Name | Type | Default |
 
 #### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`s` | *unknown* | string input   |
-`len?` | *number* | expected length of the HexString   |
+Name | Type | Default value | Description |
+:------ | :------ | :------ | :------ |
+`s` | *unknown* | - | string input   |
+`len?` | *number* | - | expected length of the HexString   |
+`name` | *string* | 'value' | optional name for the asserted value   |
 
 **Returns:** asserts s is HexString<Length\>
 
 HexString or throws error
 
-Defined in: [bee-js/src/utils/hex.ts:157](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/hex.ts#L157)
+Defined in: [bee-js/src/utils/hex.ts:158](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/hex.ts#L158)

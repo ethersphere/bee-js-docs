@@ -14,4 +14,4 @@ hide_title: true
 
 • **reference**: *string*
 
-Defined in: [bee-js/src/types/index.ts:85](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L85)
+Defined in: [bee-js/src/types/index.ts:98](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L98)

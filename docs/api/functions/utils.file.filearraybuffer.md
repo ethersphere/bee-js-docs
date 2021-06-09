@@ -23,4 +23,4 @@ Name | Type | Description |
 
 **Returns:** *Promise*<ArrayBuffer\>
 
-Defined in: [bee-js/src/utils/file.ts:29](https://github.com/ethersphere/bee-js/blob/7260ee1/src/utils/file.ts#L29)
+Defined in: [bee-js/src/utils/file.ts:29](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/file.ts#L29)

@@ -14,7 +14,7 @@ hide_title: true
 
 • **peer**: *string*
 
-Defined in: [bee-js/src/types/debug.ts:2](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L2)
+Defined in: [bee-js/src/types/debug.ts:5](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L5)
 
 ___
 
@@ -22,7 +22,7 @@ ___
 
 • **received**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:3](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L3)
+Defined in: [bee-js/src/types/debug.ts:6](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L6)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **sent**: *bigint*
 
-Defined in: [bee-js/src/types/debug.ts:4](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/debug.ts#L4)
+Defined in: [bee-js/src/types/debug.ts:7](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L7)

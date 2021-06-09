@@ -27,9 +27,9 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/types/index.ts:125](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L125)
+Defined in: [bee-js/src/types/index.ts:138](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L138)
 
-Defined in: [bee-js/src/types/index.ts:125](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L125)
+Defined in: [bee-js/src/types/index.ts:138](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L138)
 
 ___
 
@@ -50,6 +50,6 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/types/index.ts:124](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L124)
+Defined in: [bee-js/src/types/index.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L137)
 
-Defined in: [bee-js/src/types/index.ts:124](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L124)
+Defined in: [bee-js/src/types/index.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L137)

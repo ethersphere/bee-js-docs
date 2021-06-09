@@ -20,9 +20,9 @@ hide_title: true
 
 **Returns:** *void*
 
-Defined in: [bee-js/src/types/index.ts:120](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L120)
+Defined in: [bee-js/src/types/index.ts:133](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L133)
 
-Defined in: [bee-js/src/types/index.ts:120](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L120)
+Defined in: [bee-js/src/types/index.ts:133](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L133)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • `Readonly` **topic**: *string*
 
-Defined in: [bee-js/src/types/index.ts:119](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L119)
+Defined in: [bee-js/src/types/index.ts:132](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L132)

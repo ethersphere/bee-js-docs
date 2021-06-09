@@ -25,7 +25,7 @@ Name | Type | Description |
 
 **Returns:** [*Bee*](bee.md)
 
-Defined in: [bee-js/src/bee.ts:63](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L63)
+Defined in: [bee-js/src/bee.ts:76](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L76)
 
 ## Properties
 
@@ -35,7 +35,7 @@ Defined in: [bee-js/src/bee.ts:63](https://github.com/ethersphere/bee-js/blob/72
 
 Default Signer used for signing operations, mainly Feeds.
 
-Defined in: [bee-js/src/bee.ts:63](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L63)
+Defined in: [bee-js/src/bee.ts:76](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L76)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • `Readonly` **url**: *string*
 
-Defined in: [bee-js/src/bee.ts:58](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L58)
+Defined in: [bee-js/src/bee.ts:71](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L71)
 
 ## Methods
 
@@ -55,13 +55,13 @@ Ping the base bee URL. If connection was not successful throw error
 
 **Returns:** *Promise*<void\>
 
-Defined in: [bee-js/src/bee.ts:615](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L615)
+Defined in: [bee-js/src/bee.ts:703](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L703)
 
 ___
 
 ### createFeedManifest
 
-▸ **createFeedManifest**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| [*Topic*](../types/topic.md), `owner`: *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md)): *Promise*<[*Reference*](../types/reference.md)\>
+▸ **createFeedManifest**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `type`: *sequence* \| *epoch*, `topic`: *string* \| *Uint8Array* \| [*Topic*](../types/topic.md), `owner`: *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Create feed manifest chunk and return the reference to it
 
@@ -69,20 +69,20 @@ Create feed manifest chunk and return the reference to it
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to create the Feed Manifest   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to create the Feed Manifest   |
 `type` | *sequence* \| *epoch* | The type of the feed, can be 'epoch' or 'sequence'   |
 `topic` | *string* \| *Uint8Array* \| [*Topic*](../types/topic.md) | Topic in hex or bytes   |
 `owner` | *string* \| *Uint8Array* \| [*EthAddress*](../types/utils.eth.ethaddress.md) | Owner's ethereum address in hex or bytes    |
 
 **Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
-Defined in: [bee-js/src/bee.ts:396](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L396)
+Defined in: [bee-js/src/bee.ts:485](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L485)
 
 ___
 
 ### createPostageBatch
 
-▸ **createPostageBatch**(`amount`: *bigint*, `depth`: *number*, `options?`: [*PostageBatchOptions*](../interfaces/postagebatchoptions.md)): *Promise*<[*Address*](../types/address.md)\>
+▸ **createPostageBatch**(`amount`: *bigint*, `depth`: *number*, `options?`: [*PostageBatchOptions*](../interfaces/postagebatchoptions.md)): *Promise*<[*BatchId*](../types/batchid.md)\>
 
 Creates new postage batch from the funds that the node has available in its Ethereum account.
 
@@ -98,9 +98,9 @@ Name | Type | Description |
 `depth` | *number* | Logarithm of the number of chunks that can be stamped with the batch.   |
 `options?` | [*PostageBatchOptions*](../interfaces/postagebatchoptions.md) | Options for creation of postage batch   |
 
-**Returns:** *Promise*<[*Address*](../types/address.md)\>
+**Returns:** *Promise*<[*BatchId*](../types/batchid.md)\>
 
-Defined in: [bee-js/src/bee.ts:575](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L575)
+Defined in: [bee-js/src/bee.ts:663](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L663)
 
 ___
 
@@ -112,7 +112,7 @@ Create new tag
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:222](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L222)
+Defined in: [bee-js/src/bee.ts:254](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L254)
 
 ___
 
@@ -130,7 +130,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Data*](../interfaces/data.md)\>
 
-Defined in: [bee-js/src/bee.ts:103](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L103)
+Defined in: [bee-js/src/bee.ts:123](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L123)
 
 ___
 
@@ -149,7 +149,7 @@ Name | Type | Default value | Description |
 
 **Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<[*Data*](../interfaces/data.md)\>\>
 
-Defined in: [bee-js/src/bee.ts:157](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L157)
+Defined in: [bee-js/src/bee.ts:184](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L184)
 
 ___
 
@@ -168,7 +168,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<Readable\>
 
-Defined in: [bee-js/src/bee.ts:115](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L115)
+Defined in: [bee-js/src/bee.ts:135](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L135)
 
 ___
 
@@ -187,7 +187,7 @@ Name | Type | Default value | Description |
 
 **Returns:** *Promise*<[*FileData*](../interfaces/filedata.md)<Readable\>\>
 
-Defined in: [bee-js/src/bee.ts:169](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L169)
+Defined in: [bee-js/src/bee.ts:196](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L196)
 
 ___
 
@@ -199,7 +199,7 @@ Get list of all pinned references
 
 **Returns:** *Promise*<[*Reference*](../types/reference.md)[]\>
 
-Defined in: [bee-js/src/bee.ts:260](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L260)
+Defined in: [bee-js/src/bee.ts:300](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L300)
 
 ___
 
@@ -211,7 +211,7 @@ Return all postage batches that has the node available.
 
 **Returns:** *Promise*<[*PostageBatch*](../interfaces/postagebatch.md)[]\>
 
-Defined in: [bee-js/src/bee.ts:608](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L608)
+Defined in: [bee-js/src/bee.ts:696](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L696)
 
 ___
 
@@ -244,7 +244,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<T\>
 
-Defined in: [bee-js/src/bee.ts:494](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L494)
+Defined in: [bee-js/src/bee.ts:583](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L583)
 
 ___
 
@@ -262,13 +262,13 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Pin*](../interfaces/pin.md)\>
 
-Defined in: [bee-js/src/bee.ts:269](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L269)
+Defined in: [bee-js/src/bee.ts:309](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L309)
 
 ___
 
 ### getPostageBatch
 
-▸ **getPostageBatch**(`postageBatchId`: *string* \| [*Address*](../types/address.md)): *Promise*<[*PostageBatch*](../interfaces/postagebatch.md)\>
+▸ **getPostageBatch**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md)): *Promise*<[*PostageBatch*](../interfaces/postagebatch.md)\>
 
 Return details for specific postage batch.
 
@@ -276,11 +276,11 @@ Return details for specific postage batch.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | BatchId    |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | BatchId    |
 
 **Returns:** *Promise*<[*PostageBatch*](../interfaces/postagebatch.md)\>
 
-Defined in: [bee-js/src/bee.ts:599](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L599)
+Defined in: [bee-js/src/bee.ts:687](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L687)
 
 ___
 
@@ -294,7 +294,7 @@ Ping the base bee URL.
 
 true if successful, false on error
 
-Defined in: [bee-js/src/bee.ts:624](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L624)
+Defined in: [bee-js/src/bee.ts:712](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L712)
 
 ___
 
@@ -314,7 +314,7 @@ Name | Type | Description |
 
 **Returns:** [*FeedReader*](../interfaces/feedreader.md)
 
-Defined in: [bee-js/src/bee.ts:418](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L418)
+Defined in: [bee-js/src/bee.ts:507](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L507)
 
 ___
 
@@ -335,7 +335,7 @@ Name | Type | Description |
 
 **Returns:** [*Topic*](../types/topic.md)
 
-Defined in: [bee-js/src/bee.ts:531](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L531)
+Defined in: [bee-js/src/bee.ts:620](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L620)
 
 ___
 
@@ -355,7 +355,7 @@ Name | Type | Description |
 
 **Returns:** [*FeedWriter*](../interfaces/feedwriter.md)
 
-Defined in: [bee-js/src/bee.ts:438](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L438)
+Defined in: [bee-js/src/bee.ts:527](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L527)
 
 ___
 
@@ -373,7 +373,7 @@ Name | Type | Description |
 
 **Returns:** [*SOCReader*](../interfaces/socreader.md)
 
-Defined in: [bee-js/src/bee.ts:540](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L540)
+Defined in: [bee-js/src/bee.ts:629](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L629)
 
 ___
 
@@ -391,13 +391,13 @@ Name | Type | Description |
 
 **Returns:** [*SOCWriter*](../interfaces/socwriter.md)
 
-Defined in: [bee-js/src/bee.ts:553](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L553)
+Defined in: [bee-js/src/bee.ts:642](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L642)
 
 ___
 
 ### pin
 
-▸ **pin**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **pin**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<void\>
 
 Pin data with given reference
 
@@ -407,9 +407,9 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference    |
 
-**Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+**Returns:** *Promise*<void\>
 
-Defined in: [bee-js/src/bee.ts:240](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L240)
+Defined in: [bee-js/src/bee.ts:280](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L280)
 
 ___
 
@@ -440,13 +440,13 @@ Name | Type | Default value | Description |
 
 Message in byte array
 
-Defined in: [bee-js/src/bee.ts:361](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L361)
+Defined in: [bee-js/src/bee.ts:442](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L442)
 
 ___
 
 ### pssSend
 
-▸ **pssSend**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `topic`: *string*, `target`: [*AddressPrefix*](../types/addressprefix.md), `data`: *string* \| *Uint8Array*, `recipient?`: *string*): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **pssSend**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `topic`: *string*, `target`: [*AddressPrefix*](../types/addressprefix.md), `data`: *string* \| *Uint8Array*, `recipient?`: *string* \| [*PublicKey*](../types/publickey.md)): *Promise*<void\>
 
 Send to recipient or target with Postal Service for Swarm
 
@@ -454,15 +454,15 @@ Send to recipient or target with Postal Service for Swarm
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId that will be assigned to sent message   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId that will be assigned to sent message   |
 `topic` | *string* | Topic name   |
 `target` | [*AddressPrefix*](../types/addressprefix.md) | Target message address prefix   |
 `data` | *string* \| *Uint8Array* | Message to be sent   |
-`recipient?` | *string* | Recipient public key    |
+`recipient?` | *string* \| [*PublicKey*](../types/publickey.md) | Recipient public key    |
 
-**Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+**Returns:** *Promise*<void\>
 
-Defined in: [bee-js/src/bee.ts:284](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L284)
+Defined in: [bee-js/src/bee.ts:347](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L347)
 
 ___
 
@@ -483,7 +483,7 @@ Name | Type | Description |
 
 Subscription to a given topic
 
-Defined in: [bee-js/src/bee.ts:304](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L304)
+Defined in: [bee-js/src/bee.ts:379](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L379)
 
 ___
 
@@ -501,13 +501,34 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*Tag*](../interfaces/tag.md)\>
 
-Defined in: [bee-js/src/bee.ts:231](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L231)
+Defined in: [bee-js/src/bee.ts:263](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L263)
+
+___
+
+### reuploadPinnedData
+
+▸ **reuploadPinnedData**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>, `axiosOptions?`: AxiosRequestConfig): *Promise*<void\>
+
+Instructs the Bee node to reupload a locally pinned data into the network.
+
+**`throws`** BeeArgumentError if the reference is not locally pinned
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> |
+`axiosOptions?` | AxiosRequestConfig |
+
+**Returns:** *Promise*<void\>
+
+Defined in: [bee-js/src/bee.ts:322](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L322)
 
 ___
 
 ### setJsonFeed
 
-▸ **setJsonFeed**<T\>(`postageBatchId`: *string* \| [*Address*](../types/address.md), `topic`: *string*, `data`: T, `options?`: [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md)): *Promise*<[*ReferenceResponse*](../interfaces/referenceresponse.md)\>
+▸ **setJsonFeed**<T\>(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `topic`: *string*, `data`: T, `options?`: [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 High-level function that allows you to easily set JSON data to feed.
 JSON-like data types are supported.
@@ -522,20 +543,20 @@ Name | Type |
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to upload the data with   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to upload the data with   |
 `topic` | *string* | Human readable string, that is internally hashed so there are no constrains there.   |
 `data` | T | JSON compatible data   |
 `options?` | [*JsonFeedOptions*](../interfaces/jsonfeedoptions.md) |  |
 
-**Returns:** *Promise*<[*ReferenceResponse*](../interfaces/referenceresponse.md)\>
+**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
-Defined in: [bee-js/src/bee.ts:462](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L462)
+Defined in: [bee-js/src/bee.ts:551](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L551)
 
 ___
 
 ### unpin
 
-▸ **unpin**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+▸ **unpin**(`reference`: *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\>): *Promise*<void\>
 
 Unpin data with given reference
 
@@ -545,15 +566,15 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `reference` | *string* \| [*HexString*](../types/utils.hex.hexstring.md)<*64*\> \| [*HexString*](../types/utils.hex.hexstring.md)<*128*\> | Bee data reference    |
 
-**Returns:** *Promise*<[*BeeResponse*](../interfaces/beeresponse.md)\>
+**Returns:** *Promise*<void\>
 
-Defined in: [bee-js/src/bee.ts:251](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L251)
+Defined in: [bee-js/src/bee.ts:291](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L291)
 
 ___
 
 ### uploadData
 
-▸ **uploadData**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `data`: *string* \| *Uint8Array*, `options?`: [*UploadOptions*](../interfaces/uploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
+▸ **uploadData**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `data`: *string* \| *Uint8Array*, `options?`: [*UploadOptions*](../interfaces/uploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload data to a Bee node
 
@@ -561,7 +582,7 @@ Upload data to a Bee node
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to upload the data with   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to upload the data with   |
 `data` | *string* \| *Uint8Array* | Data to be uploaded   |
 `options?` | [*UploadOptions*](../interfaces/uploadoptions.md) | Additional options like tag, encryption, pinning, content-type    |
 
@@ -569,13 +590,13 @@ Name | Type | Description |
 
 reference is a content hash of the data
 
-Defined in: [bee-js/src/bee.ts:92](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L92)
+Defined in: [bee-js/src/bee.ts:105](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L105)
 
 ___
 
 ### uploadFile
 
-▸ **uploadFile**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `data`: *string* \| *Uint8Array* \| *Readable* \| File, `name?`: *string*, `options?`: [*FileUploadOptions*](../interfaces/fileuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
+▸ **uploadFile**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `data`: *string* \| *Uint8Array* \| *Readable* \| File, `name?`: *string*, `options?`: [*FileUploadOptions*](../interfaces/fileuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload single file to a Bee node
 
@@ -583,22 +604,22 @@ Upload single file to a Bee node
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to upload the data with   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to upload the data with   |
 `data` | *string* \| *Uint8Array* \| *Readable* \| File | Data or file to be uploaded   |
 `name?` | *string* | Name of the uploaded file (optional)   |
-`options?` | [*FileUploadOptions*](../interfaces/fileuploadoptions.md) | Aditional options like tag, encryption, pinning, content-type    |
+`options?` | [*FileUploadOptions*](../interfaces/fileuploadoptions.md) | Additional options like tag, encryption, pinning, content-type    |
 
 **Returns:** *Promise*<[*Reference*](../types/reference.md)\>
 
 reference is a content hash of the file
 
-Defined in: [bee-js/src/bee.ts:131](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L131)
+Defined in: [bee-js/src/bee.ts:151](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L151)
 
 ___
 
 ### uploadFiles
 
-▸ **uploadFiles**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `fileList`: FileList \| File[], `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
+▸ **uploadFiles**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `fileList`: FileList \| File[], `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload collection of files to a Bee node
 
@@ -608,7 +629,7 @@ Uses the FileList API from the browser.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to upload the data with   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to upload the data with   |
 `fileList` | FileList \| File[] | list of files to be uploaded   |
 `options?` | [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning    |
 
@@ -616,13 +637,13 @@ Name | Type | Description |
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:186](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L186)
+Defined in: [bee-js/src/bee.ts:213](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L213)
 
 ___
 
 ### uploadFilesFromDirectory
 
-▸ **uploadFilesFromDirectory**(`postageBatchId`: *string* \| [*Address*](../types/address.md), `dir`: *string*, `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
+▸ **uploadFilesFromDirectory**(`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `dir`: *string*, `options?`: [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
 
 Upload collection of files to a Bee node
 
@@ -632,7 +653,7 @@ Uses the `fs` module of Node.js
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`postageBatchId` | *string* \| [*Address*](../types/address.md) | Postage BatchId to be used to upload the data with   |
+`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) | Postage BatchId to be used to upload the data with   |
 `dir` | *string* | the path of the files to be uploaded   |
 `options?` | [*CollectionUploadOptions*](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning    |
 
@@ -640,4 +661,4 @@ Name | Type | Description |
 
 reference of the collection of files
 
-Defined in: [bee-js/src/bee.ts:208](https://github.com/ethersphere/bee-js/blob/7260ee1/src/bee.ts#L208)
+Defined in: [bee-js/src/bee.ts:238](https://github.com/ethersphere/bee-js/blob/430becc/src/bee.ts#L238)

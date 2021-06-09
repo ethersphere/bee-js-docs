@@ -8,6 +8,6 @@ hide_title: true
 
 # Type alias: PublicKey
 
-Ƭ **PublicKey**: *string*
+Ƭ **PublicKey**: [*HexString*](utils.hex.hexstring.md)<*typeof* [*PUBKEY\_HEX\_LENGTH*](../variables/pubkey_hex_length.md)\>
 
-Defined in: [bee-js/src/types/index.ts:23](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L23)
+Defined in: [bee-js/src/types/index.ts:35](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L35)

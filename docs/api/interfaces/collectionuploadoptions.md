@@ -24,7 +24,7 @@ alter default options of axios HTTP client
 
 Inherited from: [UploadOptions](uploadoptions.md).[axiosOptions](uploadoptions.md#axiosoptions)
 
-Defined in: [bee-js/src/types/index.ts:42](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L42)
+Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L59)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[encrypt](uploadoptions.md#encrypt)
 
-Defined in: [bee-js/src/types/index.ts:39](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L39)
+Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L56)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • `Optional` **errorDocument**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:52](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L52)
+Defined in: [bee-js/src/types/index.ts:69](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L69)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • `Optional` **indexDocument**: *undefined* \| *string*
 
-Defined in: [bee-js/src/types/index.ts:51](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L51)
+Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L68)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[pin](uploadoptions.md#pin)
 
-Defined in: [bee-js/src/types/index.ts:38](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L38)
+Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L55)
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 Inherited from: [UploadOptions](uploadoptions.md).[tag](uploadoptions.md#tag)
 
-Defined in: [bee-js/src/types/index.ts:40](https://github.com/ethersphere/bee-js/blob/7260ee1/src/types/index.ts#L40)
+Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L57)
