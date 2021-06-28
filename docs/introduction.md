@@ -17,7 +17,6 @@ There is a vibrant and buzzing community behind Swarm, get involved in one of ou
 
 - [official Swarm website](http://swarm.ethereum.org).
 - [Discord room](https://discord.gg/ykCupZMuww).
-- [Beehive Chat on Mattermost](https://beehive.ethswarm.org/).
 - [Twitter @ethswarm](https://twitter.com/ethswarm).
 - [reddit channel](https://www.reddit.com/r/ethswarm/).
 
