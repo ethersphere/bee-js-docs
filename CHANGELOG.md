@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.12.0...v0.13.0) (2021-06-28)
+
+
+### Features
+
+* postage stamps and other tweaks ([#67](https://www.github.com/ethersphere/bee-js-docs/issues/67)) ([22a6e2c](https://www.github.com/ethersphere/bee-js-docs/commit/22a6e2ca5b6ea7c9a801fab63a6c339e1831daf1))
+
 ## [0.12.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.11.0...v0.12.0) (2021-06-09)
 
 
