@@ -2,20 +2,20 @@
 id: "collection"
 title: "Type alias: Collection<T>"
 sidebar_label: "Collection"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
 
-# Type alias: Collection<T\>
-
-Ƭ **Collection**<T\>: [*CollectionEntry*](../interfaces/collectionentry.md)<T\>[]
+Ƭ **Collection**<`T`\>: [`CollectionEntry`](../interfaces/collectionentry.md)<`T`\>[]
 
 Represents Collections
 
-#### Type parameters:
+#### Type parameters
 
-Name |
-:------ |
-`T` |
+| Name |
+| :------ |
+| `T` |
 
-Defined in: [bee-js/src/types/index.ts:129](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L129)
+#### Defined in
+
+[bee-js/src/types/index.ts:228](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L228)

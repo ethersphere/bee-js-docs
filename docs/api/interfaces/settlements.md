@@ -2,32 +2,36 @@
 id: "settlements"
 title: "Interface: Settlements"
 sidebar_label: "Settlements"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: Settlements
 
 ## Properties
 
 ### peer
 
-• **peer**: *string*
+• **peer**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:5](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L5)
+#### Defined in
+
+[bee-js/src/types/debug.ts:5](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L5)
 
 ___
 
 ### received
 
-• **received**: *bigint*
+• **received**: [`NumberString`](../types/numberstring.md)
 
-Defined in: [bee-js/src/types/debug.ts:6](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L6)
+#### Defined in
+
+[bee-js/src/types/debug.ts:6](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L6)
 
 ___
 
 ### sent
 
-• **sent**: *bigint*
+• **sent**: [`NumberString`](../types/numberstring.md)
 
-Defined in: [bee-js/src/types/debug.ts:7](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L7)
+#### Defined in
+
+[bee-js/src/types/debug.ts:7](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L7)

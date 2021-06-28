@@ -3,31 +3,32 @@ id: "utils.bytes.bytesatoffset"
 title: "Function: bytesAtOffset"
 sidebar_label: "bytesAtOffset"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Function: bytesAtOffset
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).bytesAtOffset
 
-▸ **bytesAtOffset**<Length\>(`data`: Uint8Array, `offset`: *number*, `length`: Length): [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
+▸ **bytesAtOffset**<`Length`\>(`data`, `offset`, `length`): [`Bytes`](../interfaces/utils.bytes.bytes.md)<`Length`\>
 
 Return `length` bytes starting from `offset`
 
-#### Type parameters:
+#### Type parameters
 
-Name | Type |
-:------ | :------ |
-`Length` | *number* |
+| Name | Type |
+| :------ | :------ |
+| `Length` | extends `number` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`data` | Uint8Array | The original data   |
-`offset` | *number* | The offset to start from   |
-`length` | Length | The length of data to be returned    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Uint8Array` | The original data |
+| `offset` | `number` | The offset to start from |
+| `length` | `Length` | The length of data to be returned |
 
-**Returns:** [*Bytes*](../interfaces/utils.bytes.bytes.md)<Length\>
+#### Returns
 
-Defined in: [bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/bytes.ts#L91)
+[`Bytes`](../interfaces/utils.bytes.bytes.md)<`Length`\>
+
+#### Defined in
+
+[bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L91)

@@ -3,21 +3,16 @@ id: "utils.bytes"
 title: "Namespace: Bytes"
 sidebar_label: "Bytes"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Namespace: Bytes
 
 [Utils](utils.md).Bytes
 
-## Table of contents
-
-### Interfaces
+## Interfaces
 
 - [Bytes](../interfaces/utils.bytes.bytes.md)
 - [FlexBytes](../interfaces/utils.bytes.flexbytes.md)
 
-### Functions
+## Functions
 
 - [assertBytes](../functions/utils.bytes.assertbytes.md)
 - [assertFlexBytes](../functions/utils.bytes.assertflexbytes.md)

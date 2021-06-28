@@ -2,54 +2,56 @@
 id: "pssmessagehandler"
 title: "Interface: PssMessageHandler"
 sidebar_label: "PssMessageHandler"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: PssMessageHandler
 
 ## Properties
 
 ### onError
 
-• **onError**: (`error`: [*BeeError*](../classes/beeerror.md), `subscription`: [*PssSubscription*](psssubscription.md)) =\> *void*
+• **onError**: (`error`: [`BeeError`](../classes/beeerror.md), `subscription`: [`PssSubscription`](psssubscription.md)) =\> `void`
 
-#### Type declaration:
+#### Type declaration
 
-▸ (`error`: [*BeeError*](../classes/beeerror.md), `subscription`: [*PssSubscription*](psssubscription.md)): *void*
+▸ (`error`, `subscription`): `void`
 
-#### Parameters:
+##### Parameters
 
-Name | Type |
-:------ | :------ |
-`error` | [*BeeError*](../classes/beeerror.md) |
-`subscription` | [*PssSubscription*](psssubscription.md) |
+| Name | Type |
+| :------ | :------ |
+| `error` | [`BeeError`](../classes/beeerror.md) |
+| `subscription` | [`PssSubscription`](psssubscription.md) |
 
-**Returns:** *void*
+##### Returns
 
-Defined in: [bee-js/src/types/index.ts:138](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L138)
+`void`
 
-Defined in: [bee-js/src/types/index.ts:138](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L138)
+#### Defined in
+
+[bee-js/src/types/index.ts:237](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L237)
 
 ___
 
 ### onMessage
 
-• **onMessage**: (`message`: [*Data*](data.md), `subscription`: [*PssSubscription*](psssubscription.md)) =\> *void*
+• **onMessage**: (`message`: [`Data`](data.md), `subscription`: [`PssSubscription`](psssubscription.md)) =\> `void`
 
-#### Type declaration:
+#### Type declaration
 
-▸ (`message`: [*Data*](data.md), `subscription`: [*PssSubscription*](psssubscription.md)): *void*
+▸ (`message`, `subscription`): `void`
 
-#### Parameters:
+##### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | [*Data*](data.md) |
-`subscription` | [*PssSubscription*](psssubscription.md) |
+| Name | Type |
+| :------ | :------ |
+| `message` | [`Data`](data.md) |
+| `subscription` | [`PssSubscription`](psssubscription.md) |
 
-**Returns:** *void*
+##### Returns
 
-Defined in: [bee-js/src/types/index.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L137)
+`void`
 
-Defined in: [bee-js/src/types/index.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L137)
+#### Defined in
+
+[bee-js/src/types/index.ts:236](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L236)

@@ -2,24 +2,26 @@
 id: "health"
 title: "Interface: Health"
 sidebar_label: "Health"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: Health
 
 ## Properties
 
 ### status
 
-• **status**: *ok*
+• **status**: ``"ok"``
 
-Defined in: [bee-js/src/types/debug.ts:93](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L93)
+#### Defined in
+
+[bee-js/src/types/debug.ts:93](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L93)
 
 ___
 
 ### version
 
-• **version**: *string*
+• **version**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:94](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L94)
+#### Defined in
+
+[bee-js/src/types/debug.ts:94](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L94)

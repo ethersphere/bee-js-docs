@@ -2,72 +2,130 @@
 id: "collectionuploadoptions"
 title: "Interface: CollectionUploadOptions"
 sidebar_label: "CollectionUploadOptions"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: CollectionUploadOptions
 
 ## Hierarchy
 
-* [*UploadOptions*](uploadoptions.md)
+- [`UploadOptions`](uploadoptions.md)
 
-  ↳ **CollectionUploadOptions**
+  ↳ **`CollectionUploadOptions`**
 
 ## Properties
 
 ### axiosOptions
 
-• `Optional` **axiosOptions**: *undefined* \| AxiosRequestConfig
+• `Optional` **axiosOptions**: `AxiosRequestConfig`
 
-alter default options of axios HTTP client
+Alter default options of axios HTTP client
 
-Inherited from: [UploadOptions](uploadoptions.md).[axiosOptions](uploadoptions.md#axiosoptions)
+#### Inherited from
 
-Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L59)
+[UploadOptions](uploadoptions.md).[axiosOptions](uploadoptions.md#axiosoptions)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L99)
 
 ___
 
 ### encrypt
 
-• `Optional` **encrypt**: *undefined* \| *boolean*
+• `Optional` **encrypt**: `boolean`
 
-Inherited from: [UploadOptions](uploadoptions.md).[encrypt](uploadoptions.md#encrypt)
+Will encrypt the uploaded data and return longer hash which also includes the decryption key.
 
-Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L56)
+**Warning! Not allowed when node is in Gateway mode!**
+
+**`see`** [Bee docs - Store with Encryption](https://docs.ethswarm.org/docs/access-the-swarm/store-with-encryption)
+
+**`see`** [Bee API reference - `POST /bzz`](https://docs.ethswarm.org/api/#tag/Collection/paths/~1bzz/post)
+
+**`see`** Reference
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[encrypt](uploadoptions.md#encrypt)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L87)
 
 ___
 
 ### errorDocument
 
-• `Optional` **errorDocument**: *undefined* \| *string*
+• `Optional` **errorDocument**: `string`
 
-Defined in: [bee-js/src/types/index.ts:69](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L69)
+Configure custom error document to be returned when a specified path can not be found in collection.
+
+**`see`** [Bee docs - Upload a directory](https://docs.ethswarm.org/docs/access-the-swarm/upload-a-directory)
+
+**`see`** [Bee API reference - `POST /bzz`](https://docs.ethswarm.org/api/#tag/File)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:133](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L133)
 
 ___
 
 ### indexDocument
 
-• `Optional` **indexDocument**: *undefined* \| *string*
+• `Optional` **indexDocument**: `string`
 
-Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L68)
+Default file to be returned when the root hash of collection is accessed.
+
+**`see`** [Bee docs - Upload a directory](https://docs.ethswarm.org/docs/access-the-swarm/upload-a-directory)
+
+**`see`** [Bee API reference - `POST /bzz`](https://docs.ethswarm.org/api/#tag/File)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:125](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L125)
 
 ___
 
 ### pin
 
-• `Optional` **pin**: *undefined* \| *boolean*
+• `Optional` **pin**: `boolean`
 
-Inherited from: [UploadOptions](uploadoptions.md).[pin](uploadoptions.md#pin)
+Will pin the data locally in the Bee node as well.
 
-Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L55)
+Locally pinned data is possible to reupload to network if it disappear.
+
+**Warning! Not allowed when node is in Gateway mode!**
+
+**`see`** [Bee docs - Pinning](https://docs.ethswarm.org/docs/access-the-swarm/pinning)
+
+**`see`** [Bee API reference - `POST /bzz`](https://docs.ethswarm.org/api/#tag/Collection/paths/~1bzz/post)
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[pin](uploadoptions.md#pin)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:76](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L76)
 
 ___
 
 ### tag
 
-• `Optional` **tag**: *undefined* \| *number*
+• `Optional` **tag**: `number`
 
-Inherited from: [UploadOptions](uploadoptions.md).[tag](uploadoptions.md#tag)
+Tags keep track of syncing the data with network. This option allows attach existing Tag UUID to the uploaded data.
 
-Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L57)
+**`see`** [Bee API reference - `POST /bzz`](https://docs.ethswarm.org/api/#tag/Collection/paths/~1bzz/post)
+
+**`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
+
+**`link`** Tag
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[tag](uploadoptions.md#tag)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:96](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L96)

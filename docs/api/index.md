@@ -2,20 +2,16 @@
 id: "index"
 title: "@ethersphere/bee-js"
 slug: "/api"
-sidebar_label: "Table of contents"
+sidebar_label: "Exports"
+sidebar_position: 0.5
 custom_edit_url: null
-hide_title: true
 ---
 
-# @ethersphere/bee-js
-
-## Table of contents
-
-### Namespaces
+## Namespaces
 
 - [Utils](modules/utils.md)
 
-### Classes
+## Classes
 
 - [Bee](classes/bee.md)
 - [BeeArgumentError](classes/beeargumenterror.md)
@@ -24,7 +20,7 @@ hide_title: true
 - [BeeRequestError](classes/beerequesterror.md)
 - [BeeResponseError](classes/beeresponseerror.md)
 
-### Interfaces
+## Interfaces
 
 - [AllSettlements](interfaces/allsettlements.md)
 - [BalanceResponse](interfaces/balanceresponse.md)
@@ -72,7 +68,7 @@ hide_title: true
 - [UploadHeaders](interfaces/uploadheaders.md)
 - [UploadOptions](interfaces/uploadoptions.md)
 
-### Type aliases
+## Type aliases
 
 - [Address](types/address.md)
 - [AddressPrefix](types/addressprefix.md)
@@ -82,6 +78,7 @@ hide_title: true
 - [BrandedType](types/brandedtype.md)
 - [Collection](types/collection.md)
 - [FlavoredType](types/flavoredtype.md)
+- [NumberString](types/numberstring.md)
 - [PrivateKeyBytes](types/privatekeybytes.md)
 - [PublicKey](types/publickey.md)
 - [Reference](types/reference.md)
@@ -89,7 +86,7 @@ hide_title: true
 - [Signer](types/signer.md)
 - [Topic](types/topic.md)
 
-### Variables
+## Variables
 
 - [ADDRESS\_HEX\_LENGTH](variables/address_hex_length.md)
 - [BATCH\_ID\_HEX\_LENGTH](variables/batch_id_hex_length.md)

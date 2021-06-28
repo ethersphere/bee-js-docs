@@ -2,13 +2,11 @@
 id: "signer"
 title: "Type alias: Signer"
 sidebar_label: "Signer"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
 
-# Type alias: Signer
-
-Ƭ **Signer**: *object*
+Ƭ **Signer**: `Object`
 
 Interface for implementing Ethereum compatible signing.
 
@@ -28,11 +26,13 @@ For example see the hashWithEthereumPrefix() function.
 
 **`see`** hashWithEthereumPrefix
 
-#### Type declaration:
+#### Type declaration
 
-Name | Type |
-:------ | :------ |
-`address` | [*EthAddress*](utils.eth.ethaddress.md) |
-`sign` | SyncSigner \| AsyncSigner |
+| Name | Type |
+| :------ | :------ |
+| `address` | [`EthAddress`](utils.eth.ethaddress.md) |
+| `sign` | `SyncSigner` \| `AsyncSigner` |
 
-Defined in: [bee-js/src/types/index.ts:295](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L295)
+#### Defined in
+
+[bee-js/src/types/index.ts:414](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L414)

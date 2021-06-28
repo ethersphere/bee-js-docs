@@ -2,40 +2,46 @@
 id: "uploadheaders"
 title: "Interface: UploadHeaders"
 sidebar_label: "UploadHeaders"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: UploadHeaders
 
 ## Properties
 
 ### swarm-encrypt
 
-• `Optional` **swarm-encrypt**: *undefined* \| *string*
+• `Optional` **swarm-encrypt**: `string`
 
-Defined in: [bee-js/src/types/index.ts:73](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L73)
+#### Defined in
+
+[bee-js/src/types/index.ts:137](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L137)
 
 ___
 
 ### swarm-pin
 
-• `Optional` **swarm-pin**: *undefined* \| *string*
+• `Optional` **swarm-pin**: `string`
 
-Defined in: [bee-js/src/types/index.ts:72](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L72)
+#### Defined in
+
+[bee-js/src/types/index.ts:136](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L136)
 
 ___
 
 ### swarm-postage-batch-id
 
-• `Optional` **swarm-postage-batch-id**: *undefined* \| *string*
+• `Optional` **swarm-postage-batch-id**: `string`
 
-Defined in: [bee-js/src/types/index.ts:75](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L75)
+#### Defined in
+
+[bee-js/src/types/index.ts:139](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L139)
 
 ___
 
 ### swarm-tag
 
-• `Optional` **swarm-tag**: *undefined* \| *string*
+• `Optional` **swarm-tag**: `string`
 
-Defined in: [bee-js/src/types/index.ts:74](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L74)
+#### Defined in
+
+[bee-js/src/types/index.ts:138](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L138)

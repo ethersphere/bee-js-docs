@@ -15,10 +15,10 @@ We'd love you to join us! Are you up to the challenge of helping us to create be
 ## Community
 There is a vibrant and buzzing community behind Swarm, get involved in one of our group channels.
 
-- [official Swarm website](http://swarm.ethereum.org).
+- [Official Swarm website](http://swarm.ethereum.org).
 - [Discord room](https://discord.gg/ykCupZMuww).
 - [Twitter @ethswarm](https://twitter.com/ethswarm).
-- [reddit channel](https://www.reddit.com/r/ethswarm/).
+- [Reddit channel](https://www.reddit.com/r/ethswarm/).
 
 ## Reporting a bug
 If anything isn't working, [get in touch and let us know!](https://github.com/ethersphere/bee-js/issues) Every Bee is important to us and we'll get right to work on fixing it for you as soon as possible. 🐝
