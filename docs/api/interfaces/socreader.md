@@ -2,42 +2,40 @@
 id: "socreader"
 title: "Interface: SOCReader"
 sidebar_label: "SOCReader"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: SOCReader
 
 Interface for downloading single owner chunks
 
 ## Hierarchy
 
-* **SOCReader**
+- **`SOCReader`**
 
-  ↳ [*SOCWriter*](socwriter.md)
+  ↳ [`SOCWriter`](socwriter.md)
 
 ## Properties
 
 ### download
 
-• **download**: (`identifier`: Identifier) =\> *Promise*<SingleOwnerChunk\>
+• **download**: (`identifier`: `Identifier`) =\> `Promise`<`SingleOwnerChunk`\>
+
+#### Type declaration
+
+▸ (`identifier`): `Promise`<`SingleOwnerChunk`\>
 
 Downloads a single owner chunk
 
-**`param`** The identifier of the chunk
+##### Parameters
 
-#### Type declaration:
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `identifier` | `Identifier` | The identifier of the chunk |
 
-▸ (`identifier`: Identifier): *Promise*<SingleOwnerChunk\>
+##### Returns
 
-#### Parameters:
+`Promise`<`SingleOwnerChunk`\>
 
-Name | Type |
-:------ | :------ |
-`identifier` | Identifier |
+#### Defined in
 
-**Returns:** *Promise*<SingleOwnerChunk\>
-
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
-
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
+[bee-js/src/types/index.ts:319](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L319)

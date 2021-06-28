@@ -2,99 +2,152 @@
 id: "beeerror"
 title: "Class: BeeError"
 sidebar_label: "BeeError"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Class: BeeError
 
 ## Hierarchy
 
-* *Error*
+- `Error`
 
-  ↳ **BeeError**
+  ↳ **`BeeError`**
 
-  ↳↳ [*BeeArgumentError*](beeargumenterror.md)
+  ↳↳ [`BeeArgumentError`](beeargumenterror.md)
 
-  ↳↳ [*BeeRequestError*](beerequesterror.md)
+  ↳↳ [`BeeRequestError`](beerequesterror.md)
 
-  ↳↳ [*BeeResponseError*](beeresponseerror.md)
+  ↳↳ [`BeeResponseError`](beeresponseerror.md)
 
 ## Constructors
 
 ### constructor
 
-\+ **new BeeError**(`message`: *string*): [*BeeError*](beeerror.md)
+• **new BeeError**(`message`)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
 
-**Returns:** [*BeeError*](beeerror.md)
+#### Overrides
 
-Defined in: [bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/error.ts#L1)
+Error.constructor
+
+#### Defined in
+
+[bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/error.ts#L1)
 
 ## Properties
 
 ### message
 
-• **message**: *string*
+• **message**: `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
+#### Inherited from
+
+Error.message
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-• **name**: *string*
+• **name**: `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:973
+#### Inherited from
+
+Error.name
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
 ### stack
 
-• `Optional` **stack**: *undefined* \| *string*
+• `Optional` **stack**: `string`
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
+#### Inherited from
+
+Error.stack
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
 ### prepareStackTrace
 
-▪ `Optional` `Static` **prepareStackTrace**: *undefined* \| (`err`: Error, `stackTraces`: CallSite[]) =\> *any*
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) =\> `any`
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
 
-**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+##### Parameters
 
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:11
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Error.prepareStackTrace
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:11
 
 ___
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: *number*
+▪ `Static` **stackTraceLimit**: `number`
 
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:13
+#### Inherited from
+
+Error.stackTraceLimit
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:13
 
 ## Methods
 
 ### captureStackTrace
 
-▸ `Static`**captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
+| `constructorOpt?` | `Function` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:4
+`void`
+
+#### Inherited from
+
+Error.captureStackTrace
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:4

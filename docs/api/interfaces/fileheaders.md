@@ -2,38 +2,42 @@
 id: "fileheaders"
 title: "Interface: FileHeaders"
 sidebar_label: "FileHeaders"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: FileHeaders
 
 ## Hierarchy
 
-* **FileHeaders**
+- **`FileHeaders`**
 
-  ↳ [*FileData*](filedata.md)
+  ↳ [`FileData`](filedata.md)
 
 ## Properties
 
 ### contentType
 
-• `Optional` **contentType**: *undefined* \| *string*
+• `Optional` **contentType**: `string`
 
-Defined in: [bee-js/src/types/index.ts:90](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L90)
+#### Defined in
+
+[bee-js/src/types/index.ts:178](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L178)
 
 ___
 
 ### name
 
-• `Optional` **name**: *undefined* \| *string*
+• `Optional` **name**: `string`
 
-Defined in: [bee-js/src/types/index.ts:88](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L88)
+#### Defined in
+
+[bee-js/src/types/index.ts:176](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L176)
 
 ___
 
 ### tagUid
 
-• `Optional` **tagUid**: *undefined* \| *number*
+• `Optional` **tagUid**: `number`
 
-Defined in: [bee-js/src/types/index.ts:89](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L89)
+#### Defined in
+
+[bee-js/src/types/index.ts:177](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L177)

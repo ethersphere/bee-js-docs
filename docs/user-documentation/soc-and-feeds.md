@@ -84,11 +84,12 @@ We suggest using either ephemeral private keys (e.g. randomly generated) or the 
 Using the writer interface is similar to using the reader:
 
 ```js
+const postageBatchId = await bee.createPostageBatch("100", 17)
 const signer = '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd'
 const socWriter = bee.makeSOCWriter(signer)
 const identifier = '0000000000000000000000000000000000000000000000000000000000000000'
 const data = new Uint8Array([1, 2, 3])
-const response = await socWriter.upload(identifier, data)
+const response = await socWriter.upload(postageBatchId, identifier, data)
 ```
 
 ## Feeds
@@ -127,7 +128,10 @@ will be used as default `Signer`.
 :::
 
 ```js
+const postageBatchId = await bee.createPostageBatch("100", 17)
+
 await bee.setJsonFeed(
+  postageBatchId,
   'some cool arbitraty topic', 
   { some: ['cool', { json: 'compatible' }, 'object']}, 
   { signer: '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' }
@@ -163,12 +167,13 @@ console.log(feedUpdate.reference) // prints the latest reference stored in the f
 When writing a feed, typically an immutable content is uploaded first, and then its reference is updated in the feed. The `signer` here is the same as with [writing the SOCs](#writing-socs) (with the same caveats!).
 
 ```js
+const postageBatchId = await bee.createPostageBatch("100", 17)
 const data = new Uint8Array([1, 2, 3])
 const reference = await bee.uploadData(data)
 const topic = '0000000000000000000000000000000000000000000000000000000000000000'
 const signer = '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd'
 const feedWriter = bee.makeFeedWriter('sequence', topic, signer)
-const response = await feedWriter.upload(reference)
+const response = await feedWriter.upload(postageBatchId, reference)
 ```
 
 ### Using feed manifest
@@ -178,9 +183,10 @@ One of the most common use cases for feeds is to store mutable data in an immuta
 Swarm provides a feature called "feed manifests" for this use case. It is a content-addressed chunk that stores a feed's definition (the `type`, the `topic`, and the `owner`). When it is looked up using the `bzz` endpoint, Swarm recognizes that it refers to a feed and continues the lookup according to the feed parameters.
 
 ```js
+const postageBatchId = await bee.createPostageBatch("100", 17)
 const topic = '0000000000000000000000000000000000000000000000000000000000000000'
 const owner = '0x8d3766440f0d7b949a5e32995d09619a7f86e632'
-const reference = bee.createFeedManifest('sequence', topic, owner)
+const reference = bee.createFeedManifest(postageBatchId, 'sequence', topic, owner)
 ```
 
 This creates the feed manifest chunk on Swarm. You can use the returned reference to look up with the `/bzz` endpoint or use it with ENS.

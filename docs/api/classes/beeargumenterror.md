@@ -2,108 +2,153 @@
 id: "beeargumenterror"
 title: "Class: BeeArgumentError"
 sidebar_label: "BeeArgumentError"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Class: BeeArgumentError
 
 ## Hierarchy
 
-* [*BeeError*](beeerror.md)
+- [`BeeError`](beeerror.md)
 
-  ↳ **BeeArgumentError**
+  ↳ **`BeeArgumentError`**
 
 ## Constructors
 
 ### constructor
 
-\+ **new BeeArgumentError**(`message`: *string*, `value`: *unknown*): [*BeeArgumentError*](beeargumenterror.md)
+• **new BeeArgumentError**(`message`, `value`)
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`message` | *string* |
-`value` | *unknown* |
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `value` | `unknown` |
 
-**Returns:** [*BeeArgumentError*](beeargumenterror.md)
+#### Overrides
 
-Inherited from: [BeeError](beeerror.md)
+[BeeError](beeerror.md).[constructor](beeerror.md#constructor)
 
-Defined in: [bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/error.ts#L7)
+#### Defined in
+
+[bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/error.ts#L7)
 
 ## Properties
 
 ### message
 
-• **message**: *string*
+• **message**: `string`
 
-Inherited from: [BeeError](beeerror.md).[message](beeerror.md#message)
+#### Inherited from
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:974
+[BeeError](beeerror.md).[message](beeerror.md#message)
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
 ### name
 
-• **name**: *string*
+• **name**: `string`
 
-Inherited from: [BeeError](beeerror.md).[name](beeerror.md#name)
+#### Inherited from
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:973
+[BeeError](beeerror.md).[name](beeerror.md#name)
 
-___
+#### Defined in
 
-### prepareStackTrace
-
-• `Optional` **prepareStackTrace**: *undefined* \| (`err`: Error, `stackTraces`: CallSite[]) =\> *any*
-
-Optional override for formatting stack traces
-
-**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:11
+node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
 ### stack
 
-• `Optional` **stack**: *undefined* \| *string*
+• `Optional` **stack**: `string`
 
-Inherited from: [BeeError](beeerror.md).[stack](beeerror.md#stack)
+#### Inherited from
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:975
+[BeeError](beeerror.md).[stack](beeerror.md#stack)
 
-___
+#### Defined in
 
-### stackTraceLimit
-
-• **stackTraceLimit**: *number*
-
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:13
+node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
 ### value
 
-• `Readonly` **value**: *unknown*
+• `Readonly` **value**: `unknown`
+
+___
+
+### prepareStackTrace
+
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) =\> `any`
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
+
+Optional override for formatting stack traces
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+[BeeError](beeerror.md).[prepareStackTrace](beeerror.md#preparestacktrace)
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:11
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: `number`
+
+#### Inherited from
+
+[BeeError](beeerror.md).[stackTraceLimit](beeerror.md#stacktracelimit)
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:13
 
 ## Methods
 
 ### captureStackTrace
 
-▸ **captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`targetObject` | *object* |
-`constructorOpt?` | Function |
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
+| `constructorOpt?` | `Function` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: bee-js/node_modules/@types/node/globals.d.ts:4
+`void`
+
+#### Inherited from
+
+[BeeError](beeerror.md).[captureStackTrace](beeerror.md#capturestacktrace)
+
+#### Defined in
+
+bee-js/node_modules/@types/node/globals.d.ts:4

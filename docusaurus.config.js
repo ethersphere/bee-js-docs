@@ -6,7 +6,14 @@ module.exports = {
   baseUrl: '/',
   plugins: [
     require.resolve('docusaurus-lunr-search'),
-    // 'docusaurus-plugin-typedoc',
+    // [
+    //   'docusaurus-plugin-typedoc',
+    //   {
+    //     sidebar: {
+    //       sidebarFile: null
+    //     }
+    //   }
+    // ]
   ],
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',
@@ -60,8 +67,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Mattermost',
-              href: 'https://beehive.ethswarm.org/',
+              label: 'Discord',
+              href: 'https://discord.gg/ykCupZMuww',
             },
             {
               label: 'Reddit',
@@ -92,7 +99,7 @@ module.exports = {
     announcementBar: {
       id: 'bee_announcements',
       content:
-        '⭐️ Proudly announcing the Bee-JS Beta Release! ⭐️',
+        '⭐️ Proudly announcing the stable Bee-JS Release! ⭐️',
       backgroundColor: '#dd7200', // Defaults to `#fff`.
       textColor: '#242424', // Defaults to `#000`.
     },

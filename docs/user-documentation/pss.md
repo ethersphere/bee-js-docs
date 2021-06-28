@@ -14,6 +14,11 @@ PSS provides a pub-sub facility that can be used for a variety of tasks. Nodes a
 
 The intended use of PSS is to communicate privately with a publicly known identity (to for example initiate further communication directly). Due to the cost of mining the trojan chunks, it is not recommended to use as an instant messaging system.
 
+:::warn Light nodes are unreachable
+Be aware! You can not send message to Light nodes! This is because light nodes does not fully participate
+in the data exchange in Swarm network and hence the message won't arrive to them.
+:::
+
 ## Getting the relevant data
 When you start `bee`, you may find all the necessary information in the log:
 ```sh

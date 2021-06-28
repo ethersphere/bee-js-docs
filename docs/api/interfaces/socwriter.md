@@ -2,77 +2,73 @@
 id: "socwriter"
 title: "Interface: SOCWriter"
 sidebar_label: "SOCWriter"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: SOCWriter
 
 Interface for downloading and uploading single owner chunks
 
 ## Hierarchy
 
-* [*SOCReader*](socreader.md)
+- [`SOCReader`](socreader.md)
 
-  ↳ **SOCWriter**
+  ↳ **`SOCWriter`**
 
 ## Properties
 
 ### download
 
-• **download**: (`identifier`: Identifier) =\> *Promise*<SingleOwnerChunk\>
+• **download**: (`identifier`: `Identifier`) =\> `Promise`<`SingleOwnerChunk`\>
+
+#### Type declaration
+
+▸ (`identifier`): `Promise`<`SingleOwnerChunk`\>
 
 Downloads a single owner chunk
 
-**`param`** The identifier of the chunk
+##### Parameters
 
-#### Type declaration:
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `identifier` | `Identifier` | The identifier of the chunk |
 
-▸ (`identifier`: Identifier): *Promise*<SingleOwnerChunk\>
+##### Returns
 
-#### Parameters:
+`Promise`<`SingleOwnerChunk`\>
 
-Name | Type |
-:------ | :------ |
-`identifier` | Identifier |
+#### Inherited from
 
-**Returns:** *Promise*<SingleOwnerChunk\>
+[SOCReader](socreader.md).[download](socreader.md#download)
 
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
+#### Defined in
 
-Inherited from: [SOCReader](socreader.md).[download](socreader.md#download)
-
-Defined in: [bee-js/src/types/index.ts:220](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L220)
+[bee-js/src/types/index.ts:319](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L319)
 
 ___
 
 ### upload
 
-• **upload**: (`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)) =\> *Promise*<[*Reference*](../types/reference.md)\>
+• **upload**: (`postageBatchId`: `string` \| [`BatchId`](../types/batchid.md), `identifier`: `Identifier`, `data`: `Uint8Array`, `options?`: [`UploadOptions`](uploadoptions.md)) =\> `Promise`<[`Reference`](../types/reference.md)\>
+
+#### Type declaration
+
+▸ (`postageBatchId`, `identifier`, `data`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
 
 Uploads a single owner chunk
 
-**`param`** The identifier of the chunk
+##### Parameters
 
-**`param`** The chunk payload data
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | - |
+| `identifier` | `Identifier` | The identifier of the chunk |
+| `data` | `Uint8Array` | The chunk payload data |
+| `options?` | [`UploadOptions`](uploadoptions.md) | Upload options |
 
-**`param`** Upload options
+##### Returns
 
-#### Type declaration:
+`Promise`<[`Reference`](../types/reference.md)\>
 
-▸ (`postageBatchId`: *string* \| [*BatchId*](../types/batchid.md), `identifier`: Identifier, `data`: *Uint8Array*, `options?`: [*UploadOptions*](uploadoptions.md)): *Promise*<[*Reference*](../types/reference.md)\>
+#### Defined in
 
-#### Parameters:
-
-Name | Type |
-:------ | :------ |
-`postageBatchId` | *string* \| [*BatchId*](../types/batchid.md) |
-`identifier` | Identifier |
-`data` | *Uint8Array* |
-`options?` | [*UploadOptions*](uploadoptions.md) |
-
-**Returns:** *Promise*<[*Reference*](../types/reference.md)\>
-
-Defined in: [bee-js/src/types/index.ts:234](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L234)
-
-Defined in: [bee-js/src/types/index.ts:234](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L234)
+[bee-js/src/types/index.ts:333](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L333)

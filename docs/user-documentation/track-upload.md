@@ -34,6 +34,10 @@ interface Tag {
 
 ## Create tag
 
+:::warning Forbidden on Gateways
+If you are using a node that is in Gateway mode then this operation is not allowed!
+:::
+
 Creating a tag is easy. Just use the `createTag` function.
 
 <Tabs
@@ -99,6 +103,10 @@ await bee.uploadFilesToCollection("./", true, { tag })
 </Tabs>
 
 ## Retrieve tag
+
+:::warning Forbidden on Gateways
+If you are using a node that is in Gateway mode then this operation is not allowed!
+:::
 
 Each time you want to check the upload status, you can use the `retrieveTag` function.
 

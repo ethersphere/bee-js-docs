@@ -2,32 +2,34 @@
 id: "psssubscription"
 title: "Interface: PssSubscription"
 sidebar_label: "PssSubscription"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: PssSubscription
 
 ## Properties
 
 ### cancel
 
-• **cancel**: () =\> *void*
+• **cancel**: () =\> `void`
 
-#### Type declaration:
+#### Type declaration
 
-▸ (): *void*
+▸ (): `void`
 
-**Returns:** *void*
+##### Returns
 
-Defined in: [bee-js/src/types/index.ts:133](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L133)
+`void`
 
-Defined in: [bee-js/src/types/index.ts:133](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L133)
+#### Defined in
+
+[bee-js/src/types/index.ts:232](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L232)
 
 ___
 
 ### topic
 
-• `Readonly` **topic**: *string*
+• `Readonly` **topic**: `string`
 
-Defined in: [bee-js/src/types/index.ts:132](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L132)
+#### Defined in
+
+[bee-js/src/types/index.ts:231](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L231)

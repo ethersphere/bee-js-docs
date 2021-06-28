@@ -3,10 +3,7 @@ id: "utils.bytes.flexbytes"
 title: "Interface: FlexBytes<Min, Max>"
 sidebar_label: "FlexBytes"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: FlexBytes<Min, Max\>
 
 [Utils](../modules/utils.md).[Bytes](../modules/utils.bytes.md).FlexBytes
 
@@ -20,621 +17,909 @@ compile time.
 
 ## Type parameters
 
-Name | Type |
-:------ | :------ |
-`Min` | *number* |
-`Max` | *number* |
+| Name | Type |
+| :------ | :------ |
+| `Min` | extends `number` |
+| `Max` | extends `number` |
 
 ## Hierarchy
 
-* *Uint8Array*
+- `Uint8Array`
 
-  ↳ **FlexBytes**
+  ↳ **`FlexBytes`**
 
 ## Properties
 
 ### BYTES\_PER\_ELEMENT
 
-• `Readonly` **BYTES\_PER\_ELEMENT**: *number*
+• `Readonly` **BYTES\_PER\_ELEMENT**: `number`
 
 The size in bytes of each element in the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2042
+#### Inherited from
+
+Uint8Array.BYTES\_PER\_ELEMENT
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2042
 
 ___
 
-### [Symbol.toStringTag]
+### [toStringTag]
 
-• `Readonly` **[Symbol.toStringTag]**: *Uint8Array*
+• `Readonly` **[toStringTag]**: ``"Uint8Array"``
 
-Defined in: node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:282
+#### Inherited from
+
+Uint8Array.\_\_@toStringTag@24
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:282
 
 ___
 
 ### \_\_max\_\_
 
-• `Readonly` **\_\_max\_\_**: Max
+• `Readonly` **\_\_max\_\_**: `Max`
 
-Defined in: [bee-js/src/utils/bytes.ts:25](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/bytes.ts#L25)
+#### Defined in
+
+[bee-js/src/utils/bytes.ts:25](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L25)
 
 ___
 
 ### \_\_min\_\_
 
-• `Readonly` **\_\_min\_\_**: Min
+• `Readonly` **\_\_min\_\_**: `Min`
 
-Defined in: [bee-js/src/utils/bytes.ts:24](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/bytes.ts#L24)
+#### Defined in
+
+[bee-js/src/utils/bytes.ts:24](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L24)
 
 ___
 
 ### buffer
 
-• `Readonly` **buffer**: ArrayBufferLike
+• `Readonly` **buffer**: `ArrayBufferLike`
 
 The ArrayBuffer instance referenced by the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2047
+#### Inherited from
+
+Uint8Array.buffer
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2047
 
 ___
 
 ### byteLength
 
-• `Readonly` **byteLength**: *number*
+• `Readonly` **byteLength**: `number`
 
 The length in bytes of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2052
+#### Inherited from
+
+Uint8Array.byteLength
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2052
 
 ___
 
 ### byteOffset
 
-• `Readonly` **byteOffset**: *number*
+• `Readonly` **byteOffset**: `number`
 
 The offset in bytes of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2057
+#### Inherited from
+
+Uint8Array.byteOffset
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2057
 
 ___
 
 ### length
 
-• `Readonly` **length**: *number*
+• `Readonly` **length**: `number`
 
 The length of the array.
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2156
+#### Inherited from
+
+Uint8Array.length
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2156
 
 ## Methods
 
-### [Symbol.iterator]
+### [iterator]
 
-▸ **[Symbol.iterator]**(): *IterableIterator*<number\>
+▸ **[iterator]**(): `IterableIterator`<`number`\>
 
-**Returns:** *IterableIterator*<number\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:279
+`IterableIterator`<`number`\>
+
+#### Inherited from
+
+Uint8Array.\_\_@iterator@81
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:279
 
 ___
 
 ### copyWithin
 
-▸ **copyWithin**(`target`: *number*, `start`: *number*, `end?`: *number*): [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+▸ **copyWithin**(`target`, `start`, `end?`): [`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
 
 Returns the this object after copying a section of the array identified by start and end
 to the same array starting at position target
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`target` | *number* | If target is negative, it is treated as length+target where length is the length of the array.   |
-`start` | *number* | If start is negative, it is treated as length+start. If end is negative, it is treated as length+end.   |
-`end?` | *number* | If not specified, length of the this object is used as its default value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `target` | `number` | If target is negative, it is treated as length+target where length is the length of the array. |
+| `start` | `number` | If start is negative, it is treated as length+start. If end is negative, it is treated as length+end. |
+| `end?` | `number` | If not specified, length of the this object is used as its default value. |
 
-**Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2068
+[`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
+
+#### Inherited from
+
+Uint8Array.copyWithin
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2068
 
 ___
 
 ### entries
 
-▸ **entries**(): *IterableIterator*<[*number*, *number*]\>
+▸ **entries**(): `IterableIterator`<[`number`, `number`]\>
 
 Returns an array of key, value pairs for every entry in the array
 
-**Returns:** *IterableIterator*<[*number*, *number*]\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:283
+`IterableIterator`<[`number`, `number`]\>
+
+#### Inherited from
+
+Uint8Array.entries
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:283
 
 ___
 
 ### every
 
-▸ **every**(`predicate`: (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *unknown*, `thisArg?`: *any*): *boolean*
+▸ **every**(`predicate`, `thisArg?`): `boolean`
 
 Determines whether all the members of an array satisfy the specified test.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`predicate` | (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *unknown* | A function that accepts up to three arguments. The every method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value false, or until the end of the array.   |
-`thisArg?` | *any* | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `predicate` | (`value`: `number`, `index`: `number`, `array`: `Uint8Array`) =\> `unknown` | A function that accepts up to three arguments. The every method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value false, or until the end of the array. |
+| `thisArg?` | `any` | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value. |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2078
+`boolean`
+
+#### Inherited from
+
+Uint8Array.every
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2078
 
 ___
 
 ### fill
 
-▸ **fill**(`value`: *number*, `start?`: *number*, `end?`: *number*): [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+▸ **fill**(`value`, `start?`, `end?`): [`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
 
 Returns the this object after filling the section identified by start and end with value
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`value` | *number* | value to fill array section with   |
-`start?` | *number* | index to start filling the array at. If start is negative, it is treated as length+start where length is the length of the array.   |
-`end?` | *number* | index to stop filling the array at. If end is negative, it is treated as length+end.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `number` | value to fill array section with |
+| `start?` | `number` | index to start filling the array at. If start is negative, it is treated as length+start where length is the length of the array. |
+| `end?` | `number` | index to stop filling the array at. If end is negative, it is treated as length+end. |
 
-**Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2088
+[`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
+
+#### Inherited from
+
+Uint8Array.fill
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2088
 
 ___
 
 ### filter
 
-▸ **filter**(`predicate`: (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *any*, `thisArg?`: *any*): *Uint8Array*
+▸ **filter**(`predicate`, `thisArg?`): `Uint8Array`
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`predicate` | (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *any* | A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.   |
-`thisArg?` | *any* | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `predicate` | (`value`: `number`, `index`: `number`, `array`: `Uint8Array`) =\> `any` | A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array. |
+| `thisArg?` | `any` | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value. |
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2097
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.filter
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2097
 
 ___
 
 ### find
 
-▸ **find**(`predicate`: (`value`: *number*, `index`: *number*, `obj`: *Uint8Array*) =\> *boolean*, `thisArg?`: *any*): *undefined* \| *number*
+▸ **find**(`predicate`, `thisArg?`): `undefined` \| `number`
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`predicate` | (`value`: *number*, `index`: *number*, `obj`: *Uint8Array*) =\> *boolean* | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, find immediately returns that element value. Otherwise, find returns undefined.   |
-`thisArg?` | *any* | If provided, it will be used as the this value for each invocation of predicate. If it is not provided, undefined is used instead.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `predicate` | (`value`: `number`, `index`: `number`, `obj`: `Uint8Array`) =\> `boolean` | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, find immediately returns that element value. Otherwise, find returns undefined. |
+| `thisArg?` | `any` | If provided, it will be used as the this value for each invocation of predicate. If it is not provided, undefined is used instead. |
 
-**Returns:** *undefined* \| *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2108
+`undefined` \| `number`
+
+#### Inherited from
+
+Uint8Array.find
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2108
 
 ___
 
 ### findIndex
 
-▸ **findIndex**(`predicate`: (`value`: *number*, `index`: *number*, `obj`: *Uint8Array*) =\> *boolean*, `thisArg?`: *any*): *number*
+▸ **findIndex**(`predicate`, `thisArg?`): `number`
 
 Returns the index of the first element in the array where predicate is true, and -1
 otherwise.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`predicate` | (`value`: *number*, `index`: *number*, `obj`: *Uint8Array*) =\> *boolean* | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1.   |
-`thisArg?` | *any* | If provided, it will be used as the this value for each invocation of predicate. If it is not provided, undefined is used instead.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `predicate` | (`value`: `number`, `index`: `number`, `obj`: `Uint8Array`) =\> `boolean` | find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1. |
+| `thisArg?` | `any` | If provided, it will be used as the this value for each invocation of predicate. If it is not provided, undefined is used instead. |
 
-**Returns:** *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2119
+`number`
+
+#### Inherited from
+
+Uint8Array.findIndex
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2119
 
 ___
 
 ### forEach
 
-▸ **forEach**(`callbackfn`: (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *void*, `thisArg?`: *any*): *void*
+▸ **forEach**(`callbackfn`, `thisArg?`): `void`
 
 Performs the specified action for each element in an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *void* | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.   |
-`thisArg?` | *any* | An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`value`: `number`, `index`: `number`, `array`: `Uint8Array`) =\> `void` | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| `thisArg?` | `any` | An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value. |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2128
+`void`
+
+#### Inherited from
+
+Uint8Array.forEach
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2128
 
 ___
 
 ### includes
 
-▸ **includes**(`searchElement`: *number*, `fromIndex?`: *number*): *boolean*
+▸ **includes**(`searchElement`, `fromIndex?`): `boolean`
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`searchElement` | *number* | The element to search for.   |
-`fromIndex?` | *number* | The position in this array at which to begin searching for searchElement.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `searchElement` | `number` | The element to search for. |
+| `fromIndex?` | `number` | The position in this array at which to begin searching for searchElement. |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es2016.array.include.d.ts:54
+`boolean`
+
+#### Inherited from
+
+Uint8Array.includes
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2016.array.include.d.ts:54
 
 ___
 
 ### indexOf
 
-▸ **indexOf**(`searchElement`: *number*, `fromIndex?`: *number*): *number*
+▸ **indexOf**(`searchElement`, `fromIndex?`): `number`
 
 Returns the index of the first occurrence of a value in an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`searchElement` | *number* | The value to locate in the array.   |
-`fromIndex?` | *number* | The array index at which to begin the search. If fromIndex is omitted, the  search starts at index 0.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `searchElement` | `number` | The value to locate in the array. |
+| `fromIndex?` | `number` | The array index at which to begin the search. If fromIndex is omitted, the  search starts at index 0. |
 
-**Returns:** *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2136
+`number`
+
+#### Inherited from
+
+Uint8Array.indexOf
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2136
 
 ___
 
 ### join
 
-▸ **join**(`separator?`: *string*): *string*
+▸ **join**(`separator?`): `string`
 
 Adds all the elements of an array separated by the specified separator string.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`separator?` | *string* | A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `separator?` | `string` | A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma. |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2143
+`string`
+
+#### Inherited from
+
+Uint8Array.join
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2143
 
 ___
 
 ### keys
 
-▸ **keys**(): *IterableIterator*<number\>
+▸ **keys**(): `IterableIterator`<`number`\>
 
 Returns an list of keys in the array
 
-**Returns:** *IterableIterator*<number\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:287
+`IterableIterator`<`number`\>
+
+#### Inherited from
+
+Uint8Array.keys
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:287
 
 ___
 
 ### lastIndexOf
 
-▸ **lastIndexOf**(`searchElement`: *number*, `fromIndex?`: *number*): *number*
+▸ **lastIndexOf**(`searchElement`, `fromIndex?`): `number`
 
 Returns the index of the last occurrence of a value in an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`searchElement` | *number* | The value to locate in the array.   |
-`fromIndex?` | *number* | The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `searchElement` | `number` | The value to locate in the array. |
+| `fromIndex?` | `number` | The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0. |
 
-**Returns:** *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2151
+`number`
+
+#### Inherited from
+
+Uint8Array.lastIndexOf
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2151
 
 ___
 
 ### map
 
-▸ **map**(`callbackfn`: (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *number*, `thisArg?`: *any*): *Uint8Array*
+▸ **map**(`callbackfn`, `thisArg?`): `Uint8Array`
 
 Calls a defined callback function on each element of an array, and returns an array that
 contains the results.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *number* | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.   |
-`thisArg?` | *any* | An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`value`: `number`, `index`: `number`, `array`: `Uint8Array`) =\> `number` | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| `thisArg?` | `any` | An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value. |
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2166
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.map
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2166
 
 ___
 
 ### reduce
 
-▸ **reduce**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*): *number*
+▸ **reduce**(`callbackfn`): `number`
 
 Calls the specified callback function for all the elements in an array. The return value of
 the callback function is the accumulated result, and is provided as an argument in the next
 call to the callback function.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number* | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.   |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`previousValue`: `number`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `number` | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
 
-**Returns:** *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2178
+`number`
 
-▸ **reduce**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*, `initialValue`: *number*): *number*
+#### Inherited from
 
-#### Parameters:
+Uint8Array.reduce
 
-Name | Type |
-:------ | :------ |
-`callbackfn` | (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number* |
-`initialValue` | *number* |
+#### Defined in
 
-**Returns:** *number*
+node_modules/typescript/lib/lib.es5.d.ts:2178
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2179
+▸ **reduce**(`callbackfn`, `initialValue`): `number`
 
-▸ **reduce**<U\>(`callbackfn`: (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U, `initialValue`: U): U
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callbackfn` | (`previousValue`: `number`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `number` |
+| `initialValue` | `number` |
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+Uint8Array.reduce
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2179
+
+▸ **reduce**<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Calls the specified callback function for all the elements in an array. The return value of
 the callback function is the accumulated result, and is provided as an argument in the next
 call to the callback function.
 
-#### Type parameters:
+#### Type parameters
 
-Name |
-:------ |
-`U` |
+| Name |
+| :------ |
+| `U` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.   |
-`initialValue` | U | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`previousValue`: `U`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `U` | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| `initialValue` | `U` | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
-**Returns:** U
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2191
+`U`
+
+#### Inherited from
+
+Uint8Array.reduce
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2191
 
 ___
 
 ### reduceRight
 
-▸ **reduceRight**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*): *number*
+▸ **reduceRight**(`callbackfn`): `number`
 
 Calls the specified callback function for all the elements in an array, in descending order.
 The return value of the callback function is the accumulated result, and is provided as an
 argument in the next call to the callback function.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number* | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.   |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`previousValue`: `number`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `number` | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
-**Returns:** *number*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2203
+`number`
 
-▸ **reduceRight**(`callbackfn`: (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number*, `initialValue`: *number*): *number*
+#### Inherited from
 
-#### Parameters:
+Uint8Array.reduceRight
 
-Name | Type |
-:------ | :------ |
-`callbackfn` | (`previousValue`: *number*, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> *number* |
-`initialValue` | *number* |
+#### Defined in
 
-**Returns:** *number*
+node_modules/typescript/lib/lib.es5.d.ts:2203
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2204
+▸ **reduceRight**(`callbackfn`, `initialValue`): `number`
 
-▸ **reduceRight**<U\>(`callbackfn`: (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U, `initialValue`: U): U
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callbackfn` | (`previousValue`: `number`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `number` |
+| `initialValue` | `number` |
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+Uint8Array.reduceRight
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2204
+
+▸ **reduceRight**<`U`\>(`callbackfn`, `initialValue`): `U`
 
 Calls the specified callback function for all the elements in an array, in descending order.
 The return value of the callback function is the accumulated result, and is provided as an
 argument in the next call to the callback function.
 
-#### Type parameters:
+#### Type parameters
 
-Name |
-:------ |
-`U` |
+| Name |
+| :------ |
+| `U` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`callbackfn` | (`previousValue`: U, `currentValue`: *number*, `currentIndex`: *number*, `array`: *Uint8Array*) =\> U | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.   |
-`initialValue` | U | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callbackfn` | (`previousValue`: `U`, `currentValue`: `number`, `currentIndex`: `number`, `array`: `Uint8Array`) =\> `U` | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| `initialValue` | `U` | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
-**Returns:** U
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2216
+`U`
+
+#### Inherited from
+
+Uint8Array.reduceRight
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2216
 
 ___
 
 ### reverse
 
-▸ **reverse**(): *Uint8Array*
+▸ **reverse**(): `Uint8Array`
 
 Reverses the elements in an Array.
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2221
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.reverse
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2221
 
 ___
 
 ### set
 
-▸ **set**(`array`: *ArrayLike*<number\>, `offset?`: *number*): *void*
+▸ **set**(`array`, `offset?`): `void`
 
 Sets a value or an array of values.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`array` | *ArrayLike*<number\> | A typed or untyped array of values to set.   |
-`offset?` | *number* | The index in the current array at which the values are to be written.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `ArrayLike`<`number`\> | A typed or untyped array of values to set. |
+| `offset?` | `number` | The index in the current array at which the values are to be written. |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2228
+`void`
+
+#### Inherited from
+
+Uint8Array.set
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2228
 
 ___
 
 ### slice
 
-▸ **slice**(`start?`: *number*, `end?`: *number*): *Uint8Array*
+▸ **slice**(`start?`, `end?`): `Uint8Array`
 
 Returns a section of an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`start?` | *number* | The beginning of the specified portion of the array.   |
-`end?` | *number* | The end of the specified portion of the array. This is exclusive of the element at the index 'end'.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `start?` | `number` | The beginning of the specified portion of the array. |
+| `end?` | `number` | The end of the specified portion of the array. This is exclusive of the element at the index 'end'. |
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2235
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.slice
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2235
 
 ___
 
 ### some
 
-▸ **some**(`predicate`: (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *unknown*, `thisArg?`: *any*): *boolean*
+▸ **some**(`predicate`, `thisArg?`): `boolean`
 
 Determines whether the specified callback function returns true for any element of an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`predicate` | (`value`: *number*, `index`: *number*, `array`: *Uint8Array*) =\> *unknown* | A function that accepts up to three arguments. The some method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value true, or until the end of the array.   |
-`thisArg?` | *any* | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `predicate` | (`value`: `number`, `index`: `number`, `array`: `Uint8Array`) =\> `unknown` | A function that accepts up to three arguments. The some method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value true, or until the end of the array. |
+| `thisArg?` | `any` | An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value. |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2245
+`boolean`
+
+#### Inherited from
+
+Uint8Array.some
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2245
 
 ___
 
 ### sort
 
-▸ **sort**(`compareFn?`: (`a`: *number*, `b`: *number*) =\> *number*): [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+▸ **sort**(`compareFn?`): [`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
 
 Sorts an array.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`compareFn?` | (`a`: *number*, `b`: *number*) =\> *number* | Function used to determine the order of the elements. It is expected to return a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise. If omitted, the elements are sorted in ascending, ASCII character order. ```ts [11,2,22,1].sort((a, b) =\> a - b) ```    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `compareFn?` | (`a`: `number`, `b`: `number`) =\> `number` | Function used to determine the order of the elements. It is expected to return a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise. If omitted, the elements are sorted in ascending, ASCII character order. ```ts [11,2,22,1].sort((a, b) =\> a - b) ``` |
 
-**Returns:** [*FlexBytes*](utils.bytes.flexbytes.md)<Min, Max\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2256
+[`FlexBytes`](utils.bytes.flexbytes.md)<`Min`, `Max`\>
+
+#### Inherited from
+
+Uint8Array.sort
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2256
 
 ___
 
 ### subarray
 
-▸ **subarray**(`begin?`: *number*, `end?`: *number*): *Uint8Array*
+▸ **subarray**(`begin?`, `end?`): `Uint8Array`
 
 Gets a new Uint8Array view of the ArrayBuffer store for this array, referencing the elements
 at begin, inclusive, up to end, exclusive.
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`begin?` | *number* | The index of the beginning of the array.   |
-`end?` | *number* | The index of the end of the array.    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `begin?` | `number` | The index of the beginning of the array. |
+| `end?` | `number` | The index of the end of the array. |
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2264
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.subarray
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2264
 
 ___
 
 ### toLocaleString
 
-▸ **toLocaleString**(): *string*
+▸ **toLocaleString**(): `string`
 
 Converts a number to a string by using the current locale.
 
-**Returns:** *string*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2269
+`string`
+
+#### Inherited from
+
+Uint8Array.toLocaleString
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2269
 
 ___
 
 ### toString
 
-▸ **toString**(): *string*
+▸ **toString**(): `string`
 
 Returns a string representation of an array.
 
-**Returns:** *string*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2274
+`string`
+
+#### Inherited from
+
+Uint8Array.toString
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2274
 
 ___
 
 ### valueOf
 
-▸ **valueOf**(): *Uint8Array*
+▸ **valueOf**(): `Uint8Array`
 
 Returns the primitive value of the specified object.
 
-**Returns:** *Uint8Array*
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es5.d.ts:2277
+`Uint8Array`
+
+#### Inherited from
+
+Uint8Array.valueOf
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:2277
 
 ___
 
 ### values
 
-▸ **values**(): *IterableIterator*<number\>
+▸ **values**(): `IterableIterator`<`number`\>
 
 Returns an list of values in the array
 
-**Returns:** *IterableIterator*<number\>
+#### Returns
 
-Defined in: node_modules/typescript/lib/lib.es2015.iterable.d.ts:291
+`IterableIterator`<`number`\>
+
+#### Inherited from
+
+Uint8Array.values
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2015.iterable.d.ts:291

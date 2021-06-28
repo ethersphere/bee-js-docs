@@ -2,16 +2,16 @@
 id: "pingresponse"
 title: "Interface: PingResponse"
 sidebar_label: "PingResponse"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: PingResponse
 
 ## Properties
 
 ### rtt
 
-• **rtt**: *string*
+• **rtt**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:137](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L137)
+#### Defined in
+
+[bee-js/src/types/debug.ts:137](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L137)

@@ -3,10 +3,7 @@ id: "utils.eth.jsonrpc"
 title: "Interface: JsonRPC"
 sidebar_label: "JsonRPC"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: JsonRPC
 
 [Utils](../modules/utils.md).[Eth](../modules/utils.eth.md).JsonRPC
 
@@ -14,30 +11,38 @@ hide_title: true
 
 ### request
 
-▸ `Optional`**request**(`args`: RequestArguments): *Promise*<unknown\>
+▸ `Optional` **request**(`args`): `Promise`<`unknown`\>
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`args` | RequestArguments |
+| Name | Type |
+| :------ | :------ |
+| `args` | `RequestArguments` |
 
-**Returns:** *Promise*<unknown\>
+#### Returns
 
-Defined in: [bee-js/src/utils/eth.ts:181](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/eth.ts#L181)
+`Promise`<`unknown`\>
+
+#### Defined in
+
+[bee-js/src/utils/eth.ts:181](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/eth.ts#L181)
 
 ___
 
 ### sendAsync
 
-▸ `Optional`**sendAsync**(`args`: RequestArguments): *Promise*<unknown\>
+▸ `Optional` **sendAsync**(`args`): `Promise`<`unknown`\>
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
-:------ | :------ |
-`args` | RequestArguments |
+| Name | Type |
+| :------ | :------ |
+| `args` | `RequestArguments` |
 
-**Returns:** *Promise*<unknown\>
+#### Returns
 
-Defined in: [bee-js/src/utils/eth.ts:182](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/eth.ts#L182)
+`Promise`<`unknown`\>
+
+#### Defined in
+
+[bee-js/src/utils/eth.ts:182](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/eth.ts#L182)

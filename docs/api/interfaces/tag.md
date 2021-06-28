@@ -2,48 +2,70 @@
 id: "tag"
 title: "Interface: Tag"
 sidebar_label: "Tag"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
 
-# Interface: Tag
+Object that contains infromation about progress of upload of data to network.
+
+**`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
 
 ## Properties
 
 ### processed
 
-• **processed**: *number*
+• **processed**: `number`
 
-Defined in: [bee-js/src/types/index.ts:81](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L81)
+Number of chunks that is locally stored in the Bee node.
+
+#### Defined in
+
+[bee-js/src/types/index.ts:157](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L157)
 
 ___
 
 ### startedAt
 
-• **startedAt**: *string*
+• **startedAt**: `string`
 
-Defined in: [bee-js/src/types/index.ts:84](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L84)
+When the upload process started
+
+#### Defined in
+
+[bee-js/src/types/index.ts:172](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L172)
 
 ___
 
 ### synced
 
-• **synced**: *number*
+• **synced**: `number`
 
-Defined in: [bee-js/src/types/index.ts:82](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L82)
+Number of chunks that arrived to their designated destination in the network
+
+#### Defined in
+
+[bee-js/src/types/index.ts:162](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L162)
 
 ___
 
 ### total
 
-• **total**: *number*
+• **total**: `number`
 
-Defined in: [bee-js/src/types/index.ts:80](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L80)
+Number of all chunks that the data will be split into.
+
+#### Defined in
+
+[bee-js/src/types/index.ts:152](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L152)
 
 ___
 
 ### uid
 
-• **uid**: *number*
+• **uid**: `number`
 
-Defined in: [bee-js/src/types/index.ts:83](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L83)
+Unique identifier
+
+#### Defined in
+
+[bee-js/src/types/index.ts:167](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L167)

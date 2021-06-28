@@ -2,32 +2,36 @@
 id: "chainstate"
 title: "Interface: ChainState"
 sidebar_label: "ChainState"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: ChainState
 
 ## Properties
 
 ### block
 
-• **block**: *bigint*
+• **block**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:148](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L148)
+#### Defined in
+
+[bee-js/src/types/debug.ts:149](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L149)
 
 ___
 
 ### currentPrice
 
-• **currentPrice**: *bigint*
+• **currentPrice**: [`NumberString`](../types/numberstring.md)
 
-Defined in: [bee-js/src/types/debug.ts:150](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L150)
+#### Defined in
+
+[bee-js/src/types/debug.ts:151](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L151)
 
 ___
 
 ### totalAmount
 
-• **totalAmount**: *bigint*
+• **totalAmount**: [`NumberString`](../types/numberstring.md)
 
-Defined in: [bee-js/src/types/debug.ts:149](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L149)
+#### Defined in
+
+[bee-js/src/types/debug.ts:150](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L150)

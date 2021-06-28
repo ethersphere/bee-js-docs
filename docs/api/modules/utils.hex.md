@@ -3,21 +3,16 @@ id: "utils.hex"
 title: "Namespace: Hex"
 sidebar_label: "Hex"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Namespace: Hex
 
 [Utils](utils.md).Hex
 
-## Table of contents
-
-### Type aliases
+## Type aliases
 
 - [HexString](../types/utils.hex.hexstring.md)
 - [PrefixedHexString](../types/utils.hex.prefixedhexstring.md)
 
-### Functions
+## Functions
 
 - [assertHexString](../functions/utils.hex.asserthexstring.md)
 - [assertPrefixedHexString](../functions/utils.hex.assertprefixedhexstring.md)

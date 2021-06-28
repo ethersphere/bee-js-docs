@@ -2,32 +2,34 @@
 id: "collectionentry"
 title: "Interface: CollectionEntry<T>"
 sidebar_label: "CollectionEntry"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: CollectionEntry<T\>
 
 Object represents a file and some of its metadata in [[Directory]] object.
 
 ## Type parameters
 
-Name |
-:------ |
-`T` |
+| Name |
+| :------ |
+| `T` |
 
 ## Properties
 
 ### data
 
-• **data**: T
+• **data**: `T`
 
-Defined in: [bee-js/src/types/index.ts:118](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L118)
+#### Defined in
+
+[bee-js/src/types/index.ts:217](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L217)
 
 ___
 
 ### path
 
-• **path**: *string*
+• **path**: `string`
 
-Defined in: [bee-js/src/types/index.ts:123](https://github.com/ethersphere/bee-js/blob/430becc/src/types/index.ts#L123)
+#### Defined in
+
+[bee-js/src/types/index.ts:222](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L222)

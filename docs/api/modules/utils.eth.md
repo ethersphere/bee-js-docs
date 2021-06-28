@@ -3,26 +3,21 @@ id: "utils.eth"
 title: "Namespace: Eth"
 sidebar_label: "Eth"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Namespace: Eth
 
 [Utils](utils.md).Eth
 
-## Table of contents
-
-### Interfaces
+## Interfaces
 
 - [JsonRPC](../interfaces/utils.eth.jsonrpc.md)
 
-### Type aliases
+## Type aliases
 
 - [EthAddress](../types/utils.eth.ethaddress.md)
 - [HexEthAddress](../types/utils.eth.hexethaddress.md)
 - [OverlayAddress](../types/utils.eth.overlayaddress.md)
 
-### Functions
+## Functions
 
 - [ethToSwarmAddress](../functions/utils.eth.ethtoswarmaddress.md)
 - [fromLittleEndian](../functions/utils.eth.fromlittleendian.md)

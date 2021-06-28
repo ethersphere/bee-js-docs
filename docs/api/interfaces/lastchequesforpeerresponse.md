@@ -2,32 +2,36 @@
 id: "lastchequesforpeerresponse"
 title: "Interface: LastChequesForPeerResponse"
 sidebar_label: "LastChequesForPeerResponse"
+sidebar_position: 0
 custom_edit_url: null
-hide_title: true
 ---
-
-# Interface: LastChequesForPeerResponse
 
 ## Properties
 
 ### lastreceived
 
-• **lastreceived**: [*Cheque*](cheque.md)
+• **lastreceived**: [`Cheque`](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:75](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L75)
+#### Defined in
+
+[bee-js/src/types/debug.ts:75](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L75)
 
 ___
 
 ### lastsent
 
-• **lastsent**: [*Cheque*](cheque.md)
+• **lastsent**: [`Cheque`](cheque.md)
 
-Defined in: [bee-js/src/types/debug.ts:76](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L76)
+#### Defined in
+
+[bee-js/src/types/debug.ts:76](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L76)
 
 ___
 
 ### peer
 
-• **peer**: *string*
+• **peer**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:74](https://github.com/ethersphere/bee-js/blob/430becc/src/types/debug.ts#L74)
+#### Defined in
+
+[bee-js/src/types/debug.ts:74](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L74)

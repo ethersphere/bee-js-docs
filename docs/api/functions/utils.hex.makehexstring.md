@@ -3,32 +3,33 @@ id: "utils.hex.makehexstring"
 title: "Function: makeHexString"
 sidebar_label: "makeHexString"
 custom_edit_url: null
-hide_title: true
 ---
-
-# Function: makeHexString
 
 [Utils](../modules/utils.md).[Hex](../modules/utils.hex.md).makeHexString
 
-▸ **makeHexString**<L\>(`input`: *string* \| *number* \| Uint8Array \| *unknown*, `len?`: L): [*HexString*](../types/utils.hex.hexstring.md)<L\>
+▸ **makeHexString**<`L`\>(`input`, `len?`): [`HexString`](../types/utils.hex.hexstring.md)<`L`\>
 
 Creates unprefixed hex string from wide range of data.
 
 TODO: Make Length mandatory: https://github.com/ethersphere/bee-js/issues/208
 
-#### Type parameters:
+#### Type parameters
 
-Name | Type |
-:------ | :------ |
-`L` | *number* |
+| Name | Type |
+| :------ | :------ |
+| `L` | extends `number` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`input` | *string* \| *number* \| Uint8Array \| *unknown* |  |
-`len?` | L | of the resulting HexString WITHOUT prefix!    |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` \| `number` \| `Uint8Array` \| `unknown` |  |
+| `len?` | `L` | of the resulting HexString WITHOUT prefix! |
 
-**Returns:** [*HexString*](../types/utils.hex.hexstring.md)<L\>
+#### Returns
 
-Defined in: [bee-js/src/utils/hex.ts:33](https://github.com/ethersphere/bee-js/blob/430becc/src/utils/hex.ts#L33)
+[`HexString`](../types/utils.hex.hexstring.md)<`L`\>
+
+#### Defined in
+
+[bee-js/src/utils/hex.ts:33](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/hex.ts#L33)
