@@ -47,7 +47,7 @@ jobs:
 
       - name: URL validation
         run: |
-          npm install auhau/link-checker#fix/root-relative-url
+          npm install auhau/link-checker
           mkdir /tmp/link-checker
           npx link-checker --url-ignore localhost --allow-hash-href --mkdocs --http-cache /tmp/link-checker --http-always-get --http-redirects 5 ./build
 
