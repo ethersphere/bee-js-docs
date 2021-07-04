@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DEBUG: link-checker*
+      DEBUG: linkchecker*
 
     strategy:
       matrix:
