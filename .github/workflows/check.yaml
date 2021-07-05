@@ -12,9 +12,6 @@ jobs:
   check:
     runs-on: ubuntu-latest
 
-#    env:
-#      DEBUG: linkchecker*
-
     strategy:
       matrix:
         node-version: [14.x]
