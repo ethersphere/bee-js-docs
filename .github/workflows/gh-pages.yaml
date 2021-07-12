@@ -21,7 +21,7 @@ jobs:
 
       - name: Build for gh-pages
         run: |
-          npm install
+          npm ci
           npm run-script build
           echo "bee-js.ethswarm.org" > ./build/CNAME
           rm ./build/.nojekyll

@@ -419,4 +419,4 @@ yarn build
   </TabItem>
 </Tabs>
 
-This will create a `dist` folder that should be uploaded to the Swarm. We are working on `swarm-cli` which will make the upload process easier, but in the mean time you can follow the [Host Your Website on Swarm tutorial in the bee docs](https://docs.ethswarm.org/docs/getting-started/host-your-website-using-ens).
+This will create a `dist` folder that should be uploaded to the Swarm. We are working on `swarm-cli` which will make the upload process easier, but in the mean time you can follow the [Host Your Website on Swarm tutorial in the bee docs](https://docs.ethswarm.org/docs/access-the-swarm/host-your-website).
