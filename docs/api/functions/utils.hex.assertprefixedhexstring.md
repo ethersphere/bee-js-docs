@@ -26,4 +26,4 @@ HexString or throws error
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:182](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/hex.ts#L182)
+[bee-js/src/utils/hex.ts:182](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hex.ts#L182)

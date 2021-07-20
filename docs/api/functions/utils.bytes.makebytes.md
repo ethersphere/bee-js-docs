@@ -29,4 +29,4 @@ Returns a new byte array filled with zeroes with the specified length
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:134](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L134)
+[bee-js/src/utils/bytes.ts:134](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/bytes.ts#L134)

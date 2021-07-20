@@ -24,7 +24,7 @@ Alter default options of axios HTTP client
 
 #### Defined in
 
-[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L99)
+[bee-js/src/types/index.ts:102](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L102)
 
 ___
 
@@ -44,7 +44,7 @@ Will encrypt the uploaded data and return longer hash which also includes the de
 
 #### Defined in
 
-[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L87)
+[bee-js/src/types/index.ts:90](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L90)
 
 ___
 
@@ -64,7 +64,7 @@ Locally pinned data is possible to reupload to network if it disappear.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:76](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L76)
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L79)
 
 ___
 
@@ -82,4 +82,4 @@ Tags keep track of syncing the data with network. This option allows attach exis
 
 #### Defined in
 
-[bee-js/src/types/index.ts:96](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L96)
+[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L99)

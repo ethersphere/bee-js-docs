@@ -12,4 +12,4 @@ Writers and Readers interfaces
 
 #### Defined in
 
-[bee-js/src/types/index.ts:253](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L253)
+[bee-js/src/types/index.ts:279](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L279)

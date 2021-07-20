@@ -30,4 +30,4 @@ b is Bytes<Length\>
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L34)
+[bee-js/src/utils/bytes.ts:34](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/bytes.ts#L34)

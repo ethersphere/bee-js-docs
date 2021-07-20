@@ -42,7 +42,7 @@ Downloads a single owner chunk
 
 #### Defined in
 
-[bee-js/src/types/index.ts:319](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L319)
+[bee-js/src/types/index.ts:345](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L345)
 
 ___
 
@@ -71,4 +71,4 @@ Uploads a single owner chunk
 
 #### Defined in
 
-[bee-js/src/types/index.ts:333](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L333)
+[bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L359)

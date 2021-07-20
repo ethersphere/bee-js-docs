@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/error.ts#L7)
+[bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/error.ts#L7)
 
 ## Properties
 

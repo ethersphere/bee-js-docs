@@ -12,4 +12,4 @@ With this type a number should be represented in a string
 
 #### Defined in
 
-[bee-js/src/types/index.ts:375](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L375)
+[bee-js/src/types/index.ts:401](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L401)

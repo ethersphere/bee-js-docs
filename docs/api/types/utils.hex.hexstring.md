@@ -21,4 +21,4 @@ TODO: Make Length mandatory: https://github.com/ethersphere/bee-js/issues/208
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:9](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/hex.ts#L9)
+[bee-js/src/utils/hex.ts:9](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hex.ts#L9)
