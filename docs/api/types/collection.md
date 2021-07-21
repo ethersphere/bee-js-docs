@@ -18,4 +18,4 @@ Represents Collections
 
 #### Defined in
 
-[bee-js/src/types/index.ts:228](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L228)
+[bee-js/src/types/index.ts:236](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L236)

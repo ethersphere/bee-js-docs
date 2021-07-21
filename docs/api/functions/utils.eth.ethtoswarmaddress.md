@@ -26,4 +26,4 @@ Swarm overlay address
 
 #### Defined in
 
-[bee-js/src/utils/eth.ts:162](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/eth.ts#L162)
+[bee-js/src/utils/eth.ts:162](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/eth.ts#L162)

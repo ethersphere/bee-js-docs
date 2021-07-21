@@ -28,4 +28,4 @@ True if is valid eth address
 
 #### Defined in
 
-[bee-js/src/utils/eth.ts:93](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/eth.ts#L93)
+[bee-js/src/utils/eth.ts:93](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/eth.ts#L93)

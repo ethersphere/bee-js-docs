@@ -20,7 +20,7 @@ Number of chunks that is locally stored in the Bee node.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:157](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L157)
+[bee-js/src/types/index.ts:160](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L160)
 
 ___
 
@@ -32,7 +32,7 @@ When the upload process started
 
 #### Defined in
 
-[bee-js/src/types/index.ts:172](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L172)
+[bee-js/src/types/index.ts:175](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L175)
 
 ___
 
@@ -44,7 +44,7 @@ Number of chunks that arrived to their designated destination in the network
 
 #### Defined in
 
-[bee-js/src/types/index.ts:162](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L162)
+[bee-js/src/types/index.ts:165](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L165)
 
 ___
 
@@ -56,7 +56,7 @@ Number of all chunks that the data will be split into.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:152](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L152)
+[bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L155)
 
 ___
 
@@ -68,4 +68,4 @@ Unique identifier
 
 #### Defined in
 
-[bee-js/src/types/index.ts:167](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L167)
+[bee-js/src/types/index.ts:170](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L170)

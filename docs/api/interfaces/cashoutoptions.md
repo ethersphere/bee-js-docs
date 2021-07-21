@@ -16,7 +16,7 @@ Gas limit for the cashout transaction in WEI
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:46](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L46)
+[bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/debug.ts#L98)
 
 ___
 
@@ -28,4 +28,4 @@ Gas price for the cashout transaction in WEI
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:41](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/debug.ts#L41)
+[bee-js/src/types/debug.ts:93](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/debug.ts#L93)

@@ -27,4 +27,4 @@ big-endian encoded hexstring
 
 #### Defined in
 
-[bee-js/src/utils/eth.ts:139](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/eth.ts#L139)
+[bee-js/src/utils/eth.ts:139](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/eth.ts#L139)

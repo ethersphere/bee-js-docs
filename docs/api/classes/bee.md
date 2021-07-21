@@ -26,7 +26,7 @@ For example gateway mode and light node mode has only limited set of endpoints e
 
 #### Defined in
 
-[bee-js/src/bee.ts:83](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L83)
+[bee-js/src/bee.ts:85](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L85)
 
 ## Properties
 
@@ -38,7 +38,7 @@ Default Signer object used for signing operations, mainly Feeds.
 
 #### Defined in
 
-[bee-js/src/bee.ts:83](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L83)
+[bee-js/src/bee.ts:85](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L85)
 
 ___
 
@@ -50,7 +50,7 @@ URL on which is the main API of Bee node exposed
 
 #### Defined in
 
-[bee-js/src/bee.ts:78](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L78)
+[bee-js/src/bee.ts:80](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L80)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Ping the Bee node to see if there is a live Bee node on the given URL.
 
 #### Defined in
 
-[bee-js/src/bee.ts:836](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L836)
+[bee-js/src/bee.ts:902](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L902)
 
 ___
 
@@ -99,7 +99,7 @@ Feed manifest chunk allows for a feed to be able to be resolved through `/bzz` e
 
 #### Defined in
 
-[bee-js/src/bee.ts:578](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L578)
+[bee-js/src/bee.ts:644](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L644)
 
 ___
 
@@ -137,7 +137,7 @@ For better understanding what each parameter means and what are the optimal valu
 
 #### Defined in
 
-[bee-js/src/bee.ts:780](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L780)
+[bee-js/src/bee.ts:846](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L846)
 
 ___
 
@@ -151,13 +151,47 @@ Create a new Tag which is meant for tracking progres of syncing data across netw
 
 **`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
 
+**`see`** [Bee API reference - `POST /tags`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags/post)
+
 #### Returns
 
 `Promise`<[`Tag`](../interfaces/tag.md)\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:287](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L287)
+[bee-js/src/bee.ts:296](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L296)
+
+___
+
+### deleteTag
+
+▸ **deleteTag**(`tagUid`): `Promise`<`void`\>
+
+Delete Tag
+
+**Warning! Not allowed when node is in Gateway mode!**
+
+**`throws`** TypeError if tagUid is in not correct format
+
+**`throws`** BeeResponse error if something went wrong on the Bee node side while deleting the tag.
+
+**`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
+
+**`see`** [Bee API reference - `DELETE /tags/{uid}`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags~1{uid}/delete)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[bee-js/src/bee.ts:350](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L350)
 
 ___
 
@@ -183,7 +217,7 @@ Download data as a byte array
 
 #### Defined in
 
-[bee-js/src/bee.ts:133](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L133)
+[bee-js/src/bee.ts:135](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L135)
 
 ___
 
@@ -212,7 +246,7 @@ Download single file.
 
 #### Defined in
 
-[bee-js/src/bee.ts:206](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L206)
+[bee-js/src/bee.ts:214](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L214)
 
 ___
 
@@ -239,7 +273,7 @@ Download data as a Readable stream
 
 #### Defined in
 
-[bee-js/src/bee.ts:147](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L147)
+[bee-js/src/bee.ts:149](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L149)
 
 ___
 
@@ -266,7 +300,7 @@ Download single file as a readable stream
 
 #### Defined in
 
-[bee-js/src/bee.ts:221](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L221)
+[bee-js/src/bee.ts:229](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L229)
 
 ___
 
@@ -286,7 +320,7 @@ Get list of all locally pinned references
 
 #### Defined in
 
-[bee-js/src/bee.ts:352](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L352)
+[bee-js/src/bee.ts:418](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L418)
 
 ___
 
@@ -308,7 +342,41 @@ Return all postage batches that has the node available.
 
 #### Defined in
 
-[bee-js/src/bee.ts:827](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L827)
+[bee-js/src/bee.ts:893](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L893)
+
+___
+
+### getAllTags
+
+▸ **getAllTags**(`options?`): `Promise`<[`Tag`](../interfaces/tag.md)[]\>
+
+Fetches all tags.
+
+The listing is limited by options.limit. So you have to iterate using options.offset to get all tags.
+
+**Warning! Not allowed when node is in Gateway mode!**
+
+**`throws`** TypeError if limit or offset are not numbers or undefined
+
+**`throws`** BeeArgumentError if limit or offset have invalid options
+
+**`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
+
+**`see`** [Bee API reference - `GET /tags`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags/get)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`AllTagsOptions`](../interfaces/alltagsoptions.md) |
+
+#### Returns
+
+`Promise`<[`Tag`](../interfaces/tag.md)[]\>
+
+#### Defined in
+
+[bee-js/src/bee.ts:314](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L314)
 
 ___
 
@@ -347,7 +415,7 @@ At least one of these has to be specified!
 
 #### Defined in
 
-[bee-js/src/bee.ts:689](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L689)
+[bee-js/src/bee.ts:755](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L755)
 
 ___
 
@@ -375,7 +443,7 @@ Get pinning status of chunk with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:366](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L366)
+[bee-js/src/bee.ts:432](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L432)
 
 ___
 
@@ -403,7 +471,7 @@ Return details for specific postage batch.
 
 #### Defined in
 
-[bee-js/src/bee.ts:813](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L813)
+[bee-js/src/bee.ts:879](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L879)
 
 ___
 
@@ -421,7 +489,7 @@ true if successful, false on error
 
 #### Defined in
 
-[bee-js/src/bee.ts:845](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L845)
+[bee-js/src/bee.ts:911](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L911)
 
 ___
 
@@ -447,7 +515,7 @@ Make a new feed reader for downloading feed updates.
 
 #### Defined in
 
-[bee-js/src/bee.ts:602](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L602)
+[bee-js/src/bee.ts:668](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L668)
 
 ___
 
@@ -472,7 +540,7 @@ hashes the input string to create a topic string of arbitrary length.
 
 #### Defined in
 
-[bee-js/src/bee.ts:726](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L726)
+[bee-js/src/bee.ts:792](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L792)
 
 ___
 
@@ -498,7 +566,7 @@ Make a new feed writer for updating feeds
 
 #### Defined in
 
-[bee-js/src/bee.ts:624](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L624)
+[bee-js/src/bee.ts:690](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L690)
 
 ___
 
@@ -522,7 +590,7 @@ Returns an object for reading single owner chunks
 
 #### Defined in
 
-[bee-js/src/bee.ts:737](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L737)
+[bee-js/src/bee.ts:803](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L803)
 
 ___
 
@@ -546,7 +614,7 @@ Returns an object for reading and writing single owner chunks
 
 #### Defined in
 
-[bee-js/src/bee.ts:752](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L752)
+[bee-js/src/bee.ts:818](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L818)
 
 ___
 
@@ -574,7 +642,7 @@ Pin local data with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:323](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L323)
+[bee-js/src/bee.ts:389](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L389)
 
 ___
 
@@ -618,7 +686,7 @@ Message in byte array
 
 #### Defined in
 
-[bee-js/src/bee.ts:530](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L530)
+[bee-js/src/bee.ts:596](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L596)
 
 ___
 
@@ -660,7 +728,7 @@ This is because light nodes does not fully participate in the data exchange in S
 
 #### Defined in
 
-[bee-js/src/bee.ts:419](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L419)
+[bee-js/src/bee.ts:485](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L485)
 
 ___
 
@@ -694,7 +762,7 @@ Subscription to a given topic
 
 #### Defined in
 
-[bee-js/src/bee.ts:459](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L459)
+[bee-js/src/bee.ts:525](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L525)
 
 ___
 
@@ -706,9 +774,11 @@ Retrieve tag information from Bee node
 
 **Warning! Not allowed when node is in Gateway mode!**
 
-**`throws`** TypeError if reference is in not correct format
+**`throws`** TypeError if tagUid is in not correct format
 
 **`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
+
+**`see`** [Bee API reference - `GET /tags/{uid}`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags~1{uid}/get)
 
 #### Parameters
 
@@ -722,7 +792,7 @@ Retrieve tag information from Bee node
 
 #### Defined in
 
-[bee-js/src/bee.ts:301](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L301)
+[bee-js/src/bee.ts:332](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L332)
 
 ___
 
@@ -749,7 +819,7 @@ Instructs the Bee node to reupload a locally pinned data into the network.
 
 #### Defined in
 
-[bee-js/src/bee.ts:380](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L380)
+[bee-js/src/bee.ts:446](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L446)
 
 ___
 
@@ -788,7 +858,7 @@ If none of those two is set error is thrown.
 
 #### Defined in
 
-[bee-js/src/bee.ts:655](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L655)
+[bee-js/src/bee.ts:721](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L721)
 
 ___
 
@@ -816,7 +886,43 @@ Unpin local data with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:339](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L339)
+[bee-js/src/bee.ts:405](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L405)
+
+___
+
+### updateTag
+
+▸ **updateTag**(`tagUid`, `reference`): `Promise`<`void`\>
+
+Update tag's total chunks count.
+
+This is important if you are uploading individual chunks with a tag. Then upon finishing the final root chunk,
+you can use this method to update the total chunks count for the tag.
+
+**Warning! Not allowed when node is in Gateway mode!**
+
+**`throws`** TypeError if tagUid is in not correct format
+
+**`throws`** BeeResponse error if something went wrong on the Bee node side while deleting the tag.
+
+**`see`** [Bee docs - Syncing / Tags](https://docs.ethswarm.org/docs/access-the-swarm/syncing)
+
+**`see`** [Bee API reference - `PATCH /tags/{uid}`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags~1{uid}/patch)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
+| `reference` | `string` \| [`Reference`](../types/reference.md) | The root reference that contains all the chunks to be counted |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[bee-js/src/bee.ts:372](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L372)
 
 ___
 
@@ -846,7 +952,7 @@ reference is a content hash of the data
 
 #### Defined in
 
-[bee-js/src/bee.ts:113](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L113)
+[bee-js/src/bee.ts:115](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L115)
 
 ___
 
@@ -882,7 +988,7 @@ reference is a content hash of the file
 
 #### Defined in
 
-[bee-js/src/bee.ts:169](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L169)
+[bee-js/src/bee.ts:171](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L171)
 
 ___
 
@@ -914,7 +1020,7 @@ Uses the FileList API from the browser.
 
 #### Defined in
 
-[bee-js/src/bee.ts:240](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L240)
+[bee-js/src/bee.ts:248](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L248)
 
 ___
 
@@ -946,4 +1052,4 @@ Available only in Node.js as it uses the `fs` module.
 
 #### Defined in
 
-[bee-js/src/bee.ts:267](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/bee.ts#L267)
+[bee-js/src/bee.ts:275](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee.ts#L275)

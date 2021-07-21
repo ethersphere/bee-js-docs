@@ -14,6 +14,7 @@ custom_edit_url: null
 - [Eth](utils.eth.md)
 - [File](utils.file.md)
 - [Hex](utils.hex.md)
+- [Hooks](utils.hooks.md)
 - [Tar](utils.tar.md)
 
 ## Functions

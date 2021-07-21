@@ -25,4 +25,4 @@ file is File
 
 #### Defined in
 
-[bee-js/src/utils/file.ts:7](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/file.ts#L7)
+[bee-js/src/utils/file.ts:7](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/file.ts#L7)

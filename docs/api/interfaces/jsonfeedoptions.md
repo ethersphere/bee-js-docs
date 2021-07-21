@@ -17,7 +17,7 @@ to be specified.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:279](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L279)
+[bee-js/src/types/index.ts:305](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L305)
 
 ___
 
@@ -31,7 +31,7 @@ if not specified for `get` then `address` option has to be specified.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:286](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L286)
+[bee-js/src/types/index.ts:312](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L312)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:287](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L287)
+[bee-js/src/types/index.ts:313](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L313)

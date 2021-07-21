@@ -30,4 +30,4 @@ asserts b is Bytes<Length\>
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:44](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/bytes.ts#L44)
+[bee-js/src/utils/bytes.ts:44](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/bytes.ts#L44)

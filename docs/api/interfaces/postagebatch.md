@@ -16,7 +16,7 @@ Interface representing Postage stamp batch.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:350](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L350)
+[bee-js/src/types/index.ts:376](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L376)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:345](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L345)
+[bee-js/src/types/index.ts:371](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L371)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:352](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L352)
+[bee-js/src/types/index.ts:378](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L378)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:351](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L351)
+[bee-js/src/types/index.ts:377](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L377)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:349](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L349)
+[bee-js/src/types/index.ts:375](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L375)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:353](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L353)
+[bee-js/src/types/index.ts:379](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L379)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:348](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L348)
+[bee-js/src/types/index.ts:374](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L374)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:347](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L347)
+[bee-js/src/types/index.ts:373](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L373)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:346](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/types/index.ts#L346)
+[bee-js/src/types/index.ts:372](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L372)

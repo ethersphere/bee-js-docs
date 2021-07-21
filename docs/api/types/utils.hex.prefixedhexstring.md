@@ -17,4 +17,4 @@ should be validated and converted to HexString ASAP.
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:23](https://github.com/ethersphere/bee-js/blob/0e69ca1/src/utils/hex.ts#L23)
+[bee-js/src/utils/hex.ts:23](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hex.ts#L23)
