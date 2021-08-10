@@ -77,5 +77,7 @@ Client bundle compiled with errors therefore further build is impossible.
 
 ## Maintainers
 
-- [nugaon](https://github.com/nugaon)
+- [auhau](https://github.com/auhau)
 - [vojtechsimetka](https://github.com/vojtechsimetka)
+
+See what "Maintainer" means [here](https://github.com/ethersphere/repo-maintainer).
