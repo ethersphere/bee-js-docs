@@ -16,4 +16,4 @@ Signer object or private key of the Signer in form of either hex string or Uint8
 
 #### Defined in
 
-[bee-js/src/types/index.ts:65](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L65)
+[bee-js/src/types/index.ts:65](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L65)

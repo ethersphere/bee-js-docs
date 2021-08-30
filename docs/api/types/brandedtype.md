@@ -21,4 +21,4 @@ See https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/
 
 #### Defined in
 
-[bee-js/src/types/index.ts:450](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L450)
+[bee-js/src/types/index.ts:485](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L485)

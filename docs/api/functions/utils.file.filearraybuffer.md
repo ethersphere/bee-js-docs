@@ -24,4 +24,4 @@ missing from `File` objects.
 
 #### Defined in
 
-[bee-js/src/utils/file.ts:29](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/file.ts#L29)
+[bee-js/src/utils/file.ts:29](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/file.ts#L29)

@@ -27,4 +27,4 @@ ID of the listener that can be used to stop the callback to receive new response
 
 #### Defined in
 
-[bee-js/src/utils/hooks.ts:76](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hooks.ts#L76)
+[bee-js/src/utils/hooks.ts:79](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/hooks.ts#L79)

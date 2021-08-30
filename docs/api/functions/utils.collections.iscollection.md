@@ -21,4 +21,4 @@ data is Collection<Uint8Array\>
 
 #### Defined in
 
-[bee-js/src/utils/collection.ts:8](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/collection.ts#L8)
+[bee-js/src/utils/collection.ts:8](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/collection.ts#L8)

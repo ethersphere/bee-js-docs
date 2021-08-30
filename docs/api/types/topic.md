@@ -12,4 +12,4 @@ Hex string of length 64 chars without prefix that specifies topics for feed.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:285](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L285)
+[bee-js/src/types/index.ts:285](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L285)

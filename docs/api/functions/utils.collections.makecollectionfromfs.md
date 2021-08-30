@@ -24,4 +24,4 @@ The function loads all the data into memory!
 
 #### Defined in
 
-[bee-js/src/utils/collection.ts:28](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/collection.ts#L28)
+[bee-js/src/utils/collection.ts:28](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/collection.ts#L28)

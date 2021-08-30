@@ -22,7 +22,7 @@ FeedReader is an interface for downloading feed updates
 
 #### Defined in
 
-[bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L292)
+[bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L292)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:293](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L293)
+[bee-js/src/types/index.ts:293](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L293)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:291](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L291)
+[bee-js/src/types/index.ts:291](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L291)
 
 ## Methods
 
@@ -64,4 +64,4 @@ Download the latest feed update
 
 #### Defined in
 
-[bee-js/src/types/index.ts:297](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L297)
+[bee-js/src/types/index.ts:297](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L297)

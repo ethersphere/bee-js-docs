@@ -25,6 +25,7 @@ custom_edit_url: null
 - [AllSettlements](interfaces/allsettlements.md)
 - [AllTagsOptions](interfaces/alltagsoptions.md)
 - [BalanceResponse](interfaces/balanceresponse.md)
+- [BatchBucket](interfaces/batchbucket.md)
 - [BeeGenericResponse](interfaces/beegenericresponse.md)
 - [BeeOptions](interfaces/beeoptions.md)
 - [BeeRequest](interfaces/beerequest.md)
@@ -39,6 +40,7 @@ custom_edit_url: null
 - [CollectionEntry](interfaces/collectionentry.md)
 - [CollectionUploadOptions](interfaces/collectionuploadoptions.md)
 - [Data](interfaces/data.md)
+- [DebugPostageBatch](interfaces/debugpostagebatch.md)
 - [Dictionary](interfaces/dictionary.md)
 - [ExtendedTag](interfaces/extendedtag.md)
 - [FeedReader](interfaces/feedreader.md)
@@ -57,6 +59,7 @@ custom_edit_url: null
 - [Pin](interfaces/pin.md)
 - [PingResponse](interfaces/pingresponse.md)
 - [PostageBatch](interfaces/postagebatch.md)
+- [PostageBatchBuckets](interfaces/postagebatchbuckets.md)
 - [PostageBatchOptions](interfaces/postagebatchoptions.md)
 - [PssMessageHandler](interfaces/pssmessagehandler.md)
 - [PssSubscription](interfaces/psssubscription.md)
@@ -68,6 +71,7 @@ custom_edit_url: null
 - [Settlements](interfaces/settlements.md)
 - [Tag](interfaces/tag.md)
 - [Topology](interfaces/topology.md)
+- [TransactionInfo](interfaces/transactioninfo.md)
 - [TransactionResponse](interfaces/transactionresponse.md)
 - [UploadHeaders](interfaces/uploadheaders.md)
 - [UploadOptions](interfaces/uploadoptions.md)
@@ -90,6 +94,7 @@ custom_edit_url: null
 - [Signature](types/signature.md)
 - [Signer](types/signer.md)
 - [Topic](types/topic.md)
+- [TransactionHash](types/transactionhash.md)
 
 ## Variables
 

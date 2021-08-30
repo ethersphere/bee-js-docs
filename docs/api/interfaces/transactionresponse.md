@@ -10,8 +10,8 @@ custom_edit_url: null
 
 ### transactionHash
 
-• **transactionHash**: `string`
+• **transactionHash**: [`TransactionHash`](../types/transactionhash.md)
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:116](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/debug.ts#L116)
+[bee-js/src/types/debug.ts:116](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L116)

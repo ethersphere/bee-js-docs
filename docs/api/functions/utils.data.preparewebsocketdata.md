@@ -21,4 +21,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/utils/data.ts:23](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/data.ts#L23)
+[bee-js/src/utils/data.ts:23](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/data.ts#L23)

@@ -23,4 +23,4 @@ Function that stops forwarding new responses to associated listener callback
 
 #### Defined in
 
-[bee-js/src/utils/hooks.ts:84](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hooks.ts#L84)
+[bee-js/src/utils/hooks.ts:87](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/hooks.ts#L87)

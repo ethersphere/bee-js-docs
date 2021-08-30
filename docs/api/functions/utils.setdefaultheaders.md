@@ -23,4 +23,4 @@ Utility function that sets passed headers to ALL axios calls without distinction
 
 #### Defined in
 
-[bee-js/src/utils/safe-axios.ts:13](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/safe-axios.ts#L13)
+[bee-js/src/utils/safe-axios.ts:13](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/safe-axios.ts#L13)
