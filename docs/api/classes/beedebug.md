@@ -24,7 +24,7 @@ The BeeDebug class provides a way of interacting with the Bee debug APIs based o
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:40](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L40)
+[bee-js/src/bee-debug.ts:54](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L54)
 
 ## Properties
 
@@ -34,9 +34,32 @@ The BeeDebug class provides a way of interacting with the Bee debug APIs based o
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:40](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L40)
+[bee-js/src/bee-debug.ts:54](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L54)
 
 ## Methods
+
+### cancelPendingTransaction
+
+▸ **cancelPendingTransaction**(`transactionHash`, `gasPrice?`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+
+Cancel currently pending transaction
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
+| `gasPrice?` | [`NumberString`](../types/numberstring.md) |
+
+#### Returns
+
+`Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:428](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L428)
+
+___
 
 ### cashoutLastCheque
 
@@ -57,7 +80,44 @@ Cashout the last cheque for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:202](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L202)
+[bee-js/src/bee-debug.ts:216](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L216)
+
+___
+
+### createPostageBatch
+
+▸ **createPostageBatch**(`amount`, `depth`, `options?`): `Promise`<[`BatchId`](../types/batchid.md)\>
+
+Creates new postage batch from the funds that the node has available in its Ethereum account.
+
+For better understanding what each parameter means and what are the optimal values please see
+[Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive).
+
+**WARNING: THIS CREATES TRANSACTIONS THAT SPENDS MONEY**
+
+**`throws`** BeeArgumentError when negative amount or depth is specified
+
+**`throws`** TypeError if non-integer value is passed to amount or depth
+
+**`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
+
+**`see`** [Bee Debug API reference - `POST /stamps`](https://docs.ethswarm.org/debug-api/#tag/Postage-Stamps/paths/~1stamps~1{amount}~1{depth}/post)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | [`NumberString`](../types/numberstring.md) | Amount that represents the value per chunk, has to be greater or equal zero. |
+| `depth` | `number` | Logarithm of the number of chunks that can be stamped with the batch. |
+| `options?` | [`PostageBatchOptions`](../interfaces/postagebatchoptions.md) | Options for creation of postage batch |
+
+#### Returns
+
+`Promise`<[`BatchId`](../types/batchid.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:333](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L333)
 
 ___
 
@@ -82,7 +142,7 @@ string  Hash of the transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:223](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L223)
+[bee-js/src/bee-debug.ts:237](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L237)
 
 ___
 
@@ -98,7 +158,43 @@ Get the balances with all known peers including prepaid services
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:111](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L111)
+[bee-js/src/bee-debug.ts:125](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L125)
+
+___
+
+### getAllPendingTransactions
+
+▸ **getAllPendingTransactions**(): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)[]\>
+
+Return lists of all current pending transactions that the Bee made
+
+#### Returns
+
+`Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)[]\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:397](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L397)
+
+___
+
+### getAllPostageBatch
+
+▸ **getAllPostageBatch**(): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)[]\>
+
+Return all postage batches that has the node available.
+
+**`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
+
+**`see`** [Bee Debug API reference - `GET /stamps`](https://docs.ethswarm.org/debug-api/#tag/Postage-Stamps/paths/~1stamps/get)
+
+#### Returns
+
+`Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)[]\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:390](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L390)
 
 ___
 
@@ -114,7 +210,7 @@ Get settlements with all known peers and total amount sent or received
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:268](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L268)
+[bee-js/src/bee-debug.ts:282](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L282)
 
 ___
 
@@ -128,7 +224,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:55](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L55)
+[bee-js/src/bee-debug.ts:69](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L69)
 
 ___
 
@@ -144,7 +240,7 @@ Get chain state
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:298](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L298)
+[bee-js/src/bee-debug.ts:312](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L312)
 
 ___
 
@@ -163,7 +259,7 @@ https://github.com/ethersphere/bee/issues/1443
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:154](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L154)
+[bee-js/src/bee-debug.ts:168](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L168)
 
 ___
 
@@ -179,7 +275,7 @@ Get the balance of the chequebook
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:161](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L161)
+[bee-js/src/bee-debug.ts:175](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L175)
 
 ___
 
@@ -195,7 +291,7 @@ Get health of node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:275](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L275)
+[bee-js/src/bee-debug.ts:289](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L289)
 
 ___
 
@@ -217,7 +313,7 @@ Get last cashout action for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:188](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L188)
+[bee-js/src/bee-debug.ts:202](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L202)
 
 ___
 
@@ -233,7 +329,7 @@ Get last cheques for all peers
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:168](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L168)
+[bee-js/src/bee-debug.ts:182](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L182)
 
 ___
 
@@ -255,7 +351,7 @@ Get last cheques for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:177](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L177)
+[bee-js/src/bee-debug.ts:191](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L191)
 
 ___
 
@@ -269,7 +365,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:51](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L51)
+[bee-js/src/bee-debug.ts:65](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L65)
 
 ___
 
@@ -285,7 +381,7 @@ Get the past due consumption balances with all known peers
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:129](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L129)
+[bee-js/src/bee-debug.ts:143](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L143)
 
 ___
 
@@ -307,7 +403,7 @@ Get the past due consumption balance with a specific peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:138](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L138)
+[bee-js/src/bee-debug.ts:152](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L152)
 
 ___
 
@@ -329,7 +425,7 @@ Get the balances with a specific peer including prepaid services
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:120](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L120)
+[bee-js/src/bee-debug.ts:134](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L134)
 
 ___
 
@@ -345,7 +441,81 @@ Get list of peers for this node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:84](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L84)
+[bee-js/src/bee-debug.ts:98](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L98)
+
+___
+
+### getPendingTransaction
+
+▸ **getPendingTransaction**(`transactionHash`): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)\>
+
+Return transaction information for specific transaction
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
+
+#### Returns
+
+`Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:405](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L405)
+
+___
+
+### getPostageBatch
+
+▸ **getPostageBatch**(`postageBatchId`): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)\>
+
+Return details for specific postage batch.
+
+**`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
+
+**`see`** [Bee Debug API reference - `GET /stamps/${id}`](https://docs.ethswarm.org/debug-api/#tag/Postage-Stamps/paths/~1stamps~1{id}/get)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Batch ID |
+
+#### Returns
+
+`Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:364](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L364)
+
+___
+
+### getPostageBatchBuckets
+
+▸ **getPostageBatchBuckets**(`postageBatchId`): `Promise`<[`PostageBatchBuckets`](../interfaces/postagebatchbuckets.md)\>
+
+Return detailed information related to buckets for specific postage batch.
+
+**`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
+
+**`see`** [Bee Debug API reference - `GET /stamps/${id}/buckets`](https://docs.ethswarm.org/debug-api/#tag/Postage-Stamps/paths/~1stamps~1{id}~1buckets/get)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Batch ID |
+
+#### Returns
+
+`Promise`<[`PostageBatchBuckets`](../interfaces/postagebatchbuckets.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:378](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L378)
 
 ___
 
@@ -361,7 +531,7 @@ Get reserve state
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:291](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L291)
+[bee-js/src/bee-debug.ts:305](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L305)
 
 ___
 
@@ -383,7 +553,7 @@ Get amount of sent and received from settlements with a peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:259](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L259)
+[bee-js/src/bee-debug.ts:273](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L273)
 
 ___
 
@@ -397,7 +567,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:94](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L94)
+[bee-js/src/bee-debug.ts:108](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L108)
 
 ___
 
@@ -415,7 +585,7 @@ true if the Bee node version is supported
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:284](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L284)
+[bee-js/src/bee-debug.ts:298](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L298)
 
 ___
 
@@ -435,7 +605,30 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:98](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L98)
+[bee-js/src/bee-debug.ts:112](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L112)
+
+___
+
+### rebroadcastPendingTransaction
+
+▸ **rebroadcastPendingTransaction**(`transactionHash`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+
+Rebroadcast already created transaction.
+This is mainly needed when your transaction fall off mempool from other reason is not incorporated into block.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
+
+#### Returns
+
+`Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+
+#### Defined in
+
+[bee-js/src/bee-debug.ts:417](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L417)
 
 ___
 
@@ -455,7 +648,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:88](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L88)
+[bee-js/src/bee-debug.ts:102](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L102)
 
 ___
 
@@ -483,7 +676,7 @@ Retrieve tag extended information from Bee node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:69](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L69)
+[bee-js/src/bee-debug.ts:83](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L83)
 
 ___
 
@@ -508,4 +701,4 @@ string  Hash of the transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:240](https://github.com/ethersphere/bee-js/blob/6f227e1/src/bee-debug.ts#L240)
+[bee-js/src/bee-debug.ts:254](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L254)

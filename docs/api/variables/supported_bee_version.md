@@ -10,4 +10,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/modules/debug/status.ts:5](https://github.com/ethersphere/bee-js/blob/6f227e1/src/modules/debug/status.ts#L5)
+[bee-js/src/modules/debug/status.ts:5](https://github.com/ethersphere/bee-js/blob/74056cb/src/modules/debug/status.ts#L5)

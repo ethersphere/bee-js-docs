@@ -18,7 +18,7 @@ Sets gas price in Wei for the transaction that creates the postage batch
 
 #### Defined in
 
-[bee-js/src/types/index.ts:394](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L394)
+[bee-js/src/types/index.ts:429](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L429)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:395](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L395)
+[bee-js/src/types/index.ts:430](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L430)
 
 ___
 
@@ -40,4 +40,4 @@ Sets label for the postage batch
 
 #### Defined in
 
-[bee-js/src/types/index.ts:389](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L389)
+[bee-js/src/types/index.ts:424](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L424)

@@ -1,24 +1,26 @@
 ---
-id: "postagebatch"
-title: "Interface: PostageBatch"
-sidebar_label: "PostageBatch"
+id: "debugpostagebatch"
+title: "Interface: DebugPostageBatch"
+sidebar_label: "DebugPostageBatch"
 sidebar_position: 0
 custom_edit_url: null
 ---
 
-Interface representing Postage stamp batch.
-
 ## Hierarchy
 
-- **`PostageBatch`**
+- [`PostageBatch`](postagebatch.md)
 
-  ↳ [`DebugPostageBatch`](debugpostagebatch.md)
+  ↳ **`DebugPostageBatch`**
 
 ## Properties
 
 ### amount
 
 • **amount**: `string`
+
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[amount](postagebatch.md#amount)
 
 #### Defined in
 
@@ -30,15 +32,35 @@ ___
 
 • **batchID**: [`BatchId`](../types/batchid.md)
 
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[batchID](postagebatch.md#batchid)
+
 #### Defined in
 
 [bee-js/src/types/index.ts:371](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L371)
 
 ___
 
+### batchTTL
+
+• **batchTTL**: `number`
+
+The time (in seconds) remaining until the batch expires; -1 signals that the batch never expires; 0 signals that the batch has already expired.
+
+#### Defined in
+
+[bee-js/src/types/index.ts:386](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L386)
+
+___
+
 ### blockNumber
 
 • **blockNumber**: `number`
+
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[blockNumber](postagebatch.md#blocknumber)
 
 #### Defined in
 
@@ -50,6 +72,10 @@ ___
 
 • **bucketDepth**: `number`
 
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[bucketDepth](postagebatch.md#bucketdepth)
+
 #### Defined in
 
 [bee-js/src/types/index.ts:377](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L377)
@@ -60,15 +86,33 @@ ___
 
 • **depth**: `number`
 
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[depth](postagebatch.md#depth)
+
 #### Defined in
 
 [bee-js/src/types/index.ts:375](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L375)
 
 ___
 
+### exists
+
+• **exists**: `boolean`
+
+#### Defined in
+
+[bee-js/src/types/index.ts:388](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L388)
+
+___
+
 ### immutableFlag
 
 • **immutableFlag**: `boolean`
+
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[immutableFlag](postagebatch.md#immutableflag)
 
 #### Defined in
 
@@ -80,6 +124,10 @@ ___
 
 • **label**: `string`
 
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[label](postagebatch.md#label)
+
 #### Defined in
 
 [bee-js/src/types/index.ts:374](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L374)
@@ -90,6 +138,10 @@ ___
 
 • **usable**: `boolean`
 
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[usable](postagebatch.md#usable)
+
 #### Defined in
 
 [bee-js/src/types/index.ts:373](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L373)
@@ -99,6 +151,10 @@ ___
 ### utilization
 
 • **utilization**: `number`
+
+#### Inherited from
+
+[PostageBatch](postagebatch.md).[utilization](postagebatch.md#utilization)
 
 #### Defined in
 

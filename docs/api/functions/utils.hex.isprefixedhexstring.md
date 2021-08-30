@@ -24,4 +24,4 @@ s is PrefixedHexString
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hex.ts#L144)
+[bee-js/src/utils/hex.ts:144](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/hex.ts#L144)

@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:151](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/debug.ts#L151)
+[bee-js/src/types/debug.ts:151](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L151)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:150](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/debug.ts#L150)
+[bee-js/src/types/debug.ts:150](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L150)

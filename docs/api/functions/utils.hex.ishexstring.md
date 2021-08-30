@@ -33,4 +33,4 @@ s is HexString<Length\>
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:134](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/hex.ts#L134)
+[bee-js/src/utils/hex.ts:134](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/hex.ts#L134)

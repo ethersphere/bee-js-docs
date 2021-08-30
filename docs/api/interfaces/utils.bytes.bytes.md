@@ -109,7 +109,7 @@ Uint8Array.length
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:12](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/bytes.ts#L12)
+[bee-js/src/utils/bytes.ts:12](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/bytes.ts#L12)
 
 ## Methods
 

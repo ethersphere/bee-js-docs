@@ -31,4 +31,4 @@ Return `length` bytes starting from `offset`
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/bytes.ts#L91)
+[bee-js/src/utils/bytes.ts:91](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/bytes.ts#L91)

@@ -25,4 +25,4 @@ uses `personal_sign` method to sign requested data.
 
 #### Defined in
 
-[bee-js/src/utils/eth.ts:192](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/eth.ts#L192)
+[bee-js/src/utils/eth.ts:192](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/eth.ts#L192)

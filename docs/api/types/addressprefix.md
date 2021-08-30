@@ -13,4 +13,4 @@ It represents PSS Address Prefix that is used to define address neighborhood tha
 
 #### Defined in
 
-[bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/6f227e1/src/types/index.ts#L59)
+[bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L59)

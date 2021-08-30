@@ -23,4 +23,4 @@ Validates input and converts to Uint8Array or Readable
 
 #### Defined in
 
-[bee-js/src/utils/data.ts:9](https://github.com/ethersphere/bee-js/blob/6f227e1/src/utils/data.ts#L9)
+[bee-js/src/utils/data.ts:9](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/data.ts#L9)
