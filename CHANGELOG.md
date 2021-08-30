@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.15.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.14.0...v0.15.0) (2021-08-30)
+
+
+### Features
+
+* bee-js 1.2.1 api reference ([#73](https://www.github.com/ethersphere/bee-js-docs/issues/73)) ([5aa6ace](https://www.github.com/ethersphere/bee-js-docs/commit/5aa6ace5e66ea63b444a19b705abdc03ed95a3f2))
+* examples instead of tutorials ([#75](https://www.github.com/ethersphere/bee-js-docs/issues/75)) ([02e2d61](https://www.github.com/ethersphere/bee-js-docs/commit/02e2d61e4272c3aa93673de459b59f8feb911806))
+
 ## [0.14.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.13.0...v0.14.0) (2021-07-21)
 
 
