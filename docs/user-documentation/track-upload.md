@@ -34,6 +34,11 @@ interface Tag {
 
 ## Create tag
 
+:::info Tip
+Tags are automatically created on most upload methods and are returned using the `UploadResult` interface, so
+you don't have to create them manually most of the time. 
+:::
+
 :::warning Forbidden on Gateways
 If you are using a node that is in Gateway mode then this operation is not allowed!
 :::
@@ -77,26 +82,30 @@ You can then use the tag when uploading data, by providing it in the options arg
   <TabItem value="ts">
 
 ```ts
-await bee.uploadData("Bee is awesome!", { tag })
+const postageBatchId = getOrCreatePostageBatch()
+
+await bee.uploadData(postageBatchId, "Bee is awesome!", { tag })
 // OR
-await bee.uploadFile(file, "foo.txt", { tag })
+await bee.uploadFile(postageBatchId, file, "foo.txt", { tag })
 // OR
-await bee.uploadFiles(files, { tag })
+await bee.uploadFiles(postageBatchId, files, { tag })
 // OR
-await bee.uploadFilesToCollection("./", true, { tag })
+await bee.uploadFilesFromDirectory(postageBatchId, "./", { tag })
 ```
 
   </TabItem>
   <TabItem value="js">
 
 ```js
-await bee.uploadData("Bee is awesome!", { tag })
+const postageBatchId = getOrCreatePostageBatch()
+
+await bee.uploadData(postageBatchId, "Bee is awesome!", { tag })
 // OR
-await bee.uploadFile(file, "foo.txt", { tag })
+await bee.uploadFile(postageBatchId, file, "foo.txt", { tag })
 // OR
-await bee.uploadFiles(files, { tag })
+await bee.uploadFiles(postageBatchId, files, { tag })
 // OR
-await bee.uploadFilesToCollection("./", true, { tag })
+await bee.uploadFilesFromDirectory(postageBatchId, "./", { tag })
 ```
 
   </TabItem>

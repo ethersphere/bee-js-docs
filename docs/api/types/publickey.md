@@ -6,8 +6,8 @@ sidebar_position: 0
 custom_edit_url: null
 ---
 
-Ƭ **PublicKey**: [`HexString`](utils.hex.hexstring.md)<typeof [`PUBKEY_HEX_LENGTH`](../variables/pubkey_hex_length.md)\>
+Ƭ **PublicKey**: [`HexString`](utils.hexstring.md)<typeof [`PUBKEY_HEX_LENGTH`](../variables/pubkey_hex_length.md)\>
 
 #### Defined in
 
-[bee-js/src/types/index.ts:46](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L46)
+[bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L54)

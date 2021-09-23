@@ -6,8 +6,8 @@ sidebar_position: 0
 custom_edit_url: null
 ---
 
-Ƭ **HttpMethod**: ``"get"`` \| ``"GET"`` \| ``"delete"`` \| ``"DELETE"`` \| ``"post"`` \| ``"POST"`` \| ``"patch"`` \| ``"PATCH"``
+Ƭ **HttpMethod**: ``"GET"`` \| ``"DELETE"`` \| ``"POST"`` \| ``"PATCH"`` \| ``"PUT"``
 
 #### Defined in
 
-[bee-js/src/types/index.ts:257](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L257)
+[bee-js/src/types/index.ts:324](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L324)

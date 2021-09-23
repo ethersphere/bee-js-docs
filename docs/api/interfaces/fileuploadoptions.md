@@ -14,22 +14,6 @@ custom_edit_url: null
 
 ## Properties
 
-### axiosOptions
-
-• `Optional` **axiosOptions**: `AxiosRequestConfig`
-
-Alter default options of axios HTTP client
-
-#### Inherited from
-
-[UploadOptions](uploadoptions.md).[axiosOptions](uploadoptions.md#axiosoptions)
-
-#### Defined in
-
-[bee-js/src/types/index.ts:102](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L102)
-
-___
-
 ### contentType
 
 • `Optional` **contentType**: `string`
@@ -40,7 +24,7 @@ Specifies given Content-Type so when loaded in browser the file is correctly rep
 
 #### Defined in
 
-[bee-js/src/types/index.ts:118](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L118)
+[bee-js/src/types/index.ts:185](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L185)
 
 ___
 
@@ -64,7 +48,23 @@ Will encrypt the uploaded data and return longer hash which also includes the de
 
 #### Defined in
 
-[bee-js/src/types/index.ts:90](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L90)
+[bee-js/src/types/index.ts:160](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L160)
+
+___
+
+### fetch
+
+• `Optional` **fetch**: `Fetch`
+
+User defined Fetch compatible function
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[fetch](uploadoptions.md#fetch)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
 
 ___
 
@@ -88,7 +88,26 @@ Locally pinned data is possible to reupload to network if it disappear.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:149](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L149)
+
+___
+
+### retry
+
+• `Optional` **retry**: `number`
+
+Configure backoff mechanism for requests retries.
+Specifies how many retries will be performed before failing a request.
+Retries are performed for GET, PUT, HEAD, DELETE, OPTIONS and TRACE requests.
+Default is 2.
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[retry](uploadoptions.md#retry)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
 
 ___
 
@@ -102,7 +121,7 @@ Specifies Content-Length for the given data. It is required when uploading with 
 
 #### Defined in
 
-[bee-js/src/types/index.ts:111](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L111)
+[bee-js/src/types/index.ts:178](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L178)
 
 ___
 
@@ -124,4 +143,20 @@ Tags keep track of syncing the data with network. This option allows attach exis
 
 #### Defined in
 
-[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L99)
+[bee-js/src/types/index.ts:169](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L169)
+
+___
+
+### timeout
+
+• `Optional` **timeout**: `number`
+
+Timeout of requests in milliseconds
+
+#### Inherited from
+
+[UploadOptions](uploadoptions.md).[timeout](uploadoptions.md#timeout)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)

@@ -41,13 +41,13 @@ When you download data the return type is [`Data`](../api/interfaces/data.md) in
 
 ```ts
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadData(postageBatchId, "Bee is awesome!")
+const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
 // prints Swarm hash of the file with which it can be retrieved
 // here it is fd79d5e0ebd8407e422f53ce1d7c4c41ebf403be55143900f8d1490560294780
-console.log(hash) 
+console.log(result.reference) 
 
-const retrievedData = await bee.downloadData(hash)
+const retrievedData = await bee.downloadData(result.reference)
 
 console.log(retrievedData.text()) // prints 'Bee is awesome!'
 ```
@@ -57,13 +57,13 @@ console.log(retrievedData.text()) // prints 'Bee is awesome!'
 
 ```js
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadData(postageBatchId, "Bee is awesome!")
+const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
 // prints Swarm hash of the file with which it can be retrieved
 // here it is fd79d5e0ebd8407e422f53ce1d7c4c41ebf403be55143900f8d1490560294780
-console.log(hash) 
+console.log(result.reference) 
 
-const retrievedData = await bee.downloadData(hash)
+const retrievedData = await bee.downloadData(result.reference)
 
 console.log(retrievedData.text()) // prints 'Bee is awesome!'
 ```
@@ -77,7 +77,7 @@ Swarm reference or hash is a 64 characters long hex string which is the address 
 
 ### Single file
 
-You can also upload files and include a filename. When you download the file, `bee-js` will return aditional information like `contentType` or `name` of the file.
+You can also upload files and include a filename. When you download the file, `bee-js` will return additional information like `contentType` or `name` of the file.
 
 <Tabs
   groupId="lang_preferrence"
@@ -90,8 +90,8 @@ You can also upload files and include a filename. When you download the file, `b
 
 ```ts
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
-const retrievedFile = await bee.downloadFile(hash)
+const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
+const retrievedFile = await bee.downloadFile(result.reference)
 
 console.log(retrievedFile.name) // prints 'textfile.txt'
 console.log(retrievedFile.contentType) // prints 'application/octet-stream'
@@ -103,8 +103,8 @@ console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
 
 ```js
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
-const retrievedFile = await bee.downloadFile(hash)
+const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
+const retrievedFile = await bee.downloadFile(result.reference)
 
 console.log(retrievedFile.name) // prints 'textfile.txt'
 console.log(retrievedFile.contentType) // prints 'application/octet-stream'
@@ -129,8 +129,8 @@ In browsers, you can upload directly `File` type. The filename is taken from the
 const file = new File(["foo"], "foo.txt", { type: "text/plain" })
 
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFile(postageBatchId, file)
-const retrievedFile = await bee.downloadFile(hash)
+const result = await bee.uploadFile(postageBatchId, file)
+const retrievedFile = await bee.downloadFile(result.reference)
 
 console.log(retrievedFile.name) // prints 'foo.txt'
 console.log(retrievedFile.contentType) // prints 'text/plain'
@@ -144,8 +144,8 @@ console.log(retrievedFile.data.text()) // prints 'foo'
 const file = new File(["foo"], "foo.txt", { type: "text/plain" })
 
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFile(postageBatchId, file)
-const retrievedFile = await bee.downloadFile(hash)
+const result = await bee.uploadFile(postageBatchId, file)
+const retrievedFile = await bee.downloadFile(result.reference)
 
 console.log(retrievedFile.name) // prints 'foo.txt'
 console.log(retrievedFile.contentType) // prints 'text/plain'
@@ -173,10 +173,10 @@ const foo = new File(["foo"], "foo.txt", { type: "text/plain" })
 const bar = new File(["bar"], "bar.txt", { type: "text/plain" })
 
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
+const result = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
 
-const rFoo = await bee.downloadFile(hash, './foo.txt') // download foo
-const rBar = await bee.downloadFile(hash, './bar.txt') // download bar
+const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const rBar = await bee.downloadFile(result.reference, './bar.txt') // download bar
 
 console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'
@@ -190,10 +190,10 @@ const foo = new File(["foo"], "foo.txt", { type: "text/plain" })
 const bar = new File(["bar"], "bar.txt", { type: "text/plain" })
 
 const postageBatchId = await bee.createPostageBatch("100", 17)
-const hash = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
+const result = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
 
-const rFoo = await bee.downloadFile(hash, './foo.txt') // download foo
-const rBar = await bee.downloadFile(hash, './bar.txt') // download bar
+const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const rBar = await bee.downloadFile(result.reference, './bar.txt') // download bar
 
 console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'
@@ -223,10 +223,10 @@ In nodejs, you may utilise the `uploadFilesFromDirectory` function, which takes 
 ```ts
 const postageBatchId = await bee.createPostageBatch("100", 17)
 
-const hash = await bee.uploadFilesFromDirectory(postageBatchId, './') // upload recursively current folder
+const result = await bee.uploadFilesFromDirectory(postageBatchId, './') // upload recursively current folder
 
-const rFoo = await bee.downloadFile(hash, './foo.txt') // download foo
-const rBar = await bee.downloadFile(hash, './dir/bar.txt') // download bar
+const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const rBar = await bee.downloadFile(result.reference, './dir/bar.txt') // download bar
 
 console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'
@@ -240,8 +240,8 @@ const postageBatchId = await bee.createPostageBatch("100", 17)
 
 const hash = await bee.uploadFilesFromDirectory(postageBatchId, './') // upload recursively current folder
 
-const rFoo = await bee.downloadFile(hash, './foo.txt') // download foo
-const rBar = await bee.downloadFile(hash, './dir/bar.txt') // download bar
+const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const rBar = await bee.downloadFile(result.reference, './dir/bar.txt') // download bar
 
 console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'

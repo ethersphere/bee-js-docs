@@ -18,11 +18,11 @@ FeedReader is an interface for downloading feed updates
 
 ### owner
 
-• `Readonly` **owner**: [`HexEthAddress`](../types/utils.eth.hexethaddress.md)
+• `Readonly` **owner**: `HexEthAddress`
 
 #### Defined in
 
-[bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L292)
+[bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L359)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:293](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L293)
+[bee-js/src/types/index.ts:360](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L360)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:291](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L291)
+[bee-js/src/types/index.ts:358](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L358)
 
 ## Methods
 
@@ -64,4 +64,4 @@ Download the latest feed update
 
 #### Defined in
 
-[bee-js/src/types/index.ts:297](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L297)
+[bee-js/src/types/index.ts:364](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L364)

@@ -29,7 +29,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/index.ts:245](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L245)
+[bee-js/src/types/index.ts:312](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L312)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:244](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L244)
+[bee-js/src/types/index.ts:311](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L311)

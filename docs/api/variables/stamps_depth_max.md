@@ -12,4 +12,4 @@ Maximal depth that can be used for creation of postage batch
 
 #### Defined in
 
-[bee-js/src/types/index.ts:32](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L32)
+[bee-js/src/types/index.ts:40](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L40)

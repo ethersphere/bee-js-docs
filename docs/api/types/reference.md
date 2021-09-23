@@ -6,7 +6,7 @@ sidebar_position: 0
 custom_edit_url: null
 ---
 
-Ƭ **Reference**: [`HexString`](utils.hex.hexstring.md)<typeof [`REFERENCE_HEX_LENGTH`](../variables/reference_hex_length.md)\> \| [`HexString`](utils.hex.hexstring.md)<typeof [`ENCRYPTED_REFERENCE_HEX_LENGTH`](../variables/encrypted_reference_hex_length.md)\>
+Ƭ **Reference**: [`HexString`](utils.hexstring.md)<typeof [`REFERENCE_HEX_LENGTH`](../variables/reference_hex_length.md)\> \| [`HexString`](utils.hexstring.md)<typeof [`ENCRYPTED_REFERENCE_HEX_LENGTH`](../variables/encrypted_reference_hex_length.md)\>
 
 Generic reference that can be either non-encrypted reference which is a hex string of length 64 or encrypted
 reference which is a hex string of length 128.
@@ -17,4 +17,4 @@ Encrypted reference consists of two parts. The reference address itself (like no
 
 #### Defined in
 
-[bee-js/src/types/index.ts:45](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L45)
+[bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L53)

@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/utils/error.ts:13](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/error.ts#L13)
+[bee-js/src/utils/error.ts:13](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/error.ts#L13)
 
 ## Properties
 

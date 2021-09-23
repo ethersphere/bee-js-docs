@@ -7,7 +7,7 @@ custom_edit_url: null
 
 [Utils](../modules/utils.md).keccak256Hash
 
-▸ **keccak256Hash**(...`messages`): [`Bytes`](../interfaces/utils.bytes.bytes.md)<``32``\>
+▸ **keccak256Hash**(...`messages`): [`Bytes`](../interfaces/utils.bytes.md)<``32``\>
 
 Helper function for calculating the keccak256 hash with
 correct types.
@@ -20,8 +20,8 @@ correct types.
 
 #### Returns
 
-[`Bytes`](../interfaces/utils.bytes.bytes.md)<``32``\>
+[`Bytes`](../interfaces/utils.bytes.md)<``32``\>
 
 #### Defined in
 
-[bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/hash.ts#L10)
+[bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/hash.ts#L10)

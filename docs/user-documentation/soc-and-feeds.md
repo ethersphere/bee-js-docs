@@ -16,7 +16,7 @@ Because Feeds are built on top of SOCs, their interfaces are somewhat similar an
 
 ## Single Owner Chunks
 
-BeeJs calculates a SOC address as the hash of an `identifier` and `owner`. The `identifier` is a 32 bytes long arbitrary data, usually expected as a hex string or a `Uint8Array`. The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or  `Uint8Array`.
+Bee-js calculates a SOC address as the hash of an `identifier` and `owner`. The `identifier` is a 32 bytes long arbitrary data, usually expected as a hex string or a `Uint8Array`. The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or  `Uint8Array`.
 
 :::warning SOCs are immutable!
 You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of SOC is forbidden in Swarm as it might create uncertain behavior. Bee node will reject the API call if it finds already existing SOC for the given address. Either use a different `identifier`, or you might be looking for Feeds as your use case.
@@ -47,15 +47,15 @@ directly for the `makeSOCWriter`. See [`Bee` constructor](../api/classes/bee.md#
 
 :::tip Ethereum Wallet signers
 
-If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/utils.eth.makeethereumwalletsigner.md)  that we ship with bee-js
+If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/utils.makeethereumwalletsigner.md)  that we ship with bee-js
 which creates a [`Signer`](../api/types/signer.md) object out of given EIP-1193 compatible provider.
 
 See it used in our example [here](https://github.com/ethersphere/examples-js/tree/master/eth-wallet-signing).
 
 ```js
-import { utils } from '@ethersphere/bee-js'
+import { Utils } from '@ethersphere/bee-js'
 
-const signer = utils.Eth.makeEthereumWalletSigner(window.ethereum)
+const signer = Utils.makeEthereumWalletSigner(window.ethereum)
 ...
 ```
 :::

@@ -65,6 +65,7 @@ custom_edit_url: null
 - [PssSubscription](interfaces/psssubscription.md)
 - [ReferenceResponse](interfaces/referenceresponse.md)
 - [RemovePeerResponse](interfaces/removepeerresponse.md)
+- [RequestOptions](interfaces/requestoptions.md)
 - [ReserveState](interfaces/reservestate.md)
 - [SOCReader](interfaces/socreader.md)
 - [SOCWriter](interfaces/socwriter.md)
@@ -75,6 +76,7 @@ custom_edit_url: null
 - [TransactionResponse](interfaces/transactionresponse.md)
 - [UploadHeaders](interfaces/uploadheaders.md)
 - [UploadOptions](interfaces/uploadoptions.md)
+- [UploadResult](interfaces/uploadresult.md)
 
 ## Type aliases
 
@@ -86,10 +88,13 @@ custom_edit_url: null
 - [BrandedType](types/brandedtype.md)
 - [Collection](types/collection.md)
 - [FlavoredType](types/flavoredtype.md)
+- [HookCallback](types/hookcallback.md)
 - [HttpMethod](types/httpmethod.md)
+- [Ky](types/ky.md)
 - [NumberString](types/numberstring.md)
 - [PrivateKeyBytes](types/privatekeybytes.md)
 - [PublicKey](types/publickey.md)
+- [Readable](types/readable.md)
 - [Reference](types/reference.md)
 - [Signature](types/signature.md)
 - [Signer](types/signer.md)
@@ -102,6 +107,7 @@ custom_edit_url: null
 - [BATCH\_ID\_HEX\_LENGTH](variables/batch_id_hex_length.md)
 - [ENCRYPTED\_REFERENCE\_BYTES\_LENGTH](variables/encrypted_reference_bytes_length.md)
 - [ENCRYPTED\_REFERENCE\_HEX\_LENGTH](variables/encrypted_reference_hex_length.md)
+- [PSS\_TARGET\_HEX\_LENGTH\_MAX](variables/pss_target_hex_length_max.md)
 - [PUBKEY\_HEX\_LENGTH](variables/pubkey_hex_length.md)
 - [REFERENCE\_BYTES\_LENGTH](variables/reference_bytes_length.md)
 - [REFERENCE\_HEX\_LENGTH](variables/reference_hex_length.md)

@@ -8,25 +8,15 @@ custom_edit_url: null
 
 ## Hierarchy
 
-- **`UploadOptions`**
+- [`RequestOptions`](requestoptions.md)
 
-  ↳ [`FileUploadOptions`](fileuploadoptions.md)
+  ↳ **`UploadOptions`**
 
-  ↳ [`CollectionUploadOptions`](collectionuploadoptions.md)
+  ↳↳ [`FileUploadOptions`](fileuploadoptions.md)
+
+  ↳↳ [`CollectionUploadOptions`](collectionuploadoptions.md)
 
 ## Properties
-
-### axiosOptions
-
-• `Optional` **axiosOptions**: `AxiosRequestConfig`
-
-Alter default options of axios HTTP client
-
-#### Defined in
-
-[bee-js/src/types/index.ts:102](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L102)
-
-___
 
 ### encrypt
 
@@ -44,7 +34,23 @@ Will encrypt the uploaded data and return longer hash which also includes the de
 
 #### Defined in
 
-[bee-js/src/types/index.ts:90](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L90)
+[bee-js/src/types/index.ts:160](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L160)
+
+___
+
+### fetch
+
+• `Optional` **fetch**: `Fetch`
+
+User defined Fetch compatible function
+
+#### Inherited from
+
+[RequestOptions](requestoptions.md).[fetch](requestoptions.md#fetch)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
 
 ___
 
@@ -64,7 +70,26 @@ Locally pinned data is possible to reupload to network if it disappear.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:149](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L149)
+
+___
+
+### retry
+
+• `Optional` **retry**: `number`
+
+Configure backoff mechanism for requests retries.
+Specifies how many retries will be performed before failing a request.
+Retries are performed for GET, PUT, HEAD, DELETE, OPTIONS and TRACE requests.
+Default is 2.
+
+#### Inherited from
+
+[RequestOptions](requestoptions.md).[retry](requestoptions.md#retry)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
 
 ___
 
@@ -82,4 +107,20 @@ Tags keep track of syncing the data with network. This option allows attach exis
 
 #### Defined in
 
-[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L99)
+[bee-js/src/types/index.ts:169](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L169)
+
+___
+
+### timeout
+
+• `Optional` **timeout**: `number`
+
+Timeout of requests in milliseconds
+
+#### Inherited from
+
+[RequestOptions](requestoptions.md).[timeout](requestoptions.md#timeout)
+
+#### Defined in
+
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)
