@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/index.ts:412](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L412)
+[bee-js/src/types/index.ts:479](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L479)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:411](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L411)
+[bee-js/src/types/index.ts:478](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L478)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:413](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L413)
+[bee-js/src/types/index.ts:480](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L480)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:410](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L410)
+[bee-js/src/types/index.ts:477](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L477)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:409](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L409)
+[bee-js/src/types/index.ts:476](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L476)
 
 ___
 
@@ -64,17 +64,17 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:408](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L408)
+[bee-js/src/types/index.ts:475](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L475)
 
 ___
 
 ### to
 
-• **to**: [`HexEthAddress`](../types/utils.eth.hexethaddress.md)
+• **to**: `HexEthAddress`
 
 #### Defined in
 
-[bee-js/src/types/index.ts:407](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L407)
+[bee-js/src/types/index.ts:474](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L474)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:406](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L406)
+[bee-js/src/types/index.ts:473](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L473)
 
 ___
 
@@ -94,4 +94,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:414](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L414)
+[bee-js/src/types/index.ts:481](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L481)

@@ -8,23 +8,13 @@ custom_edit_url: null
 
 ## Properties
 
-### data
-
-• **data**: `unknown`
-
-#### Defined in
-
-[bee-js/src/types/index.ts:269](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L269)
-
-___
-
 ### headers
 
 • **headers**: `Record`<`string`, `string`\>
 
 #### Defined in
 
-[bee-js/src/types/index.ts:268](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L268)
+[bee-js/src/types/index.ts:336](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L336)
 
 ___
 
@@ -34,7 +24,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:272](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L272)
+[bee-js/src/types/index.ts:339](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L339)
 
 ___
 
@@ -44,7 +34,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:270](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L270)
+[bee-js/src/types/index.ts:337](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L337)
 
 ___
 
@@ -54,4 +44,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:271](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L271)
+[bee-js/src/types/index.ts:338](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L338)

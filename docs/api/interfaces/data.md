@@ -348,17 +348,17 @@ ___
 
 ### hex
 
-▸ **hex**(): [`HexString`](../types/utils.hex.hexstring.md)<`number`\>
+▸ **hex**(): [`HexString`](../types/utils.hexstring.md)<`number`\>
 
 Converts the binary data into hex-string.
 
 #### Returns
 
-[`HexString`](../types/utils.hex.hexstring.md)<`number`\>
+[`HexString`](../types/utils.hexstring.md)<`number`\>
 
 #### Defined in
 
-[bee-js/src/types/index.ts:213](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L213)
+[bee-js/src/types/index.ts:280](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L280)
 
 ___
 
@@ -454,7 +454,7 @@ Converts the binary data into string which is then parsed into JSON.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:218](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L218)
+[bee-js/src/types/index.ts:285](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L285)
 
 ___
 
@@ -860,7 +860,7 @@ Converts the binary data using UTF-8 decoding into string.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:208](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L208)
+[bee-js/src/types/index.ts:275](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L275)
 
 ___
 

@@ -10,11 +10,11 @@ custom_edit_url: null
 
 ### ethereum
 
-• **ethereum**: [`HexEthAddress`](../types/utils.eth.hexethaddress.md)
+• **ethereum**: `HexEthAddress`
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:71](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L71)
+[bee-js/src/types/debug.ts:71](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L71)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:69](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L69)
+[bee-js/src/types/debug.ts:69](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L69)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:73](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L73)
+[bee-js/src/types/debug.ts:73](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L73)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:72](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L72)
+[bee-js/src/types/debug.ts:72](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L72)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:70](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/debug.ts#L70)
+[bee-js/src/types/debug.ts:70](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L70)

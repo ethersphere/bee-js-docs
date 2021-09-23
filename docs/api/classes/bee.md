@@ -26,7 +26,7 @@ For example gateway mode and light node mode has only limited set of endpoints e
 
 #### Defined in
 
-[bee-js/src/bee.ts:86](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L86)
+[bee-js/src/bee.ts:105](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L105)
 
 ## Properties
 
@@ -38,7 +38,7 @@ Default Signer object used for signing operations, mainly Feeds.
 
 #### Defined in
 
-[bee-js/src/bee.ts:86](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L86)
+[bee-js/src/bee.ts:99](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L99)
 
 ___
 
@@ -50,17 +50,23 @@ URL on which is the main API of Bee node exposed
 
 #### Defined in
 
-[bee-js/src/bee.ts:81](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L81)
+[bee-js/src/bee.ts:94](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L94)
 
 ## Methods
 
 ### checkConnection
 
-▸ **checkConnection**(): `Promise`<`void`\>
+▸ **checkConnection**(`options?`): `Promise`<`void`\>
 
 Ping the Bee node to see if there is a live Bee node on the given URL.
 
 **`throws`** If connection was not successful throw error
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -68,13 +74,13 @@ Ping the Bee node to see if there is a live Bee node on the given URL.
 
 #### Defined in
 
-[bee-js/src/bee.ts:906](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L906)
+[bee-js/src/bee.ts:1022](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L1022)
 
 ___
 
 ### createFeedManifest
 
-▸ **createFeedManifest**(`postageBatchId`, `type`, `topic`, `owner`): `Promise`<[`Reference`](../types/reference.md)\>
+▸ **createFeedManifest**(`postageBatchId`, `type`, `topic`, `owner`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
 
 Create feed manifest chunk and return the reference to it.
 
@@ -91,7 +97,8 @@ Feed manifest chunk allows for a feed to be able to be resolved through `/bzz` e
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId to be used to create the Feed Manifest |
 | `type` | ``"sequence"`` \| ``"epoch"`` | The type of the feed, can be 'epoch' or 'sequence' |
 | `topic` | `string` \| `Uint8Array` \| [`Topic`](../types/topic.md) | Topic in hex or bytes |
-| `owner` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.eth.ethaddress.md) | Owner's ethereum address in hex or bytes |
+| `owner` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.ethaddress.md) | Owner's ethereum address in hex or bytes |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -99,7 +106,7 @@ Feed manifest chunk allows for a feed to be able to be resolved through `/bzz` e
 
 #### Defined in
 
-[bee-js/src/bee.ts:645](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L645)
+[bee-js/src/bee.ts:749](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L749)
 
 ___
 
@@ -131,7 +138,7 @@ For better understanding what each parameter means and what are the optimal valu
 | :------ | :------ | :------ |
 | `amount` | [`NumberString`](../types/numberstring.md) | Amount that represents the value per chunk, has to be greater or equal zero. |
 | `depth` | `number` | Logarithm of the number of chunks that can be stamped with the batch. |
-| `options?` | [`PostageBatchOptions`](../interfaces/postagebatchoptions.md) | Options for creation of postage batch |
+| `options?` | [`PostageBatchOptions`](../interfaces/postagebatchoptions.md) | Options for creation of postage batch and request options |
 
 #### Returns
 
@@ -139,13 +146,13 @@ For better understanding what each parameter means and what are the optimal valu
 
 #### Defined in
 
-[bee-js/src/bee.ts:848](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L848)
+[bee-js/src/bee.ts:965](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L965)
 
 ___
 
 ### createTag
 
-▸ **createTag**(): `Promise`<[`Tag`](../interfaces/tag.md)\>
+▸ **createTag**(`options?`): `Promise`<[`Tag`](../interfaces/tag.md)\>
 
 Create a new Tag which is meant for tracking progres of syncing data across network.
 
@@ -155,19 +162,25 @@ Create a new Tag which is meant for tracking progres of syncing data across netw
 
 **`see`** [Bee API reference - `POST /tags`](https://docs.ethswarm.org/api/#tag/Tag/paths/~1tags/post)
 
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
+
 #### Returns
 
 `Promise`<[`Tag`](../interfaces/tag.md)\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:297](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L297)
+[bee-js/src/bee.ts:385](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L385)
 
 ___
 
 ### deleteTag
 
-▸ **deleteTag**(`tagUid`): `Promise`<`void`\>
+▸ **deleteTag**(`tagUid`, `options?`): `Promise`<`void`\>
 
 Delete Tag
 
@@ -186,6 +199,7 @@ Delete Tag
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -193,13 +207,13 @@ Delete Tag
 
 #### Defined in
 
-[bee-js/src/bee.ts:351](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L351)
+[bee-js/src/bee.ts:446](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L446)
 
 ___
 
 ### downloadData
 
-▸ **downloadData**(`reference`): `Promise`<[`Data`](../interfaces/data.md)\>
+▸ **downloadData**(`reference`, `options?`): `Promise`<[`Data`](../interfaces/data.md)\>
 
 Download data as a byte array
 
@@ -212,6 +226,7 @@ Download data as a byte array
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | Bee data reference |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -219,13 +234,13 @@ Download data as a byte array
 
 #### Defined in
 
-[bee-js/src/bee.ts:136](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L136)
+[bee-js/src/bee.ts:181](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L181)
 
 ___
 
 ### downloadFile
 
-▸ **downloadFile**(`reference`, `path?`): `Promise`<[`FileData`](../interfaces/filedata.md)<[`Data`](../interfaces/data.md)\>\>
+▸ **downloadFile**(`reference`, `path?`, `options?`): `Promise`<[`FileData`](../interfaces/filedata.md)<[`Data`](../interfaces/data.md)\>\>
 
 Download single file.
 
@@ -241,6 +256,7 @@ Download single file.
 | :------ | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | `undefined` | Bee file reference |
 | `path` | `string` | `''` | If reference points to manifest, then this parameter defines path to the file |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | `undefined` | Options that affects the request behavior |
 
 #### Returns
 
@@ -248,13 +264,13 @@ Download single file.
 
 #### Defined in
 
-[bee-js/src/bee.ts:215](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L215)
+[bee-js/src/bee.ts:266](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L266)
 
 ___
 
 ### downloadReadableData
 
-▸ **downloadReadableData**(`reference`, `axiosOptions?`): `Promise`<`Readable`\>
+▸ **downloadReadableData**(`reference`, `options?`): `Promise`<`ReadableStream`<`Uint8Array`\>\>
 
 Download data as a Readable stream
 
@@ -267,21 +283,21 @@ Download data as a Readable stream
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | Bee data reference |
-| `axiosOptions?` | `AxiosRequestConfig` | optional - alter default options of axios HTTP client |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
-`Promise`<`Readable`\>
+`Promise`<`ReadableStream`<`Uint8Array`\>\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:150](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L150)
+[bee-js/src/bee.ts:196](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L196)
 
 ___
 
 ### downloadReadableFile
 
-▸ **downloadReadableFile**(`reference`, `path?`): `Promise`<[`FileData`](../interfaces/filedata.md)<`Readable`\>\>
+▸ **downloadReadableFile**(`reference`, `path?`, `options?`): `Promise`<[`FileData`](../interfaces/filedata.md)<`ReadableStream`<`Uint8Array`\>\>\>
 
 Download single file as a readable stream
 
@@ -295,20 +311,21 @@ Download single file as a readable stream
 | :------ | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | `undefined` | Hash reference to file |
 | `path` | `string` | `''` | If reference points to manifest / collections, then this parameter defines path to the file |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | `undefined` | Options that affects the request behavior |
 
 #### Returns
 
-`Promise`<[`FileData`](../interfaces/filedata.md)<`Readable`\>\>
+`Promise`<[`FileData`](../interfaces/filedata.md)<`ReadableStream`<`Uint8Array`\>\>\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:230](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L230)
+[bee-js/src/bee.ts:283](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L283)
 
 ___
 
 ### getAllPins
 
-▸ **getAllPins**(): `Promise`<[`Reference`](../types/reference.md)[]\>
+▸ **getAllPins**(`options?`): `Promise`<[`Reference`](../types/reference.md)[]\>
 
 Get list of all locally pinned references
 
@@ -316,19 +333,25 @@ Get list of all locally pinned references
 
 **`see`** [Bee docs - Pinning](https://docs.ethswarm.org/docs/access-the-swarm/pinning)
 
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
+
 #### Returns
 
 `Promise`<[`Reference`](../types/reference.md)[]\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:419](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L419)
+[bee-js/src/bee.ts:524](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L524)
 
 ___
 
 ### getAllPostageBatch
 
-▸ **getAllPostageBatch**(): `Promise`<[`PostageBatch`](../interfaces/postagebatch.md)[]\>
+▸ **getAllPostageBatch**(`options?`): `Promise`<[`PostageBatch`](../interfaces/postagebatch.md)[]\>
 
 Return all postage batches that has the node available.
 
@@ -340,13 +363,19 @@ Return all postage batches that has the node available.
 
 **`deprecated`** Use DebugBee for postage batch management
 
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
+
 #### Returns
 
 `Promise`<[`PostageBatch`](../interfaces/postagebatch.md)[]\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:897](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L897)
+[bee-js/src/bee.ts:1010](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L1010)
 
 ___
 
@@ -370,9 +399,9 @@ The listing is limited by options.limit. So you have to iterate using options.of
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`AllTagsOptions`](../interfaces/alltagsoptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`AllTagsOptions`](../interfaces/alltagsoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -380,7 +409,7 @@ The listing is limited by options.limit. So you have to iterate using options.of
 
 #### Defined in
 
-[bee-js/src/bee.ts:315](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L315)
+[bee-js/src/bee.ts:405](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L405)
 
 ___
 
@@ -419,13 +448,13 @@ At least one of these has to be specified!
 
 #### Defined in
 
-[bee-js/src/bee.ts:756](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L756)
+[bee-js/src/bee.ts:869](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L869)
 
 ___
 
 ### getPin
 
-▸ **getPin**(`reference`): `Promise`<[`Pin`](../interfaces/pin.md)\>
+▸ **getPin**(`reference`, `options?`): `Promise`<[`Pin`](../interfaces/pin.md)\>
 
 Get pinning status of chunk with given reference
 
@@ -440,6 +469,7 @@ Get pinning status of chunk with given reference
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | Bee data reference |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -447,13 +477,13 @@ Get pinning status of chunk with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:433](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L433)
+[bee-js/src/bee.ts:541](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L541)
 
 ___
 
 ### getPostageBatch
 
-▸ **getPostageBatch**(`postageBatchId`): `Promise`<[`PostageBatch`](../interfaces/postagebatch.md)\>
+▸ **getPostageBatch**(`postageBatchId`, `options?`): `Promise`<[`PostageBatch`](../interfaces/postagebatch.md)\>
 
 Return details for specific postage batch.
 
@@ -470,6 +500,7 @@ Return details for specific postage batch.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Batch ID |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -477,15 +508,21 @@ Return details for specific postage batch.
 
 #### Defined in
 
-[bee-js/src/bee.ts:882](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L882)
+[bee-js/src/bee.ts:993](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L993)
 
 ___
 
 ### isConnected
 
-▸ **isConnected**(): `Promise`<`boolean`\>
+▸ **isConnected**(`options?`): `Promise`<`boolean`\>
 
 Ping the Bee node to see if there is a live Bee node on the given URL.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -495,13 +532,13 @@ true if successful, false on error
 
 #### Defined in
 
-[bee-js/src/bee.ts:915](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L915)
+[bee-js/src/bee.ts:1034](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L1034)
 
 ___
 
 ### makeFeedReader
 
-▸ **makeFeedReader**(`type`, `topic`, `owner`): [`FeedReader`](../interfaces/feedreader.md)
+▸ **makeFeedReader**(`type`, `topic`, `owner`, `options?`): [`FeedReader`](../interfaces/feedreader.md)
 
 Make a new feed reader for downloading feed updates.
 
@@ -513,7 +550,8 @@ Make a new feed reader for downloading feed updates.
 | :------ | :------ | :------ |
 | `type` | ``"sequence"`` \| ``"epoch"`` | The type of the feed, can be 'epoch' or 'sequence' |
 | `topic` | `string` \| `Uint8Array` \| [`Topic`](../types/topic.md) | Topic in hex or bytes |
-| `owner` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.eth.ethaddress.md) | Owner's ethereum address in hex or bytes |
+| `owner` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.ethaddress.md) | Owner's ethereum address in hex or bytes |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -521,7 +559,7 @@ Make a new feed reader for downloading feed updates.
 
 #### Defined in
 
-[bee-js/src/bee.ts:669](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L669)
+[bee-js/src/bee.ts:776](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L776)
 
 ___
 
@@ -546,13 +584,13 @@ hashes the input string to create a topic string of arbitrary length.
 
 #### Defined in
 
-[bee-js/src/bee.ts:793](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L793)
+[bee-js/src/bee.ts:908](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L908)
 
 ___
 
 ### makeFeedWriter
 
-▸ **makeFeedWriter**(`type`, `topic`, `signer?`): [`FeedWriter`](../interfaces/feedwriter.md)
+▸ **makeFeedWriter**(`type`, `topic`, `signer?`, `options?`): [`FeedWriter`](../interfaces/feedwriter.md)
 
 Make a new feed writer for updating feeds
 
@@ -565,6 +603,7 @@ Make a new feed writer for updating feeds
 | `type` | ``"sequence"`` \| ``"epoch"`` | The type of the feed, can be 'epoch' or 'sequence' |
 | `topic` | `string` \| `Uint8Array` \| [`Topic`](../types/topic.md) | Topic in hex or bytes |
 | `signer?` | `string` \| `Uint8Array` \| [`Signer`](../types/signer.md) | The signer's private key or a Signer instance that can sign data |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -572,13 +611,13 @@ Make a new feed writer for updating feeds
 
 #### Defined in
 
-[bee-js/src/bee.ts:691](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L691)
+[bee-js/src/bee.ts:801](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L801)
 
 ___
 
 ### makeSOCReader
 
-▸ **makeSOCReader**(`ownerAddress`): [`SOCReader`](../interfaces/socreader.md)
+▸ **makeSOCReader**(`ownerAddress`, `options?`): [`SOCReader`](../interfaces/socreader.md)
 
 Returns an object for reading single owner chunks
 
@@ -588,7 +627,8 @@ Returns an object for reading single owner chunks
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `ownerAddress` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.eth.ethaddress.md) | The ethereum address of the owner |
+| `ownerAddress` | `string` \| `Uint8Array` \| [`EthAddress`](../types/utils.ethaddress.md) | The ethereum address of the owner |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -596,13 +636,13 @@ Returns an object for reading single owner chunks
 
 #### Defined in
 
-[bee-js/src/bee.ts:804](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L804)
+[bee-js/src/bee.ts:919](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L919)
 
 ___
 
 ### makeSOCWriter
 
-▸ **makeSOCWriter**(`signer?`): [`SOCWriter`](../interfaces/socwriter.md)
+▸ **makeSOCWriter**(`signer?`, `options?`): [`SOCWriter`](../interfaces/socwriter.md)
 
 Returns an object for reading and writing single owner chunks
 
@@ -613,6 +653,7 @@ Returns an object for reading and writing single owner chunks
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `signer?` | `string` \| `Uint8Array` \| [`Signer`](../types/signer.md) | The signer's private key or a Signer instance that can sign data |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -620,13 +661,13 @@ Returns an object for reading and writing single owner chunks
 
 #### Defined in
 
-[bee-js/src/bee.ts:819](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L819)
+[bee-js/src/bee.ts:935](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L935)
 
 ___
 
 ### pin
 
-▸ **pin**(`reference`): `Promise`<`void`\>
+▸ **pin**(`reference`, `options?`): `Promise`<`void`\>
 
 Pin local data with given reference
 
@@ -641,6 +682,7 @@ Pin local data with given reference
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | Data reference |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -648,7 +690,7 @@ Pin local data with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:390](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L390)
+[bee-js/src/bee.ts:491](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L491)
 
 ___
 
@@ -692,13 +734,13 @@ Message in byte array
 
 #### Defined in
 
-[bee-js/src/bee.ts:597](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L597)
+[bee-js/src/bee.ts:700](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L700)
 
 ___
 
 ### pssSend
 
-▸ **pssSend**(`postageBatchId`, `topic`, `target`, `data`, `recipient?`): `Promise`<`void`\>
+▸ **pssSend**(`postageBatchId`, `topic`, `target`, `data`, `recipient?`, `options?`): `Promise`<`void`\>
 
 Send data to recipient or target with Postal Service for Swarm.
 
@@ -724,9 +766,10 @@ This is because light nodes does not fully participate in the data exchange in S
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId that will be assigned to sent message |
 | `topic` | `string` | Topic name |
-| `target` | [`AddressPrefix`](../types/addressprefix.md) | Target message address prefix |
+| `target` | [`AddressPrefix`](../types/addressprefix.md) | Target message address prefix. Has a limit on length. Recommend to use `Utils.Pss.makeMaxTarget()` to get the most specific target that Bee node will accept. |
 | `data` | `string` \| `Uint8Array` | Message to be sent |
 | `recipient?` | `string` \| [`PublicKey`](../types/publickey.md) | Recipient public key |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -734,7 +777,7 @@ This is because light nodes does not fully participate in the data exchange in S
 
 #### Defined in
 
-[bee-js/src/bee.ts:486](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L486)
+[bee-js/src/bee.ts:587](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L587)
 
 ___
 
@@ -768,13 +811,13 @@ Subscription to a given topic
 
 #### Defined in
 
-[bee-js/src/bee.ts:526](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L526)
+[bee-js/src/bee.ts:629](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L629)
 
 ___
 
 ### retrieveTag
 
-▸ **retrieveTag**(`tagUid`): `Promise`<[`Tag`](../interfaces/tag.md)\>
+▸ **retrieveTag**(`tagUid`, `options?`): `Promise`<[`Tag`](../interfaces/tag.md)\>
 
 Retrieve tag information from Bee node
 
@@ -791,6 +834,7 @@ Retrieve tag information from Bee node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -798,13 +842,13 @@ Retrieve tag information from Bee node
 
 #### Defined in
 
-[bee-js/src/bee.ts:333](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L333)
+[bee-js/src/bee.ts:425](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L425)
 
 ___
 
 ### reuploadPinnedData
 
-▸ **reuploadPinnedData**(`reference`, `axiosOptions?`): `Promise`<`void`\>
+▸ **reuploadPinnedData**(`reference`, `options?`): `Promise`<`void`\>
 
 Instructs the Bee node to reupload a locally pinned data into the network.
 
@@ -814,10 +858,10 @@ Instructs the Bee node to reupload a locally pinned data into the network.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `reference` | `string` \| [`Reference`](../types/reference.md) |
-| `axiosOptions?` | `AxiosRequestConfig` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `reference` | `string` \| [`Reference`](../types/reference.md) |  |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -825,7 +869,7 @@ Instructs the Bee node to reupload a locally pinned data into the network.
 
 #### Defined in
 
-[bee-js/src/bee.ts:447](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L447)
+[bee-js/src/bee.ts:556](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L556)
 
 ___
 
@@ -864,13 +908,13 @@ If none of those two is set error is thrown.
 
 #### Defined in
 
-[bee-js/src/bee.ts:722](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L722)
+[bee-js/src/bee.ts:834](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L834)
 
 ___
 
 ### unpin
 
-▸ **unpin**(`reference`): `Promise`<`void`\>
+▸ **unpin**(`reference`, `options?`): `Promise`<`void`\>
 
 Unpin local data with given reference
 
@@ -885,6 +929,7 @@ Unpin local data with given reference
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | Data reference |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -892,13 +937,13 @@ Unpin local data with given reference
 
 #### Defined in
 
-[bee-js/src/bee.ts:406](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L406)
+[bee-js/src/bee.ts:509](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L509)
 
 ___
 
 ### updateTag
 
-▸ **updateTag**(`tagUid`, `reference`): `Promise`<`void`\>
+▸ **updateTag**(`tagUid`, `reference`, `options?`): `Promise`<`void`\>
 
 Update tag's total chunks count.
 
@@ -921,6 +966,7 @@ you can use this method to update the total chunks count for the tag.
 | :------ | :------ | :------ |
 | `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
 | `reference` | `string` \| [`Reference`](../types/reference.md) | The root reference that contains all the chunks to be counted |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | Options that affects the request behavior |
 
 #### Returns
 
@@ -928,13 +974,40 @@ you can use this method to update the total chunks count for the tag.
 
 #### Defined in
 
-[bee-js/src/bee.ts:373](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L373)
+[bee-js/src/bee.ts:471](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L471)
+
+___
+
+### uploadCollection
+
+▸ **uploadCollection**(`postageBatchId`, `collection`, `options?`): `Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
+
+Upload Collection that you can assembly yourself.
+
+The returned `UploadResult.tag` might be undefined if called in CORS-enabled environment.
+This will be fixed upon next Bee release. https://github.com/ethersphere/bee-js/issues/406
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) |  |
+| `collection` | [`Collection`](../types/collection.md)<`Uint8Array` \| [`Readable`](../types/readable.md)\> |  |
+| `options?` | [`CollectionUploadOptions`](../interfaces/collectionuploadoptions.md) | Collections and request options |
+
+#### Returns
+
+`Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
+
+#### Defined in
+
+[bee-js/src/bee.ts:334](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L334)
 
 ___
 
 ### uploadData
 
-▸ **uploadData**(`postageBatchId`, `data`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
+▸ **uploadData**(`postageBatchId`, `data`, `options?`): `Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 Upload data to a Bee node
 
@@ -948,23 +1021,23 @@ Upload data to a Bee node
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId to be used to upload the data with |
 | `data` | `string` \| `Uint8Array` | Data to be uploaded |
-| `options?` | [`UploadOptions`](../interfaces/uploadoptions.md) | Additional options like tag, encryption, pinning, content-type |
+| `options?` | [`UploadOptions`](../interfaces/uploadoptions.md) | Additional options like tag, encryption, pinning, content-type and request options |
 
 #### Returns
 
-`Promise`<[`Reference`](../types/reference.md)\>
+`Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 reference is a content hash of the data
 
 #### Defined in
 
-[bee-js/src/bee.ts:116](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L116)
+[bee-js/src/bee.ts:160](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L160)
 
 ___
 
 ### uploadFile
 
-▸ **uploadFile**(`postageBatchId`, `data`, `name?`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
+▸ **uploadFile**(`postageBatchId`, `data`, `name?`, `options?`): `Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 Upload single file to a Bee node.
 
@@ -982,29 +1055,32 @@ locally pin the data with `options.pin = true`**
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId to be used to upload the data with |
-| `data` | `string` \| `Uint8Array` \| `File` \| `Readable` | Data or file to be uploaded |
+| `data` | `string` \| `File` \| `Uint8Array` \| [`Readable`](../types/readable.md) | Data or file to be uploaded |
 | `name?` | `string` | Optional name of the uploaded file |
-| `options?` | [`FileUploadOptions`](../interfaces/fileuploadoptions.md) | Additional options like tag, encryption, pinning, content-type |
+| `options?` | [`FileUploadOptions`](../interfaces/fileuploadoptions.md) | Additional options like tag, encryption, pinning, content-type and request options |
 
 #### Returns
 
-`Promise`<[`Reference`](../types/reference.md)\>
+`Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 reference is a content hash of the file
 
 #### Defined in
 
-[bee-js/src/bee.ts:172](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L172)
+[bee-js/src/bee.ts:222](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L222)
 
 ___
 
 ### uploadFiles
 
-▸ **uploadFiles**(`postageBatchId`, `fileList`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
+▸ **uploadFiles**(`postageBatchId`, `fileList`, `options?`): `Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 Upload collection of files to a Bee node
 
 Uses the FileList API from the browser.
+
+The returned `UploadResult.tag` might be undefined if called in CORS-enabled environment.
+This will be fixed upon next Bee release. https://github.com/ethersphere/bee-js/issues/406
 
 **`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
 
@@ -1018,25 +1094,28 @@ Uses the FileList API from the browser.
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId to be used to upload the data with |
 | `fileList` | `FileList` \| `File`[] | list of files to be uploaded |
-| `options?` | [`CollectionUploadOptions`](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning |
+| `options?` | [`CollectionUploadOptions`](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning and request options |
 
 #### Returns
 
-`Promise`<[`Reference`](../types/reference.md)\>
+`Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:249](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L249)
+[bee-js/src/bee.ts:310](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L310)
 
 ___
 
 ### uploadFilesFromDirectory
 
-▸ **uploadFilesFromDirectory**(`postageBatchId`, `dir`, `options?`): `Promise`<[`Reference`](../types/reference.md)\>
+▸ **uploadFilesFromDirectory**(`postageBatchId`, `dir`, `options?`): `Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 Upload collection of files.
 
 Available only in Node.js as it uses the `fs` module.
+
+The returned `UploadResult.tag` might be undefined if called in CORS-enabled environment.
+This will be fixed upon next Bee release. https://github.com/ethersphere/bee-js/issues/406
 
 **`see`** [Bee docs - Keep your data alive / Postage stamps](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive)
 
@@ -1050,12 +1129,12 @@ Available only in Node.js as it uses the `fs` module.
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Postage BatchId to be used to upload the data with |
 | `dir` | `string` | the path of the files to be uploaded |
-| `options?` | [`CollectionUploadOptions`](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning |
+| `options?` | [`CollectionUploadOptions`](../interfaces/collectionuploadoptions.md) | Additional options like tag, encryption, pinning and request options |
 
 #### Returns
 
-`Promise`<[`Reference`](../types/reference.md)\>
+`Promise`<[`UploadResult`](../interfaces/uploadresult.md)\>
 
 #### Defined in
 
-[bee-js/src/bee.ts:276](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee.ts#L276)
+[bee-js/src/bee.ts:363](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee.ts#L363)

@@ -10,4 +10,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/index.ts:21](https://github.com/ethersphere/bee-js/blob/74056cb/src/types/index.ts#L21)
+[bee-js/src/types/index.ts:29](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L29)

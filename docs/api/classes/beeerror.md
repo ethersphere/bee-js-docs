@@ -36,7 +36,7 @@ Error.constructor
 
 #### Defined in
 
-[bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/74056cb/src/utils/error.ts#L1)
+[bee-js/src/utils/error.ts:1](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/error.ts#L1)
 
 ## Properties
 

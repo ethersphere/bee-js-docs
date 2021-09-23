@@ -14,17 +14,18 @@ The BeeDebug class provides a way of interacting with the Bee debug APIs based o
 
 ### constructor
 
-• **new BeeDebug**(`url`)
+• **new BeeDebug**(`url`, `options?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
+| `options?` | [`BeeOptions`](../interfaces/beeoptions.md) |
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:54](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L54)
+[bee-js/src/bee-debug.ts:77](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L77)
 
 ## Properties
 
@@ -32,15 +33,17 @@ The BeeDebug class provides a way of interacting with the Bee debug APIs based o
 
 • `Readonly` **url**: `string`
 
+URL on which is the Debug API of Bee node exposed
+
 #### Defined in
 
-[bee-js/src/bee-debug.ts:54](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L54)
+[bee-js/src/bee-debug.ts:71](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L71)
 
 ## Methods
 
 ### cancelPendingTransaction
 
-▸ **cancelPendingTransaction**(`transactionHash`, `gasPrice?`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+▸ **cancelPendingTransaction**(`transactionHash`, `gasPrice?`, `options?`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
 
 Cancel currently pending transaction
 
@@ -50,6 +53,7 @@ Cancel currently pending transaction
 | :------ | :------ |
 | `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
 | `gasPrice?` | [`NumberString`](../types/numberstring.md) |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -57,7 +61,7 @@ Cancel currently pending transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:428](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L428)
+[bee-js/src/bee-debug.ts:537](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L537)
 
 ___
 
@@ -80,7 +84,7 @@ Cashout the last cheque for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:216](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L216)
+[bee-js/src/bee-debug.ts:293](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L293)
 
 ___
 
@@ -117,13 +121,13 @@ For better understanding what each parameter means and what are the optimal valu
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:333](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L333)
+[bee-js/src/bee-debug.ts:424](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L424)
 
 ___
 
 ### depositTokens
 
-▸ **depositTokens**(`amount`, `gasPrice?`): `Promise`<`string`\>
+▸ **depositTokens**(`amount`, `gasPrice?`, `options?`): `Promise`<`string`\>
 
 Deposit tokens from overlay address into chequebook
 
@@ -133,6 +137,7 @@ Deposit tokens from overlay address into chequebook
 | :------ | :------ | :------ |
 | `amount` | `number` \| [`NumberString`](../types/numberstring.md) | Amount of tokens to deposit (must be positive integer) |
 | `gasPrice?` | [`NumberString`](../types/numberstring.md) | Gas Price in WEI for the transaction call |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -142,15 +147,21 @@ string  Hash of the transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:237](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L237)
+[bee-js/src/bee-debug.ts:307](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L307)
 
 ___
 
 ### getAllBalances
 
-▸ **getAllBalances**(): `Promise`<[`BalanceResponse`](../interfaces/balanceresponse.md)\>
+▸ **getAllBalances**(`options?`): `Promise`<[`BalanceResponse`](../interfaces/balanceresponse.md)\>
 
 Get the balances with all known peers including prepaid services
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -158,15 +169,21 @@ Get the balances with all known peers including prepaid services
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:125](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L125)
+[bee-js/src/bee-debug.ts:185](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L185)
 
 ___
 
 ### getAllPendingTransactions
 
-▸ **getAllPendingTransactions**(): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)[]\>
+▸ **getAllPendingTransactions**(`options?`): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)[]\>
 
 Return lists of all current pending transactions that the Bee made
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -174,13 +191,13 @@ Return lists of all current pending transactions that the Bee made
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:397](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L397)
+[bee-js/src/bee-debug.ts:496](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L496)
 
 ___
 
 ### getAllPostageBatch
 
-▸ **getAllPostageBatch**(): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)[]\>
+▸ **getAllPostageBatch**(`options?`): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)[]\>
 
 Return all postage batches that has the node available.
 
@@ -188,21 +205,33 @@ Return all postage batches that has the node available.
 
 **`see`** [Bee Debug API reference - `GET /stamps`](https://docs.ethswarm.org/debug-api/#tag/Postage-Stamps/paths/~1stamps/get)
 
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
+
 #### Returns
 
 `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)[]\>
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:390](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L390)
+[bee-js/src/bee-debug.ts:487](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L487)
 
 ___
 
 ### getAllSettlements
 
-▸ **getAllSettlements**(): `Promise`<[`AllSettlements`](../interfaces/allsettlements.md)\>
+▸ **getAllSettlements**(`options?`): `Promise`<[`AllSettlements`](../interfaces/allsettlements.md)\>
 
 Get settlements with all known peers and total amount sent or received
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -210,13 +239,19 @@ Get settlements with all known peers and total amount sent or received
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:282](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L282)
+[bee-js/src/bee-debug.ts:363](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L363)
 
 ___
 
 ### getBlocklist
 
-▸ **getBlocklist**(): `Promise`<[`Peer`](../interfaces/peer.md)[]\>
+▸ **getBlocklist**(`options?`): `Promise`<[`Peer`](../interfaces/peer.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -224,15 +259,21 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:69](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L69)
+[bee-js/src/bee-debug.ts:119](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L119)
 
 ___
 
 ### getChainState
 
-▸ **getChainState**(): `Promise`<[`ChainState`](../interfaces/chainstate.md)\>
+▸ **getChainState**(`options?`): `Promise`<[`ChainState`](../interfaces/chainstate.md)\>
 
 Get chain state
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -240,18 +281,24 @@ Get chain state
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:312](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L312)
+[bee-js/src/bee-debug.ts:401](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L401)
 
 ___
 
 ### getChequebookAddress
 
-▸ **getChequebookAddress**(): `Promise`<[`ChequebookAddressResponse`](../interfaces/chequebookaddressresponse.md)\>
+▸ **getChequebookAddress**(`options?`): `Promise`<[`ChequebookAddressResponse`](../interfaces/chequebookaddressresponse.md)\>
 
 Get the address of the chequebook contract used.
 
 **Warning:** The address is returned with 0x prefix unlike all other calls.
 https://github.com/ethersphere/bee/issues/1443
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -259,15 +306,21 @@ https://github.com/ethersphere/bee/issues/1443
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:168](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L168)
+[bee-js/src/bee-debug.ts:234](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L234)
 
 ___
 
 ### getChequebookBalance
 
-▸ **getChequebookBalance**(): `Promise`<[`ChequebookBalanceResponse`](../interfaces/chequebookbalanceresponse.md)\>
+▸ **getChequebookBalance**(`options?`): `Promise`<[`ChequebookBalanceResponse`](../interfaces/chequebookbalanceresponse.md)\>
 
 Get the balance of the chequebook
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -275,15 +328,21 @@ Get the balance of the chequebook
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:175](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L175)
+[bee-js/src/bee-debug.ts:243](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L243)
 
 ___
 
 ### getHealth
 
-▸ **getHealth**(): `Promise`<[`Health`](../interfaces/health.md)\>
+▸ **getHealth**(`options?`): `Promise`<[`Health`](../interfaces/health.md)\>
 
 Get health of node
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -291,13 +350,13 @@ Get health of node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:289](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L289)
+[bee-js/src/bee-debug.ts:372](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L372)
 
 ___
 
 ### getLastCashoutAction
 
-▸ **getLastCashoutAction**(`address`): `Promise`<[`LastCashoutActionResponse`](../interfaces/lastcashoutactionresponse.md)\>
+▸ **getLastCashoutAction**(`address`, `options?`): `Promise`<[`LastCashoutActionResponse`](../interfaces/lastcashoutactionresponse.md)\>
 
 Get last cashout action for the peer
 
@@ -306,6 +365,7 @@ Get last cashout action for the peer
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `address` | `string` \| [`Address`](../types/address.md) | Swarm address of peer |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -313,15 +373,21 @@ Get last cashout action for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:202](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L202)
+[bee-js/src/bee-debug.ts:278](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L278)
 
 ___
 
 ### getLastCheques
 
-▸ **getLastCheques**(): `Promise`<[`LastChequesResponse`](../interfaces/lastchequesresponse.md)\>
+▸ **getLastCheques**(`options?`): `Promise`<[`LastChequesResponse`](../interfaces/lastchequesresponse.md)\>
 
 Get last cheques for all peers
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -329,13 +395,13 @@ Get last cheques for all peers
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:182](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L182)
+[bee-js/src/bee-debug.ts:252](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L252)
 
 ___
 
 ### getLastChequesForPeer
 
-▸ **getLastChequesForPeer**(`address`): `Promise`<[`LastChequesForPeerResponse`](../interfaces/lastchequesforpeerresponse.md)\>
+▸ **getLastChequesForPeer**(`address`, `options?`): `Promise`<[`LastChequesForPeerResponse`](../interfaces/lastchequesforpeerresponse.md)\>
 
 Get last cheques for the peer
 
@@ -344,6 +410,7 @@ Get last cheques for the peer
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `address` | `string` \| [`Address`](../types/address.md) | Swarm address of peer |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -351,13 +418,19 @@ Get last cheques for the peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:191](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L191)
+[bee-js/src/bee-debug.ts:263](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L263)
 
 ___
 
 ### getNodeAddresses
 
-▸ **getNodeAddresses**(): `Promise`<[`NodeAddresses`](../interfaces/nodeaddresses.md)\>
+▸ **getNodeAddresses**(`options?`): `Promise`<[`NodeAddresses`](../interfaces/nodeaddresses.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -365,15 +438,21 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:65](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L65)
+[bee-js/src/bee-debug.ts:113](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L113)
 
 ___
 
 ### getPastDueConsumptionBalances
 
-▸ **getPastDueConsumptionBalances**(): `Promise`<[`BalanceResponse`](../interfaces/balanceresponse.md)\>
+▸ **getPastDueConsumptionBalances**(`options?`): `Promise`<[`BalanceResponse`](../interfaces/balanceresponse.md)\>
 
 Get the past due consumption balances with all known peers
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -381,13 +460,13 @@ Get the past due consumption balances with all known peers
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:143](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L143)
+[bee-js/src/bee-debug.ts:206](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L206)
 
 ___
 
 ### getPastDueConsumptionPeerBalance
 
-▸ **getPastDueConsumptionPeerBalance**(`address`): `Promise`<[`PeerBalance`](../interfaces/peerbalance.md)\>
+▸ **getPastDueConsumptionPeerBalance**(`address`, `options?`): `Promise`<[`PeerBalance`](../interfaces/peerbalance.md)\>
 
 Get the past due consumption balance with a specific peer
 
@@ -396,6 +475,7 @@ Get the past due consumption balance with a specific peer
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `address` | `string` \| [`Address`](../types/address.md) | Swarm address of peer |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -403,13 +483,13 @@ Get the past due consumption balance with a specific peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:152](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L152)
+[bee-js/src/bee-debug.ts:217](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L217)
 
 ___
 
 ### getPeerBalance
 
-▸ **getPeerBalance**(`address`): `Promise`<[`PeerBalance`](../interfaces/peerbalance.md)\>
+▸ **getPeerBalance**(`address`, `options?`): `Promise`<[`PeerBalance`](../interfaces/peerbalance.md)\>
 
 Get the balances with a specific peer including prepaid services
 
@@ -418,6 +498,7 @@ Get the balances with a specific peer including prepaid services
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `address` | `string` \| [`Address`](../types/address.md) | Swarm address of peer |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -425,15 +506,21 @@ Get the balances with a specific peer including prepaid services
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:134](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L134)
+[bee-js/src/bee-debug.ts:196](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L196)
 
 ___
 
 ### getPeers
 
-▸ **getPeers**(): `Promise`<[`Peer`](../interfaces/peer.md)[]\>
+▸ **getPeers**(`options?`): `Promise`<[`Peer`](../interfaces/peer.md)[]\>
 
 Get list of peers for this node
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -441,13 +528,13 @@ Get list of peers for this node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:98](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L98)
+[bee-js/src/bee-debug.ts:152](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L152)
 
 ___
 
 ### getPendingTransaction
 
-▸ **getPendingTransaction**(`transactionHash`): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)\>
+▸ **getPendingTransaction**(`transactionHash`, `options?`): `Promise`<[`TransactionInfo`](../interfaces/transactioninfo.md)\>
 
 Return transaction information for specific transaction
 
@@ -456,6 +543,7 @@ Return transaction information for specific transaction
 | Name | Type |
 | :------ | :------ |
 | `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -463,13 +551,13 @@ Return transaction information for specific transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:405](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L405)
+[bee-js/src/bee-debug.ts:506](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L506)
 
 ___
 
 ### getPostageBatch
 
-▸ **getPostageBatch**(`postageBatchId`): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)\>
+▸ **getPostageBatch**(`postageBatchId`, `options?`): `Promise`<[`DebugPostageBatch`](../interfaces/debugpostagebatch.md)\>
 
 Return details for specific postage batch.
 
@@ -482,6 +570,7 @@ Return details for specific postage batch.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Batch ID |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -489,13 +578,13 @@ Return details for specific postage batch.
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:364](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L364)
+[bee-js/src/bee-debug.ts:456](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L456)
 
 ___
 
 ### getPostageBatchBuckets
 
-▸ **getPostageBatchBuckets**(`postageBatchId`): `Promise`<[`PostageBatchBuckets`](../interfaces/postagebatchbuckets.md)\>
+▸ **getPostageBatchBuckets**(`postageBatchId`, `options?`): `Promise`<[`PostageBatchBuckets`](../interfaces/postagebatchbuckets.md)\>
 
 Return detailed information related to buckets for specific postage batch.
 
@@ -508,6 +597,7 @@ Return detailed information related to buckets for specific postage batch.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `postageBatchId` | `string` \| [`BatchId`](../types/batchid.md) | Batch ID |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -515,15 +605,21 @@ Return detailed information related to buckets for specific postage batch.
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:378](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L378)
+[bee-js/src/bee-debug.ts:471](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L471)
 
 ___
 
 ### getReserveState
 
-▸ **getReserveState**(): `Promise`<[`ReserveState`](../interfaces/reservestate.md)\>
+▸ **getReserveState**(`options?`): `Promise`<[`ReserveState`](../interfaces/reservestate.md)\>
 
 Get reserve state
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -531,13 +627,13 @@ Get reserve state
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:305](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L305)
+[bee-js/src/bee-debug.ts:392](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L392)
 
 ___
 
 ### getSettlements
 
-▸ **getSettlements**(`address`): `Promise`<[`Settlements`](../interfaces/settlements.md)\>
+▸ **getSettlements**(`address`, `options?`): `Promise`<[`Settlements`](../interfaces/settlements.md)\>
 
 Get amount of sent and received from settlements with a peer
 
@@ -546,6 +642,7 @@ Get amount of sent and received from settlements with a peer
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `address` | `string` \| [`Address`](../types/address.md) | Swarm address of peer |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -553,13 +650,19 @@ Get amount of sent and received from settlements with a peer
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:273](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L273)
+[bee-js/src/bee-debug.ts:353](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L353)
 
 ___
 
 ### getTopology
 
-▸ **getTopology**(): `Promise`<[`Topology`](../interfaces/topology.md)\>
+▸ **getTopology**(`options?`): `Promise`<[`Topology`](../interfaces/topology.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -567,15 +670,21 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:108](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L108)
+[bee-js/src/bee-debug.ts:165](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L165)
 
 ___
 
 ### isSupportedVersion
 
-▸ **isSupportedVersion**(): `Promise`<`boolean`\>
+▸ **isSupportedVersion**(`options?`): `Promise`<`boolean`\>
 
 Connnects to a node and checks if it is a supported Bee version by the bee-js
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -585,19 +694,20 @@ true if the Bee node version is supported
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:298](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L298)
+[bee-js/src/bee-debug.ts:383](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L383)
 
 ___
 
 ### pingPeer
 
-▸ **pingPeer**(`peer`): `Promise`<[`PingResponse`](../interfaces/pingresponse.md)\>
+▸ **pingPeer**(`peer`, `options?`): `Promise`<[`PingResponse`](../interfaces/pingresponse.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `peer` | `string` \| [`Address`](../types/address.md) |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -605,13 +715,13 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:112](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L112)
+[bee-js/src/bee-debug.ts:171](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L171)
 
 ___
 
 ### rebroadcastPendingTransaction
 
-▸ **rebroadcastPendingTransaction**(`transactionHash`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
+▸ **rebroadcastPendingTransaction**(`transactionHash`, `options?`): `Promise`<[`TransactionHash`](../types/transactionhash.md)\>
 
 Rebroadcast already created transaction.
 This is mainly needed when your transaction fall off mempool from other reason is not incorporated into block.
@@ -621,6 +731,7 @@ This is mainly needed when your transaction fall off mempool from other reason i
 | Name | Type |
 | :------ | :------ |
 | `transactionHash` | `string` \| [`TransactionHash`](../types/transactionhash.md) |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -628,19 +739,20 @@ This is mainly needed when your transaction fall off mempool from other reason i
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:417](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L417)
+[bee-js/src/bee-debug.ts:522](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L522)
 
 ___
 
 ### removePeer
 
-▸ **removePeer**(`peer`): `Promise`<[`RemovePeerResponse`](../interfaces/removepeerresponse.md)\>
+▸ **removePeer**(`peer`, `options?`): `Promise`<[`RemovePeerResponse`](../interfaces/removepeerresponse.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `peer` | `string` \| [`Address`](../types/address.md) |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) |
 
 #### Returns
 
@@ -648,13 +760,13 @@ ___
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:102](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L102)
+[bee-js/src/bee-debug.ts:158](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L158)
 
 ___
 
 ### retrieveExtendedTag
 
-▸ **retrieveExtendedTag**(`tagUid`): `Promise`<[`ExtendedTag`](../interfaces/extendedtag.md)\>
+▸ **retrieveExtendedTag**(`tagUid`, `options?`): `Promise`<[`ExtendedTag`](../interfaces/extendedtag.md)\>
 
 Retrieve tag extended information from Bee node
 
@@ -669,6 +781,7 @@ Retrieve tag extended information from Bee node
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `tagUid` | `number` \| [`Tag`](../interfaces/tag.md) | UID or tag object to be retrieved |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -676,13 +789,13 @@ Retrieve tag extended information from Bee node
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:83](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L83)
+[bee-js/src/bee-debug.ts:135](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L135)
 
 ___
 
 ### withdrawTokens
 
-▸ **withdrawTokens**(`amount`, `gasPrice?`): `Promise`<`string`\>
+▸ **withdrawTokens**(`amount`, `gasPrice?`, `options?`): `Promise`<`string`\>
 
 Withdraw tokens from the chequebook to the overlay address
 
@@ -692,6 +805,7 @@ Withdraw tokens from the chequebook to the overlay address
 | :------ | :------ | :------ |
 | `amount` | `number` \| [`NumberString`](../types/numberstring.md) | Amount of tokens to withdraw (must be positive integer) |
 | `gasPrice?` | [`NumberString`](../types/numberstring.md) | Gas Price in WEI for the transaction call |
+| `options?` | [`RequestOptions`](../interfaces/requestoptions.md) | - |
 
 #### Returns
 
@@ -701,4 +815,4 @@ string  Hash of the transaction
 
 #### Defined in
 
-[bee-js/src/bee-debug.ts:254](https://github.com/ethersphere/bee-js/blob/74056cb/src/bee-debug.ts#L254)
+[bee-js/src/bee-debug.ts:329](https://github.com/ethersphere/bee-js/blob/5b112bf/src/bee-debug.ts#L329)
