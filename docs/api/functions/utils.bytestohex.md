@@ -30,4 +30,4 @@ Converts array of number or Uint8Array to HexString without prefix.
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:89](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/hex.ts#L89)
+[bee-js/src/utils/hex.ts:89](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/hex.ts#L89)

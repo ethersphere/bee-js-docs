@@ -21,4 +21,4 @@ entry is ReadableStream<any\>
 
 #### Defined in
 
-[bee-js/src/utils/stream.ts:18](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/stream.ts#L18)
+[bee-js/src/utils/stream.ts:18](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/stream.ts#L18)

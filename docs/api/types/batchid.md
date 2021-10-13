@@ -12,4 +12,4 @@ BatchId is result of keccak256 hash so 64 hex string without prefix.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:67](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L67)
+[bee-js/src/types/index.ts:67](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L67)

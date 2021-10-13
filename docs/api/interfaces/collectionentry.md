@@ -22,7 +22,7 @@ Object represents a file and some of its metadata in [[Directory]] object.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L292)
+[bee-js/src/types/index.ts:287](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L287)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:297](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L297)
+[bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L292)

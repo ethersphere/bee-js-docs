@@ -30,4 +30,4 @@ Converts a hex string to Uint8Array
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:69](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/hex.ts#L69)
+[bee-js/src/utils/hex.ts:69](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/hex.ts#L69)

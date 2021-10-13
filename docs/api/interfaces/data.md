@@ -358,7 +358,7 @@ Converts the binary data into hex-string.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:280](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L280)
+[bee-js/src/types/index.ts:275](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L275)
 
 ___
 
@@ -454,7 +454,7 @@ Converts the binary data into string which is then parsed into JSON.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:285](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L285)
+[bee-js/src/types/index.ts:280](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L280)
 
 ___
 
@@ -860,7 +860,7 @@ Converts the binary data using UTF-8 decoding into string.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:275](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L275)
+[bee-js/src/types/index.ts:270](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L270)
 
 ___
 

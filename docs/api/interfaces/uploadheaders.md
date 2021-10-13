@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/index.ts:207](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L207)
+[bee-js/src/types/index.ts:202](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L202)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L206)
+[bee-js/src/types/index.ts:201](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L201)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:209](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L209)
+[bee-js/src/types/index.ts:204](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L204)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:208](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L208)
+[bee-js/src/types/index.ts:203](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L203)

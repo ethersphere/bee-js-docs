@@ -26,4 +26,4 @@ target that Bee node will except.
 
 #### Defined in
 
-[bee-js/src/utils/pss.ts:10](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/pss.ts#L10)
+[bee-js/src/utils/pss.ts:10](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/pss.ts#L10)

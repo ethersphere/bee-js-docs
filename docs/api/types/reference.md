@@ -17,4 +17,4 @@ Encrypted reference consists of two parts. The reference address itself (like no
 
 #### Defined in
 
-[bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L53)
+[bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L53)

@@ -23,7 +23,7 @@ to be specified.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:372](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L372)
+[bee-js/src/types/index.ts:367](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L367)
 
 ___
 
@@ -39,7 +39,7 @@ User defined Fetch compatible function
 
 #### Defined in
 
-[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L92)
 
 ___
 
@@ -58,7 +58,7 @@ Default is 2.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L87)
 
 ___
 
@@ -72,7 +72,7 @@ if not specified for `get` then `address` option has to be specified.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:379](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L379)
+[bee-js/src/types/index.ts:374](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L374)
 
 ___
 
@@ -88,7 +88,7 @@ Timeout of requests in milliseconds
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L79)
 
 ___
 
@@ -98,4 +98,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:380](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L380)
+[bee-js/src/types/index.ts:375](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L375)

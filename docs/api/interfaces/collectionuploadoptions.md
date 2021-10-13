@@ -34,7 +34,7 @@ Will encrypt the uploaded data and return longer hash which also includes the de
 
 #### Defined in
 
-[bee-js/src/types/index.ts:160](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L160)
+[bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L155)
 
 ___
 
@@ -50,7 +50,7 @@ Configure custom error document to be returned when a specified path can not be 
 
 #### Defined in
 
-[bee-js/src/types/index.ts:203](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L203)
+[bee-js/src/types/index.ts:198](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L198)
 
 ___
 
@@ -66,7 +66,7 @@ User defined Fetch compatible function
 
 #### Defined in
 
-[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L92)
 
 ___
 
@@ -82,7 +82,7 @@ Default file to be returned when the root hash of collection is accessed.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:195](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L195)
+[bee-js/src/types/index.ts:190](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L190)
 
 ___
 
@@ -106,7 +106,7 @@ Locally pinned data is possible to reupload to network if it disappear.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:149](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L149)
+[bee-js/src/types/index.ts:144](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L144)
 
 ___
 
@@ -125,7 +125,7 @@ Default is 2.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L87)
 
 ___
 
@@ -147,7 +147,7 @@ Tags keep track of syncing the data with network. This option allows attach exis
 
 #### Defined in
 
-[bee-js/src/types/index.ts:169](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L169)
+[bee-js/src/types/index.ts:164](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L164)
 
 ___
 
@@ -163,4 +163,4 @@ Timeout of requests in milliseconds
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L79)

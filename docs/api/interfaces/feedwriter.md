@@ -26,7 +26,7 @@ FeedWriter is an interface for updating feeds
 
 #### Defined in
 
-[bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L359)
+[bee-js/src/types/index.ts:354](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L354)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:360](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L360)
+[bee-js/src/types/index.ts:355](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L355)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/index.ts:358](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L358)
+[bee-js/src/types/index.ts:353](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L353)
 
 ## Methods
 
@@ -80,7 +80,7 @@ Download the latest feed update
 
 #### Defined in
 
-[bee-js/src/types/index.ts:364](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L364)
+[bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L359)
 
 ___
 
@@ -106,4 +106,4 @@ Reference that points at Single Owner Chunk that contains the new update and poi
 
 #### Defined in
 
-[bee-js/src/types/index.ts:396](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L396)
+[bee-js/src/types/index.ts:391](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L391)

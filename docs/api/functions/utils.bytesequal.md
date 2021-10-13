@@ -24,4 +24,4 @@ Returns true if two byte arrays are equal
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:125](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/bytes.ts#L125)
+[bee-js/src/utils/bytes.ts:125](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/bytes.ts#L125)

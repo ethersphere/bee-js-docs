@@ -20,7 +20,7 @@ The associated swarm hash for this tag
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:48](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L48)
+[bee-js/src/types/debug.ts:48](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L48)
 
 ___
 
@@ -32,7 +32,7 @@ Number of chunks already seen
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:23](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L23)
+[bee-js/src/types/debug.ts:23](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L23)
 
 ___
 
@@ -44,7 +44,7 @@ Number of chunks sent for push syncing
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:33](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L33)
+[bee-js/src/types/debug.ts:33](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L33)
 
 ___
 
@@ -56,7 +56,7 @@ Number of chunks already processed by splitter for hashing
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:18](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L18)
+[bee-js/src/types/debug.ts:18](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L18)
 
 ___
 
@@ -68,7 +68,7 @@ When the upload process started
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:53](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L53)
+[bee-js/src/types/debug.ts:53](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L53)
 
 ___
 
@@ -80,7 +80,7 @@ Number of chunks already stored locally
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:28](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L28)
+[bee-js/src/types/debug.ts:28](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L28)
 
 ___
 
@@ -92,7 +92,7 @@ Number of chunks synced with proof
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:38](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L38)
+[bee-js/src/types/debug.ts:38](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L38)
 
 ___
 
@@ -104,7 +104,7 @@ Number of all chunks that the data will be split into.
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:13](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L13)
+[bee-js/src/types/debug.ts:13](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L13)
 
 ___
 
@@ -116,4 +116,4 @@ Unique identifier
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L43)
+[bee-js/src/types/debug.ts:43](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L43)
