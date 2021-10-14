@@ -25,4 +25,4 @@ size in bytes
 
 #### Defined in
 
-[bee-js/src/utils/collection.ts:109](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/collection.ts#L109)
+[bee-js/src/utils/collection.ts:109](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/collection.ts#L109)

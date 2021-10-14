@@ -35,4 +35,4 @@ HexString or throws error
 
 #### Defined in
 
-[bee-js/src/utils/hex.ts:158](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/hex.ts#L158)
+[bee-js/src/utils/hex.ts:158](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/hex.ts#L158)

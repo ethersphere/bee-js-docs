@@ -21,4 +21,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/utils/stream.ts:138](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/stream.ts#L138)
+[bee-js/src/utils/stream.ts:138](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/stream.ts#L138)

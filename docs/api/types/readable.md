@@ -13,4 +13,4 @@ browser and NodeJS versions as both are supported.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:62](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L62)
+[bee-js/src/types/index.ts:62](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L62)

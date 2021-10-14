@@ -35,4 +35,4 @@ For example see the hashWithEthereumPrefix() function.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:542](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L542)
+[bee-js/src/types/index.ts:537](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L537)

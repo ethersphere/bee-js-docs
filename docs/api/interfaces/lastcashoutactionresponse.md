@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:111](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L111)
+[bee-js/src/types/debug.ts:111](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L111)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:108](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L108)
+[bee-js/src/types/debug.ts:108](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L108)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:112](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L112)
+[bee-js/src/types/debug.ts:112](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L112)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:110](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L110)
+[bee-js/src/types/debug.ts:110](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L110)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[bee-js/src/types/debug.ts:109](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/debug.ts#L109)
+[bee-js/src/types/debug.ts:109](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/debug.ts#L109)

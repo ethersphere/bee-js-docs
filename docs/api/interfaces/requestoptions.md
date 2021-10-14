@@ -32,7 +32,7 @@ User defined Fetch compatible function
 
 #### Defined in
 
-[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L92)
 
 ___
 
@@ -47,7 +47,7 @@ Default is 2.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L87)
 
 ___
 
@@ -59,4 +59,4 @@ Timeout of requests in milliseconds
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L79)

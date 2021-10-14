@@ -30,4 +30,4 @@ Because it uses forked web-streams-polyfill that are outdated.
 
 #### Defined in
 
-[bee-js/src/utils/stream.ts:62](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/stream.ts#L62)
+[bee-js/src/utils/stream.ts:62](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/stream.ts#L62)

@@ -23,7 +23,7 @@ in all outgoing bee-js requests for instance of Bee class.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:105](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L105)
+[bee-js/src/types/index.ts:105](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L105)
 
 ___
 
@@ -39,7 +39,7 @@ User defined Fetch compatible function
 
 #### Defined in
 
-[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L92)
+[bee-js/src/types/index.ts:92](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L92)
 
 ___
 
@@ -51,7 +51,7 @@ Function that registers listener callback for all outgoing HTTP requests that Be
 
 #### Defined in
 
-[bee-js/src/types/index.ts:110](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L110)
+[bee-js/src/types/index.ts:110](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L110)
 
 ___
 
@@ -63,7 +63,7 @@ Function that registers listener callback for all incoming HTTP responses that B
 
 #### Defined in
 
-[bee-js/src/types/index.ts:115](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L115)
+[bee-js/src/types/index.ts:115](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L115)
 
 ___
 
@@ -82,7 +82,7 @@ Default is 2.
 
 #### Defined in
 
-[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L87)
+[bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L87)
 
 ___
 
@@ -94,7 +94,7 @@ Signer object or private key of the Signer in form of either hex string or Uint8
 
 #### Defined in
 
-[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L99)
+[bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L99)
 
 ___
 
@@ -110,4 +110,4 @@ Timeout of requests in milliseconds
 
 #### Defined in
 
-[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L79)
+[bee-js/src/types/index.ts:79](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L79)

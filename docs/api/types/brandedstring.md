@@ -16,4 +16,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[bee-js/src/types/index.ts:554](https://github.com/ethersphere/bee-js/blob/5b112bf/src/types/index.ts#L554)
+[bee-js/src/types/index.ts:549](https://github.com/ethersphere/bee-js/blob/ae6a776/src/types/index.ts#L549)

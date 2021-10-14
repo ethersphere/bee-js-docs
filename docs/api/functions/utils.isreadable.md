@@ -24,4 +24,4 @@ entry is Readable
 
 #### Defined in
 
-[bee-js/src/utils/stream.ts:14](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/stream.ts#L14)
+[bee-js/src/utils/stream.ts:14](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/stream.ts#L14)

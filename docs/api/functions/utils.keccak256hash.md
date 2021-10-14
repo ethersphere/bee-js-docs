@@ -24,4 +24,4 @@ correct types.
 
 #### Defined in
 
-[bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/hash.ts#L10)
+[bee-js/src/utils/hash.ts:10](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/hash.ts#L10)

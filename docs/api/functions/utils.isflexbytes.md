@@ -32,4 +32,4 @@ b is FlexBytes<Min, Max\>
 
 #### Defined in
 
-[bee-js/src/utils/bytes.ts:57](https://github.com/ethersphere/bee-js/blob/5b112bf/src/utils/bytes.ts#L57)
+[bee-js/src/utils/bytes.ts:57](https://github.com/ethersphere/bee-js/blob/ae6a776/src/utils/bytes.ts#L57)
