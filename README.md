@@ -34,7 +34,6 @@ Don't forget to find and replace the version number for the whole of the docs fo
 
 ## How to generate / include the API reference html
 
-1. Preparation phase - pull bee-js submodule and update it to the necessary commit
 ```sh
 # Initialise the bee-js submodule
 git submodule update --init --recursive
@@ -46,34 +45,10 @@ git submodule update --remote --merge
 cd bee-js
 npm ci
 cd ..
+
+# Generate new API
+npm run build
 ```
-
-2. Generating the docs - in the `docusaurus.config.js` and uncomment the line 9 with `'docusaurus-plugin-typedoc'` in the plugins array.
-
-Build the api docs now with `npm run build`. This will probably throw some syntax errors like:
-
-```
-./docs/api/functions/utils.bytes.isbytes.md
-SyntaxError: ./bee-js-docs/docs/api/functions/utils.bytes.isbytes.md: Expected corresponding JSX closing tag for <T> (11:39)
-
-   9 | <p><a parentName="p" {...{"href":"/docs/api/modules/utils"}}>{`Utils`}</a>{`.`}<a parentName="p" {...{"href":"/docs/api/modules/utils.bytes"}}>{`Bytes`}</a>{`.isBytes`}</p>
-  10 | <p>{`▸ `}<strong parentName="p">{`isBytes`}</strong>{`<Length`}{`>`}{`(`}<inlineCode parentName="p">{`length`}</inlineCode>{`: Length, `}<inlineCode parentName="p">{`b`}</inlineCode>{`: Uint8Array): b is Bytes<Length`}{`>`}</p>
-> 11 | <p>{`Type guard for Bytes`}<T>{` type`}</p>
-     |                                        ^
-  12 | <h4 {...{"id":"type-parameters"}}>{`Type parameters:`}</h4>
-  13 | <table>
-  14 | <thead parentName="table">
- @ ./.docusaurus/registry.js 1:11691-11761 1:11547-11638
- @ ./node_modules/@docusaurus/core/lib/client/exports/ComponentCreator.js
- @ ./.docusaurus/routes.js
- @ ./node_modules/@docusaurus/core/lib/client/clientEntry.js
- @ multi ./node_modules/@docusaurus/core/lib/client/clientEntry.js
-Client bundle compiled with errors therefore further build is impossible.
-```
-
-3. Fix the issues - run the `escape-chars.bash` script
-   
-4. In the `docusaurus.config.js` and comment the line 9 with `'docusaurus-plugin-typedoc'` in the plugins array so that the building no longer runs typedoc on `bee-js`. Test the page with `npm run start` or `npm run build` and create PR with this updated API reference.
 
 ## Maintainers
 

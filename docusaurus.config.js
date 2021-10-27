@@ -7,14 +7,14 @@ module.exports = {
   trailingSlash: true,
   plugins: [
     require.resolve('docusaurus-lunr-search'),
-    // [
-    //   'docusaurus-plugin-typedoc',
-    //   {
-    //     sidebar: {
-    //       sidebarFile: null
-    //     }
-    //   }
-    // ]
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        sidebar: {
+          sidebarFile: null
+        }
+      }
+    ]
   ],
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',

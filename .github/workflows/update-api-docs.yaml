@@ -1,0 +1,48 @@
+name: Update API docs
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [create-api-docs-pr]
+
+
+jobs:
+  create-api-docs-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      ## Try getting the node modules from cache, if failed npm ci
+      - uses: actions/cache@v2
+        id: cache-npm
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-${{ env.cache-name }}-
+            ${{ runner.OS }}-
+
+      - name: Install npm deps
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Update Bee-js
+        run: git submodule update --remote --merge
+
+      - name: Build new API docs
+        run: npm run build
+
+      - name: Create PR
+        uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_GHA_PAT }}
+        with:
+          title: "feat: new bee-js api docs"
+          body: "Updated Bee-js API references"
+          commit-message: "feat: new bee-js api docs"
+          author: "bee-worker <bee-worker@ethswarm.org>"
