@@ -36,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: Create preview
-        uses: ethersphere/swarm-preview-action
+        uses: ethersphere/swarm-preview-action@master
         with:
           bee-url: https://bee-9.gateway.ethswarm.org
           postage-batch-id: 0000000000000000000000000000000000000000000000000000000000000000
