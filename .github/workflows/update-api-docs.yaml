@@ -34,9 +34,6 @@ jobs:
       - name: Update Bee-js
         run: git submodule update --remote --merge
 
-      - name: Build new API docs
-        run: npm run build
-
       - name: Create PR
         uses: gr2m/create-or-update-pull-request-action@v1
         env:
