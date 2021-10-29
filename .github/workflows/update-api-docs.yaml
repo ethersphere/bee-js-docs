@@ -43,5 +43,6 @@ jobs:
         with:
           title: "feat: new bee-js api docs"
           body: "Updated Bee-js API references"
+          branch: "feat/new-bee-js-api-docs"
           commit-message: "feat: new bee-js api docs"
           author: "bee-worker <bee-worker@ethswarm.org>"
