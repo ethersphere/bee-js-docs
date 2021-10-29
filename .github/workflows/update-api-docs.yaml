@@ -3,7 +3,7 @@ name: Update API docs
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [create-api-docs-pr]
+    types: [trigger-api-docs-pr]
 
 
 jobs:
