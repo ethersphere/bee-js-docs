@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           submodules: true
 
       - name: Use Node.js 16
@@ -31,6 +32,9 @@ jobs:
       - name: Install npm deps
         if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm ci
+
+      - name: Install npm deps for bee-js
+        run: cd bee-js && npm ci && cd ..
 
       - name: Build
         run: npm run build
