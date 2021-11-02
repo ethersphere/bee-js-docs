@@ -64,8 +64,9 @@ jobs:
           npx link-checker --url-ignore localhost --allow-hash-href --mkdocs --http-cache /tmp/link-checker --http-always-get --http-timeout 10000 --http-redirects 5 ./build
 
       - name: Create preview
-        uses: ethersphere/swarm-preview-action@master
+        uses: ethersphere/bee-load-action@master
         with:
           bee-url: https://bee-9.gateway.ethswarm.org
+          preview: 'true'
           postage-batch-id: '0000000000000000000000000000000000000000000000000000000000000000'
           token: ${{ secrets.REPO_GHA_PAT }}
