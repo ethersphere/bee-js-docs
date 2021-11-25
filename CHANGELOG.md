@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.19.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.18.0...v0.19.0) (2021-11-25)
+
+
+### Features
+
+* disable annoucement ([#93](https://www.github.com/ethersphere/bee-js-docs/issues/93)) ([66d49b4](https://www.github.com/ethersphere/bee-js-docs/commit/66d49b49b3e678a9d7c52887907651e39640d453))
+* new bee-js api docs ([#90](https://www.github.com/ethersphere/bee-js-docs/issues/90)) ([6dc841c](https://www.github.com/ethersphere/bee-js-docs/commit/6dc841cd35d4a1c08435ff5de4ae57a31e174c41))
+
 ## [0.18.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.17.0...v0.18.0) (2021-11-08)
 
 
