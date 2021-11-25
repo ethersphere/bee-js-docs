@@ -97,13 +97,6 @@ module.exports = {
       ],
       copyright: `Copyleft © ${new Date().getFullYear()}.`,
     },
-    announcementBar: {
-      id: 'bee_announcements',
-      content:
-        '⭐️ Proudly announcing the stable Bee-JS Release! ⭐️',
-      backgroundColor: '#dd7200', // Defaults to `#fff`.
-      textColor: '#242424', // Defaults to `#000`.
-    },
   },
   presets: [
     [
