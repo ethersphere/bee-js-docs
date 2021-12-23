@@ -43,33 +43,11 @@ yarn add @ethersphere/bee-js --save
 After that you need to import the Bee class and create a bee instance connecting to your Bee node (here we assume it runs on localhost on default port).
 Be aware, if you will pass invalid URL the constructor will throw an exception!
 
-
-<Tabs
-  groupId="lang_preferrence"
-  defaultValue="ts"
-  values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]}>
-  <TabItem value="ts">
-
-```ts
-import { Bee } from "@ethersphere/bee-js"
-
-const bee = new Bee('http://localhost:1633')
-```
-
-  </TabItem>
-  <TabItem value="js">
-
 ```js
 import { Bee } from "@ethersphere/bee-js"
 
 const bee = new Bee('http://localhost:1633')
 ```
-
-  </TabItem>
-</Tabs>
 
 That’s it! now you can use the `bee` object.
 
