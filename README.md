@@ -6,6 +6,22 @@ Documentation for the [Swarm Bee-js javascript library](https://github.com/ether
 
 You must use **node 14** or above. We recommend [nvm](https://github.com/nvm-sh/nvm).
 
+### Prerequisites
+
+This project requires the bee-js repository to be cloned as a git submodule.
+
+You can fetch it by cloning the entire repository with the following command:
+
+```
+$ git clone --recurse-submodules https://github.com/ethersphere/bee-js.git
+```
+
+Or optionally fetch the submodule after cloning with the following command:
+
+```
+$ git submodule update --init
+```
+
 ### Installation
 
 ```
