@@ -45,57 +45,14 @@ If you are using a node that is in Gateway mode then this operation is not allow
 
 Creating a tag is easy. Just use the `createTag` function.
 
-<Tabs
-  groupId="lang_preferrence"
-  defaultValue="ts"
-  values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]}>
-  <TabItem value="ts">
-
-```ts
-const tag = await bee.createTag()
-```
-
-  </TabItem>
-  <TabItem value="js">
-
 ```js
 const tag = await bee.createTag()
 ```
-
-  </TabItem>
-</Tabs>
 
 ## Upload with tag
 
 You can then use the tag when uploading data, by providing it in the options arguments for each of these methods.
 
-<Tabs
-  groupId="lang_preferrence"
-  defaultValue="ts"
-  values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]}>
-  <TabItem value="ts">
-
-```ts
-const postageBatchId = getOrCreatePostageBatch()
-
-await bee.uploadData(postageBatchId, "Bee is awesome!", { tag })
-// OR
-await bee.uploadFile(postageBatchId, file, "foo.txt", { tag })
-// OR
-await bee.uploadFiles(postageBatchId, files, { tag })
-// OR
-await bee.uploadFilesFromDirectory(postageBatchId, "./", { tag })
-```
-
-  </TabItem>
-  <TabItem value="js">
-
 ```js
 const postageBatchId = getOrCreatePostageBatch()
 
@@ -107,9 +64,6 @@ await bee.uploadFiles(postageBatchId, files, { tag })
 // OR
 await bee.uploadFilesFromDirectory(postageBatchId, "./", { tag })
 ```
-
-  </TabItem>
-</Tabs>
 
 ## Retrieve tag
 
@@ -119,30 +73,8 @@ If you are using a node that is in Gateway mode then this operation is not allow
 
 Each time you want to check the upload status, you can use the `retrieveTag` function.
 
-
-<Tabs
-  groupId="lang_preferrence"
-  defaultValue="ts"
-  values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]}>
-  <TabItem value="ts">
-
-```ts
-const updatedTag = await bee.retrieveTag(tag)
-// OR
-const updatedTag = await bee.retrieveTag(tag.uid)
-```
-
-  </TabItem>
-  <TabItem value="js">
-
 ```js
 const updatedTag = await bee.retrieveTag(tag)
 // OR
 const updatedTag = await bee.retrieveTag(tag.uid)
 ```
-
-  </TabItem>
-</Tabs>
