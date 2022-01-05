@@ -174,8 +174,8 @@ subscription.cancel()
 
 ```js
 const handler = {
-  onMessage: (message: Data) => {console.log(message.text())},
-  onError: (error: BeeError) => {console.log(error)}
+  onMessage: (message) => {console.log(message.text())},
+  onError: (error) => {console.log(error)}
 }
 
 // Subscribe
