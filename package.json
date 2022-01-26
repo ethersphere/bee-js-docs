@@ -53,6 +53,7 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^16.0.0",
     "docusaurus-plugin-typedoc": "^0.15.0",
     "typedoc": "^0.21.2",
     "typedoc-plugin-markdown": "^3.10.2",
