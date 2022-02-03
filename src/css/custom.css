@@ -24,6 +24,7 @@
   --ifm-code-font-size: 95%;
   --ifm-footer-background-color: #242424 !important ;
   --ifm-font-color-base-inverse: #fafafa !important;
+  --ifm-alert-foreground-color: white !important;
 }
 
 
@@ -114,6 +115,10 @@ h1{
   background: #D0131F;
 }
 
+.alert--warning{
+  background: #eab700;
+}
+
 .alert--info{
   background: #2CAA5F;
 }
@@ -121,6 +126,20 @@ h1{
 /* a.k.a as Tip admonition*/
 .alert--success{
   background: #4AA8DF;
+}
+
+.alert{
+  color: white !important;
+  border: none !important;
+}
+
+.admonition-icon svg{
+  fill: white !important;
+}
+
+.alert a{
+  color: white !important;
+  text-decoration-color: white!important;
 }
 
 code{
