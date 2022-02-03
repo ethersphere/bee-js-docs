@@ -110,7 +110,7 @@ module.exports = {
               : "https://github.com/ethersphere/bee-js-docs",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [require.resolve("./src/css/custom.css")],
         },
       },
     ],
