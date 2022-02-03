@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.21.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.20.0...v0.21.0) (2022-02-03)
+
+
+### Features
+
+* new bee-js api docs ([#106](https://www.github.com/ethersphere/bee-js-docs/issues/106)) ([b89cf08](https://www.github.com/ethersphere/bee-js-docs/commit/b89cf08ef10d272b177c5a30397a9c24072b417c))
+* new bee-js api docs ([#97](https://www.github.com/ethersphere/bee-js-docs/issues/97)) ([313ff5b](https://www.github.com/ethersphere/bee-js-docs/commit/313ff5b03e143b54a8f4eccf38c74045fef61c73))
+* remove redundant language selectors from User Documentation ([#98](https://www.github.com/ethersphere/bee-js-docs/issues/98)) ([79c8398](https://www.github.com/ethersphere/bee-js-docs/commit/79c8398db888171c9b3aaa2cb176a9fe10753f64))
+
+
+### Bug Fixes
+
+* admonition colors ([#119](https://www.github.com/ethersphere/bee-js-docs/issues/119)) ([889cf39](https://www.github.com/ethersphere/bee-js-docs/commit/889cf39ae9c1e0114c545fd0a83273278eeacb9c))
+* deps update ([#107](https://www.github.com/ethersphere/bee-js-docs/issues/107)) ([ef47f47](https://www.github.com/ethersphere/bee-js-docs/commit/ef47f479d56a3e845bde2b7e400b4a7954729156))
+
 ## [0.20.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.19.0...v0.20.0) (2021-12-10)
 
 
