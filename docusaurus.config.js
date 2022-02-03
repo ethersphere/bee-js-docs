@@ -1,96 +1,96 @@
 module.exports = {
-  title: 'Bee JS Library',
-  tagline: 'Welcome to the Swarm',
+  title: "Bee JS Library",
+  tagline: "Welcome to the Swarm",
   // note! we use SED to change this during automated builds, see ./.github/workflows/gh-pages.yml
-  url: 'https://bee-js.ethswarm.org',
-  baseUrl: '/',
+  url: "https://bee-js.ethswarm.org",
+  baseUrl: "/",
   trailingSlash: true,
   plugins: [
-    require.resolve('docusaurus-lunr-search'),
+    require.resolve("docusaurus-lunr-search"),
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
       {
         sidebar: {
-          sidebarFile: null
-        }
-      }
-    ]
+          sidebarFile: null,
+        },
+      },
+    ],
   ],
-  onBrokenLinks: 'error',
-  onBrokenMarkdownLinks: 'error',
-  onDuplicateRoutes: 'error',
-  favicon: 'img/favicon.ico',
-  organizationName: 'Swarm', // Usually your GitHub org/user name.
-  projectName: 'bee-js-docs', // Usually your repo name.
+  onBrokenLinks: "error",
+  onBrokenMarkdownLinks: "error",
+  onDuplicateRoutes: "error",
+  favicon: "img/favicon.ico",
+  organizationName: "Swarm", // Usually your GitHub org/user name.
+  projectName: "bee-js-docs", // Usually your repo name.
   themeConfig: {
     colourMode: {
-      defaultMode: 'dark'
+      defaultMode: "dark",
     },
     navbar: {
-      title: 'Swarm Bee JS Library',
+      title: "Swarm Bee JS Library",
       logo: {
-        alt: 'Swarm Logo',
-        src: 'img/swarm-logo-2.svg',
+        alt: "Swarm Logo",
+        src: "img/swarm-logo-2.svg",
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Get Started',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Get Started",
+          position: "left",
         },
         {
-          to: 'docs/api',
-          activeBasePath: 'docs',
-          label: 'API Reference',
-          position: 'left',
+          to: "docs/api",
+          activeBasePath: "docs",
+          label: "API Reference",
+          position: "left",
         },
         {
-          href: 'https://github.com/ethersphere/bee-js',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/ethersphere/bee-js",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Swarm',
+          title: "Swarm",
           items: [
             {
-              label: 'Swarm',
-              to: 'https://ethswarm.org',
-            }
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/ykCupZMuww',
-            },
-            {
-              label: 'Reddit',
-              href: 'https://www.reddit.com/r/ethswarm',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/ethswarm',
+              label: "Swarm",
+              to: "https://ethswarm.org",
             },
           ],
         },
         {
-          title: 'More',
+          title: "Community",
           items: [
             {
-              label: 'Blog',
-              href: 'https://medium.com/ethereum-swarm',
+              label: "Discord",
+              href: "https://discord.gg/ykCupZMuww",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/ethersphere/bee-js',
+              label: "Reddit",
+              href: "https://www.reddit.com/r/ethswarm",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/ethswarm",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "Blog",
+              href: "https://medium.com/ethereum-swarm",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/ethersphere/bee-js",
             },
           ],
         },
@@ -100,22 +100,17 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/ethersphere/bee-js-docs/blob/master',
-        },
-        blog: {
-          showReadingTime: false,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/ethersphere/bee-js-docs',
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: ({ docPath }) =>
+            docPath.includes("api/")
+              ? undefined
+              : "https://github.com/ethersphere/bee-js-docs",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],

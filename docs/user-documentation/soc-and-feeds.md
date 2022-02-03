@@ -36,19 +36,19 @@ const data = soc.payload()
 
 ### Writing SOCs
 
-When writing a SOC, first, we need to make a writer object. Because we need to sign the chunk, we need to pass in a `signer` object. The `signer` object can be either an Ethereum private key (as a hex string or `Uint8Array`) or an instance of the [`Signer`](../api/types/signer.md) interface. The `Signer` interface can be used for integration with 3rd party Ethereum wallet applications because Swarm uses the same format for signing chunks that Ethereum uses for signing transactions.
+When writing a SOC, first, we need to make a writer object. Because we need to sign the chunk, we need to pass in a `signer` object. The `signer` object can be either an Ethereum private key (as a hex string or `Uint8Array`) or an instance of the [`Signer`](../api/types/Signer.md) interface. The `Signer` interface can be used for integration with 3rd party Ethereum wallet applications because Swarm uses the same format for signing chunks that Ethereum uses for signing transactions.
 
 :::info Default `signer`
 
 When you are instantiating `Bee` class you can pass it a default signer that will be used if you won't specify it 
-directly for the `makeSOCWriter`. See [`Bee` constructor](../api/classes/bee.md#constructor) for more info.
+directly for the `makeSOCWriter`. See [`Bee` constructor](../api/classes/Bee.md#constructor) for more info.
 
 :::
 
 :::tip Ethereum Wallet signers
 
-If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/utils.makeethereumwalletsigner.md)  that we ship with bee-js
-which creates a [`Signer`](../api/types/signer.md) object out of given EIP-1193 compatible provider.
+If you want to use your browser Ethereum Wallet like Metamask you can use utility called [`makeEthereumWalletSigner`](../api/functions/Utils.makeEthereumWalletSigner.md)  that we ship with bee-js
+which creates a [`Signer`](../api/types/Signer.md) object out of given EIP-1193 compatible provider.
 
 See it used in our example [here](https://github.com/ethersphere/examples-js/tree/master/eth-wallet-signing).
 
@@ -119,11 +119,11 @@ const topic = bee.makeFeedTopic('my-dapp.eth/outbox')
 Many applications are storing or manipulating data in JSON. bee-js has convenience high level API to use feeds with JSON objects.
 It consists of two methods:
 
- - [`setJsonFeed`](../api/classes/bee.md#setjsonfeed) method to set JSON compatible data to feed
- - [`getJsonFeed`](../api/classes/bee.md#getjsonfeed) method to get JSON compatible data (and parse them) from feed
+ - [`setJsonFeed`](../api/classes/Bee.md#setjsonfeed) method to set JSON compatible data to feed
+ - [`getJsonFeed`](../api/classes/Bee.md#getjsonfeed) method to get JSON compatible data (and parse them) from feed
 
 :::info Bee's instance signer
-You can pass a [`Signer`](../api/types/signer.md) (or compatible data) into [`Bee` class constructor](../api/classes/bee.md#constructor), which then
+You can pass a [`Signer`](../api/types/Signer.md) (or compatible data) into [`Bee` class constructor](../api/classes/Bee.md#constructor), which then
 will be used as default `Signer`.
 :::
 
