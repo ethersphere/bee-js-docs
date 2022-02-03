@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbee_js_docs=self.webpackChunkbee_js_docs||[]).push([[4195],{5239:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var s=t(7294),c=(t(2434),t(9960),t(2263)),u=(t(4996),t(6775));var r=function(){return(0,c.Z)().siteConfig,s.createElement(u.l_,{to:"docs/"})}}}]);
