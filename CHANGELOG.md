@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.21.1](https://www.github.com/ethersphere/bee-js-docs/compare/v0.21.0...v0.21.1) (2022-02-10)
+
+
+### Reverts
+
+* ci: trigger pr previews on new commits ([#108](https://www.github.com/ethersphere/bee-js-docs/issues/108)) ([#123](https://www.github.com/ethersphere/bee-js-docs/issues/123)) ([e6579b6](https://www.github.com/ethersphere/bee-js-docs/commit/e6579b6e620f35cd65d71fb43aa66849c09b688a))
+
 ## [0.21.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.20.0...v0.21.0) (2022-02-03)
 
 
