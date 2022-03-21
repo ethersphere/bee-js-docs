@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.22.0...v0.23.0) (2022-03-21)
+
+
+### Features
+
+* bee-js 3.3.2 api docs ([#132](https://www.github.com/ethersphere/bee-js-docs/issues/132)) ([4007597](https://www.github.com/ethersphere/bee-js-docs/commit/4007597775bb76bbbc3d13a7a8de206ed419d148))
+
 ## [0.22.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.21.0...v0.22.0) (2022-02-16)
 
 
