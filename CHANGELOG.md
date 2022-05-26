@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.25.0...v0.26.0) (2022-05-26)
+
+
+### Features
+
+* new bee-js api docs ([#150](https://www.github.com/ethersphere/bee-js-docs/issues/150)) ([832d970](https://www.github.com/ethersphere/bee-js-docs/commit/832d9705eb55092102525a435e9810d629e77a03))
+
 ## [0.25.0](https://www.github.com/ethersphere/bee-js-docs/compare/v0.24.0...v0.25.0) (2022-04-19)
 
 
