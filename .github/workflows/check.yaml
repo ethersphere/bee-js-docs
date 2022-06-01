@@ -17,6 +17,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
+          persist-credentials: false
 
       - name: Use Node.js 16
         uses: actions/setup-node@v1
