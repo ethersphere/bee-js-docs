@@ -44,12 +44,13 @@ After that you need to import the Bee class and create a bee instance connecting
 Be aware, if you will pass invalid URL the constructor will throw an exception!
 
 ```js
-import { Bee } from "@ethersphere/bee-js"
+import { Bee, BeeDebug } from "@ethersphere/bee-js"
 
 const bee = new Bee('http://localhost:1633')
+const beeDebug = new BeeDebug('http://localhost:1635')
 ```
 
-That’s it! now you can use the `bee` object.
+That’s it! now you can use the `bee` and `beeDebug` objects.
 
 :::info Run your own Bee node
 You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
@@ -64,6 +65,7 @@ under global namespace `BeeJs`:
 <script src="https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js"></script>
 <script>
   const bee = new BeeJs.Bee('...')
+  const beeDebug = new BeeJs.BeeDebug('...')
 </script>
 ```
 :::
