@@ -68,7 +68,4 @@ npm run build
 
 ## Maintainers
 
-- [auhau](https://github.com/auhau)
-- [vojtechsimetka](https://github.com/vojtechsimetka)
-
 See what "Maintainer" means [here](https://github.com/ethersphere/repo-maintainer).
