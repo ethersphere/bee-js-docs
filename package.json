@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "typescript": "~4.6.4",
-    "@commitlint/config-conventional": "^17.0.0"
+    "@commitlint/config-conventional": "^17.4.4"
   },
   "browserslist": {
     "production": [
