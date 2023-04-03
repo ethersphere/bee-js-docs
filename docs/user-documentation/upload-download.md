@@ -31,7 +31,7 @@ When you download data the return type is [`Data`](../api/interfaces/Data.md) in
  - `json()` that converts the bytes into JSON object
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
+const postageBatchId = await beeDebug.createPostageBatch("10000000", 20)
 const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
 // prints Swarm hash of the file with which it can be retrieved
@@ -52,7 +52,7 @@ Swarm reference or hash is a 64 characters long hex string which is the address 
 You can also upload files and include a filename. When you download the file, `bee-js` will return additional information like `contentType` or `name` of the file.
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
+const postageBatchId = await beeDebug.createPostageBatch("10000000", 20)
 const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
 const retrievedFile = await bee.downloadFile(result.reference)
 
@@ -66,7 +66,7 @@ In browsers, you can upload directly `File` type. The filename is taken from the
 ```js
 const file = new File(["foo"], "foo.txt", { type: "text/plain" })
 
-const postageBatchId = await bee.createPostageBatch("100", 17)
+const postageBatchId = await beeDebug.createPostageBatch("10000000", 20)
 const result = await bee.uploadFile(postageBatchId, file)
 const retrievedFile = await bee.downloadFile(result.reference)
 
@@ -83,7 +83,7 @@ The last supported mode is upload of files and directories. In browsers, you can
 const foo = new File(["foo"], "foo.txt", { type: "text/plain" })
 const bar = new File(["bar"], "bar.txt", { type: "text/plain" })
 
-const postageBatchId = await bee.createPostageBatch("100", 17)
+const postageBatchId = await beeDebug.createPostageBatch("10000000", 20)
 const result = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
 
 const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
@@ -103,7 +103,7 @@ In nodejs, you may utilise the `uploadFilesFromDirectory` function, which takes 
 ```
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
+const postageBatchId = await beeDebug.createPostageBatch("10000000", 20)
 
 const result = await bee.uploadFilesFromDirectory(postageBatchId, './') // upload recursively current folder
 
