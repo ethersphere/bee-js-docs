@@ -16,7 +16,7 @@ Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can 
 :::warning Postage stamps
 
 Uploading to Swarm network require to have Postage stamps for every write operation. 
-To understand better what does it mean see [Bee docs - Keep your data alive](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive). 
+To understand better what does it mean see [Bee docs - Keep your data alive](https://docs.ethswarm.org/docs/develop/access-the-swarm/keep-your-data-alive). 
 :::
 
 

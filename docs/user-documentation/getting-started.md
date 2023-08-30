@@ -52,7 +52,7 @@ const bee = new Bee('http://localhost:1633')
 That’s it! now you can use the `bee` object.
 
 :::info Run your own Bee node
-You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
+You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/bee/installation/quick-start)
 :::
 
 :::tip Using `<script>` import

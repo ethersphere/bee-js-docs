@@ -5,7 +5,7 @@ title: "bee-js: Ethereum Swarm JavaScript API"
 sidebar_label: Introduction
 ---
 
-`bee-js` is a library that allows you to interact with a local or remote [Bee node](https://docs.ethswarm.org/docs/).
+`bee-js` is a library that allows you to interact with a local or remote [Bee node](https://docs.ethswarm.org/).
 
 The following documentation will guide you through installing and using `bee-js` as well as providing an API reference documentation with examples. Your next step should be the [Getting Started section](./getting-started).
 
