@@ -1,0 +1,7 @@
+{
+  "extends": "./bee-js/tsconfig.json",
+  "compilerOptions": {
+    "module": "none", // Override the module option
+    "moduleResolution": "node" // Ensure this is set to a valid value
+  }
+}
