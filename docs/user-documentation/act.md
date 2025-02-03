@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem'
 The [Access Control Trie (ACT)](https://solarpunk.buzz/introducing-the-access-control-trie-act-in-swarm/) is an essential feature designed to manage access control in Swarm’s decentralized storage infrastructure. It enables __publishers__ to grant or revoke access to specific content at the chunk level using encrypted session keys. This guide will walk you through the key concepts and practical aspects of using __ACT__ to protect your data in Swarm.
 
 :::warning Postage stamps
-Uploading to the Swarm network requires Postage stamps for every write operation. To understand this better, see [Bee docs - Keep your data alive](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive). In the following examples, we assume that we already have a `postageBatchId`.
+Uploading to the Swarm network requires Postage stamps for every write operation. To understand this better, see [Bee docs - Postage Stamps](https://docs.ethswarm.org/docs/concepts/incentives/postage-stamps). In the following examples, we assume that we already have a `postageBatchId`.
 :::
 
 We also need an instance of Bee to interact with the Bee node.
