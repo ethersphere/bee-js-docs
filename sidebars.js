@@ -27,11 +27,6 @@ module.exports = {
           type: 'link',
           label: 'React Upload application',
           href: 'https://github.com/ethersphere/examples-js/tree/master/upload-react'
-        },
-        {
-          type: 'link',
-          label: 'Upload progress',
-          href: 'https://github.com/ethersphere/examples-js/tree/master/upload-progress'
         }
       ],
       collapsed: false
