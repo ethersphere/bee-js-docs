@@ -9,7 +9,8 @@ module.exports = {
         'user-documentation/upload-download',
         'user-documentation/track-upload',
         'user-documentation/pss',
-        'user-documentation/soc-and-feeds'
+        'user-documentation/soc-and-feeds',
+        'user-documentation/act'
       ],
       collapsed: false
     },
@@ -26,11 +27,6 @@ module.exports = {
           type: 'link',
           label: 'React Upload application',
           href: 'https://github.com/ethersphere/examples-js/tree/master/upload-react'
-        },
-        {
-          type: 'link',
-          label: 'Upload progress',
-          href: 'https://github.com/ethersphere/examples-js/tree/master/upload-progress'
         }
       ],
       collapsed: false
