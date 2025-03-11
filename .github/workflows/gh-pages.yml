@@ -11,14 +11,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # Cache for the node_modules
-      - uses: actions/cache@v2
+      # Cache for node_modules using v4 (latest)
+      - uses: actions/cache@v4
         id: cache-docs-npm
         with:
           path: node_modules
