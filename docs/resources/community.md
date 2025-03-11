@@ -1,7 +1,6 @@
 ---
 title: Community
 id: community
-slug: /community
 sidebar_label: Community
 ---
 
