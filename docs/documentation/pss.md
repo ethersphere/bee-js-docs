@@ -5,6 +5,13 @@ slug: /pss
 sidebar_label: Postal Service over Swarm
 ---
 
+* Remove the unrelated intro section
+* Show a listener
+* Show a one time receive
+* Show a send invocation
+* Move it towards the end of the chapters, it is not very important
+
+
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 

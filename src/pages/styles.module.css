@@ -1,37 +1,87 @@
-/* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+* {
+  font-family: 'Rubik';
+}
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: #0D0D0D; /* Slightly darker black for contrast */
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.mainTitle {
+  text-align: center;
+  color: #FFF8DC;
+  font-size: 2.8rem;
+}
+
+.subTitle {
+  max-width: 55%;
+  margin: auto;
+  text-align: center;
+  color: #FFAE42; /* More neon orange */
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   width: 100%;
+  background: #121212;
+  border-radius: 12px;
 }
 
-.featureImage {
-  height: 200px;
-  width: 200px;
+.sectionButton {
+  width: 280px;
+  text-align: center;
+  color: #FFF8DC;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.sectionButton:hover {
+  background: #FFAE42;
+  color: #0D0D0D;
+  box-shadow: 0 0 12px #FFAE42;
+}
+
+.ctaButton {
+  border: solid 2px rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 1.5rem;
+  margin: auto;
+  padding: 4rem 2rem;
+  background: #0D0D0D;
+  border-radius: 12px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sectionImage {
+  height: 85px;
+  padding: 8px;
 }

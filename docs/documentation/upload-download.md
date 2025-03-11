@@ -1,10 +1,16 @@
 ---
 title: Upload and Download
-hide_title: true
 id: upload-download
 slug: /upload-download
 sidebar_label: Upload and Download
 ---
+
+* Remove postage stamp related parts, assume a valid batchId
+* Separate Node.js (backend) and browser (front-end) functions
+* Adjust to new upload and download related functions [Gist1](https://gist.github.com/Cafe137/233807614d8b5eca938b71f88cb37d4a)
+* Have sub-sections for encryption, tags
+* Add "Track Upload" section
+
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'

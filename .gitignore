@@ -7,6 +7,3 @@ resources
 
 # Local Netlify folder
 .netlify
-
-# Generated Bee API docs
-docs/api
