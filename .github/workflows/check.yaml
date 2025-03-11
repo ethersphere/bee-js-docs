@@ -1,0 +1,62 @@
+name: Check
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # Cache for the node_modules
+      - uses: actions/cache@v3
+        id: cache-npm
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('./package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-npm-${{ env.cache-name }}-
+            ${{ runner.OS }}-npm-
+
+      - name: Install npm dependencies
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Commit linting
+        uses: wagoid/commitlint-github-action@v3
+
+      - name: Build
+        run: npm run build
+
+      - name: Create preview
+        uses: ethersphere/swarm-actions/pr-preview@v0
+        with:
+          bee-url: https://unlimited.gateway.ethswarm.org
+          token: ${{ secrets.REPO_GHA_PAT }}
+          error-document: index.html
+          headers: "${{ secrets.GATEWAY_AUTHORIZATION_HEADER }}"
+
+      - name: Upload to testnet
+        uses: ethersphere/swarm-actions/upload-dir@v0
+        continue-on-error: true
+        with:
+          index-document: index.html
+          error-document: index.html
+          dir: ./build
+          bee-url: https://api.gateway.testnet.ethswarm.org
