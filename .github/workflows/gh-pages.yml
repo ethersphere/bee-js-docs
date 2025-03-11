@@ -1,4 +1,4 @@
-name: github pages
+name: github pages preview
 
 on:
   push:
@@ -9,51 +9,29 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
 
-      # Cache for the node_modules of Bee JS Docs
+      # Cache for the node_modules
       - uses: actions/cache@v2
         id: cache-docs-npm
         with:
           path: node_modules
           key: ${{ runner.os }}-docs-${{ hashFiles('./package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-docs-${{ env.cache-name }}-
-            ${{ runner.OS }}-docs-
 
-      - name: Install npm deps for Bee JS Docs
+      - name: Install npm dependencies
         if: steps.cache-docs-npm.outputs.cache-hit != 'true'
         run: npm ci
 
-      # Cache for the node_modules of Bee JS
-      - uses: actions/cache@v2
-        id: cache-bee-js-npm
-        with:
-          path: bee-js/node_modules
-          key: ${{ runner.os }}-bee-js-${{ hashFiles('./bee-js/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-bee-js-${{ env.cache-name }}-
-            ${{ runner.OS }}-bee-js-
+      - name: Build the project
+        run: npm run build
 
-      - name: Install npm deps for Bee-js
-        if: steps.cache-bee-js-npm.outputs.cache-hit != 'true'
-        run: cd bee-js && npm ci && cd ..
-
-      - name: Build for gh-pages
-        run: |
-          npm run build
-          echo "bee-js.ethswarm.org" > ./build/CNAME
-          rm ./build/.nojekyll
-
-      - name: Deploy to gh-pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
