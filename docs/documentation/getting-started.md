@@ -41,6 +41,7 @@ yarn add @ethersphere/bee-js --save
 </Tabs>
 
 After that you need to import the Bee class and create a bee instance connecting to your Bee node (here we assume it runs on localhost on default port).
+
 Be aware, if you will pass invalid URL the constructor will throw an exception!
 
 ```js

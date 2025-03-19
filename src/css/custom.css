@@ -60,10 +60,10 @@ body {
 
 [data-theme='dark'] pre {
   background: #1A1A1A !important;
-}
+} 
 
 [data-theme='dark'] code {
-  background: #222222 !important;
+  background: #303030 !important;
 }
 
 /* Other UI elements */
