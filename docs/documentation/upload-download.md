@@ -20,11 +20,8 @@ import TabItem from '@theme/TabItem'
 Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can either upload directly unstructured data, single file or even complex directories. Let's walk through the options one by one.
 
 :::warning Postage stamps
-
-Uploading to Swarm network require to have Postage stamps for every write operation. 
-To understand better what does it mean see [Bee docs - Keep your data alive](https://docs.ethswarm.org/docs/access-the-swarm/keep-your-data-alive). 
+Writing data to the Swarm network requires the purchase of a postage stamp batch. Learn more about postage stamp batches including how to buy and manage them in the [Buying Storage section](/docs/storage/).
 :::
-
 
 ### Data
 
@@ -37,6 +34,16 @@ When you download data the return type is `Data` interface which extends `Uint8A
  - `json()` that converts the bytes into JSON object
 
 ```js
+import { Bee, Size } from "@ethersphere/bee-js"
+
+const bee = new Bee('http://localhost:1633')
+
+// Request all local postage batches
+const batches = await bee.getAllPostageBatch()
+
+const batchId = batches[0].batchID
+
+
 const postageBatchId = await bee.createPostageBatch("100", 17)
 const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
