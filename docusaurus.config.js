@@ -6,7 +6,12 @@ module.exports = {
   baseUrl: "/",
   trailingSlash: true,
   plugins: [
-    require.resolve("docusaurus-lunr-search"),
+    [
+      'docusaurus-lunr-search',
+      {
+        languages: ['en'], // optional
+      },
+    ],
   ],
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",

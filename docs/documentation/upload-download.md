@@ -4,26 +4,34 @@ id: upload-download
 slug: /upload-download
 sidebar_label: Upload and Download
 ---
-
+<!-- 
 * Remove postage stamp related parts, assume a valid batchId
 * Separate Node.js (backend) and browser (front-end) functions
 * Adjust to new upload and download related functions [Gist1](https://gist.github.com/Cafe137/233807614d8b5eca938b71f88cb37d4a)
 * Have sub-sections for encryption, tags
 * Add "Track Upload" section
-
+-->
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-## Upload and Download
 
 Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can either upload directly unstructured data, single file or even complex directories. Let's walk through the options one by one.
 
+### Requirements
+
+To use the example scripts below, you need:
+
+- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node (downloads and uploads)
+- A previously purchased usable postage batch with enough `remainingSize` left to upload the desired data (uploads only) 
+- 
+
 :::warning Postage stamps
-Writing data to the Swarm network requires the purchase of a postage stamp batch. Learn more about postage stamp batches including how to buy and manage them in the [Buying Storage section](/docs/storage/).
+Writing data to the Swarm network requires the purchase of a postage stamp batch. If you don't already have one, refer to the sections on [**buying**](/docs/storage/#purchasing-storage) and [**selecting**](/docs/storage/#selecting-a-batch) postage batches.
 :::
 
-### Data
+
+### Upload Data
 
 You can upload and retrieve any `string` or `Uint8Array` data with `uploadData` and `downloadData` functions.
 
@@ -34,17 +42,6 @@ When you download data the return type is `Data` interface which extends `Uint8A
  - `json()` that converts the bytes into JSON object
 
 ```js
-import { Bee, Size } from "@ethersphere/bee-js"
-
-const bee = new Bee('http://localhost:1633')
-
-// Request all local postage batches
-const batches = await bee.getAllPostageBatch()
-
-const batchId = batches[0].batchID
-
-
-const postageBatchId = await bee.createPostageBatch("100", 17)
 const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
 // prints Swarm hash of the file with which it can be retrieved
@@ -65,7 +62,6 @@ Swarm reference or hash is a 64 characters long hex string which is the address 
 You can also upload files and include a filename. When you download the file, `bee-js` will return additional information like `contentType` or `name` of the file.
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
 const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
 const retrievedFile = await bee.downloadFile(result.reference)
 

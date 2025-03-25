@@ -27,21 +27,20 @@
     "serve": "docusaurus serve"
   },
   "dependencies": {
-    "@docsearch/js": "^3.8.3",
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/plugin-client-redirects": "^3.7.0",
-    "@docusaurus/preset-classic": "^3.7.0",
-    "@docusaurus/theme-mermaid": "^3.7.0",
-    "@mdx-js/react": "^3.1.0",
+    "@docusaurus/core": "2.3.1",
+    "@docusaurus/plugin-client-redirects": "2.3.1",
+    "@docusaurus/preset-classic": "2.3.1",
+    "@mdx-js/react": "^1.6.22",
     "@saucelabs/theme-github-codeblock": "^0.3.0",
     "classnames": "^2.5.1",
     "docusaurus-lunr-search": "^3.6.0",
+    "html-to-text": "6.0.0",
     "plugin-image-zoom": "github:flexanalytics/plugin-image-zoom",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.3",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^7.1.0",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^5.1.1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.0",
