@@ -409,12 +409,6 @@ function isUsableWithFreeSpace(batch) {
 const batchId = getBatch(bee, isUsableWithFreeSpace)
 ```
 
-
-
-
-To use this example script, save it a file in your project directory so it can be imported by other scripts.
-
-
 If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](/docs/storage/#checking-batch-status) your postage batches' status using `bee.getAllPostageBatch` in order to check if a batch with your desired characteristics exists and return its id.
 
 ### Batch Size Breakpoints

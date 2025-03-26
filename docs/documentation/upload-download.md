@@ -18,22 +18,20 @@ import TabItem from '@theme/TabItem'
 
 Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can either upload directly unstructured data, single file or even complex directories. Let's walk through the options one by one.
 
-### Requirements
+## Requirements
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node (downloads and uploads)
-- A previously purchased usable postage batch with enough `remainingSize` left to upload the desired data (uploads only) 
-- 
+- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node (downloads and uploads).
+- The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data.  
 
-:::warning Postage stamps
-Writing data to the Swarm network requires the purchase of a postage stamp batch. If you don't already have one, refer to the sections on [**buying**](/docs/storage/#purchasing-storage) and [**selecting**](/docs/storage/#selecting-a-batch) postage batches.
-:::
+## Uploading
 
+The examples below assume you already have an instance of the `Bee` class initialized as `bee`, and batch ID of a valid postage stamp batch saved as a string in `postageBatchId`.
 
 ### Upload Data
 
-You can upload and retrieve any `string` or `Uint8Array` data with `uploadData` and `downloadData` functions.
+You can upload and retrieve any `string` or `Uint8Array` data with the `uploadData` and `downloadData` functions.
 
 When you download data the return type is `Data` interface which extends `Uint8Array` with convenience functions like:
 
@@ -57,7 +55,7 @@ console.log(retrievedData.text()) // prints 'Bee is awesome!'
 Swarm reference or hash is a 64 characters long hex string which is the address of the uploaded data, file or directory.
 :::
 
-### Single file
+### Upload Single file
 
 You can also upload files and include a filename. When you download the file, `bee-js` will return additional information like `contentType` or `name` of the file.
 
