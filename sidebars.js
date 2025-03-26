@@ -6,6 +6,7 @@ module.exports = {
       label: 'Usage',
       items: [
         'documentation/getting-started',
+        'documentation/overview',
         'documentation/status',
         'documentation/chequebook',
         'documentation/storage',

@@ -7,7 +7,13 @@ slug: /getting-started
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-First you need to get `bee-js` into your project. This can be done using your favourite package management tool or directly:
+
+
+## About *bee-js* 
+
+`bee-js` is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network.
+
+## Installation 
 
 <Tabs
   groupId="pcgmng_preferrence"
@@ -68,3 +74,63 @@ under global namespace `BeeJs`:
 </script>
 ```
 :::
+
+
+## Quickstart With *create-swarm-app*
+
+The `create-swarm-app` tool makes it easy to get started developing on Swarm. With a single command, it generates the basic scaffolding for a `bee-js` project in your chosen development environment (CommonJS, ESM, TypeScript, or Vite + TypeScript).
+
+:::note WSL WARNING
+The `create-swarm-app` tool is compatible with Windows, macOS, and Linux. However, using it in combination with [WSL](https://learn.microsoft.com/en-us/windows/wsl/) is discouraged due to potential compatibility issues that may require additional troubleshooting.
+
+That said, the `bee-js` library itself works seamlessly within WSL. If you prefer to develop your project using WSL, you can use `create-swarm-app` to generate the project files on the Windows side, then move them into your WSL environment for development.
+:::
+
+You can use [`create-swarm-app`](https://www.npmjs.com/package/create-swarm-app) to quickly set up scaffolding for a `bee-js` project with the following command:
+
+```bash
+npm init swarm-app@latest {app-name} {app-type}
+```
+
+Replace "{app-name}" with your app's name, and "{app-type}" with the type of app you want. Supported types are `node`, `node-esm`, `node-ts` and `vite-tsx`.
+
+Start a Swarm project using TypeScript:
+
+```bash
+npm init swarm-app@latest my-dapp node-ts
+```
+
+Your project structure will look like:
+
+```bash
+.
+├── package.json
+├── src
+│   ├── config.ts
+│   └── index.ts
+└── tsconfig.json
+```
+
+or using Vite and TypeScript:
+
+```bash
+npm init swarm-app@latest my-dapp vite-tsx
+```
+
+Your project structure will look like:
+
+```bash
+tree .
+.
+├── index.html
+├── package.json
+├── src
+│   ├── App.tsx
+│   ├── config.ts
+│   └── index.tsx
+└── tsconfig.json
+```
+
+The exact results will differ slightly depending on which `{app-type}` you use, but they will all include a `config.ts` or `config.js` file where the Bee node's API endpoint must be specified.
+
+The endpoint is set to the default Bee API endpoint of `http://localhost:1633`, if your node uses a different endpoint you will need to update it in the config file.
