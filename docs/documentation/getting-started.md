@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem'
 
 ## About *bee-js* 
 
-`bee-js` is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network.
+`bee-js` is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network. It simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle.
 
 ## Installation 
 

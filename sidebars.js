@@ -18,7 +18,7 @@ module.exports = {
         // 'documentation/pss',
         // 'documentation/gsoc',
         // 'documentation/act',
-        'documentation/primitives',
+        'documentation/utilities',
       ],
       collapsed: false
     },

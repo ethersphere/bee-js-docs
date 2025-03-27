@@ -370,7 +370,7 @@ Note that although 1 GB was specified as input for the `bee.buyStorage`, the `si
 
 Any method in `bee-js` which writes data to Swarm requires the batch id of a valid, usable postage batch with remaining space to upload data. 
 
-Before uploading to Swarm, we need to select a postage batch. The example script below exports a function which looks for the first usable postage batch with remaining space and returns the id of the batch. 
+The example script below exports a function which looks for the first usable postage batch with remaining space and returns the id of the batch. 
 
 :::tip notice
 This function is used throughout the examples here in the docs.

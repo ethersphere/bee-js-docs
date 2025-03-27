@@ -5,28 +5,16 @@ slug: /status
 sidebar_label: Checking Node Status
 ---
 
-To understand and monitor the status of your Bee node, `bee-js` provides a set of helpful methods. In this guide, we'll walk through how to retrieve and log the following:
-
-- Node health and readiness  
-- Topology of connected peers  
-- Node addresses  
-- Node and API versions 
-- General node info  
-- Chain state and reserve state  
+To understand and monitor the status of your Bee node, `bee-js` provides a set of helpful methods. In this guide, we'll walk through how to retrieve and log the data needed to give a complete overview of your node's current status.
 
 ### Requirements
 
 To use the example scripts below, you need:
 
-- An instance of the `Bee` class from `bee-js` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node: 
+- An instance of the `Bee` class from `bee-js` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node. 
 
-    ```js
-    import { Bee } from '@ethersphere/bee-js'
 
-    const bee = new Bee('http://localhost:1633')
-    ```
-
-## 1. Node Health and Readiness
+### 1. Node Health and Readiness
 
 Use this to access the health and readiness endpoint return values used for container orchestration tools like Kubernetes. 
 
@@ -53,7 +41,7 @@ Health: { apiVersion: '7.3.0', version: '2.5.0-5ec231ba', status: 'ok' }
 Readiness: { apiVersion: '7.3.0', version: '2.5.0-5ec231ba', status: 'ready' }
 ```
 
-## 2. Get Node Topology
+### 2. Get Node Topology
 
 Use this to inspect how many peers you're connected to, and the state of your neighborhood.
 
@@ -71,9 +59,7 @@ async function checkTopology() {
 checkTopology()
 ```
 
-Output:
-
-*Bins 1 - 30 omitted from `bins` result*
+Output: *(Bins 1 - 30 omitted from `bins` result)*
 
 ```bash
 Topology: {
@@ -103,7 +89,7 @@ Topology: {
 }
 ```
 
-## 3. Get Node Addresses
+### 3. Get Node Addresses
 
 This will give you the overlay address, underlay addresses, and Ethereum address associated with your Bee node (the address is an Ethereum style address however it is for a Gnosis Chain account, not mainnet Ethereum).
 
@@ -136,7 +122,7 @@ Underlay: [
 ]
 ```
 
-## 4. Get Version and API Compatibility
+### 4. Get Version and API Compatibility
 
 Use these methods to check your node's version number and the API version number, and to check whether the API version is supported by `bee-js`.
 
@@ -168,7 +154,7 @@ Node Versions: {
 Is Supported API Version: true
 ```
 
-## 5. Get Node Info
+### 5. Get Node Info
 
 This provides general information such as node mode (e.g., full, light), and whether chequebook and SWAP are enabled.
 
@@ -192,7 +178,7 @@ Output:
 Node Info: { beeMode: 'light', chequebookEnabled: true, swapEnabled: true } 
 ```
 
-## 6. Get Chain State
+### 6. Get Chain State
 
 Shows blockchain-related info such as the current price for storage. 
 
@@ -221,7 +207,7 @@ Chain State: {
 }
 ```
 
-## 7. Get Reserve State
+### 7. Get Reserve State
 
 This tells you about your node’s local reserve size and storage metrics.
 
@@ -245,7 +231,7 @@ Output:
 Reserve State: { commitment: 17360879616, radius: 13, storageRadius: 0 }
 ```
 
-## Run All Checks Together
+### Run All Checks Together
 
 You can combine all of the above into one function to quickly inspect the full status of your node:
 

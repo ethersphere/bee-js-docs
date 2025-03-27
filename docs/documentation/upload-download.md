@@ -22,18 +22,18 @@ Uploading your data to Swarm is easy with `bee-js`. Based on your needs you can 
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node (downloads and uploads).
-- The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data.  
+- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) as `bee` using the API endpoint of a currently operating Bee node.
+- (Uploads only) The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
 
 ## Uploading
 
-The examples below assume you already have an instance of the `Bee` class initialized as `bee`, and batch ID of a valid postage stamp batch saved as a string in `postageBatchId`.
+The examples below assume you already have an instance of the `Bee` class [initialized](/docs/getting-started/) as `bee`, and the [batch ID](/docs/storage/#purchasing-storage) of a valid postage stamp batch saved as a string in `postageBatchId`.
 
 ### Upload Data
 
 You can upload and retrieve any `string` or `Uint8Array` data with the `uploadData` and `downloadData` functions.
 
-When you download data the return type is `Data` interface which extends `Uint8Array` with convenience functions like:
+When you download data the return type is the `Data` interface which extends `Uint8Array` with convenience functions like:
 
  - `text()` that converts the bytes into UTF-8 encoded string
  - `hex()` that converts the bytes into **non-prefixed** hex string
@@ -52,12 +52,12 @@ console.log(retrievedData.text()) // prints 'Bee is awesome!'
 ```
 
 :::info Tip
-Swarm reference or hash is a 64 characters long hex string which is the address of the uploaded data, file or directory.
+A Swarm reference or hash is a 64 character long hex string which is the address of the uploaded data, file, or directory. It must saved so it can be used later to retrieve the uploaded content.
 :::
 
 ### Upload Single file
 
-You can also upload files and include a filename. When you download the file, `bee-js` will return additional information like `contentType` or `name` of the file.
+You can also upload files by specifying a filename. When you download the file, `bee-js` will return additional information like the `contentType` or `name` of the file.
 
 ```js
 const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
@@ -68,7 +68,8 @@ console.log(retrievedFile.contentType) // prints 'application/octet-stream'
 console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
 ```
 
-In browsers, you can upload directly `File` type. The filename is taken from the file object itself, but can be overwritten through the second argument of the `uploadFile` function.
+In browsers, you can directly upload using the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the second argument of the `uploadFile` function.
+
 
 ```js
 const file = new File(["foo"], "foo.txt", { type: "text/plain" })
@@ -84,7 +85,7 @@ console.log(retrievedFile.data.text()) // prints 'foo'
 
 ### Files and Directories
 
-The last supported mode is upload of files and directories. In browsers, you can easily upload an array of `File` comming from your form directly as well as [`FileList`](https://developer.mozilla.org/en-US/docs/Web/API/FileList). If the files uploaded through `uploadFiles` have a relative path, they are added relative to this filepath. Otherwise, the whole structure is flattened into single directory.
+In browsers, you can easily upload an array of `File` objects coming from your form directly with [`FileList`](https://developer.mozilla.org/en-US/docs/Web/API/FileList). If the files uploaded through `uploadFiles` have a relative path, they are added relative to this filepath. Otherwise, the whole structure is flattened into single directory.
 
 ```js
 const foo = new File(["foo"], "foo.txt", { type: "text/plain" })
@@ -100,7 +101,7 @@ console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'
 ```
 
-In nodejs, you may utilise the `uploadFilesFromDirectory` function, which takes directory path as input and upload all files in that directory. Lets assum we have following data structure:
+In NodeJS, you may utilize the `uploadFilesFromDirectory` function, which takes the directory path as input and uploads all files in that directory. Let's assume we have the following file structure:
 
 ```sh
 .
@@ -121,10 +122,3 @@ console.log(rFoo.data.text()) // prints 'foo'
 console.log(rBar.data.text()) // prints 'bar'
 ```
 
-## Retrieve file from node or gateway
-
-You can always retrieve your files and data directly from the bee node through browser as well. For example, if you want to retrieve the "Bee is awesome!" text uploaded to Swarm in section [upload data](#data), you can directly access it with: [http://localhost:1633/files/fd79d5...294780](http://localhost:1633/files/fd79d5e0ebd8407e422f53ce1d7c4c41ebf403be55143900f8d1490560294780)
-
-To share files with someone who isn't running a Bee node yet, simply change the host in the link to be one of our public gateways. Send the link to your friends, and they will be able to download the file too!
-
-[https://gateway.ethswarm.org/files/fd79d5...294780](https://gateway.ethswarm.org/files/fd79d5e0ebd8407e422f53ce1d7c4c41ebf403be55143900f8d1490560294780)
