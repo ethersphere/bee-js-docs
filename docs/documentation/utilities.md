@@ -4,10 +4,7 @@ id: utilities
 slug: /utilities
 sidebar_label: Utility Classes
 ---
-
-
-
-`bee-js` is the official JavaScript SDK for interacting with the Swarm network for decentralized publishing and messaging. It includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
+`bee-js` includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
 
 ## *Bytes* - Data Conversions & Manipulation
 
