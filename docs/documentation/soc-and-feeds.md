@@ -5,6 +5,7 @@ slug: /soc-and-feeds
 sidebar_label: SOC and Feeds
 ---
 
+## 🚧 Under Construction 🚧
 :::caution 🚧 This page is under construction
 
 This section is still being worked on. Check back soon for updates!
