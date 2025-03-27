@@ -6,12 +6,12 @@ sidebar_label: Utility Classes
 ---
 
 
-`bee-js` includes a variety of utility classes with methods for working with different data types, Ethereum-compatible keys, signatures, addresses, token values, content references, hashing, and more. 
+
+`bee-js` is the official JavaScript SDK for interacting with the Swarm network for decentralized publishing and messaging. It includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
 
 ## *Bytes* - Data Conversions & Manipulation
 
-The `Bytes` class in `bee-js` provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. 
-It’s used throughout `bee-js` as the basis for cryptographic types like `Signature`, `Reference`, `PrivateKey`, and more which extend the `Bytes` class.
+The `Bytes` class in `bee-js` provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. It’s used throughout `bee-js` as the basis for other utility classes like `Signature`, `Reference`, `PrivateKey`, and more, all of which extend the `Bytes` class.
 
 It is also a **core data type** used throughout the SDK as expected input/returned data type for various methods.
 
@@ -39,7 +39,6 @@ console.log('Hello, world! hash:', Bytes.keccak256(Bytes.fromUtf8('Hello, world!
 Empty string hash: c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
 Hello, world! hash: b6e16d27ac5ab427a7f68900ac5559ce272dc6c37c82b3e052246c82244c50e4
 ```
-
 
 ### Creating *Bytes* Instances  
 **Methods:**
@@ -118,7 +117,7 @@ toJSON(): { a: 1, b: true }
 
 ## *PrivateKey* - Key Management & Signing
 
-The `PrivateKey` class extends the `Bytes` class. It is initialized with an Ethereum style private key which can then be used for signing arbitrary messages. It also has methods for returning the derived Ethereum address and public key.
+The `PrivateKey` class extends the `Bytes` class. It is initialized with an Ethereum-style private key, which can then be used for signing arbitrary messages. It also has methods for returning the derived Ethereum address and public key.
 
 ```javascript
 import { PrivateKey } from '@ethersphere/bee-js'
@@ -161,12 +160,6 @@ import { BZZ, DAI } from '@ethersphere/bee-js'
 ```
 
 **Initializing and formatting BZZ and DAI tokens.**
-
-```javascript
-import { BZZ, DAI } from '@ethersphere/bee-js'
-```
-
-**BZZ token initialization, formatting it as PLUR string, BigInt, and decimal string.**
 
 ```javascript
 // --- BZZ Initialization ---
@@ -248,7 +241,7 @@ DAI exchanged to BZZ at rate 0.3659: 7.0836926880076803
 
 ## *Reference* - Reference Hashes and CIDs 
 
-The `Reference` class is used to represent content reference hashes and cids, and conversions between them.
+The `Reference` class is used to represent content reference hashes and CIDs, and conversions between them.
 
 ```javascript
 import { Reference } from '@ethersphere/bee-js'
@@ -267,5 +260,3 @@ console.log('Hash to CID (manifest type):', new Reference(hash).toCid('manifest'
 CID to Hash (Hex): 44ef8a919a7a2a6fe36712d4512047db406cc7ac5c06da7731e0cb87bab10ff9
 Hash to CID (manifest type): bah5acgzaitxyvem2pivg7y3hclkfcich3nagzr5mlqdnu5zr4dfypovrb74q
 ```
-
-
