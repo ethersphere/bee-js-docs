@@ -178,10 +178,6 @@ Each `bee-js` method corresponds to a particular endpoint from the API. The char
 
 #### Stamps
 
-- `getAmountForTtl`
-- `getDepthForCapacity`
 - `getStampCost`
 - `getStampEffectiveBytes`
-- `getStampMaximumCapacityBytes`
-- `getStampTtlSeconds`
 - `getStampUsage`
