@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbee_js_docs=self.webpackChunkbee_js_docs||[]).push([[634],{2468:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});var c=t(6540),n=(t(1947),t(5489),t(4586));t(6025);var o=t(6347);const r=function(){const e=(0,n.A)(),{siteConfig:s={}}=e;return c.createElement(o.rd,{to:"docs/"})}}}]);
