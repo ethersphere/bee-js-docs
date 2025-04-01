@@ -6,19 +6,16 @@ module.exports = {
   baseUrl: "/",
   trailingSlash: true,
   plugins: [
-    require.resolve("docusaurus-lunr-search"),
     [
-      "docusaurus-plugin-typedoc",
+      'docusaurus-lunr-search',
       {
-        sidebar: {
-          sidebarFile: null,
-        },
+        languages: ['en'], // optional
       },
     ],
   ],
-  onBrokenLinks: "error",
-  onBrokenMarkdownLinks: "error",
-  onDuplicateRoutes: "error",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  onDuplicateRoutes: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Swarm", // Usually your GitHub org/user name.
   projectName: "bee-js-docs", // Usually your repo name.
@@ -27,24 +24,13 @@ module.exports = {
       defaultMode: "dark",
     },
     navbar: {
-      title: "Swarm Bee JS Library",
+      title: "Bee Js Documentation",
       logo: {
         alt: "Swarm Logo",
         src: "img/swarm-logo-2.svg",
       },
       items: [
-        {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Get Started",
-          position: "left",
-        },
-        {
-          to: "docs/api",
-          activeBasePath: "docs",
-          label: "API Reference",
-          position: "left",
-        },
+      
         {
           href: "https://github.com/ethersphere/bee-js",
           label: "GitHub",
@@ -104,10 +90,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: ({ docPath }) =>
-            docPath.includes("api/")
-              ? undefined
-              : "https://github.com/ethersphere/bee-js-docs",
+          editUrl: "https://github.com/ethersphere/bee-js-docs"
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],

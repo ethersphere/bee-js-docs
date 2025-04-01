@@ -5,6 +5,21 @@ slug: /pss
 sidebar_label: Postal Service over Swarm
 ---
 
+## 🚧 Under Construction 🚧
+:::caution 🚧 This page is under construction
+
+This section is still being worked on. Check back soon for updates!
+
+:::
+
+
+* Remove the unrelated intro section
+* Show a listener
+* Show a one time receive
+* Show a send invocation
+* Move it towards the end of the chapters, it is not very important
+
+
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
