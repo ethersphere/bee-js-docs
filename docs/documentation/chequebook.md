@@ -5,7 +5,7 @@ slug: /chequebook
 sidebar_label: Chequebook Management
 ---
 
-On Swarm, when downloading data from the network, nodes pay each other for forwarding data to them in the form of cheques. If you will be downloading a significant amount of data from the network, it is important that you fund your chequebook with BZZ so your node can issue cheques. 
+On Swarm, when downloading data from the network, nodes pay each other for forwarding data in the form of cheques. If you will be downloading a significant amount of data from the network, it is important that you fund your chequebook with BZZ so your node can issue and then pay for cheques. 
 
 You can also fund your chequebook by running a full node and getting paid in BZZ for forwarding chunks to other nodes, however this may not be enough depending on your download volume. 
 
