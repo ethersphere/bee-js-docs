@@ -82,7 +82,7 @@ module.exports = {
 
       apiKey: "8a175ff0c34022d46b4b26cf6f02ad41",
 
-      indexName: "bee-js-docs",
+      indexName: "bee-js-docs-search",
 
       contextualSearch: false,
     },
