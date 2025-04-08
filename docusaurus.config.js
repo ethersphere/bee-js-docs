@@ -6,12 +6,6 @@ module.exports = {
   baseUrl: "/",
   trailingSlash: true,
   plugins: [
-    [
-      'docusaurus-lunr-search',
-      {
-        languages: ['en'], // optional
-      },
-    ],
   ],
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -82,6 +76,15 @@ module.exports = {
         },
       ],
       copyright: `Copyleft © ${new Date().getFullYear()}.`,
+    },
+    algolia: {
+      appId: "D7BASQ1ESY",
+
+      apiKey: "8a175ff0c34022d46b4b26cf6f02ad41",
+
+      indexName: "bee-js-docs",
+
+      contextualSearch: false,
     },
   },
   presets: [
