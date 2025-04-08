@@ -89,10 +89,10 @@ That said, the `bee-js` library itself works seamlessly within WSL. If you prefe
 You can use [`create-swarm-app`](https://www.npmjs.com/package/create-swarm-app) to quickly set up scaffolding for a `bee-js` project with the following command:
 
 ```bash
-npm init swarm-app@latest {app-name} {app-type}
+npm init swarm-app@latest app-name app-type
 ```
 
-Replace "{app-name}" with your app's name, and "{app-type}" with the type of app you want. Supported types are `node`, `node-esm`, `node-ts` and `vite-tsx`.
+Replace "app-name" with your app's name, and "app-type" with the type of app you want. Supported types are `node`, `node-esm`, `node-ts` and `vite-tsx`.
 
 Start a Swarm project using TypeScript:
 
@@ -131,6 +131,6 @@ tree .
 └── tsconfig.json
 ```
 
-The exact results will differ slightly depending on which `{app-type}` you use, but they will all include a `config.ts` or `config.js` file where the Bee node's API endpoint must be specified.
+The exact results will differ slightly depending on which `app-type` you use, but they will all include a `config.ts` or `config.js` file where the Bee node's API endpoint must be specified.
 
 The endpoint is set to the default Bee API endpoint of `http://localhost:1633`, if your node uses a different endpoint you will need to update it in the config file.
