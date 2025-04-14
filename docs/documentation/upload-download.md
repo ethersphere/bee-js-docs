@@ -35,20 +35,23 @@ You can upload and retrieve any `string` or `Uint8Array` data with the `uploadDa
 
 When you download data the return type is the `Data` interface which extends `Uint8Array` with convenience functions like:
 
- - `text()` that converts the bytes into UTF-8 encoded string
+ - `toUtf8()` that converts the bytes into UTF-8 encoded string
  - `hex()` that converts the bytes into **non-prefixed** hex string
  - `json()` that converts the bytes into JSON object
 
 ```js
+import { Bee } from "@ethersphere/bee-js"
+
+const bee = new Bee('http://localhost:1633')
+const postageBatchId = "177da0994ed3000d241b183d33758aec42495bf9008fab059f0e3f208f3a1ade"
+
 const result = await bee.uploadData(postageBatchId, "Bee is awesome!")
 
-// prints Swarm hash of the file with which it can be retrieved
-// here it is fd79d5e0ebd8407e422f53ce1d7c4c41ebf403be55143900f8d1490560294780
-console.log(result.reference) 
+console.log(result.reference.toHex())
 
 const retrievedData = await bee.downloadData(result.reference)
 
-console.log(retrievedData.text()) // prints 'Bee is awesome!'
+console.log(retrievedData.toUtf8()) // prints 'Bee is awesome!'
 ```
 
 :::info Tip
@@ -60,27 +63,40 @@ A Swarm reference or hash is a 64 character long hex string which is the address
 You can also upload files by specifying a filename. When you download the file, `bee-js` will return additional information like the `contentType` or `name` of the file.
 
 ```js
+import { Bee } from "@ethersphere/bee-js"
+
+const bee = new Bee('http://localhost:1633')
+const postageBatchId = "177da0994ed3000d241b183d33758aec42495bf9008fab059f0e3f208f3a1ade"
+
 const result = await bee.uploadFile(postageBatchId, "Bee is awesome!", "textfile.txt")
-const retrievedFile = await bee.downloadFile(result.reference)
+const retrievedFile = await bee.downloadFile(result.reference.toHex())
 
 console.log(retrievedFile.name) // prints 'textfile.txt'
-console.log(retrievedFile.contentType) // prints 'application/octet-stream'
-console.log(retrievedFile.data.text()) // prints 'Bee is awesome!'
+console.log(retrievedFile.contentType) // prints 'application/x-www-form-urlencoded'
+console.log(retrievedFile.data.toUtf8()) // prints 'Bee is awesome!'
 ```
 
 In browsers, you can directly upload using the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the second argument of the `uploadFile` function.
 
 
 ```js
-const file = new File(["foo"], "foo.txt", { type: "text/plain" })
+import { Bee } from "@ethersphere/bee-js"
+import fs from 'fs'
 
-const postageBatchId = await bee.createPostageBatch("100", 17)
-const result = await bee.uploadFile(postageBatchId, file)
+const bee = new Bee('http://localhost:1633')
+const postageBatchId = "177da0994ed3000d241b183d33758aec42495bf9008fab059f0e3f208f3a1ade"
+
+// Read the file content
+const fileContent = fs.readFileSync("./textFile.txt", "utf8")
+
+// Upload the file content with a name
+const result = await bee.uploadFile(postageBatchId, fileContent, "textfile.txt")
+
+// Download the file
 const retrievedFile = await bee.downloadFile(result.reference)
-
-console.log(retrievedFile.name) // prints 'foo.txt'
-console.log(retrievedFile.contentType) // prints 'text/plain'
-console.log(retrievedFile.data.text()) // prints 'foo'
+console.log(retrievedFile.name) // prints 'textfile.txt'
+console.log(retrievedFile.contentType) // should print 'application/x-www-form-urlencoded
+console.log(retrievedFile.data.toUtf8()) // prints the file content
 ```
 
 ### Files and Directories
@@ -88,20 +104,24 @@ console.log(retrievedFile.data.text()) // prints 'foo'
 In browsers, you can easily upload an array of `File` objects coming from your form directly with [`FileList`](https://developer.mozilla.org/en-US/docs/Web/API/FileList). If the files uploaded through `uploadFiles` have a relative path, they are added relative to this filepath. Otherwise, the whole structure is flattened into single directory.
 
 ```js
+import { Bee } from "@ethersphere/bee-js"
+import fs from 'fs'
+
+const bee = new Bee('http://localhost:1633')
+const postageBatchId = "177da0994ed3000d241b183d33758aec42495bf9008fab059f0e3f208f3a1ade"
 const foo = new File(["foo"], "foo.txt", { type: "text/plain" })
 const bar = new File(["bar"], "bar.txt", { type: "text/plain" })
 
-const postageBatchId = await bee.createPostageBatch("100", 17)
 const result = await bee.uploadFiles(postageBatchId, [ foo, bar ]) // upload
 
-const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
-const rBar = await bee.downloadFile(result.reference, './bar.txt') // download bar
+const Foo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const Bar = await bee.downloadFile(result.reference, './bar.txt') // download bar
 
-console.log(rFoo.data.text()) // prints 'foo'
-console.log(rBar.data.text()) // prints 'bar'
+console.log(Foo.data.toUtf8()) // prints 'foo'
+console.log(Bar.data.toUtf8()) // prints 'bar'
 ```
 
-In NodeJS, you may utilize the `uploadFilesFromDirectory` function, which takes the directory path as input and uploads all files in that directory. Let's assume we have the following file structure:
+You may also utilize the `uploadFilesFromDirectory` function, which takes the directory path as input and uploads all files in that directory. Let's assume we have the following file structure:
 
 ```sh
 .
@@ -111,14 +131,17 @@ In NodeJS, you may utilize the `uploadFilesFromDirectory` function, which takes 
 ```
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
+import { Bee } from "@ethersphere/bee-js"
+import fs from 'fs'
 
+const bee = new Bee('http://localhost:1633')
+const postageBatchId = "177da0994ed3000d241b183d33758aec42495bf9008fab059f0e3f208f3a1ade"
 const result = await bee.uploadFilesFromDirectory(postageBatchId, './') // upload recursively current folder
 
-const rFoo = await bee.downloadFile(result.reference, './foo.txt') // download foo
-const rBar = await bee.downloadFile(result.reference, './dir/bar.txt') // download bar
+const Foo = await bee.downloadFile(result.reference, './foo.txt') // download foo
+const Bar = await bee.downloadFile(result.reference, './dir/bar.txt') // download bar
 
-console.log(rFoo.data.text()) // prints 'foo'
-console.log(rBar.data.text()) // prints 'bar'
+console.log(Foo.data.toUtf8()) // prints 'foo'
+console.log(Bar.data.toUtf8()) // prints 'bar'
 ```
 
