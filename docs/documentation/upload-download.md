@@ -76,7 +76,7 @@ console.log(retrievedFile.contentType) // prints 'application/x-www-form-urlenco
 console.log(retrievedFile.data.toUtf8()) // prints 'Bee is awesome!'
 ```
 
-In browsers, you can directly upload using the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the second argument of the `uploadFile` function.
+You can directly upload using the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the second argument of the `uploadFile` function.
 
 
 ```js
