@@ -13,7 +13,7 @@ module.exports = {
         'documentation/upload-download',
         'documentation/tracking-uploads',
         'documentation/pinning',
-        // 'documentation/staking',
+        'documentation/staking',
         // 'documentation/manifests',
         // 'documentation/soc-and-feeds',
         // 'documentation/pss',
