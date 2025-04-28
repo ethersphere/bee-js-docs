@@ -42,7 +42,7 @@ To use the example scripts below, you need:
 - A light node for sending GSOC messages.
 - The batch ID of a usable postage batch. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
 
-## 1. Create an Identifier (Receiver and Sender)
+## Create an Identifier (Receiver and Sender)
 
 Identifiers in GSOC are similar to topics in PSS — they define the stream of messages a receiver node is subscribed to. The sender must use the same identifier so that their messages are received.
 
@@ -66,7 +66,7 @@ const identifier = Identifier.fromString('chat:v1')
 - Use any hex string to initialize a new `Identifier` object .
 - Use `Identifier.fromString()` to generate an identifier derived from your string of choice (allows for easy to remember human readable identifiers `"notifications"`, `"chat:user1"`).
 
-## 2. Get Target Overlay (Receiver Node)
+## Get Target Overlay (Receiver Node)
 
 This step **is performed by the receiving full node** to retrieve its overlay address. This overlay address is then shared with the sender node to use as a target overlay for its GSOC messages:
 
@@ -100,7 +100,7 @@ Underlay: [
 
 The `Overlay` should be saved and shared with sender nodes.
 
-## 3. Set Up a Listener (Receiver Node)
+## Set Up a Listener (Receiver Node)
 
 This must be run on a full node. It mines a key that lands within its own neighborhood and starts listening.
 
@@ -129,7 +129,7 @@ async function listen() {
 listen()
 ```
 
-## 4. Send a Message (Sender Node)
+## Send a Message (Sender Node)
 
 The sending node must have a ***usable postage batch id*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 
 
