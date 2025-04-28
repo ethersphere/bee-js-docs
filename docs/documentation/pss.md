@@ -2,7 +2,7 @@
 title: Postal Service over Swarm
 id: pss
 slug: /pss
-sidebar_label: Postal Service over Swarm
+sidebar_label: PSS
 ---
 
 Swarm supports sending encrypted messages over the network using a system called **Postal Service over Swarm** (PSS). These messages are embedded in regular Swarm traffic and routed to specific nodes based on their overlay address.

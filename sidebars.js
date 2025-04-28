@@ -14,11 +14,13 @@ module.exports = {
         'documentation/tracking-uploads',
         'documentation/pinning',
         'documentation/staking',
+        'documentation/pss',
+        'documentation/gsoc',
+        // 'documentation/act',
         // 'documentation/manifests',
         // 'documentation/soc-and-feeds',
-        // 'documentation/pss',
-        // 'documentation/gsoc',
-        // 'documentation/act',
+        
+  
         'documentation/utilities',
       ],
       collapsed: false
