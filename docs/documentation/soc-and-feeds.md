@@ -16,7 +16,12 @@ This section is still being worked on. Check back soon for updates!
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-Swarm provides the ability to store content in content-addressed chunks or Single Owner Chunks (SOC). With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
+:::info Note on Ethereum addresses
+This article mentions Ethereum address in multiple sections. Please not that this refers to an Ethereum format account only, and does not indicate the Ethereum blockchain itself. Swarm is built on the Gnosis Blockchain which is a fork of ethereum.
+:::
+
+
+Swarm provides the ability to store content in content-addressed chunks (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's own public key and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
 
 Feeds are a unique feature of Swarm. They constitute the primary use case for single owner chunks. Developers can use Feeds to version revisions of a mutable resource, indexing sequential updates to a topic, publish the parts to streams, or post consecutive messages in a communication channel. Feeds implement persisted pull-messaging and can also be interpreted as a pub-sub system.
 
@@ -24,81 +29,140 @@ Because Feeds are built on top of SOCs, their interfaces are somewhat similar an
 
 ## Single Owner Chunks
 
-Bee-js calculates a SOC address as the hash of an `identifier` and `owner`. The `identifier` is a 32 bytes long arbitrary data, usually expected as a hex string or a `Uint8Array`. The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or  `Uint8Array`.
+Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
 
 :::warning SOCs are immutable!
-You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of SOC is forbidden in Swarm as it might create uncertain behavior. Bee node will reject the API call if it finds already existing SOC for the given address. Either use a different `identifier`, or you might be looking for Feeds as your use case.
+You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of SOC is forbidden in Swarm as it might create uncertain behavior. A Bee node will reject the API call if it finds an already existing SOC for the given address. Either use a different `identifier`, or you might be looking for Feeds as your use case.
 :::
 
-### Reading SOCs
+### Uploading SOCs
 
-To read data from a SOC, we need to make a reader object bound to a specific `owner`. Then we can download the data with the provided chunk's `identifier`.
+To write a Single Owner Chunk (SOC), use the `makeSOCWriter()` method from the Bee client. This method requires a signer, which can be an instance of `PrivateKey`, a raw Ethereum private key as a hex string (with or without the `0x` prefix), or a `Uint8Array` representing the private key. 
 
-```js
-const owner = '0x8d3766440f0d7b949a5e32995d09619a7f86e632'
-const socReader = bee.makeSOCReader(owner)
-const identifier = '0000000000000000000000000000000000000000000000000000000000000000'
-const soc = await socReader.download(identifier)
-const data = soc.payload()
-```
+The signer is used to cryptographically sign the chunk, using the same format Ethereum uses for signing transactions.
 
-### Writing SOCs
+Once the `SOCWriter` is created, you can upload an SOC by providing a `postageBatchId`, a 32-byte `identifier`, and the `data` payload.
 
-When writing a SOC, first, we need to make a writer object. Because we need to sign the chunk, we need to pass in a `signer` object. The `signer` object can be either an Ethereum private key (as a hex string or `Uint8Array`) or an instance of the `Signer` interface. The `Signer` interface can be used for integration with 3rd party Ethereum wallet applications because Swarm uses the same format for signing chunks that Ethereum uses for signing transactions.
 
 :::info Default `signer`
-
-When you are instantiating `Bee` class you can pass it a default signer that will be used if you won't specify it 
-directly for the `makeSOCWriter`. See `Bee` constructor for more info.
-
+When you are instantiating `Bee` class you can pass an Ethereum private key as the default signer that will be used if you won't specify it directly for the `makeSOCWriter`.
 :::
 
-:::tip Ethereum Wallet signers
-
-If you want to use your browser Ethereum Wallet like Metamask you can use utility called `makeEthereumWalletSigner`  that we ship with bee-js
-which creates a `Signer` object out of given EIP-1193 compatible provider.
-
-See it used in our example [here](https://github.com/ethersphere/examples-js/tree/master/eth-wallet-signing).
+:::warning Your assets and/or privacy may be at risk
+We suggest using ephemeral private keys (e.g. randomly generated) when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications) directly because it will allow others to sign messages with your kay which may compromise your privacy or lead to the loss of funds stored by that account.
+:::
 
 ```js
-import { Utils } from '@ethersphere/bee-js'
+import { Bee, PrivateKey, NULL_IDENTIFIER, Bytes } from "@ethersphere/bee-js"
 
-const signer = Utils.makeEthereumWalletSigner(window.ethereum)
-...
-```
-:::
+// Define your Ethereum private key (never use your real private keys in production code)
+const privateKey = new PrivateKey('0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd')
 
+// Print the identifier and address which can be used to retrieve the SOC
+// SOC identifier
+console.log("SOC identifier")
+console.log(new Bytes(NULL_IDENTIFIER).toHex())
 
-```ts
-type SyncSigner = (digest: Data) => Signature | string
-type AsyncSigner = (digest: Data) => Promise<Signature | string>
+// Ethereum address
+console.log("Ethereum address")
+console.log(privateKey.publicKey().address().toHex())
 
-/**
- * Interface for implementing Ethereum compatible signing.
- *
- * @property sign     The sign function that can be sync or async
- * @property address  The Ethereum address of the signer
- */
-export type Signer = {
-  sign: SyncSigner | AsyncSigner
-  address: EthAddress
+// Initialize Bee client with default signer and Swarm node URL
+const bee = new Bee('http://localhost:1643', { signer: privateKey })
+
+// Paste your own postage ID here
+const postageBatchId = 'f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7'
+
+// Create the SOC writer using the default signer
+const socWriter = bee.makeSOCWriter()
+
+// The data you want to store in the SOC
+const data = 'this is my sample data'
+
+async function uploadSOC() {
+  try {
+    // Upload the data to the SOC using the postage batch and identifier
+    const response = await socWriter.upload(postageBatchId, NULL_IDENTIFIER, data)
+
+    // Log the human-readable reference (hex string)
+    console.log("SOC reference:")
+    console.log("Reference (Hex):", response.reference.toHex())
+  } catch (error) {
+    // Handle any errors during the upload
+    console.error("Error uploading SOC:", error)
+  }
 }
+
+// Call the function to write the SOC
+uploadSOC()
+```
+Example output:
+
+```bash
+SOC identifier
+0000000000000000000000000000000000000000000000000000000000000000
+Ethereum address
+8d3766440f0d7b949a5e32995d09619a7f86e632
+SOC reference:
+Reference (Hex): 9d453ebb73b2fedaaf44ceddcf7a0aa37f3e3d6453fea5841c31f0ea6d61dc85
 ```
 
-:::warning Your communication privacy may be at risk
-We suggest using either ephemeral private keys (e.g. randomly generated) or the `Signer` interface when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications really) directly because you may lose your funds stored on it.
+
+In this example:
+- `privateKey` defines the identity used to sign the SOC.
+- `NULL_IDENTIFIER` is the 32-byte value used as the identifier (can be replaced with any user-defined value).
+- `socWriter.upload()` signs and uploads the data, returning a `reference` as confirmation.
+
+The `identifier` and Ethereum address together determine the SOC address and must match exactly when retrieving the chunk later. The returned `reference` is included as part of the upload response, but unlike non-SOC uploads, the returned reference is not used to retrieve the chunk, rather the `identifier` and Ethereum address are used (see next section for example usage). 
+
+## Reading SOCs
+
+To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
+
+To download a SOC in Bee-JS, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
+
+:::info SOC address is derived from the identifier and owner
+Unlike uploads using content addressed chunks which are retrieved by their Swarm reference hash, SOCs are retrieved using the combination of `identifier` and `owner`, not their Swarm reference hash.
 :::
 
-Using the writer interface is similar to using the reader:
-
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
-const signer = '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd'
-const socWriter = bee.makeSOCWriter(signer)
-const identifier = '0000000000000000000000000000000000000000000000000000000000000000'
-const data = new Uint8Array([1, 2, 3])
-const response = await socWriter.upload(postageBatchId, identifier, data)
+import { Bee, Size, NULL_IDENTIFIER } from "@ethersphere/bee-js"
+
+// Initialize Bee client pointing to the Swarm node
+const bee = new Bee('http://localhost:1633')
+
+// The owner's Ethereum address (20 bytes)
+const owner = '8d3766440f0d7b949a5e32995d09619a7f86e632'
+
+// Create a SOC reader object bound to the owner
+const socReader = bee.makeSOCReader(owner)
+
+async function readSOC() {
+  try {
+    // Download the SOC using the identifier
+    const response = await socReader.download(NULL_IDENTIFIER)
+
+    // Log the data
+    console.log("SOC Data:", response.payload.toUtf8())
+
+    // Optionally, you can use the data in other ways (e.g., process, display, etc.)
+  } catch (error) {
+    // Handle any errors during download
+    console.error("Error downloading SOC:", error)
+  }
+}
+
+// Call the function to read the SOC
+readSOC()
 ```
+
+In this example:
+- The `owner` is the Ethereum address used to sign the SOC.
+- `NULL_IDENTIFIER` is the same default identifier used in the earlier upload example.
+- The returned payload is a `Bytes` object, and `.toUtf8()` converts it to a human-readable string.
+
+Make sure the `owner` and `identifier` values match exactly what was used during upload — any mismatch will result in the chunk not being found.
+
 
 ## Feeds
 
@@ -116,7 +180,7 @@ Feeds enable Swarm users to represent a sequence of content updates. The content
 
 ### Topic
 
-In Swarm, `topic` is a 32-byte long arbitrary byte array. It's possible to choose an arbitrary topic for each application, and then knowing someone's (or something's) address, it's possible to find their feeds. Also, this can be the hash of a human-readable string, specifying the topic and optionally the subtopic of the feed. There is a helper function provided for that:
+In Swarm, `topic` is any arbitrary 32-byte long array. This allows for the selection of a unique topic for each application, which along with someone's (or something's) address, allow for the feed to be discovered. Also, this can be the hash of a human-readable string, specifying the topic and optionally the subtopic of the feed. There is a helper function provided for that:
 
 ```js
 const topic = bee.makeFeedTopic('my-dapp.eth/outbox')

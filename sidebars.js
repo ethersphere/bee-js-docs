@@ -16,9 +16,10 @@ module.exports = {
         'documentation/staking',
         'documentation/pss',
         'documentation/gsoc',
+        'documentation/soc-and-feeds',
         // 'documentation/act',
         // 'documentation/manifests',
-        // 'documentation/soc-and-feeds',
+        
         
   
         'documentation/utilities',
