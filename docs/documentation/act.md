@@ -12,13 +12,26 @@ This section is still being worked on. Check back soon for updates!
 
 :::
 
-
 * Show example of creating grantee list
 * Show example of secure upload
 * Show example of secure download
 
+ACT, or Access Control Trie, is a decentralized permission system built into the Swarm network that allows you to restrict access to uploaded content.
+
+When you upload data to Swarm using ACT, only the original uploader and users with public keys listed in an associated grantee list are able to retrieve and decrypt that data. The grantee list is published separately and cryptographically referenced during upload and download operations.
+
+ACT is ideal for use cases such as the serialized release of content like a podcast or newsletter where the publisher wishes to limit access to subscribers only.
+
+:::warning
+Once a file is uploaded with ACT, any node that is is on the ACT grantees list referenced during the upload ***will have permanent access to that file*** as long as they have the file reference and history reference returned from the upload. 
+
+Updating the grantees list to remove a public key ***will not revoke access*** to the content retroactively.
+
+Likewise, re-uploading the content the content using the new grantees list will also ***not retroactively revoke access*** to the content.
+:::
 
 ## Create Grantees List
+
 First we create a grantees list with the public keys of anyone we want to grant access to:
 
 ```js
@@ -33,7 +46,7 @@ const grantees = [
 ];
 
 // Your postage batch ID (replace with a valid one)
-const postageBatchId = new BatchId('f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7');
+const postageBatchId = new BatchId('b680c04c49d246538284cadd143cf6e623cd6581347e1bb7d9b62e36334757db');
 
 // Function to create grantees list
 async function createGranteeList() {
@@ -58,8 +71,8 @@ Example output:
 
 ```bash
 Grantee List Created Successfully:
-Reference: 98bc4076efe5736aa682649c1928cbc9e0ac11d395f7ed0e67126ff660f5410a238e14f8b1d74f7df6121b8450d79ca789a257eeb84c5ca7dda3ed08a6859934
-History Reference: 06ee838e1f9b26c6d44077a2e63ad5ba9ecc143f278f9301f477eb99391f5796
+Reference: a1206faf621e645027bf853ed06e85d3fd7499eb37859f5fba9cdc50d0d822cfef4c524879b8dedcc521f7db2bb09d81d765d01a7e4427093149cbfac9b0f54c
+History Reference: 8e74e7dc0c94786b576b55d32c238ebcb4da633ee36ae9beae11aaa98defbb3d
 ```
 
 The first reference `Reference` is used on its own for reviewing the list contents and updating the list. It is encrypted so only the list creator can view the list contents.
@@ -70,6 +83,10 @@ The seconde reference `History Reference` is used along with the first `Referenc
 
 In order to update grantees we pass an object in this format to the `bee.patchGrantees` method containing the public keys we wish to add or remove from the list along with the `History Reference` and the grantee list `Reference` and a valid postage stamp:
 
+:::info
+Although we refer to the process as "updating", since data on Swarm is immutable, the original grantees list is never modified. Rather, a new version of the list is created based on the original one with the specified public keys removed or added.
+:::
+
 ```js
 bee.patchGrantees(postageBatchId, granteeListRef, granteeHistoryRef, {
             add: [grantee1, grantee2], // Add the new grantee
@@ -78,8 +95,6 @@ bee.patchGrantees(postageBatchId, granteeListRef, granteeHistoryRef, {
 ```
 
 Calling this method will create an entirely new grantees list based on our first list and will return the `Reference` and `History Reference` for the new list. 
-
-This ***WILL NOT*** update which users had access to content uploaded using the first grantees list, it is simply creating a new list with a different set of grantees which can be used for uploading content accessible to the new set.
 
 Full example script:
 
@@ -90,21 +105,22 @@ import { Bee, PublicKey, BatchId, Reference } from '@ethersphere/bee-js';
 const bee = new Bee('http://localhost:1643'); // Correct port is 1643
 
 // Grantee's public key to be added (replace with the actual key)
-const grantee = new PublicKey('03636056d1e08f100c5acaf14d10070102de9444c97b2e8215305ab3e97254ede6');
+const grantee1 = new PublicKey('027d0c4759f689ea3dd3eb79222870671c492cb99f3fade275bcbf0ea39cd0ef6e');
+const grantee2 = new PublicKey('03636056d1e08f100c5acaf14d10070102de9444c97b2e8215305ab3e97254ede6');
 
 // Grantee list reference and history reference (replace with actual references from `createGrantees`)
 const granteeListRef = new Reference('98bc4076efe5736aa682649c1928cbc9e0ac11d395f7ed0e67126ff660f5410a238e14f8b1d74f7df6121b8450d79ca789a257eeb84c5ca7dda3ed08a6859934')
 const granteeHistoryRef = new Reference('06ee838e1f9b26c6d44077a2e63ad5ba9ecc143f278f9301f477eb99391f5796')
 
 // Your postage batch ID (replace with a valid one)
-const postageBatchId = new BatchId('f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7');
+const postageBatchId = new BatchId('b680c04c49d246538284cadd143cf6e623cd6581347e1bb7d9b62e36334757db');
 
 // Function to update the grantee list by adding the new public key
 async function updateGranteeList() {
   try {
     // Call the patchGrantees function to add the new public key
     const response = await bee.patchGrantees(postageBatchId, granteeListRef, granteeHistoryRef, {
-            add: [grantee], // Add the new grantee
+            add: [grantee1, grantee2], // Add the new grantee
             revoke: [],
     });
 
@@ -130,13 +146,18 @@ Example output:
 
 ```bash
 Grantee List Updated Successfully:
-Updated Reference: 363430f8c500e7ea7d23eff1f14674cf6d46ce1640684edad7cc2e5631c37bbaf9dc5b0f5ea42f919191c77187a7f1f40adfd1ab60bc84f1ae4f2d7bf42b98bd
-Updated History Reference: c2a43bea8abaae8ef31141ef8ec953097c76f48c2a14c1a6119bb110675e5378
+Updated Reference: 50b611b5253a8e1c63dc2d285fd1ee6501eaae626146ac032d3eff537ad1d1c46b032a6ea526e5cf88d6801c854bc9cde4418e87972c010f85a6f70e0beb1d0d
+Updated History Reference: 7fd72a4d7a175c6d709c799b990adc8b200ec3e0f413c2ae48026a316bb4810c
 ```
 
 ## Get Grantees List
 
 In order to view the members of our grantees list we need to use the `Reference` returned when we create or update a list. We will view both our original list and the updated list based on the original list using the respective `Reference` from each list:
+
+:::info
+The grantee list is encrypted, and only the owner can view the grantee list, make sure to use the owner node when using the `getGrantees` method.
+:::
+
 
 ```js
 import { Bee, Reference } from '@ethersphere/bee-js';
@@ -147,7 +168,7 @@ const bee = new Bee('http://localhost:1643');
 
 // Grantee list references (the reference returned from the `createGrantees` function)
 const granteeListRef_01 = new Reference('98bc4076efe5736aa682649c1928cbc9e0ac11d395f7ed0e67126ff660f5410a238e14f8b1d74f7df6121b8450d79ca789a257eeb84c5ca7dda3ed08a6859934');
-const granteeListRef_02 = new Reference('363430f8c500e7ea7d23eff1f14674cf6d46ce1640684edad7cc2e5631c37bbaf9dc5b0f5ea42f919191c77187a7f1f40adfd1ab60bc84f1ae4f2d7bf42b98bd');
+const granteeListRef_02 = new Reference('59c7d5223aa6fe0e66c72752690954c01747352d95b3c26281ac06b45a767d9759b5872a825aaa0eae5b4570816cacadd24065ecc195e77044977260efa70417');
 
 // Function to get the grantee list
 async function getGranteeList(granteeListRef) {
@@ -204,14 +225,14 @@ import { Bee, BatchId, Reference } from '@ethersphere/bee-js';
 const bee = new Bee('http://localhost:1643');
 
 // Your postage batch ID (replace with a valid one)
-const postageBatchId = new BatchId('f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7');
+const postageBatchId = new BatchId('b680c04c49d246538284cadd143cf6e623cd6581347e1bb7d9b62e36334757db');
 
-// Grantee history reference (the reference returned from the `createGrantees` function)
-const granteeHistoryRef1 = new Reference('06ee838e1f9b26c6d44077a2e63ad5ba9ecc143f278f9301f477eb99391f5796');
-const granteeHistoryRef2 = new Reference('c2a43bea8abaae8ef31141ef8ec953097c76f48c2a14c1a6119bb110675e5378');
+// Grantee list reference (the reference returned from the `createGrantees` function)
+const historyRef_01 = new Reference('73b516518a2c1c5730bea115393dde6ece5d6ad4fe9a31f12073693ec2180f91');
+const historyRef_02 = new Reference('1de158acf997a3ee91cf6c5bc60ee3c69e72ae7863fed346f859d79dcab82825');
 
 // Sample data to upload
-const fileData = 'This is a sample string that will be uploaded securely using ACT. ABCDE.';
+const fileData = 'This is a sample string that will be uploaded securely using ACT. 01.';
 
 // Function to upload the data with ACT
 async function uploadWithACT(historyRef) {
@@ -233,21 +254,21 @@ async function uploadWithACT(historyRef) {
 }
 
 // Call the function to upload the file
-uploadWithACT(granteeHistoryRef1);
-uploadWithACT(granteeHistoryRef2);
+uploadWithACT(historyRef_01);
+uploadWithACT(historyRef_02);
 ```
 
 Example output:
 
 ```bash
 File uploaded successfully with ACT:
-Reference: d3d4485efcc22acdf4d20a31d79edc3220655151bd15cec0df9111e0c0f89e86
+Reference: 14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f
 History reference
-06ee838e1f9b26c6d44077a2e63ad5ba9ecc143f278f9301f477eb99391f5796
+8e74e7dc0c94786b576b55d32c238ebcb4da633ee36ae9beae11aaa98defbb3d
 File uploaded successfully with ACT:
-Reference: d3d4485efcc22acdf4d20a31d79edc3220655151bd15cec0df9111e0c0f89e86
+Reference: 14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f
 History reference
-c2a43bea8abaae8ef31141ef8ec953097c76f48c2a14c1a6119bb110675e5378
+7fd72a4d7a175c6d709c799b990adc8b200ec3e0f413c2ae48026a316bb4810c
 ```
 
 The reference hash is the same for each upload since the content is the same. The reference hash along with a `History Reference` and the uploader's public key are required in order to access the content uploaded with ACT.
@@ -256,8 +277,17 @@ You can choose which `History Reference` to share depending on which set of publ
 
 ## Download With ACT
 
-The example below uses the first `History Reference`, and so can only gives access to the single public key in the grantees list it refers to. If we wish to give both public keys access then we could share the other key.
+:::
+🚧 Under Construction 🚧
+ACT download with bee-js is not currently functioning, however you can still download directly using a curl command for the Bee API and the corresponding headers. 
+:::
+
+Below are curl commands for downloading the file we uploaded with ACT. Each command is for the same file, but uploaded using a different grantees list. Therefore if we try downloading the file from the node with the public key of `03636056d1e08f100c5acaf14d10070102de9444c97b2e8215305ab3e97254ede6`, it will only work with the second command, since that one was uploaded using the grantees list which contained the public key, while the first one was uploaded using a list that does not contain it:
 
 ```bash
-curl -X GET "http://localhost:1633/bzz/d3d4485efcc22acdf4d20a31d79edc3220655151bd15cec0df9111e0c0f89e86/"   -H "swarm-act-publisher: 0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96"   -H "swarm-act-history-address: 06ee838e1f9b26c6d44077a2e63ad5ba9ecc143f278f9301f477eb99391f5796"   --output downloaded_file.txt
+curl -X GET "http://localhost:1633/bzz/14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f/"   -H "swarm-act-publisher: 0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96"   -H "swarm-act-history-address: 8e74e7dc0c94786b576b55d32c238ebcb4da633ee36ae9beae11aaa98defbb3d"   --output downloaded_file.txt
+```
+
+```bash
+curl -X GET "http://localhost:1633/bzz/14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f/"   -H "swarm-act-publisher: 0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96"   -H "swarm-act-history-address: 7fd72a4d7a175c6d709c799b990adc8b200ec3e0f413c2ae48026a316bb4810c"   --output downloaded_file.txt
 ```
