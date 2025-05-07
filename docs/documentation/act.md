@@ -277,17 +277,51 @@ You can choose which `History Reference` to share depending on which set of publ
 
 ## Download With ACT
 
-:::
-🚧 Under Construction 🚧
-ACT download with bee-js is not currently functioning, however you can still download directly using a curl command for the Bee API and the corresponding headers. 
-:::
 
-Below are curl commands for downloading the file we uploaded with ACT. Each command is for the same file, but uploaded using a different grantees list. Therefore if we try downloading the file from the node with the public key of `03636056d1e08f100c5acaf14d10070102de9444c97b2e8215305ab3e97254ede6`, it will only work with the second command, since that one was uploaded using the grantees list which contained the public key, while the first one was uploaded using a list that does not contain it:
+In order to download using ACT, we must pass in the public key from the grantee list creator along with the file reference and history reference returned from the file upload operation:
 
-```bash
-curl -X GET "http://localhost:1633/bzz/14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f/"   -H "swarm-act-publisher: 0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96"   -H "swarm-act-history-address: 8e74e7dc0c94786b576b55d32c238ebcb4da633ee36ae9beae11aaa98defbb3d"   --output downloaded_file.txt
+
+```js
+import { Bee, Reference, PublicKey } from '@ethersphere/bee-js'
+
+// Initialize Bee instance
+const bee = new Bee('http://localhost:1633')
+
+
+// Publisher public key used during upload
+const publisherPublicKey = new PublicKey('0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96');
+
+// File reference and history reference returned from upload operation
+const fileRef_01 = new Reference('14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f');
+const historyRef_01 = new Reference('8e74e7dc0c94786b576b55d32c238ebcb4da633ee36ae9beae11aaa98defbb3d');
+
+
+// Function to download ACT-protected content
+async function downloadWithACT(fileRef, historyRef, publisherPubKey) {
+  try {
+    const result = await bee.downloadFile(fileRef, './', {
+        actPublisher: publisherPubKey,
+        actHistoryAddress: historyRef
+    })
+
+    console.log('Content:', result.data.toUtf8())
+  } catch (error) {
+    console.error(`Error downloading from reference ${fileRef}:`, error)
+  }
+}
+
+// Download using two sets of file + history references
+downloadWithACT(
+  fileRef_01,
+  historyRef_01,
+  publisherPublicKey
+)
 ```
 
+Example terminal output:
+
 ```bash
-curl -X GET "http://localhost:1633/bzz/14bc3765a893f7bac1d179f2606997ece06389b20cedc4b7f707f98e8e3dca5f/"   -H "swarm-act-publisher: 0295562f9c1013d1db29f7aaa0c997c4bb3f1fc053bd0ed49a3d98584490cc8f96"   -H "swarm-act-history-address: 7fd72a4d7a175c6d709c799b990adc8b200ec3e0f413c2ae48026a316bb4810c"   --output downloaded_file.txt
+Content: This is a sample string that will be uploaded securely using ACT. 01.
 ```
+
+In the example above, we used the history reference from the file uploaded using the grantees list with only one public key included (`027d0c4759f689ea3dd3eb79222870671c492cb99f3fade275bcbf0ea39cd0ef6e`), and so it will only be able to be retrieved and decrypted by the node with that public key.
