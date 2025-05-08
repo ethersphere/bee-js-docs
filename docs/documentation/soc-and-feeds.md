@@ -5,34 +5,24 @@ slug: /soc-and-feeds
 sidebar_label: SOC and Feeds
 ---
 
-## 🚧 Under Construction 🚧
-:::caution 🚧 This page is under construction
-
-This section is still being worked on. Check back soon for updates!
-
-:::
-
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-:::info Note on Ethereum addresses
-This article mentions Ethereum address in multiple sections. Please not that this refers to an Ethereum format account only, and does not indicate the Ethereum blockchain itself. Swarm is built on the Gnosis Blockchain which is a fork of ethereum.
-:::
+Swarm provides the ability to store content in content-addressed [chunks](https://docs.ethswarm.org/docs/concepts/DISC/#content-addressed-chunks-and-single-owner-chunks) (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's own public key and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
 
-
-Swarm provides the ability to store content in content-addressed chunks (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's own public key and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
-
-Feeds are a unique feature of Swarm. They constitute the primary use case for single owner chunks. Developers can use Feeds to version revisions of a mutable resource, indexing sequential updates to a topic, publish the parts to streams, or post consecutive messages in a communication channel. Feeds implement persisted pull-messaging and can also be interpreted as a pub-sub system.
-
-Because Feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
+Feeds are a unique feature of Swarm which simulate the publishing of mutable content on Swarm's immutable storage. ***Feeds constitute the primary use case for SOCs.*** Developers can use Feeds to version revisions of a mutable resource by indexing sequential updates to a topic at predictably calculated addresses. Because Feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
 
 ## Single Owner Chunks
 
 Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
 
+:::info
+SOCs are powerful and flexible low-level feature which provide the foundation upon which higher level abstractions such as [GSOC](/docs/gsoc/) and [feeds](/docs/soc-and-feeds/#feeds) are built. For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
+:::
+
 :::warning SOCs are immutable!
-You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of SOC is forbidden in Swarm as it might create uncertain behavior. A Bee node will reject the API call if it finds an already existing SOC for the given address. Either use a different `identifier`, or you might be looking for Feeds as your use case.
+You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of an SOC is forbidden in Swarm as it might create uncertain behavior. A Bee node will reject the API call if it finds an already existing SOC for the given address. Either use a different `identifier`, or you might be looking for feeds if you need to perform multiple updates to the same content.
 :::
 
 ### Uploading SOCs
@@ -55,26 +45,25 @@ We suggest using ephemeral private keys (e.g. randomly generated) when writing t
 ```js
 import { Bee, PrivateKey, NULL_IDENTIFIER, Bytes } from "@ethersphere/bee-js"
 
-// Define your Ethereum private key (never use your real private keys in production code)
+// Define your Ethereum private key (don't use your node's or real wallet's private keys)
 const privateKey = new PrivateKey('0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd')
 
 // Print the identifier and address which can be used to retrieve the SOC
-// SOC identifier
 console.log("SOC identifier")
 console.log(new Bytes(NULL_IDENTIFIER).toHex())
 
-// Ethereum address
+// Print Ethereum address
 console.log("Ethereum address")
 console.log(privateKey.publicKey().address().toHex())
 
 // Initialize Bee client with default signer and Swarm node URL
 const bee = new Bee('http://localhost:1643', { signer: privateKey })
 
-// Paste your own postage ID here
+// Replace with your own valid postage batch ID here
 const postageBatchId = 'f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7'
 
-// Create the SOC writer using the default signer
-const socWriter = bee.makeSOCWriter()
+// Create the SOC writer
+const socWriter = bee.makeSOCWriter(privateKey)
 
 // The data you want to store in the SOC
 const data = 'this is my sample data'
@@ -109,13 +98,13 @@ Reference (Hex): 9d453ebb73b2fedaaf44ceddcf7a0aa37f3e3d6453fea5841c31f0ea6d61dc8
 
 
 In this example:
-- `privateKey` defines the identity used to sign the SOC.
+- `privateKey` is used to initialize the writer as `socWriter` which is used to sign the SOC.
 - `NULL_IDENTIFIER` is the 32-byte value used as the identifier (can be replaced with any user-defined value).
 - `socWriter.upload()` signs and uploads the data, returning a `reference` as confirmation.
 
 The `identifier` and Ethereum address together determine the SOC address and must match exactly when retrieving the chunk later. The returned `reference` is included as part of the upload response, but unlike non-SOC uploads, the returned reference is not used to retrieve the chunk, rather the `identifier` and Ethereum address are used (see next section for example usage). 
 
-## Reading SOCs
+### Retrieving SOCs
 
 To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
 
@@ -164,101 +153,254 @@ In this example:
 Make sure the `owner` and `identifier` values match exactly what was used during upload — any mismatch will result in the chunk not being found.
 
 
+
 ## Feeds
 
-Feeds are an abstraction built on top of SOCs to provide mutable resources on the otherwise immutable data types that Swarm supports.
+Feeds are an abstraction built on top of Single Owner Chunks (SOCs) that **simulate mutable content** in Swarm. They enable sequenced updates over time while maintaining a stable access point. Feeds are ideal for dynamic content like apps, messages, or websites. Each update is stored in a new immutable chunk at a deterministically calculated address.
 
-One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website on Swarm, we may want its address stored in ENS, but we don't want to pay for changing the reference every time the site is updated.
+> Although feeds appear "mutable," no data is ever modified—new updates are simply written to new indexes.
 
-A feed is defined by its `owner` (see above), a `topic` (32 bytes arbitrary data as a hex string or `Uint8Array`), and a `type`. `type` defines how the updates and lookup of the feed index are made (currently only the `sequence` type is supported).
+Similar to how an SOC is defined by an `owner` and `identifier`, a feed is defined by:
 
-The publisher is the owner of the feed, and only they can post updates to the feed. Posting an update requires (1) constructing the identifier from the topic and the correct index and (2) signing it concatenated together with the hash of the arbitrary content of the update.
+* `owner`: an Ethereum-compatible address
+* `topic`: a unique 32-byte identifier 
 
-Conversely, users can consume a feed by retrieving the chunk by its address. Retrieving an update requires the consumer to construct the address from the owner’s address and the identifier. To calculate the identifier, they need the topic and the appropriate index. For this, they need to know the indexing scheme.
+### Concepts
 
-Feeds enable Swarm users to represent a sequence of content updates. The content of the update is the payload that the feed owner signs against the identifier. The payload can be a swarm reference from which the user can retrieve the associated data.
+* **Feed Writing**: Publishers sign and write updates associated with specific topics to specific indices using their private key.
 
-### Topic
+* **Append-Only Behavior and Index Resolution**: Feeds are typically used in an append-only fashion, though skipping indices is possible. However, the latest update is resolved as the highest *consecutive* index. Updates at non-consecutively written indices must be retrieved explicitly.
 
-In Swarm, `topic` is any arbitrary 32-byte long array. This allows for the selection of a unique topic for each application, which along with someone's (or something's) address, allow for the feed to be discovered. Also, this can be the hash of a human-readable string, specifying the topic and optionally the subtopic of the feed. There is a helper function provided for that:
+* **No Overwriting**: Each index can be written only once. Updates are permanent.
+
+* **Feed Reading**: Readers resolve updates using the `owner` and `topic`. By default, if no index is specified they fetch the latest consecutively written index.
+
+* **Payloads**: Feed payloads include strings, JSON, or Swarm references. Payload size is limited to a single 4 KB chunk. 
+
+
+
+### Creating and Updating Feeds Using Topics
+
+This script demonstrates how to create two distinct feeds using different topics and update them using two methods: `uploadPayload()` and `upload()`.
+
+* **`upload()`**: Used for uploading references to other content on Swarm.
+* **`uploadPayload()`**: Directly stores an arbitrary data payload in the feed.
+
+Although it is possible to update feeds with an arbitrary data payload using `uploadPayload()`, for most use cases the content should be uploaded separately (such as with `bee.uploadFile()`), and the feed will be updated with the reference of that upload using the `upload()` method.
+
+The script below performs the following steps:
+
+1. Initializes the Bee client and derives the feed owner address from a private key.
+2. Uses the `uploadPayload()` method to upload a plain text string as a **payload update** to the feed with topic `"payload-update"`.
+3. Uploads the same string as a file to Swarm and obtains a reference.
+4. Uses the `upload()` method to upload the obtained reference as a **reference update** to the feed with topic `"reference-update"`.
 
 ```js
-const topic = bee.makeFeedTopic('my-dapp.eth/outbox')
+import { Bee, Topic, PrivateKey } from '@ethersphere/bee-js'
+
+const BEE_URL = 'http://localhost:1643'
+
+// Make sure to replace with a valid batch ID
+const POSTAGE_BATCH_ID = 'c119705f257c0015a062b17929e3ca3269e158231324707f2ea6e72c5c9f9b78'
+
+// Any Ethereum style private key can be used, ideally dedicated to this feed only. Using your node or wallet's key is strongly discouraged.
+const privateKey = new PrivateKey('0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef')
+const bee = new Bee(BEE_URL)
+const owner = privateKey.publicKey().address()
+
+// This owner address can be shared along with the topic to enable anyone to retrieve updates from the feed
+console.log('Feed owner address:')
+console.log(owner.toHex())
+
+async function run() {
+  const message = 'This is a test announcement.'
+  const topic1 = Topic.fromString('payload-update')
+
+  // The writer is constructed from the topic and private key, and can be used for writing feed updates (it also supports reading from feeds)
+  const writer1 = bee.makeFeedWriter(topic1, privateKey)
+
+  await writer1.uploadPayload(POSTAGE_BATCH_ID, message)
+  console.log('✅ First feed updated with payload.')
+
+  const result = await bee.uploadFile(POSTAGE_BATCH_ID, message, 'announcement.txt')
+  console.log(result)
+  console.log(result.reference.toHex())
+
+  // The second writer is constructed using a new topic and the same private key
+  const topic2 = Topic.fromString('reference-update')
+  const writer2 = bee.makeFeedWriter(topic2, privateKey)
+  await writer2.upload(POSTAGE_BATCH_ID, result.reference)
+  console.log('✅ Second feed updated with reference.')
+}
+
+run().catch(console.error)
 ```
 
-### High level JSON API
 
-Many applications are storing or manipulating data in JSON. bee-js has convenience high level API to use feeds with JSON objects.
-It consists of two methods:
+### Retrieving from Feeds by Topic and Owner
 
- - `setJsonFeed` method to set JSON compatible data to feed
- - `getJsonFeed` method to get JSON compatible data (and parse them) from feed
+This script demonstrates how to retrieve data from feeds using their `topic` and `owner`. There are two primary methods used for reading from feeds:
 
-:::info Bee's instance signer
-You can pass a `Signer` (or compatible data) into `Bee` class constructor, which then
-will be used as default `Signer`.
+* **`downloadPayload()`** – Used to read the raw payload written directly to the feed.
+* **`downloadReference()`** – Used to read a Swarm reference from the feed. The returned reference can then be passed to `downloadFile()` to retrieve the associated file.
+
+The script performs the following steps:
+
+1. Initializes the Bee client and derives the feed owner address from a private key.
+2. Reads the latest **payload update** from the feed with topic `"payload-update"` using `downloadPayload()`.
+3. Reads the latest **reference update** from the feed with topic `"reference-update"` using `downloadReference()`, then retrieves the associated file from Swarm using `downloadFile()`.
+
+Feed readers always require a topic and an owner address. By default, they fetch the latest *consecutively written* update. To retrieve a specific update, an explicit index can be provided.
+
+:::warning
+While not explicitly enforced, it is strongly recommended to use feeds in an append-only fashion. If instead non-consecutive updates are performed, the only way to discover updates at higher non-consecutively written indexes is to iterate one by one through all indexes up to the number of the index with the update.  
 :::
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
+import { Bee, Topic, PrivateKey } from '@ethersphere/bee-js'
 
-await bee.setJsonFeed(
-  postageBatchId,
-  'some cool arbitraty topic', 
-  { some: ['cool', { json: 'compatible' }, 'object']}, 
-  { signer: '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' }
-)
+const BEE_URL = 'http://localhost:1643'
 
-const data = await bee.getJsonFeed(
-  'some cool arbitraty topic', 
-  { signer: '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd' }
-)
+async function run() {
+  const bee = new Bee(BEE_URL)
+  const privateKey = new PrivateKey('0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef')
+  const owner = privateKey.publicKey().address()
 
-console.log(data)
-// Prints: { some: ['cool', { json: 'compatible' }, 'object']}
+  // Read from payload-update feed
+  const topic1 = Topic.fromString('payload-update')
+  const reader1 = bee.makeFeedReader(topic1, owner)
+
+  console.log('\n Reading latest update for feed: "payload-update"')
+
+  try {
+    const latest = await reader1.downloadPayload()
+    const text = latest.payload.toUtf8()
+
+    console.log('Message (as plain text):', text)
+    console.log('Feed index:', BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`))
+    console.log('Next index:', BigInt(`0x${Buffer.from(latest.feedIndexNext.bytes).toString('hex')}`))
+  } catch (error) {
+    console.warn('❌ Failed to read update:', error.message)
+  }
+
+  // Read from reference-update feed
+  const topic2 = Topic.fromString('reference-update')
+  const reader2 = bee.makeFeedReader(topic2, owner)
+
+  console.log('\n Reading latest update for feed: "reference-update"')
+
+  try {
+    const latest = await reader2.downloadReference()
+    const referenceHex = latest.reference.toHex()
+
+    console.log('Swarm reference (hex):', referenceHex)
+
+    const file = await bee.downloadFile(referenceHex)
+    console.log('Retrieved file content:', file.data.toUtf8())
+    console.log('Feed index:', BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`))
+    console.log('Next index:', BigInt(`0x${Buffer.from(latest.feedIndexNext.bytes).toString('hex')}`))
+  } catch (error) {
+    console.warn('❌ Failed to read update:', error.message)
+  }
+}
+
+run().catch(console.error)
 ```
 
-### Low level API
 
-Low level API is an API that is more flexible in its usage, but requires better understanding and mainly more method calls.
+### Using Feed Manifests for Persistent Access
 
-#### Reading feeds
+Feed manifests allow you to expose a feed through a **stable Swarm reference** that always resolves to the latest update. This is especially useful for hosting evolving content like websites or files, without needing to share a new Swarm reference each time content changes.
 
-To read data from a feed, we need to make a reader object for a specific `type`, `topic` and `owner`, then we can download the latest update containing a reference.
+With a manifest, you can:
+
+* Retrieve the **latest feed update** through a static `/bzz/<manifestReference>/` URL.
+* Share a single reference that always resolves to the **current content**.
+* Enable compatibility with public gateways and ENS domains.
+
+The script below performs the following steps:
+
+1. Initializes the Bee client and creates a feed manifest using a topic and owner.
+2. Checks the current feed index or starts from index 0.
+3. Uploads two updates to Swarm and stores their references in the feed at consecutive indices.
+4. After each update, retrieves the content using the same manifest reference, confirming it resolves to the latest.
+
+
 
 ```js
-const topic = '0000000000000000000000000000000000000000000000000000000000000000'
-const owner = '0x8d3766440f0d7b949a5e32995d09619a7f86e632'
-const feedReader = bee.makeFeedReader('sequence', topic, owner)
-const feedUpdate = await feedReader.download()
-console.log(feedUpdate.reference) // prints the latest reference stored in the feed
+import { Bee, Topic, PrivateKey, FeedIndex } from '@ethersphere/bee-js'
+
+const BEE_URL = 'http://localhost:1643'
+const POSTAGE_BATCH_ID = 'c119705f257c0015a062b17929e3ca3269e158231324707f2ea6e72c5c9f9b78'
+
+const bee = new Bee(BEE_URL)
+const privateKey = new PrivateKey('0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef')
+const owner = privateKey.publicKey().address()
+
+console.log('Feed owner:', owner.toHex())
+
+const topic = Topic.fromString('uploaded-reference-demo')
+const manifestReference = await bee.createFeedManifest(POSTAGE_BATCH_ID, topic, owner)
+console.log('\n Manifest created:')
+console.log('Ref:', manifestReference.toString())
+console.log('URL:', `${BEE_URL}/bzz/${manifestReference.toString()}/`)
+
+const reader = bee.makeFeedReader(topic, owner)
+let index
+try {
+  const latest = await reader.download()
+  index = latest.feedIndexNext
+  const latestIndex = BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`)
+  console.log(`\n Latest index: ${latestIndex}`)
+} catch {
+  index = FeedIndex.fromBigInt(0n)
+  console.log('\n No updates yet. Starting at index 0')
+}
+
+for (let i = 0; i < 2; i++) {
+  const content = `Update ${BigInt(`0x${Buffer.from(index.bytes).toString('hex')}`)}`
+  const upload = await bee.uploadFile(POSTAGE_BATCH_ID, content, `update-${i}.txt`)
+  const writer = bee.makeFeedWriter(topic, privateKey)
+  await writer.upload(POSTAGE_BATCH_ID, upload.reference, { index })
+
+  console.log(`\n✅ Updated to index ${BigInt(`0x${Buffer.from(index.bytes).toString('hex')}`)}: "${content}"`)
+
+  const result = await bee.downloadFile(manifestReference)
+  console.log(` Retrieved via manifest: "${result.data.toUtf8()}"`)
+  console.log(`URL: ${BEE_URL}/bzz/${manifestReference.toString()}/`)
+
+  index = index.next()
+}
 ```
 
-#### Writing feeds
 
-When writing a feed, typically an immutable content is uploaded first, and then its reference is updated in the feed. The `signer` here is the same as with [writing the SOCs](#writing-socs) (with the same caveats!).
+### Non-Sequential Feed Updates (Discouraged)
+
+Although feeds are typically updated in a sequential, append-only manner, it is possible to manually write to a specific index using the `index` option. However, only the **highest consecutively filled index** is considered the latest. Any gaps will result in newer updates at higher indices being ignored when resolving the latest feed content. 
+
+For example:
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
-const data = new Uint8Array([1, 2, 3])
-const reference = await bee.uploadData(data)
-const topic = '0000000000000000000000000000000000000000000000000000000000000000'
-const signer = '0x634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd'
-const feedWriter = bee.makeFeedWriter('sequence', topic, signer)
-const response = await feedWriter.upload(postageBatchId, reference)
+await writer.uploadPayload(POSTAGE_BATCH_ID, 'Initial update') // Goes to index 0
+await writer.uploadPayload(POSTAGE_BATCH_ID, 'Out-of-order update', { index: 5 })
 ```
 
-### Using feed manifest
-
-One of the most common use cases for feeds is to store mutable data in an immutable address. For example, when hosting a website on Swarm, we may want its address stored in ENS, but we don't want to pay for changing the reference every time the site is updated.
-
-Swarm provides a feature called "feed manifests" for this use case. It is a content-addressed chunk that stores a feed's definition (the `type`, the `topic`, and the `owner`). When it is looked up using the `bzz` endpoint, Swarm recognizes that it refers to a feed and continues the lookup according to the feed parameters.
+Now, attempting to read the latest update without specifying an index will still return the update at index 0:
 
 ```js
-const postageBatchId = await bee.createPostageBatch("100", 17)
-const topic = '0000000000000000000000000000000000000000000000000000000000000000'
-const owner = '0x8d3766440f0d7b949a5e32995d09619a7f86e632'
-const reference = bee.createFeedManifest(postageBatchId, 'sequence', topic, owner)
+const latest = await reader.downloadPayload()
+console.log(latest.payload.toUtf8())
+// → "Initial update"
 ```
 
-This creates the feed manifest chunk on Swarm. You can use the returned reference to look up with the `/bzz` endpoint or use it with ENS.
+To read the out-of-order update at index 5, you must explicitly specify it:
+
+```js
+const manual = await reader.downloadPayload({ index: 5 })
+console.log(manual.payload.toUtf8())
+// → "Out-of-order update"
+```
+
+:::caution
+Manually writing to skipped indices is supported but not recommended. It is recommended to use the default behavior when performing feed updates (no `index` specified) to maintain a clean, append-only feed history and ensure new updates are easily discoverable.
+:::

@@ -17,7 +17,7 @@ module.exports = {
         'documentation/pss',
         'documentation/gsoc',
         'documentation/soc-and-feeds',
-        // 'documentation/act',
+        'documentation/act',
         // 'documentation/manifests',
         
         
