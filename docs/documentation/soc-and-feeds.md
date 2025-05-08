@@ -308,7 +308,7 @@ run().catch(console.error)
 ```
 
 
-### Using Feed Manifests for Persistent Access
+### Using Feed Manifests for Fixed References
 
 Feed manifests allow you to expose a feed through a **stable Swarm reference** that always resolves to the latest update. This is especially useful for hosting evolving content like websites or files, without needing to share a new Swarm reference each time content changes.
 

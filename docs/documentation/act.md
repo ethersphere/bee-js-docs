@@ -5,17 +5,6 @@ slug: /act
 sidebar_label: ACT
 ---
 
-## 🚧 Under Construction 🚧
-:::caution 🚧 This page is under construction
-
-This section is still being worked on. Check back soon for updates!
-
-:::
-
-* Show example of creating grantee list
-* Show example of secure upload
-* Show example of secure download
-
 ACT, or Access Control Trie, is a decentralized permission system built into the Swarm network that allows you to restrict access to uploaded content.
 
 When you upload data to Swarm using ACT, only the original uploader and users with public keys listed in an associated grantee list are able to retrieve and decrypt that data. The grantee list is published separately and cryptographically referenced during upload and download operations.
