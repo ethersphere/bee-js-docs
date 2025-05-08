@@ -19,11 +19,19 @@ Updating the grantees list to remove a public key ***will not revoke access*** t
 Likewise, re-uploading the content using the new grantees list will also ***not retroactively revoke access*** to the content.
 :::
 
+## Requirements
+The use of ACT requires the following:
+
+* A Bee light node running on with synced postage batch data. (Running at `http://localhost:1633` by default)
+* A valid postage batch ID. [Buy one](/docs/storage/#purchasing-storage) if needed.
+* Public keys of the nodes you want to grant access to.
+* The **public key of the publishing node**. This can be obtained using the [`bee.getNodeAddresses()` method](/docs/status/#3-get-node-addresses).
+
 ## Create Grantees List
 
 First we create a grantees list with the public keys of anyone we want to grant access to.
 
-### Example Script
+#### Example Script:
 
 The example script below performs the following key operations:
 
@@ -98,7 +106,7 @@ bee.patchGrantees(postageBatchId, ref, historyref, {
 
 Calling this method returns the new list’s updated `ref` and `historyref`, which you should use for future updates or access. 
 
-### Example Script
+#### Example Script:
 
 The example script below performs the following key steps:
 
@@ -167,7 +175,7 @@ In order to view the members of our grantees list we need to use the 64 byte `re
 The grantee list is encrypted, and only the owner can view the grantee list, make sure to use the owner node when using the `bee.getGrantees()` method.
 :::
 
-### Example Script
+#### Example Script:
 
 The example script below performs the following operations:
 
@@ -236,7 +244,7 @@ The first list of grantees contains the first public key we gave access to when 
 
 We can upload our content with either of the two lists we created depending on which set of users we wish to give access too. In the example below, we use both lists.
 
-### Example Script
+#### Example Script:
 
 The example script below performs the following operations:
 
@@ -307,7 +315,7 @@ You can choose which `historyref` to share depending on which set of public keys
 
 In order to download using ACT, we must pass in the public key from the grantee list creator along with the file reference and history reference returned from the file upload operation:
 
-### Example Script
+#### Example Script:
 
 The example script below performs the following operations:
 

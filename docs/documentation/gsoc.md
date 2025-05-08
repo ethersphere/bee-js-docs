@@ -6,7 +6,7 @@ sidebar_label: GSOC
 ---
 
 
-The GSOC (Graffiti Several Owner Chunk) feature allows a **full node** to receive messages from many other nodes using a shared Single Owner Chunk (SOC). This enables real-time communication and notification over Swarm.
+The GSOC (Graffiti Several Owner Chunk) feature allows a **full node** to receive messages from many other nodes using a shared Single Owner Chunk (SOC). This enables real-time messaging over Swarm.
 
 ## Overview
 

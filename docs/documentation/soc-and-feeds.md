@@ -13,6 +13,15 @@ Swarm provides the ability to store content in content-addressed [chunks](https:
 
 Feeds are a unique feature of Swarm which simulate the publishing of mutable content on Swarm's immutable storage. ***Feeds constitute the primary use case for SOCs.*** Developers can use Feeds to version revisions of a mutable resource by indexing sequential updates to a topic at predictably calculated addresses. Because Feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
 
+
+## Requirements
+
+Interactions with SOC and feeds requires the following:
+
+* A fully initialized Bee light node running with fully synced postage batch data. (Running at `http://localhost:1633` by default)
+* A valid postage batch ID.
+* An Ethereum-compatible private key to sign updates. Using your node or blockchain account wallet's private key is strongly discouraged. Using a dedicated key for SOC / feeds is recommended. 
+
 ## Single Owner Chunks
 
 Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
