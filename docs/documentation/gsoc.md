@@ -34,7 +34,7 @@ To use the example scripts below, you need:
 
 Identifiers in GSOC are similar to topics in PSS — they define the stream of messages a receiver node is subscribed to. The sender must use the same identifier so that their messages are received.
 
-Each identifier is a 64-digit hex string (32 bytes). It can be initialized with an a hex string of your choice or any arbitrary string using the `Identifier` utility class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
+Each identifier is a 32 byte (64-digit) hex string. It can be initialized with a 32 byte hex string of your choice or can be created from any arbitrary string using the `Identifier` utility class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
 
 
 ```js
@@ -136,7 +136,7 @@ async function sendMessage() {
   // The signer is initialized using the overlay address and identifier shared by the receiving node 
   const signer = bee.gsocMine(recipientOverlay, identifier)
 
-  // bee.gsocSend is called with the batch id, initialized signer, identifier, and message payload in order to send a GSOC message
+  // bee.gsocSend() is called with the batch id, initialized signer, identifier, and message payload in order to send a GSOC message
   await bee.gsocSend(batchId, signer, identifier, 'Hello via GSOC!')
   console.log('Message sent')
 }

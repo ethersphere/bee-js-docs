@@ -70,8 +70,8 @@ The sender (which can be a light node or a full node) needs the **overlay addres
 You can listen on a topic using both **continuous subscription** and **one-time receive**:
 
 
-- `bee.pssSubscribe` is used to set up a continuous subscription.
-- `bee.pssReceive` is used to set up a listener on a timeout which closes after receiving a message.
+- `bee.pssSubscribe()` is used to set up a continuous subscription.
+- `bee.pssReceive()` is used to set up a listener on a timeout which closes after receiving a message.
 
 ```js
 import { Bee, Topic } from '@ethersphere/bee-js'
@@ -103,7 +103,7 @@ async function receiveOnce() {
 receiveOnce()
 ```
 
-In this script we generate a `topic` from our chosen string with the `Topic.fromString` method. Then we subscribe to listen for incoming pss messages for that topic with the `bee.pssSubscribe` method, and we also set up a listener for receiving a single message with the `bee.pssReceive` method. When a chunk with a PSS message for that topic is synced into our node's neighborhood, it will be received and handled by our node with the `onMessage` callback function when using the `bee.pssSubscribe` or through the return value of the `bee.pssReceive` method in our `receiveOnce` function.
+In this script we generate a `topic` from our chosen string with the `Topic.fromString()` method. Then we subscribe to listen for incoming pss messages for that topic with the `bee.pssSubscribe()` method, and we also set up a listener for receiving a single message with the `bee.pssReceive()` method. When a chunk with a PSS message for that topic is synced into our node's neighborhood, it will be received and handled by our node with the `onMessage` callback function when using the `bee.pssSubscribe()` or through the return value of the `bee.pssReceive()` method in our `receiveOnce` function.
 
 ## Send Message (Light or Full Node)
 
