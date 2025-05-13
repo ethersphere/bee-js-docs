@@ -129,8 +129,8 @@ Progress (Tag 85):
 Progress (Tag 85):
  - Total split: 1078
  - Stored: 0
- - Seen: 532
- - Synced: 546
+ - Seen: 0
+ - Synced: 1078
 Upload fully synced!
 ```
 
