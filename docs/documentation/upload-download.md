@@ -324,5 +324,5 @@ await bee.uploadData(postageBatchId, 'data', { deferred: false })
 ```
 
 :::tip
-If you do use `deferred: true`, make sure to use a [tag](/docs/upload-download/#using-tags-to-monitor-upload-progress) to track upload progress and confirm the success or failure of the upload.
+If you do use `deferred: true`, make sure to use a [tag](/docs/tracking-uploads/) to track upload progress and confirm the success of the upload.
 :::

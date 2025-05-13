@@ -5,7 +5,9 @@ slug: /pinning
 sidebar_label: Pinning
 ---
 
-Pinning allows you to guarantee that your uploaded content will always be available by storing it **locally on your own Bee node**. However, pinning **guarantee availability across the Swarm network**. Therefore you must use pinning along with the **stewardship utilities** included in `bee-js` to monitor the availability of your pinned content and reupload it if needed.
+Pinning allows you to guarantee that content will always be available by storing it **locally on your own Bee node**. 
+
+However, pinning ***does not*** guarantee availability across the Swarm network. Therefore you must use pinning along with the **stewardship utilities** included in `bee-js` to monitor the availability of your pinned content and reupload it if needed.
 
 In this section, you'll learn how to:
 
@@ -14,8 +16,6 @@ In this section, you'll learn how to:
 - Reupload missing content
 - View all currently pinned references
 - Remove pins that are no longer required
-
-
 
 ## Pinning and Unpinning Content
 
@@ -32,7 +32,6 @@ To stop tracking and remove it from local pin storage:
 await bee.unpin(reference)
 console.log('Reference unpinned and no longer tracked.')
 ```
-
 
 ## Checking if a Reference is Retrievable
 
@@ -72,16 +71,6 @@ To check if a specific reference is pinned:
 const pinStatus = await bee.getPin(reference)
 console.log('Pin info:', pinStatus)
 ```
-
-## Deleting a Tag After Use
-
-Once you’re done tracking an upload, you can delete the tag to keep your node clean:
-
-```js
-await bee.deleteTag(tag.uid)
-console.log("Deleted tag:", tag.uid)
-```
-
 
 ## Example Script
 

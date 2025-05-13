@@ -9,7 +9,7 @@ sidebar_label: SOC and Feeds
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-Swarm provides the ability to store content in content-addressed [chunks](https://docs.ethswarm.org/docs/concepts/DISC/#content-addressed-chunks-and-single-owner-chunks) (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's own public key and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
+Swarm provides the ability to store content in content-addressed [chunks](https://docs.ethswarm.org/docs/concepts/DISC/#content-addressed-chunks-and-single-owner-chunks) (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's address and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
 
 Feeds are a unique feature of Swarm which simulate the publishing of mutable content on Swarm's immutable storage. ***Feeds constitute the primary use case for SOCs.*** Developers can use Feeds to version revisions of a mutable resource by indexing sequential updates to a topic at predictably calculated addresses. Because Feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
 
@@ -31,7 +31,7 @@ SOCs are powerful and flexible low-level feature which provide the foundation up
 :::
 
 :::warning SOCs are immutable!
-You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of an SOC is forbidden in Swarm as it might create uncertain behavior. A Bee node will reject the API call if it finds an already existing SOC for the given address. Either use a different `identifier`, or you might be looking for feeds if you need to perform multiple updates to the same content.
+You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of an SOC is discouraged as its behavior is undefined. Either use a different `identifier`, or you might be looking for feeds if you need to perform multiple updates to the same content.
 :::
 
 ### Uploading SOCs

@@ -20,7 +20,7 @@ However, there are several key differences:
 
 - Unlike PSS, **GSOC only needs to mine the target chunk once**—multiple messages reuse it, making it **faster, cheaper**, and **more efficient** for recurring updates.
 - Unlike PSS, **No encryption** is used by default, making it unsuitable for handling sensitive data.
-
+- Unlike PSS, **GSOC chunks are not meant to be retrieved directly**. The SOC used to initiate a GSOC connection is used to listen for incoming messages only, the chunk itself is not meant to be retrieved since the incoming messages are not actually used to update the SOC since double-signing an SOC is undefined behavior.  
 
 ## Requirements
 

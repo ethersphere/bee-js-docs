@@ -5,7 +5,13 @@ slug: /tracking-uploads
 sidebar_label: Tracking Uploads
 ---
 
-You can track the progress of your uploads using "tags". Each tag tracks how many chunks were **split**, **stored**, **seen**, and **synced** by the network. By creating a tag before uploading and passing it to the upload function, you make the upload *trackable, allowing you to confirm whether your uploaded data has been fully synced.
+You can track the progress of deferred uploads using "tags". Each tag tracks how many chunks were **split**, **stored**, **seen**, and **synced** by the network. By creating a tag before uploading and passing it to the upload function, you make the upload *trackable, allowing you to confirm whether your uploaded data has been fully synced.
+
+:::info
+Tracking with tags is used ***only for [deferred uploads](/docs/upload-download/#deferred-uploads)***. That is because when content is uploaded in a deferred manner, the content's reference hash will be returned *immediately*, often before the content has been fully synced to the network. Therefore tags should be used in order to confirm when the content has been fully synced and is retrievable. 
+
+With direct uploads, the reference hash is not returned until after the content has already been uploaded and fully synced to the network, so there is no need to track it after uploading.
+:::
 
 ## How It Works
 
@@ -43,12 +49,19 @@ This links the upload to your tag so you can monitor its progress.
 
 ### 3. Track Tag Progress
 
-Use `bee.retrieveTag(tagUid)` to check how many chunks have been split and how many are synced. Poll repeatedly until `synced === split` to know when the upload has fully propagated.
+Use `bee.retrieveTag(tagUid)` to monitor upload progress. Chunks that have **already been synced in the past** are counted in `seen`, while newly synced ones are in `synced`. Poll repeatedly until:
+
+```text
+synced + seen === split
+```
+
+This indicates that all chunks have either just synced or were already present in the network.
 
 ```js
 const tag = await bee.retrieveTag(tagUid)
 console.log(` - Total split: ${tag.split}`)
 console.log(` - Synced: ${tag.synced}`)
+console.log(` - Seen: ${tag.seen}`)
 ```
 
 ## Example Script
@@ -70,7 +83,7 @@ async function waitForTagSync(tagUid, interval = 800) {
     console.log(` - Seen: ${tag.seen}`)
     console.log(` - Synced: ${tag.synced}`)
 
-    if (tag.split > 0 && tag.synced >= tag.split) {
+    if (tag.split > 0 && tag.synced + tag.seen >= tag.split) {
       console.log("Upload fully synced!")
       break
     }
@@ -102,7 +115,8 @@ async function uploadNodesJsonWithTag() {
 uploadNodesJsonWithTag()
 ```
 
-Example terminal output:
+
+### Example Terminal Output
 
 ```bash
 Created new tag with UID: 85
@@ -115,10 +129,11 @@ Progress (Tag 85):
 Progress (Tag 85):
  - Total split: 1078
  - Stored: 0
- - Seen: 0
- - Synced: 1078
+ - Seen: 532
+ - Synced: 546
 Upload fully synced!
 ```
+
 
 ## Deleting Tags
 
@@ -133,3 +148,4 @@ console.log("Deleted tag:", tag.uid)
 
 - [Bee docs – Syncing / Tags](https://docs.ethswarm.org/docs/develop/access-the-swarm/syncing)  
 - [Bee API Reference – `/tags`](https://docs.ethswarm.org/api/#tag/Tag)
+
