@@ -9,6 +9,10 @@ sidebar_label: Introduction
 
 The following documentation will guide you through installing and using `bee-js`. Take your first steps with `bee-js` in the [Getting Started section](./getting-started).
 
+:::info Note on Ethereum addresses
+Ethereum addresses / keys are mentioned throughout the documentation. Please not that this refers to the Ethereum format only, and does not indicate the Ethereum blockchain itself. Swarm is built on the Gnosis Blockchain which is a fork of Ethereum, and uses the same key and addressing schemes.
+:::
+
 ## Development
 
 We'd love you to join us! Are you up to the challenge of helping us to create bee-js and the other incredible technologies we're building? Have a look at our Github -  [Ethersphere](https://github.com/ethersphere).

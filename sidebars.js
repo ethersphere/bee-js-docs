@@ -11,13 +11,17 @@ module.exports = {
         'documentation/chequebook',
         'documentation/storage',
         'documentation/upload-download',
-        // 'documentation/pinning',
-        // 'documentation/staking',
+        'documentation/tracking-uploads',
+        'documentation/pinning',
+        'documentation/staking',
+        'documentation/pss',
+        'documentation/gsoc',
+        'documentation/soc-and-feeds',
+        'documentation/act',
         // 'documentation/manifests',
-        // 'documentation/soc-and-feeds',
-        // 'documentation/pss',
-        // 'documentation/gsoc',
-        // 'documentation/act',
+        
+        
+  
         'documentation/utilities',
       ],
       collapsed: false
