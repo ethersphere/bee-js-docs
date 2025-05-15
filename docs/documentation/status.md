@@ -5,13 +5,13 @@ slug: /status
 sidebar_label: Checking Node Status
 ---
 
-To understand and monitor the status of your Bee node, `bee-js` provides a set of helpful methods. In this guide, we'll walk through how to retrieve and log the data needed to give a complete overview of your node's current status.
+To understand and monitor the status of your Bee node, bee-js provides a set of helpful methods. In this guide, we'll walk through how to retrieve and log the data needed to give a complete overview of your node's current status.
 
 ### Requirements
 
 To use the example scripts below, you need:
 
-- An instance of the `Bee` class from `bee-js` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node. 
+- An instance of the `Bee` class from bee-js [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node. 
 
 
 ### 1. Node Health and Readiness
@@ -124,7 +124,7 @@ Underlay: [
 
 ### 4. Get Version and API Compatibility
 
-Use these methods to check your node's version number and the API version number, and to check whether the API version is supported by `bee-js`.
+Use these methods to check your node's version number and the API version number, and to check whether the API version is supported by bee-js.
 
 ```js
 import { Bee } from '@ethersphere/bee-js'

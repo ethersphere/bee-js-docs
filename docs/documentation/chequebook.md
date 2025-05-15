@@ -17,7 +17,7 @@ If using your node for downloads, it's recommended to actively monitor your node
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating ***FULL*** Bee node.
+- An instance of bee-js's `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating ***FULL*** Bee node.
 - Some BZZ to fund your chequebook.
 
 ### 1. Deposit to Chequebook from Node Wallet

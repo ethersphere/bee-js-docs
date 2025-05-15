@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Bee JS Library",
+  title: "bee-js Library",
   tagline: "Welcome to the Swarm",
   // note! we use SED to change this during automated builds, see ./.github/workflows/gh-pages.yml
   url: "https://bee-js.ethswarm.org",
@@ -18,7 +18,7 @@ module.exports = {
       defaultMode: "dark",
     },
     navbar: {
-      title: "Bee Js Documentation",
+      title: "bee-js Documentation",
       logo: {
         alt: "Swarm Logo",
         src: "img/swarm-logo-2.svg",
@@ -56,8 +56,8 @@ module.exports = {
               href: "https://www.reddit.com/r/ethswarm",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/ethswarm",
+              label: "X",
+              href: "https://x.com/ethswarm",
             },
           ],
         },

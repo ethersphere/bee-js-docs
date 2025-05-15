@@ -5,7 +5,7 @@ slug: /overview
 sidebar_label: SDK Overview
 ---
 
-This page serves as a complete reference to all publicly available classes, methods, types, and utilities provided by the `bee-js` SDK. After getting started, this is the place to explore everything you can do with `bee-js` and revisit whenever you need a reminder of how a function works or what a type represents.
+This page serves as a complete reference to all publicly available classes, methods, types, and utilities provided by the bee-js SDK. After getting started, this is the place to explore everything you can do with bee-js and revisit whenever you need a reminder of how a function works or what a type represents.
 
 ### Type interfaces
 
@@ -75,7 +75,7 @@ The `toString` method uses `toHex`.
 
 ### Bee API
 
-Each `bee-js` method corresponds to a particular endpoint from the API. The chart below maps each method to its corresponding API endpoint. Refer to the [Bee API specifications](https://docs.ethswarm.org/api/) for more details about each endpoint. It also specifies which [node type](https://docs.ethswarm.org/docs/bee/working-with-bee/node-types) is supported for each method/endpoint.
+Each bee-js method corresponds to a particular endpoint from the API. The chart below maps each method to its corresponding API endpoint. Refer to the [Bee API specifications](https://docs.ethswarm.org/api/) for more details about each endpoint. It also specifies which [node type](https://docs.ethswarm.org/docs/bee/working-with-bee/node-types) is supported for each method/endpoint.
 
 - ❌❌✅ - Full node only
 - ❌✅✅ - Light node and full node

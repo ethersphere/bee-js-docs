@@ -4,11 +4,11 @@ id: utilities
 slug: /utilities
 sidebar_label: Utility Classes
 ---
-`bee-js` includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
+bee-js includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
 
 ## *Bytes* - Data Conversions & Manipulation
 
-The `Bytes` class in `bee-js` provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. It’s used throughout `bee-js` as the basis for other utility classes like `Signature`, `Reference`, `PrivateKey`, and more, all of which extend the `Bytes` class.
+The `Bytes` class in bee-js provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. It’s used throughout bee-js as the basis for other utility classes like `Signature`, `Reference`, `PrivateKey`, and more, all of which extend the `Bytes` class.
 
 It is also a **core data type** used throughout the SDK as expected input/returned data type for various methods.
 

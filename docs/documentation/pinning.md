@@ -7,7 +7,7 @@ sidebar_label: Pinning
 
 Pinning allows you to guarantee that content will always be available by storing it **locally on your own Bee node**. 
 
-However, pinning ***does not*** guarantee availability across the Swarm network. Therefore you must use pinning along with the **stewardship utilities** included in `bee-js` to monitor the availability of your pinned content and reupload it if needed.
+However, pinning ***does not*** guarantee availability across the Swarm network. Therefore you must use pinning along with the **stewardship utilities** included in bee-js to monitor the availability of your pinned content and reupload it if needed.
 
 In this section, you'll learn how to:
 

@@ -31,7 +31,7 @@ Storage on Swarm is rented by purchasing "postage stamp batches". Each batch ent
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node 
+- An instance of bee-js's `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node 
 
 ### Checking Storage Costs 
 
@@ -368,7 +368,7 @@ Note that although 1 GB was specified as input for the `bee.buyStorage`, the `si
 
 ### Selecting a Batch
 
-Any method in `bee-js` which writes data to Swarm requires the batch id of a valid, usable postage batch with remaining space to upload data. 
+Any method in bee-js which writes data to Swarm requires the batch id of a valid, usable postage batch with remaining space to upload data. 
 
 The example script below exports a function which looks for the first usable postage batch with remaining space and returns the id of the batch. 
 
@@ -430,9 +430,9 @@ As the effective volume increases, so does the discount percentage, which eventu
 | 7                  | 1.00 TB          | 0.021                  | 68%         |
 | 8                  | 2.06 TB          | 0.021                  | 68%         |
 
-When purchasing a batch / estimating batch price, `bee-js` will round up to the nearest effective volume.
+When purchasing a batch / estimating batch price, bee-js will round up to the nearest effective volume.
 
-For example, if the `bee.buyStorage` method is used to buy a batch with 1 GB as input, `bee-js` will round up to the first breakpoint and buy a batch with 4.93 GB effective volume. If 5 GB is used as input, then `bee-js` will round up to the second breakpoint of 17.03 GB since 5 GB is larger than the first breakpoint of 4.93 GB.  
+For example, if the `bee.buyStorage` method is used to buy a batch with 1 GB as input, bee-js will round up to the first breakpoint and buy a batch with 4.93 GB effective volume. If 5 GB is used as input, then bee-js will round up to the second breakpoint of 17.03 GB since 5 GB is larger than the first breakpoint of 4.93 GB.  
 
 Refer to the [Bee documentation](https://docs.ethswarm.org/docs/concepts/incentives/postage-stamps#effective-utilisation-table) for a more in-depth understanding of batch utilization.
 

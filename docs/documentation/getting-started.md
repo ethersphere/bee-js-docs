@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem'
 
 ## About *bee-js* 
 
-`bee-js` simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle. It's the easiest way to get started developing on Swarm.
+bee-js simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle. It's the easiest way to get started developing on Swarm.
 
 ## Installation 
 
@@ -64,7 +64,7 @@ You can find out more about running Bee node in the [Bee docs](https://docs.eths
 
 :::tip Using `<script>` import
 
-If you include `bee-js` using the `unpkg.com` script link then all the exported components will be available to you
+If you include bee-js using the `unpkg.com` script link then all the exported components will be available to you
 under global namespace `BeeJs`:
 
 ```html
@@ -78,15 +78,15 @@ under global namespace `BeeJs`:
 
 ## Quickstart With *create-swarm-app*
 
-The `create-swarm-app` tool makes it easy to get started developing on Swarm. With a single command, it generates the basic scaffolding for a `bee-js` project in your chosen development environment (CommonJS, ESM, TypeScript, or Vite + TypeScript).
+The `create-swarm-app` tool makes it easy to get started developing on Swarm. With a single command, it generates the basic scaffolding for a bee-js project in your chosen development environment (CommonJS, ESM, TypeScript, or Vite + TypeScript).
 
 :::note WSL WARNING
 The `create-swarm-app` tool is compatible with Windows, macOS, and Linux. However, using it in combination with [WSL](https://learn.microsoft.com/en-us/windows/wsl/) is discouraged due to potential compatibility issues that may require additional troubleshooting.
 
-That said, the `bee-js` library itself works seamlessly within WSL. If you prefer to develop your project using WSL, you can use `create-swarm-app` to generate the project files on the Windows side, then move them into your WSL environment for development.
+That said, the bee-js library itself works seamlessly within WSL. If you prefer to develop your project using WSL, you can use `create-swarm-app` to generate the project files on the Windows side, then move them into your WSL environment for development.
 :::
 
-You can use [`create-swarm-app`](https://www.npmjs.com/package/create-swarm-app) to quickly set up scaffolding for a `bee-js` project with the following command:
+You can use [`create-swarm-app`](https://www.npmjs.com/package/create-swarm-app) to quickly set up scaffolding for a bee-js project with the following command:
 
 ```bash
 npm init swarm-app@latest app-name app-type

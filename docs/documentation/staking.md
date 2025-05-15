@@ -6,7 +6,7 @@ sidebar_label: Staking
 ---
 
 
-Operating a Bee full node and staking BZZ makes you eligible to participate in the redistribution game — a mechanism for earning additional BZZ through by sharing disk space with the Swarm network. This guide shows how to use `bee-js` to deposit stake and check your node's staking status.
+Operating a Bee full node and staking BZZ makes you eligible to participate in the redistribution game — a mechanism for earning additional BZZ through by sharing disk space with the Swarm network. This guide shows how to use bee-js to deposit stake and check your node's staking status.
 
 
 :::danger
@@ -15,7 +15,7 @@ Operating a Bee full node and staking BZZ makes you eligible to participate in t
 
 
 :::info
-Currently, `bee-js` supports depositing stake and checking staking status, but does **not yet support** advanced features like [partial stake withdrawals](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#partial-stake-withdrawals) or [reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling).
+Currently, bee-js supports depositing stake and checking staking status, but does **not yet support** advanced features like [partial stake withdrawals](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#partial-stake-withdrawals) or [reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling).
 
 
 For a complete guide to the requirements and configuration for staking, refer to the [Bee documentation](https://docs.ethswarm.org/docs/bee/working-with-bee/staking).
@@ -27,7 +27,7 @@ For a complete guide to the requirements and configuration for staking, refer to
 
 ## Stake BZZ
 
-To stake, use the `depositStake` method provided by `bee-js`. It accepts a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from decimal string to PLUR.
+To stake, use the `depositStake` method provided by bee-js. It accepts a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from decimal string to PLUR.
 
 ```js
 import { Bee, BZZ } from '@ethersphere/bee-js'

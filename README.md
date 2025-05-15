@@ -1,6 +1,6 @@
-# Bee JS Documentation Website
+# bee-js Documentation Website
 
-Documentation for the [Swarm Bee-js javascript library](https://github.com/ethersphere/bee-js). View at [bee-js.ethswarm.org](https://bee-js.ethswarm.org).
+Documentation for the [Swarm bee-js javascript library](https://github.com/ethersphere/bee-js). View at [bee-js.ethswarm.org](https://bee-js.ethswarm.org).
 
 ### Node Version
 

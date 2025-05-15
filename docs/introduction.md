@@ -1,13 +1,13 @@
 ---
 id: introduction
 slug: /
-title: "Bee JS - The Swarm JS Library"
+title: "bee-js - The Swarm JS Library"
 sidebar_label: Introduction
 ---
 
-`bee-js` is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network. It allows you to interact with a local or remote [Bee node](https://docs.ethswarm.org/docs/) within your NodeJS project.
+**bee-js** is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network. It allows you to interact with a local or remote [Bee node](https://docs.ethswarm.org/docs/) within your NodeJS project.
 
-The following documentation will guide you through installing and using `bee-js`. Take your first steps with `bee-js` in the [Getting Started section](./getting-started).
+The following documentation will guide you through installing and using bee-js. Take your first steps with bee-js in the [Getting Started section](./getting-started).
 
 :::info Note on Ethereum addresses
 Ethereum addresses / keys are mentioned throughout the documentation. Please not that this refers to the Ethereum format only, and does not indicate the Ethereum blockchain itself. Swarm is built on the Gnosis Blockchain which is a fork of Ethereum, and uses the same key and addressing schemes.
@@ -23,7 +23,7 @@ There is a vibrant and buzzing community behind Swarm, get involved in one of ou
 
 - [Official Swarm website](https://ethswarm.org)
 - [Discord room](https://discord.gg/ykCupZMuww)
-- [Twitter @ethswarm](https://twitter.com/ethswarm)
+- [X @ethswarm](https://x.com/ethswarm)
 - [Reddit channel](https://www.reddit.com/r/ethswarm/)
 
 ## Reporting a bug

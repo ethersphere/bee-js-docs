@@ -24,7 +24,7 @@ Interactions with SOC and feeds requires the following:
 
 ## Single Owner Chunks
 
-Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
+bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
 
 :::info
 SOCs are powerful and flexible low-level feature which provide the foundation upon which higher level abstractions such as [GSOC](/docs/gsoc/) and [feeds](/docs/soc-and-feeds/#feeds) are built. For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
@@ -117,7 +117,7 @@ The `identifier` and Ethereum address together determine the SOC address and mus
 
 To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
 
-To download a SOC in Bee-JS, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
+To download a SOC in bee-js, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
 
 :::info SOC address is derived from the identifier and owner
 Unlike uploads using content addressed chunks which are retrieved by their Swarm reference hash, SOCs are retrieved using the combination of `identifier` and `owner`, not their Swarm reference hash.

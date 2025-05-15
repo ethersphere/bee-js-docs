@@ -13,14 +13,14 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 
-Uploading and downloading with Swarm is easy with `bee-js`. Based on your needs you can either upload unstructured data directly, single files, lists of files, or entire directories. Each upload will return a Swarm reference hash, which is a unique identifier for the upload that can be used to download the uploaded content. 
+Uploading and downloading with Swarm is easy with bee-js. Based on your needs you can either upload unstructured data directly, single files, lists of files, or entire directories. Each upload will return a Swarm reference hash, which is a unique identifier for the upload that can be used to download the uploaded content. 
 
 
 ## Requirements
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) as `bee` using the API endpoint of a currently operating Bee node.
+- An instance of bee-js's `Bee` [initialized](/docs/getting-started/) as `bee` using the API endpoint of a currently operating Bee node.
 - The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
 
 
@@ -35,7 +35,7 @@ When you download data the return type is `Bytes`. The `Bytes` class includes va
  - `toJSON()` that converts the bytes into JSON object
 
 :::info
-The `Bytes` class is a core data type in `bee-js`. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](/docs/utilities/) page.
+The `Bytes` class is a core data type in bee-js. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](/docs/utilities/) page.
 :::
 
 ```js
@@ -287,7 +287,7 @@ You can enable **client-side encryption** by setting `encrypt: true`. This encry
 await bee.uploadData(postageBatchId, 'sensitive content', { encrypt: true })
 ```
 
-When you later download the content, `bee-js` will decrypt it automatically if the reference contains the embedded key.
+When you later download the content, bee-js will decrypt it automatically if the reference contains the embedded key.
 
 More info:
 - [Store with Encryption](https://docs.ethswarm.org/docs/develop/access-the-swarm/store-with-encryption)
