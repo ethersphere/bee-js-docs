@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / SWARM\_GATEWAY\_URL
-
 # Variable: SWARM\_GATEWAY\_URL
 
 > `const` **SWARM\_GATEWAY\_URL**: `"https://api.gateway.ethswarm.org"` = `'https://api.gateway.ethswarm.org'`

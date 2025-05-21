@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / HookCallback
-
 # Type Alias: HookCallback()\<V\>
 
 > **HookCallback**\<`V`\> = (`value`) => `void` \| `Promise`\<`void`\>

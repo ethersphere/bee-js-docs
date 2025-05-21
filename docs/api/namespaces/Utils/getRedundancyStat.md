@@ -1,7 +1,3 @@
-[**@ethersphere/bee-js**]
-
-***
-
 [@ethersphere/bee-js] / [Utils] / getRedundancyStat
 
 # Function: getRedundancyStat()

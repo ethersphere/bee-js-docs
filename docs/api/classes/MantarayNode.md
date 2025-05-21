@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / MantarayNode
-
 # Class: MantarayNode
 
 Defined in: [bee-js/src/manifest/manifest.ts:121](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L121)

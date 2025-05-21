@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / BatchId
-
 # Class: BatchId
 
 Defined in: [bee-js/src/utils/typed-bytes.ts:147](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L147)

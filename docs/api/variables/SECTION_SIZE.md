@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / SECTION\_SIZE
-
 # Variable: SECTION\_SIZE
 
 > `const` **SECTION\_SIZE**: `32` = `32`

@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / NULL\_ADDRESS
-
 # Variable: NULL\_ADDRESS
 
 > `const` **NULL\_ADDRESS**: `Uint8Array`\<`ArrayBuffer`\>

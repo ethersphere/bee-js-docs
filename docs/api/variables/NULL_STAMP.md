@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / NULL\_STAMP
-
 # Variable: NULL\_STAMP
 
 > `const` **NULL\_STAMP**: [`BatchId`](../classes/BatchId.md)

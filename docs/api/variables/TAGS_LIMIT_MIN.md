@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / TAGS\_LIMIT\_MIN
-
 # Variable: TAGS\_LIMIT\_MIN
 
 > `const` **TAGS\_LIMIT\_MIN**: `1` = `1`

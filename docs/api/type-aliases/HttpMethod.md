@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / HttpMethod
-
 # Type Alias: HttpMethod
 
 > **HttpMethod** = `"GET"` \| `"DELETE"` \| `"POST"` \| `"PATCH"` \| `"PUT"`

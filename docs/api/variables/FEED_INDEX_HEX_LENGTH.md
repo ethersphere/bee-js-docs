@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / FEED\_INDEX\_HEX\_LENGTH
-
 # Variable: FEED\_INDEX\_HEX\_LENGTH
 
 > `const` **FEED\_INDEX\_HEX\_LENGTH**: `16` = `16`

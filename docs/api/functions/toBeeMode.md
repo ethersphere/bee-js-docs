@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / toBeeMode
-
 # Function: toBeeMode()
 
 > **toBeeMode**(`value`): [`BeeModes`](../enumerations/BeeModes.md)

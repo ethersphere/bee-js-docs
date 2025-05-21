@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / BeeRequestOptions
-
 # Type Alias: BeeRequestOptions
 
 > **BeeRequestOptions** = `object`

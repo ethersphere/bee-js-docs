@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / STAMPS\_DEPTH\_MIN
-
 # Variable: STAMPS\_DEPTH\_MIN
 
 > `const` **STAMPS\_DEPTH\_MIN**: `17` = `17`

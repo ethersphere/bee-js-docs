@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / CHUNK\_SIZE
-
 # Variable: CHUNK\_SIZE
 
 > `const` **CHUNK\_SIZE**: `number`

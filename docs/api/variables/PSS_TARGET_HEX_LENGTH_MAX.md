@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / PSS\_TARGET\_HEX\_LENGTH\_MAX
-
 # Variable: PSS\_TARGET\_HEX\_LENGTH\_MAX
 
 > `const` **PSS\_TARGET\_HEX\_LENGTH\_MAX**: `4` = `4`

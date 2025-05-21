@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / BRANCHES
-
 # Variable: BRANCHES
 
 > `const` **BRANCHES**: `128` = `128`

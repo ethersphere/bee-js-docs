@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / TAGS\_LIMIT\_MAX
-
 # Variable: TAGS\_LIMIT\_MAX
 
 > `const` **TAGS\_LIMIT\_MAX**: `1000` = `1000`

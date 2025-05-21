@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / STAMPS\_DEPTH\_MAX
-
 # Variable: STAMPS\_DEPTH\_MAX
 
 > `const` **STAMPS\_DEPTH\_MAX**: `255` = `255`

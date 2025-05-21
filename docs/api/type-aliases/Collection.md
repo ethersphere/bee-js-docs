@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / Collection
-
 # Type Alias: Collection
 
 > **Collection** = [`CollectionEntry`](../interfaces/CollectionEntry.md)[]

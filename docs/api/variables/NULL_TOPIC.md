@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / NULL\_TOPIC
-
 # Variable: NULL\_TOPIC
 
 > `const` **NULL\_TOPIC**: [`Topic`](../classes/Topic.md)

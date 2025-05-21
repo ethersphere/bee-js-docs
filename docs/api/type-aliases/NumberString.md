@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / NumberString
-
 # Type Alias: NumberString
 
 > **NumberString** = `string` & `object`

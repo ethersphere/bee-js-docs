@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / SUPPORTED\_BEE\_VERSION
-
 # Variable: SUPPORTED\_BEE\_VERSION
 
 > `const` **SUPPORTED\_BEE\_VERSION**: `string`

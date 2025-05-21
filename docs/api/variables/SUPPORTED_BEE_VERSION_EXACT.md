@@ -1,9 +1,3 @@
-[**@ethersphere/bee-js**](../Overview.md)
-
-***
-
-[@ethersphere/bee-js](../Overview.md) / SUPPORTED\_BEE\_VERSION\_EXACT
-
 # Variable: SUPPORTED\_BEE\_VERSION\_EXACT
 
 > `const` **SUPPORTED\_BEE\_VERSION\_EXACT**: `"2.4.0-390a402e"` = `'2.4.0-390a402e'`
