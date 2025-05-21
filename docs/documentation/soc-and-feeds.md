@@ -117,7 +117,7 @@ The `identifier` and Ethereum address together determine the SOC address and mus
 
 To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
 
-To download a SOC in Bee-JS, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
+To download a SOC in bee-js, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
 
 :::info SOC address is derived from the identifier and owner
 Unlike uploads using content addressed chunks which are retrieved by their Swarm reference hash, SOCs are retrieved using the combination of `identifier` and `owner`, not their Swarm reference hash.

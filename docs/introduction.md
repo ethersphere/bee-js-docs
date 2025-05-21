@@ -1,7 +1,7 @@
 ---
 id: introduction
 slug: /
-title: "Bee JS - The Swarm JS Library"
+title: "bee-js - The Swarm JS Library"
 sidebar_label: Introduction
 ---
 
