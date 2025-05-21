@@ -1,7 +1,7 @@
 ---
 id: Overview
 title: Overview
-slug: /docs/api/
+slug: /api/
 sidebar_position: 0
 ---
 
