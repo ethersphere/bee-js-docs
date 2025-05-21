@@ -1,3 +1,10 @@
+---
+id: Overview
+title: Overview
+slug: /docs/api/
+sidebar_position: 0
+---
+
 **@ethersphere/bee-js**
 
 ***
