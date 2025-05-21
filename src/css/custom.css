@@ -139,33 +139,15 @@ header {
   }
 }
 
-/* Global heading font sizes */
-h1 {
-  font-size: 2rem !important;
+:root {
+  --ifm-h1-font-size: 2rem;
+  --ifm-h2-font-size: 1.6rem;
+  --ifm-h3-font-size: 1.3rem;
+  --ifm-h4-font-size: 1.15rem;
+  --ifm-h5-font-size: 1rem;
+  --ifm-h6-font-size: 0.9rem;
 }
-
-h2 {
-  font-size: 1.6rem !important;
-}
-
-h3 {
-  font-size: 1.3rem !important;
-}
-
-h4 {
-  font-size: 1.15rem !important;
-}
-
-h5 {
-  font-size: 1rem !important;
-}
-
-h6 {
-  font-size: 0.9rem !important;
-}
-
-/* Slightly larger h1 only inside page <header> blocks (top of docs pages) */
-.header h1,
-article header h1 {
-  font-size: 2.5rem !important;
+article header h1,
+.header h1 {
+  font-size: 2.2rem !important;
 }
