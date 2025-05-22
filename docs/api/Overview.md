@@ -1,6 +1,6 @@
 ---
 id: Overview
-title: API Reference
+title: Overview
 slug: /api/
 sidebar_position: 0
 ---
