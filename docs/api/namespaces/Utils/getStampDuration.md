@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampDuration
-
 # Function: getStampDuration()
 
 > **getStampDuration**(`amount`, `pricePerBlock`, `blockTime`): [`Duration`](../../classes/Duration.md)

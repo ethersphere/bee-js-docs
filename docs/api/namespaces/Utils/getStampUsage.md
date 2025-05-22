@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampUsage
-
 # Function: getStampUsage()
 
 > **getStampUsage**(`utilization`, `depth`, `bucketDepth`): `number`

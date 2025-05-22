@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getRedundancyStat
-
 # Function: getRedundancyStat()
 
 > **getRedundancyStat**(`level?`): `RedundancyStats`

@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getDepthForSize
-
 # Function: getDepthForSize()
 
 > **getDepthForSize**(`size`): `number`

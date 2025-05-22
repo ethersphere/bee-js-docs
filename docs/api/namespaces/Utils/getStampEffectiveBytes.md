@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampEffectiveBytes
-
 # Function: getStampEffectiveBytes()
 
 > **getStampEffectiveBytes**(`depth`): `number`

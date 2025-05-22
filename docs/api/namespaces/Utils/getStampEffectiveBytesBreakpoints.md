@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampEffectiveBytesBreakpoints
-
 # Function: getStampEffectiveBytesBreakpoints()
 
 > **getStampEffectiveBytesBreakpoints**(): `Map`\<`number`, `number`\>
