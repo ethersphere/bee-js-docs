@@ -1,13 +1,9 @@
+---
+id: Overview
 title: API Reference
 slug: /api/
 sidebar_position: 0
 ---
-
-**@ethersphere/bee-js**
-
-***
-
-# @ethersphere/bee-js
 
 ## Namespaces
 
