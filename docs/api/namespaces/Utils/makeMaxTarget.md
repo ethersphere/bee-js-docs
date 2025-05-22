@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / makeMaxTarget
-
 # Function: makeMaxTarget()
 
 > **makeMaxTarget**(`target`): `string`

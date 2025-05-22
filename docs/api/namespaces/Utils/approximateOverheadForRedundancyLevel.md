@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / approximateOverheadForRedundancyLevel
-
 # Function: approximateOverheadForRedundancyLevel()
 
 > **approximateOverheadForRedundancyLevel**(`chunks`, `level`, `encrypted`): `number`

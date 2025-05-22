@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getAmountForDuration
-
 # Function: getAmountForDuration()
 
 > **getAmountForDuration**(`duration`, `pricePerBlock`, `blockTime`): `bigint`

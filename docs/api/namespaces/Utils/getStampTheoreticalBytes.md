@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampTheoreticalBytes
-
 # Function: getStampTheoreticalBytes()
 
 > **getStampTheoreticalBytes**(`depth`): `number`

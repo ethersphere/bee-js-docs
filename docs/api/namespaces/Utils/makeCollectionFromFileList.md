@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / makeCollectionFromFileList
-
 # Function: makeCollectionFromFileList()
 
 > **makeCollectionFromFileList**(`fileList`): [`Collection`](../../type-aliases/Collection.md)

@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getFolderSize
-
 # Function: getFolderSize()
 
 > **getFolderSize**(`dir`): `Promise`\<`number`\>

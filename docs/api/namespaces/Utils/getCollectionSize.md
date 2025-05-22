@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getCollectionSize
-
 # Function: getCollectionSize()
 
 > **getCollectionSize**(`fileList`): `number`

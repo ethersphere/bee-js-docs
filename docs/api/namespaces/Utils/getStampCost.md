@@ -1,5 +1,3 @@
-[@ethersphere/bee-js] / [Utils] / getStampCost
-
 # Function: getStampCost()
 
 > **getStampCost**(`depth`, `amount`): [`BZZ`](../../classes/BZZ.md)
