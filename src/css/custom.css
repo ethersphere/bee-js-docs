@@ -151,3 +151,62 @@ article header h1,
 .header h1 {
   font-size: 2.2rem !important;
 }
+
+
+/* Floating "Get Help" Button - Fully Themed with Hex Colors */
+.floating-help-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: "RubikMedium", sans-serif;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #FFF8DC;
+  background-color: #FF5E00; /* Neon orange */
+  border: 2px solid #FF5E00;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.floating-help-button:hover {
+  background-color: #FF8500; /* Brighter neon */
+  border-color: #FF8500;
+  box-shadow: 0 0 15px #FF8500;
+}
+
+/* Dark mode - same neon orange theme */
+[data-theme='dark'] .floating-help-button {
+  background-color: #FF5E00;
+  border-color: #FF5E00;
+  color: #FFF8DC;
+}
+
+[data-theme='dark'] .floating-help-button:hover {
+  background-color: #FF8500;
+  border-color: #FF8500;
+  box-shadow: 0 0 15px #FF8500;
+}
+
+/* Fix text color in .alert--info for light mode */
+.alert--info {
+  background-color: #007ACC; /* Already defined, reaffirm for clarity */
+  color: #FFF8DC; /* Light beige text for contrast */
+}
+
+/* Ensure links inside info boxes are also light-colored */
+.alert--info a {
+  color: #FFF8DC;
+  text-decoration: underline;
+}
+
+.alert--info a:hover {
+  color: #FFAE42; /* Matches your hover color */
+}
+
+/* Ensure info icon is visible in light mode */
+.alert--info .admonitionIcon_Rf37 svg path {
+  fill: #FFF8DC !important;
+}
