@@ -206,7 +206,70 @@ article header h1,
   color: #FFAE42; /* Matches your hover color */
 }
 
-/* Ensure info icon is visible in light mode */
-.alert--info .admonitionIcon_Rf37 svg path {
-  fill: #FFF8DC !important;
+
+[data-theme='dark'] .theme-admonition-note {
+  background-color: #465158;
+  border-color: #C1C9CF;
 }
+
+[data-theme='dark'] .theme-admonition-tip {
+  background-color: #0F6648;
+  border-color: #00DAA1;
+}
+
+[data-theme='dark'] .theme-admonition-info {
+  background-color: #264C6E;
+  border-color: #007FFF;
+}
+
+[data-theme='dark'] .theme-admonition-caution {
+  background-color: #784213;
+  border-color: #F37300;
+}
+
+[data-theme='dark'] .theme-admonition-danger {
+  background-color: #791112;
+  border-color: #F30000;
+}
+
+
+[data-theme='light'] .theme-admonition-note {
+  background-color: #E5E9EC;
+  border-color: #C1C9CF;
+}
+
+[data-theme='light'] .theme-admonition-tip {
+  background-color: #E0FFF4;
+  border-color: #00DAA1;
+}
+
+[data-theme='light'] .theme-admonition-info {
+  background-color: #E2F1FF;
+  border-color: #007FFF;
+}
+
+[data-theme='light'] .theme-admonition-caution {
+  background-color: #FDE9D7;
+  border-color: #F37300;
+}
+
+[data-theme='light'] .theme-admonition-danger {
+  background-color: #FECDCD;
+  border-color: #F30000;
+}
+
+/* Style links inside admonitions */
+.theme-admonition a {
+  font-weight: 600; /* slightly bold, not as heavy as 700 */
+  text-decoration: none; /* remove default underline */
+  border-bottom: 2px solid currentColor; /* underline effect using border */
+  padding-bottom: 1px; /* spacing so border doesn’t touch text */
+}
+
+/* Hover/focus state for better interactivity */
+.theme-admonition a:hover,
+.theme-admonition a:focus {
+  color: var(--ifm-color-primary); /* matches your orange accent */
+  border-bottom-color: var(--ifm-color-primary);
+}
+

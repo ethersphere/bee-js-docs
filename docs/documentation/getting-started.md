@@ -24,6 +24,7 @@ On this page you will learn how to install `bee-js` and connect it with your exi
 - **Linux or macOS:** A Unix based operating system is preferred. Windows is supported with some small exceptions. For a smoother experience, Windows users can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)  
 - **Node.js (v18 or higher)** - [Get Node.js](https://nodejs.org/) 
 - **npm (Node Package Manager)** - [Get npm](https://docs.npmjs.com/)
+- **`swarm-cli`** (optional cli tool for command line node management) - [Get `swarm-cli`](https://github.com/ethersphere/swarm-cli/blob/master/README.md)  
 
 :::tip
 Node.js and npm are not required if you choose to import `bee-js` directly as a script from [unpkg.com](https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js). 
@@ -85,8 +86,6 @@ under global namespace `BeeJs`:
   const bee = new BeeJs.Bee('...')
 </script>
 ```
-
-
 
 ## Quickstart with *create-swarm-app*
 
@@ -301,7 +300,13 @@ After selecting a file to upload, a reference hash to the file will be returned:
 
 ![](/img/develop-on-swarm-02.jpg)
 
-Currently our application is running on localhost, and is only accessible locally. To make this application accessible for anyone on Swarm, all we need to do create a production build of our application using `vite build` and then upload it to the Swarm with `swarm-cli`.
+#### Using `swarm-cli` to Host on Swarm (optional) 
+
+:::tip
+Learn more about [hosting websites on Swarm](http://docs.ethswarm.org/docs/develop/access-the-swarm/host-your-website) in the official bee-docs.
+:::
+
+Currently our application is running on localhost, and is only accessible locally. To make this application accessible for anyone on Swarm, all we need to do create a production build of our application using `vite build` and then upload it to the Swarm with `swarm-cli`. 
 
 ```bash
  npm run build
@@ -332,8 +337,3 @@ The URL returned in the terminal can now be shared and accessed by anyone with a
 http://localhost:1633/bzz/764b08bb0f9e82d4bdce951b1ded816bd0417e039828e4308d61ab3035ff60a2/
 ```
 
-## Next Steps
-
-As a next step, you may wish to look into [connecting your site to an ENS domain](https://docs.ethswarm.org/docs/develop/access-the-swarm/host-your-website/#enable-ens-on-your-node) so that it is accessible from a human-readable address.
-
-You may also want to start exploring more the [example applications section (PLACEHOLDER)](#) along with the accompanying step-by-step guides to deepen your understanding of what's possible on Swarm.  
