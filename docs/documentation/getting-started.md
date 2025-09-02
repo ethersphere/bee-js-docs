@@ -10,9 +10,26 @@ import TabItem from '@theme/TabItem'
 
 ## About *bee-js* 
 
-`bee-js` simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle. It's the easiest way to get started developing on Swarm.
+`bee-js` simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle.  
 
-## Installation 
+:::info
+On this page you will learn how to install `bee-js` and connect it with your existing app or webpage. 
+:::
+
+
+## Pre-requisites
+
+- **A live Bee node API endpoint:**
+  You will need the API endpoint from a live Bee node to use `bee-js`. See the Bee docs for [node installation instructions](https://docs.ethswarm.org/docs/bee/installation/quick-start/).
+- **Linux or macOS:** A Unix based operating system is preferred. Windows is supported with some small exceptions. For a smoother experience, Windows users can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)  
+- **Node.js (v18 or higher)** - [Get Node.js](https://nodejs.org/) 
+- **npm (Node Package Manager)** - [Get npm](https://docs.npmjs.com/)
+
+:::tip
+Node.js and npm are not required if you choose to import `bee-js` directly as a script from [unpkg.com](https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js). 
+:::
+
+## Installation
 
 <Tabs
   groupId="pcgmng_preferrence"
@@ -45,11 +62,9 @@ yarn add @ethersphere/bee-js --save
   </TabItem>
 </Tabs>
 
-After that you need to import the `Bee` class and initialize an instance of it using our Bee node's API endpoint (here we assume it runs on localhost on the default port).
+### Node.js (npm or yarn)
 
-:::info Run your own Bee node
-You can find out more about setting up a Bee node and getting your node's API endpoint in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
-:::
+After that you need to import the `Bee` class and initialize an instance of it using our Bee node's API endpoint (here we assume it runs on localhost on the default port).
 
 ```js
 import { Bee } from "@ethersphere/bee-js"
@@ -59,7 +74,7 @@ const bee = new Bee('http://localhost:1633')
 
 That’s it! now you can use the `bee` object.
 
-:::tip Using `<script>` import
+### Script Tag
 
 If you include `bee-js` using the `unpkg.com` script link then all the exported components will be available to you
 under global namespace `BeeJs`:
@@ -70,7 +85,7 @@ under global namespace `BeeJs`:
   const bee = new BeeJs.Bee('...')
 </script>
 ```
-:::
+
 
 
 ## Quickstart with *create-swarm-app*
