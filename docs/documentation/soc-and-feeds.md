@@ -48,7 +48,7 @@ When you are instantiating `Bee` class you can pass an Ethereum private key as t
 :::
 
 :::warning Your assets and/or privacy may be at risk
-We suggest using ephemeral private keys (e.g. randomly generated) when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications) directly because it will allow others to sign messages with your kay which may compromise your privacy or lead to the loss of funds stored by that account.
+We recommend using dedicated publisher private keys when writing to SOCs or Feeds. Never use the private keys of your node or a wallet that holds funds, as this may allow others to sign messages on your behalf, compromise your privacy, or lead to the loss of assets. Store your publisher keys securely, as anyone with access to them can publish updates to your feed.
 :::
 
 ```js
