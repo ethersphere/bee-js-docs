@@ -16,11 +16,39 @@ Feeds are a unique feature of Swarm which simulate the publishing of mutable con
 
 ## Requirements
 
-Interactions with SOC and feeds requires the following:
+Interactions with SOC and feeds require the following:
 
-* A fully initialized Bee light node running with fully synced postage batch data. (Running at `http://localhost:1633` by default)
+* A fully initialized Bee light node running with fully synced postage batch data (running at `http://localhost:1633` by default).
 * A valid postage batch ID.
-* An Ethereum-compatible private key to sign updates. Using your node or blockchain account wallet's private key is strongly discouraged. Using a dedicated key for SOC / feeds is recommended. 
+* A dedicated Ethereum-compatible publisher private key to sign updates. Do **not** use the private key of your Bee node or any wallet that holds funds.  
+
+:::tip
+You can use the `PrivateKey` class to generate a dedicated publisher key for signing SOC and feed updates:
+
+```js
+const crypto = require('crypto');
+const { PrivateKey } = require('@ethersphere/bee-js');
+
+// Generate 32 random bytes and construct a private key
+const hexKey = '0x' + crypto.randomBytes(32).toString('hex');
+const privateKey = new PrivateKey(hexKey);
+
+console.log('Private key:', privateKey.toHex());
+console.log('Public address:', privateKey.publicKey().address().toHex());
+````
+
+Example output:
+
+```bash
+Private key: 634fb5a872396d9693e5c9f9d7233cfa93f395c093371017ff44aa9ae6564cdd
+Public address: 8d3766440f0d7b949a5e32995d09619a7f86e632
+```
+
+Store this key securely.
+Anyone with access to it can publish to your feed or SOC.
+
+*It is recommended to use a separate publishing key for each feed or SOC. This limits the damage if a key is ever exposed — a compromised key should only allow publishing to one resource, not all of them.*
+:::
 
 ## Single Owner Chunks
 
@@ -48,7 +76,7 @@ When you are instantiating `Bee` class you can pass an Ethereum private key as t
 :::
 
 :::warning Your assets and/or privacy may be at risk
-We suggest using ephemeral private keys (e.g. randomly generated) when writing to SOC or Feeds. Never use your real Ethereum private keys here (or in any web applications) directly because it will allow others to sign messages with your kay which may compromise your privacy or lead to the loss of funds stored by that account.
+We recommend using dedicated publisher private keys when writing to SOCs or Feeds. Never use the private keys of your node or a wallet that holds funds, as this may allow others to sign messages on your behalf, compromise your privacy, or lead to the loss of assets. Store your publisher keys securely, as anyone with access to them can publish updates to your feed.
 :::
 
 ```js
@@ -107,7 +135,7 @@ Reference (Hex): 9d453ebb73b2fedaaf44ceddcf7a0aa37f3e3d6453fea5841c31f0ea6d61dc8
 
 
 In this example:
-- `privateKey` is used to initialize the writer as `socWriter` which is used to sign the SOC.
+- `privateKey` (initialized using our [previously generated](#requirements) publisher key) is used to initialize the writer as `socWriter` which is used to sign the SOC.
 - `NULL_IDENTIFIER` is the 32-byte value used as the identifier (can be replaced with any user-defined value).
 - `socWriter.upload()` signs and uploads the data, returning a `reference` as confirmation.
 
@@ -155,7 +183,7 @@ readSOC()
 ```
 
 In this example:
-- The `owner` is the Ethereum address used to sign the SOC.
+- The `owner` is the Ethereum address used to retrieve the SOC (derived from the private key [previously generated](#requirements)).
 - `NULL_IDENTIFIER` is the same default identifier used in the earlier upload example.
 - The returned payload is a `Bytes` object, and `.toUtf8()` converts it to a human-readable string.
 
@@ -171,7 +199,7 @@ Feeds are an abstraction built on top of Single Owner Chunks (SOCs) that **simul
 
 Similar to how an SOC is defined by an `owner` and `identifier`, a feed is defined by:
 
-* `owner`: an Ethereum-compatible address
+* `owner`: an Ethereum-compatible address 
 * `topic`: a unique 32-byte identifier 
 
 ### Concepts
@@ -199,7 +227,7 @@ Although it is possible to update feeds with an arbitrary data payload using `up
 
 The script below performs the following steps:
 
-1. Initializes the Bee client and derives the feed owner address from a private key.
+1. Initializes the Bee client and derives the feed owner address from a private key (which we have [previously generated](#requirements)).
 2. Uses the `uploadPayload()` method to upload a plain text string as a **payload update** to the feed with topic `"payload-update"`.
 3. Uploads the same string as a file to Swarm and obtains a reference.
 4. Uses the `upload()` method to upload the obtained reference as a **reference update** to the feed with topic `"reference-update"`.
