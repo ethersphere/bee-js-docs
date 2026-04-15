@@ -108,7 +108,7 @@ import { Bee, Size } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 const batchId = batches[0].batchID
 
@@ -133,7 +133,7 @@ import { Bee, Size } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 // Print results to the terminal
 console.log(batches)
@@ -195,7 +195,7 @@ import { Bee, Duration } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 // Select the batch ID of the first batch in the list
 const batchId = batches[0].batchID
@@ -221,7 +221,7 @@ import { Bee, Duration } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 // Select the batch ID of the first batch in the list
 const batchId = batches[0].batchID
@@ -281,7 +281,7 @@ import { Bee, Size, Duration } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 // Choose a batch to extend
 const batchId = batches[0].batchID
@@ -312,7 +312,7 @@ If you're happy with the cost, you can then proceed to extend the **size** and *
 
 ### Checking Batch Status
 
-You can check the status of purchased batches using the `bee.getAllPostageBatch` method:
+You can check the status of purchased batches using the `bee.getPostageBatches` method:
 
 
 ```javascript
@@ -321,7 +321,7 @@ import { Bee } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 
 // Request all local postage batches
-const batches = await bee.getAllPostageBatch()
+const batches = await bee.getPostageBatches()
 
 // Print results to the terminal
 console.log(batches) 
@@ -382,7 +382,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 export async function getBatch(bee, criteriaFn) {
-  const batches = await bee.getAllPostageBatch()
+  const batches = await bee.getPostageBatches()
   const matchingBatch = batches.find(criteriaFn)
 
   if (!matchingBatch) {
@@ -409,7 +409,7 @@ function isUsableWithFreeSpace(batch) {
 const batchId = getBatch(bee, isUsableWithFreeSpace)
 ```
 
-If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](/docs/storage/#checking-batch-status) your postage batches' status using `bee.getAllPostageBatch` in order to check if a batch with your desired characteristics exists and return its id.
+If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](/docs/storage/#checking-batch-status) your postage batches' status using `bee.getPostageBatches` in order to check if a batch with your desired characteristics exists and return its id.
 
 ### Batch Size Breakpoints
 
@@ -473,7 +473,7 @@ The class also includes three *instance* methods for getting the value from an e
 
 sizeB.toBytes()          // → 5000000000
 sizeB.toGigabytes()      // → 5
-sizeB.toFormattedString() // → '5.00 GB'
+sizeB.toFormattedString() // → '5.000 GB'
 ```
 
 

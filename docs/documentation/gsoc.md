@@ -93,10 +93,10 @@ The `Overlay` should be saved and shared with sender nodes.
 This must be run on a full node. It mines a key that lands within its own neighborhood and starts listening.
 
 ```js
-import { Bee, Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
+import { Bee, NULL_IDENTIFIER } from '@ethersphere/bee-js'
 
 const bee = new Bee('http://localhost:1633')
-const identifier = Identifier.fromString(NULL_IDENTIFIER)
+const identifier = NULL_IDENTIFIER
 
 async function listen() {
   const { overlay } = await bee.getNodeAddresses()
@@ -109,6 +109,7 @@ async function listen() {
     // A callback function is used to handle incoming updates - you can include your application logic here
     onMessage: message => console.log('Received:', message.toUtf8()),
     onError: error => console.error('Subscription error:', error),
+    onClose: () => console.log('Subscription closed.'),
   })
 
   console.log('Listening for GSOC updates...')
@@ -122,12 +123,12 @@ listen()
 The sending node must have a ***usable postage batch id*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 
 
 ```js
-import { Bee, Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
+import { Bee, NULL_IDENTIFIER } from '@ethersphere/bee-js'
 
 const bee = new Bee('http://localhost:1643')
 
 // The identifier is initialized using the same data as the receiving node
-const identifier = Identifier.fromString(NULL_IDENTIFIER)
+const identifier = NULL_IDENTIFIER
 const batchId = '6c84b6d3f5273b969c3df875cde7ccd9920f5580122929aedaf440bfe4484405'
 
 const recipientOverlay = '1e2054bec3e681aeb0b365a1f9a574a03782176bd3ec0bcf810ebcaf551e4070'

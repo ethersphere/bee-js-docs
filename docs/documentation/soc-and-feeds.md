@@ -26,15 +26,15 @@ Interactions with SOC and feeds require the following:
 You can use the `PrivateKey` class to generate a dedicated publisher key for signing SOC and feed updates:
 
 ```js
-const crypto = require('crypto');
-const { PrivateKey } = require('@ethersphere/bee-js');
+import crypto from 'node:crypto'
+import { PrivateKey } from '@ethersphere/bee-js'
 
 // Generate 32 random bytes and construct a private key
-const hexKey = '0x' + crypto.randomBytes(32).toString('hex');
-const privateKey = new PrivateKey(hexKey);
+const hexKey = '0x' + crypto.randomBytes(32).toString('hex')
+const privateKey = new PrivateKey(hexKey)
 
-console.log('Private key:', privateKey.toHex());
-console.log('Public address:', privateKey.publicKey().address().toHex());
+console.log('Private key:', privateKey.toHex())
+console.log('Public address:', privateKey.publicKey().address().toHex())
 ````
 
 Example output:
@@ -152,7 +152,7 @@ Unlike uploads using content addressed chunks which are retrieved by their Swarm
 :::
 
 ```js
-import { Bee, Size, NULL_IDENTIFIER } from "@ethersphere/bee-js"
+import { Bee, NULL_IDENTIFIER } from "@ethersphere/bee-js"
 
 // Initialize Bee client pointing to the Swarm node
 const bee = new Bee('http://localhost:1633')

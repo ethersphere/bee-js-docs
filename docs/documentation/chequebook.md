@@ -25,9 +25,13 @@ To use the example scripts below, you need:
 Deposits a specified amount of BZZ into the chequebook from your node wallet. This ensures that your node can issue cheques for transactions.
 
 ```javascript
-const amount = new BZZ.fromDecimalString('1') // Deposit 1 BZZ
+import { Bee, BZZ } from '@ethersphere/bee-js'
 
-const transactionHash = await bee.depositTokens(amount)
+const bee = new Bee('http://localhost:1633')
+
+const amount = BZZ.fromDecimalString('1') // Deposit 1 BZZ
+
+const transactionHash = await bee.depositBZZToChequebook(amount)
 console.log('Deposit transaction hash:', transactionHash.toHex())
 ```
 
@@ -56,9 +60,13 @@ Chequebook Balance: {
 Withdraws a specified amount of BZZ from the chequebook to the node wallet. You may need to withdraw if you want to transfer BZZ to another account or for other uses.
 
 ```javascript
-const amountToWithdraw = new BZZ.fromDecimalString('1') // Withdraw 1 BZZ
+import { Bee, BZZ } from '@ethersphere/bee-js'
 
-const withdrawalHash = await bee.withdrawTokens(amountToWithdraw)
+const bee = new Bee('http://localhost:1633')
+
+const amountToWithdraw = BZZ.fromDecimalString('1') // Withdraw 1 BZZ
+
+const withdrawalHash = await bee.withdrawBZZFromChequebook(amountToWithdraw)
 console.log('Withdraw transaction hash:', withdrawalHash.toHex())
 ```
 

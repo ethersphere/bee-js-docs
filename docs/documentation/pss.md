@@ -87,6 +87,7 @@ console.log('Subscribing to topic:', topic.toHex())
 bee.pssSubscribe(topic, {
   onMessage: msg => console.log('Received via subscription:', msg.toUtf8()),
   onError: err => console.error('Subscription error:', err.message),
+  onClose: () => console.log('Subscription closed.'),
 })
 
 // One-time receive (3 hour timeout)
