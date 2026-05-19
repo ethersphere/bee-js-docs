@@ -6,6 +6,17 @@ module.exports = {
   baseUrl: "/",
   trailingSlash: true,
   plugins: [
+    [
+      'docusaurus-plugin-llms',
+      {
+        generateLLMsTxt: false,
+        generateLLMsFullTxt: true,
+        title: 'bee-js Documentation',
+        description: 'bee-js is the official JavaScript/TypeScript SDK for building applications on Swarm, a decentralised storage and communication network.',
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+      },
+    ],
   ],
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",

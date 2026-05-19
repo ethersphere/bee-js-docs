@@ -3,6 +3,7 @@ title: Upload and Download
 id: upload-download
 slug: /upload-download
 sidebar_label: Upload and Download
+description: Demonstrates how to upload and download files, directories, and raw data to and from Swarm using bee-js.
 ---
 <!-- 
 * Separate Node.js (backend) and browser (front-end) functions
@@ -20,8 +21,8 @@ Uploading and downloading with Swarm is easy with `bee-js`. Based on your needs 
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) as `bee` using the API endpoint of a currently operating Bee node.
-- The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
+- An instance of `bee-js`'s `Bee` [initialized](./getting-started.md) as `bee` using the API endpoint of a currently operating Bee node.
+- The batch ID of a previously purchased usable postage batch with enough `remainingSize` left to upload the desired data. If you don't have one already, you will need to [buy a batch](./buying-storage.md#purchasing-storage) to upload data. If you do have one, you will need to [get and save](./buying-storage.md#selecting-a-batch) its batch ID.
 
 
 ## Arbitrary Data
@@ -35,7 +36,7 @@ When you download data the return type is `Bytes`. The `Bytes` class includes va
  - `toJSON()` that converts the bytes into JSON object
 
 :::info
-The `Bytes` class is a core data type in `bee-js`. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](/docs/utilities/) page.
+The `Bytes` class is a core data type in `bee-js`. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](./utilities.md) page.
 :::
 
 ```js
@@ -306,7 +307,7 @@ await bee.uploadData(postageBatchId, 'track me', { tag: tag.uid })
 
 You can use the tag ID to monitor syncing status: how many chunks were split, stored, seen, and synced.
 
-See [here](/docs/upload-download/#using-tags-to-monitor-upload-progress) for more info on creating, monitoring, and managing tags.
+See [here](./upload-download.md#using-tags-to-monitor-upload-progress) for more info on creating, monitoring, and managing tags.
 
 
 ### Deferred Uploads
@@ -324,5 +325,5 @@ await bee.uploadData(postageBatchId, 'data', { deferred: false })
 ```
 
 :::tip
-If you do use `deferred: true`, make sure to use a [tag](/docs/tracking-uploads/) to track upload progress and confirm the success of the upload.
+If you do use `deferred: true`, make sure to use a [tag](./tracking-uploads.md) to track upload progress and confirm the success of the upload.
 :::

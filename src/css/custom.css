@@ -121,15 +121,18 @@ header {
 }
 
 .alert--danger {
-  background: #B00020;
+  background-color: #B00020 !important;
+  color: #FFF8DC !important;
 }
 
 .alert--info {
-  background: #007ACC;
+  background-color: #007ACC !important;
+  color: #FFF8DC !important;
 }
 
 .alert--tip {
-  background: #00875A;
+  background-color: #00875A !important;
+  color: #FFF8DC !important;
 }
 
 /* Responsive Adjustments */
@@ -190,23 +193,22 @@ article header h1,
   box-shadow: 0 0 15px #FF8500;
 }
 
-/* Fix text color in .alert--info for light mode */
-.alert--info {
-  background-color: #007ACC; /* Already defined, reaffirm for clarity */
-  color: #FFF8DC; /* Light beige text for contrast */
-}
-
-/* Ensure links inside info boxes are also light-colored */
-.alert--info a {
-  color: #FFF8DC;
+/* Admonition link and icon styles */
+.alert--info a,
+.alert--danger a,
+.alert--tip a {
+  color: #FFF8DC !important;
   text-decoration: underline;
 }
 
-.alert--info a:hover {
-  color: #FFAE42; /* Matches your hover color */
+.alert--info a:hover,
+.alert--danger a:hover,
+.alert--tip a:hover {
+  color: #FFAE42;
 }
 
-/* Ensure info icon is visible in light mode */
-.alert--info .admonitionIcon_Rf37 svg path {
+.alert--info svg path,
+.alert--danger svg path,
+.alert--tip svg path {
   fill: #FFF8DC !important;
 }

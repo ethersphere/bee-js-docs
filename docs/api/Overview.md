@@ -7,7 +7,7 @@ sidebar_position: 0
 
 ## Namespaces
 
-- [Utils](/docs/api/namespaces/Utils/approximateOverheadForRedundancyLevel)
+- [Utils](./namespaces/Utils/approximateOverheadForRedundancyLevel.md)
 
 ## Enumerations
 

@@ -3,6 +3,7 @@ title: Utility Classes
 id: utilities
 slug: /utilities
 sidebar_label: Utility Classes
+description: Documents the utility classes Size, Duration, BZZ, and Bytes for working with Swarm storage costs and data.
 ---
 `bee-js` includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
 

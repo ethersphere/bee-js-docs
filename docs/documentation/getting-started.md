@@ -2,6 +2,7 @@
 title: Getting Started
 id: getting-started
 slug: /getting-started
+description: Covers installation of bee-js and initialization of the Bee client for connecting to a local or remote Bee node.
 ---
 
 import Tabs from '@theme/Tabs'

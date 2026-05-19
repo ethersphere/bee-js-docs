@@ -3,6 +3,7 @@ title: SOC and Feeds
 id: soc-and-feeds
 slug: /soc-and-feeds
 sidebar_label: SOC and Feeds
+description: Explains Single Owner Chunks for mutable content and feeds for creating updatable data references on Swarm.
 ---
 
 
@@ -55,7 +56,7 @@ Anyone with access to it can publish to your feed or SOC.
 Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
 
 :::info
-SOCs are powerful and flexible low-level feature which provide the foundation upon which higher level abstractions such as [GSOC](/docs/gsoc/) and [feeds](/docs/soc-and-feeds/#feeds) are built. For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
+SOCs are powerful and flexible low-level feature which provide the foundation upon which higher level abstractions such as [GSOC](./gsoc.md) and [feeds](./soc-and-feeds.md#feeds) are built. For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
 :::
 
 :::warning SOCs are immutable!

@@ -3,6 +3,7 @@ title: Postal Service over Swarm
 id: pss
 slug: /pss
 sidebar_label: PSS
+description: Documents the Postal Service over Swarm feature for sending encrypted messages routed to specific nodes by overlay address.
 ---
 
 Swarm supports sending encrypted messages over the network using a system called **Postal Service over Swarm** (PSS). These messages are embedded in regular Swarm traffic and routed to specific nodes based on their overlay address.
@@ -23,7 +24,7 @@ To use the example scripts below, you need:
 
 - A Bee full node with a fully synced reserve for receiving PSS messages.
 - A light node for sending PSS messages.
-- The batch ID of a usable postage batch. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
+- The batch ID of a usable postage batch. If you don't have one already, you will need to [buy a batch](./buying-storage.md#purchasing-storage) to upload data. If you do have one, you will need to [get and save](./buying-storage.md#selecting-a-batch) its batch ID.
 
 
 ## Get Recipient Info (Full Node Only)
