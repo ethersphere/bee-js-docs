@@ -3,6 +3,7 @@ id: introduction
 slug: /
 title: "bee-js - The Swarm JS Library"
 sidebar_label: Introduction
+description: Introduces bee-js, the JavaScript SDK for building decentralized applications on the Swarm storage and communication network.
 ---
 
 `bee-js` is a JavaScript SDK for building applications using the Swarm decentralized storage and communication network. It allows you to interact with a local or remote [Bee node](https://docs.ethswarm.org/docs/) within your NodeJS project.

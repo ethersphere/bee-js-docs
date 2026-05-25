@@ -3,6 +3,7 @@ title: ACT (Access Control Trie)
 id: act
 slug: /act
 sidebar_label: ACT
+description: Documents the Access Control Trie feature for encrypting uploads so only nodes with listed public keys can retrieve content.
 ---
 
 ACT, or Access Control Trie, is a decentralized permission system built into the Swarm network that allows you to restrict access to uploaded content.
@@ -23,9 +24,9 @@ Likewise, re-uploading the content using the new grantees list will also ***not 
 The use of ACT requires the following:
 
 * A Bee light node running on with synced postage batch data. (Running at `http://localhost:1633` by default)
-* A valid postage batch ID. [Buy one](/docs/storage/#purchasing-storage) if needed.
+* A valid postage batch ID. [Buy one](./buying-storage.md#purchasing-storage) if needed.
 * Public keys of the nodes you want to grant access to.
-* The **public key of the publishing node**. This can be obtained using the [`bee.getNodeAddresses()` method](/docs/status/#3-get-node-addresses).
+* The **public key of the publishing node**. This can be obtained using the [`bee.getNodeAddresses()` method](./status.md#3-get-node-addresses).
 
 ## Create Grantees List
 

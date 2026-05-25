@@ -3,6 +3,7 @@ title: Buying Storage
 id: storage
 slug: /storage
 sidebar_label: Buying Storage
+description: Explains how to purchase and manage postage stamp batches for storing data on Swarm using bee-js utility classes.
 ---
 
 
@@ -31,7 +32,7 @@ Storage on Swarm is rented by purchasing "postage stamp batches". Each batch ent
 
 To use the example scripts below, you need:
 
-- An instance of `bee-js`'s `Bee` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node 
+- An instance of `bee-js`'s `Bee` [initialized](./getting-started.md) using the API endpoint of a currently operating Bee node 
 
 ### Checking Storage Costs 
 
@@ -68,10 +69,10 @@ You can view the current price of storage on [Swarmscan](https://swarmscan.io/).
 The `bee.buyStorage` method abstracts away some of the lower level details of 
 
 :::tip
-When purchasing storage with `bee.buyStorage`, a postage batch will be bought with *at least* enough space to upload the specified amount of data. However since storage on Swarm comes in [***discrete sizes***](/docs/storage/#batch-size-breakpoints), the actual amount of space will likely be greater than specified.
+When purchasing storage with `bee.buyStorage`, a postage batch will be bought with *at least* enough space to upload the specified amount of data. However since storage on Swarm comes in [***discrete sizes***](./buying-storage.md#batch-size-breakpoints), the actual amount of space will likely be greater than specified.
 :::
 
-The `bee.buyStorage` method takes instances of the [`Size` and `Duration` utility classes](/docs/storage/#utility-classes) and purchases a postage batch which can upload *at least* as much data as the given `Size` and store it for the given `Duration` (the actual duration of storage may be longer or shorter depending on the change in storage price over time), and then save the postage batch data locally. The transaction usually only takes a few seconds but may take up to a minute.
+The `bee.buyStorage` method takes instances of the [`Size` and `Duration` utility classes](./buying-storage.md#utility-classes) and purchases a postage batch which can upload *at least* as much data as the given `Size` and store it for the given `Duration` (the actual duration of storage may be longer or shorter depending on the change in storage price over time), and then save the postage batch data locally. The transaction usually only takes a few seconds but may take up to a minute.
 
 ```javascript
 import { Bee, Size, Duration } from "@ethersphere/bee-js"
@@ -89,13 +90,13 @@ The lifetime of the batch starts counting down from the moment of purchase. The 
 ### Extending Storage Size
 
 :::tip
-Just as with buying storage, since storage comes only in [***discrete sizes***](/docs/storage/#batch-size-breakpoints), the actual amount of additional space when extending the storage size of an existing batch will typically be greater than specified.
+Just as with buying storage, since storage comes only in [***discrete sizes***](./buying-storage.md#batch-size-breakpoints), the actual amount of additional space when extending the storage size of an existing batch will typically be greater than specified.
 :::
 
-If we need to upload more data, then we can extend a batch's storage size using the `bee.extendStorageSize` method. Note that in order to increase the batch size using the `extendStorageSize` method, you must choose a size which is above the current [batch's size breakpoint](/docs/storage/#batch-size-breakpoints).
+If we need to upload more data, then we can extend a batch's storage size using the `bee.extendStorageSize` method. Note that in order to increase the batch size using the `extendStorageSize` method, you must choose a size which is above the current [batch's size breakpoint](./buying-storage.md#batch-size-breakpoints).
 
 :::tip
-As mentioned [above](/docs/storage/#batch-size-breakpoints), the per byte cost decreases as the storage size of a batch increases, so it's more cost effective to increase the storage size an existing batch rather than buying a new, smaller batch.
+As mentioned [above](./buying-storage.md#batch-size-breakpoints), the per byte cost decreases as the storage size of a batch increases, so it's more cost effective to increase the storage size an existing batch rather than buying a new, smaller batch.
 
 The exception to this rule is if we no longer wish to store the previously uploaded data. In that case we SHOULD buy an all new postage batch, as extending the size of an existing batch would require us to continue paying for the already uploaded data which we no longer need.
 :::
@@ -151,7 +152,7 @@ const result = await bee.extendStorageSize(batchId, newSize)
 console.log(result)
 ```
 
-We can check that we successfully extended the batch size by [checking batch status](/docs/storage/#checking-storage-status):
+We can check that we successfully extended the batch size by [checking batch status](./buying-storage.md#checking-storage-status):
 
 ```javascript
 [
@@ -178,7 +179,7 @@ We can check that we successfully extended the batch size by [checking batch sta
 
 Here we can see that our batch `size` was successfully extended from ~4.93 GB to ~17.03 GB. 
 
-*See [above](/docs/storage/#batch-size-breakpoints) to understand why `size` was extended to ~17.03 even though 5 GB was used as input.*
+*See [above](./buying-storage.md#batch-size-breakpoints) to understand why `size` was extended to ~17.03 even though 5 GB was used as input.*
 
 
 ### Extending Storage Duration
@@ -236,7 +237,7 @@ const result = await bee.extendStorageDuration(batchId, additionalDuration)
 console.log(result)
 ```
 
-We can verify that the extension was successful by [checking the batch status](/docs/storage/#checking-storage-status). You'll notice the `duration` value on the batch will have increased, reflecting the newly extended storage time:
+We can verify that the extension was successful by [checking the batch status](./buying-storage.md#checking-storage-status). You'll notice the `duration` value on the batch will have increased, reflecting the newly extended storage time:
 
 ```javascript
 [
@@ -305,7 +306,7 @@ console.log(cost)
 This method helps you determine if it's more economical to **extend** an existing batch or **create a new one**, especially when both dimensions—storage and time—need to grow.
 
 :::tip
-If you're unsure whether to extend a batch or start fresh, compare the output of `getExtensionCost` with the cost of a new batch using the [Postage Stamp Pricing Guide](/docs/storage/#batch-size-breakpoints). In many cases, extending is cheaper, especially for larger and longer-lived batches.
+If you're unsure whether to extend a batch or start fresh, compare the output of `getExtensionCost` with the cost of a new batch using the [Postage Stamp Pricing Guide](./buying-storage.md#batch-size-breakpoints). In many cases, extending is cheaper, especially for larger and longer-lived batches.
 :::
 
 If you're happy with the cost, you can then proceed to extend the **size** and **duration** individually by calling `extendStorageSize` and `extendStorageDuration` as shown in the previous sections.
@@ -363,7 +364,7 @@ We can disregard many of these values since they are only needed for advanced us
 For an explanation of the remaining values, refer to the "Advanced" section below.
 
 :::tip
-Note that although 1 GB was specified as input for the `bee.buyStorage`, the `size` value is ~4.93 GB. Refer to the [section about batch sizes](/docs/storage/#batch-size-breakpoints) above to understand why.
+Note that although 1 GB was specified as input for the `bee.buyStorage`, the `size` value is ~4.93 GB. Refer to the [section about batch sizes](./buying-storage.md#batch-size-breakpoints) above to understand why.
 :::
 
 ### Selecting a Batch
@@ -409,7 +410,7 @@ function isUsableWithFreeSpace(batch) {
 const batchId = getBatch(bee, isUsableWithFreeSpace)
 ```
 
-If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](/docs/storage/#checking-batch-status) your postage batches' status using `bee.getAllPostageBatch` in order to check if a batch with your desired characteristics exists and return its id.
+If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](./buying-storage.md#checking-batch-status) your postage batches' status using `bee.getAllPostageBatch` in order to check if a batch with your desired characteristics exists and return its id.
 
 ### Batch Size Breakpoints
 

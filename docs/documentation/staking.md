@@ -3,6 +3,7 @@ title: Staking
 id: staking
 slug: /staking
 sidebar_label: Staking
+description: Shows how to deposit BZZ stake and query staking status using bee-js to participate in Swarm's redistribution game.
 ---
 
 

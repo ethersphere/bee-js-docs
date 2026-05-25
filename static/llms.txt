@@ -1,0 +1,45 @@
+# bee-js Documentation
+
+> bee-js is the official JavaScript/TypeScript SDK for building applications on Swarm, a decentralised storage and communication network.
+
+`bee-js` lets you interact with a local or remote Bee node from Node.js or the browser. It abstracts the Bee HTTP API, handles chunk-level operations, and provides typed utility classes for sizes, durations, and tokens. The Bee node exposes its API on port 1633 by default. For the full unabridged documentation, see [llms-full.txt](https://bee-js.ethswarm.org/llms-full.txt).
+
+- [Swarm Documentation](https://docs.ethswarm.org/): Full documentation for running Bee nodes and understanding Swarm
+- [Bee API Reference](https://docs.ethswarm.org/api/): Interactive OpenAPI documentation for all Bee HTTP endpoints
+- [The Book of Swarm](https://www.ethswarm.org/The-Book-of-Swarm.pdf): Comprehensive technical reference for Swarm
+- [bee-js GitHub](https://github.com/ethersphere/bee-js): Source code, issues, and releases
+
+## Get started
+
+- [Introduction](https://bee-js.ethswarm.org/docs/): Overview of bee-js and how it fits into the Swarm ecosystem
+- [Getting Started](https://bee-js.ethswarm.org/docs/getting-started): Install bee-js and initialize a Bee client
+
+## Upload and download data
+
+- [Upload & Download](https://bee-js.ethswarm.org/docs/upload-download): Upload and download files, directories, and raw bytes
+- [Buying Storage](https://bee-js.ethswarm.org/docs/storage): Purchase and manage postage stamp batches for uploads
+- [Tracking Uploads](https://bee-js.ethswarm.org/docs/tracking-uploads): Monitor deferred upload progress with tags
+
+## Build applications
+
+- [SOC and Feeds](https://bee-js.ethswarm.org/docs/soc-and-feeds): Mutable data with single-owner chunks and feeds
+- [PSS Messaging](https://bee-js.ethswarm.org/docs/pss): Send encrypted messages over the Swarm network
+- [GSOC](https://bee-js.ethswarm.org/docs/gsoc): Graffiti SOC for pub/sub messaging to full nodes
+- [ACT](https://bee-js.ethswarm.org/docs/act): Access Control Trie for encrypting content to specific recipients
+- [Manifests](https://bee-js.ethswarm.org/docs/manifests): Map file paths to Swarm references for website hosting
+- [Pinning](https://bee-js.ethswarm.org/docs/pinning): Pin content locally to prevent garbage collection
+
+## Node management
+
+- [Checking Node Status](https://bee-js.ethswarm.org/docs/status): Query health, addresses, and operational metrics
+- [Chequebook Management](https://bee-js.ethswarm.org/docs/chequebook): Fund and manage bandwidth payment cheques
+- [Staking](https://bee-js.ethswarm.org/docs/staking): Deposit BZZ stake and participate in the redistribution game
+
+## Reference
+
+- [SDK Overview](https://bee-js.ethswarm.org/docs/overview): Complete index of all public classes, methods, and types
+- [Utility Classes](https://bee-js.ethswarm.org/docs/utilities): Size, Duration, BZZ, and Bytes helper classes
+
+## Optional
+
+- [Community](https://bee-js.ethswarm.org/docs/community): Discord, Reddit, Twitter, and other official channels

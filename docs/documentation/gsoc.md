@@ -3,6 +3,7 @@ title: GSOC
 id: gsoc
 slug: /gsoc
 sidebar_label: GSOC
+description: Explains Graffiti SOC messaging which enables real-time pub/sub communication over Swarm using pre-mined single-owner chunks.
 ---
 
 
@@ -28,7 +29,7 @@ To use the example scripts below, you need:
 
 - A Bee full node with a fully synced reserve for receiving GSOC messages.
 - A light node for sending GSOC messages.
-- The batch ID of a usable postage batch. If you don't have one already, you will need to [buy a batch](/docs/storage/#purchasing-storage) to upload data. If you do have one, you will need to [get and save](/docs/storage/#selecting-a-batch) its batch ID.
+- The batch ID of a usable postage batch. If you don't have one already, you will need to [buy a batch](./buying-storage.md#purchasing-storage) to upload data. If you do have one, you will need to [get and save](./buying-storage.md#selecting-a-batch) its batch ID.
 
 ## Create an Identifier (Receiver and Sender)
 

@@ -3,6 +3,7 @@ title: Checking Node Status
 id: status
 slug: /status
 sidebar_label: Checking Node Status
+description: Describes how to check Bee node health, connectivity, addresses, and operational status using bee-js.
 ---
 
 To understand and monitor the status of your Bee node, `bee-js` provides a set of helpful methods. In this guide, we'll walk through how to retrieve and log the data needed to give a complete overview of your node's current status.
@@ -11,7 +12,7 @@ To understand and monitor the status of your Bee node, `bee-js` provides a set o
 
 To use the example scripts below, you need:
 
-- An instance of the `Bee` class from `bee-js` [initialized](/docs/getting-started/) using the API endpoint of a currently operating Bee node. 
+- An instance of the `Bee` class from `bee-js` [initialized](./getting-started.md) using the API endpoint of a currently operating Bee node. 
 
 
 ### 1. Node Health and Readiness

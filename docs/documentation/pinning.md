@@ -3,6 +3,7 @@ title: Pinning
 id: pinning
 slug: /pinning
 sidebar_label: Pinning
+description: Covers pinning content to a local Bee node to prevent garbage collection and monitoring availability with stewardship utilities.
 ---
 
 Pinning allows you to guarantee that content will always be available by storing it **locally on your own Bee node**. 

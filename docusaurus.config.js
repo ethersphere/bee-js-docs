@@ -6,6 +6,17 @@ module.exports = {
   baseUrl: "/",
   trailingSlash: true,
   plugins: [
+    [
+      'docusaurus-plugin-llms',
+      {
+        generateLLMsTxt: false,
+        generateLLMsFullTxt: true,
+        title: 'bee-js Documentation',
+        description: 'bee-js is the official JavaScript/TypeScript SDK for building applications on Swarm, a decentralised storage and communication network.',
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+      },
+    ],
   ],
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -78,11 +89,11 @@ module.exports = {
       copyright: `Copyleft © ${new Date().getFullYear()}.`,
     },
     algolia: {
-      appId: "D7BASQ1ESY",
+      appId: "ZC4FF0H3GZ",
 
-      apiKey: "8a175ff0c34022d46b4b26cf6f02ad41",
+      apiKey: "70752ba60034b0dcce5cc5888f2fd267",
 
-      indexName: "bee-js-docs-search",
+      indexName: "bee-js-docs-2026",
 
       contextualSearch: false,
     },

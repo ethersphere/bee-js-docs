@@ -3,6 +3,7 @@ title: SDK Overview
 id: overview
 slug: /overview
 sidebar_label: SDK Overview
+description: Complete reference to all publicly available classes, methods, types, and utilities in the bee-js SDK.
 ---
 
 This page serves as a complete reference to all publicly available classes, methods, types, and utilities provided by the `bee-js` SDK. After getting started, this is the place to explore everything you can do with `bee-js` and revisit whenever you need a reminder of how a function works or what a type represents.

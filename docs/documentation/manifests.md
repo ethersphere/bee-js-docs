@@ -3,6 +3,7 @@ title: Manifests
 id: manifests
 slug: /manifests
 sidebar_label: Manifests
+description: Describes the manifest format for mapping file paths to Swarm references enabling directory uploads and website hosting.
 ---
 
 ## 🚧 Under Construction 🚧
