@@ -1,6 +1,6 @@
 # Interface: SOCWriter
 
-Defined in: [bee-js/src/types/index.ts:439](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L439)
+Defined in: [bee-js/src/types/index.ts:479](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L479)
 
 Interface for downloading and uploading single owner chunks
 
@@ -12,9 +12,9 @@ Interface for downloading and uploading single owner chunks
 
 ### download()
 
-> **download**: (`identifier`) => `Promise`\<`SingleOwnerChunk`\>
+> **download**: (`identifier`) => `Promise`\<[`SingleOwnerChunk`](SingleOwnerChunk.md)\>
 
-Defined in: [bee-js/src/types/index.ts:433](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L433)
+Defined in: [bee-js/src/types/index.ts:473](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L473)
 
 Downloads a single owner chunk
 
@@ -28,7 +28,7 @@ The identifier of the chunk
 
 #### Returns
 
-`Promise`\<`SingleOwnerChunk`\>
+`Promise`\<[`SingleOwnerChunk`](SingleOwnerChunk.md)\>
 
 #### Inherited from
 
@@ -40,7 +40,7 @@ The identifier of the chunk
 
 > `readonly` **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:427](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L427)
+Defined in: [bee-js/src/types/index.ts:467](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L467)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [bee-js/src/types/index.ts:427](https://github.com/ethersphere/bee-j
 
 > **upload**: (`stamp`, `identifier`, `data`, `options?`) => `Promise`\<[`UploadResult`](UploadResult.md)\>
 
-Defined in: [bee-js/src/types/index.ts:447](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L447)
+Defined in: [bee-js/src/types/index.ts:487](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L487)
 
 Uploads a single owner chunk
 

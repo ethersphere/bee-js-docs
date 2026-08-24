@@ -1,6 +1,6 @@
 # Interface: PostageBatchBuckets
 
-Defined in: [bee-js/src/types/index.ts:515](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L515)
+Defined in: [bee-js/src/types/index.ts:565](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L565)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:515](https://github.com/ethersphere/bee-j
 
 > **bucketDepth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:517](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L517)
+Defined in: [bee-js/src/types/index.ts:567](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L567)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:517](https://github.com/ethersphere/bee-j
 
 > **buckets**: [`BatchBucket`](BatchBucket.md)[]
 
-Defined in: [bee-js/src/types/index.ts:519](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L519)
+Defined in: [bee-js/src/types/index.ts:569](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L569)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:519](https://github.com/ethersphere/bee-j
 
 > **bucketUpperBound**: `number`
 
-Defined in: [bee-js/src/types/index.ts:518](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L518)
+Defined in: [bee-js/src/types/index.ts:568](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L568)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/index.ts:518](https://github.com/ethersphere/bee-j
 
 > **depth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:516](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L516)
+Defined in: [bee-js/src/types/index.ts:566](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L566)

@@ -1,6 +1,8 @@
 # Interface: EnvelopeWithBatchId
 
-Defined in: [bee-js/src/types/index.ts:579](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L579)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:13
+
+An [Envelope](Envelope.md) with its batch ID, ready to marshal.
 
 ## Extends
 
@@ -12,7 +14,7 @@ Defined in: [bee-js/src/types/index.ts:579](https://github.com/ethersphere/bee-j
 
 > **batchId**: [`BatchId`](../classes/BatchId.md)
 
-Defined in: [bee-js/src/types/index.ts:580](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L580)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:14
 
 ***
 
@@ -20,7 +22,7 @@ Defined in: [bee-js/src/types/index.ts:580](https://github.com/ethersphere/bee-j
 
 > **index**: `Uint8Array`
 
-Defined in: [bee-js/src/types/index.ts:574](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L574)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:8
 
 #### Inherited from
 
@@ -30,9 +32,9 @@ Defined in: [bee-js/src/types/index.ts:574](https://github.com/ethersphere/bee-j
 
 ### issuer
 
-> **issuer**: `Uint8Array`
+> **issuer**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:573](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L573)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:7
 
 #### Inherited from
 
@@ -42,9 +44,9 @@ Defined in: [bee-js/src/types/index.ts:573](https://github.com/ethersphere/bee-j
 
 ### signature
 
-> **signature**: `Uint8Array`
+> **signature**: [`Signature`](../classes/Signature.md)
 
-Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L576)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:10
 
 #### Inherited from
 
@@ -56,7 +58,7 @@ Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-j
 
 > **timestamp**: `Uint8Array`
 
-Defined in: [bee-js/src/types/index.ts:575](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L575)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:9
 
 #### Inherited from
 

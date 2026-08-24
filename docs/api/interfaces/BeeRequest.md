@@ -1,6 +1,6 @@
 # Interface: BeeRequest
 
-Defined in: [bee-js/src/types/index.ts:352](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L352)
+Defined in: [bee-js/src/types/index.ts:392](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L392)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:352](https://github.com/ethersphere/bee-j
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [bee-js/src/types/index.ts:355](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L355)
+Defined in: [bee-js/src/types/index.ts:395](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L395)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:355](https://github.com/ethersphere/bee-j
 
 > **method**: `string`
 
-Defined in: [bee-js/src/types/index.ts:354](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L354)
+Defined in: [bee-js/src/types/index.ts:394](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L394)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:354](https://github.com/ethersphere/bee-j
 
 > `optional` **params**: `Record`\<`string`, `unknown`\>
 
-Defined in: [bee-js/src/types/index.ts:356](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L356)
+Defined in: [bee-js/src/types/index.ts:396](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L396)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/index.ts:356](https://github.com/ethersphere/bee-j
 
 > **url**: `string`
 
-Defined in: [bee-js/src/types/index.ts:353](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L353)
+Defined in: [bee-js/src/types/index.ts:393](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L393)

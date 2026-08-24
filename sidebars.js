@@ -7,6 +7,7 @@ module.exports = {
       items: [
         'documentation/getting-started',
         'documentation/overview',
+        'documentation/migrating-to-v13',
         'documentation/status',
         'documentation/chequebook',
         'documentation/storage',
@@ -40,13 +41,8 @@ module.exports = {
       items: [
         {
           type: 'link',
-          label: 'Ethereum wallet used for signing Feeds',
-          href: 'https://github.com/ethersphere/examples-js/tree/master/eth-wallet-signing'
-        },
-        {
-          type: 'link',
-          label: 'React Upload application',
-          href: 'https://github.com/ethersphere/examples-js/tree/master/upload-react'
+          label: 'create-swarm-app project scaffolding',
+          href: 'https://github.com/ethersphere/create-swarm-app'
         }
       ],
       collapsed: false

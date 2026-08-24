@@ -1,8 +1,21 @@
 # Function: getStampEffectiveBytesBreakpoints()
 
-> **getStampEffectiveBytesBreakpoints**(): `Map`\<`number`, `number`\>
+> **getStampEffectiveBytesBreakpoints**(`encryption`, `erasureCodeLevel?`): `Map`\<`number`, `number`\>
 
-Defined in: [bee-js/src/utils/stamps.ts:84](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/stamps.ts#L84)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/capacity.d.cts:31
+
+Returns the effective size (in bytes) for every depth in the supported
+breakpoint range (17..34), keyed by depth.
+
+## Parameters
+
+### encryption
+
+`boolean`
+
+### erasureCodeLevel?
+
+`number`
 
 ## Returns
 

@@ -1,15 +1,18 @@
 # Function: getRedundancyStat()
 
-> **getRedundancyStat**(`level?`): `RedundancyStats`
+> **getRedundancyStat**(`level`): `RedundancyStat`
 
-Defined in: [bee-js/src/utils/redundancy.ts:121](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/redundancy.ts#L121)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/erasure-coding/levels.d.cts:43
+
+Looks up a single redundancy level's stats by name ('medium'/'strong'/
+'insane'/'paranoid', case-insensitive) or by its numeric level (1-4).
 
 ## Parameters
 
-### level?
+### level
 
-`string` | [`RedundancyLevel`](../../enumerations/RedundancyLevel.md)
+`string` | `number`
 
 ## Returns
 
-`RedundancyStats`
+`RedundancyStat`

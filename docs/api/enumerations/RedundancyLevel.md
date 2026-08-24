@@ -1,6 +1,6 @@
 # Enumeration: RedundancyLevel
 
-Defined in: [bee-js/src/types/index.ts:150](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L150)
+Defined in: [bee-js/src/types/index.ts:176](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L176)
 
 Add redundancy to the data being uploaded so that downloaders can download it with better UX.
 0 value is default and does not add any redundancy to the file.
@@ -11,7 +11,7 @@ Add redundancy to the data being uploaded so that downloaders can download it wi
 
 > **INSANE**: `3`
 
-Defined in: [bee-js/src/types/index.ts:154](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L154)
+Defined in: [bee-js/src/types/index.ts:180](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L180)
 
 ***
 
@@ -19,7 +19,7 @@ Defined in: [bee-js/src/types/index.ts:154](https://github.com/ethersphere/bee-j
 
 > **MEDIUM**: `1`
 
-Defined in: [bee-js/src/types/index.ts:152](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L152)
+Defined in: [bee-js/src/types/index.ts:178](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L178)
 
 ***
 
@@ -27,7 +27,7 @@ Defined in: [bee-js/src/types/index.ts:152](https://github.com/ethersphere/bee-j
 
 > **OFF**: `0`
 
-Defined in: [bee-js/src/types/index.ts:151](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L151)
+Defined in: [bee-js/src/types/index.ts:177](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L177)
 
 ***
 
@@ -35,7 +35,7 @@ Defined in: [bee-js/src/types/index.ts:151](https://github.com/ethersphere/bee-j
 
 > **PARANOID**: `4`
 
-Defined in: [bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L155)
+Defined in: [bee-js/src/types/index.ts:181](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L181)
 
 ***
 
@@ -43,4 +43,4 @@ Defined in: [bee-js/src/types/index.ts:155](https://github.com/ethersphere/bee-j
 
 > **STRONG**: `2`
 
-Defined in: [bee-js/src/types/index.ts:153](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L153)
+Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L179)

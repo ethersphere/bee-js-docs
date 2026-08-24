@@ -23,23 +23,23 @@ In this section, you'll learn how to:
 To pin a reference (so it remains stored on your node):
 
 ```js
-await bee.pin(reference)
+await bee.pin.add(reference)
 console.log('Reference pinned locally.')
 ```
 
 To stop tracking and remove it from local pin storage:
 
 ```js
-await bee.unpin(reference)
+await bee.pin.remove(reference)
 console.log('Reference unpinned and no longer tracked.')
 ```
 
 ## Checking if a Reference is Retrievable
 
-Use `isReferenceRetrievable(reference)` to verify if the content for a given Swarm reference is currently accessible on the network:
+Use `bee.data.isRetrievable(reference)` to verify if the content for a given Swarm reference is currently accessible on the network:
 
 ```js
-const isAvailable = await bee.isReferenceRetrievable(reference)
+const isAvailable = await bee.data.isRetrievable(reference)
 
 if (isAvailable) {
   console.log('Data is retrievable from the network.')
@@ -50,10 +50,10 @@ if (isAvailable) {
 
 ## Reuploading Pinned Data
 
-If content is missing but was previously pinned, you can reupload it using `reuploadPinnedData(postageBatchId, reference)`:
+If content is missing but was previously pinned, you can reupload it using `bee.pin.reuploadData(postageBatchId, reference)`:
 
 ```js
-await bee.reuploadPinnedData(postageBatchId, reference)
+await bee.pin.reuploadData(postageBatchId, reference)
 console.log('Data has been reuploaded to the network.')
 ```
 
@@ -62,14 +62,14 @@ console.log('Data has been reuploaded to the network.')
 You can get all currently pinned references with:
 
 ```js
-const pins = await bee.getAllPins()
+const pins = await bee.pin.getAll()
 console.log('Pinned references:', pins.map(ref => ref.toHex()))
 ```
 
 To check if a specific reference is pinned:
 
 ```js
-const pinStatus = await bee.getPin(reference)
+const pinStatus = await bee.pin.get(reference)
 console.log('Pin info:', pinStatus)
 ```
 
@@ -86,7 +86,7 @@ const postageBatchId = "129903062bedc4eca6fc1c232ed385e93dda72f711caa1ead6018334
 async function reuploadMissingPins() {
   try {
     // Get all currently pinned references
-    const pinnedRefs = await bee.getAllPins()
+    const pinnedRefs = await bee.pin.getAll()
 
     if (!pinnedRefs.length) {
       console.log("No pinned references found.")
@@ -100,13 +100,13 @@ async function reuploadMissingPins() {
     // Loop through all references and check retrievability
     for (const ref of pinnedRefs) {
       const reference = ref.toHex()
-      const isAvailable = await bee.isReferenceRetrievable(reference)
+      const isAvailable = await bee.data.isRetrievable(reference)
 
       if (isAvailable) {
         console.log(`✅ ${reference} is retrievable.`)
       } else {
         console.log(`⚠️  ${reference} is missing — reuploading...`)
-        await bee.reuploadPinnedData(postageBatchId, reference)
+        await bee.pin.reuploadData(postageBatchId, reference)
         console.log(`🔁 Reuploaded ${reference}`)
         repaired++
       }

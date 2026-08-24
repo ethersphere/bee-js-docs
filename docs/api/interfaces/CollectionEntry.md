@@ -1,6 +1,6 @@
 # Interface: CollectionEntry
 
-Defined in: [bee-js/src/types/index.ts:312](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L312)
+Defined in: [bee-js/src/types/index.ts:350](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L350)
 
 Object represents a file and some of its metadata in [[Directory]] object.
 
@@ -10,7 +10,7 @@ Object represents a file and some of its metadata in [[Directory]] object.
 
 > `optional` **file**: `File`
 
-Defined in: [bee-js/src/types/index.ts:315](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L315)
+Defined in: [bee-js/src/types/index.ts:353](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L353)
 
 ***
 
@@ -18,7 +18,7 @@ Defined in: [bee-js/src/types/index.ts:315](https://github.com/ethersphere/bee-j
 
 > `optional` **fsPath**: `string`
 
-Defined in: [bee-js/src/types/index.ts:316](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L316)
+Defined in: [bee-js/src/types/index.ts:354](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L354)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [bee-js/src/types/index.ts:316](https://github.com/ethersphere/bee-j
 
 > **path**: `string`
 
-Defined in: [bee-js/src/types/index.ts:313](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L313)
+Defined in: [bee-js/src/types/index.ts:351](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L351)
 
 ***
 
@@ -34,4 +34,4 @@ Defined in: [bee-js/src/types/index.ts:313](https://github.com/ethersphere/bee-j
 
 > **size**: `number`
 
-Defined in: [bee-js/src/types/index.ts:314](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L314)
+Defined in: [bee-js/src/types/index.ts:352](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L352)

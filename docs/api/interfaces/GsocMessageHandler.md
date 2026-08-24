@@ -1,14 +1,32 @@
 # Interface: GsocMessageHandler
 
-Defined in: [bee-js/src/types/index.ts:339](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L339)
+Defined in: [bee-js/src/types/index.ts:378](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L378)
 
 ## Properties
+
+### onClose()
+
+> **onClose**: (`subscription`) => `void`
+
+Defined in: [bee-js/src/types/index.ts:381](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L381)
+
+#### Parameters
+
+##### subscription
+
+[`GsocSubscription`](GsocSubscription.md)
+
+#### Returns
+
+`void`
+
+***
 
 ### onError()
 
 > **onError**: (`error`, `subscription`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:341](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L341)
+Defined in: [bee-js/src/types/index.ts:380](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L380)
 
 #### Parameters
 
@@ -30,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:341](https://github.com/ethersphere/bee-j
 
 > **onMessage**: (`message`, `subscription`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:340](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L340)
+Defined in: [bee-js/src/types/index.ts:379](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L379)
 
 #### Parameters
 

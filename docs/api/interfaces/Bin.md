@@ -1,6 +1,6 @@
 # Interface: Bin
 
-Defined in: [bee-js/src/types/debug.ts:198](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L198)
+Defined in: [bee-js/src/types/debug.ts:199](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L199)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:198](https://github.com/ethersphere/bee-j
 
 > **connected**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:200](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L200)
+Defined in: [bee-js/src/types/debug.ts:201](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L201)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:200](https://github.com/ethersphere/bee-j
 
 > **connectedPeers**: [`Peer`](Peer.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:202](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L202)
+Defined in: [bee-js/src/types/debug.ts:203](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L203)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:202](https://github.com/ethersphere/bee-j
 
 > **disconnectedPeers**: [`Peer`](Peer.md)[]
 
-Defined in: [bee-js/src/types/debug.ts:201](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L201)
+Defined in: [bee-js/src/types/debug.ts:202](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L202)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/debug.ts:201](https://github.com/ethersphere/bee-j
 
 > **population**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:199](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L199)
+Defined in: [bee-js/src/types/debug.ts:200](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L200)
