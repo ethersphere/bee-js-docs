@@ -1,3 +1,8 @@
+---
+title: 'Variable: PSS_TARGET_HEX_LENGTH_MAX'
+description: 'const PSS_TARGET_HEX_LENGTH_MAX: 4 = 4'
+---
+
 # Variable: PSS\_TARGET\_HEX\_LENGTH\_MAX
 
 > `const` **PSS\_TARGET\_HEX\_LENGTH\_MAX**: `4` = `4`

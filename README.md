@@ -34,6 +34,37 @@ This command generates static content into the `build` directory and can be serv
 Don't forget to find and replace the version number for the whole of the docs folder. 
 
 
+## API Reference (`docs/api`)
+
+Everything under `docs/api` is [typedoc](https://typedoc.org) output generated from the bee-js sources and committed to this repository, so the site builds without a bee-js checkout.
+
+### Regenerating
+
+The generator reads two clones that are not part of this repository:
+
+```
+$ git clone https://github.com/ethersphere/bee-js sources/bee-js
+$ git clone https://github.com/ethersphere/core-sdk sources/core-sdk
+$ npm --prefix sources/bee-js install
+```
+
+Check both out at the release you are documenting, then run:
+
+```
+$ npm run generate-api
+```
+
+This drives typedoc via `typedoc.config.mjs` and reshapes the output into the layout the site expects: it flattens the `Utils` namespace into `docs/api/namespaces/Utils`, turns the generated index into `Overview.md`, reduces references to TypeScript's own `lib.*.d.ts` to a machine-independent form, and links the `@ethersphere/core-sdk` re-exports against the core-sdk clone (`scripts/fix-core-sdk-links.mjs`, also runnable on its own as `npm run fix-api-links`).
+
+Review the result as a diff against what is already committed. Anything unrelated to the bee-js release you are documenting means the toolchain moved, not the docs.
+
+### Things worth knowing before changing it
+
+- **`typedoc` and `typedoc-plugin-markdown` are pinned exactly.** A plugin upgrade rewrites unrelated pages and drowns the diff, so upgrade them deliberately, on their own.
+- **The `typescript` devDependency exists only for this step.** Nothing in this repository is TypeScript; typedoc compiles the bee-js sources with it, so it has to track what `sources/bee-js` requires or generation fails with type errors.
+- **`scripts/typedoc-frontmatter-titles.mjs` is not optional.** typedoc escapes markdown characters in page headings (`# Variable: NULL\_OWNER`), and Docusaurus takes the browser tab title, sidebar label, breadcrumbs and prev/next links from that raw heading without undoing the escapes. The plugin adds an unescaped frontmatter `title` instead. The escaping itself is not configurable upstream, and the heading has to stay escaped or MDX parses `\<V\>` as JSX.
+- **The namespace classes are missing on purpose.** The classes behind `bee.data`, `bee.stamp` and the rest live in `src/modules/*.ts` and are not exported from bee-js's `src/index.ts`, so typedoc emits no pages for them. They cannot simply be added as entry points — their names collide with exported types (`Data`, `Tag`, `Pin`, `Collection`, `Cheque`, `Chunk`). They are documented by hand in `docs/documentation/overview.md`.
+
 ## Maintainers
 
 See what "Maintainer" means [here](https://github.com/ethersphere/repo-maintainer).

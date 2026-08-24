@@ -1,3 +1,8 @@
+---
+title: 'Variable: CHUNK_SIZE'
+description: 'const CHUNK_SIZE: number'
+---
+
 # Variable: CHUNK\_SIZE
 
 > `const` **CHUNK\_SIZE**: `number`

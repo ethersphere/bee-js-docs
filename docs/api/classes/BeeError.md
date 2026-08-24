@@ -39,7 +39,7 @@ Defined in: [bee-js/src/utils/error.ts:2](https://github.com/ethersphere/bee-js/
 
 > **message**: `string`
 
-Defined in: bee-js/node\_modules/typescript/lib/lib.es5.d.ts:1077
+Defined in: typescript/lib/lib.es5.d.ts:1077
 
 #### Inherited from
 
@@ -51,7 +51,7 @@ Defined in: bee-js/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **name**: `string`
 
-Defined in: bee-js/node\_modules/typescript/lib/lib.es5.d.ts:1076
+Defined in: typescript/lib/lib.es5.d.ts:1076
 
 #### Inherited from
 
@@ -63,7 +63,7 @@ Defined in: bee-js/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > `optional` **stack**: `string`
 
-Defined in: bee-js/node\_modules/typescript/lib/lib.es5.d.ts:1078
+Defined in: typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 

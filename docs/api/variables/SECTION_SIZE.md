@@ -1,3 +1,8 @@
+---
+title: 'Variable: SECTION_SIZE'
+description: 'const SECTION_SIZE: 32 = 32'
+---
+
 # Variable: SECTION\_SIZE
 
 > `const` **SECTION\_SIZE**: `32` = `32`

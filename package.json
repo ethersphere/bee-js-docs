@@ -21,6 +21,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "fix-api-links": "node scripts/fix-core-sdk-links.mjs",
+    "generate-api": "node scripts/generate-api.mjs",
     "start": "docusaurus start",
     "prebuild": "node scripts/validate-llms-txt.mjs",
     "build": "docusaurus build",
@@ -54,7 +55,9 @@
     "@commitlint/config-conventional": "^19.0.3",
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/types": "^3.7.0",
-    "typescript": "~5.4.2"
+    "typedoc": "0.28.20",
+    "typedoc-plugin-markdown": "4.6.4",
+    "typescript": "~5.9.3"
   },
   "browserslist": {
     "production": [

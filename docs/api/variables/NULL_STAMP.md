@@ -1,3 +1,8 @@
+---
+title: 'Variable: NULL_STAMP'
+description: 'const NULL_STAMP: [BatchId](../classes/BatchId.md)'
+---
+
 # Variable: NULL\_STAMP
 
 > `const` **NULL\_STAMP**: [`BatchId`](../classes/BatchId.md)

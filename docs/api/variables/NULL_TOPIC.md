@@ -1,3 +1,8 @@
+---
+title: 'Variable: NULL_TOPIC'
+description: 'const NULL_TOPIC: [Topic](../classes/Topic.md)'
+---
+
 # Variable: NULL\_TOPIC
 
 > `const` **NULL\_TOPIC**: [`Topic`](../classes/Topic.md)

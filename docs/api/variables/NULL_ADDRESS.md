@@ -1,3 +1,8 @@
+---
+title: 'Variable: NULL_ADDRESS'
+description: 'const NULL_ADDRESS: Uint8Array<ArrayBuffer>'
+---
+
 # Variable: NULL\_ADDRESS
 
 > `const` **NULL\_ADDRESS**: `Uint8Array`\<`ArrayBuffer`\>

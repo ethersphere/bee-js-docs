@@ -1,3 +1,8 @@
+---
+title: 'Variable: TAGS_LIMIT_MIN'
+description: 'const TAGS_LIMIT_MIN: 1 = 1'
+---
+
 # Variable: TAGS\_LIMIT\_MIN
 
 > `const` **TAGS\_LIMIT\_MIN**: `1` = `1`
