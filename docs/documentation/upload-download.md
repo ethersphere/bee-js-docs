@@ -27,7 +27,7 @@ To use the example scripts below, you need:
 
 ## Arbitrary Data
 
-You can upload and retrieve any `string` or `Uint8Array` data with the `uploadData` and `downloadData` functions.
+You can upload and retrieve any `string` or `Uint8Array` data with the `bee.data.upload` and `bee.data.download` functions.
 
 When you download data the return type is `Bytes`. The `Bytes` class includes various convenience functions like:
 
@@ -53,13 +53,13 @@ const jsonData = {
 
 const jsonString = JSON.stringify(jsonData);
 
-const result = await bee.uploadData(postageBatchId, jsonString)
+const result = await bee.data.upload(postageBatchId, jsonString)
 
 // Prints the 64 character long hex string Swarm reference - make sure to save the reference in order to access the content later
 console.log(result.reference.toHex()) 
 
 // Use the Swarm reference hash to download the data
-const retrievedData = await bee.downloadData(result.reference)
+const retrievedData = await bee.data.download(result.reference)
 
 
 console.log(retrievedData) // Prints the raw data
@@ -90,10 +90,10 @@ Bytes {
 
 ## Single Files
 
-The `uploadFile` function accepts a `string`, `Uint8Array`, Node.js `Readable` stream, or browser `File` object as input data, along with an optional filename and upload options.
+The `bee.file.upload` function accepts a `string`, `Uint8Array`, Node.js `Readable` stream, or browser `File` object as input data, along with an optional filename and upload options.
 
 :::info
-When working with browsers you can use the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the second argument of the `uploadFile` function.
+When working with browsers you can use the [`File` interface](https://developer.mozilla.org/en-US/docs/Web/API/File). The filename is taken from the `File` object itself, but can be overwritten through the third argument of the `bee.file.upload` function.
 :::
 
 ```js
@@ -110,7 +110,7 @@ async function uploadFromDisk() {
     const fileData = readFileSync(filePath)
 
     // Upload the file data
-    const result = await bee.uploadFile(postageBatchId, fileData, "textfile.txt", {
+    const result = await bee.file.upload(postageBatchId, fileData, "textfile.txt", {
       contentType: "text/plain"
     })
     
@@ -119,7 +119,7 @@ async function uploadFromDisk() {
 
 
     // Download the file
-    const retrievedFile = await bee.downloadFile(result.reference.toHex())
+    const retrievedFile = await bee.file.download(result.reference.toHex())
 
     console.log(retrievedFile.name)         // Prints 'textfile.txt'
     console.log(retrievedFile.contentType)  // Prints 'text/plain'
@@ -137,22 +137,22 @@ uploadFromDisk()
 Example terminal output:
 
 ```bash
-textfile.txt
-application/x-www-form-urlencoded
-this is a sample file
 0dca369c5a1a1ef5be1f5e293089c695920323805568382d9e97e3cd17678a3a
+textfile.txt
+text/plain
+this is a sample file
 ```
 
 ## Multiple Files 
 
-For uploading multiple files at once in a browser environment you can use the `uploadFiles` function. 
+For uploading multiple files at once in a browser environment you can use the `bee.collection.uploadFromFileList` function. 
 
 *Note that it preserves the relative paths of all uploaded files, so the full paths (e.g. "folder/nested.txt") must be used when downloading them.*
 
 :::caution Browser Only
   
 
-The `uploadFiles` function is only supported for **browser environments**, as it requires input in the form of a [`FileList`](https://developer.mozilla.org/en-US/docs/Web/API/FileList) or array of [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) objects.
+The `bee.collection.uploadFromFileList` function is only supported for **browser environments**, as it requires input in the form of a [`FileList`](https://developer.mozilla.org/en-US/docs/Web/API/FileList) or array of [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) objects.
 
 While `File` is available in Node v20+, it is still not fully supported and may not always work as expected.  
 :::
@@ -172,13 +172,13 @@ async function uploadFiles() {
     const deepFile = new File(["Deeply nested file content"], "folder/subfolder/deep.txt", { type: "text/plain" })
 
     // Upload all files
-    const result = await bee.uploadFiles(postageBatchId, [rootFile, nestedFile, deepFile])
+    const result = await bee.collection.uploadFromFileList(postageBatchId, [rootFile, nestedFile, deepFile])
     console.log("Files uploaded with reference:", result.reference.toHex())
 
     // Download each file by full path
-    const downloadedRoot = await bee.downloadFile(result.reference, 'root.txt')
-    const downloadedNested = await bee.downloadFile(result.reference, 'folder/nested.txt')
-    const downloadedDeep = await bee.downloadFile(result.reference, 'folder/subfolder/deep.txt')
+    const downloadedRoot = await bee.file.download(result.reference, 'root.txt')
+    const downloadedNested = await bee.file.download(result.reference, 'folder/nested.txt')
+    const downloadedDeep = await bee.file.download(result.reference, 'folder/subfolder/deep.txt')
 
     // Display contents
     console.log("Root file:", downloadedRoot.data.toUtf8())
@@ -197,10 +197,10 @@ uploadFiles()
 ## Directories
 
 :::info
-`uploadFilesFromDirectory` is not available in the browser as it relies on [`fs` from NodeJS](https://nodejs.org/api/fs.html).
+`bee.collection.uploadFromDirectory` is not available in the browser as it relies on [`fs` from NodeJS](https://nodejs.org/api/fs.html).
 :::
 
-The `uploadFilesFromDirectory` function takes a directory path as input and recursively uploads all files within it, including those in all nested subdirectories, while preserving their relative paths.
+The `bee.collection.uploadFromDirectory` function takes a directory path as input and recursively uploads all files within it, including those in all nested subdirectories, while preserving their relative paths.
 
 *When downloading files later, you must use the full relative paths exactly as they appeared during upload.*
 
@@ -224,15 +224,15 @@ const postageBatchId = "ec4d7e3acbd626471b33135164335dfcb0bed889dd4a951c09da8ea7
 async function uploadDirectory() {
   try {
     // Upload the current directory (where the script is run)
-    const result = await bee.uploadFilesFromDirectory(postageBatchId, process.cwd())
+    const result = await bee.collection.uploadFromDirectory(postageBatchId, process.cwd())
 
     console.log("Directory uploaded successfully!")
     console.log("Swarm reference:", result.reference.toHex())
 
     // Download each file using its relative path
-    const root = await bee.downloadFile(result.reference, 'root.txt')
-    const nested = await bee.downloadFile(result.reference, 'folder/nested.txt')
-    const deep = await bee.downloadFile(result.reference, 'folder/subfolder/deep.txt')
+    const root = await bee.file.download(result.reference, 'root.txt')
+    const nested = await bee.file.download(result.reference, 'folder/nested.txt')
+    const deep = await bee.file.download(result.reference, 'folder/subfolder/deep.txt')
 
     // Print out file contents
     console.log("root.txt:", root.data.toUtf8())
@@ -259,7 +259,7 @@ folder/subfolder/deep.txt: Deeply nested content
 
 ## Upload Options
 
-The `uploadData`, `uploadFile`, `uploadFiles`, and other similar methods accept an **options object** as their third argument. This object lets you modify how the upload is handled — for example, enabling encryption, pinning data locally, or attaching a tag to track the upload.
+The `bee.data.upload`, `bee.collection.upload`, `bee.collection.uploadFromFileList`, and other similar methods accept an **options object** as their third argument. On `bee.file.upload` the options are the fourth argument, since the third one is the file name. This object lets you modify how the upload is handled — for example, enabling encryption, pinning data locally, or attaching a tag to track the upload.
 
 
 ### Pinning
@@ -267,7 +267,7 @@ The `uploadData`, `uploadFile`, `uploadFiles`, and other similar methods accept 
 If you set `pin: true`, the uploaded data will be **stored locally** on your Bee node, even if it becomes unavailable on the wider Swarm network. This lets your node re-upload the content if needed:
 
 ```js
-await bee.uploadData(postageBatchId, 'my content', { pin: true })
+await bee.data.upload(postageBatchId, 'my content', { pin: true })
 ```
 
 :::info
@@ -285,7 +285,7 @@ You can enable **client-side encryption** by setting `encrypt: true`. This encry
 **Example:**
 
 ```js
-await bee.uploadData(postageBatchId, 'sensitive content', { encrypt: true })
+await bee.data.upload(postageBatchId, 'sensitive content', { encrypt: true })
 ```
 
 When you later download the content, `bee-js` will decrypt it automatically if the reference contains the embedded key.
@@ -296,18 +296,18 @@ More info:
 
 ### Tags
 
-Tags let you **track upload progress** through the Bee API. You can create a new tag using `bee.createTag()`, then pass its ID when uploading.
+Tags let you **track upload progress** through the Bee API. You can create a new tag using `bee.tag.create()`, then pass its ID when uploading.
 
 **Example:**
 
 ```js
-const tag = await bee.createTag()
-await bee.uploadData(postageBatchId, 'track me', { tag: tag.uid })
+const tag = await bee.tag.create()
+await bee.data.upload(postageBatchId, 'track me', { tag: tag.uid })
 ```
 
 You can use the tag ID to monitor syncing status: how many chunks were split, stored, seen, and synced.
 
-See [here](./upload-download.md#using-tags-to-monitor-upload-progress) for more info on creating, monitoring, and managing tags.
+See the [Tracking Uploads](./tracking-uploads.md) page for more info on creating, monitoring, and managing tags.
 
 
 ### Deferred Uploads
@@ -321,7 +321,7 @@ This can be risky if you assume the data is already retrievable using the return
 **Recommended usage:**
 
 ```js
-await bee.uploadData(postageBatchId, 'data', { deferred: false })
+await bee.data.upload(postageBatchId, 'data', { deferred: false })
 ```
 
 :::tip

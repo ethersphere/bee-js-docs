@@ -59,6 +59,12 @@ const bee = new Bee('http://localhost:1633')
 
 That’s it! now you can use the `bee` object.
 
+Operations are grouped into namespaces by subject, so uploading raw data is `bee.data.upload(...)`, listing postage batches is `bee.stamp.getAll(...)`, and so on. The [SDK Overview](./overview.md) lists every namespace.
+
+:::info Upgrading from v12?
+Version 13 moved these methods out of the flat `bee.` surface into namespaces, and moved the Swarm primitives into a separate `@ethersphere/core-sdk` package. A codemod rewrites the call sites for you. See [Migrating from v12 to v13](./migrating-to-v13.md).
+:::
+
 :::info Run your own Bee node
 You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
 :::

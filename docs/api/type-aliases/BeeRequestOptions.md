@@ -2,7 +2,9 @@
 
 > **BeeRequestOptions** = `object`
 
-Defined in: [bee-js/src/types/index.ts:43](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L43)
+Defined in: [bee-js/src/types/index.ts:51](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L51)
+
+Behavior of the HTTP client, such as `timeout`, additional `headers`, custom `httpAgent`, etc.
 
 ## Extended by
 
@@ -14,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:43](https://github.com/ethersphere/bee-js
 
 > `optional` **baseURL**: `string`
 
-Defined in: [bee-js/src/types/index.ts:44](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L44)
+Defined in: [bee-js/src/types/index.ts:52](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L52)
 
 ***
 
@@ -22,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:44](https://github.com/ethersphere/bee-js
 
 > `optional` **endlesslyRetry**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:50](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L50)
+Defined in: [bee-js/src/types/index.ts:58](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L58)
 
 ***
 
@@ -30,7 +32,7 @@ Defined in: [bee-js/src/types/index.ts:50](https://github.com/ethersphere/bee-js
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [bee-js/src/types/index.ts:46](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L46)
+Defined in: [bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L54)
 
 ***
 
@@ -38,7 +40,7 @@ Defined in: [bee-js/src/types/index.ts:46](https://github.com/ethersphere/bee-js
 
 > `optional` **httpAgent**: `unknown`
 
-Defined in: [bee-js/src/types/index.ts:48](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L48)
+Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L56)
 
 ***
 
@@ -46,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:48](https://github.com/ethersphere/bee-js
 
 > `optional` **httpsAgent**: `unknown`
 
-Defined in: [bee-js/src/types/index.ts:49](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L49)
+Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L57)
 
 ***
 
@@ -54,7 +56,7 @@ Defined in: [bee-js/src/types/index.ts:49](https://github.com/ethersphere/bee-js
 
 > `optional` **onRequest**: (`request`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:47](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L47)
+Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L55)
 
 #### Parameters
 
@@ -68,8 +70,16 @@ Defined in: [bee-js/src/types/index.ts:47](https://github.com/ethersphere/bee-js
 
 ***
 
+### signal?
+
+> `optional` **signal**: `AbortSignal`
+
+Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L59)
+
+***
+
 ### timeout?
 
 > `optional` **timeout**: `number`
 
-Defined in: [bee-js/src/types/index.ts:45](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L45)
+Defined in: [bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L53)

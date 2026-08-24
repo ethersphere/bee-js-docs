@@ -25,8 +25,8 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkHealthAndReadiness() {
-  const health = await bee.getHealth()
-  const readiness = await bee.getReadiness()
+  const health = await bee.status.getHealth()
+  const readiness = await bee.status.getReadiness()
 
   console.log('Health:', health)
   console.log('Readiness:', readiness)
@@ -52,7 +52,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkTopology() {
-  const topology = await bee.getTopology()
+  const topology = await bee.connectivity.getTopology()
 
   console.log('Topology:', topology)
 }
@@ -100,7 +100,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkAddresses() {
-  const addresses = await bee.getNodeAddresses()
+  const addresses = await bee.connectivity.getNodeAddresses()
 
   console.log('Node Addresses:', addresses)
 }
@@ -133,8 +133,8 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkVersions() {
-  const versions = await bee.getVersions()
-  const isSupported = await bee.isSupportedApiVersion()
+  const versions = await bee.status.getVersions()
+  const isSupported = await bee.status.isSupportedApiVersion()
 
   console.log('Node Versions:', versions)
   console.log('Is Supported API Version:', isSupported)
@@ -165,7 +165,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function getNodeInfo() {
-  const info = await bee.getNodeInfo()
+  const info = await bee.status.getNodeInfo()
 
   console.log('Node Info:', info)
 }
@@ -189,7 +189,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function getChainState() {
-  const state = await bee.getChainState()
+  const state = await bee.status.getChainState()
 
   console.log('Chain State:', state)
 }
@@ -218,7 +218,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function getReserveState() {
-  const reserveState = await bee.getReserveState()
+  const reserveState = await bee.status.getReserveState()
 
   console.log('Reserve State:', reserveState)
 }
@@ -237,57 +237,57 @@ Reserve State: { commitment: 17360879616, radius: 13, storageRadius: 0 }
 You can combine all of the above into one function to quickly inspect the full status of your node:
 
 ```js
-import { Bee, Bytes } from '@ethersphere/bee-js'
+import { Bee } from '@ethersphere/bee-js'
 
 const bee = new Bee('http://localhost:1633')
 
 async function checkHealthAndReadiness() {
-  const health = await bee.getHealth()
-  const readiness = await bee.getReadiness()
+  const health = await bee.status.getHealth()
+  const readiness = await bee.status.getReadiness()
 
   console.log('Health:', health)
   console.log('Readiness:', readiness)
 }
 
 async function checkTopology() {
-  const topology = await bee.getTopology()
+  const topology = await bee.connectivity.getTopology()
 
   console.log('Topology:', topology)
 }
 
 async function checkAddresses() {
-  const addresses = await bee.getNodeAddresses()
+  const addresses = await bee.connectivity.getNodeAddresses()
 
   console.log('Node Addresses:')
-  console.log('Overlay:', new Bytes(addresses.overlay.bytes).toHex())
-  console.log('Ethereum:', new Bytes(addresses.ethereum.bytes).toHex())
-  console.log('Public Key:', new Bytes(addresses.publicKey.bytes).toHex())
-  console.log('PSS Public Key:', new Bytes(addresses.pssPublicKey.bytes).toHex())
+  console.log('Overlay:', addresses.overlay.toHex())
+  console.log('Ethereum:', addresses.ethereum.toHex())
+  console.log('Public Key:', addresses.publicKey.toHex())
+  console.log('PSS Public Key:', addresses.pssPublicKey.toHex())
   console.log('Underlay:', addresses.underlay)
 }
 
 async function checkVersions() {
-  const versions = await bee.getVersions()
-  const isSupported = await bee.isSupportedApiVersion()
+  const versions = await bee.status.getVersions()
+  const isSupported = await bee.status.isSupportedApiVersion()
 
   console.log('Node Versions:', versions)
   console.log('Is Supported API Version:', isSupported)
 }
 
 async function getNodeInfo() {
-  const info = await bee.getNodeInfo()
+  const info = await bee.status.getNodeInfo()
 
   console.log('Node Info:', info)
 }
 
 async function getChainState() {
-  const state = await bee.getChainState()
+  const state = await bee.status.getChainState()
 
   console.log('Chain State:', state)
 }
 
 async function getReserveState() {
-  const reserveState = await bee.getReserveState()
+  const reserveState = await bee.status.getReserveState()
 
   console.log('Reserve State:', reserveState)
 }

@@ -1,6 +1,6 @@
 # Interface: RedundantUploadOptions
 
-Defined in: [bee-js/src/types/index.ts:158](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L158)
+Defined in: [bee-js/src/types/index.ts:184](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L184)
 
 ## Extends
 
@@ -12,7 +12,7 @@ Defined in: [bee-js/src/types/index.ts:158](https://github.com/ethersphere/bee-j
 
 > `optional` **act**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:101](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L101)
+Defined in: [bee-js/src/types/index.ts:127](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L127)
 
 If set to true, an ACT will be created for the uploaded data.
 
@@ -26,7 +26,7 @@ If set to true, an ACT will be created for the uploaded data.
 
 > `optional` **actHistoryAddress**: `string` \| `Uint8Array`\<`ArrayBufferLike`\> \| [`Reference`](../classes/Reference.md)
 
-Defined in: [bee-js/src/types/index.ts:103](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L103)
+Defined in: [bee-js/src/types/index.ts:129](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L129)
 
 #### Inherited from
 
@@ -38,7 +38,7 @@ Defined in: [bee-js/src/types/index.ts:103](https://github.com/ethersphere/bee-j
 
 > `optional` **deferred**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:143](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L143)
+Defined in: [bee-js/src/types/index.ts:169](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L169)
 
 Determines if the uploaded data should be sent to the network immediately (eq. deferred=false) or in a deferred fashion (eq. deferred=true).
 
@@ -63,7 +63,7 @@ true
 
 > `optional` **encrypt**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:122](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L122)
+Defined in: [bee-js/src/types/index.ts:148](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L148)
 
 Will encrypt the uploaded data and return longer hash which also includes the decryption key.
 
@@ -83,7 +83,7 @@ Will encrypt the uploaded data and return longer hash which also includes the de
 
 > `optional` **pin**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:113](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L113)
+Defined in: [bee-js/src/types/index.ts:139](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L139)
 
 Will pin the data locally in the Bee node as well.
 
@@ -104,7 +104,7 @@ Locally pinned data is possible to reupload to network if it disappear.
 
 > `optional` **redundancyLevel**: [`RedundancyLevel`](../enumerations/RedundancyLevel.md)
 
-Defined in: [bee-js/src/types/index.ts:159](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L159)
+Defined in: [bee-js/src/types/index.ts:185](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L185)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: [bee-js/src/types/index.ts:159](https://github.com/ethersphere/bee-j
 
 > `optional` **tag**: `number`
 
-Defined in: [bee-js/src/types/index.ts:131](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L131)
+Defined in: [bee-js/src/types/index.ts:157](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L157)
 
 Tags keep track of syncing the data with network. This option allows attach existing Tag UUID to the uploaded data.
 

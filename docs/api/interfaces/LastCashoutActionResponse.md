@@ -1,14 +1,14 @@
 # Interface: LastCashoutActionResponse
 
-Defined in: [bee-js/src/types/debug.ts:57](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L57)
+Defined in: [bee-js/src/types/debug.ts:57](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L57)
 
 ## Properties
 
 ### lastCashedCheque
 
-> **lastCashedCheque**: `null` \| [`Cheque`](Cheque.md)
+> **lastCashedCheque**: [`Cheque`](Cheque.md) \| `null`
 
-Defined in: [bee-js/src/types/debug.ts:61](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L61)
+Defined in: [bee-js/src/types/debug.ts:61](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L61)
 
 ***
 
@@ -16,23 +16,23 @@ Defined in: [bee-js/src/types/debug.ts:61](https://github.com/ethersphere/bee-js
 
 > **peer**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:58](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L58)
+Defined in: [bee-js/src/types/debug.ts:58](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L58)
 
 ***
 
 ### result
 
-> **result**: `null` \| [`CashoutResult`](CashoutResult.md)
+> **result**: [`CashoutResult`](CashoutResult.md) \| `null`
 
-Defined in: [bee-js/src/types/debug.ts:62](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L62)
+Defined in: [bee-js/src/types/debug.ts:62](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L62)
 
 ***
 
 ### transactionHash
 
-> **transactionHash**: `null` \| `string`
+> **transactionHash**: `string` \| `null`
 
-Defined in: [bee-js/src/types/debug.ts:60](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L60)
+Defined in: [bee-js/src/types/debug.ts:60](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L60)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [bee-js/src/types/debug.ts:60](https://github.com/ethersphere/bee-js
 
 > **uncashedAmount**: [`BZZ`](../classes/BZZ.md)
 
-Defined in: [bee-js/src/types/debug.ts:59](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L59)
+Defined in: [bee-js/src/types/debug.ts:59](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L59)

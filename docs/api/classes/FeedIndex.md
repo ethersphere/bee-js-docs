@@ -1,6 +1,8 @@
 # Class: FeedIndex
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:202](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L202)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:5
+
+An 8-byte, big-endian sequential feed update index.
 
 ## Extends
 
@@ -12,7 +14,7 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:202](https://github.com/ethersphere
 
 > **new FeedIndex**(`bytes`): `FeedIndex`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:206](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L206)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:9
 
 #### Parameters
 
@@ -30,23 +32,11 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:206](https://github.com/ethersphere
 
 ## Properties
 
-### bytes
-
-> `protected` `readonly` **bytes**: `Uint8Array`
-
-Defined in: [bee-js/src/utils/bytes.ts:7](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L7)
-
-#### Inherited from
-
-[`Bytes`](Bytes.md).[`bytes`](Bytes.md#bytes)
-
-***
-
 ### length
 
 > `readonly` **length**: `number`
 
-Defined in: [bee-js/src/utils/bytes.ts:8](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L8)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:7
 
 #### Inherited from
 
@@ -58,7 +48,7 @@ Defined in: [bee-js/src/utils/bytes.ts:8](https://github.com/ethersphere/bee-js/
 
 > `readonly` `static` **LENGTH**: `8` = `8`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:203](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L203)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:6
 
 ***
 
@@ -66,7 +56,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:203](https://github.com/ethersphere
 
 > `readonly` `static` **MINUS\_ONE**: `FeedIndex`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:204](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L204)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:8
+
+Sentinel index (all bits set) some feed types use to mean "no update yet".
 
 ## Methods
 
@@ -74,7 +66,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:204](https://github.com/ethersphere
 
 > **equals**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/bytes.ts:83](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L83)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:65
+
+Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
 #### Parameters
 
@@ -96,7 +90,9 @@ Defined in: [bee-js/src/utils/bytes.ts:83](https://github.com/ethersphere/bee-js
 
 > **next**(): `FeedIndex`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:218](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L218)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:21
+
+Returns the next sequential index, wrapping [MINUS\_ONE](#minus_one) back to 0.
 
 #### Returns
 
@@ -108,7 +104,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:218](https://github.com/ethersphere
 
 > **offset**(`index`): `Uint8Array`
 
-Defined in: [bee-js/src/utils/bytes.ts:51](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L51)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:33
+
+Returns a copy of the bytes from `index` to the end.
 
 #### Parameters
 
@@ -126,11 +124,31 @@ Defined in: [bee-js/src/utils/bytes.ts:51](https://github.com/ethersphere/bee-js
 
 ***
 
+### represent()
+
+> **represent**(): `string`
+
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:69
+
+Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.md#tohex).
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Bytes`](Bytes.md).[`represent`](Bytes.md#represent)
+
+***
+
 ### toBase32()
 
 > **toBase32**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:67](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L67)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:49
+
+Encodes as a padded base32 string.
 
 #### Returns
 
@@ -146,7 +164,9 @@ Defined in: [bee-js/src/utils/bytes.ts:67](https://github.com/ethersphere/bee-js
 
 > **toBase64**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:63](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L63)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:45
+
+Encodes as a padded base64 string.
 
 #### Returns
 
@@ -162,7 +182,9 @@ Defined in: [bee-js/src/utils/bytes.ts:63](https://github.com/ethersphere/bee-js
 
 > **toBigInt**(): `bigint`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:214](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L214)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:17
+
+Decodes the index as a bigint.
 
 #### Returns
 
@@ -174,7 +196,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:214](https://github.com/ethersphere
 
 > **toHex**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:59](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L59)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:41
+
+Encodes as a lowercase hex string, with no `0x` prefix.
 
 #### Returns
 
@@ -190,7 +214,9 @@ Defined in: [bee-js/src/utils/bytes.ts:59](https://github.com/ethersphere/bee-js
 
 > **toJSON**(): `unknown`
 
-Defined in: [bee-js/src/utils/bytes.ts:79](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L79)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:61
+
+Decodes the bytes as UTF-8 JSON.
 
 #### Returns
 
@@ -206,7 +232,9 @@ Defined in: [bee-js/src/utils/bytes.ts:79](https://github.com/ethersphere/bee-js
 
 > **toString**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:71](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L71)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:53
+
+Same as [toHex](Bytes.md#tohex).
 
 #### Returns
 
@@ -222,7 +250,9 @@ Defined in: [bee-js/src/utils/bytes.ts:71](https://github.com/ethersphere/bee-js
 
 > **toUint8Array**(): `Uint8Array`
 
-Defined in: [bee-js/src/utils/bytes.ts:55](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L55)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:37
+
+Returns a copy of the underlying bytes.
 
 #### Returns
 
@@ -238,7 +268,9 @@ Defined in: [bee-js/src/utils/bytes.ts:55](https://github.com/ethersphere/bee-js
 
 > **toUtf8**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:75](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L75)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:57
+
+Decodes the bytes as UTF-8 text.
 
 #### Returns
 
@@ -250,15 +282,41 @@ Defined in: [bee-js/src/utils/bytes.ts:75](https://github.com/ethersphere/bee-js
 
 ***
 
-### fromBigInt()
+### concat()
 
-> `static` **fromBigInt**(`number`): `FeedIndex`
+> `static` **concat**(...`arrays`): `Uint8Array`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:210](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L210)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:20
+
+Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
 #### Parameters
 
-##### number
+##### arrays
+
+...(`Uint8Array`\<`ArrayBufferLike`\> \| [`Bytes`](Bytes.md))[]
+
+#### Returns
+
+`Uint8Array`
+
+#### Inherited from
+
+[`Bytes`](Bytes.md).[`concat`](Bytes.md#concat)
+
+***
+
+### fromBigInt()
+
+> `static` **fromBigInt**(`value`): `FeedIndex`
+
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/feed-index.d.cts:13
+
+Encodes a bigint index as an 8-byte, big-endian FeedIndex.
+
+#### Parameters
+
+##### value
 
 `bigint`
 
@@ -272,7 +330,10 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:210](https://github.com/ethersphere
 
 > `static` **fromSlice**(`bytes`, `start`, `length?`): [`Bytes`](Bytes.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:43](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L43)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:29
+
+Wraps a slice of `bytes` starting at `start`, running to the end unless
+`length` is given.
 
 #### Parameters
 
@@ -302,7 +363,9 @@ Defined in: [bee-js/src/utils/bytes.ts:43](https://github.com/ethersphere/bee-js
 
 > `static` **fromUtf8**(`utf8`): [`Bytes`](Bytes.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:39](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L39)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:24
+
+Wraps the UTF-8 encoding of a string.
 
 #### Parameters
 
@@ -324,7 +387,9 @@ Defined in: [bee-js/src/utils/bytes.ts:39](https://github.com/ethersphere/bee-js
 
 > `static` **keccak256**(`bytes`): [`Bytes`](Bytes.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:35](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L35)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:16
+
+Hashes `bytes` with keccak256 and wraps the 32-byte digest.
 
 #### Parameters
 

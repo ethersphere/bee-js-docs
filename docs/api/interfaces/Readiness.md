@@ -1,6 +1,6 @@
 # Interface: Readiness
 
-Defined in: [bee-js/src/types/debug.ts:116](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L116)
+Defined in: [bee-js/src/types/debug.ts:117](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L117)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:116](https://github.com/ethersphere/bee-j
 
 > **apiVersion**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:119](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L119)
+Defined in: [bee-js/src/types/debug.ts:120](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L120)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:119](https://github.com/ethersphere/bee-j
 
 > **status**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:117](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L117)
+Defined in: [bee-js/src/types/debug.ts:118](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L118)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: [bee-js/src/types/debug.ts:117](https://github.com/ethersphere/bee-j
 
 > **version**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:118](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L118)
+Defined in: [bee-js/src/types/debug.ts:119](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L119)

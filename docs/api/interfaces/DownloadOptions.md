@@ -1,6 +1,6 @@
 # Interface: DownloadOptions
 
-Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L179)
+Defined in: [bee-js/src/types/index.ts:205](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L205)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:179](https://github.com/ethersphere/bee-j
 
 > `optional` **actHistoryAddress**: `string` \| `Uint8Array`\<`ArrayBufferLike`\> \| [`Reference`](../classes/Reference.md)
 
-Defined in: [bee-js/src/types/index.ts:195](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L195)
+Defined in: [bee-js/src/types/index.ts:229](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L229)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:195](https://github.com/ethersphere/bee-j
 
 > `optional` **actPublisher**: `string` \| `Uint8Array`\<`ArrayBufferLike`\> \| [`PublicKey`](../classes/PublicKey.md)
 
-Defined in: [bee-js/src/types/index.ts:193](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L193)
+Defined in: [bee-js/src/types/index.ts:227](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L227)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:193](https://github.com/ethersphere/bee-j
 
 > `optional` **actTimestamp**: `string` \| `number`
 
-Defined in: [bee-js/src/types/index.ts:197](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L197)
+Defined in: [bee-js/src/types/index.ts:231](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L231)
 
 ***
 
@@ -32,9 +32,11 @@ Defined in: [bee-js/src/types/index.ts:197](https://github.com/ethersphere/bee-j
 
 > `optional` **fallback**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:187](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L187)
+Defined in: [bee-js/src/types/index.ts:218](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L218)
 
 Specify if the retrieve strategies (chunk prefetching on redundant data) are used in a fallback cascade. The default is true.
+
+Only applicable for erasure coded data.
 
 ***
 
@@ -42,9 +44,11 @@ Specify if the retrieve strategies (chunk prefetching on redundant data) are use
 
 > `optional` **redundancyStrategy**: [`RedundancyStrategy`](../enumerations/RedundancyStrategy.md)
 
-Defined in: [bee-js/src/types/index.ts:183](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L183)
+Defined in: [bee-js/src/types/index.ts:211](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L211)
 
 Specify the retrieve strategy on redundant data.
+
+Only applicable for erasure coded data.
 
 ***
 
@@ -52,6 +56,8 @@ Specify the retrieve strategy on redundant data.
 
 > `optional` **timeoutMs**: `number`
 
-Defined in: [bee-js/src/types/index.ts:191](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L191)
+Defined in: [bee-js/src/types/index.ts:225](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L225)
 
 Specify the timeout for chunk retrieval. The default is 30 seconds.
+
+This is not the timeout for the whole download operation, but rather for each chunk retrieval.

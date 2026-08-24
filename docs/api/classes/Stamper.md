@@ -1,6 +1,10 @@
 # Class: Stamper
 
-Defined in: [bee-js/src/stamper/stamper.ts:5](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L5)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:17
+
+Stateful postage stamp issuer: tracks how many chunks have been stamped
+into each of the batch's 65536 buckets, so each chunk gets a distinct,
+capacity-respecting index without the caller managing that bookkeeping.
 
 ## Properties
 
@@ -8,7 +12,7 @@ Defined in: [bee-js/src/stamper/stamper.ts:5](https://github.com/ethersphere/bee
 
 > **batchId**: [`BatchId`](BatchId.md)
 
-Defined in: [bee-js/src/stamper/stamper.ts:7](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L7)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:19
 
 ***
 
@@ -16,7 +20,7 @@ Defined in: [bee-js/src/stamper/stamper.ts:7](https://github.com/ethersphere/bee
 
 > **buckets**: `Uint32Array`
 
-Defined in: [bee-js/src/stamper/stamper.ts:8](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L8)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:20
 
 ***
 
@@ -24,7 +28,7 @@ Defined in: [bee-js/src/stamper/stamper.ts:8](https://github.com/ethersphere/bee
 
 > **depth**: `number`
 
-Defined in: [bee-js/src/stamper/stamper.ts:9](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L9)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:21
 
 ***
 
@@ -32,7 +36,7 @@ Defined in: [bee-js/src/stamper/stamper.ts:9](https://github.com/ethersphere/bee
 
 > **maxSlot**: `number`
 
-Defined in: [bee-js/src/stamper/stamper.ts:10](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L10)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:22
 
 ***
 
@@ -40,7 +44,7 @@ Defined in: [bee-js/src/stamper/stamper.ts:10](https://github.com/ethersphere/be
 
 > **signer**: [`PrivateKey`](PrivateKey.md)
 
-Defined in: [bee-js/src/stamper/stamper.ts:6](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L6)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:18
 
 ## Methods
 
@@ -48,7 +52,10 @@ Defined in: [bee-js/src/stamper/stamper.ts:6](https://github.com/ethersphere/bee
 
 > **getState**(): `Uint32Array`
 
-Defined in: [bee-js/src/stamper/stamper.ts:60](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L60)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:41
+
+Returns the live bucket-height state, for persisting and later resuming
+via [fromState](#fromstate).
 
 #### Returns
 
@@ -58,15 +65,22 @@ Defined in: [bee-js/src/stamper/stamper.ts:60](https://github.com/ethersphere/be
 
 ### stamp()
 
-> **stamp**(`chunk`): [`EnvelopeWithBatchId`](../interfaces/EnvelopeWithBatchId.md)
+> **stamp**(`address`, `timestampMs?`): [`EnvelopeWithBatchId`](../interfaces/EnvelopeWithBatchId.md)
 
-Defined in: [bee-js/src/stamper/stamper.ts:38](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L38)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:36
+
+Stamps a chunk address, automatically picking and reserving the next
+free slot in its bucket. Throws once a bucket reaches its depth-derived capacity.
 
 #### Parameters
 
-##### chunk
+##### address
 
-`Chunk`
+`Uint8Array`
+
+##### timestampMs?
+
+`number`
 
 #### Returns
 
@@ -78,7 +92,9 @@ Defined in: [bee-js/src/stamper/stamper.ts:38](https://github.com/ethersphere/be
 
 > `static` **fromBlank**(`signer`, `batchId`, `depth`): `Stamper`
 
-Defined in: [bee-js/src/stamper/stamper.ts:25](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L25)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:27
+
+Creates a fresh Stamper for a batch with no chunks stamped yet.
 
 #### Parameters
 
@@ -104,7 +120,9 @@ Defined in: [bee-js/src/stamper/stamper.ts:25](https://github.com/ethersphere/be
 
 > `static` **fromState**(`signer`, `batchId`, `buckets`, `depth`): `Stamper`
 
-Defined in: [bee-js/src/stamper/stamper.ts:29](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/stamper/stamper.ts#L29)
+Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/stamper.d.cts:31
+
+Resumes a Stamper from a previously persisted bucket state (see [getState](#getstate)).
 
 #### Parameters
 

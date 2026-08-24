@@ -35,25 +35,28 @@ To use the example scripts below, you need:
 
 Identifiers in GSOC are similar to topics in PSS — they define the stream of messages a receiver node is subscribed to. The sender must use the same identifier so that their messages are received.
 
-Each identifier is a 32 byte (64-digit) hex string. It can be initialized with a 32 byte hex string of your choice or can be created from any arbitrary string using the `Identifier` utility class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
-
+Each identifier is 32 bytes. It can be initialized from a 32 byte hex string of your choice or created from any arbitrary string using the `Identifier` class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
 
 ```js
 import { Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
 
 // Use default (all zeros):
-const identifier = NULL_IDENTIFIER
+const zeroIdentifier = NULL_IDENTIFIER
 
 // From a hex string:
-const identifier = new Identifier('6527217e549e84f98e51b1d8b1ead62ff5cad59acd9713825754555d6975f103')
+const hexIdentifier = new Identifier('6527217e549e84f98e51b1d8b1ead62ff5cad59acd9713825754555d6975f103')
 
 // From a human-readable string:
-const identifier = Identifier.fromString('chat:v1')
+const namedIdentifier = Identifier.fromString('chat:v1')
 ```
 
-- Use `NULL_IDENTIFIER` is a 64 digit hex string of all zeros - use it for quick testing or when uniqueness doesn't matter.
-- Use any hex string to initialize a new `Identifier` object .
-- Use `Identifier.fromString()` to generate an identifier derived from your string of choice (allows for easy to remember human readable identifiers `"notifications"`, `"chat:user1"`).
+- `NULL_IDENTIFIER` is 32 zero bytes. Use it for quick testing or when uniqueness doesn't matter.
+- Use any 32 byte hex string to initialize a new `Identifier` object.
+- Use `Identifier.fromString()` to derive an identifier from a string of your choice, which allows for easy to remember human readable identifiers such as `"notifications"` or `"chat:user1"`.
+
+:::caution Don't pass `NULL_IDENTIFIER` to `Identifier.fromString()`
+`NULL_IDENTIFIER` is already a 32 byte value, not a string. `Identifier.fromString(NULL_IDENTIFIER)` hashes its string representation with keccak256 and produces a completely different, non-zero identifier, so a listener and a sender that do this inconsistently will never match. Pass `NULL_IDENTIFIER` straight through instead.
+:::
 
 ## Get Target Overlay (Receiver Node)
 
@@ -65,7 +68,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkAddresses() {
-  const addresses = await bee.getNodeAddresses()
+  const addresses = await bee.connectivity.getNodeAddresses()
   console.log('Node Addresses:', addresses)
 }
 
@@ -93,26 +96,33 @@ The `Overlay` should be saved and shared with sender nodes.
 
 This must be run on a full node. It mines a key that lands within its own neighborhood and starts listening.
 
+:::caution `onClose` is required
+The handler passed to `bee.messaging.gsocSubscribe()` must provide all three callbacks: `onMessage`, `onError` and `onClose`. Leaving `onClose` out throws `Expected function for onClose, got: undefined` before the subscription is opened.
+:::
+
 ```js
-import { Bee, Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
+import { Bee, NULL_IDENTIFIER } from '@ethersphere/bee-js'
 
 const bee = new Bee('http://localhost:1633')
-const identifier = Identifier.fromString(NULL_IDENTIFIER)
+const identifier = NULL_IDENTIFIER
 
 async function listen() {
-  const { overlay } = await bee.getNodeAddresses()
+  const { overlay } = await bee.connectivity.getNodeAddresses()
 
   // The signer is initialized using the receiving node's own overlay and chosen identifier
-  const signer = bee.gsocMine(overlay, identifier)
+  const signer = bee.messaging.gsocMine(overlay, identifier)
 
   // A GSOC subscription is established using the blockchain address derived from the signer and the identifier
-  bee.gsocSubscribe(signer.publicKey().address(), identifier, {
+  const subscription = bee.messaging.gsocSubscribe(signer.publicKey().address(), identifier, {
     // A callback function is used to handle incoming updates - you can include your application logic here
     onMessage: message => console.log('Received:', message.toUtf8()),
     onError: error => console.error('Subscription error:', error),
+    onClose: () => console.log('Subscription closed.'),
   })
 
   console.log('Listening for GSOC updates...')
+
+  // Call subscription.cancel() when you are done listening
 }
 
 listen()
@@ -123,22 +133,22 @@ listen()
 The sending node must have a ***usable postage batch id*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 
 
 ```js
-import { Bee, Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
+import { Bee, NULL_IDENTIFIER } from '@ethersphere/bee-js'
 
 const bee = new Bee('http://localhost:1643')
 
 // The identifier is initialized using the same data as the receiving node
-const identifier = Identifier.fromString(NULL_IDENTIFIER)
+const identifier = NULL_IDENTIFIER
 const batchId = '6c84b6d3f5273b969c3df875cde7ccd9920f5580122929aedaf440bfe4484405'
 
 const recipientOverlay = '1e2054bec3e681aeb0b365a1f9a574a03782176bd3ec0bcf810ebcaf551e4070'
 
 async function sendMessage() {
   // The signer is initialized using the overlay address and identifier shared by the receiving node 
-  const signer = bee.gsocMine(recipientOverlay, identifier)
+  const signer = bee.messaging.gsocMine(recipientOverlay, identifier)
 
-  // bee.gsocSend() is called with the batch id, initialized signer, identifier, and message payload in order to send a GSOC message
-  await bee.gsocSend(batchId, signer, identifier, 'Hello via GSOC!')
+  // bee.messaging.gsocSend() is called with the batch id, initialized signer, identifier, and message payload in order to send a GSOC message
+  await bee.messaging.gsocSend(batchId, signer, identifier, 'Hello via GSOC!')
   console.log('Message sent')
 }
 

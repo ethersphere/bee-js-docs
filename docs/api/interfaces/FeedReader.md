@@ -1,6 +1,6 @@
 # Interface: FeedReader
 
-Defined in: [bee-js/src/types/index.ts:369](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L369)
+Defined in: [bee-js/src/types/index.ts:409](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L409)
 
 FeedReader is an interface for downloading feed updates
 
@@ -14,7 +14,7 @@ FeedReader is an interface for downloading feed updates
 
 > `readonly` **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:370](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L370)
+Defined in: [bee-js/src/types/index.ts:410](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L410)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [bee-js/src/types/index.ts:370](https://github.com/ethersphere/bee-j
 
 > `readonly` **topic**: [`Topic`](../classes/Topic.md)
 
-Defined in: [bee-js/src/types/index.ts:371](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L371)
+Defined in: [bee-js/src/types/index.ts:411](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L411)
 
 ## Methods
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/types/index.ts:371](https://github.com/ethersphere/bee-j
 
 > **download**(`options?`): `Promise`\<`FeedPayloadResult`\>
 
-Defined in: [bee-js/src/types/index.ts:376](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L376)
+Defined in: [bee-js/src/types/index.ts:416](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L416)
 
 #### Parameters
 
@@ -52,7 +52,7 @@ Use `downloadReference` or `downloadPayload` instead to disambiguate how the dat
 
 > **downloadPayload**(`options?`): `Promise`\<`FeedPayloadResult`\>
 
-Defined in: [bee-js/src/types/index.ts:386](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L386)
+Defined in: [bee-js/src/types/index.ts:426](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L426)
 
 Downloads the feed update (latest if no index is specified) and returns it as a payload.
 
@@ -72,7 +72,7 @@ Downloads the feed update (latest if no index is specified) and returns it as a 
 
 > **downloadReference**(`options?`): `Promise`\<`FeedReferenceResult`\>
 
-Defined in: [bee-js/src/types/index.ts:381](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L381)
+Defined in: [bee-js/src/types/index.ts:421](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L421)
 
 Downloads the feed update (latest if no index is specified) and returns it as a reference.
 

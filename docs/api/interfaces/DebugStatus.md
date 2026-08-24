@@ -1,6 +1,6 @@
 # Interface: DebugStatus
 
-Defined in: [bee-js/src/types/debug.ts:94](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L94)
+Defined in: [bee-js/src/types/debug.ts:94](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L94)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:94](https://github.com/ethersphere/bee-js
 
 > **batchCommitment**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:104](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L104)
+Defined in: [bee-js/src/types/debug.ts:104](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L104)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:104](https://github.com/ethersphere/bee-j
 
 > **beeMode**: [`BeeModes`](../enumerations/BeeModes.md)
 
-Defined in: [bee-js/src/types/debug.ts:97](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L97)
+Defined in: [bee-js/src/types/debug.ts:97](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L97)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:97](https://github.com/ethersphere/bee-js
 
 > **committedDepth**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:107](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L107)
+Defined in: [bee-js/src/types/debug.ts:107](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L107)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/debug.ts:107](https://github.com/ethersphere/bee-j
 
 > **connectedPeers**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:102](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L102)
+Defined in: [bee-js/src/types/debug.ts:102](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L102)
 
 ***
 
@@ -40,7 +40,15 @@ Defined in: [bee-js/src/types/debug.ts:102](https://github.com/ethersphere/bee-j
 
 > **isReachable**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:105](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L105)
+Defined in: [bee-js/src/types/debug.ts:105](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L105)
+
+***
+
+### isWarmingUp
+
+> **isWarmingUp**: `boolean`
+
+Defined in: [bee-js/src/types/debug.ts:108](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L108)
 
 ***
 
@@ -48,7 +56,7 @@ Defined in: [bee-js/src/types/debug.ts:105](https://github.com/ethersphere/bee-j
 
 > **lastSyncedBlock**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:106](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L106)
+Defined in: [bee-js/src/types/debug.ts:106](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L106)
 
 ***
 
@@ -56,7 +64,7 @@ Defined in: [bee-js/src/types/debug.ts:106](https://github.com/ethersphere/bee-j
 
 > **neighborhoodSize**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:103](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L103)
+Defined in: [bee-js/src/types/debug.ts:103](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L103)
 
 ***
 
@@ -64,7 +72,7 @@ Defined in: [bee-js/src/types/debug.ts:103](https://github.com/ethersphere/bee-j
 
 > **overlay**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:95](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L95)
+Defined in: [bee-js/src/types/debug.ts:95](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L95)
 
 ***
 
@@ -72,7 +80,7 @@ Defined in: [bee-js/src/types/debug.ts:95](https://github.com/ethersphere/bee-js
 
 > **proximity**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:96](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L96)
+Defined in: [bee-js/src/types/debug.ts:96](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L96)
 
 ***
 
@@ -80,7 +88,7 @@ Defined in: [bee-js/src/types/debug.ts:96](https://github.com/ethersphere/bee-js
 
 > **pullsyncRate**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:100](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L100)
+Defined in: [bee-js/src/types/debug.ts:100](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L100)
 
 ***
 
@@ -88,7 +96,7 @@ Defined in: [bee-js/src/types/debug.ts:100](https://github.com/ethersphere/bee-j
 
 > **reserveSize**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L98)
+Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L98)
 
 ***
 
@@ -96,7 +104,7 @@ Defined in: [bee-js/src/types/debug.ts:98](https://github.com/ethersphere/bee-js
 
 > **reserveSizeWithinRadius**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L99)
+Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L99)
 
 ***
 
@@ -104,4 +112,4 @@ Defined in: [bee-js/src/types/debug.ts:99](https://github.com/ethersphere/bee-js
 
 > **storageRadius**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:101](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/debug.ts#L101)
+Defined in: [bee-js/src/types/debug.ts:101](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L101)

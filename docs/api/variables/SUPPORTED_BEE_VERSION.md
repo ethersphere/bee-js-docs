@@ -2,4 +2,6 @@
 
 > `const` **SUPPORTED\_BEE\_VERSION**: `string`
 
-Defined in: [bee-js/src/modules/debug/status.ts:9](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/modules/debug/status.ts#L9)
+Defined in: [bee-js/src/version.ts:8](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/version.ts#L8)
+
+Supported Bee version without the commit hash suffix.

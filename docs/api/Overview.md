@@ -5,6 +5,10 @@ slug: /api/
 sidebar_position: 0
 ---
 
+:::info Namespace methods
+This reference covers everything `@ethersphere/bee-js` exports. The classes behind `bee.data`, `bee.file`, `bee.stamp` and the other [namespaces](../documentation/overview.md#namespaces) are internal to the library and have no page of their own here. The [SDK Overview](../documentation/overview.md#bee-api) lists every namespaced method together with the Bee endpoint it calls.
+:::
+
 ## Namespaces
 
 - [Utils](./namespaces/Utils/approximateOverheadForRedundancyLevel.md)
@@ -20,11 +24,12 @@ sidebar_position: 0
 - [BatchId](classes/BatchId.md)
 - [Bee](classes/Bee.md)
 - [BeeArgumentError](classes/BeeArgumentError.md)
-- [BeeDev](classes/BeeDev.md)
 - [BeeError](classes/BeeError.md)
 - [BeeResponseError](classes/BeeResponseError.md)
 - [Bytes](classes/Bytes.md)
 - [BZZ](classes/BZZ.md)
+- [ChunkBuilder](classes/ChunkBuilder.md)
+- [ChunkSplitter](classes/ChunkSplitter.md)
 - [DAI](classes/DAI.md)
 - [Duration](classes/Duration.md)
 - [EthAddress](classes/EthAddress.md)
@@ -58,6 +63,7 @@ sidebar_position: 0
 - [Cheque](interfaces/Cheque.md)
 - [ChequebookAddressResponse](interfaces/ChequebookAddressResponse.md)
 - [ChequebookBalanceResponse](interfaces/ChequebookBalanceResponse.md)
+- [Chunk](interfaces/Chunk.md)
 - [CollectionEntry](interfaces/CollectionEntry.md)
 - [CollectionUploadOptions](interfaces/CollectionUploadOptions.md)
 - [Data](interfaces/Data.md)
@@ -98,6 +104,7 @@ sidebar_position: 0
 - [RemovePeerResponse](interfaces/RemovePeerResponse.md)
 - [ReserveState](interfaces/ReserveState.md)
 - [Settlements](interfaces/Settlements.md)
+- [SingleOwnerChunk](interfaces/SingleOwnerChunk.md)
 - [SOCReader](interfaces/SOCReader.md)
 - [SOCWriter](interfaces/SOCWriter.md)
 - [Tag](interfaces/Tag.md)
@@ -107,6 +114,7 @@ sidebar_position: 0
 - [TransactionResponse](interfaces/TransactionResponse.md)
 - [UploadHeaders](interfaces/UploadHeaders.md)
 - [UploadOptions](interfaces/UploadOptions.md)
+- [UploadProgress](interfaces/UploadProgress.md)
 - [UploadResult](interfaces/UploadResult.md)
 - [WalletBalance](interfaces/WalletBalance.md)
 
@@ -121,8 +129,8 @@ sidebar_position: 0
 ## Variables
 
 - [BRANCHES](variables/BRANCHES.md)
+- [capacityBreakpoints](variables/capacityBreakpoints.md)
 - [CHUNK\_SIZE](variables/CHUNK_SIZE.md)
-- [FEED\_INDEX\_HEX\_LENGTH](variables/FEED_INDEX_HEX_LENGTH.md)
 - [NULL\_ADDRESS](variables/NULL_ADDRESS.md)
 - [NULL\_IDENTIFIER](variables/NULL_IDENTIFIER.md)
 - [NULL\_OWNER](variables/NULL_OWNER.md)

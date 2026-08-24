@@ -1,6 +1,6 @@
 # Interface: Pin
 
-Defined in: [bee-js/src/types/index.ts:277](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L277)
+Defined in: [bee-js/src/types/index.ts:315](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L315)
 
 ## Properties
 
@@ -8,4 +8,4 @@ Defined in: [bee-js/src/types/index.ts:277](https://github.com/ethersphere/bee-j
 
 > **reference**: [`Reference`](../classes/Reference.md)
 
-Defined in: [bee-js/src/types/index.ts:278](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L278)
+Defined in: [bee-js/src/types/index.ts:316](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L316)
