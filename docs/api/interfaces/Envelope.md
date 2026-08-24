@@ -1,6 +1,6 @@
 # Interface: Envelope
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:6
+Defined in: [core-sdk/src/stamper/marshal.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L7)
 
 A postage stamp's fields, as produced by signing (e.g. via `stamp()`).
 
@@ -14,7 +14,7 @@ A postage stamp's fields, as produced by signing (e.g. via `stamp()`).
 
 > **index**: `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:8
+Defined in: [core-sdk/src/stamper/marshal.ts:9](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L9)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.ct
 
 > **issuer**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:7
+Defined in: [core-sdk/src/stamper/marshal.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L8)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.ct
 
 > **signature**: [`Signature`](../classes/Signature.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:10
+Defined in: [core-sdk/src/stamper/marshal.ts:11](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L11)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.ct
 
 > **timestamp**: `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/stamper/marshal.d.cts:9
+Defined in: [core-sdk/src/stamper/marshal.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L10)

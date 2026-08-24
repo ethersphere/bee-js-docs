@@ -1,6 +1,6 @@
 # Class: PublicKey
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:7
+Defined in: [core-sdk/src/bytes/public-key.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L10)
 
 A secp256k1 public key, stored uncompressed (64 bytes: x || y). Also
 accepts a 33-byte compressed key, decompressing it in the constructor.
@@ -15,7 +15,7 @@ accepts a 33-byte compressed key, decompressing it in the constructor.
 
 > **new PublicKey**(`bytes`): `PublicKey`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:9
+Defined in: [core-sdk/src/bytes/public-key.ts:13](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L13)
 
 #### Parameters
 
@@ -37,7 +37,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.c
 
 > `readonly` **length**: `number`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:7
+Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L19)
 
 #### Inherited from
 
@@ -49,7 +49,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:7
 
 > `readonly` `static` **LENGTH**: `64` = `64`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:8
+Defined in: [core-sdk/src/bytes/public-key.ts:11](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L11)
 
 ## Methods
 
@@ -57,7 +57,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.c
 
 > **address**(): [`EthAddress`](EthAddress.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:14
+Defined in: [core-sdk/src/bytes/public-key.ts:28](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L28)
 
 Derives the corresponding Ethereum address (keccak256 of the
 uncompressed key, last 20 bytes).
@@ -72,7 +72,7 @@ uncompressed key, last 20 bytes).
 
 > **equals**(`other`): `boolean`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:65
+Defined in: [core-sdk/src/bytes/bytes.ts:166](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L166)
 
 Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
@@ -96,7 +96,7 @@ Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
 > **offset**(`index`): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:33
+Defined in: [core-sdk/src/bytes/bytes.ts:110](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L110)
 
 Returns a copy of the bytes from `index` to the end.
 
@@ -120,7 +120,7 @@ Returns a copy of the bytes from `index` to the end.
 
 > **represent**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:69
+Defined in: [core-sdk/src/bytes/bytes.ts:173](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L173)
 
 Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.md#tohex).
 
@@ -138,7 +138,7 @@ Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.
 
 > **toBase32**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:49
+Defined in: [core-sdk/src/bytes/bytes.ts:138](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L138)
 
 Encodes as a padded base32 string.
 
@@ -156,7 +156,7 @@ Encodes as a padded base32 string.
 
 > **toBase64**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:45
+Defined in: [core-sdk/src/bytes/bytes.ts:131](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L131)
 
 Encodes as a padded base64 string.
 
@@ -174,7 +174,7 @@ Encodes as a padded base64 string.
 
 > **toCompressedHex**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:22
+Defined in: [core-sdk/src/bytes/public-key.ts:48](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L48)
 
 Hex encoding of [toCompressedUint8Array](#tocompresseduint8array).
 
@@ -188,7 +188,7 @@ Hex encoding of [toCompressedUint8Array](#tocompresseduint8array).
 
 > **toCompressedUint8Array**(): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/public-key.d.cts:18
+Defined in: [core-sdk/src/bytes/public-key.ts:38](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/public-key.ts#L38)
 
 Encodes as a 33-byte compressed key (0x02/0x03 prefix || x).
 
@@ -202,7 +202,7 @@ Encodes as a 33-byte compressed key (0x02/0x03 prefix || x).
 
 > **toHex**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:41
+Defined in: [core-sdk/src/bytes/bytes.ts:124](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L124)
 
 Encodes as a lowercase hex string, with no `0x` prefix.
 
@@ -220,7 +220,7 @@ Encodes as a lowercase hex string, with no `0x` prefix.
 
 > **toJSON**(): `unknown`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:61
+Defined in: [core-sdk/src/bytes/bytes.ts:159](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L159)
 
 Decodes the bytes as UTF-8 JSON.
 
@@ -238,7 +238,7 @@ Decodes the bytes as UTF-8 JSON.
 
 > **toString**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:53
+Defined in: [core-sdk/src/bytes/bytes.ts:145](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L145)
 
 Same as [toHex](Bytes.md#tohex).
 
@@ -256,7 +256,7 @@ Same as [toHex](Bytes.md#tohex).
 
 > **toUint8Array**(): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:37
+Defined in: [core-sdk/src/bytes/bytes.ts:117](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L117)
 
 Returns a copy of the underlying bytes.
 
@@ -274,7 +274,7 @@ Returns a copy of the underlying bytes.
 
 > **toUtf8**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:57
+Defined in: [core-sdk/src/bytes/bytes.ts:152](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L152)
 
 Decodes the bytes as UTF-8 text.
 
@@ -292,7 +292,7 @@ Decodes the bytes as UTF-8 text.
 
 > `static` **concat**(...`arrays`): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:20
+Defined in: [core-sdk/src/bytes/bytes.ts:75](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L75)
 
 Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
@@ -316,7 +316,7 @@ Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
 > `static` **fromSlice**(`bytes`, `start`, `length?`): [`Bytes`](Bytes.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:29
+Defined in: [core-sdk/src/bytes/bytes.ts:100](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L100)
 
 Wraps a slice of `bytes` starting at `start`, running to the end unless
 `length` is given.
@@ -349,7 +349,7 @@ Wraps a slice of `bytes` starting at `start`, running to the end unless
 
 > `static` **fromUtf8**(`utf8`): [`Bytes`](Bytes.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:24
+Defined in: [core-sdk/src/bytes/bytes.ts:92](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L92)
 
 Wraps the UTF-8 encoding of a string.
 
@@ -373,7 +373,7 @@ Wraps the UTF-8 encoding of a string.
 
 > `static` **keccak256**(`bytes`): [`Bytes`](Bytes.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:16
+Defined in: [core-sdk/src/bytes/bytes.ts:68](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L68)
 
 Hashes `bytes` with keccak256 and wraps the 32-byte digest.
 
