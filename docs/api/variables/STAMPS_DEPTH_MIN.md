@@ -1,3 +1,8 @@
+---
+title: 'Variable: STAMPS_DEPTH_MIN'
+description: 'const STAMPS_DEPTH_MIN: 17 = 17'
+---
+
 # Variable: STAMPS\_DEPTH\_MIN
 
 > `const` **STAMPS\_DEPTH\_MIN**: `17` = `17`

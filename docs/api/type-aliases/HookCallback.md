@@ -1,3 +1,8 @@
+---
+title: 'Type Alias: HookCallback()<V>'
+description: 'HookCallback<V> = (value) => void | Promise<void>'
+---
+
 # Type Alias: HookCallback()\<V\>
 
 > **HookCallback**\<`V`\> = (`value`) => `void` \| `Promise`\<`void`\>

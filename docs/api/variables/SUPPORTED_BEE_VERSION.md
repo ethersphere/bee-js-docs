@@ -1,3 +1,8 @@
+---
+title: 'Variable: SUPPORTED_BEE_VERSION'
+description: 'const SUPPORTED_BEE_VERSION: string'
+---
+
 # Variable: SUPPORTED\_BEE\_VERSION
 
 > `const` **SUPPORTED\_BEE\_VERSION**: `string`

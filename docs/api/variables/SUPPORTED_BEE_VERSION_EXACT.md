@@ -1,3 +1,8 @@
+---
+title: 'Variable: SUPPORTED_BEE_VERSION_EXACT'
+description: 'const SUPPORTED_BEE_VERSION_EXACT: "2.8.1-7cf53193" = ''2.8.1-7cf53193'''
+---
+
 # Variable: SUPPORTED\_BEE\_VERSION\_EXACT
 
 > `const` **SUPPORTED\_BEE\_VERSION\_EXACT**: `"2.8.1-7cf53193"` = `'2.8.1-7cf53193'`

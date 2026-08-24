@@ -1,3 +1,8 @@
+---
+title: 'Variable: TAGS_LIMIT_MAX'
+description: 'const TAGS_LIMIT_MAX: 1000 = 1000'
+---
+
 # Variable: TAGS\_LIMIT\_MAX
 
 > `const` **TAGS\_LIMIT\_MAX**: `1000` = `1000`

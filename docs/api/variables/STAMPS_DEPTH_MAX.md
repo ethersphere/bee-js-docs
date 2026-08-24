@@ -1,3 +1,8 @@
+---
+title: 'Variable: STAMPS_DEPTH_MAX'
+description: 'const STAMPS_DEPTH_MAX: 255 = 255'
+---
+
 # Variable: STAMPS\_DEPTH\_MAX
 
 > `const` **STAMPS\_DEPTH\_MAX**: `255` = `255`

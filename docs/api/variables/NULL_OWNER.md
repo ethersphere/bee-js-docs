@@ -1,3 +1,8 @@
+---
+title: 'Variable: NULL_OWNER'
+description: 'const NULL_OWNER: Uint8Array<ArrayBuffer>'
+---
+
 # Variable: NULL\_OWNER
 
 > `const` **NULL\_OWNER**: `Uint8Array`\<`ArrayBuffer`\>
