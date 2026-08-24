@@ -1,0 +1,89 @@
+name: Preview
+
+on:
+    pull_request:
+        branches:
+            - '**'
+    # Lets a preview be built for a pull request that predates this workflow,
+    # or rebuilt without pushing to it: run this workflow and pass the number.
+    workflow_dispatch:
+        inputs:
+            pr:
+                description: 'Pull request number to build a preview for'
+                required: true
+                type: string
+
+permissions:
+    contents: read
+    pull-requests: write
+
+concurrency:
+    group: preview-${{ github.event.pull_request.number || inputs.pr }}
+    cancel-in-progress: true
+
+jobs:
+    preview:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/pull/{0}/head', inputs.pr) || github.ref }}
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build
+              run: npm run build
+
+            - name: Upload to Swarm
+              id: upload
+              run: node scripts/upload-to-swarm.mjs build
+
+            - name: Write summary
+              run: |
+                  {
+                    echo "### Preview"
+                    echo
+                    echo "${{ steps.upload.outputs.url }}"
+                    echo
+                    echo "Swarm reference: \`${{ steps.upload.outputs.reference }}\`"
+                  } >> "$GITHUB_STEP_SUMMARY"
+
+            # Fails on pull requests from forks, where GITHUB_TOKEN is read-only.
+            # The preview URL is in the job summary either way.
+            - name: Comment the preview link
+              continue-on-error: true
+              uses: actions/github-script@v7
+              env:
+                  PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr }}
+                  PREVIEW_URL: ${{ steps.upload.outputs.url }}
+                  PREVIEW_REFERENCE: ${{ steps.upload.outputs.reference }}
+              with:
+                  script: |
+                      const marker = '<!-- swarm-preview -->'
+                      const issue_number = Number(process.env.PR_NUMBER)
+                      const body = [
+                        marker,
+                        `**Preview:** ${process.env.PREVIEW_URL}`,
+                        '',
+                        `Built from ${context.sha.slice(0, 7)} and uploaded to Swarm as \`${process.env.PREVIEW_REFERENCE}\`.`,
+                        'Previews are unpaid uploads to a public gateway, so they are not guaranteed to stay retrievable.',
+                      ].join('\n')
+
+                      const comments = await github.paginate(github.rest.issues.listComments, {
+                        ...context.repo,
+                        issue_number,
+                      })
+                      const existing = comments.find(comment => comment.body.includes(marker))
+
+                      if (existing) {
+                        await github.rest.issues.updateComment({ ...context.repo, comment_id: existing.id, body })
+                      } else {
+                        await github.rest.issues.createComment({ ...context.repo, issue_number, body })
+                      }
