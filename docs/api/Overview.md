@@ -5,10 +5,6 @@ slug: /api/
 sidebar_position: 0
 ---
 
-:::info Namespace methods
-This reference covers everything `@ethersphere/bee-js` exports. The classes behind `bee.data`, `bee.file`, `bee.stamp` and the other [namespaces](../documentation/overview.md#namespaces) are internal to the library and have no page of their own here. The [SDK Overview](../documentation/overview.md#bee-api) lists every namespaced method together with the Bee endpoint it calls.
-:::
-
 ## Namespaces
 
 - [Utils](./namespaces/Utils/approximateOverheadForRedundancyLevel.md)
@@ -21,6 +17,7 @@ This reference covers everything `@ethersphere/bee-js` exports. The classes behi
 
 ## Classes
 
+- [Balance](classes/Balance.md)
 - [BatchId](classes/BatchId.md)
 - [Bee](classes/Bee.md)
 - [BeeArgumentError](classes/BeeArgumentError.md)
@@ -28,24 +25,44 @@ This reference covers everything `@ethersphere/bee-js` exports. The classes behi
 - [BeeResponseError](classes/BeeResponseError.md)
 - [Bytes](classes/Bytes.md)
 - [BZZ](classes/BZZ.md)
+- [Cheque](classes/Cheque.md)
+- [Chequebook](classes/Chequebook.md)
+- [Chunk](classes/Chunk.md)
 - [ChunkBuilder](classes/ChunkBuilder.md)
 - [ChunkSplitter](classes/ChunkSplitter.md)
+- [Collection](classes/Collection.md)
+- [Connectivity](classes/Connectivity.md)
 - [DAI](classes/DAI.md)
+- [Data](classes/Data.md)
 - [Duration](classes/Duration.md)
 - [EthAddress](classes/EthAddress.md)
+- [Feed](classes/Feed.md)
 - [FeedIndex](classes/FeedIndex.md)
+- [File](classes/File.md)
+- [Grantee](classes/Grantee.md)
 - [Identifier](classes/Identifier.md)
 - [MantarayNode](classes/MantarayNode.md)
+- [Messaging](classes/Messaging.md)
 - [PeerAddress](classes/PeerAddress.md)
+- [Pin](classes/Pin.md)
 - [PrivateKey](classes/PrivateKey.md)
 - [PublicKey](classes/PublicKey.md)
 - [Reference](classes/Reference.md)
+- [Settlement](classes/Settlement.md)
 - [Signature](classes/Signature.md)
 - [Size](classes/Size.md)
+- [Soc](classes/Soc.md)
 - [Span](classes/Span.md)
+- [Stake](classes/Stake.md)
+- [Stamp](classes/Stamp.md)
 - [Stamper](classes/Stamper.md)
+- [Status](classes/Status.md)
+- [Storage](classes/Storage.md)
+- [Tag](classes/Tag.md)
 - [Topic](classes/Topic.md)
+- [Transaction](classes/Transaction.md)
 - [TransactionId](classes/TransactionId.md)
+- [Wallet](classes/Wallet.md)
 
 ## Interfaces
 

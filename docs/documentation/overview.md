@@ -35,27 +35,27 @@ Operations on the `Bee` class are grouped into namespaces by subject. Instead of
 
 | Namespace | Purpose |
 | --------- | ------- |
-| `bee.data` | Raw data uploads and downloads, backed by `/bytes`. |
-| `bee.file` | Single-file uploads and downloads, backed by `/bzz`. |
-| `bee.collection` | Multi-file (directory) uploads, backed by `/bzz`. |
-| `bee.chunk` | Individual chunk uploads and downloads, backed by `/chunks`. |
-| `bee.feed` | Feed readers, writers and manifests. |
-| `bee.soc` | Single owner chunk readers and writers. |
-| `bee.messaging` | PSS and GSOC messaging. |
-| `bee.stamp` | Postage batches expressed in amount and depth. |
-| `bee.storage` | Postage batches expressed in size and duration. |
-| `bee.tag` | Tags for tracking upload progress. |
-| `bee.pin` | Local pinning and reuploading. |
-| `bee.grantee` | Access control (ACT) grantee lists. |
-| `bee.stake` | Staking and the redistribution game. |
-| `bee.status` | Node health, version, chain and reserve state. |
-| `bee.connectivity` | Peers, topology and node addresses. |
-| `bee.wallet` | Node wallet balances and external withdrawals. |
-| `bee.chequebook` | Chequebook address, balance, deposits and withdrawals. |
-| `bee.cheque` | Cheques and cashouts. |
-| `bee.balance` | SWAP balances with peers. |
-| `bee.settlement` | SWAP settlements with peers. |
-| `bee.transaction` | The node's pending transaction queue. |
+| [`bee.data`](../api/classes/Data.md) | Raw data uploads and downloads, backed by `/bytes`. |
+| [`bee.file`](../api/classes/File.md) | Single-file uploads and downloads, backed by `/bzz`. |
+| [`bee.collection`](../api/classes/Collection.md) | Multi-file (directory) uploads, backed by `/bzz`. |
+| [`bee.chunk`](../api/classes/Chunk.md) | Individual chunk uploads and downloads, backed by `/chunks`. |
+| [`bee.feed`](../api/classes/Feed.md) | Feed readers, writers and manifests. |
+| [`bee.soc`](../api/classes/Soc.md) | Single owner chunk readers and writers. |
+| [`bee.messaging`](../api/classes/Messaging.md) | PSS and GSOC messaging. |
+| [`bee.stamp`](../api/classes/Stamp.md) | Postage batches expressed in amount and depth. |
+| [`bee.storage`](../api/classes/Storage.md) | Postage batches expressed in size and duration. |
+| [`bee.tag`](../api/classes/Tag.md) | Tags for tracking upload progress. |
+| [`bee.pin`](../api/classes/Pin.md) | Local pinning and reuploading. |
+| [`bee.grantee`](../api/classes/Grantee.md) | Access control (ACT) grantee lists. |
+| [`bee.stake`](../api/classes/Stake.md) | Staking and the redistribution game. |
+| [`bee.status`](../api/classes/Status.md) | Node health, version, chain and reserve state. |
+| [`bee.connectivity`](../api/classes/Connectivity.md) | Peers, topology and node addresses. |
+| [`bee.wallet`](../api/classes/Wallet.md) | Node wallet balances and external withdrawals. |
+| [`bee.chequebook`](../api/classes/Chequebook.md) | Chequebook address, balance, deposits and withdrawals. |
+| [`bee.cheque`](../api/classes/Cheque.md) | Cheques and cashouts. |
+| [`bee.balance`](../api/classes/Balance.md) | SWAP balances with peers. |
+| [`bee.settlement`](../api/classes/Settlement.md) | SWAP settlements with peers. |
+| [`bee.transaction`](../api/classes/Transaction.md) | The node's pending transaction queue. |
 
 A handful of methods stay directly on `bee` because they do not belong to any one subject: `makeContentAddressedChunk`, `unmarshalContentAddressedChunk`, `makeSingleOwnerChunk`, `unmarshalSingleOwnerChunk`, `calculateSingleOwnerChunkAddress`, `createEnvelope` and `rchash`.
 

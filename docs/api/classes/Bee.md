@@ -46,7 +46,7 @@ const bee = new Bee('http://localhost:1633')
 
 ### balance
 
-> `readonly` **balance**: `Balance`
+> `readonly` **balance**: [`Balance`](Balance.md)
 
 Defined in: [bee-js/src/bee.ts:148](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L148)
 
@@ -56,7 +56,7 @@ SWAP balance operations. Related to the bandwidth incentives and the chequebook.
 
 ### cheque
 
-> `readonly` **cheque**: `Cheque`
+> `readonly` **cheque**: [`Cheque`](Cheque.md)
 
 Defined in: [bee-js/src/bee.ts:198](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L198)
 
@@ -66,7 +66,7 @@ Cheque operations (last cheques and cashouts).
 
 ### chequebook
 
-> `readonly` **chequebook**: `Chequebook`
+> `readonly` **chequebook**: [`Chequebook`](Chequebook.md)
 
 Defined in: [bee-js/src/bee.ts:193](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L193)
 
@@ -76,7 +76,7 @@ Chequebook contract operations (address, balance, deposit, withdraw).
 
 ### chunk
 
-> `readonly` **chunk**: `Chunk`
+> `readonly` **chunk**: [`Chunk`](Chunk.md)
 
 Defined in: [bee-js/src/bee.ts:238](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L238)
 
@@ -86,7 +86,7 @@ Chunk operations backed by the `/chunks` endpoint.
 
 ### collection
 
-> `readonly` **collection**: `Collection`
+> `readonly` **collection**: [`Collection`](Collection.md)
 
 Defined in: [bee-js/src/bee.ts:248](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L248)
 
@@ -96,7 +96,7 @@ Collection (multi-file) operations backed by the `/bzz` endpoint.
 
 ### connectivity
 
-> `readonly` **connectivity**: `Connectivity`
+> `readonly` **connectivity**: [`Connectivity`](Connectivity.md)
 
 Defined in: [bee-js/src/bee.ts:168](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L168)
 
@@ -106,7 +106,7 @@ Peer, topology and network connectivity operations.
 
 ### data
 
-> `readonly` **data**: `Data`
+> `readonly` **data**: [`Data`](Data.md)
 
 Defined in: [bee-js/src/bee.ts:233](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L233)
 
@@ -116,7 +116,7 @@ Raw data operations backed by the `/bytes` endpoint.
 
 ### feed
 
-> `readonly` **feed**: `Feed`
+> `readonly` **feed**: [`Feed`](Feed.md)
 
 Defined in: [bee-js/src/bee.ts:223](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L223)
 
@@ -126,7 +126,7 @@ Feed operations.
 
 ### file
 
-> `readonly` **file**: `File`
+> `readonly` **file**: [`File`](File.md)
 
 Defined in: [bee-js/src/bee.ts:243](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L243)
 
@@ -136,7 +136,7 @@ Single-file operations backed by the `/bzz` endpoint.
 
 ### grantee
 
-> `readonly` **grantee**: `Grantee`
+> `readonly` **grantee**: [`Grantee`](Grantee.md)
 
 Defined in: [bee-js/src/bee.ts:213](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L213)
 
@@ -146,7 +146,7 @@ Grantee (access control) operations.
 
 ### messaging
 
-> `readonly` **messaging**: `Messaging`
+> `readonly` **messaging**: [`Messaging`](Messaging.md)
 
 Defined in: [bee-js/src/bee.ts:218](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L218)
 
@@ -175,7 +175,7 @@ The block time for `gnosis` is `5` seconds, and for `sepolia` it is `15` seconds
 
 ### pin
 
-> `readonly` **pin**: `Pin`
+> `readonly` **pin**: [`Pin`](Pin.md)
 
 Defined in: [bee-js/src/bee.ts:208](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L208)
 
@@ -185,7 +185,7 @@ Local pinning operations.
 
 ### settlement
 
-> `readonly` **settlement**: `Settlement`
+> `readonly` **settlement**: [`Settlement`](Settlement.md)
 
 Defined in: [bee-js/src/bee.ts:153](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L153)
 
@@ -210,7 +210,7 @@ must be provided with a private key in their respective function calls.
 
 ### soc
 
-> `readonly` **soc**: `Soc`
+> `readonly` **soc**: [`Soc`](Soc.md)
 
 Defined in: [bee-js/src/bee.ts:228](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L228)
 
@@ -220,7 +220,7 @@ Single owner chunk (SOC) reader/writer operations.
 
 ### stake
 
-> `readonly` **stake**: `Stake`
+> `readonly` **stake**: [`Stake`](Stake.md)
 
 Defined in: [bee-js/src/bee.ts:163](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L163)
 
@@ -230,7 +230,7 @@ Staking operations.
 
 ### stamp
 
-> `readonly` **stamp**: `Stamp`
+> `readonly` **stamp**: [`Stamp`](Stamp.md)
 
 Defined in: [bee-js/src/bee.ts:183](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L183)
 
@@ -240,7 +240,7 @@ Low-level postage batch (stamp) operations.
 
 ### status
 
-> `readonly` **status**: `Status`
+> `readonly` **status**: [`Status`](Status.md)
 
 Defined in: [bee-js/src/bee.ts:173](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L173)
 
@@ -250,7 +250,7 @@ Node status, health, version and chain/reserve state operations.
 
 ### storage
 
-> `readonly` **storage**: `Storage`
+> `readonly` **storage**: [`Storage`](Storage.md)
 
 Defined in: [bee-js/src/bee.ts:188](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L188)
 
@@ -260,7 +260,7 @@ Ergonomic storage operations expressed in terms of size and duration.
 
 ### tag
 
-> `readonly` **tag**: `Tag`
+> `readonly` **tag**: [`Tag`](Tag.md)
 
 Defined in: [bee-js/src/bee.ts:203](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L203)
 
@@ -270,7 +270,7 @@ Tag operations for tracking upload and synchronization progress.
 
 ### transaction
 
-> `readonly` **transaction**: `Transaction`
+> `readonly` **transaction**: [`Transaction`](Transaction.md)
 
 Defined in: [bee-js/src/bee.ts:158](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L158)
 
@@ -296,7 +296,7 @@ Bee node API URL.
 
 ### wallet
 
-> `readonly` **wallet**: `Wallet`
+> `readonly` **wallet**: [`Wallet`](Wallet.md)
 
 Defined in: [bee-js/src/bee.ts:178](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/bee.ts#L178)
 

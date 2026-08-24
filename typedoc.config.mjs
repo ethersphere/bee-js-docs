@@ -8,7 +8,17 @@
 
 /** @type {import('typedoc').TypeDocOptions} */
 export default {
-  entryPoints: ['sources/bee-js/src/index.ts'],
+  // The namespace classes behind `bee.data`, `bee.wallet` and friends are not
+  // exported from src/index.ts, so typedoc only ever sees them as the unlinkable
+  // type of a `Bee` property. Adding them as entry points of their own is what
+  // gives them pages; their names collide with exported types (Data, Tag, Pin,
+  // Collection, Chunk), which is harmless here because each entry point is its
+  // own module. generate-api.mjs folds the result back into docs/api/classes.
+  entryPoints: ['sources/bee-js/src/index.ts', 'sources/bee-js/src/modules/*.ts'],
+
+  // The context facade is internal plumbing: every namespace class takes one in
+  // its constructor, but no caller ever builds one.
+  exclude: ['**/modules/context.ts'],
   tsconfig: 'sources/bee-js/tsconfig.json',
   plugin: ['typedoc-plugin-markdown', './scripts/typedoc-frontmatter-titles.mjs'],
   out: 'docs/api',
