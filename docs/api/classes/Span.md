@@ -1,6 +1,6 @@
 # Class: Span
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:5
+Defined in: [core-sdk/src/bytes/span.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L7)
 
 An 8-byte, little-endian span - the byte count prefixing a chunk's payload.
 
@@ -14,7 +14,7 @@ An 8-byte, little-endian span - the byte count prefixing a chunk's payload.
 
 > **new Span**(`bytes`): `Span`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:7
+Defined in: [core-sdk/src/bytes/span.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L10)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:7
 
 > `readonly` **length**: `number`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:7
+Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L19)
 
 #### Inherited from
 
@@ -48,7 +48,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:7
 
 > `readonly` `static` **LENGTH**: `8` = `8`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:6
+Defined in: [core-sdk/src/bytes/span.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L8)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:6
 
 > **equals**(`other`): `boolean`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:65
+Defined in: [core-sdk/src/bytes/bytes.ts:166](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L166)
 
 Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
@@ -80,7 +80,7 @@ Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
 > **offset**(`index`): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:33
+Defined in: [core-sdk/src/bytes/bytes.ts:110](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L110)
 
 Returns a copy of the bytes from `index` to the end.
 
@@ -104,7 +104,7 @@ Returns a copy of the bytes from `index` to the end.
 
 > **represent**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:69
+Defined in: [core-sdk/src/bytes/bytes.ts:173](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L173)
 
 Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.md#tohex).
 
@@ -122,7 +122,7 @@ Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.
 
 > **toBase32**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:49
+Defined in: [core-sdk/src/bytes/bytes.ts:138](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L138)
 
 Encodes as a padded base32 string.
 
@@ -140,7 +140,7 @@ Encodes as a padded base32 string.
 
 > **toBase64**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:45
+Defined in: [core-sdk/src/bytes/bytes.ts:131](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L131)
 
 Encodes as a padded base64 string.
 
@@ -158,7 +158,7 @@ Encodes as a padded base64 string.
 
 > **toBigInt**(): `bigint`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:15
+Defined in: [core-sdk/src/bytes/span.ts:24](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L24)
 
 Decodes the span as a bigint byte count.
 
@@ -172,7 +172,7 @@ Decodes the span as a bigint byte count.
 
 > **toHex**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:41
+Defined in: [core-sdk/src/bytes/bytes.ts:124](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L124)
 
 Encodes as a lowercase hex string, with no `0x` prefix.
 
@@ -190,7 +190,7 @@ Encodes as a lowercase hex string, with no `0x` prefix.
 
 > **toJSON**(): `unknown`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:61
+Defined in: [core-sdk/src/bytes/bytes.ts:159](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L159)
 
 Decodes the bytes as UTF-8 JSON.
 
@@ -208,7 +208,7 @@ Decodes the bytes as UTF-8 JSON.
 
 > **toString**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:53
+Defined in: [core-sdk/src/bytes/bytes.ts:145](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L145)
 
 Same as [toHex](Bytes.md#tohex).
 
@@ -226,7 +226,7 @@ Same as [toHex](Bytes.md#tohex).
 
 > **toUint8Array**(): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:37
+Defined in: [core-sdk/src/bytes/bytes.ts:117](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L117)
 
 Returns a copy of the underlying bytes.
 
@@ -244,7 +244,7 @@ Returns a copy of the underlying bytes.
 
 > **toUtf8**(): `string`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:57
+Defined in: [core-sdk/src/bytes/bytes.ts:152](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L152)
 
 Decodes the bytes as UTF-8 text.
 
@@ -262,7 +262,7 @@ Decodes the bytes as UTF-8 text.
 
 > `static` **concat**(...`arrays`): `Uint8Array`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:20
+Defined in: [core-sdk/src/bytes/bytes.ts:75](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L75)
 
 Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
@@ -286,7 +286,7 @@ Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
 > `static` **fromBigInt**(`value`): `Span`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:11
+Defined in: [core-sdk/src/bytes/span.ts:17](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L17)
 
 Encodes a bigint byte count as an 8-byte, little-endian Span.
 
@@ -306,7 +306,7 @@ Encodes a bigint byte count as an 8-byte, little-endian Span.
 
 > `static` **fromSlice**(`bytes`, `start`): `Span`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/span.d.cts:19
+Defined in: [core-sdk/src/bytes/span.ts:31](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L31)
 
 Reads an 8-byte Span out of a larger buffer, starting at `start`.
 
@@ -334,7 +334,7 @@ Reads an 8-byte Span out of a larger buffer, starting at `start`.
 
 > `static` **fromUtf8**(`utf8`): [`Bytes`](Bytes.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:24
+Defined in: [core-sdk/src/bytes/bytes.ts:92](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L92)
 
 Wraps the UTF-8 encoding of a string.
 
@@ -358,7 +358,7 @@ Wraps the UTF-8 encoding of a string.
 
 > `static` **keccak256**(`bytes`): [`Bytes`](Bytes.md)
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/bytes/bytes.d.cts:16
+Defined in: [core-sdk/src/bytes/bytes.ts:68](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L68)
 
 Hashes `bytes` with keccak256 and wraps the 32-byte digest.
 

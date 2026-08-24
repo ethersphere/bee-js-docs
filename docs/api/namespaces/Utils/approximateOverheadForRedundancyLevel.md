@@ -2,7 +2,7 @@
 
 > **approximateOverheadForRedundancyLevel**(`chunks`, `level`, `encrypted`): `number`
 
-Defined in: bee-js/node\_modules/@ethersphere/core-sdk/dist/erasure-coding/levels.d.cts:22
+Defined in: [core-sdk/src/erasure-coding/levels.ts:95](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/erasure-coding/levels.ts#L95)
 
 Returns an approximate multiplier for the storage overhead of uploading
 `chunks` data shards at the given redundancy level: use it to estimate how

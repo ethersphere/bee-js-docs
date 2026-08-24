@@ -20,6 +20,7 @@
   },
   "scripts": {
     "docusaurus": "docusaurus",
+    "fix-api-links": "node scripts/fix-core-sdk-links.mjs",
     "start": "docusaurus start",
     "prebuild": "node scripts/validate-llms-txt.mjs",
     "build": "docusaurus build",
