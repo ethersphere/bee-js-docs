@@ -15,7 +15,7 @@ description: Documents the utility classes Size, Duration, BZZ, and Bytes for wo
 
 The `Bytes` class in `bee-js` provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. It’s used throughout `bee-js` as the basis for other utility classes like `Signature`, `Reference`, `PrivateKey`, and more, all of which extend the `Bytes` class.
 
-It is also a **core data type** used throughout the SDK as expected input/returned data type for various methods.
+It is also a **core data type** used throughout the SDK, both as an expected input and as a returned type for various methods.
 
 ```js
 // Import Bytes class
@@ -197,19 +197,19 @@ DAI from Decimal String to Wei BigInt: 4596417133719887384n
 DAI from Decimal String to Wei String: 4596417133719887384
 ```
 
-**Performing arithmetic on BZZ tokens by sending and receiving amounts.**
+**Performing arithmetic on BZZ amounts.**
 
 ```javascript
 // --- BZZ Arithmetic ---
 console.log('--- BZZ Arithmetic ---')
 const sent = BZZ.fromDecimalString('1.89')
 const received = BZZ.fromDecimalString('45.600000061124')
-console.log('BZZ after arithmetic (sent + received):', sent.plus('401100000000000000').minus(received).toDecimalString())
+console.log('BZZ after arithmetic:', sent.plus('401100000000000000').minus(received).toDecimalString())
 ```
 
 ```bash
 --- BZZ Arithmetic ---
-BZZ after arithmetic (sent + received): -3.6000000611240000
+BZZ after arithmetic: -3.6000000611240000
 ```
 
 **Converting BZZ tokens to DAI tokens using a specified exchange rate.**

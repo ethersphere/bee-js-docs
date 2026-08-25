@@ -58,12 +58,13 @@ body {
   background: radial-gradient(circle, #222222, #1A1A1A) !important;
 }
 
-[data-theme='dark'] pre {
-  background: #1A1A1A !important;
-} 
-
 [data-theme='dark'] code {
   background: #303030 !important;
+}
+
+/* Inline code only: a code block keeps the background of its syntax theme. */
+[data-theme='dark'] pre code {
+  background: transparent !important;
 }
 
 /* Other UI elements */

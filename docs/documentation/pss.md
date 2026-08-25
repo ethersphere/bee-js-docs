@@ -10,12 +10,12 @@ Swarm supports sending encrypted messages over the network using a system called
 
 ## What Is PSS?
 
-PSS provides a pub/sub-like functionality for secure messaging. Full nodes can listen for messages on a specific **topic**, and other nodes (light or full) can send them payloads using the recipient node's **overlay address** and optionally encrypted using the recipient's **PSS public key**. 
+PSS provides pub/sub-like functionality for secure messaging. Full nodes can listen for messages on a specific **topic**, and other nodes (light or full) can send them payloads addressed to the recipient node's **overlay address**, optionally encrypted with the recipient's **PSS public key**. 
 
 Messages can be received via **subscription** or by a **one-off listener**.
 
 :::caution
-Only full nodes can receive messages since PSS messages are sent as a part of the chunk syncing process which only full nodes take part in. 
+Only full nodes can receive messages, since PSS messages are sent as part of the chunk syncing process, which only full nodes take part in. 
 :::
 
 ## Requirements
@@ -42,7 +42,12 @@ const bee = new Bee('http://localhost:1633')
 async function checkAddresses() {
   const addresses = await bee.connectivity.getNodeAddresses()
 
-  console.log('Node Addresses:', addresses)
+  console.log('Node Addresses:')
+  console.log('Overlay:', addresses.overlay.toHex())
+  console.log('Ethereum:', addresses.ethereum.toHex())
+  console.log('Public Key:', addresses.publicKey.toHex())
+  console.log('PSS Public Key:', addresses.pssPublicKey.toHex())
+  console.log('Underlay:', addresses.underlay)
 }
 
 checkAddresses()
@@ -62,6 +67,7 @@ Underlay: [
   '/ip6/::1/tcp/1634/p2p/QmcpSJPHuuQYRgDkNfwziihVcpuVteoNxePvfzaJyp9z7j'
 ]
 ```
+
 The `Overlay` and `PSS Public Key` values should be shared with the sending node. 
 
 The sender (which can be a light node or a full node) needs the **overlay address** to generate the message target, and can optionally use the **PSS public key** to encrypt the message.
@@ -111,7 +117,7 @@ async function receiveOnce() {
 receiveOnce()
 ```
 
-In this script we generate a `topic` from our chosen string with the `Topic.fromString()` method. Then we subscribe to listen for incoming pss messages for that topic with the `bee.messaging.pssSubscribe()` method, and we also set up a listener for receiving a single message with the `bee.messaging.pssReceive()` method. When a chunk with a PSS message for that topic is synced into our node's neighborhood, it will be received and handled by our node with the `onMessage` callback function when using the `bee.messaging.pssSubscribe()` or through the return value of the `bee.messaging.pssReceive()` method in our `receiveOnce` function.
+In this script we generate a `topic` from our chosen string with the `Topic.fromString()` method, then subscribe to that topic with `bee.messaging.pssSubscribe()` and set up a one-off listener with `bee.messaging.pssReceive()`. Once a chunk carrying a PSS message for that topic is synced into our node's neighborhood, the subscription passes it to the `onMessage` callback, while `bee.messaging.pssReceive()` returns it as the resolved value in our `receiveOnce` function.
 
 ## Send Message (Light or Full Node)
 
@@ -161,4 +167,4 @@ const recipientPssPublicKey = '5ade58d20be7e04ee8f875eabeebf9c53375a8fc739176831
 await bee.messaging.pssSend(BATCH_ID, topic, target, message, recipientPssPublicKey)
 ```
 
-The message will then be encrypted using the PSS public key of the recipient node before sending and will only be decryptable by the recipient node (although the message bearing the PSS chunk will be received by all nodes in the same neighborhood as the recipient, it will only be decryptable by the recipient node).
+The message is then encrypted with the recipient node's PSS public key before it is sent. Every node in the recipient's neighborhood receives the chunk carrying the message, but only the recipient can decrypt it.

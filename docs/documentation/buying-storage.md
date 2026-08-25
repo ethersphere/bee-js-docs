@@ -26,7 +26,7 @@ Mutable batches are a flexible tool which can be used to power use cases such as
 
 -->
 
-Storage on Swarm is rented by purchasing "postage stamp batches". Each batch entitles its owner to store a certain amount of storage space on Swarm for the lifetime of the batch. The cost of the batch increases with the storage size and duration. 
+Storage on Swarm is rented by purchasing "postage stamp batches". Each batch reserves a certain amount of storage space on Swarm for the lifetime of the batch. The cost of the batch increases with the storage size and duration. 
 
 ### Requirements
 
@@ -39,9 +39,9 @@ To use the example scripts below, you need:
 We can use the `bee.storage.getCost` method along with our desired storage `Size` (amount of data to upload) and `Duration` (the batch lifetime) to get an estimated storage cost:
 
 :::tip
-The per byte storage cost decreases as the storage `Size` of the batch increases, so it is more cost effective to purchase a single large batch rather than multiple smaller ones.
+The per-byte storage cost decreases as the storage `Size` of the batch increases, so it is more cost effective to purchase a single large batch rather than multiple smaller ones.
 
-Costs remain constant with respect to changes in total `Duration`, however, so there is no discount for purchasing batches with longer lifetime. 
+Costs remain constant with respect to changes in total `Duration`, however, so there is no discount for purchasing batches with a longer lifetime. 
 :::
 
 ```javascript
@@ -96,9 +96,9 @@ Just as with buying storage, since storage comes only in [***discrete sizes***](
 If we need to upload more data, then we can extend a batch's storage size using the `bee.storage.extendSize` method. Note that in order to increase the batch size using the `bee.storage.extendSize` method, you must choose a size which is above the current [batch's size breakpoint](./buying-storage.md#batch-size-breakpoints).
 
 :::tip
-As mentioned [above](./buying-storage.md#batch-size-breakpoints), the per byte cost decreases as the storage size of a batch increases, so it's more cost effective to increase the storage size an existing batch rather than buying a new, smaller batch.
+As mentioned [below](./buying-storage.md#batch-size-breakpoints), the per-byte cost decreases as the storage size of a batch increases, so it's more cost effective to increase the storage size of an existing batch than to buy a new, smaller one.
 
-The exception to this rule is if we no longer wish to store the previously uploaded data. In that case we SHOULD buy an all new postage batch, as extending the size of an existing batch would require us to continue paying for the already uploaded data which we no longer need.
+The exception to this rule is if we no longer wish to store the previously uploaded data. In that case we should buy a new postage batch, since extending the size of an existing batch would mean continuing to pay for the already uploaded data which we no longer need.
 :::
 
 First we estimate the cost to extend the storage size with the `bee.storage.getSizeExtensionCost` method:
@@ -113,14 +113,14 @@ const batches = await bee.stamp.getAll()
 
 const batchId = batches[0].batchID
 
-// Instantiate a Size instance for 36 GB with newSize
+// Instantiate a Size instance for 5 GB
 const newSize = Size.fromGigabytes(5)
 
 // Return an instance of the BZZ class
-const sizeExtentionCost = await bee.storage.getSizeExtensionCost(batchId, newSize)
+const sizeExtensionCost = await bee.storage.getSizeExtensionCost(batchId, newSize)
 
 // Use the BZZ.toDecimalString instance method to convert to a readable BZZ string
-const cost = sizeExtentionCost.toDecimalString()
+const cost = sizeExtensionCost.toDecimalString()
 
 // Prints current cost to increase size
 console.log(cost)
@@ -142,7 +142,7 @@ console.log(batches)
 // Get batch ID of first batch in list
 const batchId = batches[0].batchID
 
-// Instantiate a Size instance for 36 GB with newSize
+// Instantiate a Size instance for 5 GB
 const newSize = Size.fromGigabytes(5)
 
 // Extends batch size and returns the batch ID 
@@ -179,7 +179,7 @@ We can check that we successfully extended the batch size by [checking batch sta
 
 Here we can see that our batch `size` was successfully extended from ~2.38 GB to ~7.07 GB.
 
-*See [above](./buying-storage.md#batch-size-breakpoints) to understand why `size` was extended to ~7.07 GB even though 5 GB was used as input.*
+*See [below](./buying-storage.md#batch-size-breakpoints) to understand why `size` was extended to ~7.07 GB even though 5 GB was used as input.*
 
 
 ### Extending Storage Duration
@@ -227,7 +227,7 @@ const batches = await bee.stamp.getAll()
 // Select the batch ID of the first batch in the list
 const batchId = batches[0].batchID
 
-// Create a Duration instance for 0.1 additional days
+// Create a Duration instance for 0.01 additional days
 const additionalDuration = Duration.fromDays(.01)
 
 // Extend the duration of the batch
@@ -355,23 +355,21 @@ The results printed to the terminal will include all the currently valid postage
 We can disregard many of these values since they are only needed for advanced usage. There are several values we do need to pay attention to however:
 
 - `usable` - it takes a short time for a batch to become usable (usually less than a minute) after purchase. Once usable, `usable` will change from `false` to `true`.
-- `usage` - indicates how much of the batch has been used as a value between `1` and `0`.
+- `usage` - indicates how much of the batch has been used as a value between `0` and `1`.
 - `usageText` - converts the `usage` value to a percentage value rounded to the nearest whole number which is then converted to text.
 - `size` -  the amount of data in bytes which the batch can safely store.
-- `remainingSize` - the amount of date in bytes remaining from `size` which is still available to be used.
+- `remainingSize` - the amount of data in bytes remaining from `size` which is still available to be used.
 - `duration` - an estimate of the remaining batch lifetime in seconds.
 
-For an explanation of the remaining values, refer to the "Advanced" section below.
-
 :::tip
-Note that although 1 GB was specified as input for the `bee.storage.buy`, the `size` value is ~2.38 GB. Refer to the [section about batch sizes](./buying-storage.md#batch-size-breakpoints) above to understand why.
+Note that although 1 GB was specified as input for `bee.storage.buy`, the `size` value is ~2.38 GB. Refer to the [section about batch sizes](./buying-storage.md#batch-size-breakpoints) below to understand why.
 :::
 
 ### Selecting a Batch
 
-Any method in `bee-js` which writes data to Swarm requires the batch id of a valid, usable postage batch with remaining space to upload data. 
+Any method in `bee-js` which writes data to Swarm requires the batch ID of a valid, usable postage batch with remaining space to upload data. 
 
-The example script below exports a function which looks for the first usable postage batch with remaining space and returns the id of the batch. 
+The example script below exports a function which looks for the first usable postage batch with remaining space and returns the ID of the batch. 
 
 :::tip notice
 This function is used throughout the examples here in the docs.
@@ -394,7 +392,7 @@ export async function getBatch(bee, criteriaFn) {
 }
 ```
 
-To use it, save the script to a file called `getBatch.js` so we can import the it in our other scripts.
+To use it, save the script to a file called `getBatch.js` so we can import it in our other scripts.
 
 ```javascript
 import { Bee } from '@ethersphere/bee-js'
@@ -407,10 +405,10 @@ function isUsableWithFreeSpace(batch) {
   return batch.usable && batch.remainingSize.toBytes() > 0
 }
 
-const batchId = getBatch(bee, isUsableWithFreeSpace)
+const batchId = await getBatch(bee, isUsableWithFreeSpace)
 ```
 
-If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](./buying-storage.md#checking-batch-status) your postage batches' status using `bee.stamp.getAll` in order to check if a batch with your desired characteristics exists and return its id.
+If you need a batch with specific characteristics (such as a batch with at least 10 GB remaining space or a mutable batch), then you should [inspect](./buying-storage.md#checking-batch-status) your postage batches' status using `bee.stamp.getAll` in order to check if a batch with your desired characteristics exists and return its ID.
 
 ### Batch Size Breakpoints
 
@@ -418,7 +416,7 @@ Batches are bought in discrete size intervals. Each interval corresponds to a ba
 
 Only part of a batch's theoretical volume can be filled in practice, because chunks are distributed unevenly across the batch's buckets. The share that can be used is the *effective volume*, and it grows with depth: a depth 17 batch can only use a hundredth of a percent of its theoretical volume, while a depth 34 batch can use almost 90% of it. This is why the per-byte cost of storage falls sharply as batches get bigger.
 
-*The table below reflects the breakpoints `bee-js` uses by default, which are optimised for encrypted uploads with medium erasure coding. Pass the `encryption` and `erasureCodeLevel` arguments to `bee.storage.buy` and `bee.storage.getCost` to use the exact table for a different combination.*
+*The table below reflects the breakpoints `bee-js` uses by default, which are optimized for encrypted uploads with medium erasure coding. Pass the `encryption` and `erasureCodeLevel` arguments to `bee.storage.buy` and `bee.storage.getCost` to use the exact table for a different combination.*
 
 | Depth | Theoretical Volume | Effective Volume | Utilization | Relative Cost / Effective GB |
 | ----- | ------------------ | ---------------- | ----------- | ---------------------------- |
@@ -443,9 +441,9 @@ Only part of a batch's theoretical volume can be filled in practice, because chu
 
 The last column is the cost of one effective gigabyte relative to the cheapest depth in the table. It is derived from the volumes rather than from any particular BZZ price, so it holds regardless of what storage currently costs. Use `bee.storage.getCost` for actual prices.
 
-When purchasing a batch / estimating batch price, `bee-js` will round up to the nearest effective volume.
+When purchasing a batch or estimating its price, `bee-js` will round up to the nearest effective volume.
 
-For example, if the `bee.storage.buy` method is used to buy a batch with 1 GB as input, `bee-js` will round up to depth 21 and buy a batch with 2.38 GB effective volume. If 5 GB is used as input, `bee-js` will round up to depth 22 and its 7.07 GB, because 5 GB does not fit into the 2.38 GB that depth 21 offers.
+For example, if the `bee.storage.buy` method is used to buy a batch with 1 GB as input, `bee-js` will round up to depth 21 and buy a batch with 2.38 GB effective volume. If 5 GB is used as input, `bee-js` will round up to depth 22 and its 7.07 GB, since 5 GB does not fit into the 2.38 GB that depth 21 offers.
 
 Refer to the [Bee documentation](https://docs.ethswarm.org/docs/concepts/incentives/postage-stamps#effective-utilisation-table) for a more in-depth understanding of batch utilization.
 
@@ -480,7 +478,7 @@ const sizeC = Size.parseFromString('1.5gb')
 ```
 
 :::info
-`Size` uses 1000 rather than 1024 as the base for unit conversions, which keeps it consistent with the effective utilization table below.
+`Size` uses 1000 rather than 1024 as the base for unit conversions, which keeps it consistent with the effective utilization table above.
 :::
 
 ##### Converting and formatting
@@ -505,7 +503,7 @@ sizeB.toFormattedString() // → '5.000 GB'
 The `Duration` class represents a length of time in **seconds**, with helper methods for creating and converting durations in various common time units.
 
 :::tip
-All of the helper methods for `Duration` take numbers as input except for `toEndDate` `fromEndDate` which both take a [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object as input.
+All of the helper methods for `Duration` take numbers as input except for `toEndDate` and `fromEndDate`, which both take a [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object as input.
 :::
 
 ##### Creating a Duration instance

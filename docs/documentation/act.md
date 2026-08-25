@@ -10,10 +10,10 @@ ACT, or Access Control Trie, is a decentralized permission system built into the
 
 When you upload data to Swarm using ACT, only the original uploader and users with public keys listed in an associated grantee list are able to retrieve and decrypt that data. The grantee list is published separately and cryptographically referenced during upload and download operations.
 
-ACT is ideal for use cases such as the serialized release of content like a podcast or newsletter where the publisher wishes to limit access to subscribers only.
+ACT is ideal for use cases such as the serialized release of content like a podcast or newsletter, where the publisher wishes to limit access to subscribers only.
 
 :::warning
-Once a file is uploaded with ACT, any node whose public key is on the ACT grantees list referenced during the upload ***will have permanent access to that file*** as long as the file reference and history reference returned from the upload has been shared with them. 
+Once a file is uploaded with ACT, any node whose public key is on the ACT grantees list referenced during the upload ***will have permanent access to that file*** as long as the file reference and history reference returned from the upload have been shared with them. 
 
 Updating the grantees list to remove a public key ***will not revoke access*** to the content retroactively.
 
@@ -23,7 +23,7 @@ Likewise, re-uploading the content using the new grantees list will also ***not 
 ## Requirements
 The use of ACT requires the following:
 
-* A Bee light node running on with synced postage batch data. (Running at `http://localhost:1633` by default)
+* A Bee light node running with synced postage batch data. (Running at `http://localhost:1633` by default)
 * A valid postage batch ID. [Buy one](./buying-storage.md#purchasing-storage) if needed.
 * Public keys of the nodes you want to grant access to.
 * The **public key of the publishing node**. This can be obtained using the [`bee.connectivity.getNodeAddresses()` method](./status.md#3-get-node-addresses).
@@ -89,7 +89,7 @@ The second reference 32 byte (64 hex digit) `History Reference` (`historyref`) i
 ## Update Grantees List
 
 :::info
-Although we refer to this operation as an "update", due to Swarm's immutable nature, the original list is not modified by this operation. Rather a new list is created with the specified grantee keys added or removed from the original list. This operation ***DOES NOT*** retroactively add or remove access to content uploaded with the original ACT list.
+Although we refer to this operation as an "update", due to Swarm's immutable nature, the original list is not modified by this operation. Rather, a new list is created with the specified grantee keys added to or removed from the original list. This operation ***DOES NOT*** retroactively add or remove access to content uploaded with the original ACT list.
 :::
 
 To update a grantees list, call the `bee.grantee.patch()` method with the following arguments:
@@ -181,7 +181,7 @@ The grantee list is encrypted, and only the owner can view the grantee list, mak
 The example script below performs the following operations:
 
 1. Initializes a Bee client.
-2. Defines two existing grantee list 64 byte `ref` copied from the results of our previous example scripts.
+2. Defines the 64 byte `ref` of two existing grantee lists, copied from the results of our previous example scripts.
 3. Calls `bee.grantee.get()` for each `ref` to retrieve the corresponding grantee list.
 4. Logs the status, status text, and list of grantee public keys in compressed hex format.
 
@@ -239,11 +239,11 @@ Grantees: [
 ]
 ```
 
-The first list of grantees contains the first public key we gave access to when we created the list, while the second one contains both the first and the second one we added when we created our second list based on the first one. 
+The first list of grantees contains the public key we gave access to when we created the list, while the second contains that key plus the one we added when we created the second list. 
 
 ## Upload With ACT
 
-We can upload our content with either of the two lists we created depending on which set of users we wish to give access too. In the example below, we use both lists.
+We can upload our content with either of the two lists we created, depending on which set of users we wish to give access to. In the example below, we use both lists.
 
 #### Example Script:
 
@@ -368,6 +368,6 @@ Example terminal output:
 Content: This is a sample string that will be uploaded securely using ACT.
 ```
 
-In the example above, we used the history reference from the file uploaded using the grantees list with only one public key included (`027d0c4759f689ea3dd3eb79222870671c492cb99f3fade275bcbf0ea39cd0ef6e`), and so it will only be able to be retrieved and decrypted by the node with that public key.
+In the example above, we used the history reference from the file uploaded using the grantees list with only one public key included (`027d0c4759f689ea3dd3eb79222870671c492cb99f3fade275bcbf0ea39cd0ef6e`), so only the node with that public key can retrieve and decrypt it.
 
 If any other node attempts to download this content then a 404 error will be returned.

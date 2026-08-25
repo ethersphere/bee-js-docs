@@ -7,7 +7,7 @@ description: Shows how to deposit BZZ stake and query staking status using bee-j
 ---
 
 
-Operating a Bee full node and staking BZZ makes you eligible to participate in the redistribution game — a mechanism for earning additional BZZ through by sharing disk space with the Swarm network. This guide shows how to use `bee-js` to deposit stake and check your node's staking status.
+Operating a Bee full node and staking BZZ makes you eligible to participate in the redistribution game — a mechanism for earning additional BZZ by sharing disk space with the Swarm network. This guide shows how to use `bee-js` to deposit stake and check your node's staking status.
 
 
 :::danger
@@ -51,6 +51,7 @@ Example output:
 ```bash
 Stake deposited. Transaction hash: e1b86eebc54b465d84ab278da94a387e9786076557ab8f3fe04ba1b52dc065c8
 ```
+
 A successful staking transaction will return the transaction hash which you can look up on a blockchain explorer like [Gnosisscan](https://gnosisscan.io/tx/0xe1b86eebc54b465d84ab278da94a387e9786076557ab8f3fe04ba1b52dc065c8). 
 
 ## Check Staking Status

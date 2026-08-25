@@ -6,9 +6,9 @@ sidebar_label: Chequebook Management
 description: Describes how to fund and manage the chequebook used for bandwidth payments when downloading data from Swarm.
 ---
 
-On Swarm, when downloading data from the network, nodes pay each other for forwarding data in the form of cheques. If you will be downloading a significant amount of data from the network, it is important that you fund your chequebook with BZZ so your node can issue and then pay for cheques. 
+On Swarm, when downloading data from the network, nodes pay each other for forwarding data in the form of cheques. If you plan to download a significant amount of data from the network, it is important that you fund your chequebook with BZZ so your node can issue and then pay for cheques. 
 
-You can also fund your chequebook by running a full node and getting paid in BZZ for forwarding chunks to other nodes, however this may not be enough depending on your download volume. 
+You can also fund your chequebook by running a full node and getting paid in BZZ for forwarding chunks to other nodes, though this may not be enough depending on your download volume. 
 
 :::tip
 If using your node for downloads, it's recommended to actively monitor your node's chequebook balance and top it up once the balance begins to run low.
@@ -131,7 +131,7 @@ Last cheques for peer 10f68a7f7fe8b85e04ae0c869c02852f1b568b145c7f59179feef0601d
 
 Cash out a cheque for a specific peer. This method allows you to retrieve funds from a cheque that has been issued to you by a peer.
 
-#### Cashout the Last Cheque
+#### Cash Out the Last Cheque
 
 ```javascript
 const peerAddress = '10f68a7f7fe8b85e04ae0c869c02852f1b568b145c7f59179feef0601d9f1bf7' 

@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem'
 
 ## About *bee-js* 
 
-`bee-js` simplifies development on Swarm by abstracting away many of finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle. It's the easiest way to get started developing on Swarm.
+`bee-js` simplifies development on Swarm by abstracting away many of the finer details and quirks of the Bee API so that you can focus on building your dream DAPP with minimal hassle. It's the easiest way to get started developing on Swarm.
 
 ## Installation 
 
@@ -47,9 +47,9 @@ yarn add @ethersphere/bee-js --save
   </TabItem>
 </Tabs>
 
-After that you need to import the Bee class and create a bee instance connecting to your Bee node (here we assume it runs on localhost on default port).
+After that you need to import the Bee class and create a bee instance connecting to your Bee node (here we assume it runs on localhost on the default port).
 
-Be aware, if you will pass invalid URL the constructor will throw an exception!
+Be aware that the constructor throws an exception if you pass an invalid URL.
 
 ```js
 import { Bee } from "@ethersphere/bee-js"
@@ -57,7 +57,7 @@ import { Bee } from "@ethersphere/bee-js"
 const bee = new Bee('http://localhost:1633')
 ```
 
-That’s it! now you can use the `bee` object.
+That’s it! Now you can use the `bee` object.
 
 Operations are grouped into namespaces by subject, so uploading raw data is `bee.data.upload(...)`, listing postage batches is `bee.stamp.getAll(...)`, and so on. The [SDK Overview](./overview.md) lists every namespace.
 
@@ -66,13 +66,13 @@ Version 13 moved these methods out of the flat `bee.` surface into namespaces, a
 :::
 
 :::info Run your own Bee node
-You can find out more about running Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
+You can find out more about running a Bee node in the [Bee docs](https://docs.ethswarm.org/docs/installation/quick-start)
 :::
 
 :::tip Using `<script>` import
 
 If you include `bee-js` using the `unpkg.com` script link then all the exported components will be available to you
-under global namespace `BeeJs`:
+under the global namespace `BeeJs`:
 
 ```html
 <script src="https://unpkg.com/@ethersphere/bee-js/dist/index.browser.min.js"></script>
@@ -140,4 +140,4 @@ tree .
 
 The exact results will differ slightly depending on which `app-type` you use, but they will all include a `config.ts` or `config.js` file where the Bee node's API endpoint must be specified.
 
-The endpoint is set to the default Bee API endpoint of `http://localhost:1633`, if your node uses a different endpoint you will need to update it in the config file.
+The endpoint is set to the default Bee API endpoint of `http://localhost:1633`. If your node uses a different endpoint, you will need to update it in the config file.

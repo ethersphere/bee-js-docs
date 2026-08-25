@@ -14,3 +14,9 @@
 ## Writing style
 
 -   Refer to TROPES.md for writing style guidelines.
+
+## Rules
+
+-   Never commit or push.
+-   Never review your changes in the browser, tell the user instead to check the local build.
+-   Always ask the user if something is ambiguous or unclear. Do not assume anything.
