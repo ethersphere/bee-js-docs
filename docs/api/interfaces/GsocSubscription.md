@@ -1,6 +1,6 @@
 # Interface: GsocSubscription
 
-Defined in: [bee-js/src/types/index.ts:334](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L334)
+Defined in: [bee-js/src/types/index.ts:373](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L373)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:334](https://github.com/ethersphere/bee-j
 
 > `readonly` **address**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:335](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L335)
+Defined in: [bee-js/src/types/index.ts:374](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L374)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:335](https://github.com/ethersphere/bee-j
 
 > **cancel**: () => `void`
 
-Defined in: [bee-js/src/types/index.ts:336](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L336)
+Defined in: [bee-js/src/types/index.ts:375](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L375)
 
 #### Returns
 

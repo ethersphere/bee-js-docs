@@ -1,8 +1,12 @@
 # Interface: Tag
 
-Defined in: [bee-js/src/types/index.ts:251](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L251)
+Defined in: [bee-js/src/types/index.ts:289](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L289)
 
-Object that contains infromation about progress of upload of data to network.
+Object that contains information about upload progress of data to network.
+
+The total amount of chunks is represented by `split` property.
+
+The actual progress of the upload can be tracked by the `seen + synced` properties.
 
 ## See
 
@@ -14,7 +18,7 @@ Object that contains infromation about progress of upload of data to network.
 
 > **address**: `string`
 
-Defined in: [bee-js/src/types/index.ts:258](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L258)
+Defined in: [bee-js/src/types/index.ts:296](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L296)
 
 ***
 
@@ -22,7 +26,7 @@ Defined in: [bee-js/src/types/index.ts:258](https://github.com/ethersphere/bee-j
 
 > **seen**: `number`
 
-Defined in: [bee-js/src/types/index.ts:253](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L253)
+Defined in: [bee-js/src/types/index.ts:291](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L291)
 
 ***
 
@@ -30,7 +34,7 @@ Defined in: [bee-js/src/types/index.ts:253](https://github.com/ethersphere/bee-j
 
 > **sent**: `number`
 
-Defined in: [bee-js/src/types/index.ts:255](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L255)
+Defined in: [bee-js/src/types/index.ts:293](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L293)
 
 ***
 
@@ -38,7 +42,7 @@ Defined in: [bee-js/src/types/index.ts:255](https://github.com/ethersphere/bee-j
 
 > **split**: `number`
 
-Defined in: [bee-js/src/types/index.ts:252](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L252)
+Defined in: [bee-js/src/types/index.ts:290](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L290)
 
 ***
 
@@ -46,7 +50,7 @@ Defined in: [bee-js/src/types/index.ts:252](https://github.com/ethersphere/bee-j
 
 > **startedAt**: `string`
 
-Defined in: [bee-js/src/types/index.ts:259](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L259)
+Defined in: [bee-js/src/types/index.ts:297](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L297)
 
 ***
 
@@ -54,7 +58,7 @@ Defined in: [bee-js/src/types/index.ts:259](https://github.com/ethersphere/bee-j
 
 > **stored**: `number`
 
-Defined in: [bee-js/src/types/index.ts:254](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L254)
+Defined in: [bee-js/src/types/index.ts:292](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L292)
 
 ***
 
@@ -62,7 +66,7 @@ Defined in: [bee-js/src/types/index.ts:254](https://github.com/ethersphere/bee-j
 
 > **synced**: `number`
 
-Defined in: [bee-js/src/types/index.ts:256](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L256)
+Defined in: [bee-js/src/types/index.ts:294](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L294)
 
 ***
 
@@ -70,4 +74,4 @@ Defined in: [bee-js/src/types/index.ts:256](https://github.com/ethersphere/bee-j
 
 > **uid**: `number`
 
-Defined in: [bee-js/src/types/index.ts:257](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L257)
+Defined in: [bee-js/src/types/index.ts:295](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L295)

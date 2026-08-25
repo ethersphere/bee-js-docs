@@ -1,6 +1,8 @@
 # Class: Span
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:121](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L121)
+Defined in: [core-sdk/src/bytes/span.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L7)
+
+An 8-byte, little-endian span - the byte count prefixing a chunk's payload.
 
 ## Extends
 
@@ -12,7 +14,7 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:121](https://github.com/ethersphere
 
 > **new Span**(`bytes`): `Span`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:123](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L123)
+Defined in: [core-sdk/src/bytes/span.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L10)
 
 #### Parameters
 
@@ -30,23 +32,11 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:123](https://github.com/ethersphere
 
 ## Properties
 
-### bytes
-
-> `protected` `readonly` **bytes**: `Uint8Array`
-
-Defined in: [bee-js/src/utils/bytes.ts:7](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L7)
-
-#### Inherited from
-
-[`Bytes`](Bytes.md).[`bytes`](Bytes.md#bytes)
-
-***
-
 ### length
 
 > `readonly` **length**: `number`
 
-Defined in: [bee-js/src/utils/bytes.ts:8](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L8)
+Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L19)
 
 #### Inherited from
 
@@ -58,7 +48,7 @@ Defined in: [bee-js/src/utils/bytes.ts:8](https://github.com/ethersphere/bee-js/
 
 > `readonly` `static` **LENGTH**: `8` = `8`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:122](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L122)
+Defined in: [core-sdk/src/bytes/span.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L8)
 
 ## Methods
 
@@ -66,7 +56,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:122](https://github.com/ethersphere
 
 > **equals**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/bytes.ts:83](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L83)
+Defined in: [core-sdk/src/bytes/bytes.ts:166](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L166)
+
+Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
 #### Parameters
 
@@ -88,7 +80,9 @@ Defined in: [bee-js/src/utils/bytes.ts:83](https://github.com/ethersphere/bee-js
 
 > **offset**(`index`): `Uint8Array`
 
-Defined in: [bee-js/src/utils/bytes.ts:51](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L51)
+Defined in: [core-sdk/src/bytes/bytes.ts:110](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L110)
+
+Returns a copy of the bytes from `index` to the end.
 
 #### Parameters
 
@@ -106,11 +100,31 @@ Defined in: [bee-js/src/utils/bytes.ts:51](https://github.com/ethersphere/bee-js
 
 ***
 
+### represent()
+
+> **represent**(): `string`
+
+Defined in: [core-sdk/src/bytes/bytes.ts:173](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L173)
+
+Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.md#tohex).
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Bytes`](Bytes.md).[`represent`](Bytes.md#represent)
+
+***
+
 ### toBase32()
 
 > **toBase32**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:67](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L67)
+Defined in: [core-sdk/src/bytes/bytes.ts:138](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L138)
+
+Encodes as a padded base32 string.
 
 #### Returns
 
@@ -126,7 +140,9 @@ Defined in: [bee-js/src/utils/bytes.ts:67](https://github.com/ethersphere/bee-js
 
 > **toBase64**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:63](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L63)
+Defined in: [core-sdk/src/bytes/bytes.ts:131](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L131)
+
+Encodes as a padded base64 string.
 
 #### Returns
 
@@ -142,7 +158,9 @@ Defined in: [bee-js/src/utils/bytes.ts:63](https://github.com/ethersphere/bee-js
 
 > **toBigInt**(): `bigint`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:131](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L131)
+Defined in: [core-sdk/src/bytes/span.ts:24](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L24)
+
+Decodes the span as a bigint byte count.
 
 #### Returns
 
@@ -154,7 +172,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:131](https://github.com/ethersphere
 
 > **toHex**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:59](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L59)
+Defined in: [core-sdk/src/bytes/bytes.ts:124](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L124)
+
+Encodes as a lowercase hex string, with no `0x` prefix.
 
 #### Returns
 
@@ -170,7 +190,9 @@ Defined in: [bee-js/src/utils/bytes.ts:59](https://github.com/ethersphere/bee-js
 
 > **toJSON**(): `unknown`
 
-Defined in: [bee-js/src/utils/bytes.ts:79](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L79)
+Defined in: [core-sdk/src/bytes/bytes.ts:159](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L159)
+
+Decodes the bytes as UTF-8 JSON.
 
 #### Returns
 
@@ -186,7 +208,9 @@ Defined in: [bee-js/src/utils/bytes.ts:79](https://github.com/ethersphere/bee-js
 
 > **toString**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:71](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L71)
+Defined in: [core-sdk/src/bytes/bytes.ts:145](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L145)
+
+Same as [toHex](Bytes.md#tohex).
 
 #### Returns
 
@@ -202,7 +226,9 @@ Defined in: [bee-js/src/utils/bytes.ts:71](https://github.com/ethersphere/bee-js
 
 > **toUint8Array**(): `Uint8Array`
 
-Defined in: [bee-js/src/utils/bytes.ts:55](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L55)
+Defined in: [core-sdk/src/bytes/bytes.ts:117](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L117)
+
+Returns a copy of the underlying bytes.
 
 #### Returns
 
@@ -218,7 +244,9 @@ Defined in: [bee-js/src/utils/bytes.ts:55](https://github.com/ethersphere/bee-js
 
 > **toUtf8**(): `string`
 
-Defined in: [bee-js/src/utils/bytes.ts:75](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L75)
+Defined in: [core-sdk/src/bytes/bytes.ts:152](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L152)
+
+Decodes the bytes as UTF-8 text.
 
 #### Returns
 
@@ -230,15 +258,41 @@ Defined in: [bee-js/src/utils/bytes.ts:75](https://github.com/ethersphere/bee-js
 
 ***
 
-### fromBigInt()
+### concat()
 
-> `static` **fromBigInt**(`number`): `Span`
+> `static` **concat**(...`arrays`): `Uint8Array`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:127](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L127)
+Defined in: [core-sdk/src/bytes/bytes.ts:75](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L75)
+
+Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
 #### Parameters
 
-##### number
+##### arrays
+
+...(`Uint8Array`\<`ArrayBufferLike`\> \| [`Bytes`](Bytes.md))[]
+
+#### Returns
+
+`Uint8Array`
+
+#### Inherited from
+
+[`Bytes`](Bytes.md).[`concat`](Bytes.md#concat)
+
+***
+
+### fromBigInt()
+
+> `static` **fromBigInt**(`value`): `Span`
+
+Defined in: [core-sdk/src/bytes/span.ts:17](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L17)
+
+Encodes a bigint byte count as an 8-byte, little-endian Span.
+
+#### Parameters
+
+##### value
 
 `bigint`
 
@@ -252,7 +306,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:127](https://github.com/ethersphere
 
 > `static` **fromSlice**(`bytes`, `start`): `Span`
 
-Defined in: [bee-js/src/utils/typed-bytes.ts:135](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/typed-bytes.ts#L135)
+Defined in: [core-sdk/src/bytes/span.ts:31](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/span.ts#L31)
+
+Reads an 8-byte Span out of a larger buffer, starting at `start`.
 
 #### Parameters
 
@@ -278,7 +334,9 @@ Defined in: [bee-js/src/utils/typed-bytes.ts:135](https://github.com/ethersphere
 
 > `static` **fromUtf8**(`utf8`): [`Bytes`](Bytes.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:39](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L39)
+Defined in: [core-sdk/src/bytes/bytes.ts:92](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L92)
+
+Wraps the UTF-8 encoding of a string.
 
 #### Parameters
 
@@ -300,7 +358,9 @@ Defined in: [bee-js/src/utils/bytes.ts:39](https://github.com/ethersphere/bee-js
 
 > `static` **keccak256**(`bytes`): [`Bytes`](Bytes.md)
 
-Defined in: [bee-js/src/utils/bytes.ts:35](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/bytes.ts#L35)
+Defined in: [core-sdk/src/bytes/bytes.ts:68](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L68)
+
+Hashes `bytes` with keccak256 and wraps the 32-byte digest.
 
 #### Parameters
 

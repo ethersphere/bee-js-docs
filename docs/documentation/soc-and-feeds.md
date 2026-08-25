@@ -27,16 +27,16 @@ Interactions with SOC and feeds require the following:
 You can use the `PrivateKey` class to generate a dedicated publisher key for signing SOC and feed updates:
 
 ```js
-const crypto = require('crypto');
-const { PrivateKey } = require('@ethersphere/bee-js');
+import crypto from 'node:crypto'
+import { PrivateKey } from '@ethersphere/bee-js'
 
 // Generate 32 random bytes and construct a private key
-const hexKey = '0x' + crypto.randomBytes(32).toString('hex');
-const privateKey = new PrivateKey(hexKey);
+const hexKey = '0x' + crypto.randomBytes(32).toString('hex')
+const privateKey = new PrivateKey(hexKey)
 
-console.log('Private key:', privateKey.toHex());
-console.log('Public address:', privateKey.publicKey().address().toHex());
-````
+console.log('Private key:', privateKey.toHex())
+console.log('Public address:', privateKey.publicKey().address().toHex())
+```
 
 Example output:
 
@@ -65,7 +65,7 @@ You might be tempted to modify a SOC's content to "update" the chunk. Reuploadin
 
 ### Uploading SOCs
 
-To write a Single Owner Chunk (SOC), use the `makeSOCWriter()` method from the Bee client. This method requires a signer, which can be an instance of `PrivateKey`, a raw Ethereum private key as a hex string (with or without the `0x` prefix), or a `Uint8Array` representing the private key. 
+To write a Single Owner Chunk (SOC), use the `bee.soc.makeWriter()` method. This method requires a signer, which can be an instance of `PrivateKey`, a raw Ethereum private key as a hex string (with or without the `0x` prefix), or a `Uint8Array` representing the private key. 
 
 The signer is used to cryptographically sign the chunk, using the same format Ethereum uses for signing transactions.
 
@@ -73,7 +73,7 @@ Once the `SOCWriter` is created, you can upload an SOC by providing a `postageBa
 
 
 :::info Default `signer`
-When you are instantiating `Bee` class you can pass an Ethereum private key as the default signer that will be used if you won't specify it directly for the `makeSOCWriter`.
+When you are instantiating `Bee` class you can pass an Ethereum private key as the default signer that will be used if you won't specify it directly for `bee.soc.makeWriter`.
 :::
 
 :::warning Your assets and/or privacy may be at risk
@@ -101,7 +101,7 @@ const bee = new Bee('http://localhost:1643', { signer: privateKey })
 const postageBatchId = 'f2949db4cfa4f5140ed3ef29f651d189175a8cb9534c992d3c3212b17f0b67f7'
 
 // Create the SOC writer
-const socWriter = bee.makeSOCWriter(privateKey)
+const socWriter = bee.soc.makeWriter(privateKey)
 
 // The data you want to store in the SOC
 const data = 'this is my sample data'
@@ -146,14 +146,14 @@ The `identifier` and Ethereum address together determine the SOC address and mus
 
 To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
 
-To download a SOC in bee-js, use the `makeSOCReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
+To download a SOC in bee-js, use the `bee.soc.makeReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
 
 :::info SOC address is derived from the identifier and owner
 Unlike uploads using content addressed chunks which are retrieved by their Swarm reference hash, SOCs are retrieved using the combination of `identifier` and `owner`, not their Swarm reference hash.
 :::
 
 ```js
-import { Bee, Size, NULL_IDENTIFIER } from "@ethersphere/bee-js"
+import { Bee, NULL_IDENTIFIER } from "@ethersphere/bee-js"
 
 // Initialize Bee client pointing to the Swarm node
 const bee = new Bee('http://localhost:1633')
@@ -162,7 +162,7 @@ const bee = new Bee('http://localhost:1633')
 const owner = '8d3766440f0d7b949a5e32995d09619a7f86e632'
 
 // Create a SOC reader object bound to the owner
-const socReader = bee.makeSOCReader(owner)
+const socReader = bee.soc.makeReader(owner)
 
 async function readSOC() {
   try {
@@ -219,19 +219,23 @@ Similar to how an SOC is defined by an `owner` and `identifier`, a feed is defin
 
 ### Creating and Updating Feeds Using Topics
 
-This script demonstrates how to create two distinct feeds using different topics and update them using two methods: `uploadPayload()` and `upload()`.
+This script demonstrates how to create two distinct feeds using different topics and update them using two methods: `uploadPayload()` and `uploadReference()`.
 
-* **`upload()`**: Used for uploading references to other content on Swarm.
+* **`uploadReference()`**: Used for uploading references to other content on Swarm.
 * **`uploadPayload()`**: Directly stores an arbitrary data payload in the feed.
 
-Although it is possible to update feeds with an arbitrary data payload using `uploadPayload()`, for most use cases the content should be uploaded separately (such as with `bee.uploadFile()`), and the feed will be updated with the reference of that upload using the `upload()` method.
+Although it is possible to update feeds with an arbitrary data payload using `uploadPayload()`, for most use cases the content should be uploaded separately (such as with `bee.file.upload()`), and the feed will be updated with the reference of that upload using the `uploadReference()` method.
+
+:::note
+`FeedWriter.upload()` and `FeedReader.download()` still work but are deprecated, because it is ambiguous whether the value is a payload or a reference. Use `uploadReference()` / `uploadPayload()` and `downloadReference()` / `downloadPayload()` instead.
+:::
 
 The script below performs the following steps:
 
 1. Initializes the Bee client and derives the feed owner address from a private key (which we have [previously generated](#requirements)).
 2. Uses the `uploadPayload()` method to upload a plain text string as a **payload update** to the feed with topic `"payload-update"`.
 3. Uploads the same string as a file to Swarm and obtains a reference.
-4. Uses the `upload()` method to upload the obtained reference as a **reference update** to the feed with topic `"reference-update"`.
+4. Uses the `uploadReference()` method to upload the obtained reference as a **reference update** to the feed with topic `"reference-update"`.
 
 ```js
 import { Bee, Topic, PrivateKey } from '@ethersphere/bee-js'
@@ -255,19 +259,19 @@ async function run() {
   const topic1 = Topic.fromString('payload-update')
 
   // The writer is constructed from the topic and private key, and can be used for writing feed updates (it also supports reading from feeds)
-  const writer1 = bee.makeFeedWriter(topic1, privateKey)
+  const writer1 = bee.feed.makeWriter(topic1, privateKey)
 
   await writer1.uploadPayload(POSTAGE_BATCH_ID, message)
   console.log('✅ First feed updated with payload.')
 
-  const result = await bee.uploadFile(POSTAGE_BATCH_ID, message, 'announcement.txt')
+  const result = await bee.file.upload(POSTAGE_BATCH_ID, message, 'announcement.txt')
   console.log(result)
   console.log(result.reference.toHex())
 
   // The second writer is constructed using a new topic and the same private key
   const topic2 = Topic.fromString('reference-update')
-  const writer2 = bee.makeFeedWriter(topic2, privateKey)
-  await writer2.upload(POSTAGE_BATCH_ID, result.reference)
+  const writer2 = bee.feed.makeWriter(topic2, privateKey)
+  await writer2.uploadReference(POSTAGE_BATCH_ID, result.reference)
   console.log('✅ Second feed updated with reference.')
 }
 
@@ -280,13 +284,13 @@ run().catch(console.error)
 This script demonstrates how to retrieve data from feeds using their `topic` and `owner`. There are two primary methods used for reading from feeds:
 
 * **`downloadPayload()`** – Used to read the raw payload written directly to the feed.
-* **`downloadReference()`** – Used to read a Swarm reference from the feed. The returned reference can then be passed to `downloadFile()` to retrieve the associated file.
+* **`downloadReference()`** – Used to read a Swarm reference from the feed. The returned reference can then be passed to `bee.file.download()` to retrieve the associated file.
 
 The script performs the following steps:
 
 1. Initializes the Bee client and derives the feed owner address from a private key.
 2. Reads the latest **payload update** from the feed with topic `"payload-update"` using `downloadPayload()`.
-3. Reads the latest **reference update** from the feed with topic `"reference-update"` using `downloadReference()`, then retrieves the associated file from Swarm using `downloadFile()`.
+3. Reads the latest **reference update** from the feed with topic `"reference-update"` using `downloadReference()`, then retrieves the associated file from Swarm using `bee.file.download()`.
 
 Feed readers always require a topic and an owner address. By default, they fetch the latest *consecutively written* update. To retrieve a specific update, an explicit index can be provided.
 
@@ -306,7 +310,7 @@ async function run() {
 
   // Read from payload-update feed
   const topic1 = Topic.fromString('payload-update')
-  const reader1 = bee.makeFeedReader(topic1, owner)
+  const reader1 = bee.feed.makeReader(topic1, owner)
 
   console.log('\n Reading latest update for feed: "payload-update"')
 
@@ -315,15 +319,15 @@ async function run() {
     const text = latest.payload.toUtf8()
 
     console.log('Message (as plain text):', text)
-    console.log('Feed index:', BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`))
-    console.log('Next index:', BigInt(`0x${Buffer.from(latest.feedIndexNext.bytes).toString('hex')}`))
+    console.log('Feed index:', latest.feedIndex.toBigInt())
+    console.log('Next index:', latest.feedIndexNext.toBigInt())
   } catch (error) {
     console.warn('❌ Failed to read update:', error.message)
   }
 
   // Read from reference-update feed
   const topic2 = Topic.fromString('reference-update')
-  const reader2 = bee.makeFeedReader(topic2, owner)
+  const reader2 = bee.feed.makeReader(topic2, owner)
 
   console.log('\n Reading latest update for feed: "reference-update"')
 
@@ -333,10 +337,10 @@ async function run() {
 
     console.log('Swarm reference (hex):', referenceHex)
 
-    const file = await bee.downloadFile(referenceHex)
+    const file = await bee.file.download(referenceHex)
     console.log('Retrieved file content:', file.data.toUtf8())
-    console.log('Feed index:', BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`))
-    console.log('Next index:', BigInt(`0x${Buffer.from(latest.feedIndexNext.bytes).toString('hex')}`))
+    console.log('Feed index:', latest.feedIndex.toBigInt())
+    console.log('Next index:', latest.feedIndexNext.toBigInt())
   } catch (error) {
     console.warn('❌ Failed to read update:', error.message)
   }
@@ -378,32 +382,31 @@ const owner = privateKey.publicKey().address()
 console.log('Feed owner:', owner.toHex())
 
 const topic = Topic.fromString('uploaded-reference-demo')
-const manifestReference = await bee.createFeedManifest(POSTAGE_BATCH_ID, topic, owner)
+const manifestReference = await bee.feed.createManifest(POSTAGE_BATCH_ID, topic, owner)
 console.log('\n Manifest created:')
 console.log('Ref:', manifestReference.toString())
 console.log('URL:', `${BEE_URL}/bzz/${manifestReference.toString()}/`)
 
-const reader = bee.makeFeedReader(topic, owner)
+const reader = bee.feed.makeReader(topic, owner)
 let index
 try {
-  const latest = await reader.download()
+  const latest = await reader.downloadReference()
   index = latest.feedIndexNext
-  const latestIndex = BigInt(`0x${Buffer.from(latest.feedIndex.bytes).toString('hex')}`)
-  console.log(`\n Latest index: ${latestIndex}`)
+  console.log(`\n Latest index: ${latest.feedIndex.toBigInt()}`)
 } catch {
   index = FeedIndex.fromBigInt(0n)
   console.log('\n No updates yet. Starting at index 0')
 }
 
 for (let i = 0; i < 2; i++) {
-  const content = `Update ${BigInt(`0x${Buffer.from(index.bytes).toString('hex')}`)}`
-  const upload = await bee.uploadFile(POSTAGE_BATCH_ID, content, `update-${i}.txt`)
-  const writer = bee.makeFeedWriter(topic, privateKey)
-  await writer.upload(POSTAGE_BATCH_ID, upload.reference, { index })
+  const content = `Update ${index.toBigInt()}`
+  const upload = await bee.file.upload(POSTAGE_BATCH_ID, content, `update-${i}.txt`)
+  const writer = bee.feed.makeWriter(topic, privateKey)
+  await writer.uploadReference(POSTAGE_BATCH_ID, upload.reference, { index })
 
-  console.log(`\n✅ Updated to index ${BigInt(`0x${Buffer.from(index.bytes).toString('hex')}`)}: "${content}"`)
+  console.log(`\n✅ Updated to index ${index.toBigInt()}: "${content}"`)
 
-  const result = await bee.downloadFile(manifestReference)
+  const result = await bee.file.download(manifestReference)
   console.log(` Retrieved via manifest: "${result.data.toUtf8()}"`)
   console.log(`URL: ${BEE_URL}/bzz/${manifestReference.toString()}/`)
 

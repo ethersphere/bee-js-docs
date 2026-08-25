@@ -33,4 +33,10 @@ If anything isn't working, [get in touch and let us know!](https://github.com/et
 
 ## Examples
 
-We have repo with some examples that might be interesting for you to see. Check it out [here](https://github.com/ethersphere/examples-js).
+[`create-swarm-app`](https://github.com/ethersphere/create-swarm-app) scaffolds a working project with `bee-js` already installed and configured, including a React app built with Vite. It is the quickest way to see a complete, running example:
+
+```bash
+npm init swarm-app@latest my-dapp vite-tsx
+```
+
+See [Getting Started](./getting-started) for the other available templates.

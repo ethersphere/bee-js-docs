@@ -7,6 +7,10 @@ description: Documents the utility classes Size, Duration, BZZ, and Bytes for wo
 ---
 `bee-js` includes a variety of utility classes with methods for working with different data types, keys, signatures, addresses, token values, content references, hashing, and more.
 
+:::info Where these classes live
+`Bytes` and its subclasses (`PrivateKey`, `PublicKey`, `Signature`, `Reference`, `Topic`, `Identifier`, `BatchId`, `Span`, `FeedIndex`, `PeerAddress`, `TransactionId`, `EthAddress`) are defined in [`@ethersphere/core-sdk`](https://www.npmjs.com/package/@ethersphere/core-sdk) and re-exported by `bee-js`, so importing them from `@ethersphere/bee-js` works exactly as shown below. Install `core-sdk` directly if you need the primitives without the HTTP client. `BZZ`, `DAI`, `Size` and `Duration` live in `bee-js` itself.
+:::
+
 ## *Bytes* - Data Conversions & Manipulation
 
 The `Bytes` class in `bee-js` provides a convenient wrapper for manipulating byte arrays, converting between encodings, slicing, hashing, and more. It’s used throughout `bee-js` as the basis for other utility classes like `Signature`, `Reference`, `PrivateKey`, and more, all of which extend the `Bytes` class.

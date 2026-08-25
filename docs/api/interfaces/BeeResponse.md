@@ -1,6 +1,6 @@
 # Interface: BeeResponse
 
-Defined in: [bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L359)
+Defined in: [bee-js/src/types/index.ts:399](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L399)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:359](https://github.com/ethersphere/bee-j
 
 > **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [bee-js/src/types/index.ts:360](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L360)
+Defined in: [bee-js/src/types/index.ts:400](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L400)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:360](https://github.com/ethersphere/bee-j
 
 > **request**: [`BeeRequest`](BeeRequest.md)
 
-Defined in: [bee-js/src/types/index.ts:363](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L363)
+Defined in: [bee-js/src/types/index.ts:403](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L403)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:363](https://github.com/ethersphere/bee-j
 
 > **status**: `number`
 
-Defined in: [bee-js/src/types/index.ts:361](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L361)
+Defined in: [bee-js/src/types/index.ts:401](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L401)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/index.ts:361](https://github.com/ethersphere/bee-j
 
 > `optional` **statusText**: `string`
 
-Defined in: [bee-js/src/types/index.ts:362](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L362)
+Defined in: [bee-js/src/types/index.ts:402](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L402)

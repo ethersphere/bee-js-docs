@@ -1,20 +1,25 @@
 # Class: MantarayNode
 
-Defined in: [bee-js/src/manifest/manifest.ts:121](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L121)
+Defined in: [bee-js/src/manifest/manifest.ts:79](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L79)
+
+bee-js's Bee-client-coupled view of a Mantaray node: the trie structure,
+marshaling, and byte-level operations all delegate to core-sdk's
+`MantarayNode`; this class only adds what needs a live `Bee` instance
+(uploading/downloading, ACT history, feed resolution).
 
 ## Constructors
 
 ### Constructor
 
-> **new MantarayNode**(`options?`): `MantarayNode`
+> **new MantarayNode**(`core`): `MantarayNode`
 
-Defined in: [bee-js/src/manifest/manifest.ts:130](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L130)
+Defined in: [bee-js/src/manifest/manifest.ts:82](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L82)
 
 #### Parameters
 
-##### options?
+##### core
 
-`MantarayNodeOptions`
+`MantarayNode` = `...`
 
 #### Returns
 
@@ -22,61 +27,27 @@ Defined in: [bee-js/src/manifest/manifest.ts:130](https://github.com/ethersphere
 
 ## Properties
 
-### forks
+### core
 
-> **forks**: `Map`\<`number`, `Fork`\>
+> `readonly` **core**: `MantarayNode`
 
-Defined in: [bee-js/src/manifest/manifest.ts:127](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L127)
-
-***
-
-### metadata
-
-> **metadata**: `undefined` \| `null` \| `Record`\<`string`, `string`\> = `null`
-
-Defined in: [bee-js/src/manifest/manifest.ts:125](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L125)
-
-***
-
-### obfuscationKey
-
-> **obfuscationKey**: `Uint8Array`
-
-Defined in: [bee-js/src/manifest/manifest.ts:122](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L122)
-
-***
-
-### parent
-
-> **parent**: `null` \| `MantarayNode` = `null`
-
-Defined in: [bee-js/src/manifest/manifest.ts:128](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L128)
-
-***
-
-### path
-
-> **path**: `Uint8Array`
-
-Defined in: [bee-js/src/manifest/manifest.ts:126](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L126)
-
-***
-
-### selfAddress
-
-> **selfAddress**: `null` \| `Uint8Array`\<`ArrayBufferLike`\> = `null`
-
-Defined in: [bee-js/src/manifest/manifest.ts:123](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L123)
-
-***
-
-### targetAddress
-
-> **targetAddress**: `Uint8Array`
-
-Defined in: [bee-js/src/manifest/manifest.ts:124](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L124)
+Defined in: [bee-js/src/manifest/manifest.ts:80](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L80)
 
 ## Accessors
+
+### forks
+
+#### Get Signature
+
+> **get** **forks**(): `Map`\<`number`, \{ `node`: `MantarayNode`; `prefix`: `Uint8Array`; \}\>
+
+Defined in: [bee-js/src/manifest/manifest.ts:106](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L106)
+
+##### Returns
+
+`Map`\<`number`, \{ `node`: `MantarayNode`; `prefix`: `Uint8Array`; \}\>
+
+***
 
 ### fullPath
 
@@ -84,7 +55,7 @@ Defined in: [bee-js/src/manifest/manifest.ts:124](https://github.com/ethersphere
 
 > **get** **fullPath**(): `Uint8Array`
 
-Defined in: [bee-js/src/manifest/manifest.ts:156](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L156)
+Defined in: [bee-js/src/manifest/manifest.ts:118](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L118)
 
 ##### Returns
 
@@ -98,11 +69,109 @@ Defined in: [bee-js/src/manifest/manifest.ts:156](https://github.com/ethersphere
 
 > **get** **fullPathString**(): `string`
 
-Defined in: [bee-js/src/manifest/manifest.ts:160](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L160)
+Defined in: [bee-js/src/manifest/manifest.ts:122](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L122)
 
 ##### Returns
 
 `string`
+
+***
+
+### metadata
+
+#### Get Signature
+
+> **get** **metadata**(): `Record`\<`string`, `string`\> \| `null` \| `undefined`
+
+Defined in: [bee-js/src/manifest/manifest.ts:98](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L98)
+
+##### Returns
+
+`Record`\<`string`, `string`\> \| `null` \| `undefined`
+
+***
+
+### obfuscationKey
+
+#### Get Signature
+
+> **get** **obfuscationKey**(): `Uint8Array`
+
+Defined in: [bee-js/src/manifest/manifest.ts:86](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L86)
+
+##### Returns
+
+`Uint8Array`
+
+***
+
+### parent
+
+#### Get Signature
+
+> **get** **parent**(): `MantarayNode` \| `null`
+
+Defined in: [bee-js/src/manifest/manifest.ts:110](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L110)
+
+##### Returns
+
+`MantarayNode` \| `null`
+
+***
+
+### path
+
+#### Get Signature
+
+> **get** **path**(): `Uint8Array`
+
+Defined in: [bee-js/src/manifest/manifest.ts:102](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L102)
+
+##### Returns
+
+`Uint8Array`
+
+***
+
+### selfAddress
+
+#### Get Signature
+
+> **get** **selfAddress**(): `Uint8Array`\<`ArrayBufferLike`\> \| `null`
+
+Defined in: [bee-js/src/manifest/manifest.ts:90](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L90)
+
+##### Returns
+
+`Uint8Array`\<`ArrayBufferLike`\> \| `null`
+
+***
+
+### targetAddress
+
+#### Get Signature
+
+> **get** **targetAddress**(): `Uint8Array`
+
+Defined in: [bee-js/src/manifest/manifest.ts:94](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L94)
+
+##### Returns
+
+`Uint8Array`
+
+***
+
+### type
+
+#### Get Signature
+
+> **get** **type**(): `number` \| `null`
+
+Defined in: [bee-js/src/manifest/manifest.ts:114](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L114)
+
+##### Returns
+
+`number` \| `null`
 
 ## Methods
 
@@ -110,7 +179,7 @@ Defined in: [bee-js/src/manifest/manifest.ts:160](https://github.com/ethersphere
 
 > **addFork**(`path`, `reference`, `metadata?`): `void`
 
-Defined in: [bee-js/src/manifest/manifest.ts:307](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L307)
+Defined in: [bee-js/src/manifest/manifest.ts:214](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L214)
 
 Adds a fork to the node.
 
@@ -126,7 +195,7 @@ Adds a fork to the node.
 
 ##### metadata?
 
-`null` | `Record`\<`string`, `string`\>
+`Record`\<`string`, `string`\> | `null`
 
 #### Returns
 
@@ -138,7 +207,7 @@ Adds a fork to the node.
 
 > **calculateSelfAddress**(): `Promise`\<[`Reference`](Reference.md)\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:387](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L387)
+Defined in: [bee-js/src/manifest/manifest.ts:232](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L232)
 
 Calculates the self address of the node.
 
@@ -152,7 +221,7 @@ Calculates the self address of the node.
 
 > **collect**(`nodes`): `MantarayNode`[]
 
-Defined in: [bee-js/src/manifest/manifest.ts:463](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L463)
+Defined in: [bee-js/src/manifest/manifest.ts:274](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L274)
 
 Returns an array of all nodes in the tree which have a target address set.
 
@@ -174,7 +243,7 @@ Must be called after `loadRecursively`.
 
 > **collectAndMap**(): `Record`\<`string`, `string`\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:479](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L479)
+Defined in: [bee-js/src/manifest/manifest.ts:283](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L283)
 
 Returns a path:reference map of all nodes in the tree which have a target address set.
 
@@ -190,7 +259,7 @@ Must be called after `loadRecursively`.
 
 > **determineType**(): `number`
 
-Defined in: [bee-js/src/manifest/manifest.ts:490](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L490)
+Defined in: [bee-js/src/manifest/manifest.ts:287](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L287)
 
 #### Returns
 
@@ -200,9 +269,9 @@ Defined in: [bee-js/src/manifest/manifest.ts:490](https://github.com/ethersphere
 
 ### find()
 
-> **find**(`path`): `null` \| `MantarayNode`
+> **find**(`path`): `MantarayNode` \| `null`
 
-Defined in: [bee-js/src/manifest/manifest.ts:433](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L433)
+Defined in: [bee-js/src/manifest/manifest.ts:258](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L258)
 
 Finds a node in the tree by its path.
 
@@ -214,15 +283,15 @@ Finds a node in the tree by its path.
 
 #### Returns
 
-`null` \| `MantarayNode`
+`MantarayNode` \| `null`
 
 ***
 
 ### findClosest()
 
-> **findClosest**(`path`, `current`): \[`MantarayNode`, `Uint8Array`\<`ArrayBufferLike`\>\]
+> **findClosest**(`path`, `current?`): \[`MantarayNode`, `Uint8Array`\<`ArrayBufferLike`\>\]
 
-Defined in: [bee-js/src/manifest/manifest.ts:442](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L442)
+Defined in: [bee-js/src/manifest/manifest.ts:265](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L265)
 
 Finds the closest node in the tree to the given path.
 
@@ -232,9 +301,9 @@ Finds the closest node in the tree to the given path.
 
 `string` | `Uint8Array`\<`ArrayBufferLike`\>
 
-##### current
+##### current?
 
-`Uint8Array` = `...`
+`Uint8Array`\<`ArrayBufferLike`\>
 
 #### Returns
 
@@ -246,7 +315,7 @@ Finds the closest node in the tree to the given path.
 
 > **getDocsMetadata**(): `object`
 
-Defined in: [bee-js/src/manifest/manifest.ts:180](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L180)
+Defined in: [bee-js/src/manifest/manifest.ts:142](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L142)
 
 Returns the `swarm-index-document` and `swarm-error-document` metadata values.
 
@@ -256,11 +325,11 @@ Returns the `swarm-index-document` and `swarm-error-document` metadata values.
 
 ##### errorDocument
 
-> **errorDocument**: `null` \| `string`
+> **errorDocument**: `string` \| `null`
 
 ##### indexDocument
 
-> **indexDocument**: `null` \| `string`
+> **indexDocument**: `string` \| `null`
 
 ***
 
@@ -268,7 +337,7 @@ Returns the `swarm-index-document` and `swarm-error-document` metadata values.
 
 > **getRootMetadata**(): `Optional`\<`Record`\<`string`, `string`\>\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:167](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L167)
+Defined in: [bee-js/src/manifest/manifest.ts:129](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L129)
 
 Returns the metadata at the `/` path to access idiomatic properties.
 
@@ -282,7 +351,7 @@ Returns the metadata at the `/` path to access idiomatic properties.
 
 > **loadRecursively**(`bee`, `options?`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:416](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L416)
+Defined in: [bee-js/src/manifest/manifest.ts:251](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L251)
 
 Loads the node and its children recursively.
 
@@ -310,7 +379,7 @@ Loads the node and its children recursively.
 
 > **marshal**(): `Promise`\<`Uint8Array`\<`ArrayBufferLike`\>\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:219](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L219)
+Defined in: [bee-js/src/manifest/manifest.ts:181](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L181)
 
 Gets the binary representation of the node.
 
@@ -324,7 +393,7 @@ Gets the binary representation of the node.
 
 > **removeFork**(`path`): `void`
 
-Defined in: [bee-js/src/manifest/manifest.ts:362](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L362)
+Defined in: [bee-js/src/manifest/manifest.ts:225](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L225)
 
 Removes a fork from the node.
 
@@ -344,7 +413,7 @@ Removes a fork from the node.
 
 > **resolveFeed**(`bee`, `requestOptions?`): `Promise`\<`Optional`\<`FeedPayloadResult`\>\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:199](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L199)
+Defined in: [bee-js/src/manifest/manifest.ts:161](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L161)
 
 Attempts to resolve the manifest as a feed, returning the latest update.
 
@@ -368,7 +437,7 @@ Attempts to resolve the manifest as a feed, returning the latest update.
 
 > **saveRecursively**(`bee`, `postageBatchId`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:398](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L398)
+Defined in: [bee-js/src/manifest/manifest.ts:239](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L239)
 
 Saves the node and its children recursively.
 
@@ -400,7 +469,7 @@ Saves the node and its children recursively.
 
 > `static` **unmarshal**(`bee`, `reference`, `options?`, `requestOptions?`): `Promise`\<`MantarayNode`\>
 
-Defined in: [bee-js/src/manifest/manifest.ts:263](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L263)
+Defined in: [bee-js/src/manifest/manifest.ts:190](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L190)
 
 Downloads and unmarshals a MantarayNode from the given reference.
 
@@ -434,7 +503,7 @@ Do not forget calling `loadRecursively` on the returned node to load the entire 
 
 > `static` **unmarshalFromData**(`data`, `selfAddress`): `MantarayNode`
 
-Defined in: [bee-js/src/manifest/manifest.ts:280](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/manifest/manifest.ts#L280)
+Defined in: [bee-js/src/manifest/manifest.ts:207](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/manifest/manifest.ts#L207)
 
 Unmarshals a MantarayNode from the given data.
 

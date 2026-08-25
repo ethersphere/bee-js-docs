@@ -1,6 +1,6 @@
 # Interface: FileHeaders
 
-Defined in: [bee-js/src/types/index.ts:267](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L267)
+Defined in: [bee-js/src/types/index.ts:305](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L305)
 
 ## Extended by
 
@@ -12,7 +12,7 @@ Defined in: [bee-js/src/types/index.ts:267](https://github.com/ethersphere/bee-j
 
 > `optional` **contentType**: `string`
 
-Defined in: [bee-js/src/types/index.ts:270](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L270)
+Defined in: [bee-js/src/types/index.ts:308](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L308)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [bee-js/src/types/index.ts:270](https://github.com/ethersphere/bee-j
 
 > `optional` **name**: `string`
 
-Defined in: [bee-js/src/types/index.ts:268](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L268)
+Defined in: [bee-js/src/types/index.ts:306](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L306)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [bee-js/src/types/index.ts:268](https://github.com/ethersphere/bee-j
 
 > `optional` **tagUid**: `number`
 
-Defined in: [bee-js/src/types/index.ts:269](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L269)
+Defined in: [bee-js/src/types/index.ts:307](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L307)

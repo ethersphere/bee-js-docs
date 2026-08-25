@@ -2,10 +2,9 @@
 
 > **getStampUsage**(`utilization`, `depth`, `bucketDepth`): `number`
 
-Defined in: [bee-js/src/utils/stamps.ts:18](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/stamps.ts#L18)
+Defined in: [core-sdk/src/stamper/capacity.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/capacity.ts#L7)
 
-Utility function that calculates usage of postage batch based on its utilization, depth and bucket depth.
-
+Calculates usage of a postage batch based on its utilization, depth, and bucket depth.
 For smaller depths (up to 20), this may provide less accurate results.
 
 ## Parameters

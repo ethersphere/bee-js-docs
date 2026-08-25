@@ -11,13 +11,12 @@ Operating a Bee full node and staking BZZ makes you eligible to participate in t
 
 
 :::danger
-⚠️ **Important:** Staked BZZ is **non-refundable** — once deposited, it **cannot be withdrawn**.
+⚠️ **Important:** Committed stake is **non-refundable**. Only the *surplus* above the amount your node has committed to the redistribution game can be withdrawn, using `bee.stake.withdrawSurplus`.
 :::
 
 
 :::info
-Currently, `bee-js` supports depositing stake and checking staking status, but does **not yet support** advanced features like [partial stake withdrawals](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#partial-stake-withdrawals) or [reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling).
-
+The `bee.stake` namespace covers depositing stake, reading the staked and withdrawable amounts, withdrawing surplus stake, and checking the node's status in the redistribution game. [Reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling) is configured on the node itself rather than through `bee-js`.
 
 For a complete guide to the requirements and configuration for staking, refer to the [Bee documentation](https://docs.ethswarm.org/docs/bee/working-with-bee/staking).
 :::
@@ -28,7 +27,7 @@ For a complete guide to the requirements and configuration for staking, refer to
 
 ## Stake BZZ
 
-To stake, use the `depositStake` method provided by `bee-js`. It accepts a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from decimal string to PLUR.
+To stake, use the `bee.stake.deposit` method. It accepts either a `BZZ` instance or a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from a decimal string to PLUR. The initial deposit must be at least 10 BZZ.
 
 ```js
 import { Bee, BZZ } from '@ethersphere/bee-js'
@@ -40,7 +39,7 @@ async function main() {
   // Convert 10 BZZ to PLUR
   const amount = BZZ.fromDecimalString('10')
 
-  const txHash = await bee.depositStake(amount)
+  const txHash = await bee.stake.deposit(amount)
   console.log('Stake deposited. Transaction hash:', txHash.toHex())
 }
 
@@ -64,8 +63,8 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function main() {
-  const stake = await bee.getStake()
-  const redistributionState = await bee.getRedistributionState()
+  const stake = await bee.stake.get()
+  const redistributionState = await bee.stake.getRedistributionState()
 
   console.log('Current staked amount:', stake.toDecimalString(), 'BZZ')
   console.log('\nRedistribution State:')
@@ -107,3 +106,27 @@ Redistribution State:
 ```
 
 For details on interpreting these values, refer to the [staking status section](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#check-status) of the Bee documentation.
+
+## Withdraw Surplus Stake
+
+Stake above the amount your node has committed to the redistribution game can be withdrawn back to the node wallet. Check how much is withdrawable first:
+
+```js
+import { Bee } from '@ethersphere/bee-js'
+
+const bee = new Bee('http://localhost:1633')
+
+async function main() {
+  const withdrawable = await bee.stake.getWithdrawable()
+  console.log('Withdrawable stake:', withdrawable.toDecimalString(), 'BZZ')
+
+  const txHash = await bee.stake.withdrawSurplus()
+  console.log('Withdrawal transaction hash:', txHash.toHex())
+}
+
+main().catch(console.error)
+```
+
+:::note
+`bee.stake.migrate()` withdraws the *entire* stake, and only works while the staking contract is paused for migration to a new contract. It is not a way to exit staking under normal conditions.
+:::

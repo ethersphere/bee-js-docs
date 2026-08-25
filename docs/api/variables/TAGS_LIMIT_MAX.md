@@ -1,5 +1,12 @@
+---
+title: 'Variable: TAGS_LIMIT_MAX'
+description: 'const TAGS_LIMIT_MAX: 1000 = 1000'
+---
+
 # Variable: TAGS\_LIMIT\_MAX
 
 > `const` **TAGS\_LIMIT\_MAX**: `1000` = `1000`
 
-Defined in: [bee-js/src/types/index.ts:39](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L39)
+Defined in: [bee-js/src/types/index.ts:46](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L46)
+
+Maximum tags API page size.

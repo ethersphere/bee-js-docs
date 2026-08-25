@@ -1,6 +1,6 @@
 # Class: BZZ
 
-Defined in: [bee-js/src/utils/tokens.ts:4](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L4)
+Defined in: [bee-js/src/utils/tokens.ts:4](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L4)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/utils/tokens.ts:4](https://github.com/ethersphere/bee-js
 
 > `readonly` `static` **DIGITS**: `16` = `16`
 
-Defined in: [bee-js/src/utils/tokens.ts:5](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L5)
+Defined in: [bee-js/src/utils/tokens.ts:5](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L5)
 
 ## Methods
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/utils/tokens.ts:5](https://github.com/ethersphere/bee-js
 
 > **divide**(`other`): `BZZ`
 
-Defined in: [bee-js/src/utils/tokens.ts:63](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L63)
+Defined in: [bee-js/src/utils/tokens.ts:71](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L71)
 
 Does not mutate the current BZZ instance.
 
@@ -40,7 +40,7 @@ New BZZ instance
 
 > **eq**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:83](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L83)
+Defined in: [bee-js/src/utils/tokens.ts:91](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L91)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Defined in: [bee-js/src/utils/tokens.ts:83](https://github.com/ethersphere/bee-j
 
 > **exchangeToDAI**(`daiPerBzz`): [`DAI`](DAI.md)
 
-Defined in: [bee-js/src/utils/tokens.ts:87](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L87)
+Defined in: [bee-js/src/utils/tokens.ts:95](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L95)
 
 #### Parameters
 
@@ -76,7 +76,7 @@ Defined in: [bee-js/src/utils/tokens.ts:87](https://github.com/ethersphere/bee-j
 
 > **gt**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:67](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L67)
+Defined in: [bee-js/src/utils/tokens.ts:75](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L75)
 
 #### Parameters
 
@@ -94,7 +94,7 @@ Defined in: [bee-js/src/utils/tokens.ts:67](https://github.com/ethersphere/bee-j
 
 > **gte**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:71](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L71)
+Defined in: [bee-js/src/utils/tokens.ts:79](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L79)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Defined in: [bee-js/src/utils/tokens.ts:71](https://github.com/ethersphere/bee-j
 
 > **lt**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:75](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L75)
+Defined in: [bee-js/src/utils/tokens.ts:83](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L83)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: [bee-js/src/utils/tokens.ts:75](https://github.com/ethersphere/bee-j
 
 > **lte**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:79](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L79)
+Defined in: [bee-js/src/utils/tokens.ts:87](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L87)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: [bee-js/src/utils/tokens.ts:79](https://github.com/ethersphere/bee-j
 
 > **minus**(`other`): `BZZ`
 
-Defined in: [bee-js/src/utils/tokens.ts:53](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L53)
+Defined in: [bee-js/src/utils/tokens.ts:61](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L61)
 
 Does not mutate the current BZZ instance.
 
@@ -172,7 +172,7 @@ New BZZ instance
 
 > **plus**(`other`): `BZZ`
 
-Defined in: [bee-js/src/utils/tokens.ts:43](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L43)
+Defined in: [bee-js/src/utils/tokens.ts:51](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L51)
 
 Does not mutate the current BZZ instance.
 
@@ -196,7 +196,7 @@ New BZZ instance
 
 > **toDecimalString**(): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:29](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L29)
+Defined in: [bee-js/src/utils/tokens.ts:33](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L33)
 
 #### Returns
 
@@ -204,11 +204,23 @@ Defined in: [bee-js/src/utils/tokens.ts:29](https://github.com/ethersphere/bee-j
 
 ***
 
+### toFloat()
+
+> **toFloat**(): `number`
+
+Defined in: [bee-js/src/utils/tokens.ts:37](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L37)
+
+#### Returns
+
+`number`
+
+***
+
 ### toPLURBigInt()
 
 > **toPLURBigInt**(): `bigint`
 
-Defined in: [bee-js/src/utils/tokens.ts:25](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L25)
+Defined in: [bee-js/src/utils/tokens.ts:29](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L29)
 
 #### Returns
 
@@ -220,7 +232,7 @@ Defined in: [bee-js/src/utils/tokens.ts:25](https://github.com/ethersphere/bee-j
 
 > **toPLURString**(): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:21](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L21)
+Defined in: [bee-js/src/utils/tokens.ts:25](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L25)
 
 #### Returns
 
@@ -232,7 +244,7 @@ Defined in: [bee-js/src/utils/tokens.ts:21](https://github.com/ethersphere/bee-j
 
 > **toSignificantDigits**(`digits`): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:33](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L33)
+Defined in: [bee-js/src/utils/tokens.ts:41](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L41)
 
 #### Parameters
 
@@ -250,7 +262,7 @@ Defined in: [bee-js/src/utils/tokens.ts:33](https://github.com/ethersphere/bee-j
 
 > `static` **fromDecimalString**(`string`): `BZZ`
 
-Defined in: [bee-js/src/utils/tokens.ts:13](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L13)
+Defined in: [bee-js/src/utils/tokens.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L13)
 
 #### Parameters
 
@@ -264,11 +276,29 @@ Defined in: [bee-js/src/utils/tokens.ts:13](https://github.com/ethersphere/bee-j
 
 ***
 
+### fromFloat()
+
+> `static` **fromFloat**(`float`): `BZZ`
+
+Defined in: [bee-js/src/utils/tokens.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L21)
+
+#### Parameters
+
+##### float
+
+`number`
+
+#### Returns
+
+`BZZ`
+
+***
+
 ### fromPLUR()
 
 > `static` **fromPLUR**(`plur`): `BZZ`
 
-Defined in: [bee-js/src/utils/tokens.ts:17](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/tokens.ts#L17)
+Defined in: [bee-js/src/utils/tokens.ts:17](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L17)
 
 #### Parameters
 

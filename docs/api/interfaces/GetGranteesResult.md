@@ -1,6 +1,6 @@
 # Interface: GetGranteesResult
 
-Defined in: [bee-js/src/types/index.ts:71](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L71)
+Defined in: [bee-js/src/types/index.ts:97](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L97)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:71](https://github.com/ethersphere/bee-js
 
 > **grantees**: [`PublicKey`](../classes/PublicKey.md)[]
 
-Defined in: [bee-js/src/types/index.ts:74](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L74)
+Defined in: [bee-js/src/types/index.ts:100](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L100)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:74](https://github.com/ethersphere/bee-js
 
 > **status**: `number`
 
-Defined in: [bee-js/src/types/index.ts:72](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L72)
+Defined in: [bee-js/src/types/index.ts:98](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L98)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: [bee-js/src/types/index.ts:72](https://github.com/ethersphere/bee-js
 
 > **statusText**: `string`
 
-Defined in: [bee-js/src/types/index.ts:73](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L73)
+Defined in: [bee-js/src/types/index.ts:99](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L99)

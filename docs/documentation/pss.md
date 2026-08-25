@@ -40,7 +40,7 @@ import { Bee } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function checkAddresses() {
-  const addresses = await bee.getNodeAddresses()
+  const addresses = await bee.connectivity.getNodeAddresses()
 
   console.log('Node Addresses:', addresses)
 }
@@ -71,8 +71,12 @@ The sender (which can be a light node or a full node) needs the **overlay addres
 You can listen on a topic using both **continuous subscription** and **one-time receive**:
 
 
-- `bee.pssSubscribe()` is used to set up a continuous subscription.
-- `bee.pssReceive()` is used to set up a listener on a timeout which closes after receiving a message.
+- `bee.messaging.pssSubscribe()` is used to set up a continuous subscription.
+- `bee.messaging.pssReceive()` is used to set up a listener on a timeout which closes after receiving a message.
+
+:::caution `onClose` is required
+The handler passed to `bee.messaging.pssSubscribe()` must provide all three callbacks: `onMessage`, `onError` and `onClose`. Leaving `onClose` out throws `Expected function for onClose, got: undefined` before the subscription is opened.
+:::
 
 ```js
 import { Bee, Topic } from '@ethersphere/bee-js'
@@ -85,16 +89,19 @@ const topic = Topic.fromString('pss-demo')
 console.log('Subscribing to topic:', topic.toHex())
 
 // Continuous subscription
-bee.pssSubscribe(topic, {
+const subscription = bee.messaging.pssSubscribe(topic, {
   onMessage: msg => console.log('Received via subscription:', msg.toUtf8()),
   onError: err => console.error('Subscription error:', err.message),
+  onClose: () => console.log('Subscription closed.'),
 })
+
+// Call subscription.cancel() when you are done listening
 
 // One-time receive (3 hour timeout)
 async function receiveOnce() {
   try {
     console.log('Waiting for one-time message...')
-    const message = await bee.pssReceive(topic, 1000 * 60 * 60 * 3)
+    const message = await bee.messaging.pssReceive(topic, 1000 * 60 * 60 * 3)
     console.log('One-time received:', message.toUtf8())
   } catch (err) {
     console.error('pssReceive error or timeout:', err.message)
@@ -104,7 +111,7 @@ async function receiveOnce() {
 receiveOnce()
 ```
 
-In this script we generate a `topic` from our chosen string with the `Topic.fromString()` method. Then we subscribe to listen for incoming pss messages for that topic with the `bee.pssSubscribe()` method, and we also set up a listener for receiving a single message with the `bee.pssReceive()` method. When a chunk with a PSS message for that topic is synced into our node's neighborhood, it will be received and handled by our node with the `onMessage` callback function when using the `bee.pssSubscribe()` or through the return value of the `bee.pssReceive()` method in our `receiveOnce` function.
+In this script we generate a `topic` from our chosen string with the `Topic.fromString()` method. Then we subscribe to listen for incoming pss messages for that topic with the `bee.messaging.pssSubscribe()` method, and we also set up a listener for receiving a single message with the `bee.messaging.pssReceive()` method. When a chunk with a PSS message for that topic is synced into our node's neighborhood, it will be received and handled by our node with the `onMessage` callback function when using the `bee.messaging.pssSubscribe()` or through the return value of the `bee.messaging.pssReceive()` method in our `receiveOnce` function.
 
 ## Send Message (Light or Full Node)
 
@@ -134,7 +141,7 @@ const message = 'Hello from the light node!'
 
 async function send() {
   try {
-    await bee.pssSend(BATCH_ID, topic, target, message)
+    await bee.messaging.pssSend(BATCH_ID, topic, target, message)
     console.log('Message sent via PSS.')
   } catch (err) {
     console.error('Failed to send message:', err.message)
@@ -151,7 +158,7 @@ To encrypt the message specifically for the recipient, include their **PSS publi
 ```js
 const recipientPssPublicKey = '5ade58d20be7e04ee8f875eabeebf9c53375a8fc73917683155c7c0b572f47ef790daa3328f48482663954d12f6e4739f748572c1e86bfa89af99f17e7dd4d33'
 
-await bee.pssSend(BATCH_ID, topic, target, message, recipientPssPublicKey)
+await bee.messaging.pssSend(BATCH_ID, topic, target, message, recipientPssPublicKey)
 ```
 
 The message will then be encrypted using the PSS public key of the recipient node before sending and will only be decryptable by the recipient node (although the message bearing the PSS chunk will be received by all nodes in the same neighborhood as the recipient, it will only be decryptable by the recipient node).

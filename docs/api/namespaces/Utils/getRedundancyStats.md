@@ -2,7 +2,10 @@
 
 > **getRedundancyStats**(): `object`
 
-Defined in: [bee-js/src/utils/redundancy.ts:107](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/redundancy.ts#L107)
+Defined in: [core-sdk/src/erasure-coding/levels.ts:119](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/erasure-coding/levels.ts#L119)
+
+Returns descriptive stats (label, level, expected error tolerance) for
+every redundancy level above NONE.
 
 ## Returns
 
@@ -10,16 +13,16 @@ Defined in: [bee-js/src/utils/redundancy.ts:107](https://github.com/ethersphere/
 
 ### insane
 
-> **insane**: `RedundancyStats`
+> **insane**: `RedundancyStat`
 
 ### medium
 
-> **medium**: `RedundancyStats`
+> **medium**: `RedundancyStat`
 
 ### paranoid
 
-> **paranoid**: `RedundancyStats`
+> **paranoid**: `RedundancyStat`
 
 ### strong
 
-> **strong**: `RedundancyStats`
+> **strong**: `RedundancyStat`

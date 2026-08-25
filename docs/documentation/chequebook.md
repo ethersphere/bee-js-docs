@@ -26,9 +26,13 @@ To use the example scripts below, you need:
 Deposits a specified amount of BZZ into the chequebook from your node wallet. This ensures that your node can issue cheques for transactions.
 
 ```javascript
-const amount = new BZZ.fromDecimalString('1') // Deposit 1 BZZ
+import { Bee, BZZ } from '@ethersphere/bee-js'
 
-const transactionHash = await bee.depositTokens(amount)
+const bee = new Bee('http://localhost:1633')
+
+const amount = BZZ.fromDecimalString('1') // Deposit 1 BZZ
+
+const transactionHash = await bee.chequebook.deposit(amount)
 console.log('Deposit transaction hash:', transactionHash.toHex())
 ```
 
@@ -41,7 +45,7 @@ Deposit transaction hash: 85362b9d3ed2ba520b12e4e6523546832064365621ece8b3881cd1
 Retrieves the current balance of the chequebook. This helps you ensure that you have enough BZZ to continue issuing cheques.
 
 ```javascript
-const chequebookBalance = await bee.getChequebookBalance()
+const chequebookBalance = await bee.chequebook.getBalance()
 console.log('Chequebook Balance:', chequebookBalance)
 ```
 
@@ -57,9 +61,13 @@ Chequebook Balance: {
 Withdraws a specified amount of BZZ from the chequebook to the node wallet. You may need to withdraw if you want to transfer BZZ to another account or for other uses.
 
 ```javascript
-const amountToWithdraw = new BZZ.fromDecimalString('1') // Withdraw 1 BZZ
+import { Bee, BZZ } from '@ethersphere/bee-js'
 
-const withdrawalHash = await bee.withdrawTokens(amountToWithdraw)
+const bee = new Bee('http://localhost:1633')
+
+const amountToWithdraw = BZZ.fromDecimalString('1') // Withdraw 1 BZZ
+
+const withdrawalHash = await bee.chequebook.withdraw(amountToWithdraw)
 console.log('Withdraw transaction hash:', withdrawalHash.toHex())
 ```
 
@@ -76,7 +84,7 @@ Retrieves information about the last sent and received cheques from peers, eithe
 This method retrieves the most recent cheques sent or received for all peers. Each entry includes details like the recipient, chequebook address, and payout amount.
 
 ```javascript
-const lastCheques = await bee.getLastCheques()
+const lastCheques = await bee.cheque.getAllLatest()
 console.log('Last Cheques for all peers:', lastCheques)
 ```
 
@@ -103,7 +111,7 @@ Fetches the last cheques for a particular peer. This can help you track your che
 
 ```javascript
 const peerAddress = '10f68a7f7fe8b85e04ae0c869c02852f1b568b145c7f59179feef0601d9f1bf7' 
-const lastChequesForPeer = await bee.getLastChequesForPeer(peerAddress)
+const lastChequesForPeer = await bee.cheque.getAllLatestForPeer(peerAddress)
 console.log(`Last cheques for peer ${peerAddress}:`, lastChequesForPeer)
 ```
 
@@ -128,7 +136,7 @@ Cash out a cheque for a specific peer. This method allows you to retrieve funds 
 ```javascript
 const peerAddress = '10f68a7f7fe8b85e04ae0c869c02852f1b568b145c7f59179feef0601d9f1bf7' 
 
-const transactionId = await bee.cashoutLastCheque(peerAddress)
+const transactionId = await bee.cheque.cashoutLast(peerAddress)
 console.log('Cashout transaction ID:', transactionId)
 ```
 

@@ -1,6 +1,8 @@
 # Interface: Envelope
 
-Defined in: [bee-js/src/types/index.ts:572](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L572)
+Defined in: [core-sdk/src/stamper/marshal.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L7)
+
+A postage stamp's fields, as produced by signing (e.g. via `stamp()`).
 
 ## Extended by
 
@@ -12,23 +14,23 @@ Defined in: [bee-js/src/types/index.ts:572](https://github.com/ethersphere/bee-j
 
 > **index**: `Uint8Array`
 
-Defined in: [bee-js/src/types/index.ts:574](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L574)
+Defined in: [core-sdk/src/stamper/marshal.ts:9](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L9)
 
 ***
 
 ### issuer
 
-> **issuer**: `Uint8Array`
+> **issuer**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:573](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L573)
+Defined in: [core-sdk/src/stamper/marshal.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L8)
 
 ***
 
 ### signature
 
-> **signature**: `Uint8Array`
+> **signature**: [`Signature`](../classes/Signature.md)
 
-Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L576)
+Defined in: [core-sdk/src/stamper/marshal.ts:11](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L11)
 
 ***
 
@@ -36,4 +38,4 @@ Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-j
 
 > **timestamp**: `Uint8Array`
 
-Defined in: [bee-js/src/types/index.ts:575](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/types/index.ts#L575)
+Defined in: [core-sdk/src/stamper/marshal.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L10)

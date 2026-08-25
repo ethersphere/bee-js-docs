@@ -2,10 +2,9 @@
 
 > **getStampTheoreticalBytes**(`depth`): `number`
 
-Defined in: [bee-js/src/utils/stamps.ts:29](https://github.com/ethersphere/bee-js/blob/3abbe2b1b264d6b586511a56e93badb2236bd09d/src/utils/stamps.ts#L29)
+Defined in: [core-sdk/src/stamper/capacity.ts:17](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/capacity.ts#L17)
 
-Utility function that calculates the theoritical maximum size of a postage batch based on its depth.
-
+Calculates the theoretical maximum size of a postage batch based on its depth.
 For smaller depths (up to 22), this may provide less accurate results.
 
 ## Parameters
@@ -18,4 +17,4 @@ For smaller depths (up to 22), this may provide less accurate results.
 
 `number`
 
-The maximum theoretical size of the postage batch in bytes.
+The maximum theoretical size of the postage batch, in bytes.

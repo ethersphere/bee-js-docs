@@ -18,17 +18,17 @@ With direct uploads, the reference hash is not returned until after the content 
 
 ### 1. Create a Tag
 
-Before uploading, create a new tag using `bee.createTag()`. This returns a unique tag UID that will be used to monitor the upload.
+Before uploading, create a new tag using `bee.tag.create()`. This returns a unique tag UID that will be used to monitor the upload.
 
 ```js
-const tag = await bee.createTag()
+const tag = await bee.tag.create()
 console.log("Created new tag with UID:", tag.uid)
 ```
 
-Alternatively, you can use an existing tag from `bee.getAllTags()` (useful for testing or reuse):
+Alternatively, you can use an existing tag from `bee.tag.getAll()` (useful for testing or reuse):
 
 ```js
-const allTags = await bee.getAllTags()
+const allTags = await bee.tag.getAll()
 if (allTags.length > 0) {
   tag = allTags[0]
   console.log("Using existing tag with UID:", tag.uid)
@@ -40,7 +40,7 @@ if (allTags.length > 0) {
 To enable tracking, pass the tag UID into the upload options under the `tag` key:
 
 ```js
-const result = await bee.uploadFile(postageBatchId, fileData, 'nodes.json', {
+const result = await bee.file.upload(postageBatchId, fileData, 'nodes.json', {
   tag: tag.uid,
   contentType: 'application/json'
 })
@@ -50,7 +50,7 @@ This links the upload to your tag so you can monitor its progress.
 
 ### 3. Track Tag Progress
 
-Use `bee.retrieveTag(tagUid)` to monitor upload progress. Chunks that have **already been synced in the past** are counted in `seen`, while newly synced ones are in `synced`. Poll repeatedly until:
+Use `bee.tag.get(tagUid)` to monitor upload progress. Chunks that have **already been synced in the past** are counted in `seen`, while newly synced ones are in `synced`. Poll repeatedly until:
 
 ```text
 synced + seen === split
@@ -59,7 +59,7 @@ synced + seen === split
 This indicates that all chunks have either just synced or were already present in the network.
 
 ```js
-const tag = await bee.retrieveTag(tagUid)
+const tag = await bee.tag.get(tagUid)
 console.log(` - Total split: ${tag.split}`)
 console.log(` - Synced: ${tag.synced}`)
 console.log(` - Seen: ${tag.seen}`)
@@ -76,7 +76,7 @@ const postageBatchId = "129903062bedc4eca6fc1c232ed385e93dda72f711caa1ead6018334
 
 async function waitForTagSync(tagUid, interval = 800) {
   while (true) {
-    const tag = await bee.retrieveTag(tagUid)
+    const tag = await bee.tag.get(tagUid)
 
     console.log(`Progress (Tag ${tagUid}):`)
     console.log(` - Total split: ${tag.split}`)
@@ -97,10 +97,10 @@ async function uploadNodesJsonWithTag() {
   try {
     const fileData = await fs.readFile('./nodes.json')
 
-    const tag = await bee.createTag()
+    const tag = await bee.tag.create()
     console.log("Created new tag with UID:", tag.uid)
 
-    const result = await bee.uploadFile(postageBatchId, fileData, 'nodes.json', {
+    const result = await bee.file.upload(postageBatchId, fileData, 'nodes.json', {
       tag: tag.uid,
       contentType: 'application/json'
     })
@@ -141,7 +141,7 @@ Upload fully synced!
 You can delete tags you no longer need using their uid:
 
 ```js
-await bee.deleteTag(tag.uid)
+await bee.tag.delete(tag.uid)
 console.log("Deleted tag:", tag.uid)
 ```
 

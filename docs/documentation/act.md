@@ -26,7 +26,7 @@ The use of ACT requires the following:
 * A Bee light node running on with synced postage batch data. (Running at `http://localhost:1633` by default)
 * A valid postage batch ID. [Buy one](./buying-storage.md#purchasing-storage) if needed.
 * Public keys of the nodes you want to grant access to.
-* The **public key of the publishing node**. This can be obtained using the [`bee.getNodeAddresses()` method](./status.md#3-get-node-addresses).
+* The **public key of the publishing node**. This can be obtained using the [`bee.connectivity.getNodeAddresses()` method](./status.md#3-get-node-addresses).
 
 ## Create Grantees List
 
@@ -39,7 +39,7 @@ The example script below performs the following key operations:
 1. Initializes a Bee client.
 2. Defines a list of grantee public keys.
 3. Specifies a valid postage batch ID.
-4. Calls `bee.createGrantees()` to create a new grantee list.
+4. Calls `bee.grantee.create()` to create a new grantee list.
 5. Logs the resulting `ref` and `historyref`.
 
 ```js
@@ -58,8 +58,8 @@ const postageBatchId = new BatchId('0258a225fe8da54cc6537eb8b12fcf6706c7873dbe19
 
 async function createGranteeList() {
   try {
-    // Create the grantee list using `bee.createGrantees()` method
-    const response = await bee.createGrantees(postageBatchId, grantees);
+    // Create the grantee list using `bee.grantee.create()` method
+    const response = await bee.grantee.create(postageBatchId, grantees);
 
     // Log the response (ref and history ref)
     console.log('Grantee List Created Successfully:');
@@ -92,14 +92,14 @@ The second reference 32 byte (64 hex digit) `History Reference` (`historyref`) i
 Although we refer to this operation as an "update", due to Swarm's immutable nature, the original list is not modified by this operation. Rather a new list is created with the specified grantee keys added or removed from the original list. This operation ***DOES NOT*** retroactively add or remove access to content uploaded with the original ACT list.
 :::
 
-To update a grantees list, call the `bee.patchGrantees()` method with the following arguments:
+To update a grantees list, call the `bee.grantee.patch()` method with the following arguments:
 
 * A valid postage batch ID
 * The original list’s `ref` and `historyref`
 * An object specifying public keys to `add` or `revoke`
 
 ```js
-bee.patchGrantees(postageBatchId, ref, historyref, {
+bee.grantee.patch(postageBatchId, ref, historyref, {
   add: [grantee1, grantee2],
   revoke: [],
 });
@@ -113,7 +113,7 @@ The example script below performs the following key steps:
 
 1. Initializes the Bee client and defines two public keys to add as grantees.
 2. Provides the existing grantee list’s `ref` and `historyref`, and a valid postage batch ID.
-3. Calls `bee.patchGrantees()` to add the new keys to the list.
+3. Calls `bee.grantee.patch()` to add the new keys to the list.
 4. Logs the updated grantee list’s `ref` and `historyref`.
 
 ```js
@@ -136,8 +136,8 @@ const postageBatchId = new BatchId('0258a225fe8da54cc6537eb8b12fcf6706c7873dbe19
 // Function to update the grantee list by adding the new public key
 async function updateGranteeList() {
   try {
-    // Call the patchGrantees function to add the new public key
-    const response = await bee.patchGrantees(postageBatchId, granteeListRef, granteeHistoryRef, {
+    // Call bee.grantee.patch() to add the new public keys
+    const response = await bee.grantee.patch(postageBatchId, granteeListRef, granteeHistoryRef, {
             add: [grantee1, grantee2], // Add the new grantee
             revoke: [],
     });
@@ -173,7 +173,7 @@ Updated History Reference: d904f0790acb7edfda6a078176d64ec026b40298bfdbceb829565
 In order to view the members of our grantees list we need to use the 64 byte `ref` returned when we create or update a list. We will view both our original list and the updated list based on the original list using the respective `ref` from each list:
 
 :::info
-The grantee list is encrypted, and only the owner can view the grantee list, make sure to use the owner node when using the `bee.getGrantees()` method.
+The grantee list is encrypted, and only the owner can view the grantee list, make sure to use the owner node when using the `bee.grantee.get()` method.
 :::
 
 #### Example Script:
@@ -182,7 +182,7 @@ The example script below performs the following operations:
 
 1. Initializes a Bee client.
 2. Defines two existing grantee list 64 byte `ref` copied from the results of our previous example scripts.
-3. Calls `bee.getGrantees()` for each `ref` to retrieve the corresponding grantee list.
+3. Calls `bee.grantee.get()` for each `ref` to retrieve the corresponding grantee list.
 4. Logs the status, status text, and list of grantee public keys in compressed hex format.
 
 
@@ -193,15 +193,15 @@ import { Bee, Reference } from '@ethersphere/bee-js';
 const bee = new Bee('http://localhost:1633');
 
 
-// Grantee list references (the reference returned from the `bee.createGrantees()` function)
+// Grantee list references (the reference returned from the `bee.grantee.create()` function)
 const granteeListRef_01 = new Reference('69da034fdae049eed9a22ec48b98a08ed5d363d48076f88c44ffe3367a18e306cae6aaf1cfce72d59262b9fb9293e15469c01c6a2626bb62478116cc98fb303b');
 const granteeListRef_02 = new Reference('a029324c42e7911032b83155f487d545b6e07b521a90fce90a266f308c0a455417e71bc03621868da2f6e84357ba772cb03b408fce79862b03d2e082004eccd8');
 
 // Function to get the grantee list
 async function getGranteeList(granteeListRef) {
   try {
-    // Call the getGrantees function with the reference
-    const result = await bee.getGrantees(granteeListRef);
+    // Call bee.grantee.get() with the reference
+    const result = await bee.grantee.get(granteeListRef);
 
     // Log the full response
     console.log('Grantee List Retrieved:');
@@ -252,7 +252,7 @@ The example script below performs the following operations:
 1. Initializes a Bee client.
 2. Defines a postage batch ID and two ACT grantee list 32 byte `historyref` hashes returned from the operations in the previous examples.
 3. Defines a string to upload as a sample file.
-4. Calls `bee.uploadFile()` twice with ACT enabled, specifying a `historyRef` each time to enforce access control.
+4. Calls `bee.file.upload()` twice with ACT enabled, specifying a `historyRef` each time to enforce access control.
 5. Logs the resulting Swarm reference and history reference after each upload.
 
 ```js
@@ -264,7 +264,7 @@ const bee = new Bee('http://localhost:1633');
 // Your postage batch ID (replace with a valid one)
 const postageBatchId = new BatchId('0258a225fe8da54cc6537eb8b12fcf6706c7873dbe19b9381d31729aa0405398');
 
-// Grantee list reference (the reference returned from the `bee.createGrantees()` function)
+// Grantee list reference (the reference returned from the `bee.grantee.create()` function)
 const historyRef_01 = new Reference('18d6f58a1d3c8253a5fc47023d49e9011236ead43724e595e898e1b422b77b19');
 const historyRef_02 = new Reference('d904f0790acb7edfda6a078176d64ec026b40298bfdbceb82956533e31489fcd');
 
@@ -275,7 +275,7 @@ const fileData = 'This is a sample string that will be uploaded securely using A
 async function uploadWithACT(historyRef) {
   try {
     // Upload the string with ACT enabled
-    const result = await bee.uploadFile(postageBatchId, fileData, 'samplefile.txt', {
+    const result = await bee.file.upload(postageBatchId, fileData, 'samplefile.txt', {
         act: true, // Enable ACT for the uploaded data
         actHistoryAddress: historyRef, // Provide the grantee list reference for ACT
       contentType: 'text/plain',
@@ -322,7 +322,7 @@ The example script below performs the following operations:
 
 1. Initializes a Bee client.
 2. Defines a publisher public key and associated file reference + history references for ACT-protected content using the references returned from the upload operation.
-3. Calls `bee.downloadFile()` with ACT options (`actPublisher` and `actHistoryAddress`) to access protected data.
+3. Calls `bee.file.download()` with ACT options (`actPublisher` and `actHistoryAddress`) to access protected data.
 4. Logs the decoded file content.
 
 
@@ -344,7 +344,7 @@ const historyRef_01 = new Reference('18d6f58a1d3c8253a5fc47023d49e9011236ead4372
 // Function to download ACT-protected content
 async function downloadWithACT(fileRef, historyRef, publisherPubKey) {
   try {
-    const result = await bee.downloadFile(fileRef, './', {
+    const result = await bee.file.download(fileRef, '', {
         actPublisher: publisherPubKey,
         actHistoryAddress: historyRef
     })
