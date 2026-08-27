@@ -40,7 +40,3 @@
 - [SDK Overview](https://bee-js.ethswarm.org/docs/overview): Complete index of all public classes, methods, and types
 - [Migrating from v12 to v13](https://bee-js.ethswarm.org/docs/migrating-to-v13): Namespaced methods, the bundled codemod, and the full v12 to v13 mapping
 - [Utility Classes](https://bee-js.ethswarm.org/docs/utilities): Size, Duration, BZZ, and Bytes helper classes
-
-## Optional
-
-- [Community](https://bee-js.ethswarm.org/docs/community): Discord, Reddit, Twitter, and other official channels
