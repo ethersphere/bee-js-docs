@@ -17,7 +17,7 @@ To use the example scripts below, you need:
 
 ### 1. Node Health and Readiness
 
-Use this to access the health and readiness endpoint return values used for container orchestration tools like Kubernetes. 
+Use these to read the health and readiness endpoints, the same values that container orchestration tools like Kubernetes rely on. 
 
 ```js
 import { Bee } from '@ethersphere/bee-js'
@@ -92,7 +92,7 @@ Topology: {
 
 ### 3. Get Node Addresses
 
-This will give you the overlay address, underlay addresses, and Ethereum address associated with your Bee node (the address is an Ethereum style address however it is for a Gnosis Chain account, not mainnet Ethereum).
+This will give you the overlay address, underlay addresses, and Ethereum address associated with your Bee node. The Ethereum address uses the Ethereum format, but it belongs to a Gnosis Chain account rather than to mainnet Ethereum.
 
 ```js
 import { Bee } from '@ethersphere/bee-js'
@@ -102,7 +102,12 @@ const bee = new Bee('http://localhost:1633')
 async function checkAddresses() {
   const addresses = await bee.connectivity.getNodeAddresses()
 
-  console.log('Node Addresses:', addresses)
+  console.log('Node Addresses:')
+  console.log('Overlay:', addresses.overlay.toHex())
+  console.log('Ethereum:', addresses.ethereum.toHex())
+  console.log('Public Key:', addresses.publicKey.toHex())
+  console.log('PSS Public Key:', addresses.pssPublicKey.toHex())
+  console.log('Underlay:', addresses.underlay)
 }
 
 checkAddresses()

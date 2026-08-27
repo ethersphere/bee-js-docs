@@ -29,14 +29,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Resources',
-      items: [
-        'resources/community'
-      ],
-      collapsed: false
-    },
-    {
-      type: 'category',
       label: 'Examples',
       items: [
         {

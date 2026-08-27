@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem'
 
 Swarm provides the ability to store content in content-addressed [chunks](https://docs.ethswarm.org/docs/concepts/DISC/#content-addressed-chunks-and-single-owner-chunks) (CAC) whose addresses are derived from the chunk data, or Single Owner Chunks (SOC) whose addresses are derived from the uploader's address and chosen identifier. With single owner chunks, a user can assign arbitrary data to an address and attest chunk integrity with their digital signature.
 
-Feeds are a unique feature of Swarm which simulate the publishing of mutable content on Swarm's immutable storage. ***Feeds constitute the primary use case for SOCs.*** Developers can use Feeds to version revisions of a mutable resource by indexing sequential updates to a topic at predictably calculated addresses. Because Feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
+Feeds are a unique feature of Swarm which simulate the publishing of mutable content on Swarm's immutable storage. ***Feeds constitute the primary use case for SOCs.*** Developers can use feeds to version revisions of a mutable resource by indexing sequential updates to a topic at predictably calculated addresses. Because feeds are built on top of SOCs, their interfaces are somewhat similar and use common concepts.
 
 
 ## Requirements
@@ -31,8 +31,8 @@ import crypto from 'node:crypto'
 import { PrivateKey } from '@ethersphere/bee-js'
 
 // Generate 32 random bytes and construct a private key
-const hexKey = '0x' + crypto.randomBytes(32).toString('hex')
-const privateKey = new PrivateKey(hexKey)
+const bytes = crypto.randomBytes(32)
+const privateKey = new PrivateKey(bytes)
 
 console.log('Private key:', privateKey.toHex())
 console.log('Public address:', privateKey.publicKey().address().toHex())
@@ -53,14 +53,14 @@ Anyone with access to it can publish to your feed or SOC.
 
 ## Single Owner Chunks
 
-Bee-js calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the  `identifier` and `owner` Ethereum address. The `identifier` is a 32 byte long arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
+`bee-js` calculates a SOC Swarm reference hash as the keccak256 hash of the concatenation of the `identifier` and `owner` Ethereum address. The `identifier` is a 32-byte arbitrary value (by default a hex string or a `Uint8Array`). The `owner` is an Ethereum address that consists of 20 bytes in a format of a hex string or `Uint8Array`.
 
 :::info
-SOCs are powerful and flexible low-level feature which provide the foundation upon which higher level abstractions such as [GSOC](./gsoc.md) and [feeds](./soc-and-feeds.md#feeds) are built. For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
+SOCs are a powerful and flexible low-level feature that provides the foundation for higher level abstractions such as [GSOC](./gsoc.md) and [feeds](./soc-and-feeds.md#feeds). For most common use cases developers are recommended to use these higher level abstractions rather than interacting directly with SOCs themselves.
 :::
 
 :::warning SOCs are immutable!
-You might be tempted to modify a SOC's content to "update" the chunk. Reuploading of an SOC is discouraged as its behavior is undefined. Either use a different `identifier`, or you might be looking for feeds if you need to perform multiple updates to the same content.
+You might be tempted to modify a SOC's content to "update" the chunk. Reuploading a SOC is discouraged as its behavior is undefined. Either use a different `identifier`, or you might be looking for feeds if you need to perform multiple updates to the same content.
 :::
 
 ### Uploading SOCs
@@ -69,11 +69,11 @@ To write a Single Owner Chunk (SOC), use the `bee.soc.makeWriter()` method. This
 
 The signer is used to cryptographically sign the chunk, using the same format Ethereum uses for signing transactions.
 
-Once the `SOCWriter` is created, you can upload an SOC by providing a `postageBatchId`, a 32-byte `identifier`, and the `data` payload.
+Once the `SOCWriter` is created, you can upload a SOC by providing a `postageBatchId`, a 32-byte `identifier`, and the `data` payload.
 
 
 :::info Default `signer`
-When you are instantiating `Bee` class you can pass an Ethereum private key as the default signer that will be used if you won't specify it directly for `bee.soc.makeWriter`.
+When instantiating the `Bee` class, you can pass an Ethereum private key as the default signer, which is used whenever you do not pass one directly to `bee.soc.makeWriter`.
 :::
 
 :::warning Your assets and/or privacy may be at risk
@@ -140,13 +140,13 @@ In this example:
 - `NULL_IDENTIFIER` is the 32-byte value used as the identifier (can be replaced with any user-defined value).
 - `socWriter.upload()` signs and uploads the data, returning a `reference` as confirmation.
 
-The `identifier` and Ethereum address together determine the SOC address and must match exactly when retrieving the chunk later. The returned `reference` is included as part of the upload response, but unlike non-SOC uploads, the returned reference is not used to retrieve the chunk, rather the `identifier` and Ethereum address are used (see next section for example usage). 
+The `identifier` and Ethereum address together determine the SOC address and must match exactly when retrieving the chunk later. The returned `reference` is included as part of the upload response, but unlike non-SOC uploads it is not what you use to retrieve the chunk. The `identifier` and Ethereum address are used instead, as shown in the next section. 
 
 ### Retrieving SOCs
 
 To retrieve a previously uploaded SOC, you must know the Ethereum address of the owner (the signer used to upload the SOC) and the exact 32-byte `identifier` used during upload. These two values uniquely determine the SOC address in Swarm.
 
-To download a SOC in bee-js, use the `bee.soc.makeReader()` method. This method takes the owner's Ethereum address (as a `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
+To download a SOC in bee-js, use the `bee.soc.makeReader()` method. This method takes the owner's Ethereum address (as an `EthAddress` instance, a hex string, or a `Uint8Array`) and returns a `SOCReader` object. You can then call `.download(identifier)` on the reader to retrieve the chunk's data.
 
 :::info SOC address is derived from the identifier and owner
 Unlike uploads using content addressed chunks which are retrieved by their Swarm reference hash, SOCs are retrieved using the combination of `identifier` and `owner`, not their Swarm reference hash.
@@ -196,9 +196,9 @@ Make sure the `owner` and `identifier` values match exactly what was used during
 
 Feeds are an abstraction built on top of Single Owner Chunks (SOCs) that **simulate mutable content** in Swarm. They enable sequenced updates over time while maintaining a stable access point. Feeds are ideal for dynamic content like apps, messages, or websites. Each update is stored in a new immutable chunk at a deterministically calculated address.
 
-> Although feeds appear "mutable," no data is ever modified—new updates are simply written to new indexes.
+> Although feeds appear "mutable," no data is ever modified—new updates are simply written to new indices.
 
-Similar to how an SOC is defined by an `owner` and `identifier`, a feed is defined by:
+Similar to how a SOC is defined by an `owner` and `identifier`, a feed is defined by:
 
 * `owner`: an Ethereum-compatible address 
 * `topic`: a unique 32-byte identifier 
@@ -213,7 +213,7 @@ Similar to how an SOC is defined by an `owner` and `identifier`, a feed is defin
 
 * **Feed Reading**: Readers resolve updates using the `owner` and `topic`. By default, if no index is specified they fetch the latest consecutively written index.
 
-* **Payloads**: Feed payloads include strings, JSON, or Swarm references. Payload size is limited to a single 4 KB chunk. 
+* **Payloads**: Feed payloads can be strings, JSON, or Swarm references. Payload size is limited to a single 4 KB chunk. 
 
 
 
@@ -295,7 +295,7 @@ The script performs the following steps:
 Feed readers always require a topic and an owner address. By default, they fetch the latest *consecutively written* update. To retrieve a specific update, an explicit index can be provided.
 
 :::warning
-While not explicitly enforced, it is strongly recommended to use feeds in an append-only fashion. If instead non-consecutive updates are performed, the only way to discover updates at higher non-consecutively written indexes is to iterate one by one through all indexes up to the number of the index with the update.  
+While not explicitly enforced, it is strongly recommended to use feeds in an append-only fashion. If instead non-consecutive updates are performed, the only way to discover an update at a higher, non-consecutively written index is to walk the indices one by one until you reach it.  
 :::
 
 ```js
@@ -443,5 +443,5 @@ console.log(manual.payload.toUtf8())
 ```
 
 :::caution
-Manually writing to skipped indices is supported but not recommended. It is recommended to use the default behavior when performing feed updates (no `index` specified) to maintain a clean, append-only feed history and ensure new updates are easily discoverable.
+Manually writing to skipped indices is supported but not recommended. Stick to the default behavior when performing feed updates (no `index` specified) to maintain a clean, append-only feed history and ensure new updates are easily discoverable.
 :::

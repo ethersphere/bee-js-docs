@@ -18,7 +18,7 @@ A codemod ships with the library. It reads your project's types to work out whic
 npx bee-js-codemod ./src --from v12
 ```
 
-Requirements and behaviour:
+Requirements and behavior:
 
 - `typescript` 5.x must be installed in your project, since the codemod uses the TypeScript compiler API to resolve types. TypeScript 7 removed that API and is not supported.
 - It rewrites `.ts`, `.tsx`, `.js` and `.jsx` files, skipping `node_modules`, `dist` and `.git`.
@@ -89,7 +89,7 @@ This is not something the codemod can fill in for you, since only you know what 
 
 | Deprecated | Use instead |
 | --- | --- |
-| `writer.upload(batchId, reference)` | `writer.uploadReference(batchId, reference)` |
+| `writer.upload(batchId, value)` | `writer.uploadReference(batchId, reference)` or `writer.uploadPayload(batchId, payload)` |
 | `reader.download()` | `reader.downloadReference()` or `reader.downloadPayload()` |
 
 ## Full mapping
@@ -308,6 +308,7 @@ This is not something the codemod can fill in for you, since only you know what 
 | `bee.getPendingTransaction` | `bee.transaction.get` |
 | `bee.getAllPendingTransactions` | `bee.transaction.getAll` |
 | `bee.rebroadcastPendingTransaction` | `bee.transaction.rebroadcast` |
+
 ## After migrating
 
 - Run your type checker. Argument order and types are unchanged for every renamed method, so a clean type check is a strong signal the migration is complete.

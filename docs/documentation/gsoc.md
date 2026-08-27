@@ -15,13 +15,13 @@ GSOC messages are updates to a pre-mined SOC that lands in the **neighborhood** 
 
 ### GSOC vs PSS
 
-GSOC shares some similarities with PSS - both features allow for full nodes to receive messages from other nodes. 
+GSOC shares some similarities with PSS: both allow full nodes to receive messages from other nodes. 
 
 However, there are several key differences:
 
 - Unlike PSS, **GSOC only needs to mine the target chunk once**—multiple messages reuse it, making it **faster, cheaper**, and **more efficient** for recurring updates.
-- Unlike PSS, **No encryption** is used by default, making it unsuitable for handling sensitive data.
-- Unlike PSS, **GSOC chunks are not meant to be retrieved directly**. The SOC used to initiate a GSOC connection is used to listen for incoming messages only, the chunk itself is not meant to be retrieved since the incoming messages are not actually used to update the SOC since double-signing an SOC is undefined behavior.  
+- Unlike PSS, **no encryption** is used by default, making it unsuitable for handling sensitive data.
+- Unlike PSS, **GSOC chunks are not meant to be retrieved directly**. The SOC used to initiate a GSOC connection only serves to listen for incoming messages. Those messages never actually update the SOC, because double-signing a SOC is undefined behavior.  
 
 ## Requirements
 
@@ -35,7 +35,7 @@ To use the example scripts below, you need:
 
 Identifiers in GSOC are similar to topics in PSS — they define the stream of messages a receiver node is subscribed to. The sender must use the same identifier so that their messages are received.
 
-Each identifier is 32 bytes. It can be initialized from a 32 byte hex string of your choice or created from any arbitrary string using the `Identifier` class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
+Each identifier is 32 bytes. It can be initialized from a 32-byte hex string of your choice or created from any arbitrary string using the `Identifier` class. You can also use the zero-initialized `NULL_IDENTIFIER` as a default identifier for cases where you don't need a unique identifier:
 
 ```js
 import { Identifier, NULL_IDENTIFIER } from '@ethersphere/bee-js'
@@ -51,11 +51,11 @@ const namedIdentifier = Identifier.fromString('chat:v1')
 ```
 
 - `NULL_IDENTIFIER` is 32 zero bytes. Use it for quick testing or when uniqueness doesn't matter.
-- Use any 32 byte hex string to initialize a new `Identifier` object.
-- Use `Identifier.fromString()` to derive an identifier from a string of your choice, which allows for easy to remember human readable identifiers such as `"notifications"` or `"chat:user1"`.
+- Use any 32-byte hex string to initialize a new `Identifier` object.
+- Use `Identifier.fromString()` to derive an identifier from a string of your choice, which allows for easy-to-remember, human-readable identifiers such as `"notifications"` or `"chat:user1"`.
 
 :::caution Don't pass `NULL_IDENTIFIER` to `Identifier.fromString()`
-`NULL_IDENTIFIER` is already a 32 byte value, not a string. `Identifier.fromString(NULL_IDENTIFIER)` hashes its string representation with keccak256 and produces a completely different, non-zero identifier, so a listener and a sender that do this inconsistently will never match. Pass `NULL_IDENTIFIER` straight through instead.
+`NULL_IDENTIFIER` is already a 32-byte value, not a string. `Identifier.fromString(NULL_IDENTIFIER)` hashes its string representation with keccak256 and produces a completely different, non-zero identifier, so a listener and a sender that do this inconsistently will never match. Pass `NULL_IDENTIFIER` straight through instead.
 :::
 
 ## Get Target Overlay (Receiver Node)
@@ -69,7 +69,13 @@ const bee = new Bee('http://localhost:1633')
 
 async function checkAddresses() {
   const addresses = await bee.connectivity.getNodeAddresses()
-  console.log('Node Addresses:', addresses)
+
+  console.log('Node Addresses:')
+  console.log('Overlay:', addresses.overlay.toHex())
+  console.log('Ethereum:', addresses.ethereum.toHex())
+  console.log('Public Key:', addresses.publicKey.toHex())
+  console.log('PSS Public Key:', addresses.pssPublicKey.toHex())
+  console.log('Underlay:', addresses.underlay)
 }
 
 checkAddresses()
@@ -130,7 +136,7 @@ listen()
 
 ## Send a Message (Sender Node)
 
-The sending node must have a ***usable postage batch id*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 
+The sending node must have a ***usable postage batch ID*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 
 
 ```js
 import { Bee, NULL_IDENTIFIER } from '@ethersphere/bee-js'

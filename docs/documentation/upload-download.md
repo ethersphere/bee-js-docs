@@ -14,7 +14,7 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 
-Uploading and downloading with Swarm is easy with `bee-js`. Based on your needs you can either upload unstructured data directly, single files, lists of files, or entire directories. Each upload will return a Swarm reference hash, which is a unique identifier for the upload that can be used to download the uploaded content. 
+Uploading and downloading with Swarm is easy with `bee-js`. Depending on your needs, you can upload unstructured data, single files, lists of files, or entire directories. Each upload will return a Swarm reference hash, which is a unique identifier for the upload that can be used to download the uploaded content. 
 
 
 ## Requirements
@@ -31,9 +31,9 @@ You can upload and retrieve any `string` or `Uint8Array` data with the `bee.data
 
 When you download data the return type is `Bytes`. The `Bytes` class includes various convenience functions like:
 
- - `toUtf8()` that converts the bytes into UTF-8 encoded string
+ - `toUtf8()` that converts the bytes into a UTF-8 encoded string
  - `toHex()` that converts the bytes to a hex string
- - `toJSON()` that converts the bytes into JSON object
+ - `toJSON()` that converts the bytes into a JSON object
 
 :::info
 The `Bytes` class is a core data type in `bee-js`. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](./utilities.md) page.
@@ -68,7 +68,7 @@ console.log(retrievedData.toJSON()) // Prints the data as JSON
 ```
 
 :::info Tip
-A Swarm reference or hash is a 64 character long hex string which is the address of the uploaded data, file, or directory. It must saved so it can be used later to retrieve the uploaded content.
+A Swarm reference or hash is a 64 character long hex string which is the address of the uploaded data, file, or directory. It must be saved so it can be used later to retrieve the uploaded content.
 :::
 
 Example terminal output:

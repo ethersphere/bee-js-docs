@@ -1,3 +1,5 @@
+const { themes: prismThemes } = require("prism-react-renderer");
+
 module.exports = {
   title: "bee-js Library",
   tagline: "Welcome to the Swarm",
@@ -27,6 +29,13 @@ module.exports = {
   themeConfig: {
     colourMode: {
       defaultMode: "dark",
+    },
+    prism: {
+      // Docusaurus defaults to palenight for both modes, which is a dark theme
+      // and italicises comments and keywords. These are the VS Code Light+ and
+      // Dark+ palettes, which use no italics at all.
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
     },
     navbar: {
       title: "bee-js Documentation",

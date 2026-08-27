@@ -6,10 +6,10 @@ sidebar_label: Tracking Uploads
 description: Covers using tags to monitor deferred upload progress and confirm when content has fully synced to the Swarm network.
 ---
 
-You can track the progress of deferred uploads using "tags". Each tag tracks how many chunks were **split**, **stored**, **seen**, and **synced** by the network. By creating a tag before uploading and passing it to the upload function, you make the upload *trackable, allowing you to confirm whether your uploaded data has been fully synced.
+You can track the progress of deferred uploads using "tags". Each tag tracks how many chunks were **split**, **stored**, **seen**, and **synced** by the network. By creating a tag before uploading and passing it to the upload function, you make the upload *trackable*, allowing you to confirm whether your uploaded data has been fully synced.
 
 :::info
-Tracking with tags is used ***only for [deferred uploads](./upload-download.md#deferred-uploads)***. That is because when content is uploaded in a deferred manner, the content's reference hash will be returned *immediately*, often before the content has been fully synced to the network. Therefore tags should be used in order to confirm when the content has been fully synced and is retrievable. 
+Tracking with tags is used ***only for [deferred uploads](./upload-download.md#deferred-uploads)***. That is because when content is uploaded in a deferred manner, the content's reference hash will be returned *immediately*, often before the content has been fully synced to the network. Therefore, tags should be used to confirm when the content has been fully synced and is retrievable. 
 
 With direct uploads, the reference hash is not returned until after the content has already been uploaded and fully synced to the network, so there is no need to track it after uploading.
 :::
@@ -29,8 +29,9 @@ Alternatively, you can use an existing tag from `bee.tag.getAll()` (useful for t
 
 ```js
 const allTags = await bee.tag.getAll()
-if (allTags.length > 0) {
-  tag = allTags[0]
+const tag = allTags[0]
+
+if (tag) {
   console.log("Using existing tag with UID:", tag.uid)
 }
 ```
@@ -138,7 +139,7 @@ Upload fully synced!
 
 ## Deleting Tags
 
-You can delete tags you no longer need using their uid:
+You can delete tags you no longer need using their UID:
 
 ```js
 await bee.tag.delete(tag.uid)
