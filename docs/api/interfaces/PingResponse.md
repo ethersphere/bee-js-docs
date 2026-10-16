@@ -1,6 +1,6 @@
 # Interface: PingResponse
 
-Defined in: [bee-js/src/types/debug.ts:251](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L251)
+Defined in: [bee-js/src/types/debug.ts:254](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L254)
 
 ## Properties
 
@@ -8,4 +8,4 @@ Defined in: [bee-js/src/types/debug.ts:251](https://github.com/ethersphere/bee-j
 
 > **rtt**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:252](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L252)
+Defined in: [bee-js/src/types/debug.ts:255](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L255)

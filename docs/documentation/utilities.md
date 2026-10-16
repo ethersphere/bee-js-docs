@@ -87,7 +87,8 @@ From raw Uint8Array: 102030
 - `toBase32()`: Converts the byte data to a Base32-encoded string.
 - `toUtf8()`: Converts the byte data to a UTF-8 string.
 - `toString()`: Converts the byte data to a hexadecimal string (alias for `toHex()`).
-- `toJSON()`: Parses the byte data (assumed to be a JSON string) and returns the corresponding JavaScript object.
+- `parsePayloadAsJson()`: Parses the byte data (assumed to be a UTF-8 JSON string) and returns the corresponding JavaScript object.
+- `toJSON()`: Returns the hexadecimal string, so `JSON.stringify` serializes `Bytes` as hex.
 
 ```javascript
 // --- Accessing and Converting Bytes ---
@@ -103,7 +104,7 @@ console.log('toUtf8():', data.toUtf8())
 console.log('toString():', data.toString())
 
 const json = Bytes.fromUtf8('{"a": 1, "b": true}')
-console.log('toJSON():', json.toJSON())
+console.log('parsePayloadAsJson():', json.parsePayloadAsJson())
 ```
 
 ```bash
@@ -114,7 +115,7 @@ toBase64(): aGVsbG8=
 toBase32(): NBSWY3DP
 toUtf8(): hello
 toString(): 68656c6c6f
-toJSON(): { a: 1, b: true }
+parsePayloadAsJson(): { a: 1, b: true }
 ```
 
 ## *PrivateKey* - Key Management & Signing

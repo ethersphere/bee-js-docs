@@ -1,6 +1,6 @@
 # Interface: NodeInfo
 
-Defined in: [bee-js/src/types/debug.ts:173](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L173)
+Defined in: [bee-js/src/types/debug.ts:176](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L176)
 
 Information about Bee node and its configuration
 
@@ -10,7 +10,7 @@ Information about Bee node and its configuration
 
 > **beeMode**: [`BeeModes`](../enumerations/BeeModes.md)
 
-Defined in: [bee-js/src/types/debug.ts:177](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L177)
+Defined in: [bee-js/src/types/debug.ts:180](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L180)
 
 Indicates in what mode Bee is running.
 
@@ -20,7 +20,7 @@ Indicates in what mode Bee is running.
 
 > **chequebookEnabled**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:184](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L184)
+Defined in: [bee-js/src/types/debug.ts:187](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L187)
 
 Indicates whether the Bee node has its own deployed chequebook.
 
@@ -34,7 +34,7 @@ Indicates whether the Bee node has its own deployed chequebook.
 
 > **swapEnabled**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:191](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L191)
+Defined in: [bee-js/src/types/debug.ts:194](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L194)
 
 Indicates whether SWAP is enabled for the Bee node.
 

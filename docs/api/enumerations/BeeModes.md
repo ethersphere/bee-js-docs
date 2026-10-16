@@ -1,6 +1,6 @@
 # Enumeration: BeeModes
 
-Defined in: [bee-js/src/types/debug.ts:130](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L130)
+Defined in: [bee-js/src/types/debug.ts:130](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L130)
 
 ## Enumeration Members
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:130](https://github.com/ethersphere/bee-j
 
 > **DEV**: `"dev"`
 
-Defined in: [bee-js/src/types/debug.ts:134](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L134)
+Defined in: [bee-js/src/types/debug.ts:134](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L134)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:134](https://github.com/ethersphere/bee-j
 
 > **FULL**: `"full"`
 
-Defined in: [bee-js/src/types/debug.ts:131](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L131)
+Defined in: [bee-js/src/types/debug.ts:131](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L131)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:131](https://github.com/ethersphere/bee-j
 
 > **LIGHT**: `"light"`
 
-Defined in: [bee-js/src/types/debug.ts:132](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L132)
+Defined in: [bee-js/src/types/debug.ts:132](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L132)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/debug.ts:132](https://github.com/ethersphere/bee-j
 
 > **ULTRA\_LIGHT**: `"ultra-light"`
 
-Defined in: [bee-js/src/types/debug.ts:133](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L133)
+Defined in: [bee-js/src/types/debug.ts:133](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L133)

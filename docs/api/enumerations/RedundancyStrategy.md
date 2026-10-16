@@ -1,6 +1,6 @@
 # Enumeration: RedundancyStrategy
 
-Defined in: [bee-js/src/types/index.ts:198](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L198)
+Defined in: [bee-js/src/types/index.ts:206](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L206)
 
 Specify the retrieve strategy on redundant data.
 The possible values are NONE, DATA, PROX and RACE.
@@ -17,7 +17,7 @@ The default strategy is NONE, DATA, falling back to PROX, falling back to RACE
 
 > **DATA**: `1`
 
-Defined in: [bee-js/src/types/index.ts:200](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L200)
+Defined in: [bee-js/src/types/index.ts:208](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L208)
 
 ***
 
@@ -25,7 +25,7 @@ Defined in: [bee-js/src/types/index.ts:200](https://github.com/ethersphere/bee-j
 
 > **NONE**: `0`
 
-Defined in: [bee-js/src/types/index.ts:199](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L199)
+Defined in: [bee-js/src/types/index.ts:207](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L207)
 
 ***
 
@@ -33,7 +33,7 @@ Defined in: [bee-js/src/types/index.ts:199](https://github.com/ethersphere/bee-j
 
 > **PROX**: `2`
 
-Defined in: [bee-js/src/types/index.ts:201](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L201)
+Defined in: [bee-js/src/types/index.ts:209](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L209)
 
 ***
 
@@ -41,4 +41,4 @@ Defined in: [bee-js/src/types/index.ts:201](https://github.com/ethersphere/bee-j
 
 > **RACE**: `3`
 
-Defined in: [bee-js/src/types/index.ts:202](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L202)
+Defined in: [bee-js/src/types/index.ts:210](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L210)

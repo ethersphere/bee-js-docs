@@ -1,6 +1,6 @@
 # Class: EthAddress
 
-Defined in: [core-sdk/src/bytes/eth-address.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/eth-address.ts#L7)
+Defined in: [core-sdk/src/bytes/eth-address.ts:7](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/eth-address.ts#L7)
 
 A 20-byte Ethereum address.
 
@@ -14,7 +14,7 @@ A 20-byte Ethereum address.
 
 > **new EthAddress**(`bytes`): `EthAddress`
 
-Defined in: [core-sdk/src/bytes/eth-address.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/eth-address.ts#L10)
+Defined in: [core-sdk/src/bytes/eth-address.ts:10](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/eth-address.ts#L10)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: [core-sdk/src/bytes/eth-address.ts:10](https://github.com/etherspher
 
 > `readonly` **length**: `number`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L19)
+Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L19)
 
 #### Inherited from
 
@@ -48,7 +48,7 @@ Defined in: [core-sdk/src/bytes/bytes.ts:19](https://github.com/ethersphere/core
 
 > `readonly` `static` **LENGTH**: `20` = `20`
 
-Defined in: [core-sdk/src/bytes/eth-address.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/eth-address.ts#L8)
+Defined in: [core-sdk/src/bytes/eth-address.ts:8](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/eth-address.ts#L8)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Defined in: [core-sdk/src/bytes/eth-address.ts:8](https://github.com/ethersphere
 
 > **equals**(`other`): `boolean`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:166](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L166)
+Defined in: [core-sdk/src/bytes/bytes.ts:173](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L173)
 
 Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
@@ -80,7 +80,7 @@ Byte-wise equality against another Bytes instance, raw bytes, or hex string.
 
 > **offset**(`index`): `Uint8Array`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:110](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L110)
+Defined in: [core-sdk/src/bytes/bytes.ts:110](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L110)
 
 Returns a copy of the bytes from `index` to the end.
 
@@ -100,11 +100,29 @@ Returns a copy of the bytes from `index` to the end.
 
 ***
 
+### parsePayloadAsJson()
+
+> **parsePayloadAsJson**(): `unknown`
+
+Defined in: [core-sdk/src/bytes/bytes.ts:159](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L159)
+
+Parses the bytes as UTF-8 JSON.
+
+#### Returns
+
+`unknown`
+
+#### Inherited from
+
+[`Bytes`](Bytes.md).[`parsePayloadAsJson`](Bytes.md#parsepayloadasjson)
+
+***
+
 ### represent()
 
 > **represent**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:173](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L173)
+Defined in: [core-sdk/src/bytes/bytes.ts:180](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L180)
 
 Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.md#tohex).
 
@@ -122,7 +140,7 @@ Human-readable representation, used by debuggers/loggers. Same as [toHex](Bytes.
 
 > **toBase32**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:138](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L138)
+Defined in: [core-sdk/src/bytes/bytes.ts:138](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L138)
 
 Encodes as a padded base32 string.
 
@@ -140,7 +158,7 @@ Encodes as a padded base32 string.
 
 > **toBase64**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:131](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L131)
+Defined in: [core-sdk/src/bytes/bytes.ts:131](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L131)
 
 Encodes as a padded base64 string.
 
@@ -158,7 +176,7 @@ Encodes as a padded base64 string.
 
 > **toChecksum**(): `string`
 
-Defined in: [core-sdk/src/bytes/eth-address.ts:17](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/eth-address.ts#L17)
+Defined in: [core-sdk/src/bytes/eth-address.ts:17](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/eth-address.ts#L17)
 
 EIP-55 checksum-cased hex representation (e.g. `0x5aAe...`).
 
@@ -172,7 +190,7 @@ EIP-55 checksum-cased hex representation (e.g. `0x5aAe...`).
 
 > **toHex**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:124](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L124)
+Defined in: [core-sdk/src/bytes/bytes.ts:124](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L124)
 
 Encodes as a lowercase hex string, with no `0x` prefix.
 
@@ -188,15 +206,15 @@ Encodes as a lowercase hex string, with no `0x` prefix.
 
 ### toJSON()
 
-> **toJSON**(): `unknown`
+> **toJSON**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:159](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L159)
+Defined in: [core-sdk/src/bytes/bytes.ts:166](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L166)
 
-Decodes the bytes as UTF-8 JSON.
+Serialized as its hex string by `JSON.stringify`.
 
 #### Returns
 
-`unknown`
+`string`
 
 #### Inherited from
 
@@ -208,7 +226,7 @@ Decodes the bytes as UTF-8 JSON.
 
 > **toString**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:145](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L145)
+Defined in: [core-sdk/src/bytes/bytes.ts:145](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L145)
 
 Same as [toHex](Bytes.md#tohex).
 
@@ -226,7 +244,7 @@ Same as [toHex](Bytes.md#tohex).
 
 > **toUint8Array**(): `Uint8Array`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:117](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L117)
+Defined in: [core-sdk/src/bytes/bytes.ts:117](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L117)
 
 Returns a copy of the underlying bytes.
 
@@ -244,7 +262,7 @@ Returns a copy of the underlying bytes.
 
 > **toUtf8**(): `string`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:152](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L152)
+Defined in: [core-sdk/src/bytes/bytes.ts:152](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L152)
 
 Decodes the bytes as UTF-8 text.
 
@@ -262,7 +280,7 @@ Decodes the bytes as UTF-8 text.
 
 > `static` **concat**(...`arrays`): `Uint8Array`
 
-Defined in: [core-sdk/src/bytes/bytes.ts:75](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L75)
+Defined in: [core-sdk/src/bytes/bytes.ts:75](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L75)
 
 Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
@@ -286,7 +304,7 @@ Concatenates any number of byte arrays (or Bytes instances) into one new array.
 
 > `static` **fromSlice**(`bytes`, `start`, `length?`): [`Bytes`](Bytes.md)
 
-Defined in: [core-sdk/src/bytes/bytes.ts:100](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L100)
+Defined in: [core-sdk/src/bytes/bytes.ts:100](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L100)
 
 Wraps a slice of `bytes` starting at `start`, running to the end unless
 `length` is given.
@@ -319,7 +337,7 @@ Wraps a slice of `bytes` starting at `start`, running to the end unless
 
 > `static` **fromUtf8**(`utf8`): [`Bytes`](Bytes.md)
 
-Defined in: [core-sdk/src/bytes/bytes.ts:92](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L92)
+Defined in: [core-sdk/src/bytes/bytes.ts:92](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L92)
 
 Wraps the UTF-8 encoding of a string.
 
@@ -343,7 +361,7 @@ Wraps the UTF-8 encoding of a string.
 
 > `static` **keccak256**(`bytes`): [`Bytes`](Bytes.md)
 
-Defined in: [core-sdk/src/bytes/bytes.ts:68](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/bytes/bytes.ts#L68)
+Defined in: [core-sdk/src/bytes/bytes.ts:68](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/bytes/bytes.ts#L68)
 
 Hashes `bytes` with keccak256 and wraps the 32-byte digest.
 

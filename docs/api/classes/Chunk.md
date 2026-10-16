@@ -1,6 +1,6 @@
 # Class: Chunk
 
-Defined in: [bee-js/src/modules/chunk.ts:15](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chunk.ts#L15)
+Defined in: [bee-js/src/modules/chunk.ts:15](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chunk.ts#L15)
 
 Chunk operations backed by the `/chunks` endpoint.
 
@@ -12,7 +12,7 @@ Accessed as `bee.chunk`.
 
 > **new Chunk**(`context`): `Chunk`
 
-Defined in: [bee-js/src/modules/chunk.ts:16](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chunk.ts#L16)
+Defined in: [bee-js/src/modules/chunk.ts:16](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chunk.ts#L16)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/chunk.ts:16](https://github.com/ethersphere/bee-
 
 > **download**(`reference`, `options?`, `requestOptions?`): `Promise`\<`Uint8Array`\<`ArrayBufferLike`\>\>
 
-Defined in: [bee-js/src/modules/chunk.ts:67](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chunk.ts#L67)
+Defined in: [bee-js/src/modules/chunk.ts:67](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chunk.ts#L67)
 
 Downloads a chunk as a `Uint8Array`.
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **upload**(`stamp`, `data`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/chunk.ts:28](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chunk.ts#L28)
+Defined in: [bee-js/src/modules/chunk.ts:28](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chunk.ts#L28)
 
 Uploads a chunk to the network.
 
@@ -86,7 +86,7 @@ Raw chunk to be uploaded (Content Addressed Chunk or Single Owner Chunk)
 
 ##### options?
 
-[`UploadOptions`](../interfaces/UploadOptions.md)
+[`ChunkUploadOptions`](../interfaces/ChunkUploadOptions.md)
 
 Additional options like tag, encryption, pinning, content-type and request options
 

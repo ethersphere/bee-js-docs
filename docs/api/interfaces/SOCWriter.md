@@ -1,6 +1,6 @@
 # Interface: SOCWriter
 
-Defined in: [bee-js/src/types/index.ts:479](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L479)
+Defined in: [bee-js/src/types/index.ts:498](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L498)
 
 Interface for downloading and uploading single owner chunks
 
@@ -14,7 +14,7 @@ Interface for downloading and uploading single owner chunks
 
 > **download**: (`identifier`) => `Promise`\<[`SingleOwnerChunk`](SingleOwnerChunk.md)\>
 
-Defined in: [bee-js/src/types/index.ts:473](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L473)
+Defined in: [bee-js/src/types/index.ts:492](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L492)
 
 Downloads a single owner chunk
 
@@ -40,7 +40,7 @@ The identifier of the chunk
 
 > `readonly` **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:467](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L467)
+Defined in: [bee-js/src/types/index.ts:486](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L486)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [bee-js/src/types/index.ts:467](https://github.com/ethersphere/bee-j
 
 > **upload**: (`stamp`, `identifier`, `data`, `options?`) => `Promise`\<[`UploadResult`](UploadResult.md)\>
 
-Defined in: [bee-js/src/types/index.ts:487](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L487)
+Defined in: [bee-js/src/types/index.ts:506](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L506)
 
 Uploads a single owner chunk
 
@@ -76,7 +76,7 @@ The chunk payload data
 
 ##### options?
 
-[`UploadOptions`](UploadOptions.md)
+[`ChunkUploadOptions`](ChunkUploadOptions.md)
 
 Upload options
 

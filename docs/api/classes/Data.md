@@ -1,6 +1,6 @@
 # Class: Data
 
-Defined in: [bee-js/src/modules/data.ts:22](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L22)
+Defined in: [bee-js/src/modules/data.ts:22](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L22)
 
 Raw data operations backed by the `/bytes` endpoint.
 
@@ -12,7 +12,7 @@ Accessed as `bee.data`.
 
 > **new Data**(`context`): `Data`
 
-Defined in: [bee-js/src/modules/data.ts:23](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L23)
+Defined in: [bee-js/src/modules/data.ts:23](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L23)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/data.ts:23](https://github.com/ethersphere/bee-j
 
 > **download**(`resource`, `options?`, `requestOptions?`): `Promise`\<[`Bytes`](../classes/Bytes.md)\>
 
-Defined in: [bee-js/src/modules/data.ts:58](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L58)
+Defined in: [bee-js/src/modules/data.ts:58](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L58)
 
 Downloads raw data through the `GET /bytes/{reference}` endpoint.
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **downloadReadable**(`resource`, `options?`, `requestOptions?`): `Promise`\<`ReadableStream`\<`Uint8Array`\<`ArrayBufferLike`\>\>\>
 
-Defined in: [bee-js/src/modules/data.ts:79](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L79)
+Defined in: [bee-js/src/modules/data.ts:79](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L79)
 
 Downloads raw data through the `GET /bytes/{reference}` endpoint as a readable stream.
 
@@ -100,7 +100,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **isRetrievable**(`reference`, `requestOptions?`): `Promise`\<`boolean`\>
 
-Defined in: [bee-js/src/modules/data.ts:116](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L116)
+Defined in: [bee-js/src/modules/data.ts:116](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L116)
 
 Checks if content specified by reference is retrievable from the network.
 
@@ -128,7 +128,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **probe**(`reference`, `requestOptions?`): `Promise`\<[`ReferenceInformation`](../interfaces/ReferenceInformation.md)\>
 
-Defined in: [bee-js/src/modules/data.ts:101](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L101)
+Defined in: [bee-js/src/modules/data.ts:101](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L101)
 
 Fetches content length for a `/bytes` reference through the `HEAD /bytes/{reference}` endpoint.
 
@@ -154,7 +154,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **upload**(`postageBatchId`, `data`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/data.ts:35](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/data.ts#L35)
+Defined in: [bee-js/src/modules/data.ts:35](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/data.ts#L35)
 
 Uploads raw data through the `POST /bytes` endpoint.
 

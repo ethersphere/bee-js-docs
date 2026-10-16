@@ -1,6 +1,6 @@
 # Class: Messaging
 
-Defined in: [bee-js/src/modules/messaging.ts:40](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L40)
+Defined in: [bee-js/src/modules/messaging.ts:41](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L41)
 
 Messaging protocols — PSS (Postal Service for Swarm) and GSOC. Method names keep
 their `pss`/`gsoc` prefixes to distinguish the two protocols within the namespace.
@@ -13,7 +13,7 @@ Accessed as `bee.messaging`.
 
 > **new Messaging**(`context`): `Messaging`
 
-Defined in: [bee-js/src/modules/messaging.ts:41](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L41)
+Defined in: [bee-js/src/modules/messaging.ts:42](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L42)
 
 #### Parameters
 
@@ -31,7 +31,7 @@ Defined in: [bee-js/src/modules/messaging.ts:41](https://github.com/ethersphere/
 
 > **gsocMine**(`targetOverlay`, `identifier`, `proximity`): [`PrivateKey`](../classes/PrivateKey.md)
 
-Defined in: [bee-js/src/modules/messaging.ts:153](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L153)
+Defined in: [bee-js/src/modules/messaging.ts:154](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L154)
 
 Mines the signer (a private key) to be used to send GSOC messages to the specific target overlay address.
 
@@ -59,7 +59,7 @@ Mines the signer (a private key) to be used to send GSOC messages to the specifi
 
 > **gsocSend**(`postageBatchId`, `signer`, `identifier`, `data`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/messaging.ts:188](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L188)
+Defined in: [bee-js/src/modules/messaging.ts:189](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L189)
 
 Sends a GSOC message with the specified signer and identifier.
 
@@ -85,7 +85,7 @@ Sends a GSOC message with the specified signer and identifier.
 
 ##### options?
 
-[`UploadOptions`](../interfaces/UploadOptions.md)
+[`ChunkUploadOptions`](../interfaces/ChunkUploadOptions.md)
 
 ##### requestOptions?
 
@@ -101,9 +101,9 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 ### gsocSubscribe()
 
-> **gsocSubscribe**(`address`, `identifier`, `handler`): [`GsocSubscription`](../interfaces/GsocSubscription.md)
+> **gsocSubscribe**(`address`, `identifier`, `handler`, `options?`): [`GsocSubscription`](../interfaces/GsocSubscription.md)
 
-Defined in: [bee-js/src/modules/messaging.ts:215](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L215)
+Defined in: [bee-js/src/modules/messaging.ts:217](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L217)
 
 Subscribes to GSOC messages for the specified owner (of the signer) and identifier.
 
@@ -123,6 +123,12 @@ Subscribes to GSOC messages for the specified owner (of the signer) and identifi
 
 [`GsocMessageHandler`](../interfaces/GsocMessageHandler.md)
 
+##### options?
+
+[`GsocSubscribeOptions`](../interfaces/GsocSubscribeOptions.md)
+
+SOC fields to receive and whether to cache the wrapped chunk; requires Bee 2.8.3 or later
+
 #### Returns
 
 [`GsocSubscription`](../interfaces/GsocSubscription.md)
@@ -133,7 +139,7 @@ Subscribes to GSOC messages for the specified owner (of the signer) and identifi
 
 > **pssReceive**(`topic`, `timeoutMsec`): `Promise`\<[`Bytes`](../classes/Bytes.md)\>
 
-Defined in: [bee-js/src/modules/messaging.ts:113](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L113)
+Defined in: [bee-js/src/modules/messaging.ts:114](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L114)
 
 Receives a single message using the Postal Service for Swarm.
 
@@ -163,7 +169,7 @@ Timeout in milliseconds
 
 > **pssSend**(`postageBatchId`, `topic`, `target`, `data`, `recipient?`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/messaging.ts:55](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L55)
+Defined in: [bee-js/src/modules/messaging.ts:56](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L56)
 
 Sends data to a recipient or target with the Postal Service for Swarm.
 
@@ -217,7 +223,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **pssSubscribe**(`topic`, `handler`): [`PssSubscription`](../interfaces/PssSubscription.md)
 
-Defined in: [bee-js/src/modules/messaging.ts:79](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/messaging.ts#L79)
+Defined in: [bee-js/src/modules/messaging.ts:80](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/messaging.ts#L80)
 
 Subscribes to messages for the given topic with the Postal Service for Swarm.
 

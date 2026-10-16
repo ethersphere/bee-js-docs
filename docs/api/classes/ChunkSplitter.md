@@ -1,6 +1,6 @@
 # Class: ChunkSplitter
 
-Defined in: [core-sdk/src/chunk/splitter.ts:66](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L66)
+Defined in: [core-sdk/src/chunk/splitter.ts:66](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L66)
 
 Splits arbitrary data into a tree of 4096-byte chunks (the inverse of
 ChunkJoiner), calling `onBatch` with each level's sealed chunks as they
@@ -13,7 +13,7 @@ Reed-Solomon parity chunks.
 
 > **new ChunkSplitter**(`onBatch`, `maxShards?`, `encrypted?`, `onIntermediateChunk?`): `ChunkSplitter`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:90](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L90)
+Defined in: [core-sdk/src/chunk/splitter.ts:90](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L90)
 
 #### Parameters
 
@@ -54,7 +54,7 @@ sealed, so callers can tag it (e.g. encoding a redundancy level into its span).
 
 > `readonly` `static` **NOOP**: (`_`) => `Promise`\<`ChunkEntry`[]\>
 
-Defined in: [core-sdk/src/chunk/splitter.ts:67](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L67)
+Defined in: [core-sdk/src/chunk/splitter.ts:67](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L67)
 
 #### Parameters
 
@@ -72,7 +72,7 @@ Defined in: [core-sdk/src/chunk/splitter.ts:67](https://github.com/ethersphere/c
 
 > **append**(`data`, `level?`, `spanIncrement?`): `Promise`\<`void`\>
 
-Defined in: [core-sdk/src/chunk/splitter.ts:132](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L132)
+Defined in: [core-sdk/src/chunk/splitter.ts:132](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L132)
 
 Appends more data to the tree, sealing and elevating chunks as needed.
 `level`/`spanIncrement` are internal - callers building a tree from raw
@@ -102,7 +102,7 @@ input data should always call this at the default level 0.
 
 > **finalize**(`level?`): `Promise`\<[`ChunkBuilder`](ChunkBuilder.md)\>
 
-Defined in: [core-sdk/src/chunk/splitter.ts:217](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L217)
+Defined in: [core-sdk/src/chunk/splitter.ts:217](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L217)
 
 Seals every level and returns the tree's root chunk. `level` is
 internal - callers should always start at the default level 0.
@@ -123,7 +123,7 @@ internal - callers should always start at the default level 0.
 
 > `static` **encryptedRoot**(`data`): `Promise`\<\{ `address`: [`Reference`](Reference.md); `key`: `Uint8Array`; \}\>
 
-Defined in: [core-sdk/src/chunk/splitter.ts:119](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L119)
+Defined in: [core-sdk/src/chunk/splitter.ts:119](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L119)
 
 Splits `data` into an encrypted chunk tree (no upload callback) and
 returns the root's encrypted address and key.
@@ -144,7 +144,7 @@ returns the root's encrypted address and key.
 
 > `static` **root**(`data`): `Promise`\<[`ChunkBuilder`](ChunkBuilder.md)\>
 
-Defined in: [core-sdk/src/chunk/splitter.ts:108](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L108)
+Defined in: [core-sdk/src/chunk/splitter.ts:108](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L108)
 
 Splits `data` into a chunk tree (no redundancy, no encryption, no
 upload callback) and returns just its root chunk.

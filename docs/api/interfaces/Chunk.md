@@ -1,6 +1,6 @@
 # Interface: Chunk
 
-Defined in: [core-sdk/src/chunk/cac.ts:25](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L25)
+Defined in: [core-sdk/src/chunk/cac.ts:25](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L25)
 
 Content Addressed Chunk (CAC) - the immutable building block of Swarm,
 holding at most 4096 bytes of payload.
@@ -18,7 +18,7 @@ The `toSingleOwnerChunk` method allows converting the CAC into a Single Owner Ch
 
 > **address**: [`Reference`](../classes/Reference.md)
 
-Defined in: [core-sdk/src/chunk/cac.ts:29](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L29)
+Defined in: [core-sdk/src/chunk/cac.ts:29](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L29)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [core-sdk/src/chunk/cac.ts:29](https://github.com/ethersphere/core-s
 
 > `readonly` **data**: `Uint8Array`
 
-Defined in: [core-sdk/src/chunk/cac.ts:26](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L26)
+Defined in: [core-sdk/src/chunk/cac.ts:26](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L26)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [core-sdk/src/chunk/cac.ts:26](https://github.com/ethersphere/core-s
 
 > **payload**: [`Bytes`](../classes/Bytes.md)
 
-Defined in: [core-sdk/src/chunk/cac.ts:28](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L28)
+Defined in: [core-sdk/src/chunk/cac.ts:28](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L28)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [core-sdk/src/chunk/cac.ts:28](https://github.com/ethersphere/core-s
 
 > **span**: [`Span`](../classes/Span.md)
 
-Defined in: [core-sdk/src/chunk/cac.ts:27](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L27)
+Defined in: [core-sdk/src/chunk/cac.ts:27](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L27)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [core-sdk/src/chunk/cac.ts:27](https://github.com/ethersphere/core-s
 
 > **toSingleOwnerChunk**: (`identifier`, `privateKey`) => [`SingleOwnerChunk`](SingleOwnerChunk.md)
 
-Defined in: [core-sdk/src/chunk/cac.ts:34](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/cac.ts#L34)
+Defined in: [core-sdk/src/chunk/cac.ts:34](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/cac.ts#L34)
 
 Converts this CAC into a Single Owner Chunk (SOC), signed by `privateKey`
 over `identifier` and this chunk's address.

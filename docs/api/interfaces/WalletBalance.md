@@ -1,6 +1,6 @@
 # Interface: WalletBalance
 
-Defined in: [bee-js/src/types/debug.ts:270](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L270)
+Defined in: [bee-js/src/types/debug.ts:273](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L273)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:270](https://github.com/ethersphere/bee-j
 
 > **bzzBalance**: [`BZZ`](../classes/BZZ.md)
 
-Defined in: [bee-js/src/types/debug.ts:271](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L271)
+Defined in: [bee-js/src/types/debug.ts:274](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L274)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:271](https://github.com/ethersphere/bee-j
 
 > **chainID**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:273](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L273)
+Defined in: [bee-js/src/types/debug.ts:276](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L276)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:273](https://github.com/ethersphere/bee-j
 
 > **chequebookContractAddress**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:274](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L274)
+Defined in: [bee-js/src/types/debug.ts:277](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L277)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/debug.ts:274](https://github.com/ethersphere/bee-j
 
 > **nativeTokenBalance**: [`DAI`](../classes/DAI.md)
 
-Defined in: [bee-js/src/types/debug.ts:272](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L272)
+Defined in: [bee-js/src/types/debug.ts:275](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L275)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [bee-js/src/types/debug.ts:272](https://github.com/ethersphere/bee-j
 
 > **walletAddress**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:275](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L275)
+Defined in: [bee-js/src/types/debug.ts:278](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L278)

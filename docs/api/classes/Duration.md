@@ -1,6 +1,6 @@
 # Class: Duration
 
-Defined in: [bee-js/src/utils/duration.ts:3](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L3)
+Defined in: [bee-js/src/utils/duration.ts:3](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L3)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/utils/duration.ts:3](https://github.com/ethersphere/bee-
 
 > `static` **ZERO**: `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:5](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L5)
+Defined in: [bee-js/src/utils/duration.ts:5](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L5)
 
 ## Methods
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/utils/duration.ts:5](https://github.com/ethersphere/bee-
 
 > **isZero**(): `boolean`
 
-Defined in: [bee-js/src/utils/duration.ts:98](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L98)
+Defined in: [bee-js/src/utils/duration.ts:98](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L98)
 
 #### Returns
 
@@ -28,7 +28,7 @@ Defined in: [bee-js/src/utils/duration.ts:98](https://github.com/ethersphere/bee
 
 > **represent**(): `string`
 
-Defined in: [bee-js/src/utils/duration.ts:94](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L94)
+Defined in: [bee-js/src/utils/duration.ts:94](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L94)
 
 #### Returns
 
@@ -40,7 +40,7 @@ Defined in: [bee-js/src/utils/duration.ts:94](https://github.com/ethersphere/bee
 
 > **toDays**(): `number`
 
-Defined in: [bee-js/src/utils/duration.ts:78](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L78)
+Defined in: [bee-js/src/utils/duration.ts:78](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L78)
 
 #### Returns
 
@@ -52,7 +52,7 @@ Defined in: [bee-js/src/utils/duration.ts:78](https://github.com/ethersphere/bee
 
 > **toEndDate**(`startDate?`): `Date`
 
-Defined in: [bee-js/src/utils/duration.ts:90](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L90)
+Defined in: [bee-js/src/utils/duration.ts:90](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L90)
 
 #### Parameters
 
@@ -70,7 +70,7 @@ Defined in: [bee-js/src/utils/duration.ts:90](https://github.com/ethersphere/bee
 
 > **toHours**(): `number`
 
-Defined in: [bee-js/src/utils/duration.ts:74](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L74)
+Defined in: [bee-js/src/utils/duration.ts:74](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L74)
 
 #### Returns
 
@@ -82,7 +82,7 @@ Defined in: [bee-js/src/utils/duration.ts:74](https://github.com/ethersphere/bee
 
 > **toSeconds**(): `number`
 
-Defined in: [bee-js/src/utils/duration.ts:70](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L70)
+Defined in: [bee-js/src/utils/duration.ts:70](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L70)
 
 #### Returns
 
@@ -94,7 +94,7 @@ Defined in: [bee-js/src/utils/duration.ts:70](https://github.com/ethersphere/bee
 
 > **toWeeks**(): `number`
 
-Defined in: [bee-js/src/utils/duration.ts:82](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L82)
+Defined in: [bee-js/src/utils/duration.ts:82](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L82)
 
 #### Returns
 
@@ -106,7 +106,7 @@ Defined in: [bee-js/src/utils/duration.ts:82](https://github.com/ethersphere/bee
 
 > **toYears**(): `number`
 
-Defined in: [bee-js/src/utils/duration.ts:86](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L86)
+Defined in: [bee-js/src/utils/duration.ts:86](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L86)
 
 #### Returns
 
@@ -118,7 +118,7 @@ Defined in: [bee-js/src/utils/duration.ts:86](https://github.com/ethersphere/bee
 
 > `static` **fromDays**(`days`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:27](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L27)
+Defined in: [bee-js/src/utils/duration.ts:27](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L27)
 
 #### Parameters
 
@@ -136,7 +136,7 @@ Defined in: [bee-js/src/utils/duration.ts:27](https://github.com/ethersphere/bee
 
 > `static` **fromEndDate**(`endDate`, `startDate?`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:39](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L39)
+Defined in: [bee-js/src/utils/duration.ts:39](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L39)
 
 #### Parameters
 
@@ -158,7 +158,7 @@ Defined in: [bee-js/src/utils/duration.ts:39](https://github.com/ethersphere/bee
 
 > `static` **fromHours**(`hours`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:23](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L23)
+Defined in: [bee-js/src/utils/duration.ts:23](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L23)
 
 #### Parameters
 
@@ -176,7 +176,7 @@ Defined in: [bee-js/src/utils/duration.ts:23](https://github.com/ethersphere/bee
 
 > `static` **fromMilliseconds**(`milliseconds`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:15](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L15)
+Defined in: [bee-js/src/utils/duration.ts:15](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L15)
 
 #### Parameters
 
@@ -194,7 +194,7 @@ Defined in: [bee-js/src/utils/duration.ts:15](https://github.com/ethersphere/bee
 
 > `static` **fromSeconds**(`seconds`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:19](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L19)
+Defined in: [bee-js/src/utils/duration.ts:19](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L19)
 
 #### Parameters
 
@@ -212,7 +212,7 @@ Defined in: [bee-js/src/utils/duration.ts:19](https://github.com/ethersphere/bee
 
 > `static` **fromWeeks**(`weeks`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:31](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L31)
+Defined in: [bee-js/src/utils/duration.ts:31](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L31)
 
 #### Parameters
 
@@ -230,7 +230,7 @@ Defined in: [bee-js/src/utils/duration.ts:31](https://github.com/ethersphere/bee
 
 > `static` **fromYears**(`years`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:35](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L35)
+Defined in: [bee-js/src/utils/duration.ts:35](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L35)
 
 #### Parameters
 
@@ -248,7 +248,7 @@ Defined in: [bee-js/src/utils/duration.ts:35](https://github.com/ethersphere/bee
 
 > `static` **parseFromString**(`duration`): `Duration`
 
-Defined in: [bee-js/src/utils/duration.ts:66](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/duration.ts#L66)
+Defined in: [bee-js/src/utils/duration.ts:66](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/duration.ts#L66)
 
 Parses a duration string and returns a `Duration` instance.
 

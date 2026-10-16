@@ -1,6 +1,6 @@
 # Interface: GlobalPostageBatch
 
-Defined in: [bee-js/src/types/index.ts:495](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L495)
+Defined in: [bee-js/src/types/index.ts:514](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L514)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:495](https://github.com/ethersphere/bee-j
 
 > **batchID**: [`BatchId`](../classes/BatchId.md)
 
-Defined in: [bee-js/src/types/index.ts:496](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L496)
+Defined in: [bee-js/src/types/index.ts:515](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L515)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:496](https://github.com/ethersphere/bee-j
 
 > **batchTTL**: `number`
 
-Defined in: [bee-js/src/types/index.ts:503](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L503)
+Defined in: [bee-js/src/types/index.ts:522](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L522)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:503](https://github.com/ethersphere/bee-j
 
 > **bucketDepth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:501](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L501)
+Defined in: [bee-js/src/types/index.ts:520](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L520)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/index.ts:501](https://github.com/ethersphere/bee-j
 
 > **depth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:500](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L500)
+Defined in: [bee-js/src/types/index.ts:519](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L519)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [bee-js/src/types/index.ts:500](https://github.com/ethersphere/bee-j
 
 > **immutable**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:502](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L502)
+Defined in: [bee-js/src/types/index.ts:521](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L521)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:502](https://github.com/ethersphere/bee-j
 
 > **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:499](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L499)
+Defined in: [bee-js/src/types/index.ts:518](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L518)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [bee-js/src/types/index.ts:499](https://github.com/ethersphere/bee-j
 
 > **start**: `number`
 
-Defined in: [bee-js/src/types/index.ts:498](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L498)
+Defined in: [bee-js/src/types/index.ts:517](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L517)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [bee-js/src/types/index.ts:498](https://github.com/ethersphere/bee-j
 
 > **value**: [`NumberString`](../type-aliases/NumberString.md)
 
-Defined in: [bee-js/src/types/index.ts:497](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L497)
+Defined in: [bee-js/src/types/index.ts:516](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L516)

@@ -134,6 +134,26 @@ async function listen() {
 listen()
 ```
 
+### Subscription Options
+
+`gsocSubscribe()` accepts an optional fourth argument that changes what each message contains. It requires Bee 2.8.3 or later.
+
+- `fields`: the SOC fields to include in each message, concatenated in the given order. The available fields are `address`, `recoveredPubKey`, `identifier`, `signature`, `wrappedAddress`, `span` and `payload`. The payload has a variable length, so put `payload` last.
+- `cacheWrappedChunk`: when `true`, the node caches each message's wrapped chunk, so it can be read through the bytes endpoint, for example with `bee.data.download(wrappedAddress)`.
+
+```js
+const subscription = bee.messaging.gsocSubscribe(
+  signer.publicKey().address(),
+  identifier,
+  {
+    onMessage: message => console.log('Received:', message.toHex()),
+    onError: error => console.error('Subscription error:', error),
+    onClose: () => console.log('Subscription closed.'),
+  },
+  { fields: ['wrappedAddress', 'payload'], cacheWrappedChunk: true },
+)
+```
+
 ## Send a Message (Sender Node)
 
 The sending node must have a ***usable postage batch ID*** and also know the ***target overlay address*** and ***identifier*** in order to send a message: 

@@ -1,6 +1,6 @@
 # Interface: AllTagsOptions
 
-Defined in: [bee-js/src/types/index.ts:300](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L300)
+Defined in: [bee-js/src/types/index.ts:308](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L308)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:300](https://github.com/ethersphere/bee-j
 
 > `optional` **limit**: `number`
 
-Defined in: [bee-js/src/types/index.ts:301](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L301)
+Defined in: [bee-js/src/types/index.ts:309](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L309)
 
 ***
 
@@ -16,4 +16,4 @@ Defined in: [bee-js/src/types/index.ts:301](https://github.com/ethersphere/bee-j
 
 > `optional` **offset**: `number`
 
-Defined in: [bee-js/src/types/index.ts:302](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L302)
+Defined in: [bee-js/src/types/index.ts:310](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L310)

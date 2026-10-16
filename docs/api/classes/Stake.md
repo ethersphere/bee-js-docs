@@ -1,6 +1,6 @@
 # Class: Stake
 
-Defined in: [bee-js/src/modules/stake.ts:15](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L15)
+Defined in: [bee-js/src/modules/stake.ts:16](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L16)
 
 Staking operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.stake`.
 
 > **new Stake**(`context`): `Stake`
 
-Defined in: [bee-js/src/modules/stake.ts:16](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L16)
+Defined in: [bee-js/src/modules/stake.ts:17](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L17)
 
 #### Parameters
 
@@ -30,9 +30,9 @@ Defined in: [bee-js/src/modules/stake.ts:16](https://github.com/ethersphere/bee-
 
 > **deposit**(`amount`, `options?`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:45](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L45)
+Defined in: [bee-js/src/modules/stake.ts:55](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L55)
 
-Stakes the given amount of BZZ. Initial deposit must be at least 10 BZZ.
+Stakes the given amount of BZZ. Must be at least [getMinimumDeposit](#getminimumdeposit), otherwise Bee rejects it with 400.
 
 Be aware that staked BZZ tokens can **not** be withdrawn.
 
@@ -42,7 +42,7 @@ Be aware that staked BZZ tokens can **not** be withdrawn.
 
 Amount of BZZ tokens to be staked. If not providing a `BZZ` instance, the amount is denoted in PLUR.
 
-`string` | `bigint` | [`BZZ`](../classes/BZZ.md) | [`NumberString`](../type-aliases/NumberString.md)
+`string` | `bigint` | [`NumberString`](../type-aliases/NumberString.md) | [`BZZ`](../classes/BZZ.md)
 
 ##### options?
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`requestOptions?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:23](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L23)
+Defined in: [bee-js/src/modules/stake.ts:24](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L24)
 
 Gets the amount of staked BZZ.
 
@@ -82,11 +82,31 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 ***
 
+### getMinimumDeposit()
+
+> **getMinimumDeposit**(`requestOptions?`): `Promise`\<[`BZZ`](../classes/BZZ.md) \| `null`\>
+
+Defined in: [bee-js/src/modules/stake.ts:31](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L31)
+
+Gets the minimum next deposit, or `null` when Bee cannot determine it (e.g. the price oracle is unavailable).
+
+#### Parameters
+
+##### requestOptions?
+
+[`BeeRequestOptions`](../type-aliases/BeeRequestOptions.md)
+
+#### Returns
+
+`Promise`\<[`BZZ`](../classes/BZZ.md) \| `null`\>
+
+***
+
 ### getRedistributionState()
 
 > **getRedistributionState**(`requestOptions?`): `Promise`\<[`RedistributionState`](../interfaces/RedistributionState.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:85](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L85)
+Defined in: [bee-js/src/modules/stake.ts:95](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L95)
 
 Gets current status of node in redistribution game.
 
@@ -108,7 +128,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getWithdrawable**(`requestOptions?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:32](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L32)
+Defined in: [bee-js/src/modules/stake.ts:42](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L42)
 
 Gets the amount of withdrawable staked BZZ.
 
@@ -130,7 +150,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **migrate**(`requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:76](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L76)
+Defined in: [bee-js/src/modules/stake.ts:86](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L86)
 
 Withdraws all staked BZZ to the node wallet.
 
@@ -150,11 +170,35 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 ***
 
+### setRedistributionEnabled()
+
+> **setRedistributionEnabled**(`enabled`, `requestOptions?`): `Promise`\<`boolean`\>
+
+Defined in: [bee-js/src/modules/stake.ts:100](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L100)
+
+Enables or disables participation in new redistribution rounds; resets to enabled when the node restarts.
+
+#### Parameters
+
+##### enabled
+
+`boolean`
+
+##### requestOptions?
+
+[`BeeRequestOptions`](../type-aliases/BeeRequestOptions.md)
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+***
+
 ### withdrawSurplus()
 
 > **withdrawSurplus**(`requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/stake.ts:65](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stake.ts#L65)
+Defined in: [bee-js/src/modules/stake.ts:75](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stake.ts#L75)
 
 Withdraws all surplus staked BZZ to the node wallet.
 

@@ -1,6 +1,6 @@
 # Class: Size
 
-Defined in: [bee-js/src/utils/size.ts:10](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L10)
+Defined in: [bee-js/src/utils/size.ts:10](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L10)
 
 Represents a size in bytes.
 
@@ -14,7 +14,7 @@ on theoretical and effective storage capacity.
 
 > **represent**(): `string`
 
-Defined in: [bee-js/src/utils/size.ts:75](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L75)
+Defined in: [bee-js/src/utils/size.ts:75](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L75)
 
 #### Returns
 
@@ -26,7 +26,7 @@ Defined in: [bee-js/src/utils/size.ts:75](https://github.com/ethersphere/bee-js/
 
 > **toBytes**(): `number`
 
-Defined in: [bee-js/src/utils/size.ts:63](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L63)
+Defined in: [bee-js/src/utils/size.ts:63](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L63)
 
 #### Returns
 
@@ -38,7 +38,7 @@ Defined in: [bee-js/src/utils/size.ts:63](https://github.com/ethersphere/bee-js/
 
 > **toFormattedString**(): `string`
 
-Defined in: [bee-js/src/utils/size.ts:71](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L71)
+Defined in: [bee-js/src/utils/size.ts:71](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L71)
 
 #### Returns
 
@@ -50,7 +50,7 @@ Defined in: [bee-js/src/utils/size.ts:71](https://github.com/ethersphere/bee-js/
 
 > **toGigabytes**(): `number`
 
-Defined in: [bee-js/src/utils/size.ts:67](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L67)
+Defined in: [bee-js/src/utils/size.ts:67](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L67)
 
 #### Returns
 
@@ -62,7 +62,7 @@ Defined in: [bee-js/src/utils/size.ts:67](https://github.com/ethersphere/bee-js/
 
 > `static` **fromBytes**(`bytes`): `Size`
 
-Defined in: [bee-js/src/utils/size.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L21)
+Defined in: [bee-js/src/utils/size.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L21)
 
 #### Parameters
 
@@ -80,7 +80,7 @@ Defined in: [bee-js/src/utils/size.ts:21](https://github.com/ethersphere/bee-js/
 
 > `static` **fromGigabytes**(`gigabytes`): `Size`
 
-Defined in: [bee-js/src/utils/size.ts:33](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L33)
+Defined in: [bee-js/src/utils/size.ts:33](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L33)
 
 #### Parameters
 
@@ -98,7 +98,7 @@ Defined in: [bee-js/src/utils/size.ts:33](https://github.com/ethersphere/bee-js/
 
 > `static` **fromKilobytes**(`kilobytes`): `Size`
 
-Defined in: [bee-js/src/utils/size.ts:25](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L25)
+Defined in: [bee-js/src/utils/size.ts:25](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L25)
 
 #### Parameters
 
@@ -116,7 +116,7 @@ Defined in: [bee-js/src/utils/size.ts:25](https://github.com/ethersphere/bee-js/
 
 > `static` **fromMegabytes**(`megabytes`): `Size`
 
-Defined in: [bee-js/src/utils/size.ts:29](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L29)
+Defined in: [bee-js/src/utils/size.ts:29](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L29)
 
 #### Parameters
 
@@ -134,7 +134,7 @@ Defined in: [bee-js/src/utils/size.ts:29](https://github.com/ethersphere/bee-js/
 
 > `static` **parseFromString**(`size`): `Size`
 
-Defined in: [bee-js/src/utils/size.ts:59](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/size.ts#L59)
+Defined in: [bee-js/src/utils/size.ts:59](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/size.ts#L59)
 
 Parses a size string and returns a `Size` instance.
 

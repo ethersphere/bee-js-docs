@@ -1,6 +1,6 @@
 # Class: Collection
 
-Defined in: [bee-js/src/modules/collection.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L21)
+Defined in: [bee-js/src/modules/collection.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L21)
 
 Collection (multi-file) operations backed by the `/bzz` endpoint.
 
@@ -12,7 +12,7 @@ Accessed as `bee.collection`.
 
 > **new Collection**(`context`): `Collection`
 
-Defined in: [bee-js/src/modules/collection.ts:22](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L22)
+Defined in: [bee-js/src/modules/collection.ts:22](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L22)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/collection.ts:22](https://github.com/ethersphere
 
 > **hashDirectory**(`dir`): `Promise`\<[`Reference`](../classes/Reference.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:169](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L169)
+Defined in: [bee-js/src/modules/collection.ts:169](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L169)
 
 Hashes a directory locally and returns the root hash (Swarm reference).
 
@@ -52,7 +52,7 @@ The actual Swarm reference may be different as there is no canonical hashing of 
 
 > **stream**(`postageBatchId`, `files`, `onUploadProgress?`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:112](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L112)
+Defined in: [bee-js/src/modules/collection.ts:112](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L112)
 
 Uploads a collection of files by streaming them to the Bee node, which supports arbitrary
 sizes, but may be slower due to uploading chunks one by one.
@@ -93,7 +93,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **streamFromDirectory**(`postageBatchId`, `dir`, `onUploadProgress?`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:143](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L143)
+Defined in: [bee-js/src/modules/collection.ts:143](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L143)
 
 Uploads a directory by streaming its contents directly to the Bee node, which supports
 arbitrary directory sizes, but may be slower due to uploading chunks one by one.
@@ -134,7 +134,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **upload**(`postageBatchId`, `collection`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:32](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L32)
+Defined in: [bee-js/src/modules/collection.ts:32](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L32)
 
 Uploads a collection that you assemble yourself.
 
@@ -170,7 +170,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **uploadFromDirectory**(`postageBatchId`, `dir`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:83](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L83)
+Defined in: [bee-js/src/modules/collection.ts:83](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L83)
 
 Uploads a collection of files from a directory on the filesystem.
 
@@ -212,7 +212,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **uploadFromFileList**(`postageBatchId`, `fileList`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/collection.ts:56](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/collection.ts#L56)
+Defined in: [bee-js/src/modules/collection.ts:56](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/collection.ts#L56)
 
 Uploads a collection of files using the browser `FileList` API.
 

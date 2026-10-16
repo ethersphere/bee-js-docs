@@ -1,6 +1,6 @@
 # Class: BeeArgumentError
 
-Defined in: [bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L7)
+Defined in: [bee-js/src/utils/error.ts:8](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L8)
 
 ## Extends
 
@@ -12,7 +12,7 @@ Defined in: [bee-js/src/utils/error.ts:7](https://github.com/ethersphere/bee-js/
 
 > **new BeeArgumentError**(`message`, `value`): `BeeArgumentError`
 
-Defined in: [bee-js/src/utils/error.ts:8](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L8)
+Defined in: [bee-js/src/utils/error.ts:9](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L9)
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Defined in: typescript/lib/lib.es5.d.ts:1078
 
 > `readonly` **value**: `unknown`
 
-Defined in: [bee-js/src/utils/error.ts:10](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L10)
+Defined in: [bee-js/src/utils/error.ts:11](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L11)
 
 ***
 

@@ -38,8 +38,8 @@ checkHealthAndReadiness()
 Output:
 
 ```bash
-Health: { apiVersion: '7.3.0', version: '2.5.0-5ec231ba', status: 'ok' }
-Readiness: { apiVersion: '7.3.0', version: '2.5.0-5ec231ba', status: 'ready' }
+Health: { apiVersion: '8.2.0', version: '2.8.3', status: 'ok' }
+Readiness: { apiVersion: '8.2.0', version: '2.8.3', status: 'ready' }
 ```
 
 ### 2. Get Node Topology

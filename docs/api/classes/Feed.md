@@ -1,6 +1,6 @@
 # Class: Feed
 
-Defined in: [bee-js/src/modules/feed.ts:17](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L17)
+Defined in: [bee-js/src/modules/feed.ts:17](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L17)
 
 Feed operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.feed`. Delegates to the feed subsystem (`src/feed`).
 
 > **new Feed**(`context`): `Feed`
 
-Defined in: [bee-js/src/modules/feed.ts:18](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L18)
+Defined in: [bee-js/src/modules/feed.ts:18](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L18)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/feed.ts:18](https://github.com/ethersphere/bee-j
 
 > **createManifest**(`postageBatchId`, `topic`, `owner`, `options?`, `requestOptions?`): `Promise`\<[`Reference`](../classes/Reference.md)\>
 
-Defined in: [bee-js/src/modules/feed.ts:69](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L69)
+Defined in: [bee-js/src/modules/feed.ts:69](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L69)
 
 Creates a feed manifest chunk and returns the reference to it.
 
@@ -76,7 +76,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **fetchLatestUpdate**(`topic`, `owner`, `requestOptions?`): `Promise`\<`FeedPayloadResult`\>
 
-Defined in: [bee-js/src/modules/feed.ts:100](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L100)
+Defined in: [bee-js/src/modules/feed.ts:100](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L100)
 
 Fetches the latest feed update.
 
@@ -110,7 +110,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **isRetrievable**(`owner`, `topic`, `index?`, `options?`, `requestOptions?`): `Promise`\<`boolean`\>
 
-Defined in: [bee-js/src/modules/feed.ts:121](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L121)
+Defined in: [bee-js/src/modules/feed.ts:121](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L121)
 
 Validates whether a feed is retrievable in the network.
 
@@ -156,7 +156,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **makeReader**(`topic`, `owner`, `requestOptions?`): [`FeedReader`](../interfaces/FeedReader.md)
 
-Defined in: [bee-js/src/modules/feed.ts:27](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L27)
+Defined in: [bee-js/src/modules/feed.ts:27](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L27)
 
 Makes a new feed reader for downloading feed updates.
 
@@ -190,7 +190,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **makeWriter**(`topic`, `signer?`, `requestOptions?`): [`FeedWriter`](../interfaces/FeedWriter.md)
 
-Defined in: [bee-js/src/modules/feed.ts:46](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/feed.ts#L46)
+Defined in: [bee-js/src/modules/feed.ts:46](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/feed.ts#L46)
 
 Makes a new feed writer for updating feeds.
 

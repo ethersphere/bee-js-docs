@@ -445,3 +445,82 @@ console.log(manual.payload.toUtf8())
 :::caution
 Manually writing to skipped indices is supported but not recommended. Stick to the default behavior when performing feed updates (no `index` specified) to maintain a clean, append-only feed history and ensure new updates are easily discoverable.
 :::
+
+## Rolling Feeds
+
+A sequential feed grows with every update, and resolving the latest update means walking all of its indices. When the postage batch behind the early updates expires and those chunks are evicted, the walk breaks and the latest update can no longer be found. A rolling feed avoids this by restarting the feed every `periodLength` seconds. Each period gets its own topic, derived from the base topic and the period index, so a reader only ever looks at the updates written in the current period.
+
+Rolling feeds are available through the `bee.rollingFeed` namespace, which provides `makeWriter` and `makeReader`. The writer and reader must use the same base topic and the same `periodLength`.
+
+### Keeping a Rolling Feed Alive
+
+Each `uploadPayload()` or `uploadReference()` call writes the update to the current period and mirrors it into the next one. The reader checks the current period and falls back to the previous one if it is empty. A period that nobody writes to stays empty, so a rolling feed only stays readable while the writer keeps publishing.
+
+Keeping the feed alive is the application's job. Run the writer on a timer and republish on every tick, even when the data has not changed. Ticking twice per period means a slow or delayed write still lands inside its own period.
+
+### Writing to a Rolling Feed
+
+```js
+import { Bee, PrivateKey, Topic } from '@ethersphere/bee-js'
+
+const bee = new Bee('http://localhost:1633')
+
+// Make sure to replace with a valid batch ID
+const POSTAGE_BATCH_ID = 'c119705f257c0015a062b17929e3ca3269e158231324707f2ea6e72c5c9f9b78'
+
+const privateKey = new PrivateKey('0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef')
+const topic = Topic.fromString('my-rolling-feed')
+const periodLength = 600 // 10 minutes
+
+const writer = bee.rollingFeed.makeWriter(topic, privateKey, periodLength)
+
+let latest = 'Hello, World!'
+await writer.uploadPayload(POSTAGE_BATCH_ID, latest)
+
+const handle = setInterval(async () => {
+  try {
+    await writer.uploadPayload(POSTAGE_BATCH_ID, latest)
+  } catch (error) {
+    console.error('Rolling feed heartbeat failed', error)
+  }
+}, (periodLength / 2) * 1000)
+
+process.on('SIGTERM', () => clearInterval(handle))
+```
+
+To publish content uploaded separately, use `uploadReference()` in the same way as with a regular feed writer.
+
+### Resuming After Downtime
+
+If the writer was down for at least one whole period, the periods it missed are empty. Before restarting the timer, check `writer.isCaughtUp()` and call `writer.catchUp()` to backfill the gap with the last known update:
+
+```js
+if (!(await writer.isCaughtUp())) {
+  await writer.catchUp(POSTAGE_BATCH_ID)
+}
+```
+
+`catchUp()` never writes the current period itself, which is left to the regular heartbeat. It looks back at most `maxBackfill` periods (its third argument, default `1`) for the last populated period, and throws if it finds none. Use it after restarts, not on the very first run of a new feed.
+
+### Reading from a Rolling Feed
+
+```js
+import { Bee, EthAddress, Topic } from '@ethersphere/bee-js'
+
+const bee = new Bee('http://localhost:1633')
+
+const owner = new EthAddress('0x8d3766440f0d7b949a5e32995d09619a7f86e632')
+const topic = Topic.fromString('my-rolling-feed')
+const periodLength = 600 // must match the writer
+
+const reader = bee.rollingFeed.makeReader(topic, owner, periodLength)
+
+const result = await reader.downloadPayload()
+console.log(result.payload.toUtf8()) // Prints 'Hello, World!'
+```
+
+For a feed updated with `uploadReference()`, use `reader.downloadReference()` instead and pass the returned reference to `bee.file.download()` or `bee.data.download()`.
+
+:::caution
+Because the topic changes every period, a [feed manifest](#using-feed-manifests-for-fixed-references) cannot point to a rolling feed. Readers need the owner address, the base topic and the period length.
+:::

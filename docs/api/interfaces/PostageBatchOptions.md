@@ -1,6 +1,6 @@
 # Interface: PostageBatchOptions
 
-Defined in: [bee-js/src/types/index.ts:587](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L587)
+Defined in: [bee-js/src/types/index.ts:606](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L606)
 
 Options for creation of postage batch
 
@@ -10,7 +10,7 @@ Options for creation of postage batch
 
 > `optional` **gasPrice**: `string` \| `bigint` \| [`NumberString`](../type-aliases/NumberString.md)
 
-Defined in: [bee-js/src/types/index.ts:596](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L596)
+Defined in: [bee-js/src/types/index.ts:615](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L615)
 
 Sets gas price in Wei for the transaction that creates the postage batch
 
@@ -20,7 +20,7 @@ Sets gas price in Wei for the transaction that creates the postage batch
 
 > `optional` **immutableFlag**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:601](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L601)
+Defined in: [bee-js/src/types/index.ts:620](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L620)
 
 Controls whether data can be overwritten that was uploaded with this postage batch.
 
@@ -30,7 +30,7 @@ Controls whether data can be overwritten that was uploaded with this postage bat
 
 > `optional` **label**: `string`
 
-Defined in: [bee-js/src/types/index.ts:591](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L591)
+Defined in: [bee-js/src/types/index.ts:610](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L610)
 
 Sets label for the postage batch
 
@@ -40,7 +40,7 @@ Sets label for the postage batch
 
 > `optional` **waitForUsable**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:613](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L613)
+Defined in: [bee-js/src/types/index.ts:632](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L632)
 
 The returned Promise will await until the purchased Postage Batch is usable.
 In other word, it has to have enough block confirmations that Bee pronounce it usable.
@@ -61,7 +61,7 @@ true
 
 > `optional` **waitForUsableTimeout**: `number`
 
-Defined in: [bee-js/src/types/index.ts:619](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L619)
+Defined in: [bee-js/src/types/index.ts:638](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L638)
 
 When waiting for the postage stamp to become usable, this specify the timeout for the waiting.
 Default: 120s
