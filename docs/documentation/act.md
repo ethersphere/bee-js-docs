@@ -255,6 +255,10 @@ The example script below performs the following operations:
 4. Calls `bee.file.upload()` twice with ACT enabled, specifying a `historyRef` each time to enforce access control.
 5. Logs the resulting Swarm reference and history reference after each upload.
 
+:::note
+ACT applies to data and file uploads. Bee ignores ACT on `/chunks` and `/soc`, so the `act` and `actHistoryAddress` options are deprecated on `bee.chunk.upload`, SOC writers and `bee.messaging.gsocSend`, and will be removed.
+:::
+
 ```js
 import { Bee, BatchId, Reference } from '@ethersphere/bee-js';
 

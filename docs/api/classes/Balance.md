@@ -1,6 +1,6 @@
 # Class: Balance
 
-Defined in: [bee-js/src/modules/balance.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L12)
+Defined in: [bee-js/src/modules/balance.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L12)
 
 SWAP balance operations. Related to the bandwidth incentives and the chequebook.
 
@@ -12,7 +12,7 @@ Accessed as `bee.balance`.
 
 > **new Balance**(`context`): `Balance`
 
-Defined in: [bee-js/src/modules/balance.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L13)
+Defined in: [bee-js/src/modules/balance.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L13)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/balance.ts:13](https://github.com/ethersphere/be
 
 > **getAll**(`requestOptions?`): `Promise`\<[`BalanceResponse`](../interfaces/BalanceResponse.md)\>
 
-Defined in: [bee-js/src/modules/balance.ts:20](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L20)
+Defined in: [bee-js/src/modules/balance.ts:20](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L20)
 
 Gets the SWAP balances with all known peers including prepaid services.
 
@@ -52,7 +52,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAllPastDueConsumption**(`requestOptions?`): `Promise`\<[`BalanceResponse`](../interfaces/BalanceResponse.md)\>
 
-Defined in: [bee-js/src/modules/balance.ts:41](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L41)
+Defined in: [bee-js/src/modules/balance.ts:41](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L41)
 
 Gets the past due consumption balances for all known peers.
 
@@ -74,7 +74,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAllPastDueConsumptionForPeer**(`address`, `requestOptions?`): `Promise`\<[`PeerBalance`](../interfaces/PeerBalance.md)\>
 
-Defined in: [bee-js/src/modules/balance.ts:51](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L51)
+Defined in: [bee-js/src/modules/balance.ts:51](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L51)
 
 Gets the past due consumption balance for a specific peer.
 
@@ -102,7 +102,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getPeer**(`address`, `requestOptions?`): `Promise`\<[`PeerBalance`](../interfaces/PeerBalance.md)\>
 
-Defined in: [bee-js/src/modules/balance.ts:30](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/balance.ts#L30)
+Defined in: [bee-js/src/modules/balance.ts:30](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/balance.ts#L30)
 
 Gets the SWAP balances for a specific peer including prepaid services.
 

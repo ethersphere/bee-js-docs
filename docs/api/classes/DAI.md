@@ -1,6 +1,6 @@
 # Class: DAI
 
-Defined in: [bee-js/src/utils/tokens.ts:102](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L102)
+Defined in: [bee-js/src/utils/tokens.ts:102](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L102)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/utils/tokens.ts:102](https://github.com/ethersphere/bee-
 
 > `readonly` `static` **DIGITS**: `18` = `18`
 
-Defined in: [bee-js/src/utils/tokens.ts:103](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L103)
+Defined in: [bee-js/src/utils/tokens.ts:103](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L103)
 
 ## Methods
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/utils/tokens.ts:103](https://github.com/ethersphere/bee-
 
 > **divide**(`other`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:169](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L169)
+Defined in: [bee-js/src/utils/tokens.ts:169](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L169)
 
 Does not mutate the current DAI instance.
 
@@ -40,7 +40,7 @@ New DAI instance
 
 > **eq**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:189](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L189)
+Defined in: [bee-js/src/utils/tokens.ts:189](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L189)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Defined in: [bee-js/src/utils/tokens.ts:189](https://github.com/ethersphere/bee-
 
 > **exchangeToBZZ**(`daiPerBzz`): [`BZZ`](BZZ.md)
 
-Defined in: [bee-js/src/utils/tokens.ts:193](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L193)
+Defined in: [bee-js/src/utils/tokens.ts:193](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L193)
 
 #### Parameters
 
@@ -76,7 +76,7 @@ Defined in: [bee-js/src/utils/tokens.ts:193](https://github.com/ethersphere/bee-
 
 > **gt**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:173](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L173)
+Defined in: [bee-js/src/utils/tokens.ts:173](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L173)
 
 #### Parameters
 
@@ -94,7 +94,7 @@ Defined in: [bee-js/src/utils/tokens.ts:173](https://github.com/ethersphere/bee-
 
 > **gte**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:177](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L177)
+Defined in: [bee-js/src/utils/tokens.ts:177](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L177)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Defined in: [bee-js/src/utils/tokens.ts:177](https://github.com/ethersphere/bee-
 
 > **lt**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:181](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L181)
+Defined in: [bee-js/src/utils/tokens.ts:181](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L181)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: [bee-js/src/utils/tokens.ts:181](https://github.com/ethersphere/bee-
 
 > **lte**(`other`): `boolean`
 
-Defined in: [bee-js/src/utils/tokens.ts:185](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L185)
+Defined in: [bee-js/src/utils/tokens.ts:185](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L185)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: [bee-js/src/utils/tokens.ts:185](https://github.com/ethersphere/bee-
 
 > **minus**(`other`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:159](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L159)
+Defined in: [bee-js/src/utils/tokens.ts:159](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L159)
 
 Does not mutate the current DAI instance.
 
@@ -172,7 +172,7 @@ New DAI instance
 
 > **plus**(`other`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:149](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L149)
+Defined in: [bee-js/src/utils/tokens.ts:149](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L149)
 
 Does not mutate the current DAI instance.
 
@@ -196,7 +196,7 @@ New DAI instance
 
 > **toDecimalString**(): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:131](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L131)
+Defined in: [bee-js/src/utils/tokens.ts:131](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L131)
 
 #### Returns
 
@@ -208,7 +208,7 @@ Defined in: [bee-js/src/utils/tokens.ts:131](https://github.com/ethersphere/bee-
 
 > **toFloat**(): `number`
 
-Defined in: [bee-js/src/utils/tokens.ts:139](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L139)
+Defined in: [bee-js/src/utils/tokens.ts:139](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L139)
 
 #### Returns
 
@@ -220,7 +220,7 @@ Defined in: [bee-js/src/utils/tokens.ts:139](https://github.com/ethersphere/bee-
 
 > **toSignificantDigits**(`digits`): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:135](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L135)
+Defined in: [bee-js/src/utils/tokens.ts:135](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L135)
 
 #### Parameters
 
@@ -238,7 +238,7 @@ Defined in: [bee-js/src/utils/tokens.ts:135](https://github.com/ethersphere/bee-
 
 > **toWeiBigInt**(): `bigint`
 
-Defined in: [bee-js/src/utils/tokens.ts:127](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L127)
+Defined in: [bee-js/src/utils/tokens.ts:127](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L127)
 
 #### Returns
 
@@ -250,7 +250,7 @@ Defined in: [bee-js/src/utils/tokens.ts:127](https://github.com/ethersphere/bee-
 
 > **toWeiString**(): `string`
 
-Defined in: [bee-js/src/utils/tokens.ts:123](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L123)
+Defined in: [bee-js/src/utils/tokens.ts:123](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L123)
 
 #### Returns
 
@@ -262,7 +262,7 @@ Defined in: [bee-js/src/utils/tokens.ts:123](https://github.com/ethersphere/bee-
 
 > `static` **fromDecimalString**(`string`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:111](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L111)
+Defined in: [bee-js/src/utils/tokens.ts:111](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L111)
 
 #### Parameters
 
@@ -280,7 +280,7 @@ Defined in: [bee-js/src/utils/tokens.ts:111](https://github.com/ethersphere/bee-
 
 > `static` **fromFloat**(`float`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:119](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L119)
+Defined in: [bee-js/src/utils/tokens.ts:119](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L119)
 
 #### Parameters
 
@@ -298,7 +298,7 @@ Defined in: [bee-js/src/utils/tokens.ts:119](https://github.com/ethersphere/bee-
 
 > `static` **fromWei**(`wei`): `DAI`
 
-Defined in: [bee-js/src/utils/tokens.ts:115](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/tokens.ts#L115)
+Defined in: [bee-js/src/utils/tokens.ts:115](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/tokens.ts#L115)
 
 #### Parameters
 

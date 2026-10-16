@@ -1,6 +1,6 @@
 # Interface: ReserveState
 
-Defined in: [bee-js/src/types/debug.ts:255](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L255)
+Defined in: [bee-js/src/types/debug.ts:258](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L258)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:255](https://github.com/ethersphere/bee-j
 
 > **commitment**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:258](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L258)
+Defined in: [bee-js/src/types/debug.ts:261](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L261)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:258](https://github.com/ethersphere/bee-j
 
 > **radius**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:256](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L256)
+Defined in: [bee-js/src/types/debug.ts:259](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L259)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:256](https://github.com/ethersphere/bee-j
 
 > **reserveCapacityDoubling**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:259](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L259)
+Defined in: [bee-js/src/types/debug.ts:262](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L262)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/debug.ts:259](https://github.com/ethersphere/bee-j
 
 > **storageRadius**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:257](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L257)
+Defined in: [bee-js/src/types/debug.ts:260](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L260)

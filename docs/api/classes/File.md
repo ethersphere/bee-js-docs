@@ -1,6 +1,6 @@
 # Class: File
 
-Defined in: [bee-js/src/modules/file.ts:16](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/file.ts#L16)
+Defined in: [bee-js/src/modules/file.ts:16](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/file.ts#L16)
 
 Single-file operations backed by the `/bzz` endpoint.
 
@@ -12,7 +12,7 @@ Accessed as `bee.file`.
 
 > **new File**(`context`): `File`
 
-Defined in: [bee-js/src/modules/file.ts:17](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/file.ts#L17)
+Defined in: [bee-js/src/modules/file.ts:17](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/file.ts#L17)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/file.ts:17](https://github.com/ethersphere/bee-j
 
 > **download**(`resource`, `path`, `options?`, `requestOptions?`): `Promise`\<[`FileData`](../interfaces/FileData.md)\<[`Bytes`](../classes/Bytes.md)\>\>
 
-Defined in: [bee-js/src/modules/file.ts:74](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/file.ts#L74)
+Defined in: [bee-js/src/modules/file.ts:74](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/file.ts#L74)
 
 Downloads a single file.
 
@@ -70,7 +70,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **downloadReadable**(`reference`, `path`, `options?`, `requestOptions?`): `Promise`\<[`FileData`](../interfaces/FileData.md)\<`ReadableStream`\<`Uint8Array`\<`ArrayBufferLike`\>\>\>\>
 
-Defined in: [bee-js/src/modules/file.ts:100](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/file.ts#L100)
+Defined in: [bee-js/src/modules/file.ts:100](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/file.ts#L100)
 
 Downloads a single file as a readable stream.
 
@@ -110,7 +110,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **upload**(`postageBatchId`, `data`, `name?`, `options?`, `requestOptions?`): `Promise`\<[`UploadResult`](../interfaces/UploadResult.md)\>
 
-Defined in: [bee-js/src/modules/file.ts:30](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/file.ts#L30)
+Defined in: [bee-js/src/modules/file.ts:30](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/file.ts#L30)
 
 Uploads a single file to a Bee node.
 

@@ -1,6 +1,6 @@
 # Class: Connectivity
 
-Defined in: [bee-js/src/modules/connectivity.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L12)
+Defined in: [bee-js/src/modules/connectivity.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L12)
 
 Peer, topology and network connectivity operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.connectivity`.
 
 > **new Connectivity**(`context`): `Connectivity`
 
-Defined in: [bee-js/src/modules/connectivity.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L13)
+Defined in: [bee-js/src/modules/connectivity.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L13)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/connectivity.ts:13](https://github.com/ethersphe
 
 > **checkConnection**(`requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L21)
+Defined in: [bee-js/src/modules/connectivity.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L21)
 
 Pings the Bee node to see if there is a live Bee node on the given URL.
 
@@ -56,7 +56,7 @@ If connection was not successful throw error
 
 > **getBlocklist**(`requestOptions?`): `Promise`\<[`Peer`](../interfaces/Peer.md)[]\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:71](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L71)
+Defined in: [bee-js/src/modules/connectivity.ts:71](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L71)
 
 Fetches the list of blocked peers for this node.
 
@@ -78,7 +78,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getNodeAddresses**(`requestOptions?`): `Promise`\<[`NodeAddresses`](../interfaces/NodeAddresses.md)\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:62](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L62)
+Defined in: [bee-js/src/modules/connectivity.ts:62](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L62)
 
 Fetches the overlay, underlay, Ethereum, and other addresses of the Bee node.
 
@@ -100,7 +100,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getPeers**(`requestOptions?`): `Promise`\<[`Peer`](../interfaces/Peer.md)[]\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:80](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L80)
+Defined in: [bee-js/src/modules/connectivity.ts:80](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L80)
 
 Gets list of peers for this node.
 
@@ -122,7 +122,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getTopology**(`requestOptions?`): `Promise`\<[`Topology`](../interfaces/Topology.md)\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:101](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L101)
+Defined in: [bee-js/src/modules/connectivity.ts:101](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L101)
 
 Fetches topology and connectivity information of the Bee node.
 
@@ -144,7 +144,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **isConnected**(`requestOptions?`): `Promise`\<`boolean`\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:31](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L31)
+Defined in: [bee-js/src/modules/connectivity.ts:31](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L31)
 
 Pings the Bee node to see if there is a live Bee node on the given URL.
 
@@ -168,7 +168,7 @@ true if successful, false on error
 
 > **isGateway**(`requestOptions?`): `Promise`\<`boolean`\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:49](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L49)
+Defined in: [bee-js/src/modules/connectivity.ts:49](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L49)
 
 Checks the `/gateway` endpoint to see if the remote API is a gateway.
 
@@ -193,7 +193,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **ping**(`peer`, `requestOptions?`): `Promise`\<[`PingResponse`](../interfaces/PingResponse.md)\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:111](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L111)
+Defined in: [bee-js/src/modules/connectivity.ts:111](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L111)
 
 Pings a specific peer to check its availability.
 
@@ -221,7 +221,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **removePeer**(`peer`, `requestOptions?`): `Promise`\<[`RemovePeerResponse`](../interfaces/RemovePeerResponse.md)\>
 
-Defined in: [bee-js/src/modules/connectivity.ts:90](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/connectivity.ts#L90)
+Defined in: [bee-js/src/modules/connectivity.ts:90](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/connectivity.ts#L90)
 
 Disconnects from a specific peer.
 

@@ -2,7 +2,7 @@
 
 > **getStampEffectiveBytes**(`depth`, `encryption?`, `erasureCodeLevel?`): `number`
 
-Defined in: [core-sdk/src/stamper/capacity.ts:352](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/capacity.ts#L352)
+Defined in: [core-sdk/src/stamper/capacity.ts:352](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/capacity.ts#L352)
 
 Calculates the effective size of a postage batch based on its depth.
 Below depth 17 the effective size is 0.

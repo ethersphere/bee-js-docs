@@ -1,6 +1,6 @@
 # Interface: ChequebookBalanceResponse
 
-Defined in: [bee-js/src/types/debug.ts:34](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L34)
+Defined in: [bee-js/src/types/debug.ts:34](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L34)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:34](https://github.com/ethersphere/bee-js
 
 > **availableBalance**: [`BZZ`](../classes/BZZ.md)
 
-Defined in: [bee-js/src/types/debug.ts:36](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L36)
+Defined in: [bee-js/src/types/debug.ts:36](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L36)
 
 ***
 
@@ -16,4 +16,4 @@ Defined in: [bee-js/src/types/debug.ts:36](https://github.com/ethersphere/bee-js
 
 > **totalBalance**: [`BZZ`](../classes/BZZ.md)
 
-Defined in: [bee-js/src/types/debug.ts:35](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L35)
+Defined in: [bee-js/src/types/debug.ts:35](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L35)

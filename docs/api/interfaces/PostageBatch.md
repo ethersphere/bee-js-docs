@@ -1,6 +1,6 @@
 # Interface: PostageBatch
 
-Defined in: [bee-js/src/types/index.ts:506](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L506)
+Defined in: [bee-js/src/types/index.ts:525](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L525)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:506](https://github.com/ethersphere/bee-j
 
 > **amount**: [`NumberString`](../type-aliases/NumberString.md)
 
-Defined in: [bee-js/src/types/index.ts:520](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L520)
+Defined in: [bee-js/src/types/index.ts:539](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L539)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:520](https://github.com/ethersphere/bee-j
 
 > **batchID**: [`BatchId`](../classes/BatchId.md)
 
-Defined in: [bee-js/src/types/index.ts:507](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L507)
+Defined in: [bee-js/src/types/index.ts:526](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L526)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:507](https://github.com/ethersphere/bee-j
 
 > **blockNumber**: `number`
 
-Defined in: [bee-js/src/types/index.ts:522](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L522)
+Defined in: [bee-js/src/types/index.ts:541](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L541)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/index.ts:522](https://github.com/ethersphere/bee-j
 
 > **bucketDepth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:521](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L521)
+Defined in: [bee-js/src/types/index.ts:540](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L540)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [bee-js/src/types/index.ts:521](https://github.com/ethersphere/bee-j
 
 > **depth**: `number`
 
-Defined in: [bee-js/src/types/index.ts:519](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L519)
+Defined in: [bee-js/src/types/index.ts:538](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L538)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:519](https://github.com/ethersphere/bee-j
 
 > **duration**: [`Duration`](../classes/Duration.md)
 
-Defined in: [bee-js/src/types/index.ts:527](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L527)
+Defined in: [bee-js/src/types/index.ts:546](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L546)
 
 Estimated time until the batch expires
 
@@ -58,7 +58,7 @@ Estimated time until the batch expires
 
 > **immutableFlag**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:523](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L523)
+Defined in: [bee-js/src/types/index.ts:542](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L542)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [bee-js/src/types/index.ts:523](https://github.com/ethersphere/bee-j
 
 > **label**: `string`
 
-Defined in: [bee-js/src/types/index.ts:518](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L518)
+Defined in: [bee-js/src/types/index.ts:537](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L537)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [bee-js/src/types/index.ts:518](https://github.com/ethersphere/bee-j
 
 > **remainingSize**: [`Size`](../classes/Size.md)
 
-Defined in: [bee-js/src/types/index.ts:543](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L543)
+Defined in: [bee-js/src/types/index.ts:562](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L562)
 
 Estimated remaining size
 
@@ -84,7 +84,7 @@ Estimated remaining size
 
 > **size**: [`Size`](../classes/Size.md)
 
-Defined in: [bee-js/src/types/index.ts:539](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L539)
+Defined in: [bee-js/src/types/index.ts:558](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L558)
 
 Effective size
 
@@ -94,7 +94,7 @@ Effective size
 
 > **theoreticalSize**: [`Size`](../classes/Size.md)
 
-Defined in: [bee-js/src/types/index.ts:547](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L547)
+Defined in: [bee-js/src/types/index.ts:566](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L566)
 
 Theoretical size in bytes
 
@@ -104,7 +104,7 @@ Theoretical size in bytes
 
 > **usable**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:517](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L517)
+Defined in: [bee-js/src/types/index.ts:536](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L536)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: [bee-js/src/types/index.ts:517](https://github.com/ethersphere/bee-j
 
 > **usage**: `number`
 
-Defined in: [bee-js/src/types/index.ts:531](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L531)
+Defined in: [bee-js/src/types/index.ts:550](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L550)
 
 A floating point number from 0 to 1, where 0 is no usage, 1 is full usage.
 
@@ -122,7 +122,7 @@ A floating point number from 0 to 1, where 0 is no usage, 1 is full usage.
 
 > **usageText**: `string`
 
-Defined in: [bee-js/src/types/index.ts:535](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L535)
+Defined in: [bee-js/src/types/index.ts:554](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L554)
 
 Human readable usage text, like "50%" or "100%", no fractions
 
@@ -132,7 +132,7 @@ Human readable usage text, like "50%" or "100%", no fractions
 
 > **utilization**: `number`
 
-Defined in: [bee-js/src/types/index.ts:516](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L516)
+Defined in: [bee-js/src/types/index.ts:535](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L535)
 
 Represents how much of the batch is used up.
 
@@ -147,7 +147,7 @@ the 512MB theoretical max size for the smallest stamp comes from `2 * 65536 * 40
 
 > **calculateRemainingSize**(`encryption`, `redundancyLevel`): [`Size`](../classes/Size.md)
 
-Defined in: [bee-js/src/types/index.ts:557](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L557)
+Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L576)
 
 Calculates the remaining size of data that can be uploaded with this postage batch
 based on whether encryption is used and the desired redundancy level.
@@ -172,7 +172,7 @@ based on whether encryption is used and the desired redundancy level.
 
 > **calculateSize**(`encryption`, `redundancyLevel`): [`Size`](../classes/Size.md)
 
-Defined in: [bee-js/src/types/index.ts:552](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L552)
+Defined in: [bee-js/src/types/index.ts:571](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L571)
 
 Calculates the effective size of data that can be uploaded with this postage batch
 based on whether encryption is used and the desired redundancy level.

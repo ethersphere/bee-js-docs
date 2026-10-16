@@ -1,6 +1,6 @@
 # Interface: Data
 
-Defined in: [bee-js/src/types/index.ts:330](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L330)
+Defined in: [bee-js/src/types/index.ts:338](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L338)
 
 Helper interface that adds utility functions
 to work more conveniently with bytes in normal
@@ -394,7 +394,7 @@ If thisArg is omitted, undefined is used as the this value.
 
 > **hex**(): `string`
 
-Defined in: [bee-js/src/types/index.ts:339](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L339)
+Defined in: [bee-js/src/types/index.ts:347](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L347)
 
 Converts the binary data into hex-string.
 
@@ -500,7 +500,7 @@ resulting String. If omitted, the array elements are separated with a comma.
 
 > **json**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [bee-js/src/types/index.ts:344](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L344)
+Defined in: [bee-js/src/types/index.ts:352](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L352)
 
 Converts the binary data into string which is then parsed into JSON.
 
@@ -973,7 +973,7 @@ The index of the end of the array.
 
 > **text**(): `string`
 
-Defined in: [bee-js/src/types/index.ts:334](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L334)
+Defined in: [bee-js/src/types/index.ts:342](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L342)
 
 Converts the binary data using UTF-8 decoding into string.
 

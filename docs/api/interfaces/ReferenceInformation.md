@@ -1,6 +1,6 @@
 # Interface: ReferenceInformation
 
-Defined in: [bee-js/src/types/index.ts:319](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L319)
+Defined in: [bee-js/src/types/index.ts:327](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L327)
 
 ## Properties
 
@@ -8,4 +8,4 @@ Defined in: [bee-js/src/types/index.ts:319](https://github.com/ethersphere/bee-j
 
 > **contentLength**: `number`
 
-Defined in: [bee-js/src/types/index.ts:320](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L320)
+Defined in: [bee-js/src/types/index.ts:328](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L328)

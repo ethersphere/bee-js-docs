@@ -1,6 +1,6 @@
 # Interface: BeeOptions
 
-Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L68)
+Defined in: [bee-js/src/types/index.ts:68](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L68)
 
 Options for the Bee client which affect all method calls *(unless overridden in the method call itself)*.
 
@@ -17,7 +17,7 @@ such as `timeout`, additional `headers`, custom `httpAgent`, etc.
 
 > `optional` **baseURL**: `string`
 
-Defined in: [bee-js/src/types/index.ts:52](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L52)
+Defined in: [bee-js/src/types/index.ts:52](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L52)
 
 #### Inherited from
 
@@ -29,7 +29,7 @@ Defined in: [bee-js/src/types/index.ts:52](https://github.com/ethersphere/bee-js
 
 > `optional` **endlesslyRetry**: `boolean`
 
-Defined in: [bee-js/src/types/index.ts:58](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L58)
+Defined in: [bee-js/src/types/index.ts:58](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L58)
 
 #### Inherited from
 
@@ -41,7 +41,7 @@ Defined in: [bee-js/src/types/index.ts:58](https://github.com/ethersphere/bee-js
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L54)
+Defined in: [bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L54)
 
 #### Inherited from
 
@@ -53,7 +53,7 @@ Defined in: [bee-js/src/types/index.ts:54](https://github.com/ethersphere/bee-js
 
 > `optional` **httpAgent**: `unknown`
 
-Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L56)
+Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L56)
 
 #### Inherited from
 
@@ -65,7 +65,7 @@ Defined in: [bee-js/src/types/index.ts:56](https://github.com/ethersphere/bee-js
 
 > `optional` **httpsAgent**: `unknown`
 
-Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L57)
+Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L57)
 
 #### Inherited from
 
@@ -77,7 +77,7 @@ Defined in: [bee-js/src/types/index.ts:57](https://github.com/ethersphere/bee-js
 
 > `optional` **network**: `"gnosis"` \| `"sepolia"`
 
-Defined in: [bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L87)
+Defined in: [bee-js/src/types/index.ts:87](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L87)
 
 Network on which the Bee node is running.
 
@@ -92,7 +92,7 @@ Default value is `gnosis`.
 
 > `optional` **onRequest**: (`request`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L55)
+Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L55)
 
 #### Parameters
 
@@ -114,7 +114,7 @@ Defined in: [bee-js/src/types/index.ts:55](https://github.com/ethersphere/bee-js
 
 > `optional` **signal**: `AbortSignal`
 
-Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L59)
+Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L59)
 
 #### Inherited from
 
@@ -126,7 +126,7 @@ Defined in: [bee-js/src/types/index.ts:59](https://github.com/ethersphere/bee-js
 
 > `optional` **signer**: `string` \| `Uint8Array`\<`ArrayBufferLike`\> \| [`PrivateKey`](../classes/PrivateKey.md)
 
-Defined in: [bee-js/src/types/index.ts:77](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L77)
+Defined in: [bee-js/src/types/index.ts:77](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L77)
 
 Default signer (a private key) used for signing.
 
@@ -141,7 +141,7 @@ must be provided with a private key in their respective function calls.
 
 > `optional` **timeout**: `number`
 
-Defined in: [bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L53)
+Defined in: [bee-js/src/types/index.ts:53](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L53)
 
 #### Inherited from
 

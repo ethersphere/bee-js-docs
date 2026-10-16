@@ -1,6 +1,6 @@
 # Interface: SOCReader
 
-Defined in: [bee-js/src/types/index.ts:466](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L466)
+Defined in: [bee-js/src/types/index.ts:485](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L485)
 
 Interface for downloading single owner chunks
 
@@ -14,7 +14,7 @@ Interface for downloading single owner chunks
 
 > **download**: (`identifier`) => `Promise`\<[`SingleOwnerChunk`](SingleOwnerChunk.md)\>
 
-Defined in: [bee-js/src/types/index.ts:473](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L473)
+Defined in: [bee-js/src/types/index.ts:492](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L492)
 
 Downloads a single owner chunk
 
@@ -36,4 +36,4 @@ The identifier of the chunk
 
 > `readonly` **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [bee-js/src/types/index.ts:467](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L467)
+Defined in: [bee-js/src/types/index.ts:486](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L486)

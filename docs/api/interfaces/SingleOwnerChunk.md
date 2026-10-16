@@ -1,6 +1,6 @@
 # Interface: SingleOwnerChunk
 
-Defined in: [core-sdk/src/chunk/soc.ts:52](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L52)
+Defined in: [core-sdk/src/chunk/soc.ts:52](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L52)
 
 Single Owner Chunk (SOC) - a chunk type where the address is determined by
 the owner and an arbitrary identifier. Its integrity is attested by the
@@ -20,7 +20,7 @@ owner's digital signature rather than by hashing the content directly.
 
 > **address**: [`Reference`](../classes/Reference.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:56](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L56)
+Defined in: [core-sdk/src/chunk/soc.ts:56](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L56)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [core-sdk/src/chunk/soc.ts:56](https://github.com/ethersphere/core-s
 
 > `readonly` **data**: `Uint8Array`
 
-Defined in: [core-sdk/src/chunk/soc.ts:53](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L53)
+Defined in: [core-sdk/src/chunk/soc.ts:53](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L53)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [core-sdk/src/chunk/soc.ts:53](https://github.com/ethersphere/core-s
 
 > **identifier**: [`Identifier`](../classes/Identifier.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:57](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L57)
+Defined in: [core-sdk/src/chunk/soc.ts:57](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L57)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [core-sdk/src/chunk/soc.ts:57](https://github.com/ethersphere/core-s
 
 > **owner**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:59](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L59)
+Defined in: [core-sdk/src/chunk/soc.ts:59](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L59)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [core-sdk/src/chunk/soc.ts:59](https://github.com/ethersphere/core-s
 
 > **payload**: [`Bytes`](../classes/Bytes.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:55](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L55)
+Defined in: [core-sdk/src/chunk/soc.ts:55](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L55)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [core-sdk/src/chunk/soc.ts:55](https://github.com/ethersphere/core-s
 
 > **signature**: [`Signature`](../classes/Signature.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:58](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L58)
+Defined in: [core-sdk/src/chunk/soc.ts:58](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L58)
 
 ***
 
@@ -68,4 +68,4 @@ Defined in: [core-sdk/src/chunk/soc.ts:58](https://github.com/ethersphere/core-s
 
 > **span**: [`Span`](../classes/Span.md)
 
-Defined in: [core-sdk/src/chunk/soc.ts:54](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/soc.ts#L54)
+Defined in: [core-sdk/src/chunk/soc.ts:54](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/soc.ts#L54)

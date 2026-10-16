@@ -1,6 +1,6 @@
 # Class: ChunkBuilder
 
-Defined in: [core-sdk/src/chunk/splitter.ts:16](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L16)
+Defined in: [core-sdk/src/chunk/splitter.ts:16](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L16)
 
 A chunk (up to 4096 bytes of payload) being filled in by a ChunkSplitter,
 before it's sealed. Unlike the immutable CAC [Chunk](../interfaces/Chunk.md), this is a
@@ -12,7 +12,7 @@ mutable buffer - only `hash()`/`encryptedHash()`/`build()` finalize it.
 
 > **new ChunkBuilder**(`span?`): `ChunkBuilder`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:20](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L20)
+Defined in: [core-sdk/src/chunk/splitter.ts:20](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L20)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [core-sdk/src/chunk/splitter.ts:20](https://github.com/ethersphere/c
 
 > **span**: `bigint`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:17](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L17)
+Defined in: [core-sdk/src/chunk/splitter.ts:17](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L17)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [core-sdk/src/chunk/splitter.ts:17](https://github.com/ethersphere/c
 
 > **writer**: `Uint8ArrayWriter`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:18](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L18)
+Defined in: [core-sdk/src/chunk/splitter.ts:18](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L18)
 
 ## Methods
 
@@ -46,7 +46,7 @@ Defined in: [core-sdk/src/chunk/splitter.ts:18](https://github.com/ethersphere/c
 
 > **build**(): `Uint8Array`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:28](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L28)
+Defined in: [core-sdk/src/chunk/splitter.ts:28](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L28)
 
 Returns the raw chunk bytes: 8-byte span || 4096-byte payload buffer.
 
@@ -60,7 +60,7 @@ Returns the raw chunk bytes: 8-byte span || 4096-byte payload buffer.
 
 > **encryptedHash**(`key?`): `object`
 
-Defined in: [core-sdk/src/chunk/splitter.ts:43](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L43)
+Defined in: [core-sdk/src/chunk/splitter.ts:43](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L43)
 
 Encrypts this chunk with `key` (generating a random one if omitted) and
 returns the resulting address alongside the key used.
@@ -89,7 +89,7 @@ returns the resulting address alongside the key used.
 
 > **hash**(): [`Reference`](Reference.md)
 
-Defined in: [core-sdk/src/chunk/splitter.ts:35](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/chunk/splitter.ts#L35)
+Defined in: [core-sdk/src/chunk/splitter.ts:35](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/chunk/splitter.ts#L35)
 
 Computes the unencrypted BMT address of this chunk.
 

@@ -1,6 +1,6 @@
 # Interface: GsocMessageHandler
 
-Defined in: [bee-js/src/types/index.ts:378](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L378)
+Defined in: [bee-js/src/types/index.ts:386](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L386)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:378](https://github.com/ethersphere/bee-j
 
 > **onClose**: (`subscription`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:381](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L381)
+Defined in: [bee-js/src/types/index.ts:389](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L389)
 
 #### Parameters
 
@@ -26,7 +26,7 @@ Defined in: [bee-js/src/types/index.ts:381](https://github.com/ethersphere/bee-j
 
 > **onError**: (`error`, `subscription`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:380](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L380)
+Defined in: [bee-js/src/types/index.ts:388](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L388)
 
 #### Parameters
 
@@ -48,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:380](https://github.com/ethersphere/bee-j
 
 > **onMessage**: (`message`, `subscription`) => `void`
 
-Defined in: [bee-js/src/types/index.ts:379](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L379)
+Defined in: [bee-js/src/types/index.ts:387](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L387)
 
 #### Parameters
 

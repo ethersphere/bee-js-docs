@@ -1,6 +1,6 @@
 # Class: Tag
 
-Defined in: [bee-js/src/modules/tag.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L13)
+Defined in: [bee-js/src/modules/tag.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L13)
 
 Tag operations for tracking upload and synchronization progress.
 
@@ -12,7 +12,7 @@ Accessed as `bee.tag`.
 
 > **new Tag**(`context`): `Tag`
 
-Defined in: [bee-js/src/modules/tag.ts:14](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L14)
+Defined in: [bee-js/src/modules/tag.ts:14](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L14)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/tag.ts:14](https://github.com/ethersphere/bee-js
 
 > **create**(`requestOptions?`): `Promise`\<[`Tag`](../interfaces/Tag.md)\>
 
-Defined in: [bee-js/src/modules/tag.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L21)
+Defined in: [bee-js/src/modules/tag.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L21)
 
 Creates a new tag which is meant for tracking upload and synchronization progress.
 
@@ -52,7 +52,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **delete**(`tagUid`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/tag.ts:57](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L57)
+Defined in: [bee-js/src/modules/tag.ts:57](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L57)
 
 Deletes a tag.
 
@@ -80,7 +80,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`tagUid`, `requestOptions?`): `Promise`\<[`Tag`](../interfaces/Tag.md)\>
 
-Defined in: [bee-js/src/modules/tag.ts:45](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L45)
+Defined in: [bee-js/src/modules/tag.ts:45](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L45)
 
 Retrieves tag information from the Bee node.
 
@@ -108,7 +108,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAll**(`options?`, `requestOptions?`): `Promise`\<[`Tag`](../interfaces/Tag.md)[]\>
 
-Defined in: [bee-js/src/modules/tag.ts:31](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L31)
+Defined in: [bee-js/src/modules/tag.ts:31](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L31)
 
 Fetches all tags in a paginated manner.
 
@@ -136,7 +136,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **update**(`tagUid`, `reference`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/tag.ts:70](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/tag.ts#L70)
+Defined in: [bee-js/src/modules/tag.ts:70](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/tag.ts#L70)
 
 Updates a tag's total chunks count.
 

@@ -1,6 +1,6 @@
 # Interface: RedistributionState
 
-Defined in: [bee-js/src/types/debug.ts:152](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L152)
+Defined in: [bee-js/src/types/debug.ts:152](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L152)
 
 ## Properties
 
@@ -8,7 +8,15 @@ Defined in: [bee-js/src/types/debug.ts:152](https://github.com/ethersphere/bee-j
 
 > **block**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:164](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L164)
+Defined in: [bee-js/src/types/debug.ts:164](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L164)
+
+***
+
+### enabled
+
+> **enabled**: `boolean`
+
+Defined in: [bee-js/src/types/debug.ts:168](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L168)
 
 ***
 
@@ -16,7 +24,23 @@ Defined in: [bee-js/src/types/debug.ts:164](https://github.com/ethersphere/bee-j
 
 > **fees**: [`DAI`](../classes/DAI.md)
 
-Defined in: [bee-js/src/types/debug.ts:166](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L166)
+Defined in: [bee-js/src/types/debug.ts:166](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L166)
+
+***
+
+### hasCommittedThisRound
+
+> **hasCommittedThisRound**: `boolean`
+
+Defined in: [bee-js/src/types/debug.ts:169](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L169)
+
+***
+
+### hasRevealedThisRound
+
+> **hasRevealedThisRound**: `boolean`
+
+Defined in: [bee-js/src/types/debug.ts:170](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L170)
 
 ***
 
@@ -24,7 +48,7 @@ Defined in: [bee-js/src/types/debug.ts:166](https://github.com/ethersphere/bee-j
 
 > **hasSufficientFunds**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:154](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L154)
+Defined in: [bee-js/src/types/debug.ts:154](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L154)
 
 ***
 
@@ -32,7 +56,7 @@ Defined in: [bee-js/src/types/debug.ts:154](https://github.com/ethersphere/bee-j
 
 > **isFrozen**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:155](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L155)
+Defined in: [bee-js/src/types/debug.ts:155](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L155)
 
 ***
 
@@ -40,7 +64,7 @@ Defined in: [bee-js/src/types/debug.ts:155](https://github.com/ethersphere/bee-j
 
 > **isFullySynced**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:156](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L156)
+Defined in: [bee-js/src/types/debug.ts:156](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L156)
 
 ***
 
@@ -48,7 +72,7 @@ Defined in: [bee-js/src/types/debug.ts:156](https://github.com/ethersphere/bee-j
 
 > **isHealthy**: `boolean`
 
-Defined in: [bee-js/src/types/debug.ts:167](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L167)
+Defined in: [bee-js/src/types/debug.ts:167](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L167)
 
 ***
 
@@ -56,7 +80,7 @@ Defined in: [bee-js/src/types/debug.ts:167](https://github.com/ethersphere/bee-j
 
 > **lastFrozenRound**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:161](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L161)
+Defined in: [bee-js/src/types/debug.ts:161](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L161)
 
 ***
 
@@ -64,7 +88,7 @@ Defined in: [bee-js/src/types/debug.ts:161](https://github.com/ethersphere/bee-j
 
 > **lastPlayedRound**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:160](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L160)
+Defined in: [bee-js/src/types/debug.ts:160](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L160)
 
 ***
 
@@ -72,7 +96,7 @@ Defined in: [bee-js/src/types/debug.ts:160](https://github.com/ethersphere/bee-j
 
 > **lastSampleDurationSeconds**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:163](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L163)
+Defined in: [bee-js/src/types/debug.ts:163](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L163)
 
 ***
 
@@ -80,7 +104,7 @@ Defined in: [bee-js/src/types/debug.ts:163](https://github.com/ethersphere/bee-j
 
 > **lastSelectedRound**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:162](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L162)
+Defined in: [bee-js/src/types/debug.ts:162](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L162)
 
 ***
 
@@ -88,7 +112,7 @@ Defined in: [bee-js/src/types/debug.ts:162](https://github.com/ethersphere/bee-j
 
 > **lastWonRound**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:159](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L159)
+Defined in: [bee-js/src/types/debug.ts:159](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L159)
 
 ***
 
@@ -96,7 +120,7 @@ Defined in: [bee-js/src/types/debug.ts:159](https://github.com/ethersphere/bee-j
 
 > **minimumGasFunds**: [`DAI`](../classes/DAI.md)
 
-Defined in: [bee-js/src/types/debug.ts:153](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L153)
+Defined in: [bee-js/src/types/debug.ts:153](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L153)
 
 ***
 
@@ -104,7 +128,7 @@ Defined in: [bee-js/src/types/debug.ts:153](https://github.com/ethersphere/bee-j
 
 > **phase**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:157](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L157)
+Defined in: [bee-js/src/types/debug.ts:157](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L157)
 
 ***
 
@@ -112,7 +136,7 @@ Defined in: [bee-js/src/types/debug.ts:157](https://github.com/ethersphere/bee-j
 
 > **reward**: [`BZZ`](../classes/BZZ.md)
 
-Defined in: [bee-js/src/types/debug.ts:165](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L165)
+Defined in: [bee-js/src/types/debug.ts:165](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L165)
 
 ***
 
@@ -120,4 +144,4 @@ Defined in: [bee-js/src/types/debug.ts:165](https://github.com/ethersphere/bee-j
 
 > **round**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:158](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L158)
+Defined in: [bee-js/src/types/debug.ts:158](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L158)

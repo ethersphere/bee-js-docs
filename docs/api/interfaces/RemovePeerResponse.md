@@ -1,6 +1,6 @@
 # Interface: RemovePeerResponse
 
-Defined in: [bee-js/src/types/debug.ts:194](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L194)
+Defined in: [bee-js/src/types/debug.ts:197](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L197)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:194](https://github.com/ethersphere/bee-j
 
 > **code**: `0`
 
-Defined in: [bee-js/src/types/debug.ts:196](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L196)
+Defined in: [bee-js/src/types/debug.ts:199](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L199)
 
 ***
 
@@ -16,4 +16,4 @@ Defined in: [bee-js/src/types/debug.ts:196](https://github.com/ethersphere/bee-j
 
 > **message**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:195](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L195)
+Defined in: [bee-js/src/types/debug.ts:198](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L198)

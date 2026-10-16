@@ -1,6 +1,6 @@
 # Class: Stamp
 
-Defined in: [bee-js/src/modules/stamp.ts:29](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L29)
+Defined in: [bee-js/src/modules/stamp.ts:29](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L29)
 
 Low-level postage batch (stamp) operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.stamp`. For the ergonomic wrapper see `bee.storage`.
 
 > **new Stamp**(`context`): `Stamp`
 
-Defined in: [bee-js/src/modules/stamp.ts:30](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L30)
+Defined in: [bee-js/src/modules/stamp.ts:30](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L30)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/stamp.ts:30](https://github.com/ethersphere/bee-
 
 > **calculateTopUpForBZZ**(`depth`, `bzz`, `requestOptions?`): `Promise`\<\{ `amount`: `bigint`; `duration`: [`Duration`](../classes/Duration.md); \}\>
 
-Defined in: [bee-js/src/modules/stamp.ts:108](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L108)
+Defined in: [bee-js/src/modules/stamp.ts:108](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L108)
 
 Calculates the `amount` and expected duration extension for topping up a postage batch with a given BZZ value.
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **create**(`amount`, `depth`, `options?`, `requestOptions?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:42](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L42)
+Defined in: [bee-js/src/modules/stamp.ts:42](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L42)
 
 Creates a new postage batch, spending BZZ tokens from the node wallet.
 
@@ -106,7 +106,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **dilute**(`postageBatchId`, `depth`, `requestOptions?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:146](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L146)
+Defined in: [bee-js/src/modules/stamp.ts:146](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L146)
 
 Dilutes a postage batch to extend its capacity by increasing its depth.
 
@@ -140,7 +140,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`postageBatchId`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`PostageBatch`](../interfaces/PostageBatch.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:165](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L165)
+Defined in: [bee-js/src/modules/stamp.ts:165](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L165)
 
 Returns details for a specific postage batch.
 
@@ -180,7 +180,7 @@ Assume that uploads with this postage batch are erasure coded, which skews the c
 
 > **getAll**(`requestOptions?`): `Promise`\<[`PostageBatch`](../interfaces/PostageBatch.md)[]\>
 
-Defined in: [bee-js/src/modules/stamp.ts:216](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L216)
+Defined in: [bee-js/src/modules/stamp.ts:216](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L216)
 
 Returns all postage batches that belong to the node.
 
@@ -202,7 +202,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAllGlobal**(`requestOptions?`): `Promise`\<[`GlobalPostageBatch`](../interfaces/GlobalPostageBatch.md)[]\>
 
-Defined in: [bee-js/src/modules/stamp.ts:225](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L225)
+Defined in: [bee-js/src/modules/stamp.ts:225](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L225)
 
 Returns all globally available postage batches.
 
@@ -224,7 +224,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getBuckets**(`postageBatchId`, `requestOptions?`): `Promise`\<[`PostageBatchBuckets`](../interfaces/PostageBatchBuckets.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:202](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L202)
+Defined in: [bee-js/src/modules/stamp.ts:202](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L202)
 
 Returns detailed information related to buckets for a specific postage batch.
 
@@ -252,7 +252,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getGlobal**(`postageBatchId`, `requestOptions?`): `Promise`\<[`GlobalPostageBatch`](../interfaces/GlobalPostageBatch.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:187](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L187)
+Defined in: [bee-js/src/modules/stamp.ts:187](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L187)
 
 Returns details for a specific globally available postage batch.
 
@@ -280,7 +280,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **topUp**(`postageBatchId`, `amount`, `requestOptions?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/stamp.ts:128](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L128)
+Defined in: [bee-js/src/modules/stamp.ts:128](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L128)
 
 Increases the duration of a postage batch by increasing its amount.
 
@@ -314,7 +314,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **updateLabel**(`postageBatchId`, `label`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/stamp.ts:91](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/stamp.ts#L91)
+Defined in: [bee-js/src/modules/stamp.ts:91](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/stamp.ts#L91)
 
 Updates the label of a certain postage batch.
 

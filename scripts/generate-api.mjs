@@ -181,7 +181,9 @@ function withNamespaceClasses(index) {
 const overview = withNamespaceClasses(
   readFileSync(readme, 'utf-8')
     .replace(/^# .*\n+/, '') // the entry point path is what the frontmatter title replaces
-    .replace(/^- \[Utils\]\(.*\)$/m, `- [Utils](./namespaces/Utils/${utilsPages[0].replace(/\.md$/, '')}.md)`),
+    .replace(/^- \[Utils\]\(.*\)$/m, `- [Utils](./namespaces/Utils/${utilsPages[0].replace(/\.md$/, '')}.md)`)
+    // classes re-exported from a namespace module, such as the rolling feed reader and writer
+    .replace(/\]\(modules\/[^/]+\/classes\/([^/)]+\.md)\)/g, '](classes/$1)'),
 );
 
 writeFileSync(join(API_DIR, 'Overview.md'), `---\n${OVERVIEW_FRONTMATTER.join('\n')}\n---\n\n${overview}`);

@@ -1,6 +1,6 @@
 # Class: Stamper
 
-Defined in: [core-sdk/src/stamper/stamper.ts:43](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L43)
+Defined in: [core-sdk/src/stamper/stamper.ts:45](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L45)
 
 Stateful postage stamp issuer: tracks how many chunks have been stamped
 into each of the batch's 65536 buckets, so each chunk gets a distinct,
@@ -12,7 +12,7 @@ capacity-respecting index without the caller managing that bookkeeping.
 
 > **batchId**: [`BatchId`](BatchId.md)
 
-Defined in: [core-sdk/src/stamper/stamper.ts:45](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L45)
+Defined in: [core-sdk/src/stamper/stamper.ts:47](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L47)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [core-sdk/src/stamper/stamper.ts:45](https://github.com/ethersphere/
 
 > **buckets**: `Uint32Array`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:46](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L46)
+Defined in: [core-sdk/src/stamper/stamper.ts:48](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L48)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [core-sdk/src/stamper/stamper.ts:46](https://github.com/ethersphere/
 
 > **depth**: `number`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:47](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L47)
+Defined in: [core-sdk/src/stamper/stamper.ts:49](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L49)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [core-sdk/src/stamper/stamper.ts:47](https://github.com/ethersphere/
 
 > **maxSlot**: `number`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:48](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L48)
+Defined in: [core-sdk/src/stamper/stamper.ts:50](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L50)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [core-sdk/src/stamper/stamper.ts:48](https://github.com/ethersphere/
 
 > **signer**: [`PrivateKey`](PrivateKey.md)
 
-Defined in: [core-sdk/src/stamper/stamper.ts:44](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L44)
+Defined in: [core-sdk/src/stamper/stamper.ts:46](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L46)
 
 ## Methods
 
@@ -52,7 +52,7 @@ Defined in: [core-sdk/src/stamper/stamper.ts:44](https://github.com/ethersphere/
 
 > **getState**(): `Uint32Array`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:102](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L102)
+Defined in: [core-sdk/src/stamper/stamper.ts:108](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L108)
 
 Returns the live bucket-height state, for persisting and later resuming
 via [fromState](#fromstate).
@@ -67,7 +67,7 @@ via [fromState](#fromstate).
 
 > **stamp**(`address`, `timestampMs?`): [`EnvelopeWithBatchId`](../interfaces/EnvelopeWithBatchId.md)
 
-Defined in: [core-sdk/src/stamper/stamper.ts:85](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L85)
+Defined in: [core-sdk/src/stamper/stamper.ts:91](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L91)
 
 Stamps a chunk address, automatically picking and reserving the next
 free slot in its bucket. Throws once a bucket reaches its depth-derived capacity.
@@ -92,7 +92,7 @@ free slot in its bucket. Throws once a bucket reaches its depth-derived capacity
 
 > `static` **fromBlank**(`signer`, `batchId`, `depth`): `Stamper`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:61](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L61)
+Defined in: [core-sdk/src/stamper/stamper.ts:67](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L67)
 
 Creates a fresh Stamper for a batch with no chunks stamped yet.
 
@@ -120,7 +120,7 @@ Creates a fresh Stamper for a batch with no chunks stamped yet.
 
 > `static` **fromState**(`signer`, `batchId`, `buckets`, `depth`): `Stamper`
 
-Defined in: [core-sdk/src/stamper/stamper.ts:72](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/stamper.ts#L72)
+Defined in: [core-sdk/src/stamper/stamper.ts:78](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/stamper.ts#L78)
 
 Resumes a Stamper from a previously persisted bucket state (see [getState](#getstate)).
 

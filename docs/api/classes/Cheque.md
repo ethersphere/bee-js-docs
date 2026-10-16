@@ -1,6 +1,6 @@
 # Class: Cheque
 
-Defined in: [bee-js/src/modules/cheque.ts:18](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L18)
+Defined in: [bee-js/src/modules/cheque.ts:18](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L18)
 
 Cheque operations (last cheques and cashouts).
 
@@ -12,7 +12,7 @@ Accessed as `bee.cheque`.
 
 > **new Cheque**(`context`): `Cheque`
 
-Defined in: [bee-js/src/modules/cheque.ts:19](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L19)
+Defined in: [bee-js/src/modules/cheque.ts:19](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L19)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/cheque.ts:19](https://github.com/ethersphere/bee
 
 > **cashoutLast**(`address`, `options?`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/cheque.ts:67](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L67)
+Defined in: [bee-js/src/modules/cheque.ts:67](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L67)
 
 Cashes out the last cheque for a specific peer.
 
@@ -62,7 +62,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAllLatest**(`requestOptions?`): `Promise`\<[`LastChequesResponse`](../interfaces/LastChequesResponse.md)\>
 
-Defined in: [bee-js/src/modules/cheque.ts:26](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L26)
+Defined in: [bee-js/src/modules/cheque.ts:26](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L26)
 
 Gets the last cheques for all peers.
 
@@ -84,7 +84,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAllLatestForPeer**(`address`, `requestOptions?`): `Promise`\<[`LastChequesForPeerResponse`](../interfaces/LastChequesForPeerResponse.md)\>
 
-Defined in: [bee-js/src/modules/cheque.ts:36](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L36)
+Defined in: [bee-js/src/modules/cheque.ts:36](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L36)
 
 Gets the last cheques for a specific peer.
 
@@ -112,7 +112,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getLastCashoutAction**(`address`, `requestOptions?`): `Promise`\<[`LastCashoutActionResponse`](../interfaces/LastCashoutActionResponse.md)\>
 
-Defined in: [bee-js/src/modules/cheque.ts:51](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/cheque.ts#L51)
+Defined in: [bee-js/src/modules/cheque.ts:51](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/cheque.ts#L51)
 
 Gets the last cashout action for a specific peer.
 

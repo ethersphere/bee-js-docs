@@ -1,6 +1,6 @@
 # Class: Storage
 
-Defined in: [bee-js/src/modules/storage.ts:16](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L16)
+Defined in: [bee-js/src/modules/storage.ts:16](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L16)
 
 Ergonomic storage operations expressed in terms of size and duration.
 
@@ -12,7 +12,7 @@ Accessed as `bee.storage`. Wraps the low-level `bee.stamp` operations.
 
 > **new Storage**(`context`): `Storage`
 
-Defined in: [bee-js/src/modules/storage.ts:17](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L17)
+Defined in: [bee-js/src/modules/storage.ts:17](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L17)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/storage.ts:17](https://github.com/ethersphere/be
 
 > **buy**(`size`, `duration`, `options?`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:35](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L35)
+Defined in: [bee-js/src/modules/storage.ts:35](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L35)
 
 Creates a postage batch sized for a certain size and duration on the Swarm network.
 
@@ -74,7 +74,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **extend**(`postageBatchId`, `size`, `duration`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BatchId`](../classes/BatchId.md) \| [`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:89](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L89)
+Defined in: [bee-js/src/modules/storage.ts:89](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L89)
 
 Extends the storage of a postage batch by either increasing its size, duration or both.
 
@@ -128,7 +128,7 @@ Assume the future uploaded data is erasure coded, which skews the capacity of th
 
 > **extendDuration**(`postageBatchId`, `duration`, `requestOptions?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:165](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L165)
+Defined in: [bee-js/src/modules/storage.ts:165](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L165)
 
 Extends the duration of a postage batch.
 
@@ -160,7 +160,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **extendSize**(`postageBatchId`, `size`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BatchId`](../classes/BatchId.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:136](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L136)
+Defined in: [bee-js/src/modules/storage.ts:136](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L136)
 
 Extends the storage size of a postage batch by increasing its depth.
 
@@ -204,7 +204,7 @@ Assume the future uploaded data is erasure coded, which skews the capacity of th
 
 > **getCost**(`size`, `duration`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:63](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L63)
+Defined in: [bee-js/src/modules/storage.ts:63](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L63)
 
 Calculates the estimated BZZ cost for creating a postage batch for the given size and duration.
 
@@ -250,7 +250,7 @@ Assume the future uploaded data is erasure coded, which skews the capacity of th
 
 > **getDurationExtensionCost**(`postageBatchId`, `duration`, `requestOptions?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:246](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L246)
+Defined in: [bee-js/src/modules/storage.ts:246](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L246)
 
 Calculates the cost of extending the duration of a postage batch.
 
@@ -280,7 +280,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getExtensionCost**(`postageBatchId`, `size`, `duration`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:187](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L187)
+Defined in: [bee-js/src/modules/storage.ts:187](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L187)
 
 Calculates the cost of extending both the duration and the capacity of a postage batch.
 
@@ -330,7 +330,7 @@ Assume the future uploaded data is erasure coded, which skews the capacity of th
 
 > **getSizeExtensionCost**(`postageBatchId`, `size`, `requestOptions?`, `encryption?`, `erasureCodeLevel?`): `Promise`\<[`BZZ`](../classes/BZZ.md)\>
 
-Defined in: [bee-js/src/modules/storage.ts:216](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L216)
+Defined in: [bee-js/src/modules/storage.ts:216](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L216)
 
 Calculates the cost of extending the size of a postage batch.
 
@@ -372,7 +372,7 @@ Assume the future uploaded data is erasure coded, which skews the capacity of th
 
 > **rename**(`postageBatchId`, `newLabel`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/storage.ts:265](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/storage.ts#L265)
+Defined in: [bee-js/src/modules/storage.ts:265](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/storage.ts#L265)
 
 Renames a storage. Convenience wrapper over `bee.stamp.updateLabel`.
 

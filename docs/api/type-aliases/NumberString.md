@@ -2,7 +2,7 @@
 
 > **NumberString** = `string` & `object`
 
-Defined in: [bee-js/src/types/index.ts:627](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L627)
+Defined in: [bee-js/src/types/index.ts:646](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L646)
 
 With this type a number should be represented in a string
 

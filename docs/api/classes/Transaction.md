@@ -1,6 +1,6 @@
 # Class: Transaction
 
-Defined in: [bee-js/src/modules/transaction.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L12)
+Defined in: [bee-js/src/modules/transaction.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L12)
 
 Pending transaction operations for the Bee node's `/transactions` queue.
 
@@ -12,7 +12,7 @@ Accessed as `bee.transaction`.
 
 > **new Transaction**(`context`): `Transaction`
 
-Defined in: [bee-js/src/modules/transaction.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L13)
+Defined in: [bee-js/src/modules/transaction.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L13)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/transaction.ts:13](https://github.com/etherspher
 
 > **cancel**(`transactionHash`, `gasPrice?`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/transaction.ts:63](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L63)
+Defined in: [bee-js/src/modules/transaction.ts:63](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L63)
 
 Cancels a currently pending transaction.
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`transactionHash`, `requestOptions?`): `Promise`\<[`TransactionInfo`](../interfaces/TransactionInfo.md)\>
 
-Defined in: [bee-js/src/modules/transaction.ts:30](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L30)
+Defined in: [bee-js/src/modules/transaction.ts:30](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L30)
 
 Fetches the transaction information for a specific pending transaction.
 
@@ -92,7 +92,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAll**(`requestOptions?`): `Promise`\<[`TransactionInfo`](../interfaces/TransactionInfo.md)[]\>
 
-Defined in: [bee-js/src/modules/transaction.ts:20](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L20)
+Defined in: [bee-js/src/modules/transaction.ts:20](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L20)
 
 Fetches the list of all current pending transactions for the Bee node.
 
@@ -114,7 +114,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **rebroadcast**(`transactionHash`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/transaction.ts:47](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/transaction.ts#L47)
+Defined in: [bee-js/src/modules/transaction.ts:47](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/transaction.ts#L47)
 
 Rebroadcasts an already created pending transaction.
 

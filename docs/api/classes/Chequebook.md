@@ -1,6 +1,6 @@
 # Class: Chequebook
 
-Defined in: [bee-js/src/modules/chequebook.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L13)
+Defined in: [bee-js/src/modules/chequebook.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L13)
 
 Chequebook contract operations (address, balance, deposit, withdraw).
 
@@ -12,7 +12,7 @@ Accessed as `bee.chequebook`.
 
 > **new Chequebook**(`context`): `Chequebook`
 
-Defined in: [bee-js/src/modules/chequebook.ts:14](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L14)
+Defined in: [bee-js/src/modules/chequebook.ts:14](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L14)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/chequebook.ts:14](https://github.com/ethersphere
 
 > **deposit**(`amount`, `gasPrice?`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/chequebook.ts:41](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L41)
+Defined in: [bee-js/src/modules/chequebook.ts:41](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L41)
 
 Deposits tokens from the node wallet into the chequebook.
 
@@ -40,7 +40,7 @@ Deposits tokens from the node wallet into the chequebook.
 
 Amount of BZZ tokens to deposit. If not providing a `BZZ` instance, the amount is denoted in PLUR.
 
-`string` | `bigint` | [`BZZ`](../classes/BZZ.md) | [`NumberString`](../type-aliases/NumberString.md)
+`string` | `bigint` | [`NumberString`](../type-aliases/NumberString.md) | [`BZZ`](../classes/BZZ.md)
 
 ##### gasPrice?
 
@@ -64,7 +64,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAddress**(`requestOptions?`): `Promise`\<[`ChequebookAddressResponse`](../interfaces/ChequebookAddressResponse.md)\>
 
-Defined in: [bee-js/src/modules/chequebook.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L21)
+Defined in: [bee-js/src/modules/chequebook.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L21)
 
 Gets the address of the deployed chequebook.
 
@@ -86,7 +86,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getBalance**(`requestOptions?`): `Promise`\<[`ChequebookBalanceResponse`](../interfaces/ChequebookBalanceResponse.md)\>
 
-Defined in: [bee-js/src/modules/chequebook.ts:30](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L30)
+Defined in: [bee-js/src/modules/chequebook.ts:30](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L30)
 
 Gets the balance of the chequebook.
 
@@ -108,7 +108,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **withdraw**(`amount`, `gasPrice?`, `requestOptions?`): `Promise`\<[`TransactionId`](../classes/TransactionId.md)\>
 
-Defined in: [bee-js/src/modules/chequebook.ts:61](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/chequebook.ts#L61)
+Defined in: [bee-js/src/modules/chequebook.ts:61](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/chequebook.ts#L61)
 
 Withdraws tokens from the chequebook to the node wallet.
 
@@ -118,7 +118,7 @@ Withdraws tokens from the chequebook to the node wallet.
 
 Amount of BZZ tokens to withdraw. If not providing a `BZZ` instance, the amount is denoted in PLUR.
 
-`string` | `bigint` | [`BZZ`](../classes/BZZ.md) | [`NumberString`](../type-aliases/NumberString.md)
+`string` | `bigint` | [`NumberString`](../type-aliases/NumberString.md) | [`BZZ`](../classes/BZZ.md)
 
 ##### gasPrice?
 

@@ -1,6 +1,6 @@
 # Class: Grantee
 
-Defined in: [bee-js/src/modules/grantee.ts:11](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/grantee.ts#L11)
+Defined in: [bee-js/src/modules/grantee.ts:11](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/grantee.ts#L11)
 
 Grantee (access control) operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.grantee`.
 
 > **new Grantee**(`context`): `Grantee`
 
-Defined in: [bee-js/src/modules/grantee.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/grantee.ts#L12)
+Defined in: [bee-js/src/modules/grantee.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/grantee.ts#L12)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/grantee.ts:12](https://github.com/ethersphere/be
 
 > **create**(`postageBatchId`, `grantees`, `requestOptions?`): `Promise`\<[`GranteesResult`](../interfaces/GranteesResult.md)\>
 
-Defined in: [bee-js/src/modules/grantee.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/grantee.ts#L21)
+Defined in: [bee-js/src/modules/grantee.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/grantee.ts#L21)
 
 Creates grantees for a postage batch.
 
@@ -62,7 +62,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`reference`, `requestOptions?`): `Promise`\<[`GetGranteesResult`](../interfaces/GetGranteesResult.md)\>
 
-Defined in: [bee-js/src/modules/grantee.ts:38](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/grantee.ts#L38)
+Defined in: [bee-js/src/modules/grantee.ts:38](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/grantee.ts#L38)
 
 Retrieves the grantees for a given reference.
 
@@ -90,7 +90,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **patch**(`postageBatchId`, `reference`, `history`, `grantees`, `requestOptions?`): `Promise`\<[`GranteesResult`](../interfaces/GranteesResult.md)\>
 
-Defined in: [bee-js/src/modules/grantee.ts:56](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/grantee.ts#L56)
+Defined in: [bee-js/src/modules/grantee.ts:56](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/grantee.ts#L56)
 
 Updates the grantees of a specific reference and history.
 

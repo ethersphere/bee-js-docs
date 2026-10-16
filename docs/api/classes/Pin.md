@@ -1,6 +1,6 @@
 # Class: Pin
 
-Defined in: [bee-js/src/modules/pin.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L12)
+Defined in: [bee-js/src/modules/pin.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L12)
 
 Local pinning operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.pin`.
 
 > **new Pin**(`context`): `Pin`
 
-Defined in: [bee-js/src/modules/pin.ts:13](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L13)
+Defined in: [bee-js/src/modules/pin.ts:13](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L13)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/pin.ts:13](https://github.com/ethersphere/bee-js
 
 > **add**(`reference`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/pin.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L21)
+Defined in: [bee-js/src/modules/pin.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L21)
 
 Pins local data with the given reference.
 
@@ -58,7 +58,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **get**(`reference`, `requestOptions?`): `Promise`\<[`Pin`](../interfaces/Pin.md)\>
 
-Defined in: [bee-js/src/modules/pin.ts:54](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L54)
+Defined in: [bee-js/src/modules/pin.ts:54](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L54)
 
 Gets the pinning status of the chunk with the given reference.
 
@@ -86,7 +86,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **getAll**(`requestOptions?`): `Promise`\<[`Reference`](../classes/Reference.md)[]\>
 
-Defined in: [bee-js/src/modules/pin.ts:44](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L44)
+Defined in: [bee-js/src/modules/pin.ts:44](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L44)
 
 Gets the list of all locally pinned references.
 
@@ -108,7 +108,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **remove**(`reference`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/pin.ts:33](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L33)
+Defined in: [bee-js/src/modules/pin.ts:33](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L33)
 
 Unpins local data with the given reference.
 
@@ -136,7 +136,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **reuploadData**(`postageBatchId`, `reference`, `requestOptions?`): `Promise`\<`void`\>
 
-Defined in: [bee-js/src/modules/pin.ts:67](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/pin.ts#L67)
+Defined in: [bee-js/src/modules/pin.ts:67](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/pin.ts#L67)
 
 Instructs the Bee node to reupload locally pinned data into the network.
 

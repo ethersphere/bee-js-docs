@@ -1,6 +1,6 @@
 # Interface: Envelope
 
-Defined in: [core-sdk/src/stamper/marshal.ts:7](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L7)
+Defined in: [core-sdk/src/stamper/marshal.ts:7](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/marshal.ts#L7)
 
 A postage stamp's fields, as produced by signing (e.g. via `stamp()`).
 
@@ -14,7 +14,7 @@ A postage stamp's fields, as produced by signing (e.g. via `stamp()`).
 
 > **index**: `Uint8Array`
 
-Defined in: [core-sdk/src/stamper/marshal.ts:9](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L9)
+Defined in: [core-sdk/src/stamper/marshal.ts:9](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/marshal.ts#L9)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [core-sdk/src/stamper/marshal.ts:9](https://github.com/ethersphere/c
 
 > **issuer**: [`EthAddress`](../classes/EthAddress.md)
 
-Defined in: [core-sdk/src/stamper/marshal.ts:8](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L8)
+Defined in: [core-sdk/src/stamper/marshal.ts:8](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/marshal.ts#L8)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [core-sdk/src/stamper/marshal.ts:8](https://github.com/ethersphere/c
 
 > **signature**: [`Signature`](../classes/Signature.md)
 
-Defined in: [core-sdk/src/stamper/marshal.ts:11](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L11)
+Defined in: [core-sdk/src/stamper/marshal.ts:11](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/marshal.ts#L11)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [core-sdk/src/stamper/marshal.ts:11](https://github.com/ethersphere/
 
 > **timestamp**: `Uint8Array`
 
-Defined in: [core-sdk/src/stamper/marshal.ts:10](https://github.com/ethersphere/core-sdk/blob/96273dfdbc1c6dec040d5aa6df29834e14e33eff/src/stamper/marshal.ts#L10)
+Defined in: [core-sdk/src/stamper/marshal.ts:10](https://github.com/ethersphere/core-sdk/blob/599be256a6dfdd96418988f234bbe147146fe59b/src/stamper/marshal.ts#L10)

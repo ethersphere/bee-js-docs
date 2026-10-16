@@ -1,6 +1,6 @@
 # Class: Soc
 
-Defined in: [bee-js/src/modules/soc.ts:11](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/soc.ts#L11)
+Defined in: [bee-js/src/modules/soc.ts:11](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/soc.ts#L11)
 
 Single owner chunk (SOC) reader/writer operations.
 
@@ -12,7 +12,7 @@ Accessed as `bee.soc`.
 
 > **new Soc**(`context`): `Soc`
 
-Defined in: [bee-js/src/modules/soc.ts:12](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/soc.ts#L12)
+Defined in: [bee-js/src/modules/soc.ts:12](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/soc.ts#L12)
 
 #### Parameters
 
@@ -30,7 +30,7 @@ Defined in: [bee-js/src/modules/soc.ts:12](https://github.com/ethersphere/bee-js
 
 > **makeReader**(`ownerAddress`, `requestOptions?`): [`SOCReader`](../interfaces/SOCReader.md)
 
-Defined in: [bee-js/src/modules/soc.ts:20](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/soc.ts#L20)
+Defined in: [bee-js/src/modules/soc.ts:20](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/soc.ts#L20)
 
 Returns an object for reading single owner chunks.
 
@@ -58,7 +58,7 @@ Options for making requests, such as timeouts, custom HTTP agents, headers, etc.
 
 > **makeWriter**(`signer?`, `requestOptions?`): [`SOCWriter`](../interfaces/SOCWriter.md)
 
-Defined in: [bee-js/src/modules/soc.ts:35](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/modules/soc.ts#L35)
+Defined in: [bee-js/src/modules/soc.ts:35](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/modules/soc.ts#L35)
 
 Returns an object for reading and writing single owner chunks.
 

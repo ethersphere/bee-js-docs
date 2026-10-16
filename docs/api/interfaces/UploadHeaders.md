@@ -1,6 +1,6 @@
 # Interface: UploadHeaders
 
-Defined in: [bee-js/src/types/index.ts:272](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L272)
+Defined in: [bee-js/src/types/index.ts:280](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L280)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:272](https://github.com/ethersphere/bee-j
 
 > `optional` **swarm-act**: `string`
 
-Defined in: [bee-js/src/types/index.ts:273](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L273)
+Defined in: [bee-js/src/types/index.ts:281](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L281)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:273](https://github.com/ethersphere/bee-j
 
 > `optional` **swarm-encrypt**: `string`
 
-Defined in: [bee-js/src/types/index.ts:275](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L275)
+Defined in: [bee-js/src/types/index.ts:283](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L283)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:275](https://github.com/ethersphere/bee-j
 
 > `optional` **swarm-pin**: `string`
 
-Defined in: [bee-js/src/types/index.ts:274](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L274)
+Defined in: [bee-js/src/types/index.ts:282](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L282)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/index.ts:274](https://github.com/ethersphere/bee-j
 
 > `optional` **swarm-postage-batch-id**: `string`
 
-Defined in: [bee-js/src/types/index.ts:277](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L277)
+Defined in: [bee-js/src/types/index.ts:285](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L285)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [bee-js/src/types/index.ts:277](https://github.com/ethersphere/bee-j
 
 > `optional` **swarm-tag**: `string`
 
-Defined in: [bee-js/src/types/index.ts:276](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L276)
+Defined in: [bee-js/src/types/index.ts:284](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L284)

@@ -1,6 +1,6 @@
 # Interface: BeeVersions
 
-Defined in: [bee-js/src/types/debug.ts:123](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L123)
+Defined in: [bee-js/src/types/debug.ts:123](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L123)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:123](https://github.com/ethersphere/bee-j
 
 > **beeApiVersion**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:127](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L127)
+Defined in: [bee-js/src/types/debug.ts:127](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L127)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:127](https://github.com/ethersphere/bee-j
 
 > **beeVersion**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:126](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L126)
+Defined in: [bee-js/src/types/debug.ts:126](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L126)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:126](https://github.com/ethersphere/bee-j
 
 > **supportedBeeApiVersion**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:125](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L125)
+Defined in: [bee-js/src/types/debug.ts:125](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L125)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [bee-js/src/types/debug.ts:125](https://github.com/ethersphere/bee-j
 
 > **supportedBeeVersion**: `string`
 
-Defined in: [bee-js/src/types/debug.ts:124](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L124)
+Defined in: [bee-js/src/types/debug.ts:124](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L124)

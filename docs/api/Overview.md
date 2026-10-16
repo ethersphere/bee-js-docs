@@ -48,6 +48,9 @@ sidebar_position: 0
 - [PrivateKey](classes/PrivateKey.md)
 - [PublicKey](classes/PublicKey.md)
 - [Reference](classes/Reference.md)
+- [RollingFeed](classes/RollingFeed.md)
+- [RollingFeedReader](classes/RollingFeedReader.md)
+- [RollingFeedWriter](classes/RollingFeedWriter.md)
 - [Settlement](classes/Settlement.md)
 - [Signature](classes/Signature.md)
 - [Size](classes/Size.md)
@@ -81,6 +84,7 @@ sidebar_position: 0
 - [ChequebookAddressResponse](interfaces/ChequebookAddressResponse.md)
 - [ChequebookBalanceResponse](interfaces/ChequebookBalanceResponse.md)
 - [Chunk](interfaces/Chunk.md)
+- [ChunkUploadOptions](interfaces/ChunkUploadOptions.md)
 - [CollectionEntry](interfaces/CollectionEntry.md)
 - [CollectionUploadOptions](interfaces/CollectionUploadOptions.md)
 - [Data](interfaces/Data.md)
@@ -97,6 +101,7 @@ sidebar_position: 0
 - [GlobalPostageBatch](interfaces/GlobalPostageBatch.md)
 - [GranteesResult](interfaces/GranteesResult.md)
 - [GsocMessageHandler](interfaces/GsocMessageHandler.md)
+- [GsocSubscribeOptions](interfaces/GsocSubscribeOptions.md)
 - [GsocSubscription](interfaces/GsocSubscription.md)
 - [Health](interfaces/Health.md)
 - [LastCashoutActionResponse](interfaces/LastCashoutActionResponse.md)
@@ -139,6 +144,7 @@ sidebar_position: 0
 
 - [BeeRequestOptions](type-aliases/BeeRequestOptions.md)
 - [Collection](type-aliases/Collection.md)
+- [GsocField](type-aliases/GsocField.md)
 - [HookCallback](type-aliases/HookCallback.md)
 - [HttpMethod](type-aliases/HttpMethod.md)
 - [NumberString](type-aliases/NumberString.md)
@@ -166,3 +172,15 @@ sidebar_position: 0
 ## Functions
 
 - [toBeeMode](functions/toBeeMode.md)
+
+## References
+
+### RollingFeedReader
+
+Re-exports [RollingFeedReader](classes/RollingFeedReader.md)
+
+***
+
+### RollingFeedWriter
+
+Re-exports [RollingFeedWriter](classes/RollingFeedWriter.md)

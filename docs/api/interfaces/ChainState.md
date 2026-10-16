@@ -1,6 +1,6 @@
 # Interface: ChainState
 
-Defined in: [bee-js/src/types/debug.ts:262](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L262)
+Defined in: [bee-js/src/types/debug.ts:265](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L265)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/debug.ts:262](https://github.com/ethersphere/bee-j
 
 > **block**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:264](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L264)
+Defined in: [bee-js/src/types/debug.ts:267](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L267)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/debug.ts:264](https://github.com/ethersphere/bee-j
 
 > **chainTip**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:263](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L263)
+Defined in: [bee-js/src/types/debug.ts:266](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L266)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/debug.ts:263](https://github.com/ethersphere/bee-j
 
 > **currentPrice**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:266](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L266)
+Defined in: [bee-js/src/types/debug.ts:269](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L269)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/debug.ts:266](https://github.com/ethersphere/bee-j
 
 > `optional` **minimumValidityBlocks**: `number`
 
-Defined in: [bee-js/src/types/debug.ts:267](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L267)
+Defined in: [bee-js/src/types/debug.ts:270](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L270)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [bee-js/src/types/debug.ts:267](https://github.com/ethersphere/bee-j
 
 > **totalAmount**: [`NumberString`](../type-aliases/NumberString.md)
 
-Defined in: [bee-js/src/types/debug.ts:265](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/debug.ts#L265)
+Defined in: [bee-js/src/types/debug.ts:268](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/debug.ts#L268)

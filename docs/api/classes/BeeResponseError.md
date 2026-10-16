@@ -1,6 +1,6 @@
 # Class: BeeResponseError
 
-Defined in: [bee-js/src/utils/error.ts:16](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L16)
+Defined in: [bee-js/src/utils/error.ts:18](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L18)
 
 ## Extends
 
@@ -12,7 +12,7 @@ Defined in: [bee-js/src/utils/error.ts:16](https://github.com/ethersphere/bee-js
 
 > **new BeeResponseError**(`method`, `url`, `message`, `responseBody?`, `status?`, `statusText?`): `BeeResponseError`
 
-Defined in: [bee-js/src/utils/error.ts:19](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L19)
+Defined in: [bee-js/src/utils/error.ts:21](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L21)
 
 #### Parameters
 
@@ -66,7 +66,7 @@ Defined in: typescript/lib/lib.es5.d.ts:1077
 
 > **method**: `string`
 
-Defined in: [bee-js/src/utils/error.ts:20](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L20)
+Defined in: [bee-js/src/utils/error.ts:22](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L22)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: typescript/lib/lib.es5.d.ts:1076
 
 > `readonly` **response**: `object`
 
-Defined in: [bee-js/src/utils/error.ts:17](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L17)
+Defined in: [bee-js/src/utils/error.ts:19](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L19)
 
 #### data
 
@@ -106,7 +106,7 @@ Defined in: [bee-js/src/utils/error.ts:17](https://github.com/ethersphere/bee-js
 
 > `optional` **responseBody**: `unknown`
 
-Defined in: [bee-js/src/utils/error.ts:23](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L23)
+Defined in: [bee-js/src/utils/error.ts:25](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L25)
 
 ***
 
@@ -126,7 +126,7 @@ Defined in: typescript/lib/lib.es5.d.ts:1078
 
 > `optional` **status**: `number`
 
-Defined in: [bee-js/src/utils/error.ts:24](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L24)
+Defined in: [bee-js/src/utils/error.ts:26](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L26)
 
 ***
 
@@ -134,7 +134,7 @@ Defined in: [bee-js/src/utils/error.ts:24](https://github.com/ethersphere/bee-js
 
 > `optional` **statusText**: `string`
 
-Defined in: [bee-js/src/utils/error.ts:25](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L25)
+Defined in: [bee-js/src/utils/error.ts:27](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L27)
 
 ***
 
@@ -142,7 +142,7 @@ Defined in: [bee-js/src/utils/error.ts:25](https://github.com/ethersphere/bee-js
 
 > **url**: `string`
 
-Defined in: [bee-js/src/utils/error.ts:21](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/utils/error.ts#L21)
+Defined in: [bee-js/src/utils/error.ts:23](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/utils/error.ts#L23)
 
 ***
 

@@ -1,6 +1,6 @@
 # Interface: TransactionInfo
 
-Defined in: [bee-js/src/types/index.ts:572](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L572)
+Defined in: [bee-js/src/types/index.ts:591](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L591)
 
 ## Properties
 
@@ -8,7 +8,7 @@ Defined in: [bee-js/src/types/index.ts:572](https://github.com/ethersphere/bee-j
 
 > **created**: `string`
 
-Defined in: [bee-js/src/types/index.ts:579](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L579)
+Defined in: [bee-js/src/types/index.ts:598](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L598)
 
 ***
 
@@ -16,7 +16,7 @@ Defined in: [bee-js/src/types/index.ts:579](https://github.com/ethersphere/bee-j
 
 > **data**: `string`
 
-Defined in: [bee-js/src/types/index.ts:578](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L578)
+Defined in: [bee-js/src/types/index.ts:597](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L597)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [bee-js/src/types/index.ts:578](https://github.com/ethersphere/bee-j
 
 > **description**: `string`
 
-Defined in: [bee-js/src/types/index.ts:580](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L580)
+Defined in: [bee-js/src/types/index.ts:599](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L599)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [bee-js/src/types/index.ts:580](https://github.com/ethersphere/bee-j
 
 > **gasLimit**: `number`
 
-Defined in: [bee-js/src/types/index.ts:577](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L577)
+Defined in: [bee-js/src/types/index.ts:596](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L596)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [bee-js/src/types/index.ts:577](https://github.com/ethersphere/bee-j
 
 > **gasPrice**: [`NumberString`](../type-aliases/NumberString.md)
 
-Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L576)
+Defined in: [bee-js/src/types/index.ts:595](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L595)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [bee-js/src/types/index.ts:576](https://github.com/ethersphere/bee-j
 
 > **nonce**: `number`
 
-Defined in: [bee-js/src/types/index.ts:575](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L575)
+Defined in: [bee-js/src/types/index.ts:594](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L594)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [bee-js/src/types/index.ts:575](https://github.com/ethersphere/bee-j
 
 > **to**: `string`
 
-Defined in: [bee-js/src/types/index.ts:574](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L574)
+Defined in: [bee-js/src/types/index.ts:593](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L593)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [bee-js/src/types/index.ts:574](https://github.com/ethersphere/bee-j
 
 > **transactionHash**: [`TransactionId`](../classes/TransactionId.md)
 
-Defined in: [bee-js/src/types/index.ts:573](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L573)
+Defined in: [bee-js/src/types/index.ts:592](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L592)
 
 ***
 
@@ -72,4 +72,4 @@ Defined in: [bee-js/src/types/index.ts:573](https://github.com/ethersphere/bee-j
 
 > **value**: `string`
 
-Defined in: [bee-js/src/types/index.ts:581](https://github.com/ethersphere/bee-js/blob/bab2b2e5a3874187d29a1c1e6c70f2f645ed53c2/src/types/index.ts#L581)
+Defined in: [bee-js/src/types/index.ts:600](https://github.com/ethersphere/bee-js/blob/549318851eb60f91ad249acad8431ffc2cf86773/src/types/index.ts#L600)
