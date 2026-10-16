@@ -40,6 +40,7 @@ Operations on the `Bee` class are grouped into namespaces by subject. Instead of
 | [`bee.collection`](../api/classes/Collection.md) | Multi-file (directory) uploads, backed by `/bzz`. |
 | [`bee.chunk`](../api/classes/Chunk.md) | Individual chunk uploads and downloads, backed by `/chunks`. |
 | [`bee.feed`](../api/classes/Feed.md) | Feed readers, writers and manifests. |
+| [`bee.rollingFeed`](../api/classes/RollingFeed.md) | Rolling feed readers and writers. |
 | [`bee.soc`](../api/classes/Soc.md) | Single owner chunk readers and writers. |
 | [`bee.messaging`](../api/classes/Messaging.md) | PSS and GSOC messaging. |
 | [`bee.stamp`](../api/classes/Stamp.md) | Postage batches expressed in amount and depth. |
@@ -71,7 +72,7 @@ types. Where `NumberString` is present, `number` is disallowed in order to avoid
 ### Byte primitives
 
 All the classes below extend `Bytes`, therefore the following methods are available on all of them: `toUint8Array`,
-`toHex`, `toBase64`, `toBase32`, `toUtf8`, `toJSON`, `static keccak256`, `static fromUtf8`.
+`toHex`, `toBase64`, `toBase32`, `toUtf8`, `parsePayloadAsJson`, `static keccak256`, `static fromUtf8`.
 
 The `toString` method uses `toHex`.
 
@@ -203,6 +204,15 @@ The node mode column reads as a minimum, so a more capable node also serves the 
 | `feed.fetchLatestUpdate` | `GET /feeds/:owner/:topic` [🔗](https://docs.ethswarm.org/api/#tag/Feed/paths/~1feeds~1%7Bowner%7D~1%7Btopic%7D/get) | Ultra-light |
 | `feed.isRetrievable` | `GET /feeds/:owner/:topic` [🔗](https://docs.ethswarm.org/api/#tag/Feed/paths/~1feeds~1%7Bowner%7D~1%7Btopic%7D/get), or `GET /chunks/:reference` [🔗](https://docs.ethswarm.org/api/#tag/Chunk/paths/~1chunks~1%7Baddress%7D/get) once per index when given an `index` | Ultra-light |
 
+#### `bee.rollingFeed`
+
+| Method | Bee endpoint | Node mode |
+| --- | --- | --- |
+| `RollingFeedReader.downloadReference` / `downloadPayload` | `GET /feeds/:owner/:topic` [🔗](https://docs.ethswarm.org/api/#tag/Feed/paths/~1feeds~1%7Bowner%7D~1%7Btopic%7D/get) | Ultra-light |
+| `RollingFeedWriter.uploadReference` / `uploadPayload` | `POST /soc/:owner/:identifier` [🔗](https://docs.ethswarm.org/api/#tag/Single-owner-chunk/paths/~1soc~1%7Bowner%7D~1%7Bid%7D/post) | Light |
+| `RollingFeedWriter.isCaughtUp` | `GET /feeds/:owner/:topic` [🔗](https://docs.ethswarm.org/api/#tag/Feed/paths/~1feeds~1%7Bowner%7D~1%7Btopic%7D/get) | Ultra-light |
+| `RollingFeedWriter.catchUp` | `GET /feeds/:owner/:topic` [🔗](https://docs.ethswarm.org/api/#tag/Feed/paths/~1feeds~1%7Bowner%7D~1%7Btopic%7D/get), `GET /chunks/:reference` [🔗](https://docs.ethswarm.org/api/#tag/Chunk/paths/~1chunks~1%7Baddress%7D/get) and `POST /soc/:owner/:identifier` [🔗](https://docs.ethswarm.org/api/#tag/Single-owner-chunk/paths/~1soc~1%7Bowner%7D~1%7Bid%7D/post) | Light |
+
 #### `bee.soc`
 
 | Method | Bee endpoint | Node mode |
@@ -287,10 +297,12 @@ The node mode column reads as a minimum, so a more capable node also serves the 
 | --- | --- | --- |
 | `stake.deposit` | `POST /stake` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake~1%7Bamount%7D/post) | Full |
 | `stake.get` | `GET /stake` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake/get) | Full |
+| `stake.getMinimumDeposit` | `GET /stake` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake/get) | Full |
 | `stake.getWithdrawable` | `GET /stake/withdrawable` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake~1withdrawable/get) | Full |
 | `stake.withdrawSurplus` | `DELETE /stake/withdrawable` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake~1withdrawable/delete) | Full |
 | `stake.migrate` | `DELETE /stake` [🔗](https://docs.ethswarm.org/api/#tag/Staking/paths/~1stake/delete) | Full |
 | `stake.getRedistributionState` | `GET /redistributionstate` [🔗](https://docs.ethswarm.org/api/#tag/RedistributionState/paths/~1redistributionstate/get) | Full |
+| `stake.setRedistributionEnabled` | `PATCH /redistributionstate` | Full |
 
 #### `bee.status`
 

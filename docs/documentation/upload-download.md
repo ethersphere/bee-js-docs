@@ -33,7 +33,7 @@ When you download data the return type is `Bytes`. The `Bytes` class includes va
 
  - `toUtf8()` that converts the bytes into a UTF-8 encoded string
  - `toHex()` that converts the bytes to a hex string
- - `toJSON()` that converts the bytes into a JSON object
+ - `parsePayloadAsJson()` that parses the bytes as JSON and returns the resulting object
 
 :::info
 The `Bytes` class is a core data type in `bee-js`. It includes a variety of useful utility methods which you can learn more about on the [Utility Classes](./utilities.md) page.
@@ -64,7 +64,7 @@ const retrievedData = await bee.data.download(result.reference)
 
 console.log(retrievedData) // Prints the raw data
 console.log(retrievedData.toUtf8()) // Prints the data as UTF-8 text
-console.log(retrievedData.toJSON()) // Prints the data as JSON
+console.log(retrievedData.parsePayloadAsJson()) // Prints the data parsed as JSON
 ```
 
 :::info Tip

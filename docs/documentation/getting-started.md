@@ -82,6 +82,16 @@ under the global namespace `BeeJs`:
 ```
 :::
 
+:::caution Browser apps and CORS
+From Bee 2.8.3, a node rejects `POST`, `PUT`, `PATCH` and `DELETE` requests from a browser page on another origin with `403 Forbidden`, unless that origin is listed in the node's `cors-allowed-origins` option. Uploads, stamp purchases and other write calls from a web app need the app's origin in that list:
+
+```sh
+bee start --cors-allowed-origins="https://my-app.example"
+```
+
+Node.js scripts are not affected, because they send no `Origin` header.
+:::
+
 
 ## Quickstart With *create-swarm-app*
 

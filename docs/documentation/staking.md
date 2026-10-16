@@ -16,7 +16,7 @@ Operating a Bee full node and staking BZZ makes you eligible to participate in t
 
 
 :::info
-The `bee.stake` namespace covers depositing stake, reading the staked and withdrawable amounts, withdrawing surplus stake, and checking the node's status in the redistribution game. [Reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling) is configured on the node itself rather than through `bee-js`.
+The `bee.stake` namespace covers depositing stake, reading the staked, withdrawable and minimum deposit amounts, withdrawing surplus stake, checking the node's status in the redistribution game, and pausing its participation. [Reserve doubling](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#reserve-doubling) is configured on the node itself rather than through `bee-js`.
 
 For a complete guide to the requirements and configuration for staking, refer to the [Bee documentation](https://docs.ethswarm.org/docs/bee/working-with-bee/staking).
 :::
@@ -27,7 +27,9 @@ For a complete guide to the requirements and configuration for staking, refer to
 
 ## Stake BZZ
 
-To stake, use the `bee.stake.deposit` method. It accepts either a `BZZ` instance or a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from a decimal string to PLUR. The initial deposit must be at least 10 BZZ.
+To stake, use the `bee.stake.deposit` method. It accepts either a `BZZ` instance or a value in PLUR, the smallest unit of BZZ (like wei in Ethereum). The `BZZ` utility class simplifies conversion from a decimal string to PLUR.
+
+The deposit must be at least the minimum reported by `bee.stake.getMinimumDeposit`, otherwise Bee rejects it with `400`. The method returns `null` when the node cannot determine the minimum, for example when the price oracle is unavailable.
 
 ```js
 import { Bee, BZZ } from '@ethersphere/bee-js'
@@ -35,6 +37,8 @@ import { Bee, BZZ } from '@ethersphere/bee-js'
 const bee = new Bee('http://localhost:1633')
 
 async function main() {
+  const minimum = await bee.stake.getMinimumDeposit()
+  console.log('Minimum deposit:', minimum ? `${minimum.toDecimalString()} BZZ` : 'unknown')
 
   // Convert 10 BZZ to PLUR
   const amount = BZZ.fromDecimalString('10')
@@ -49,6 +53,7 @@ main().catch(console.error)
 Example output:
 
 ```bash
+Minimum deposit: 10.0000000000000000 BZZ
 Stake deposited. Transaction hash: e1b86eebc54b465d84ab278da94a387e9786076557ab8f3fe04ba1b52dc065c8
 ```
 
@@ -102,11 +107,41 @@ Redistribution State:
   "fees": {
     "state": "0"
   },
-  "isHealthy": true
+  "isHealthy": true,
+  "enabled": true,
+  "hasCommittedThisRound": false,
+  "hasRevealedThisRound": false
 } 
 ```
 
 For details on interpreting these values, refer to the [staking status section](https://docs.ethswarm.org/docs/bee/working-with-bee/staking#check-status) of the Bee documentation.
+
+## Pause Redistribution
+
+`bee.stake.setRedistributionEnabled` turns the node's participation in new redistribution rounds on or off, and returns the resulting state. The current state is reported in the `enabled` field of `bee.stake.getRedistributionState()`.
+
+```js
+import { Bee } from '@ethersphere/bee-js'
+
+const bee = new Bee('http://localhost:1633')
+
+async function main() {
+  const enabled = await bee.stake.setRedistributionEnabled(false)
+  console.log('Redistribution enabled:', enabled)
+}
+
+main().catch(console.error)
+```
+
+Example output:
+
+```bash
+Redistribution enabled: false
+```
+
+:::note
+The setting is not persisted. Participation is enabled again when the node restarts.
+:::
 
 ## Withdraw Surplus Stake
 
